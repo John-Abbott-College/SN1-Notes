@@ -50,8 +50,8 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '420-4A8 Winter 2024',
-      repo: 'https://github.com/John-Abbott-College/4A8-Notes',
+      name: '420-SN1 Winter 2024',
+      repo: 'https://github.com/John-Abbott-College/SN1-Notes',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
