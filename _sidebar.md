@@ -2,20 +2,25 @@
 
 - [Course overview]()
 - [What is programming](./Notes/WhatIsProgramming)
-- [Léa Submission Guide]()
+- Léa Submission Guide
 
 **Getting Started with Python**
 
-- Python installation
+- [Python installation](./Notes/Python Installation)
 - What is Python?
 - PyCharm: The Python IDE
 - Debugging
 
-**Data Types**
+**[Python expressions](./Notes/Python_Expressions) **
 
-- Variables 
-- Numeric
-- Strings
+- Literals
+  - [Strings](./Notes/01_DataTypes_Strings)
+  - Integers
+  - Floats
+  - Boolean
+- [Operators](./Notes/01_Expressions_Operators)
+- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
+- Functions
 
 **Data structures**
 
@@ -49,7 +54,7 @@
 
 **Labs** 
 
-- Lab1 
+- Lab1 : print()
 - Lab2
 - Lab3
 - Lab4
