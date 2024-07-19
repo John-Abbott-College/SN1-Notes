@@ -1,7 +1,7 @@
 **Introduction**
 
 - [Course overview]()
-- [What is programming]()
+- [What is programming](./Notes/WhatIsProgramming)
 - [Léa Submission Guide]()
 
 **Getting Started with Python**
