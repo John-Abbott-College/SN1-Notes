@@ -84,51 +84,115 @@ To prevent assigning a variable a literal of a different type in Python, you can
 
 **How to use variables** 
 
-So far we saw how to create a variable and you may create as many variables as you need in the program but make sure you are only creating a variable you need. 
+To use a variable after it was created, simply re-type its name where you need it (e.g.: `print(temperature)`, or (`temperature +3 `)):
 
-Let's go back to the long equation we introduced in the beginning: `((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3`
 
-It represents the calculation of the variance of three students' grades. The equation to calculate the variance of three numbers is the following where `x_m` represents the mean of the grades.
+
+```python
+temperature = 23.0  # This line creates the variable
+print(temperature)  # This line uses the variable 
+
+temperature2 = temperature + 10  #This line uses the variable to create a new one
+
+print("Temperature: " + temperature) # This line combines a string text to with the variable and prints it
+```
+
+
+
+
+
+**Common mistakes:**
+
+1. Using inexistent variables:
+
+   ```python
+   print(x)   #x doesn't exist
+   ```
+
+2. Using a variable before creating it:
+
+   ```python
+   print(temperature3)  #this will cause an error because temperature3 doesn't exist yet at this point.
+   temperature3 = 20
+   ```
+
+3. Misspelling a variable:
+
+   ```python
+   print(Temperature)  #This will cause an error because Python is case sensitive "T" is not the same as "t"
+   ```
+
+   
+
+**Example - Calculating the variance of three numbers**
+
+Let's revisit the lengthy equation we initially introduced: `((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3`
+
+This equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where `x_m` represents the mean of the grades.
 $$
 Variance = ((x_1 - x_m)^2 + (x_2 - x_m)^2+(x_3 - x_m)^2)/3
 $$
 Let's break it down in the following steps and implement them:
 
-1. Enter the results of each student and store them into three variables named: `grade1`, `grade2`and `grade3`.
-2. Calculate the mean and store the result in a variable named `mean`.
-3. Calculate the squared difference from the mean for each grade and store the results into three variables `square_diff_1`, `square_diff_2` and `square_diff_3.`
-4. Add the squared differences and divide by 3 and store the result in a variable called `variance`
+1. Enter the results of each student and store them in three variables.
+2. Calculate the mean and store the result in a variable.
+3. Calculate the squared difference of each grade and store the results into three variables.
+4. Calculate the variance and store it into a new variable.
 5. Output the variance
 
 
 
-Let's implement those steps in python:
+**Python implementation of the variance**
+
+Firstly, we need to create three variables representing the student grades and set their values:
 
 ```python
 # Step 1: Create variables for the grades and enter their values
 grade1 = 16
 grade2 = 18
 grade3 = 19
+```
 
+To calculate the mean we can sum the grades and divide by 3 and store the result in a new variable. This new variable can then be reused as many times as required.
+
+```python
 # Step 2: Calculate the mean 
-mean = (grade1+ grade2+ grade3)/3
+mean = (grade1 + grade2 + grade3)/3
+```
 
+To compute the squared difference of each grade, we can begin by calculating the difference from the mean and store these differences in new variables (`diff = grade - mean`). Then, using the power operator `**`, we can store the squared differences in another set of variables (e.g., `square_diff = diff ** 2`). While there are no limits in the amount of variable used, intermediate results like `diff` may not be necessary to retain. Hence, we can perform the difference and the power operations into a single calculation. 
+
+```python
 # Step 3: Calculate the squared difference for each value:
-square_diff_1 = (16- mean)**2
-square_diff_2 = (18- mean)**2
-square_diff_3 = (19- mean)**2
+square_diff_1 = (grade1 - mean)**2
+square_diff_2 = (grade2 - mean)**2
+square_diff_3 = (grade3 - mean)**2
+```
 
+The last step is to calculate the variance by averaging the squared differences:
+
+```python
 # Step 4: Calculate the variance
 variance = (square_diff_1 + square_diff_2 + square_diff_3)/3
+```
 
+Finally, we simply need to print the variance.
+
+```python
 # Step 5: Output the variance
-print(variance)
+print("The variance is:", variance)
 ```
 
 
 
 ✍️**Challenge**: Store your age in a variable as a number. Store one of your parent's age in a variable as a number. Using those two variables, calculate the age difference and print it out in a message. 
 
+
+
+✍️**Challenge**: Calculate the gravitational potential energy of an object using the following formula, where `m` is the mass of the object, `g` is the acceleration of gravity which is 9.81 m/s^2, `h` is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.
+$$
+Ep=m×g×h
+$$
 
 
 ## **Constants**
@@ -139,7 +203,9 @@ Constants like in math are suppose to be values that never change. In python, th
 PI = 3.14159265359
 ```
 
-
+```python
+GRAVITATION_ACC = 9.81
+```
 
 
 
