@@ -2,7 +2,9 @@
 
 # Variables and Constants
 
-So far you have explored simple lines of code where you printed strings of characters and perhaps even made a few math calculations. Maybe you reached a point where your calculations are becoming long and hard to read. Let's imagine, I am trying to calculate the variances of three numbers, the equation becomes hard to read and understand:
+Up to now, you have explored simple lines of code, printing strings of characters and performing simple math calculations. You might have noticed that as your lines of codes grow longer and more complex, they can become hard to read and type.
+
+For instance, if you're calculating the variance of three numbers (measurement of how spread out there are from the average), the operation to type will be:   
 
 ```python
 ((16-(16+ 18+ 19)/3)**2 + (18-(16+ 18+ 19)/3)**2 + (19-(16+ 18+ 19)/3)**2)/3
@@ -12,21 +14,27 @@ Programming in python, will help you structure your complex calculations and mak
 
 ## **Variables** 
 
-Variables are like small boxes in a computer's memory where we can store values and change them overtime. They are particularly useful if you would like to store a literal instead of re-typing it every time, or to store the result of an operation for example `21 +314` in order to use it in another operation.  Variables have a **name** and a **value**. 
+Variables are like small boxes in a computer's memory where values can be stored and changed overtime. They are particularly useful for storing a literal instead of re-typing it every time, or storing the result of an operation, for example `21 +314` in order to use it in another operation at a later point.  Variables are composed of a **name** and a **value**. 
 
-To create a variable in Python, you simply write the name and use the `=` operator to assign a value: 
+To create a variable in Python, simply write the name you wish to use and use the `=` operator to assign it a value: 
 
 ```python
 variable_name = value #the value can be any literal, a variable or another expressions. 
 ```
 
-The following line will create a variable named *sum* and store the result `335` in memory:
+The value can be a literal, an operation, another variable , or a more complex expression. 
+
+
+
+For instance, the following line will create a variable named *sum* and store the result `335` in memory:
 
 ```python
 sum = 21 + 314
 ```
 
-Like to mathematics, variables in programming represent quantities than can be changed. You can use simple names just like in math `x`, `y` to refer to your variables, but it is preferable to give them a name that is more descriptive of what they represent. In programming, you should always aim at having code that is easy to read and understand. For example, using the variable `t` to represent a temperature reading could lead to confusion because `t` could also mean time, or any other quantity. It is therefore more meaningful to use `temperature`. You may also use abbreviations, so long as they are commonly known (e.g: `max` for the maximum, `min` for the minimum, `avg` for average)
+
+
+Similar to mathematics, variables in programming represent quantities than can change. While, you can use simple names just like  `x`, `y`  in math, it is preferable to give variables a name that is more descriptive of what they represent. In programming, you should always aim at having code that is easy to read and understand. For example, using the variable `t` to represent a temperature reading could lead to confusion because `t` could also mean time, or any other quantity. It is therefore more meaningful to use `temperature`. You may also use abbreviations, so long as they are commonly known (e.g: `max` for the maximum, `min` for the minimum, `avg` for average)
 
 ```python
 t = 23.0            # t could mean anything 
@@ -43,13 +51,13 @@ temperature = 23.0  # temperature is easier to understand
 
 - the name must contain only alpha-numeric characters and underscores (`A-z`, `0-9`, and `_`)
 
-- the name must not be any of the **Python keywords**, which are reserved by python for predefined reasons and will not let you use them as variable names:
+- the name must not be any of the **Python keywords**, as these are reserved by Python for predefined purposes and cannot be redefined:
 
   ```python
   ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
   ```
 
-- Python is case sensitive! This means that uppercase `APPLE` and lowercase `apple` is not the same variable names, therefore will be considered by python as two different variables.
+- Python is case sensitive! This means that uppercase `APPLE` and lowercase `apple` are not the same variable names, therefore will be considered by python as two different variables.
 
 - You may use alphabet from other languages too for example: `sûr_la_mer`, `переменная`, `Adiós_Señora` are valid variable names.
 
@@ -62,7 +70,21 @@ Programmers came up with conventions to make code more easy to read and share. T
 
 
 
-We say that variables are **mutable**, that is, their values can be changed or updated. 
+✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the naming conventions.
+
+```python
+P pasc =  7.00e5
+V_m^3 = 2e-3
+N-moles = 55660.0
+T = 291
+R_pasc/mol = 8.31
+```
+
+
+
+**How to use variables**
+
+We say that variables are **mutable**, meaning their values can be changed or updated. 
 
 For example, the following lines create a variable called `temperature`, initially setting its value to 23.0 and subsequently updating its value to 26.0:
 
@@ -82,19 +104,19 @@ temperature = "too hot"
 
 To prevent assigning a variable a literal of a different type in Python, you can use **type checking**, we will discuss this later in the course.
 
-**How to use variables** 
 
-To use a variable after it was created, simply re-type its name where you need it (e.g.: `print(temperature)`, or (`temperature +3 `)):
+
+To use a variable after it was created, simply re-type its name where you need it (e.g.: `print(temperature)`, or (`temperature +3 `)) and python will use its value in the expression.
 
 
 
 ```python
 temperature = 23.0  # This line creates the variable
-print(temperature)  # This line uses the variable 
+print(temperature)  # This line uses the variable, will print 23.0
 
 temperature2 = temperature + 10  #This line uses the variable to create a new one
 
-print("Temperature: " + temperature) # This line combines a string text to with the variable and prints it
+print("Temperature: " + temperature) # This line combines a string text to with the value 23.0 and prints it
 ```
 
 
@@ -197,19 +219,39 @@ $$
 
 ## **Constants**
 
-Constants like in math are suppose to be values that never change. In python, they are treated the same way as variables but their values are not modified in the program. We say that constants are **immutable**.  These values are universally acknowledged to be true and they cannot be changed over time. Typically, python constants are declared and initialized on different modules or files and need to be imported within the source code. We will learn more about constants at a later moment. 
+Constants like in math are suppose to be values that never change. In python, they are treated the same way as variables but their values cannot be modified in the program. We say that constants are **immutable**.  These values are universally acknowledged to be true and they should not changeover time. 
+
+```python
+GRAVITATION_ACC = 9.81
+
+print(GRAVITATION_ACC)
+```
+
+
+
+Typically, Python constants are declared and initialized on different modules or files and need to be imported within the source code. We will learn more about modules at a later moment. 
+
+Within a created `constants.py` file:
 
 ```python
 PI = 3.14159265359
-```
-
-```python
 GRAVITATION_ACC = 9.81
 ```
 
 
 
+To **use** the constants into your `main.py` file:
 
+```python
+import constants #We will learn more about the import statement at a later point
+
+print(constants.PI)
+print(constants.GRAVITATION_ACC)
+```
+
+
+
+> ⚠️ The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help "objects" that are constants and protected from modification.
 
 # References
 

@@ -6,15 +6,15 @@
 
 **Getting Started with Python**
 
-- [Python installation](./Notes/Python Installation)
+- Python installation
 - What is Python?
 - PyCharm: The Python IDE
 - Debugging
 
-**[Python expressions](./Notes/Python_Expressions) **
+**[Python expressions](./Notes/01_Expressions_Intro) **
 
-- Literals
-  - [Strings](./Notes/01_DataTypes_Strings)
+- [Literals](./Notes/01_Expressions_Literals)
+  - [Strings](./Notes/01_Expressions_Literals_Strings)
   - Integers
   - Floats
   - Boolean
@@ -54,10 +54,15 @@
 
 **Labs** 
 
-- Lab1 : print()
-- Lab2
-- Lab3
-- Lab4
+- Lab1 : Literals and print()
+
+- Lab2: Operators and Variables
+
+- Lab3: Functions and the math library
+
+- Lab5: Lists
+
+  
 
 
 
