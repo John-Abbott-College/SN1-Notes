@@ -2,6 +2,7 @@
 
 - [Course overview]()
 - [What is programming](./Notes/WhatIsProgramming)
+- [What is a computer?](./Notes/WhatIsAComputer)
 - Léa Submission Guide
 
 **Getting Started with Python**
