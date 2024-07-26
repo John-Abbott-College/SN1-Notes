@@ -52,7 +52,7 @@ Python was chosen for this course for the following reasons:
 
 Now this is great! But how are programming languages understood by computers? Answer: they are translated into machine code. For example, the Python code is translated by the Python interpreter into machine code.  
 
-<img src="../Images/programming_process.png" height="300">
+<img src="Images/programming_process.png" height="300">
 
 The Central Processing Unit which acts as the brain of a computer will then execute (i.e.: run the instructions) the program.  
 
