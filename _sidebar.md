@@ -7,7 +7,7 @@
 **Getting Started with Python**
 
 - Python installation
-- What is Python?
+- [What is Python?](Introduction_to_Python)
 - PyCharm: The Python IDE
 - Debugging
 
