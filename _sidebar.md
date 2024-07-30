@@ -6,9 +6,9 @@
 
 **Getting Started with Python**
 
-- Python installation
 - [What is Python?](./Notes/Introduction_to_Python)
-- PyCharm: The Python IDE
+- [Python installation](./Notes/Python_Installation)
+- [PyCharm: The Python IDE](./Notes/PyCharm_Installation)
 - Debugging
 
 **[Python expressions](./Notes/01_Expressions_Intro) **
