@@ -47,11 +47,14 @@ Both compilers and interpreters convert high-level language (HLL) code into mach
 * Translates the entire HLL code into machine code before running the program.
 
 - Produces faster-running code and improves application security.
+
 - Typically slower and uses more memory because it processes the whole program at once.
+
 - Can only detect syntax and some semantic errors.
+
 - Offers debugging tools but may take longer to compile large codebases.
 
-![compiler](C:\Zahraa\SN1-Notes\Images\compiler.png)
+  <img src="Images/compiler.png" height="300">
 
 **Interpreter**:
 
