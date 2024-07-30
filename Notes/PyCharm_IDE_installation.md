@@ -10,47 +10,47 @@ Here is a step by step process on how to download and install PyCharm IDE on Win
 
 1. To download PyCharm visit the website https://www.jetbrains.com/pycharm/download/ and Click the “DOWNLOAD” link under the Community Section.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc1.png" height="300">
+   <img src="Images/pc1.png" height="300">
 
    
 
 2. Once the download is complete, run the exe for install PyCharm. The setup wizard should have started. Click “Next”.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc2.png" height="300">
+   <img src="Images/pc2.png" height="300">
 
    
 
 3. On the next screen, Change the installation path if required. Click “Next”.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc3.png" height="300">
+   <img src="Images/pc3.png" height="300">
 
    
 
 4. Choose options of installation according to your choice.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc4.png" height="300">
+   <img src="Images/pc4.png" height="300">
 
    
 
 5. Choose JetBrains and Click on “Install”.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc5.png" height="300">
+   <img src="Images/pc5.png" height="300">
 
    
 
 6. Let the installation finished.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc6.png" height="300">
+   <img src="Images/pc6.png" height="300">
 
    
 
 7. Once installation finished, you should receive a message screen that PyCharm is installed. If you want to go ahead and run it, click the “Run PyCharm Community Edition” box first and click “Finish”.
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc7.png" height="300">
+   <img src="Images/pc7.png" height="300">
 
    
 
 8. After you click on “Finish,” the Following screen will appear. 
 
-   <img src="C:/Zahraa/SN1-Notes/Notes/Images/pc8.png" height="300">
+   <img src="Images/pc8.png" height="300">
 
