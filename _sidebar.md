@@ -8,7 +8,7 @@
 
 - [What is Python?](./Notes/Introduction_to_Python)
 - [Python installation](./Notes/Python_Installation)
-- [PyCharm: The Python IDE](./Notes/PyCharm_Installation)
+- [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
 - Debugging
 
 **[Python expressions](./Notes/01_Expressions_Intro) **
