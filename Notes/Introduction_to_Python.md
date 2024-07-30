@@ -66,9 +66,7 @@ Both compilers and interpreters convert high-level language (HLL) code into mach
 
 - More flexible but often results in slower execution     compared to compiled code.
 
-  
-
-  <img src="C:\Zahraa\SN1-Notes\Images\interpreter.png" alt="interpreter" style="zoom:50%;" />
+  <img src="Images/interpreter.png" height="300">
 
 Many modern languages, including Python, use both methods. They are first compiled into byte code and then interpreted by a virtual machine. Python is often considered an interpreted language due to how it is commonly used.
 
