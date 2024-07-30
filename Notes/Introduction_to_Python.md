@@ -86,7 +86,7 @@ Programmers of all levels prefer Python for several practical reasons:
 - **Easy to Understand**:     Python code is generally easier to read and comprehend.
 - **Easy to Obtain and Deploy**: Python is free, open-source, and works across     different platforms.
 
-**1.2**    **Python 2 vs. Python 3**
+### Python 2 vs. Python 3
 
 There are two main versions of Python: Python 2 and Python 3.
 
