@@ -38,7 +38,7 @@
 **Conditional statements**
 
 - [If statement](./Notes/03_Conditions_if)
-- [If/Else statement](,/Notes/03_Conditions_if-else)
+- [If/Else statement](./Notes/03_Conditions_if-else)
 
 **Plotting**
 
