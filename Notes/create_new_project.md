@@ -1,4 +1,4 @@
-## Create your first project
+# Create your first project
 
 To create a new project in PyCharm for Python, follow these steps:
 
@@ -6,12 +6,12 @@ To create a new project in PyCharm for Python, follow these steps:
 
 
 
-**Start a New Project**:
+### **Start a New Project**:
 
 - If you see the **Welcome to PyCharm** dialog, click on "New Project".
 - If you already have PyCharm open, go to the top menu and select **File > New Project**.
 
-**Configure the New Project**:
+### **Configure the New Project**:
 
 - **Location**: Specify the directory where you want to create the project. You can type the path directly or click the folder icon to navigate to the desired location.
 
