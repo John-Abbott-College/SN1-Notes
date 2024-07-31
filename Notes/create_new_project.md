@@ -44,6 +44,10 @@ python interpreter starts executing program line by line from the top.
 
 <img src="Images/debug3.png" height="300">
 
+### **Run the Code**:
+
+- If you're using an IDE like PyCharm, click the "Run" button or press the shortcut (often `Shift + F10` in PyCharm).
+
 ### Explanation:
 
 - **print**: This is a built-in Python function used to display text or other output to the console.
