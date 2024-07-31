@@ -1,6 +1,6 @@
 # Python IDE
 
-## How to Install Python IDE
+## Python IDE
 
 PyCharm is one of the most popular **Python-IDE** developed by JetBrains and used for performing scripting in Python language. PyCharm provides some very useful features like Code completion and inspection, Debugging process, support for various programming frameworks, Package Management, etc. PyCharm provides various tools for productive development in [Python.](https://www.geeksforgeeks.org/python-programming-language/)
 
