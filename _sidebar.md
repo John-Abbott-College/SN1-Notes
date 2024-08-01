@@ -6,10 +6,17 @@
 
 **Getting Started with Python**
 
-- Python installation
-- What is Python?
-- PyCharm: The Python IDE
+- [What is Python?](./Notes/Introduction_to_Python)
+
+- [Python installation](./Notes/Python_Installation)
+
+- [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
+
+- [Getting Started with Python](./Notes/create_new_project)
+
 - Debugging
+
+  
 
 **[Python expressions](./Notes/01_Expressions_Intro) **
 
@@ -30,8 +37,8 @@
 
 **Conditional statements**
 
-- If
-- If/Else
+- [If statement](./Notes/03_Conditions_if)
+- [If/Else statement](./Notes/03_Conditions_if-else)
 
 **Plotting**
 
