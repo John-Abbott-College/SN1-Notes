@@ -84,7 +84,7 @@ else:
     # code block 3
 ```
 
-<img src="Images/if_3.png" height="300">
+<img src="Images/if_3.png" height="400">
 
 The way to assemble subsequent *if-elif-else* statements is sometimes called a **cascade**.
 
@@ -175,7 +175,7 @@ Number is positive
 
 Here's how this program works.
 
-<img src="\Images\if_4.png" height="300">
+<img src="Images/if_4.png" height="400">
 
 Here are two important points:
 
