@@ -175,11 +175,9 @@ Number is positive
 
 Here's how this program works.
 
-<img src="\Images\if_4.png" height="400">
-
 <img src="Images/if_4.png" height="400">
 
-Here are two important points:
+###### Here are two important points:
 
 - this use of the if statement is known as **nesting**; remember that every else refers to the if which lies **at the same indentation level**; you need to know this to determine how the *if*s and *else*s pair up;
 - consider how the **indentation improves readability**, and makes the code easier to understand and trace.
