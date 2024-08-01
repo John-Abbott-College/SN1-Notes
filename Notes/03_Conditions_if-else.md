@@ -1,4 +1,4 @@
-## Conditional execution: the if-else statement
+## The if-else statement
 
 An `if` statement can have an optional `else` clause. The `else` statement executes if the condition in the `if` statement evaluates to `False`.
 
@@ -174,6 +174,8 @@ Number is positive
 ```
 
 Here's how this program works.
+
+<img src="\Images\if_4.png" height="400">
 
 <img src="Images/if_4.png" height="400">
 
