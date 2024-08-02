@@ -21,20 +21,5 @@ You can download a copy of the course outline here.
 
 # Tools
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flask Auth Example</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://codeboot.org/4.0.0/codeboot.bundle.css">
-    <script src="https://codeboot.org/4.0.0/codeboot.bundle.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-</head>
-<body>
-    <pre style="width:40em; height:3.8em" data-cb="a">
-        for i in range(1, 6):
-            print(i**2)
-	</pre>
-</body>
+<div data-codeboot-type="file" data-codeboot-file-name="string_split.py"><div style="color:rgb(1, 1, 1);font-size:18px;font-family:&quot;Consolas&quot;,&quot;Monaco&quot;,&quot;Courier New&quot;,monospace;white-space:pre;font-weight:400;"><code><br><span style="color:rgb(1, 1, 1);">names</span><span>&nbsp;</span><span style="color:rgb(1, 1, 1);">=</span><span>&nbsp;</span><span style="color:rgb(170, 17, 17);">&#34;Alex#Jennifer#Carlos#Francine&#34;</span><br><span style="color:rgb(51, 0, 170);">print</span><span>(</span><span style="color:rgb(1, 1, 1);">names</span><span>.</span><span style="color:rgb(1, 1, 1);">split</span><span>(</span><span style="color:rgb(170, 17, 17);">&#39;#&#39;</span><span>)</span><span>)</span><br><br><span style="color:rgb(170, 85, 0);">#&nbsp;Output&nbsp;:&nbsp;[&#39;Alex&#39;,&nbsp;&#39;Jennifer&#39;,&nbsp;&#39;Carlos&#39;,&nbsp;&#39;Francine&#39;]</span></code></div></div>
 
