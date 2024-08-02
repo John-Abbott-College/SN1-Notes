@@ -18,7 +18,7 @@
 
   
 
-**[Python expressions](./Notes/01_Expressions_Intro) **
+[Python expressions](./Notes/01_Expressions_Intro)
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
