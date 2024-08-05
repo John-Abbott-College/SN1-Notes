@@ -31,7 +31,7 @@
 
 **Data structures**
 
-- List
+- [List](./Notes/02_list)
 - Dictionary
 - Tuple
 
