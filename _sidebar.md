@@ -33,7 +33,7 @@
 
 - [List](./Notes/02_list)
 - Dictionary
-- Tuple
+- [Tuple](./Notes/02_Tuples)
 
 **Conditional statements**
 
