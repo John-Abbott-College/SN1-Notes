@@ -61,6 +61,7 @@ If you want to create a **one-element tuple**, you have to take into considerati
 ```
 one_element_tuple_1 = (1, )
 one_element_tuple_2 = 1.,
+one_element_tuple_3 = ("apple",)
  
 ```
 
