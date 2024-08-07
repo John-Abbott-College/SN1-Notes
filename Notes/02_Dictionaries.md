@@ -44,6 +44,20 @@ print(empty_dictionary)  #output: {}
 
 The Python dictionary works in the same way as **a bilingual dictionary**. For example, you have an English word (e.g., cat) and need its French equivalent. You browse the dictionary in order to find the word (you may use different techniques to do that − it doesn't matter) and eventually you get it. Next, you check the French counterpart and it is (most probably) the word "chat".
 
+The values in dictionary items can be of any data type: String, int, Boolean, and list data types:
+
+**Example:**
+
+```python
+thisdict = {
+ "brand": "Ford",
+ "electric": False,
+ "year": 1964,
+ "colors": ["red", "white", "blue"]}
+```
+
+
+
 In Python's world, the word you look for is named a key. The word you get from the dictionary is called a value.
 
 This means that a dictionary is a set of **key-value** pairs. Note:
