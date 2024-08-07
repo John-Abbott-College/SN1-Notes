@@ -114,3 +114,4 @@ The `if` statement checks if `a` is not greater than `b` by negating the result 
 
 Since `a > b` is `False`, `not a > b` is `True`, so the message "a is NOT greater than b" is printed.
 
+✍️**Challenge**: Write a Python program to check if a number is divisible by both 2 and 3.
