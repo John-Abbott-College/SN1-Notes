@@ -98,6 +98,34 @@ chat
 KeyError: 'rabbit'
 ```
 
+## Get
+
+The `get` method in Python is used with dictionaries to retrieve the value associated with a given key. It provides a way to access dictionary values safely, with an option to specify a default value if the key is not found.
+
+Here’s a detailed explanation:
+
+Syntax:
+
+```python
+dictionary.get(key, default_value)
+```
+
+> [!TIP]
+>
+> Penefits of Get 
+>
+> **Avoids KeyErrors**: Using `get` prevents raising a `KeyError` if the key does not exist.
+>
+> **Provides Default Values**: It allows you to specify a default value, which can be useful for handling missing keys gracefully.
+
+**Example:**
+
+```python
+print(dictionary.get('cat', 'Not Found'))  # Output: chat
+print(phone_numbers.get('Suzy', 'Not Found'))  # Output: 22657854310
+print(dictionary.get('rabbit', 'Not Found'))  # Output: Not Found
+```
+
 
 
 ## Modifying and adding values
