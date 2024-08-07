@@ -32,7 +32,7 @@
 **Data structures**
 
 - [List](./Notes/02_list)
-- Dictionary
+- [Dictionary](./Notes/02_Dictionaries)
 - [Tuple](./Notes/02_Tuples)
 
 **Conditional statements**

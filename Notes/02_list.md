@@ -46,10 +46,10 @@ And now we want **the value of the fifth element to be copied to the second elem
 
 ```python
 numbers = [10, 5, 7, 2, 1]
-print("Original list contents:", numbers)  # Printing original list contents.
+print("Original list contents:", numbers)  # Original list contents:[10, 5, 7, 2, 1]
 
 numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
-print("New list contents:", numbers)  # Printing current list contents.
+print("New list contents:", numbers)  #New list contents: [10, 1, 7, 2, 1]
  
 ```
 
@@ -117,7 +117,7 @@ You have to point to the element to be removed, it'll vanish from the list, and 
 
 ```python
 numbers = [10, 5, 7, 2, 1]
-del numbers[1]
+del numbers[1]  # delete the seconf element 
 print(len(numbers))  # the output is 4
 print(numbers) # [10, 7, 2, 1]
 ```
