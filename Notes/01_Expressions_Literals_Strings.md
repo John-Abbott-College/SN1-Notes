@@ -126,3 +126,4 @@ print(names.split('#'))
 
 
 
+### Reading individual characters and for-loop
