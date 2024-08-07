@@ -22,7 +22,7 @@ You can download a copy of the course outline here.
 # Tools
 
 <pre style="width:40em; height:3.8em" data-cb="a">
-for i in range(1, 6):
+for i in range(1, 10):
     print(i**2)
 </pre>
 
