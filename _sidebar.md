@@ -31,9 +31,9 @@
 
 **Data structures**
 
-- List
-- Dictionary
-- Tuple
+- [List](./Notes/02_list)
+- [Dictionary](./Notes/02_Dictionaries)
+- [Tuple](./Notes/02_Tuples)
 
 **Conditional statements**
 

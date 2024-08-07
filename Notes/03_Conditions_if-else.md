@@ -63,7 +63,7 @@ else:
 print("The larger number is:", larger_number)
 ```
 
-
+✍️**Challenge**: Write a Python program that asks the user to input a number and then checks if the number is even or odd.
 
 ## The elif statement
 
@@ -130,6 +130,10 @@ In the above program, it is important to note that regardless the value of `numb
 
 
 
+✍️**Challenge**: Write a Python program that asks the user to input a temperature in Celsius and then checks if the temperature is below freezing, above boiling, or in between.
+
+
+
 ## Nested if-else statements
 
 Consider the case where the **instruction placed after the if is another if**.
@@ -182,3 +186,10 @@ Here's how this program works.
 - this use of the if statement is known as **nesting**; remember that every else refers to the if which lies **at the same indentation level**; you need to know this to determine how the *if*s and *else*s pair up;
 - consider how the **indentation improves readability**, and makes the code easier to understand and trace.
 
+✍️**Challenge**: Write a Python program that assigns a letter grade based on a numeric score. Ask the user to input a score, then determine and print the letter grade:
+
+- A: 90-100
+- B: 80-89
+- C: 70-79
+- D: 60-69
+- F: below 60
