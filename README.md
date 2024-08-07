@@ -20,14 +20,17 @@ You can download a copy of the course outline here.
 
 
 # Tools
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-<link rel="stylesheet" href="https://codeboot.org/4.0.0/codeboot.bundle.css">
-<script src="https://codeboot.org/4.0.0/codeboot.bundle.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<pre style="width:40em; height:3.8em" data-cb="a">
+
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/4.0.0/?init=.fc3F1YXJlcy0xLnB5~XQAAgAAlAAAAAAAAAAAzG8qmJ5VKcRIqc4D53n0GAajKdINri6XFtz6xpwkpsUNe9RxaVfxZX_7nGwA=.~lang=py-novice.a">         
+    <button style="border: none; background-color: transparent;">
+    <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>       <span>Run with CodeBoot</span>
+    </button>     
+    </a> 
+</div>
+
+```python
 for i in range(1, 10):
     print(i**2)
-</pre>
+```
 
