@@ -20,7 +20,10 @@ You can download a copy of the course outline here.
 
 
 # Tools
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+<link rel="stylesheet" href="https://codeboot.org/4.0.0/codeboot.bundle.css">
+<script src="https://codeboot.org/4.0.0/codeboot.bundle.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <pre style="width:40em; height:3.8em" data-cb="a">
 for i in range(1, 10):
     print(i**2)
