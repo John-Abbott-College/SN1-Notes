@@ -20,7 +20,6 @@ You can download a copy of the course outline here.
 
 
 # Tools
-
 <div style="text-align: right;">     
     <a href="https://app.codeboot.org/4.0.0/?init=.fc3F1YXJlcy0xLnB5~XQAAgAAlAAAAAAAAAAAzG8qmJ5VKcRIqc4D53n0GAajKdINri6XFtz6xpwkpsUNe9RxaVfxZX_7nGwA=.~lang=py-novice.a">         
     <button style="border: none; background-color: transparent;">
