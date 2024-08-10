@@ -180,9 +180,7 @@ In programming, the `break` and `continue` statements are used to alter the flow
 
 #### 4.1 Python break Statement
 
-The `break` statement terminates the loop immediately when it's encountered.
-
-<img src="Images/while_break.png" height="400">
+The `break` statement terminates the loop immediately when it's encountered. <img src="Images/while_break.png" height="400">
 
 We can use the `break` statement with the `while` loop to terminate the loop when a certain condition is met. 
 
