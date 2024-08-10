@@ -137,83 +137,6 @@ print(x, y)
 
 
 
-## Comparison operators
-
-The comparison operators are used to determine how two values compare to eachother : *Are these two values equal?* *Is the first value greater than this second value?* *Is the first value less than or equal to the second value?* The result is a Boolean: `True` or `False`.
-
-For instance, `1==1` returns `True` while `1==0` is `False`. 
-
-Why use such operators? Sometimes, the operands are not easy to determine or consist of expressions that are harder to evaluate. For instance the line below:
-
-```python
-((3 * 4) + (5 ** 2)) == ((2 * 9) + (7 * 3))
-```
-
-
-
-- **Equality operator** `==` 
-
-  - The double equal operator`==` compares two operands, if they are equal the result is `True` otherwise the result is `False`. For instance, `1==1` is `True`, `1==0` is `False`. 
-
-  - You may also use this operator on string literals: `"Hello"` == `"World"` ( this is `False`).
-
-    
-
-- **Inequality operator !=** 
-  - Returns `True` if the operands are not equal and `False` if they are equal 
-  
-  - (e.g.: `1 != 2` , result: `True`, `1 != 1`, result: `False` )
-  
-    
-  
-- **Greater than `>`** 
-  - Return `True` if the left side operand is greater than the right side operand. Returns `False` otherwise.
-  - e.g.: `3 >2 ` result: `True` , `3 > 6`, result: `False`
-  
-- **Greater than or equal `>=`**
-  - Return `True` if the left side operand is greater or equal than the right side operand. Returns `False` otherwise.
-  - e.g.: `3 >= 2 ` result: `True` , `3 >= 3`, result: `True`
-  
-- **Less than `<`**
-  - Return `True` if the left side operand is less than the right side operand. Returns `False` otherwise.
-  - e.g.: `3 < 6 ` result: `True` , `3 < 2`, result: `False`
-  
-- **Less than or equal** `<=`
-  - Return `True` if the left side operand is less or equal than the right side operand. Returns `False` otherwise.
-  - e.g.: `3 <= 3 ` result: `True` , `3 <= 2`, result: `False`
-
-
-
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
-
-```python
-a = 11.999
-b = 12
-print(a < b)
-```
-
-```python
-a = (30 / 6) + 3
-b = 2**3
-print(a == b)
-```
-
-```python
-a = (25 // 10) * 10 
-b = 4**2 + 4
-print(a != b)
-```
-
-```python
-a = 10
-b = 7**2 +1
-print(a >= b)
-```
-
-
-
-
-
 ## Assignment operator
 
 Assignment operators are used to set the value of a variable, unlike mathematics. For instance, in math 5 + 3 = 8 is a correct **statement**. However in Python, executing`5 + 3 = 8` will cause a syntax error. This is because the `=` operator is not used for arithmetic operations or equality. In programming, `5 + 3` is an expression that cannot be reassigned. Python expects the left hand side of the equality to be a variable.
@@ -305,6 +228,81 @@ temperature *= 3
 
 print("The weather in Canada is nuts...")
 print(day, temperature)
+```
+
+
+
+## Comparison operators
+
+The comparison operators are used to determine how two values compare to eachother : *Are these two values equal?* *Is the first value greater than this second value?* *Is the first value less than or equal to the second value?* The result is a Boolean: `True` or `False`.
+
+For instance, `1==1` returns `True` while `1==0` is `False`. 
+
+Why use such operators? Sometimes, the operands are not easy to determine or consist of expressions that are harder to evaluate. For instance the line below:
+
+```python
+((3 * 4) + (5 ** 2)) == ((2 * 9) + (7 * 3))
+```
+
+
+
+- **Equality operator** `==` 
+
+  - The double equal operator`==` compares two operands, if they are equal the result is `True` otherwise the result is `False`. For instance, `1==1` is `True`, `1==0` is `False`. 
+
+  - You may also use this operator on string literals: `"Hello"` == `"World"` ( this is `False`).
+
+    
+
+- **Inequality operator !=** 
+  - Returns `True` if the operands are not equal and `False` if they are equal 
+  
+  - (e.g.: `1 != 2` , result: `True`, `1 != 1`, result: `False` )
+  
+    
+  
+- **Greater than `>`** 
+  - Return `True` if the left side operand is greater than the right side operand. Returns `False` otherwise.
+  - e.g.: `3 >2 ` result: `True` , `3 > 6`, result: `False`
+  
+- **Greater than or equal `>=`**
+  - Return `True` if the left side operand is greater or equal than the right side operand. Returns `False` otherwise.
+  - e.g.: `3 >= 2 ` result: `True` , `3 >= 3`, result: `True`
+  
+- **Less than `<`**
+  - Return `True` if the left side operand is less than the right side operand. Returns `False` otherwise.
+  - e.g.: `3 < 6 ` result: `True` , `3 < 2`, result: `False`
+  
+- **Less than or equal** `<=`
+  - Return `True` if the left side operand is less or equal than the right side operand. Returns `False` otherwise.
+  - e.g.: `3 <= 3 ` result: `True` , `3 <= 2`, result: `False`
+
+
+
+✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
+
+```python
+a = 11.999
+b = 12
+print(a < b)
+```
+
+```python
+a = (30 / 6) + 3
+b = 2**3
+print(a == b)
+```
+
+```python
+a = (25 // 10) * 10 
+b = 4**2 + 4
+print(a != b)
+```
+
+```python
+a = 10
+b = 7**2 +1
+print(a >= b)
 ```
 
 

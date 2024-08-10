@@ -4,7 +4,7 @@
 
 Up to now, you have explored simple lines of code, printing strings of characters and performing simple math calculations. You might have noticed that as your lines of codes grow longer and more complex, they can become hard to read and type.
 
-For instance, if you're calculating the variance of three numbers (measurement of how spread out there are from the average), the operation to type will be:   
+For instance, if you're calculating the variance of three numbers, the operation to type will be:   
 
 ```python
 ((16-(16+ 18+ 19)/3)**2 + (18-(16+ 18+ 19)/3)**2 + (19-(16+ 18+ 19)/3)**2)/3
@@ -12,65 +12,117 @@ For instance, if you're calculating the variance of three numbers (measurement o
 
 Programming in python, will help you structure your complex calculations and make them much easier to read and understand. This is where variables become crucial to learn.
 
+
+
+> Variance: Statistical measurement of how spread out data points are from the average.
+
 ## **Variables** 
 
-Variables are like small boxes in a computer's memory where values can be stored and changed overtime. They are particularly useful for storing a literal instead of re-typing it every time, or storing the result of an operation, for example `21 +314` in order to use it in another operation at a later point.  Variables are composed of a **name** and a **value**. 
+A variable is a temporary holding place for a value. Think of it as a box that can store **a single** item.
+
+The value inside a variable can be of different types, for example:
+
+- a number, such as the user's hourly pay, or the number of students in a course;
+
+- a word or sentence (aka. a "string"), such as the user's name;
+
+- many other things that we'll visit later...
+
+  
+
+Variables are composed of a **name** and a **value**. 
+
+
+
+```python
+variable_name = value 
+```
 
 To create a variable in Python, simply write the name you wish to use and use the `=` operator to assign it a value: 
 
 ```python
-variable_name = value #the value can be any literal, a variable or another expressions. 
+hourlyPay = 21
+numStudents = 30
+
+userName = "Bob"
+greeting = "Hello there!"
 ```
 
-The value can be a literal, an operation, another variable , or a more complex expression. 
 
 
-
-For instance, the following line will create a variable named *sum* and store the result `335` in memory:
+You may also store the result of an operation. For instance, the following line will create a variable named *sum* and store the result `335` in memory:
 
 ```python
-sum = 21 + 314
+sum = 21 + 314       # operation 
+average  = sum / 2   # using another variable
 ```
 
 
 
-Similar to mathematics, variables in programming represent quantities than can change. While, you can use simple names just like  `x`, `y`  in math, it is preferable to give variables a name that is more descriptive of what they represent. In programming, you should always aim at having code that is easy to read and understand. For example, using the variable `t` to represent a temperature reading could lead to confusion because `t` could also mean time, or any other quantity. It is therefore more meaningful to use `temperature`. You may also use abbreviations, so long as they are commonly known (e.g: `max` for the maximum, `min` for the minimum, `avg` for average)
+### Variable naming strict rules
 
-```python
-t = 23.0            # t could mean anything 
-temperature = 23.0  # temperature is easier to understand
-```
+1. The variable name **cannot** start with a number, only with letters or `_`
+
+2. It must **contain only** letters, numbers and underscores (`A-z`, `0-9`, and `_`)
+
+3. It cannot contain a **space character**, nor **punctuation character**, nor any **special character** (@, #, $, %, ?, etc..)
+
+4. It must not be any of the [**Python keywords**](https://www.w3schools.com/python/python_ref_keywords.asp), as these are reserved by Python for predefined purposes.
 
 
 
-**Variable naming strict rules**
-
-- the name of a variable must start with a letter or an underscore character _ 
-
-- the name of a variable cannot start with a digit
-
-- the name must contain only alpha-numeric characters and underscores (`A-z`, `0-9`, and `_`)
-
-- the name must not be any of the **Python keywords**, as these are reserved by Python for predefined purposes and cannot be redefined:
-
-  ```python
-  ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
-  ```
+**Notes:** 
 
 - Python is case sensitive! This means that uppercase `APPLE` and lowercase `apple` are not the same variable names, therefore will be considered by python as two different variables.
 
 - You may use alphabet from other languages too for example: `sûr_la_mer`, `переменная`, `Adiós_Señora` are valid variable names.
 
-**Variable naming convention**
-
-Programmers came up with conventions to make code more easy to read and share. The [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) contains this list of conventions. Here are a few useful conventions we will reinforce in this course:
-
-- variable names should be lowercase, and underscores should be used to seperate words separated (e.g., avg_temperature, estimation_pi, area_under_curve)
-- it's also possible to use mixed case (e.g., myVariable), but only if it is consistently used throughout the source code of the program.
 
 
+### Variable naming convention
 
-✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the naming conventions.
+While, you can use simple names just like  `x`, `y`  in math, it is preferable to give variables a name that is more descriptive of what they represent. 
+
+
+
+> 👉 Variable name should be **meaningful**!
+>
+> Anyone reading your code should be able to guess **what the variable represents** and **how it will be used** just based on the variable name.
+
+
+
+For example, using the variable `t` to represent a temperature reading could lead to confusion because `t` could also mean time, or any other quantity. It is therefore more meaningful to use `temperature`. 
+
+```python
+3t = 23.0           # ERROR (cannot start with number)
+t = 23.0            # BAD!  
+temperature = 23.0  # GOOD!
+```
+
+
+
+You may also use abbreviations, so long as they are commonly known (e.g: `max` for the maximum, `min` for the minimum, `avg` for average)
+
+> 
+>
+> 💣 Code submitted with poor variable names will have marks deducted.
+>
+> 
+
+
+
+Programmers came up with conventions to make code more easy to read and share. The [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) contains this list of conventions. Here are a few useful conventions we will reinforce in this course. You may select any of these conventions so long as you are consistent throughout your solutions.
+
+
+
+| Convention | Formatting | Examples                                               |
+| ---------- | :--------- | :----------------------------------------------------- |
+| Snake case | two_words  | `avg_temperature`, `estimation_pi`, `area_under_curve` |
+| Camel Case | twoWords   | `avgTemperature`, `estimationPi`, `areaUnderCurve`     |
+
+<img src="./Images/"
+
+✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the naming conventions. Use a Python Terminal to validate your answers.
 
 ```python
 P pasc =  7.00e5
@@ -215,6 +267,19 @@ print("The variance is:", variance)
 $$
 Ep=m×g×h
 $$
+
+### Type Hinting
+
+The value can be a numeric literal, a string, an operation, another variable , or a more complex expressions.  Even though Python doesn't require you to specify a variable's type, we'll use ***type hinting*** in this course to emphasize that a variable should always be of a specific type.
+
+```python
+hourlyPay: int = 21
+numStudents: int = 30
+
+userName: str = "Bob"
+greeting: str = "Hello there!"
+```
+
 
 
 ## **Constants**
