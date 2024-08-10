@@ -1,3 +1,5 @@
+
+
 # Operators
 
 
@@ -94,8 +96,6 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 
 
 
-  <div class="button-container">         <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a" class="codeboot-button" title="Run in CodeBoot">             <span>Run code snippet</span>         </a>     </div>
-
 ```python
 w = 2
 x = 10.0
@@ -111,6 +111,16 @@ g = y / x
 print(a,b,c,d,e,f,g)
 ```
 
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a">         
+    <button style="border: none; background-color: transparent;">
+      <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+      <span>Run code snipet</span>
+    </button>     
+    </a> 
+</div>
+
+
 
 ✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
 
@@ -123,6 +133,17 @@ y = a // c
 print(x, y)
 ```
 
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a">         
+    <button style="border: none; background-color: transparent;">
+      <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+      <span>Run code snipet</span>
+    </button>     
+    </a> 
+</div>
+
+
+
 ```python
 a = 5.5
 b = 5
@@ -132,6 +153,17 @@ y = a // b
 print(x, y)
 ```
 
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3MyLTItMi5weQ==~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a">         
+    <button style="border: none; background-color: transparent;">
+      <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+      <span>Run code snipet</span>
+    </button>     
+    </a> 
+</div>
+
+
+
 ```python
 a = -7
 b = -4
@@ -140,7 +172,14 @@ y = (a + b) // b
 print(x, y)
 ```
 
-
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.fYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.~lang=py-novice.~showLineNumbers=true.a1">         
+    <button style="border: none; background-color: transparent;">
+      <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+      <span>Run code snipet</span>
+    </button>     
+    </a> 
+</div>
 
 ## Assignment operator
 
@@ -164,13 +203,29 @@ There exists much more assignment operators, but we will only focus on the follo
     print(value) # output: 8
     ```
 
+    <div style="text-align: right;">     
+        <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a">         
+        <button style="border: none; background-color: transparent;">
+          <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+          <span>Run code snipet</span>
+        </button>     
+        </a> 
+    </div>
+    
   - ```python
     name = "Emma"
     name += "Watson"
     print(name) # output: "EmmaWatson"
     ```
 
-    
+    <div style="text-align: right;">     
+        <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzIucHk=~XQAAgAAqAAAAAAAAAAA3GEn9-d2KwgquAeQuSLwRz6Cqke6qg6gX-Mz_0bJzRbF9mH-blJSf___YPIAA.~lang=py-novice.~showLineNumbers=true.a">         
+        <button style="border: none; background-color: transparent;">
+          <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+          <span>Run code snipet</span>
+        </button>     
+        </a> 
+    </div>
 
 - **Subtraction assignment `-=`**
 
