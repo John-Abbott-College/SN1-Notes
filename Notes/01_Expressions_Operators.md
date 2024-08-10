@@ -108,6 +108,12 @@ g = y / x
 print(a,b,c,d,e,f,g)
 ```
 
+<div class="button-container">         
+  <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a" class="codeboot-button" title="Run in CodeBoot"> 
+    <span>Run code snippet</span>         
+  </a>     
+</div>
+
 
 ✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
 
