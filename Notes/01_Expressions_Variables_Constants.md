@@ -120,9 +120,15 @@ Programmers came up with conventions to make code more easy to read and share. T
 | Snake case | two_words  | `avg_temperature`, `estimation_pi`, `area_under_curve` |
 | Camel Case | twoWords   | `avgTemperature`, `estimationPi`, `areaUnderCurve`     |
 
-<img src="./Images/"
+<img src="Images/variables_snake_camel_case.png" height=400/>
 
-✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the naming conventions. Use a Python Terminal to validate your answers.
+Source: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-convention
+
+
+
+
+
+✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the camel case naming convention. Repeat the exercise, this time using the snake case convention. Use a Python Terminal to validate your answers.
 
 ```python
 P pasc =  7.00e5
@@ -136,7 +142,7 @@ R_pasc/mol = 8.31
 
 **How to use variables**
 
-We say that variables are **mutable**, meaning their values can be changed or updated. 
+We say that variables are **mutable**, meaning their values can be changed or updated over time. 
 
 For example, the following lines create a variable called `temperature`, initially setting its value to 23.0 and subsequently updating its value to 26.0:
 
@@ -170,6 +176,8 @@ temperature2 = temperature + 10  #This line uses the variable to create a new on
 
 print("Temperature: " + temperature) # This line combines a string text to with the value 23.0 and prints it
 ```
+
+
 
 
 
