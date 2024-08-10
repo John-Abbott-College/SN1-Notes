@@ -9,7 +9,7 @@ Python has two primitive loop commands:
 
  `while` loop in Python is a control flow statement that allows code to be executed repeatedly based on a given condition. The loop continues to execute the block of code as long as the specified condition is `True`. Once the condition becomes `False`, the loop stops.
 
-### while Loop Syntax
+### 1. While Loop Syntax
 
 ```
 while condition:
@@ -26,9 +26,7 @@ Here,
 
 4. Once the condition evaluates to `False`, the loop terminates.
 
-   <img src="Images/while_loop.png" height="300">
-
-   
+   <img src="Images/while_loop.png" height="400">
 
 > [!NOTE]
 >
@@ -73,7 +71,7 @@ Counter: 5
 
 
 
-### An infinite loop
+### 2. An infinite loop
 
 An infinite loop, or **endless loop**, occurs when a sequence of instructions in a program repeats without stopping. This happens when the condition controlling the loop never evaluates to `False`, causing the loop to execute indefinitely.
 
@@ -140,7 +138,7 @@ The end.
 
   
 
-### The else Statement
+### 3. The else Statement
 
 In Python, a `while` loop can have an optional `else` clause - that is executed once the loop condition is `False`. 
 
@@ -171,7 +169,7 @@ Here, on the third iteration, the `counter` becomes **2** which terminates the l
 
 
 
-### Python break and continue
+### 4. Python break and continue
 
 In programming, the `break` and `continue` statements are used to alter the flow of loops:
 
@@ -180,11 +178,11 @@ In programming, the `break` and `continue` statements are used to alter the flow
 
 ------
 
-#### Python break Statement
+#### 4.1 Python break Statement
 
 The `break` statement terminates the loop immediately when it's encountered.
 
-<img src="Images/while_break.png" height="300">
+<img src="Images/while_break.png" height="400">
 
 We can use the `break` statement with the `while` loop to terminate the loop when a certain condition is met. 
 
@@ -242,13 +240,13 @@ Design a program that uses a while loop and continuously asks the user to enter 
 
 
 
-#### The continue Statement
+#### 4.2 The continue Statement
 
 The `continue` statement in a `while` loop causes the program to skip the remaining code inside the loop for the current iteration and jump directly to the next iteration. 
 
 It essentially tells the loop to immediately go back to the condition check and continue with the next cycle, bypassing any code that follows the `continue` statement within that loop.
 
-<img src="Images/while_cont.png" height="250">
+<img src="Images/while_cont.png" height="400">
 
 **Example:**
 
