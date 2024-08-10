@@ -93,8 +93,8 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 ✍️**Challenge**: Manually execute the operations of the program below and write the expected result. 
 
 
-
   <div class="button-container">         <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a" class="codeboot-button" title="Run in CodeBoot">             <span>Run code snippet</span>         </a>     </div>
+
 
 ```python
 w = 2
