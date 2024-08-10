@@ -90,8 +90,15 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 
 
 
-✍️**Challenge**: Manually execute the operations of the program below and write the expected result. Check your answers by copying the code into a Python editor or terminal.
-
+✍️**Challenge**: Manually execute the operations of the program below and write the expected result. 
+<div style="text-align: right;">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a">         
+    <button style="border: none; background-color: transparent;">
+      <img src="Images/codeboot-button.png" alt="CodeBoot Button" style="vertical-align: middle;" height=50>
+      <span>Verify the answer in code boot</span>
+    </button>     
+    </a> 
+</div>
 ```python
 w = 2
 x = 10.0
@@ -106,6 +113,7 @@ f = w * x
 g = y / x
 print(a,b,c,d,e,f,g)
 ```
+
 
 ✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
 
