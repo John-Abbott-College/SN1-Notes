@@ -45,12 +45,12 @@
     }
 	<!-- ===== Codeboot button ===== -->
 	/* Always align the button to the right */
-	.button-container {
+	.run-button-container {
 		text-align: right;
 	}
 
 	.codeboot-button {
-		background-color: #4B75C9;
+		background-color: #E4E4E4;
 		color: white;
 		border: none;
 		padding: 10px 20px;
@@ -60,16 +60,24 @@
 		transition: background-color 0.3s ease;
 		display: inline-flex;
 		align-items: center;
+		height: 50px
 		text-decoration: none; 
 		background-image: url('Images/codeboot-button.png');
 		background-repeat: no-repeat;
-		background-size: 100px 100px; 
+		background-size: 40px; 
 		background-position: 10px center; 
 		padding-left: 50px; 
 	}
 
 	.codeboot-button:hover {
-		background-color: #3A5B9D;
+		background-color: white;
+	}
+	
+	.codeboot-button span {
+		display: inline; /* Show text */
+		margin-left: 10px; /* Space between image and text */
+		font-size: 16px;
+		color: #3F6AB0; /* Text color matching the button background */
 	}
 		
   </style>
