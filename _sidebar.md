@@ -28,9 +28,9 @@
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
 - [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
-- [Priority Operations](01_Expressions_Priority_Operators)
+- [Priority Operations](./Notes/01_Expressions_Priority_Operators)
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
-- Functions
+- [Functions](./Notes/01_Expressions_Variables_Constants)
 
 **Data structures**
 
