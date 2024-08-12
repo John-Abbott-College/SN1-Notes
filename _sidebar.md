@@ -47,16 +47,10 @@
 
 - Installing Matplotlib
 
-**Functions**
-
-- Math functions
-- External modules functions
-- User defined functions
-
 **Loops**
 
 - [While loop](./Notes/04_while_loop)
-- For loop
+- [For loop]()
 
 **Files**
 
