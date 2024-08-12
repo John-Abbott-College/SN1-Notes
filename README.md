@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Programming in Sciences - Fall 2024
 
 *Welcome to 420-SN1 Programming in Sciences*
@@ -31,3 +27,12 @@ $$
 x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$
 
+
+Some math here:
+```math
+x = {-b \pm \sqrt{b^2-4ac} \over 2a} 
+```
+and here:
+```math
+\sqrt{3}
+```
