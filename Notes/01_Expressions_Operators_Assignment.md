@@ -1,8 +1,14 @@
 ## Assignment operator
 
-Assignment operators are used to set the value of a variable, unlike mathematics. For instance, in math 5 + 3 = 8 is a correct **statement**. However in Python, executing`5 + 3 = 8` will cause a syntax error. This is because the `=` operator is not used for arithmetic operations or equality. In programming, `5 + 3` is an expression that cannot be reassigned. Python expects the left hand side of the equality to be a variable.
+Assignment operators are used to set the value of a variable, unlike mathematics. For instance, in math 5 + 3 = 8 is a correct **statement**. However in Python, executing`5 + 3 = 8` will cause a syntax error. This is because the `=` operator is not used for arithmetic operations or equality. In programming, `5 + 3` is an expression that cannot be reassigned.
 
-There exists much more assignment operators, but we will only focus on the following ones:
+Assignment operators are evaluated from right to left, the value or expression on the right hand side of the operator is evaluated first. Then the result of this expression is assigned to the variable on the left hand side.  Python expects the left hand side of the equality to be a variable.
+
+<img src="Images/Variables_assignment.png" height=250/>
+
+
+
+There exists much more assignment operators, but we will only focus on the following ones.
 
 ### Assignment `=`
 
@@ -65,7 +71,7 @@ print(value) # output: 8
 
 
 
- 
+
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzIucHk=~XQAAgAAqAAAAAAAAAAA3GEn9-d2KwgquAeQuSLwRz6Cqke6qg6gX-Mz_0bJzRbF9mH-blJSf___YPIAA.~lang=py-novice.~showLineNumbers=true.a">         
