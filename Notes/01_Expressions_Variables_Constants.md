@@ -4,7 +4,7 @@
 
 Up to now, you have explored simple lines of code, printing strings of characters and performing simple math calculations. You might have noticed that as your lines of codes grow longer and more complex, they can become hard to read and type.
 
-For instance, if you're calculating the variance of three numbers, the operation to type will be:   
+For instance, if you're calculating the variance of three numbers[^1], the operation to type will be:   
 
 ```python
 ((16-(16+ 18+ 19)/3)**2 + (18-(16+ 18+ 19)/3)**2 + (19-(16+ 18+ 19)/3)**2)/3
@@ -14,7 +14,7 @@ Programming in python, will help you structure your complex calculations and mak
 
 
 
-> Variance: Statistical measurement of how spread out data points are from the average.
+> [^1]: Variance is statistical measurement of how spread out data points are from the average.
 
 ## **Variables** 
 
@@ -38,7 +38,7 @@ Variables are composed of a **name** and a **value**.
 variable_name = value 
 ```
 
-To create a variable in Python, simply write the name you wish to use and use the `=` operator to assign it a value: 
+To create a variable in Python, simply write the name you wish to use and use the assignment `=` operator to assign it a value: 
 
 ```python
 hourlyPay = 21
@@ -52,10 +52,49 @@ greeting = "Hello there!"
 
 You may also store the result of an operation. For instance, the following line will create a variable named *sum* and store the result `335` in memory:
 
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.odmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.odmFyaWFibGVzX2NoYWxsZW5nZTEucHk=~XQAAgABYAAAAAAAAAAAwmcjVNAzI1sPTb1Rnd9nMwlZIpKAWg951RSFcvuLGhPFNLZy_RWTjWPIVTvhthfgdoQfOR8q5KNeb43Zsqm31fvjE9YA=.odmFyaWFibGVzX2NoYWxsZW5nZTIucHk=~XQAAgACiAAAAAAAAAAAjlIQmAnNNrQCVCf48HqW0cEfvMtc8dhgTDH-0GM-qKH4b-38tGNpwASZYjBd7BeI0ZgeG0PoXiAy8z824TxqY25wTpBj2ahbMfJUtNa95eEM85oCAw1DR8oNSREQb4U9bdiHPuT4HW73r8PSZfNn_8NEwAA==.fdXNpbmdfdmFyaWFibGVzLnB5~XQAAgAAkAAAAAAAAAAA5nUnZDQlRuuKeP2atnly3RpvCWkCz75lWzK3FI5DhUr8bsfKf_uNwAA==.~lang=py-novice.~showLineNumbers=true.e1">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
+
 ```python
 sum = 21 + 314       # operation 
 average  = sum / 2   # using another variable
 ```
+
+
+
+Let's break down the way variables are created and in Python, the following line is evaluated **from right to left**:
+
+<img src="../Images/Variables_assignment.png" height=250/>
+
+1. The expression on the **right side** of the `=` sign is evaluated first.
+2. Then, if the variable on the **left side** doesn't already exist, will be created.
+3. The variable is **assigned** with the result from step 1.
+4. If we use the variable again, the **assignment is updated** with a new value.
+5. Now, when the variable is used it returns the most latest value. 
+
+Given that assignments are evaluated from right to left in Python, the expression below is **correct** although it is mathematically not correct:  
+
+```python
+x = 2
+x = x + 1  # This is valid in programming
+```
+
+Let's run the example in codeboot...
+
+<div class="button-container">     
+    <a href="https://app.codeboot.org/4.1.2/?init=.odXNpbmdfdmFyaWFibGVzXzIucHk=~XQAAgACAAQAAAAAAAAA6GUn-74cyTh0__GhBNjgdVfqEsZ-12mb5qH1w6HItSS8aB7YPpB70sX-c_R-tuJfsZ7Q5rD2_gLB0p_txmGHlhNTJbW0X5OQh_zuMqn6hVMcGuk-_OFhOu7uWqIoGNneXmnvCASdmSPMOycQkIgDfe9X3Z4CqXqHOS2YuLWkA_-gZ9Mg=.fYXNzaWduaW5nX3ZhcmlhYmxlcy5weQ==~XQAAgAAXAAAAAAAAAAA8CAOiEWEDQUfSteh5uxz_eJ-pfPsoZcaE__9yMgAA.~lang=py-novice.a">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
+
+The value of x is increased by 1.
 
 
 
@@ -81,7 +120,9 @@ average  = sum / 2   # using another variable
 
 ### Variable naming convention
 
-While, you can use simple names just like  `x`, `y`  in math, it is preferable to give variables a name that is more descriptive of what they represent. 
+Now that you've seen that programming expressions don't play by the math rules, let's break away even more from your math habits.
+
+While, you can use simple names just like  `x`, `y`, it is preferable to give variables a name that is more descriptive of what they represent. 
 
 
 
@@ -120,7 +161,7 @@ Programmers came up with conventions to make code more easy to read and share. T
 | Snake case | two_words  | `avg_temperature`, `estimation_pi`, `area_under_curve` |
 | Camel Case | twoWords   | `avgTemperature`, `estimationPi`, `areaUnderCurve`     |
 
-<img src="Images/variables_snake_camel_case.png" height=400/>
+<img src="Images/variables_snake_camel_case.png" height=300/>
 
 Source: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-convention
 
@@ -128,17 +169,24 @@ Source: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-c
 
 
 
-✍️**Challenge**: The ideal Gas Law `PV=nRT`is a fundamental equation in chemistry and physics. The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the camel case naming convention. Repeat the exercise, this time using the snake case convention. Use a Python Terminal to validate your answers.
+✍️**Challenge**: The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the camel case naming convention. Repeat the exercise, this time using the snake case convention. Use a Python Terminal to validate your answers.
 
 ```python
-P pasc =  7.00e5
-V_m^3 = 2e-3
-N-moles = 55660.0
-T = 291
-R_pasc/mol = 8.31
+2weeksPay = 200.0
+employee# = 5612
+VACATION_DAYS.2024 = 2
+Yearly^Salary = 4800
+In$urance_percent = 3.0
+
 ```
 
-
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.fdmFyaWFibGVfbmFtaW5nX2NoYWxsZW5nZS5weQ==~XQAAgABqAAAAAAAAAAAxGktU7aCPLUSkW8nfnXXLqMqgrHZ6V_ZyI3UWjAIZ_DyIEHz42GejNbK-4tRmZA3BGgGVAKDKDVza5CEkr5k-qWLXy_tbNC59FU3X2XUCY_sEy3JtV9XqTgw7L2uf7LnH_CJakP-_KsAA.~lang=py-novice.~showLineNumbers=true.e">         
+    <button class="codeboot-button">
+      <span>Solution</span>
+    </button>     
+    </a> 
+</div>
 
 **How to use variables**
 
@@ -149,6 +197,14 @@ For example, the following lines create a variable called `temperature`, initial
 ```python
 temperature = 23.0
 temperature = 26.0 #the value has changed
+```
+
+
+
+To determine the type of a variable, you can use the function `type()`:
+
+```python
+print(type(temperature))
 ```
 
 In python, the value of a variable can be changed to a literal of a different type, though this  practice is **highly discouraged**.
@@ -174,12 +230,19 @@ print(temperature)  # This line uses the variable, will print 23.0
 
 temperature2 = temperature + 10  #This line uses the variable to create a new one
 
-print("Temperature: " + temperature) # This line combines a string text to with the value 23.0 and prints it
+print("Temperature: ", temperature) 
+print("Temperature2:", temperature2)
 ```
 
 
 
-
+<div class="button-container">     
+    <a href="https://app.codeboot.org/4.1.2/?init=.fdXNpbmdfdmFyaWFibGVzXzIucHk=~XQAAgACAAQAAAAAAAAA6GUn-74cyTh0__GhBNjgdVfqEsZ-12mb5qH1w6HItSS8aB7YPpB70sX-c_R-tuJfsZ7Q5rD2_gLB0p_txmGHlhNTJbW0X5OQh_zuMqn6hVMcGuk-_OFhOu7uWqIoGNneXmnvCASdmSPMOycQkIgDfe9X3Z4CqXqHOS2YuLWkA_-gZ9Mg=.~lang=py-novice.e1">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
 
 
 
@@ -191,7 +254,7 @@ print("Temperature: " + temperature) # This line combines a string text to with 
    print(x)   #x doesn't exist
    ```
 
-2. Using a variable before creating it:
+2. Using a variable before **creating it**:
 
    ```python
    print(temperature3)  #this will cause an error because temperature3 doesn't exist yet at this point.
@@ -211,9 +274,9 @@ print("Temperature: " + temperature) # This line combines a string text to with 
 Let's revisit the lengthy equation we initially introduced: `((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3`
 
 This equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where `x_m` represents the mean of the grades.
-$$
-Variance = ((x_1 - x_m)^2 + (x_2 - x_m)^2+(x_3 - x_m)^2)/3
-$$
+
+<img src="Images/Equations/variance.png" height=50/>
+
 Let's break it down in the following steps and implement them:
 
 1. Enter the results of each student and store them in three variables.
@@ -265,16 +328,41 @@ Finally, we simply need to print the variance.
 print("The variance is:", variance)
 ```
 
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.fdmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.~lang=py-novice.~showLineNumbers=true.e1">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
+
+
+
 
 
 ✍️**Challenge**: Store your age in a variable as a number. Store one of your parent's age in a variable as a number. Using those two variables, calculate the age difference and print it out in a message. 
 
-
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.odmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.fdmFyaWFibGVzX2NoYWxsZW5nZTEucHk=~XQAAgABYAAAAAAAAAAAwmcjVNAzI1sPTb1Rnd9nMwlZIpKAWg951RSFcvuLGhPFNLZy_RWTjWPIVTvhthfgdoQfOR8q5KNeb43Zsqm31fvjE9YA=.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
+    <button class="codeboot-button">
+      <span>Solution</span>
+    </button>     
+    </a> 
+</div>
 
 ✍️**Challenge**: Calculate the gravitational potential energy of an object using the following formula, where `m` is the mass of the object, `g` is the acceleration of gravity which is 9.81 m/s^2, `h` is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.
-$$
-Ep=m×g×h
-$$
+
+<img src="Images/Equations/gravitational_potential_energy.png" height=60/>
+
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.odmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.odmFyaWFibGVzX2NoYWxsZW5nZTEucHk=~XQAAgABYAAAAAAAAAAAwmcjVNAzI1sPTb1Rnd9nMwlZIpKAWg951RSFcvuLGhPFNLZy_RWTjWPIVTvhthfgdoQfOR8q5KNeb43Zsqm31fvjE9YA=.fdmFyaWFibGVzX2NoYWxsZW5nZTIucHk=~XQAAgACiAAAAAAAAAAAjlIQmAnNNrQCVCf48HqW0cEfvMtc8dhgTDH-0GM-qKH4b-38tGNpwASZYjBd7BeI0ZgeG0PoXiAy8z824TxqY25wTpBj2ahbMfJUtNa95eEM85oCAw1DR8oNSREQb4U9bdiHPuT4HW73r8PSZfNn_8NEwAA==.~lang=py-novice.~showLineNumbers=true.e1">         
+    <button class="codeboot-button">
+      <span>Solution</span>
+    </button>     
+    </a> 
+</div>
+
+
 
 ### Type Hinting
 
@@ -293,14 +381,6 @@ greeting: str = "Hello there!"
 ## **Constants**
 
 Constants like in math are suppose to be values that never change. In python, they are treated the same way as variables but their values cannot be modified in the program. We say that constants are **immutable**.  These values are universally acknowledged to be true and they should not changeover time. 
-
-```python
-GRAVITATION_ACC = 9.81
-
-print(GRAVITATION_ACC)
-```
-
-
 
 Typically, Python constants are declared and initialized on different modules or files and need to be imported within the source code. We will learn more about modules at a later moment. 
 
@@ -322,7 +402,13 @@ print(constants.PI)
 print(constants.GRAVITATION_ACC)
 ```
 
-
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.fbWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
 
 > ⚠️ The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help "objects" that are constants and protected from modification.
 
