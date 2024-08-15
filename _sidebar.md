@@ -50,11 +50,11 @@
 **Loops**
 
 - [While loop](./Notes/04_while_loop)
-<<<<<<< HEAD
+  <<<<<<< HEAD
+
 - [For loop](./Notes/04_For loop)
-=======
-- [For loop]()
->>>>>>> 1a8168ebede12e57868a1cdb0b0e4b5167149b87
+
+  
 
 **Files**
 
