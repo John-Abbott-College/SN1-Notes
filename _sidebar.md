@@ -30,7 +30,7 @@
 - [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
 - [Priority Operations](./Notes/01_Expressions_Priority_Operators)
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
-- [Functions](./Notes/01_Expressions_Variables_Constants)
+- [Functions](./Notes/01_Expressions_Functions)
 
 **Data structures**
 
