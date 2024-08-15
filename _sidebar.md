@@ -53,7 +53,7 @@
 **Loops**
 
 - [While loop](./Notes/04_while_loop)
-- For loop
+- [For loop](./Notes/04_For loop)
 
 **Files**
 

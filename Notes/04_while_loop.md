@@ -28,9 +28,9 @@ Here,
 
    <img src="Images/while_loop.png" height="400">
 
-> [!NOTE]
->
-> All the rules regarding **indentation** are applicable here, too. We'll show you this soon.
+
+
+> ⚠️ All the rules regarding **indentation** are applicable here, too. We'll show you this soon.
 
 
 
@@ -163,9 +163,7 @@ This is inside else block
 
 Here, on the third iteration, the `counter` becomes **2** which terminates the loop. It then executes the `else` block and prints `This is inside else block`.
 
-> [!NOTE]
->
-> The `else` block will not execute if the `while` loop is terminated by a `break` statement.
+> ⚠️ The `else` block will not execute if the `while` loop is terminated by a `break` statement.
 
 
 

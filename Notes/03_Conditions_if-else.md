@@ -184,7 +184,10 @@ Here's how this program works.
 #### Here are two important points:
 
 - this use of the if statement is known as **nesting**; remember that every else refers to the if which lies **at the same indentation level**; you need to know this to determine how the *if*s and *else*s pair up;
+
 - consider how the **indentation improves readability**, and makes the code easier to understand and trace.
+
+  
 
 ✍️**Challenge**: Write a Python program that assigns a letter grade based on a numeric score. Ask the user to input a score, then determine and print the letter grade:
 
