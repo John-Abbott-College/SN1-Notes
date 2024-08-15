@@ -51,7 +51,7 @@
 
 - [While loop](./Notes/04_while_loop)
 
-- [For loop](./Notes/04_For_loop)
+- [For loop](./Notes/04_for_loop)
 
   
 
