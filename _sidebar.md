@@ -25,9 +25,12 @@
   - Integers
   - Floats
   - Boolean
-- [Operators](./Notes/01_Expressions_Operators)
+- [Arithmetic Operators](./Notes/01_Expressions_Operators)
+- [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
+- [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
+- [Priority Operations](./Notes/01_Expressions_Priority_Operators)
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
-- Functions
+- [Functions](./Notes/01_Expressions_Functions)
 
 **Data structures**
 
@@ -44,16 +47,14 @@
 
 - Installing Matplotlib
 
-**Functions**
-
-- Math functions
-- External modules functions
-- User defined functions
-
 **Loops**
 
 - [While loop](./Notes/04_while_loop)
+<<<<<<< HEAD
 - [For loop](./Notes/04_For loop)
+=======
+- [For loop]()
+>>>>>>> 1a8168ebede12e57868a1cdb0b0e4b5167149b87
 
 **Files**
 

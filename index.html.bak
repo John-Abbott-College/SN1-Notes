@@ -43,6 +43,43 @@
       margin-bottom: 3rem !important;
       font-style: italic;
     }
+	<!-- ===== Codeboot button ===== -->
+	/* Always align the button to the right */
+	.run-button-container {
+		text-align: right;
+	}
+
+	.codeboot-button {
+		background-color: #E4E4E4;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 16px;
+		transition: background-color 0.3s ease;
+		display: inline-flex;
+		align-items: center;
+		height: 50px
+		text-decoration: none; 
+		background-image: url('Images/codeboot-button.png');
+		background-repeat: no-repeat;
+		background-size: 40px; 
+		background-position: 10px center; 
+		padding-left: 50px; 
+	}
+
+	.codeboot-button:hover {
+		background-color: #A6A6A6;
+	}
+	
+	.codeboot-button span {
+		display: inline; /* Show text */
+		margin-left: 10px; /* Space between image and text */
+		font-size: 16px;
+		color: #3F6AB0; /* Text color matching the button background */
+	}
+		
   </style>
 </head>
 
@@ -74,6 +111,13 @@
 
   <!-- MathJax to render math formulas-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src=”https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id=”MathJax-script” async src=”https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <!-- Codeboot https://codeboot-org.github.io/cegep/ -->
+  <link rel="stylesheet" href="https://codeboot.org/4.0.0/codeboot.bundle.css">
+  <script src="https://codeboot.org/4.0.0/codeboot.bundle.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 </body>
 
 </html>
