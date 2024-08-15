@@ -50,9 +50,8 @@
 **Loops**
 
 - [While loop](./Notes/04_while_loop)
-  <<<<<<< HEAD
 
-- [For loop](./Notes/04_For loop)
+- [For loop](./Notes/04_For_loop)
 
   
 
