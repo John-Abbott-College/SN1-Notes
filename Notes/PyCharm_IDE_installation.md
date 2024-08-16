@@ -2,13 +2,13 @@
 
 ## Python IDE
 
-PyCharm is one of the most popular **Python-IDE** developed by JetBrains and used for performing scripting in Python language. PyCharm provides some very useful features like Code completion and inspection, Debugging process, support for various programming frameworks, Package Management, etc. PyCharm provides various tools for productive development in [Python.](https://www.geeksforgeeks.org/python-programming-language/)
+[PyCharm](https://www.jetbrains.com/pycharm/) is one of the most popular **Python-IDE** developed by [JetBrains](https://www.jetbrains.com/help/pycharm/type-hinting-in-product.html#stub-type-hints) and used for performing scripting in the Python language. IDE stands for integrated development environment and its like an advanced text editor like word or notepad. An IDE is to a programmer what a cockpit is to a pilot. PyCharm provides some very useful features like code editing, auto-completion, mistake detections, debugging, package management, etc. PyCharm provides various tools for productive development in [Python.](https://www.geeksforgeeks.org/python-programming-language/) Learning how to use PyCharm will increase your productivity and efficiency when writing code.
 
 ## How to Install PyCharm
 
 Here is a step by step process on how to download and install PyCharm IDE on Windows:
 
-1. To download PyCharm visit the website https://www.jetbrains.com/pycharm/download/ and Click the “DOWNLOAD” link under the Community Section.
+1. To download PyCharm visit the [JetBrains website](https://www.jetbrains.com/pycharm/download/ ) and Click the “DOWNLOAD” link under the Community Section.
 
    <img src="Images/pc1.png" height="300">
 
@@ -20,13 +20,13 @@ Here is a step by step process on how to download and install PyCharm IDE on Win
 
    
 
-3. On the next screen, Change the installation path if required. Click “Next”.
+3. On the next screen, keep the default installation path if required. Click “Next”.
 
    <img src="Images/pc3.png" height="300">
 
    
 
-4. Choose options of installation according to your choice.
+4. Select the installation options.
 
    <img src="Images/pc4.png" height="300">
 
@@ -38,19 +38,27 @@ Here is a step by step process on how to download and install PyCharm IDE on Win
 
    
 
-6. Let the installation finished.
+6. Let the installation finished. You might need to re-start your PC. 
 
    <img src="Images/pc6.png" height="300">
 
    
 
-7. Once installation finished, you should receive a message screen that PyCharm is installed. If you want to go ahead and run it, click the “Run PyCharm Community Edition” box first and click “Finish”.
+   ⏳⏳⏳⏳ (wait time)
+
+   
+
+7. Once the installation finished, you should receive a message screen that PyCharm is installed. If you want to go ahead and run it, click the “Run PyCharm Community Edition” box first and click “Finish”.
 
    <img src="Images/pc7.png" height="300">
 
    
 
-8. After you click on “Finish,” the Following screen will appear. 
+8. You might be asked to "Import settings", select "Do not import settings"
+
+9. The Following **Welcome to PyCharm** screen will appear. 
 
    <img src="Images/pc8.png" height="300">
+
+
 
