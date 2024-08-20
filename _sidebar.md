@@ -2,7 +2,7 @@
 
 - [Course overview]()
 - [What is programming](./Notes/WhatIsProgramming)
-- Léa Submission Guide
+- [Léa Submission Guide](https://john-abbott-college.github.io/SN1-Notes/Files/Léa%Guide.pdf)
 
 **Getting Started with Python**
 
@@ -12,9 +12,9 @@
 
 - [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
 
-- [Getting Started with Python](./Notes/create_new_project)
+- [Getting Started with PyCharm](./Notes/create_new_project)
 
-- Debugging
+- [Debugging](./Notes/debugging)
 
   
 
@@ -22,9 +22,9 @@
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
-  - Integers
-  - Floats
-  - Boolean
+  - [Integers](./Notes/01_Expressions_Literals_Integers)
+  - [Floats](./Notes/01_Expressions_Literals_Float)
+  - [Boolean](./Notes/01_Expressions_Literals_Boolean)
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
@@ -53,26 +53,21 @@
 
 **Plotting**
 
-- Installing Matplotlib
+- [Matplotlib]()
+- [Graphs]()
 
 
 
 **Files**
 
-- Text files
-- CSV files
+- [Reading and Writing to a file]()
+- [CSV files]()
 
 
 
 **Labs** 
 
-- Lab1 : Literals and print()
-
-- Lab2: Operators and Variables
-
-- Lab3: Functions and the math library
-
-- Lab5: Lists
+- [Lab1 : Literals and print()](./Labs/Lab1)
 
   
 
