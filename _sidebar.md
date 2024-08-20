@@ -2,7 +2,7 @@
 
 - [Course overview]()
 - [What is programming](./Notes/WhatIsProgramming)
-- [Léa Submission Guide](https://john-abbott-college.github.io/SN1-Notes/Files/Léa%Guide.pdf)
+- [Léa Submission Guide](https://john-abbott-college.github.io/SN1-Notes/Files/Lea_guide.pdf)
 
 **Getting Started with Python**
 
