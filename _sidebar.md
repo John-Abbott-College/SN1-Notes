@@ -25,12 +25,17 @@
   - Integers
   - Floats
   - Boolean
+- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
 - [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
 - [Priority Operations](./Notes/01_Expressions_Priority_Operators)
-- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 - [Functions](./Notes/01_Expressions_Functions)
+
+**Conditional statements**
+
+- [If statement](./Notes/03_Conditions_if)
+- [If/Else statement](./Notes/03_Conditions_if-else)
 
 **Data structures**
 
@@ -38,27 +43,26 @@
 - [Dictionary](./Notes/02_Dictionaries)
 - [Tuple](./Notes/02_Tuples)
 
-**Conditional statements**
+**Loops**
 
-- [If statement](./Notes/03_Conditions_if)
-- [If/Else statement](./Notes/03_Conditions_if-else)
+- [For loop](./Notes/04_for_loop)
+
+- [While loop](./Notes/04_while_loop)
+
+  
 
 **Plotting**
 
 - Installing Matplotlib
 
-**Loops**
 
-- [While loop](./Notes/04_while_loop)
-
-- [For loop](./Notes/04_for_loop)
-
-  
 
 **Files**
 
 - Text files
 - CSV files
+
+
 
 **Labs** 
 
