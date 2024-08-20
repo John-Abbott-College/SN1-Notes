@@ -1,10 +1,6 @@
-**Introduction**
+**Getting Started**
 
-- [Course overview]()
 - [What is programming](./Notes/WhatIsProgramming)
-- [Léa Submission Guide](https://john-abbott-college.github.io/SN1-Notes/Files/Léa%Guide.pdf)
-
-**Getting Started with Python**
 
 - [What is Python?](./Notes/Introduction_to_Python)
 
@@ -16,9 +12,7 @@
 
 - [Debugging](./Notes/debugging)
 
-  
-
-[Python expressions](./Notes/01_Expressions_Intro)
+**Expressions**
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
