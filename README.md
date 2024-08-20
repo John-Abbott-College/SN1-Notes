@@ -16,7 +16,7 @@ This website provides you with additional notes and practice exercises that can 
 
 # Course Outline
 
-You can download a copy of the course outline from [Léa](https://johnabbott.omnivox.ca/Login/Account/Login?ReturnUrl=%2fintr%2f).
+You can download a copy of the course outline [here](https://john-abbott-college.github.io/SN1-Notes/Files/FALL2024.COMPUTER%20SCIENCE.420-SN1-GENERAL.pdf).
 
 
 
