@@ -12,7 +12,7 @@
 
 - [Debugging](./Notes/debugging)
 
-**Expressions**
+<!--**Expressions**
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
@@ -62,6 +62,7 @@
 **Labs** 
 
 - [Lab1 : Literals and print()](./Labs/Lab1)
+-->
 
   
 
