@@ -48,6 +48,7 @@
 
 - [List](./Notes/02_list)
 - [For loop](./Notes/04_for_loop)
+- [List Comprehensions](./Notes/04_for_loop_list_comprehension)
 
 **Week 8**
 
