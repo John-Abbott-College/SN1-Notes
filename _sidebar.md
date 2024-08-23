@@ -1,5 +1,7 @@
 **Getting Started**
 
+- [Working with files](./Notes/FileManipulation.md)
+
 - [What is programming](./Notes/WhatIsProgramming)
 
 - [What is Python?](./Notes/Introduction_to_Python)
