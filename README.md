@@ -4,7 +4,7 @@
 
 In this course, you will learn everything about the basics of programming to solve scientific problems, read data from files, clean up the data, apply mathematical formulas, and more. 
 
-
+<img src="Images/gencraft_SN1_icon.png" height=450/>
 
 This website provides you with additional notes and practice exercises that can help you better understand and master the concepts seen in class. 
 
