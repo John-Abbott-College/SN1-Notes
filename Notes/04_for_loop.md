@@ -152,7 +152,7 @@ The value of i is currently 5
 
 
 
-## Python for loop with`else`clause
+## Python for loop with`else` clause
 
 A `for` loop can have an optional `else` clause. This `else` clause executes after the iteration completes.
 

@@ -92,7 +92,7 @@ print(numbers[-2]) # the output is: 2
 
 So, the last accessible element in our list is numbers[-4] (the first one) ‒ don't try to go any further!
 
-## The Length of an Array
+## The Length of a list
 
 The length of a list can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.
 
@@ -122,11 +122,11 @@ print(len(numbers))  # the output is 4
 print(numbers) # [10, 7, 2, 1]
 ```
 
-✍️**Challenge**: Given the following list: `My_list = [7, 3, 2, 5, 8]`, perform the following tasks in Python:
+✍️**Challenge**: Given the following list: `my_list = [7, 3, 2, 5, 8]`, perform the following tasks in Python:
 
-1. Write a line of code that replaces the middle number in `My_list` with an integer number entered by the user.
+1. Write a line of code that replaces the middle number in `my_list` with an integer number entered by the user.
 2. Write a line of code that removes the last element from the list.
-3. Write a line of code that prints the current length of `My_list`.
+3. Write a line of code that prints the current length of `my_list`.
 
 
 
@@ -137,7 +137,7 @@ print(numbers) # [10, 7, 2, 1]
 A new element may be *added* to the end of the existing list:
 
 ```python
-list.append(value)
+my_list.append(value)
 ```
 
 * Such an operation is performed by a method named append(). It takes its argument's value and puts it **at the end of the list** which owns the method.
@@ -149,7 +149,7 @@ list.append(value)
 The insert() method is a bit smarter ‒ it can add a new element **at any place in the list**, not only at the end.
 
 ```python
-list.insert(location, value)
+my_list.insert(location, value)
  
 ```
 
@@ -181,12 +181,12 @@ Pay attention to what happens after using insert(): the former first element is 
 
 ## Lists in action
 
-magine you need to rearrange the elements of a list by reversing their order: swapping the first with the fifth and the second with the fourth, while leaving the third element untouched.
+Imagine you need to rearrange the elements of a list by reversing their order: swapping the first with the fifth and the second with the fourth, while leaving the third element untouched.
 
 Question: how can you swap the values of two variables? Python offers an easy way to perform the swap:
 
 ```python
-ariable_1 = 1
+variable_1 = 1
 variable_2 = 2
  
 variable_1, variable_2 = variable_2, variable_1
@@ -383,7 +383,7 @@ The print() function invocation from the last line of the code will then cause a
 
 
 
-## The in and not in operators
+## The `in` and `not` in operators
 
 Python offers two very powerful operators, able to **look through the list in order to check whether a specific value is stored inside the list or not**.
 

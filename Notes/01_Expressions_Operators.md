@@ -32,7 +32,7 @@ To use arithmetic operators you firstly need to understand what happens when you
 
 - Any `int` value e.g.: `10` has a `float` equivalent e.g.: `10.0`. 
 
-- You can convert an integer into a float by using the constructor, e.g: `float(10)` 
+- You can convert an integer into a float by using `float(10)` 
 
 - Likewise, you can convert a `float` into an integer using `int(3.14)`
 
@@ -71,9 +71,11 @@ In summary, when performing an arithmetic operation, the numbers will be convert
   7/5 = 1.4  = 1 + 2/5
   $$
 
+  <img src="Images/Equations/Quotient_Remainder.png"/>
+  
   - Quotient: 1 
   - Remainder: 2 
-
+  
 - The **modulus** operation returns the remainder of a long division (e.g. `7 % 5 = 2`). If is an easy way to verify if a number is divisible by another number (remainder is 0).
 
 - If performing this operation with two `int`, the result will be an `int` 
@@ -83,6 +85,26 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 - If performing this operation with an `int` and a `float`, the int is automatically converted into the wider type `float` and the result is a `float`.
 
 - This operator doesn't apply to string literals and will cause an error if used on strings.
+
+- This operator is useful to determine if a number is odd or even. If it even, the remainder of a division by `2` would be `0`. Otherwise, if the number is odd, the remainder would be `1`:
+
+  ```python
+  # Odd numbers
+  
+  print(1 % 2)
+  print(3 % 2)
+  print(5 % 2)
+  print(51 % 2)
+  
+  # Even numbers
+  
+  print(0 % 2)
+  print(2 % 2)
+  print(4 % 2)
+  print(50 % 2)
+  ```
+
+  
 
 #### Floor division `//`
 

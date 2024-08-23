@@ -12,59 +12,83 @@
 
 - [Debugging](./Notes/debugging)
 
-<!--**Expressions**
+<!--
+
+**Week 2**
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
-  - [Integers](./Notes/01_Expressions_Literals_Integers)
-  - [Floats](./Notes/01_Expressions_Literals_Float)
+  - [Integers & Floats](./Notes/01_Expressions_Literals_Integers._Floats)
   - [Boolean](./Notes/01_Expressions_Literals_Boolean)
-- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
+- Lab1: input() , print() and fstrings
+
+**Week 3**
+
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
-- [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
-- [Priority Operations](./Notes/01_Expressions_Priority_Operators)
+
+- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
+
+  
+
+**Week 4 & 5**
+
 - [Functions](./Notes/01_Expressions_Functions)
 
-**Conditional statements**
+**Week 6**
 
+- [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
 - [If statement](./Notes/03_Conditions_if)
 - [If/Else statement](./Notes/03_Conditions_if-else)
+- [Priority Operations](./Notes/01_Expressions_Priority_Operators)
 
-**Data structures**
+**Week 7**
 
 - [List](./Notes/02_list)
+- [For loop](./Notes/04_for_loop)
+
+**Week 8**
+
 - [Dictionary](./Notes/02_Dictionaries)
+
 - [Tuple](./Notes/02_Tuples)
 
-**Loops**
 
-- [For loop](./Notes/04_for_loop)
+**Week 9**
+
+- Test
+
+**Week 10**
 
 - [While loop](./Notes/04_while_loop)
 
   
 
-**Plotting**
+**Week 11**
 
-- [Matplotlib]()
-- [Graphs]()
+- Matplotlib
+- Graphs
 
+**Week 12**
 
+- Reading and Writing to a file
+- CSV files
 
-**Files**
+**Week 13**
 
-- [Reading and Writing to a file]()
-- [CSV files]()
+- Algorithm Design & Implementation
 
+**Week 14**
 
+- Intro to numpy
 
-**Labs** 
+**Week 15**
 
-- [Lab1 : Literals and print()](./Labs/Lab1)
+- Review
+
 -->
 
-  
+
 
 
 
