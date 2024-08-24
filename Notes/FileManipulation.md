@@ -24,13 +24,13 @@ In the old days, files used to be a document that was printed on paper.  Today, 
 
 Before computers were everywhere, most people and companies organized their files into folders.
 
-<img src="../Images/real_file_folders.png" alt="image of paper file folders" style="zoom:33%;" />
+<img src="Images/real_file_folders.png" alt="image of paper file folders" style="zoom:33%;" />
 
 Each folder would have a name, describing what types of files it contained (example: '*Project 1*', '*Project 2*')
 
 Maybe, if the number of files were large, the owner of a company might reorganize their files, so that the folder '*Project 1*' might be contain more folders (example: '*customer complains*', '*expenses*', etc.)
 
-<img src="../Images/paper_folder_within_folder.png" alt="folders within folders" style="zoom:80%;" />
+<img src="Images/paper_folder_within_folder.png" alt="folders within folders" style="zoom:80%;" />
 
 ### Computers
 
@@ -116,12 +116,12 @@ Likewise if the file extension is `.docx`, double clicking the file in File Expl
 
 | Extension | Icon | Meaning                                                      |
 | --------- | ---- | -------------------------------------------------------- |
-| | <img src="../Images/folder_icon.png" style="zoom:25%;" /> | Folders have no extension |
-| `.docx`   | <img src="../Images/word_icon.png" style="zoom:25%;" /> | Word Document                                                |
-| `.py`     | <img src="../Images/python_icon.png" style="zoom:25%;" />  |Python Code                                                  |
-| `.pdf`    | <img src="../Images/pdf_icon.png" style="zoom:25%;" /> | Portable Document File (PDF) document.  Any printer can print this file without having any specialized software. |
-| `.csv`    | <img src="../Images/csv_icon.png" style="zoom:25%;" /> |Comma Separated Values (can be read as a text file, or opened with Excel, where Excel will put data into the various columns, where each column data is separated by a comma) |
-| `.zip`    | <img src="../Images/zipfile_icon.png" style="zoom:25%;" /> | Zip file.  Contains multiple files within one file. It needs to be `unzipped` before you can use the files within.  WARNING: In File Explorer it can look like it is not zipped, even though it is. |
+| | <img src="Images/folder_icon.png" style="zoom:25%;" /> | Folders have no extension |
+| `.docx`   | <img src="Images/word_icon.png" style="zoom:25%;" /> | Word Document                                                |
+| `.py`     | <img src="Images/python_icon.png" style="zoom:25%;" />  |Python Code                                                  |
+| `.pdf`    | <img src="Images/pdf_icon.png" style="zoom:25%;" /> | Portable Document File (PDF) document.  Any printer can print this file without having any specialized software. |
+| `.csv`    | <img src="Images/csv_icon.png" style="zoom:25%;" /> |Comma Separated Values (can be read as a text file, or opened with Excel, where Excel will put data into the various columns, where each column data is separated by a comma) |
+| `.zip`    | <img src="Images/zipfile_icon.png" style="zoom:25%;" /> | Zip file.  Contains multiple files within one file. It needs to be `unzipped` before you can use the files within.  WARNING: In File Explorer it can look like it is not zipped, even though it is. |
 
 
 
@@ -149,7 +149,7 @@ To zip,
 
 * select the files that you want to zip together, and right-click.  Select `send to` then `compressed folder`
 
-<img src="../Images/create_zipfile.png" style="zoom:80%;" />
+<img src="Images/create_zipfile.png" style="zoom:80%;" />
 
 To unzip
 
@@ -157,7 +157,7 @@ To unzip
 * Click the `Extract` tab at the top of the screen
 * Click `Extract All` button on the right, and follow instructions
 
-<img src="../Images/unzip_files.png" style="zoom:80%;" />
+<img src="Images/unzip_files.png" style="zoom:80%;" />
 
 
 
@@ -169,5 +169,5 @@ If you have `double-clicked` on a zip file, it will open a new window showing al
 
 **What to look out for**: - if the folder information ends with a zip file.
 
-<img src="../Images/zipped_file_explorer.png" style="zoom:80%;" />
+<img src="Images/zipped_file_explorer.png" style="zoom:80%;" />
 
