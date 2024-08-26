@@ -36,6 +36,8 @@ PyCharm is an amazing Python IDE as it allows us to write code, run it and debug
 
 <img src="Images/debugging_meme_2.jpg" height=600/>
 
+
+
 # Demo in class
 
 You can only learn this part by practicing. 
