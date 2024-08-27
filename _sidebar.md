@@ -18,16 +18,17 @@
 
 
 
-<!--
 
-**Week 2**
+
+**Python expresions**
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
   - [Integers & Floats](./Notes/01_Expressions_Literals_Integers._Floats)
   - [Boolean](./Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
-- Lab1: input() , print() and fstrings
+
+<!--
 
 **Week 3**
 
