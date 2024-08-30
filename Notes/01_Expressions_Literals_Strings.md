@@ -82,7 +82,13 @@ last_name = 'Jose'
 age = "19"
 ... complete this
 ```
-
+<div class="button-container">     
+    <a href="[https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.odmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.odmFyaWFibGVzX2NoYWxsZW5nZTEucHk=~XQAAgABYAAAAAAAAAAAwmcjVNAzI1sPTb1Rnd9nMwlZIpKAWg951RSFcvuLGhPFNLZy_RWTjWPIVTvhthfgdoQfOR8q5KNeb43Zsqm31fvjE9YA=.odmFyaWFibGVzX2NoYWxsZW5nZTIucHk=~XQAAgACiAAAAAAAAAAAjlIQmAnNNrQCVCf48HqW0cEfvMtc8dhgTDH-0GM-qKH4b-38tGNpwASZYjBd7BeI0ZgeG0PoXiAy8z824TxqY25wTpBj2ahbMfJUtNa95eEM85oCAw1DR8oNSREQb4U9bdiHPuT4HW73r8PSZfNn_8NEwAA==.fdXNpbmdfdmFyaWFibGVzLnB5~XQAAgAAkAAAAAAAAAAA5nUnZDQlRuuKeP2atnly3RpvCWkCz75lWzK3FI5DhUr8bsfKf_uNwAA==.~lang=py-novice.~showLineNumbers=true.e1](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.~lang=py-novice.~showLineNumbers=true.e)" target="_blank">         
+    <button class="codeboot-button">
+      <span>Solution</span>
+    </button>     
+    </a> 
+</div>
 
 
 **String formatting**
