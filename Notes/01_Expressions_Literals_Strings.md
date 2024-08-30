@@ -25,7 +25,7 @@ Strings can be created in different ways, by using `""`, `''` or `""" """`. Let'
 
 ​	However, what if we wanted to add a double quote inside the string so that it would read *Hello "World"* ? 
 
-> ​	Try this command `print('"Hello "World"")` What happens? What is the error?
+> ​	Try this command `print(""Hello "World"")` What happens? What is the error?
 
 - There are a few workaround this issue:
 
