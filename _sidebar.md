@@ -24,7 +24,7 @@
 
 - [Literals](./Notes/01_Expressions_Literals)
   - [Strings](./Notes/01_Expressions_Literals_Strings)
-  - [Integers & Floats](./Notes/01_Expressions_Literals_Integers._Floats)
+  - [Integers & Floats](./Notes/01_Expressions_Literals_Integers_Floats)
   - [Boolean](./Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
 
