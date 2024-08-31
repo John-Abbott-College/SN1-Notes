@@ -117,7 +117,7 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 
 
 
-✍️**Challenge**: Manually execute the operations of the program below and write the expected result.  Check your answers by running the code. 
+✍️**Challenge 1**: Manually execute the operations of the program below and write the expected result.  Check your answers by running the code. 
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a">         
@@ -144,7 +144,7 @@ print(a,b,c,d,e,f,g)
 
 
 
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by running the code. 
+✍️**Challenge 2**: Manually execute the operations below and write the expected result. Check your answers by running the code. 
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a">         
@@ -201,6 +201,22 @@ x = a % b
 y = (a + b) // b
 print(x, y)
 ```
+
+
+✍️**Challenge 3**: Write a short program that prompts the user to input an amount of money in dollars and then calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax. 
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.fYXJpdGhtZXRpY3M1LnB5~XQAAgACVAAAAAAAAAAAxHUisBlhRhzTv1qXGok1pVDmUVkrMtVD6nJWBiDZJJ4c9FPmJGRUbqp-VFDM52jHbusSs6AbhD5NbyMOdHgD01mBL4n6-Ijgu60YYPJpRKGvNdpdvCWfK7BomfX5p7Tsmvo1d_Hki9fj8LjAEYN8f_DInXviDhzkfpbrnYAn-yWSA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
+    <button class="codeboot-button">
+      <span>Check answer</span>
+    </button>     
+    </a> 
+</div>
+```python
+budget = float(input("Enter the amount of money in dollars ($)"))
+...to complete
+```
+
+✍️**Challenge 3**: Write a short program which helps the school administration calculate the number of sections per course provided the number of registered students. Each group must have an even number of students, with at least 18 students per classroom and maximum 32. 
 
 
 
