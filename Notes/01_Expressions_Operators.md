@@ -216,7 +216,9 @@ budget = float(input("Enter the amount of money in dollars ($)"))
 ...to complete
 ```
 
-✍️**Challenge 3**: Write a short program which helps the school administration calculate the number of sections per course provided the number of registered students. Each group must have an even number of students, with at least 18 students per classroom and maximum 32. 
+
+
+✍️**Challenge 4**: Write a short program which helps the school administration calculate the number of sections per course provided the number of registered students. Each group must have an even number of students, with at least 18 students per classroom and maximum 32. 
 
 
 
