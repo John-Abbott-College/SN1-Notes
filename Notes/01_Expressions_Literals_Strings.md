@@ -173,7 +173,7 @@ Observe the following raw string data "Student number: 123456". What if we are i
 
 Strings are nothing more than sequences of unicode character ('a','b','c',....'%','#',....). Each character in a string occupies a specific position or index. For example in "Hello World", the 'H' character is at index 0, the 'e' is at index 1, the 'l' is at index 2, etc.
 
-<img src="Images/Strings_hello_world.png" />
+<img src="Images/strings_index.png" />
 
 To access a specific character within the string, use square brackets `[]` and the index of the character to select:
 
