@@ -1,8 +1,10 @@
 # Additional notes on f-strings
 
 We have introduced f-strings earlier when learning about string concatenation. F-strings are very useful to combine various strings as well as strings with integers and floats.
-This tutorial is about how to format numbers within an f-string.
+This tutorial is about how to format numbers within an f-string. 
 
+[Source of examples](https://cissandbox.bentley.edu/sandbox/wp-content/uploads/2022-02-10-Documentation-on-f-strings-Updated.pdf)
+[Official documentation](https://docs.python.org/3/tutorial/inputoutput.html)
 
 ## Decimal place
 To control the decimal places of a float, use the `:.f` format. 
