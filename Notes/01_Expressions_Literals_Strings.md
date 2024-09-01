@@ -190,7 +190,7 @@ print(my_string[4])   #Output: `o`
 
 **Slicing**
 
-Going back to our example "Student number: 123456", the information we want to extract is between index 16 and 21 inclusively. To obtain part of a string, use slicing `<start_index>:<end_index>`. The `end_index` is excluded within the slice, there for we must specify `[16:22]` :
+Referring back to our example "Student number: 123456", the information we want to extract is located between index 16 and 21 inclusive. To retrieve a specific portion of a string, use slicing with the format `<start_index>:<end_index>`. Note that the `end_index` is not included in the slice, there for we must specify `[16:22]` :
 
 ```python
 raw_data = "Student number: 123456"
@@ -199,7 +199,7 @@ useful_data = raw_data[16:22]
 print(useful_data)    #Output: `123456`
 ```
 
-You'll notice that the `end_index` is one more than 21. That is because the range `16:22` will count 16, 17, 18, 19, 20, 21 and stop when the index reaches `end_index`.  We will learn more about ranges with for loops. 
+Notice that the `end_index` is one more than 21. That is because the range `16:22` will count 16, 17, 18, 19, 20, 21 and stop when the index reaches `end_index` (in this case: 22).  We will learn more about ranges with for loops. 
 
 
 
