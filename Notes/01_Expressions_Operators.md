@@ -62,7 +62,7 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 | `/`      | mathematical division                                        | Doesn't exist for string literals and will cause an error. | `3 / 2`,  result:` 1.5` (`float`) | `3.0 / 2.0`,  result:` 1.5` (`float`)  | `3.0 / 2,  result:` 1.5` (`float`)   |
 | `//`     | Divides the first operand by the second and rounds the result down to the nearest whole number. | Doesn't exist for string literals and will cause an error. | `3//2`, result: `1` (`int`)       | `4.0//3.0`, result: `1.0` (`float`)    | `4.0//2`, result: `1.0` (`float`)    |
 | `%`      | Returns the remainder of the long division of the first operand by the second operand. | Doesn't exist for string literals and will cause an error. | `10 % 7`, result: `3` (`int`)     | `7.0 % 5.0`, result: `2.0` (`float`)   | `7.0 % 5, result: `2.0` (`float`)    |
-| `**`     | Raises the first operator to the power of the second operator | Doesn't exist for string literals and will cause an error. | `4**2`, result :`16`(`int`)       | `4.0**2.0`, result :`16.0`(`float`)    | `4**2.0`, result :`16.0`(`float`)    |
+| `**`     | Raises the first operand to the power of the second operand | Doesn't exist for string literals and will cause an error. | `4**2`, result :`16`(`int`)       | `4.0**2.0`, result :`16.0`(`float`)    | `4**2.0`, result :`16.0`(`float`)    |
 
 #### Modulus `%`
 
