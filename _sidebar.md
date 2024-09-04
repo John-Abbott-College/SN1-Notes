@@ -12,7 +12,10 @@
 
 - [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
 
+- [PyCharm: Installing on a Mac](./Notes/Installing_Pycharm_on_Mac.md)
+
 - [Getting Started with PyCharm](./Notes/create_new_project)
+
 
 - [Debugging](./Notes/debugging)
 
