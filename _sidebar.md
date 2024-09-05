@@ -30,15 +30,10 @@
   - [Integers & Floats](./Notes/01_Expressions_Literals_Integers_Floats)
   - [Boolean](./Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
-
-<!--
-
-**Week 3**
-
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
-
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 
+<!--
   
 
 **Week 4 & 5**
