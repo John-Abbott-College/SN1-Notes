@@ -12,7 +12,10 @@
 
 - [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
 
+- [PyCharm: Installing on a Mac](./Notes/Installing_Pycharm_on_Mac.md)
+
 - [Getting Started with PyCharm](./Notes/create_new_project)
+
 
 - [Debugging](./Notes/debugging)
 
@@ -27,15 +30,10 @@
   - [Integers & Floats](./Notes/01_Expressions_Literals_Integers_Floats)
   - [Boolean](./Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](./Notes/01_Expressions_Operators)
-
-<!--
-
-**Week 3**
-
 - [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
-
 - [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
 
+<!--
   
 
 **Week 4 & 5**

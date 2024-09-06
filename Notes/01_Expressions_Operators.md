@@ -62,7 +62,7 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 | `/`      | mathematical division                                        | Doesn't exist for string literals and will cause an error. | `3 / 2`,  result:` 1.5` (`float`) | `3.0 / 2.0`,  result:` 1.5` (`float`)  | `3.0 / 2,  result:` 1.5` (`float`)   |
 | `//`     | Divides the first operand by the second and rounds the result down to the nearest whole number. | Doesn't exist for string literals and will cause an error. | `3//2`, result: `1` (`int`)       | `4.0//3.0`, result: `1.0` (`float`)    | `4.0//2`, result: `1.0` (`float`)    |
 | `%`      | Returns the remainder of the long division of the first operand by the second operand. | Doesn't exist for string literals and will cause an error. | `10 % 7`, result: `3` (`int`)     | `7.0 % 5.0`, result: `2.0` (`float`)   | `7.0 % 5, result: `2.0` (`float`)    |
-| `**`     | Raises the first operator to the power of the second operator | Doesn't exist for string literals and will cause an error. | `4**2`, result :`16`(`int`)       | `4.0**2.0`, result :`16.0`(`float`)    | `4**2.0`, result :`16.0`(`float`)    |
+| `**`     | Raises the first operand to the power of the second operand | Doesn't exist for string literals and will cause an error. | `4**2`, result :`16`(`int`)       | `4.0**2.0`, result :`16.0`(`float`)    | `4**2.0`, result :`16.0`(`float`)    |
 
 #### Modulus `%`
 
@@ -117,7 +117,7 @@ In summary, when performing an arithmetic operation, the numbers will be convert
 
 
 
-✍️**Challenge**: Manually execute the operations of the program below and write the expected result.  Check your answers by running the code. 
+✍️**Challenge 1**: Manually execute the operations of the program below and write the expected result.  Check your answers by running the code. 
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a">         
@@ -144,7 +144,7 @@ print(a,b,c,d,e,f,g)
 
 
 
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by running the code. 
+✍️**Challenge 2**: Manually execute the operations below and write the expected result. Check your answers by running the code. 
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a">         
@@ -201,6 +201,35 @@ x = a % b
 y = (a + b) // b
 print(x, y)
 ```
+
+
+✍️**Challenge 3**: Write a short program that prompts the user to input an amount of money in dollars and then calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax. 
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.fYXJpdGhtZXRpY3M1LnB5~XQAAgACVAAAAAAAAAAAxHUisBlhRhzTv1qXGok1pVDmUVkrMtVD6nJWBiDZJJ4c9FPmJGRUbqp-VFDM52jHbusSs6AbhD5NbyMOdHgD01mBL4n6-Ijgu60YYPJpRKGvNdpdvCWfK7BomfX5p7Tsmvo1d_Hki9fj8LjAEYN8f_DInXviDhzkfpbrnYAn-yWSA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
+    <button class="codeboot-button">
+      <span>Check answer</span>
+    </button>     
+    </a> 
+</div>
+
+```python
+budget = float(input("Enter the amount of money in dollars ($)"))
+...to complete
+```
+
+
+
+🏆✍️**Expert Challenge**: Write a short program to help the school administration calculate the number of sections per course given a certain number of registered students. Most groups should have an even number of students, with at least 18 students per classroom and a maximum of 32 students. The administration tries to minimize the number of groups and balances the number of students per classroom. 
+> Note: There are many possible answers for this problem, but some answers are more optimal than others. You are allowed to use any arithmetic operators and simple if statements.
+
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.oc3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weQ==~XQAAgAC3AwAAAAAAAAARZ_6IyAHcsKA_gk8ErULb3y_0mEvwAQUvSH3Io5HuKO0lev5qHJtmUud-z0lOQyR4V5aTBthfzVxSylCfQyxTnKr23mg9xiuAJ0bEUJFpJbHv9MIsq-lktXXhTmnhrPY6MrWQI6HjUbh30gSnRHGTsz37WSSDvMx1STuZY19MoJ5zas8J9aUwZZzhZzVPp0j7w8mE_glYQPRLRqAcS3TVLgXqBwZBT9RnJgELR1Csakc8EMNeN37ReX5_TNtZQz_MSWXwMHId0TCjFkyOKeVjXdprzJ64S77CweI2YnN1TBgBuabcZHePq4pHbV3Yf1eyhhfCFq26Jq02dWDwuaHzoKazt0S29qpWLGhkL7Za9WsWtFENo76gcpJM9hsqdZNKXriIyFZRbsgAEE9M9bF055daGQcb-kjpvq5aFf-IU01recFkZJ24NSd6ddZConWiEAWqOB_u-_x75A==.fc3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5~XQAAgABVCAAAAAAAAAARaAQIZvNx2aPvSLSjLYQfdOpuOXia6VgdWdqdP6BlGcP6R0JD_HLKEarDGKRtsSjY-1tTLZ3jzLL25cCmEralncL5cLPelfiJci5_OwHVAyPm3pSgwDcDWZ2BLHVn5SCjSl2YqdnbXwyWS2SuBPseRjH9DAqI9TSAj8dVdn-VtFKoLjXU5S4bOxQkmUEB8XEmzojR4F_HEPOBpR_FJ-ZLafJ_mupI_JeDgBQQOHjhASaKSDA9C_6V7P1XBQ5dbCY_qjHx5yWBX1rbEu-5FTBkBDL3PAOlmGUUVZyc14fHlIDhg5NiGr8G_41npD0gwOwaU08BI3L7lYe6PL_gTeGJ46BwvadLTALvFHAeuhpZXEggwmZ7iKzO7dZdTMaO-y5-JgHuShKlO4S9lZQxb3jP3lsp9Xf_Lf1WIM54m5OGOTiz26pKH20lZa2GjNwZCGSiZjUhLkhpaFGS4VB5JVVvx_331JOEI3pY_M57WO2l7_Uz-TCbpvVwKTff4aVvzuRvS_2DTtIbYjBIlME25wmfBK8s-Q7ouKdptwBpAPkeBi3sYRyGtc5BLAvE7-usjbdDk6Nk56qKKQjBZyk_yAcoSKzcPfs3qiyzmWELx28irP0FvgpHU3UhAyygjjwUoPKEs74z7FRJHBIv-NuImjUqS0JTKwpWHkM5Y1ttJ7ar_QD7tzUY3d4xWmWxH5U3VVYXW8-IJsxKGkqcQBTzn1ZXlpbLZpiu0ZnZdSCcIuA5Ftb01-r_HOaCAVENHHu83UZfUDZT5Vrn-61kHmP1DDucS-CX9iEzaJl0IXYEWhx0qY0e5x8i9xAagcYGR5kigJZyJv_78gdHuZLwxgdhdGaRz4tXUbvnvyWPQyQHwf-ZTm2Yf1FUs1z-ekrxiRHvU6GV9tUmfCw5EFlwNuRr2ijv09XybRM_rZf75_8AFIzklxU6EN84tA25VLH_8MnCXA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.ibG9hZCgiYXJpdGhtZXRpY3M0LnB5IikKbG9hZCgiYXJpdGhtZXRpY3M0LnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weSIpCmxvYWQoInN0dWRlbnRzX3Blcl9jbGFzc3Jvb20ucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weSIpCmxvYWQoInN0dWRlbnRzX3Blcl9jbGFzc3Jvb20ucHkiKQoxNSoyNwpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKNDUwLzMyCjQ1MC8xNQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQoxNSozMApsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQoxNSozMAoxNSo0CjQ5MAo1NTEwCjQ5MCs2MApsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQozMCoxNCszMQo=.e">         
+    <button class="codeboot-button">
+      <span>Possible Solution 1</span>
+    </button>     
+    </a> 
+</div>
+
 
 
 

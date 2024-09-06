@@ -148,23 +148,23 @@ print(names.split('#'))
 > - `split()` is actually a method not a function because a function doesn't need any object to be called, just like `print()` it can be called on its own. On the other hand, a method is always associated with an object, like `<a string>.split()` which can only be called on strings.
 > - Unlike the `print()` it cannot be called on its own. Which means you have to use the `.` following the name the string variable that is being split.
 
-✍️**Challenge 3**: The following script contains important values that should be seperated. Use the `split()` method to output the following values: `['15,49,56.2,78.0,89.2,456']`
+✍️**Challenge 3**: The following script contains important values that should be seperated. Use the `split()` method to output the following values: `['15', '49', '56.2', '78.0', '89.2', '456']`
 ```python
 
-raw_data="15,49,56.2,78.0,89.2,456"
+raw_data="15 49 56.2 78.0 89.2 456"
 
 ...complete this
 ```
 <div class="button-container">     
-    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.oY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.fY2hhbGxlbmdlXzNfc3RyaW5ncy5weQ==~XQAAgAA8AAAAAAAAAAA5GEtUbbz67SFqkqtVRDw3hmwFU4kdpaW0JSFzXKB8CEagjJ3rsikR1ADPHgss-bSEa9nVNzNGfas__j5VgA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">        
+    <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.oY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.fY2hhbGxlbmdlXzNfc3RyaW5ncy5weQ==~XQAAgAA8AAAAAAAAAAA5GEtUbbz67SFqkqtVQMtKQ4Ewxqs3F3xg0Hw4CYhb7i9jwZHfKbrxFXCZFZfHrjZTzIFW_xqblguf_tzMAA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">        
     <button class="codeboot-button">
       <span>Solution</span>
     </button>     
     </a> 
 </div>  
 
-> You'll notice that when the seperator is a comma `,`, you can call the `split()` method without specifying any input argument. By default, this method seperates a string using the `,`.
-> Comma seperated values (CSV) are popular files for sharing tables of data.
+> You'll notice that when the seperator is a space character ` `, you can call the `split()` method without specifying any input argument. By default, this method seperates a string using the ` `.
+> Comma seperated values (CSV) are popular files for sharing tables of data. We will see them a little but later in the course.
 
 
 ### Reading individual characters & slicing
@@ -173,7 +173,7 @@ Observe the following raw string data "Student number: 123456". What if we are i
 
 Strings are nothing more than sequences of unicode character ('a','b','c',....'%','#',....). Each character in a string occupies a specific position or index. For example in "Hello World", the 'H' character is at index 0, the 'e' is at index 1, the 'l' is at index 2, etc.
 
-<img src="Images/Strings_hello_world.png" />
+<img src="Images/strings_index.png" />
 
 To access a specific character within the string, use square brackets `[]` and the index of the character to select:
 
@@ -190,7 +190,7 @@ print(my_string[4])   #Output: `o`
 
 **Slicing**
 
-Going back to our example "Student number: 123456", the information we want to extract is between index 16 and 21 inclusively. To obtain part of a string, use slicing `<start_index>:<end_index>`. The `end_index` is excluded within the slice, there for we must specify `[16:22]` :
+Referring back to our example "Student number: 123456", the information we want to extract is located between index 16 and 21 inclusive. To retrieve a specific portion of a string, use slicing with the format `<start_index>:<end_index>`. Note that the `end_index` is not included in the slice, there for we must specify `[16:22]` :
 
 ```python
 raw_data = "Student number: 123456"
@@ -199,7 +199,7 @@ useful_data = raw_data[16:22]
 print(useful_data)    #Output: `123456`
 ```
 
-You'll notice that the `end_index` is one more than 21. That is because the range `16:22` will count 16, 17, 18, 19, 20, 21 and stop when the index reaches `end_index`.  We will learn more about ranges with for loops. 
+Notice that the `end_index` is one more than 21. That is because the range `16:22` will count 16, 17, 18, 19, 20, 21 and stop when the index reaches `end_index` (in this case: 22).  We will learn more about ranges with for loops. 
 
 
 

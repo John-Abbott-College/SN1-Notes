@@ -2,7 +2,7 @@
 
 ## Comparison operators
 
-The comparison operators are used to determine how two values compare to eachother : *Are these two values equal?* *Is the first value greater than this second value?* *Is the first value less than or equal to the second value?* The result is a Boolean: `True` or `False`.
+The comparison operators are used to determine how two values compare to eachother : *Are these two values equal?* *Is the first value greater than this second value?* *Is the first value less than or equal to the second value?* The result of the operation is a Boolean: `True` or `False`.
 
 For instance, let's say I borrowed 13 books at the library and I would like to check if I can rent more given that the maximum amount of books is 15.   
 
@@ -35,8 +35,7 @@ print(my_book_count < MAX_BOOKS)
 
 
 
-Why use such operators? Those operation will become handy when we introduction conditional statements. This will allow you to establish the relationship between values and be able to implement simple algorithms for decision making. 
-
+Why use such operators? Those operators will come in handy when we introduce conditional statements (`if`,`else`). They allow you to establish the relationship between values and make simple decision. For example, if the age of the user is below 18, print "Sorry, you cannot vote", otherwise print "You can vote". 
 
 
 ### Equality operator `==` 
@@ -65,7 +64,7 @@ Why use such operators? Those operation will become handy when we introduction c
 
 | English                                                      | Python                                        |
 | ------------------------------------------------------------ | --------------------------------------------- |
-| Is Summer McIntosh the first Canadian to win that many gold medals in a single Summer Olympics? | `mcintosh_gold_count > max_canada_gold_count` |
+| Is Summer McIntosh the first Canadian to win that many gold medals in a single Summer Olympics? | `mcintosh_gold_count > best_canada_gold_count` |
 
 
 
@@ -106,7 +105,7 @@ Why use such operators? Those operation will become handy when we introduction c
 
 
 
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
+✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by running the code. 
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.fY29tcGFyaXNvbl9jaGFsbGVuZ2VzLnB5~XQAAgADRAAAAAAAAAAARiAToaYFPsVi6rkOY_gtPVhVlVMgMy9wU4vlKRmkTVwrDJddUdRiQhJT3EwSKPiJ8zQXpx7-QY0pis40KWc1I1vWP_QdVVdu0Rerf-ZlAqTc5tMK1TBKFDURcro9LSSbcbpYKde0MLEoG3M-JI9UFvVzEvV_9YtQA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
@@ -146,7 +145,7 @@ print(a >= b)
 
 
 
-Logical operators are used to combine Boolean  values and expressions (`True` or `False`).  They are helpful when programming decision making or creating more complex algorithms. We will learn more about conditional statements in the future. 
+Logical operators are used to combine Boolean values and expressions (`True` or `False`).  They are helpful when programming decision making or creating more complex algorithms. We will learn more about conditional statements in the future. 
 
 There are instances where we need to test if multiple conditions are true at the same time. For example: 
 
@@ -210,7 +209,7 @@ You are at the library and can only borrow a new book if you do not have any ove
 
 
 
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal. 
+✍️**Challenge**: The following program asks the user for the current year and determines if it is an olympic year. Manually execute the operations below and write the expected result. Check your answers by running the code.
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYm9va3NfZXhhbXBsZS5weQ==~XQAAgABhAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggDKbp1GC36d_lK_fEZlyd9INBaTxy9fpTMv3N2bhLYG5SelCOFyB2Z95_8YitA.fb2x5bXBpY195ZWFyLnB5~XQAAgAAUAQAAAAAAAAA8mUhJnNeTvgcHkuX6AKbvV44PQEueSO04tYqSeNwNpQw3aHA63QYB9T_K98jsUjlhK0oH-Tj_fEaUlYRNW7jtRw7NdNvfEaww9YUxJMC_6w_QlXlRiFipOXqsfFiEeeQmWuxuBRQBuoD-4j_WkC1MRH9lIei-wS8G8IvFmM-f6DUMXm9z78XVDIK4bFqtoP30gwU=.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
