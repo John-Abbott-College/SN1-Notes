@@ -4,7 +4,7 @@ This tutorial will walk you through the steps of setting up One Drive and using 
 
 ## Mac (Optional)
 
-If you are bringing your laptop with you to school, then this tutorial might not be so useful because you do not have the need to work on the lab computers. Nevertheless, here is a tutorial video on how to setup One Drive on your Mac.
+If you are bringing your laptop with you to school, then this tutorial might not be so useful because you do not have the need to work on the lab computers. Nevertheless, here is a [tutorial](https://www.youtube.com/watch?v=PhcJxKOete4&ab_channel=AldoJames) video on how to setup One Drive on your Mac.
 
 
 
@@ -14,14 +14,14 @@ One Drive is installed by default on all Windows computers.
 
 1. Use the search bar to search for the ***One Drive*** App:
 
-   <img src="../Images/onedrive_1.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_1.png" height=350 class=inline-img/>
 
 2. Login to the app using your John Abott credentials :
 
    - Email: <student_id>.johnabbottcollege.net
    - Password: Same as the one you use in the labs
 
-   <img src="../Images/onedrive_2.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_2.png" height=350 class=inline-img/>
 
 3. Complete the steps of verification using your phone or personal email.
 
@@ -29,11 +29,11 @@ One Drive is installed by default on all Windows computers.
 
 5. Wait until the scanning of the files is complete.
 
-   <img src="../Images/onedrive_6.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_6.png" height=350 class=inline-img/>
 
 6. Click **Start backup**
 
-   <img src="../Images/onedrive_7.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_7.png" height=350 class=inline-img/>
 
 This might take a few minutes to complete....
 
@@ -41,17 +41,19 @@ This might take a few minutes to complete....
 
 8. You should see the *OneDrive - John Abbott College* folder appear as a file directory:
 
-   <img src="../Images/onedrive_9.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_9.png" height=350 class=inline-img/>
 
 9. All synchronized files have three types of icon: **Online-only, On this device and Always available** 
 
 
 
-<img src="../Images/onedrive_10.png" height=350 class=inline-img/>
+<img src="Images/onedrive_10.png" height=350 class=inline-img/>
 
 10. As you navigate inside the OneDrive John Abbott College, you should see these icons appear in the File Explorer:
 
-    <img src="../Images/onedrive_11.png" height=350 class=inline-img/>
+    <img src="Images/onedrive_11.png" height=300 class=inline-img/>
+
+    
 
 11. We highly suggest you keep this One Drive organized as you will be using it throughout your college studies. 
 
@@ -89,5 +91,73 @@ This might take a few minutes to complete....
 This other tutorial will walk you through the recommended steps. 
 
 1. Download the instructions from Léa. 
-2. 
 
+<img src="Images/onedrive_14.png" height=300 class=inline-img/>
+
+2. Find the downloaded instructions. The default location is the *Downloads* folder. 
+
+3. Extract the instructions if they are zipped
+
+   <img src="Images/onedrive_15.png" height=350 class=inline-img/>
+
+4. You might be tempted to open it right away and start coding. **WAIT**! Let's move it out of the Downloads and into our OneDrive  folder to keep it safe and synchronized.
+
+5. Drag the entire instructions into your *SN1*  folder within OneDrive
+
+   <img src="Images/onedrive_16.png" height=350 class=inline-img/>
+
+Nice! We almost ready to start coding!
+
+6. We just need to open this in PyCharm!
+
+7. Open PyCharm:
+
+   <img src="Images/onedrive_17.png" height=350 class=inline-img/>
+
+   You could start a Project then save the project in this created folder, but this might take you more time. 
+
+8. Instead, click on **Open**
+
+9. Open the location of your **SN1** labs/ assignments in PyCharm:
+
+   <img src="Images/onedrive_18.png" height=350 class=inline-img/>
+
+10. PyCharm might ask you:  ***Trust and Open Project `SN1` ?***
+
+11. Check the box  *Trust projects in ...OneDrive - John Abbott College*, this way you do not need to do it again.
+
+12. Click **Trust Project**
+
+    <img src="Images/onedrive_19.png" height=250 class=inline-img/>
+
+13. We are almost here! You can see your Lab.py in the **Project Explorer**:
+
+    <img src="Images/onedrive_20.png" height=450 class=inline-img/>
+
+14. There is one small problem, because we Opened an existing project instead of creating one, PyCharm is a little bit confused which project settings to use (notice the warning sign at the top).
+
+    <img src="Images/onedrive_20.5.png" height=250 class=inline-img/>
+
+15. Click on the **gear icon** 
+
+16. Click Add **New Interpreter**  > **Add Local Interpreter** 
+
+    <img src="Images/onedrive_21.png" height=250 class=inline-img/>
+
+    
+
+17. On the school computers, choose **System Interpreter** > **OK**
+
+    <img src="Images/onedrive_22.png" height=650 class=inline-img/>
+
+
+
+This might take a few seconds to index the file.... 
+
+
+
+18. You should be able to start the lab and safely synchronize your files between computers. **DO NOT FORGET TO SAVE THE FILE (CTRL + S).** 
+
+
+
+<img src="Images/onedrive_23.png" height=300 class=inline-img/>
