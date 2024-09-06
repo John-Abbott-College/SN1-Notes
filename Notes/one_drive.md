@@ -14,14 +14,14 @@ One Drive is installed by default on all Windows computers.
 
 1. Use the search bar to search for the ***One Drive*** App:
 
-   <img src="Images/onedrive_1.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_1.png" height=300 class=inline-img/>
 
 2. Login to the app using your John Abott credentials :
 
    - Email: <student_id>.johnabbottcollege.net
    - Password: Same as the one you use in the labs
 
-   <img src="Images/onedrive_2.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_2.png" height=300 class=inline-img/>
 
 3. Complete the steps of verification using your phone or personal email.
 
@@ -29,11 +29,11 @@ One Drive is installed by default on all Windows computers.
 
 5. Wait until the scanning of the files is complete.
 
-   <img src="Images/onedrive_6.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_6.png" height=300 class=inline-img/>
 
 6. Click **Start backup**
 
-   <img src="Images/onedrive_7.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_7.png" height=300 class=inline-img/>
 
 This might take a few minutes to complete....
 
@@ -51,7 +51,7 @@ This might take a few minutes to complete....
 
 10. As you navigate inside the OneDrive John Abbott College, you should see these icons appear in the File Explorer:
 
-    <img src="Images/onedrive_11.png" height=300 class=inline-img/>
+    <img src="Images/onedrive_11.png" height=250 class=inline-img/>
 
     
 
@@ -82,29 +82,29 @@ This might take a few minutes to complete....
     >       - exercise2_a.py
     >       - exercise2.py
 
-14. We discourage you from keeping your projects into the default locations such as the *Downloads* folder, *PycharmProjects* folder or other dark locations of the computer. 
+14. We discourage you from keeping your projects into the default locations such as the *Downloads* folder, *PycharmProjects* folder or other obscure areas of your computer 🦇 🕷️
 
 
 
-## How to start a Lab or Assignment?
+## How to start a Lab or Assignment from OneDrive?
 
-This other tutorial will walk you through the recommended steps. 
+This other tutorial will walk you through the recommended steps for starting an assignment or Lab while using OneDrive to keep your files synchronized.
 
 1. Download the instructions from Léa. 
 
-<img src="Images/onedrive_14.png" height=300 class=inline-img/>
+<img src="Images/onedrive_14.png" height=200 class=inline-img/>
 
 2. Find the downloaded instructions. The default location is the *Downloads* folder. 
 
-3. Extract the instructions if they are zipped
+3. Extract the instructions if they are zipped (right click > extract all...)
 
-   <img src="Images/onedrive_15.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_15.png" height=300 class=inline-img/>
 
 4. You might be tempted to open it right away and start coding. **WAIT**! Let's move it out of the Downloads and into our OneDrive  folder to keep it safe and synchronized.
 
 5. Drag the entire instructions into your *SN1*  folder within OneDrive
 
-   <img src="Images/onedrive_16.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_16.png" height=300 class=inline-img/>
 
 Nice! We almost ready to start coding!
 
@@ -112,7 +112,7 @@ Nice! We almost ready to start coding!
 
 7. Open PyCharm:
 
-   <img src="Images/onedrive_17.png" height=350 class=inline-img/>
+   <img src="Images/onedrive_17.png" height=300 class=inline-img/>
 
    You could start a Project then save the project in this created folder, but this might take you more time. 
 
@@ -128,11 +128,11 @@ Nice! We almost ready to start coding!
 
 12. Click **Trust Project**
 
-    <img src="Images/onedrive_19.png" height=250 class=inline-img/>
+    <img src="Images/onedrive_19.png" height=150 class=inline-img/>
 
 13. We are almost here! You can see your Lab.py in the **Project Explorer**:
 
-    <img src="Images/onedrive_20.png" height=450 class=inline-img/>
+    <img src="Images/onedrive_20.png" height=400 class=inline-img/>
 
 14. There is one small problem, because we Opened an existing project instead of creating one, PyCharm is a little bit confused which project settings to use (notice the warning sign at the top).
 
