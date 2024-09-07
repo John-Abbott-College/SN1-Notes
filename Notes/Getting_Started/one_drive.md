@@ -18,7 +18,7 @@ One Drive is installed by default on all Windows computers.
 
 2. Login to the app using your John Abott credentials :
 
-   - Email: <student_id>.johnabbottcollege.net
+   - Email: student_id.johnabbottcollege.net
    - Password: Same as the one you use in the labs
 
    <img src="Images/onedrive_2.png" height=300 class=inline-img/>
