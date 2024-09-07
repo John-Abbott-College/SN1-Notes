@@ -1,6 +1,6 @@
 # One Drive 
 
-This tutorial will walk you through the steps of setting up One Drive and using it to run your PyCharm projects. Configuring one drive saves your files into the Cloud and therefore allows you to alternate through multiple computers in school and at home without losing your files. 
+This tutorial will walk you through the steps of setting up One Drive and using it to run your PyCharm projects. By configuring OneDrive, your files will be saved to the cloud, enabling you to seamlessly switch between multiple computers at school and home without losing your work.
 
 ## Mac (Optional)
 
@@ -18,7 +18,7 @@ One Drive is installed by default on all Windows computers.
 
 2. Login to the app using your John Abott credentials :
 
-   - Email: <student_id>.johnabbottcollege.net
+   - Email: student_id.johnabbottcollege.net
    - Password: Same as the one you use in the labs
 
    <img src="Images/onedrive_2.png" height=300 class=inline-img/>
