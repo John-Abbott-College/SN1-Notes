@@ -1,63 +1,64 @@
 **Getting Started**
 
-- [Working with files](./Notes/FileManipulation.md)
+- [Working with files](Notes/Getting_Started/FileManipulation.md)
 
-- [LEA](./Notes/LEA.md)
+- [LEA](/Notes/Getting_Started/LEA.md)
 
-- [What is programming](./Notes/WhatIsProgramming)
+- [What is programming](Notes/Getting_StartedWhatIsProgramming)
 
-- [What is Python?](./Notes/Introduction_to_Python)
+- [What is Python?](Notes/Getting_Started/Introduction_to_Python)
 
-- [Python installation](./Notes/Python_Installation)
+- [Python installation](Notes/Getting_Started/Python_Installation)
 
-- [PyCharm: The Python IDE](./Notes/PyCharm_IDE_installation)
+- [PyCharm: The Python IDE](Notes/Getting_Started/PyCharm_IDE_installation)
 
-- [PyCharm: Installing on a Mac](./Notes/Installing_Pycharm_on_Mac.md)
+- [PyCharm: Installing on a Mac](Notes/Getting_Started/Installing_Pycharm_on_Mac.md)
 
-- [Getting Started with PyCharm](./Notes/create_new_project)
+- [New- One Drive](Notes/Getting_Started/one_drive.md)
 
-
-- [Debugging](./Notes/debugging)
-
+- [Getting Started with PyCharm](Notes/Getting_Started/create_new_project)
 
 
+- [Debugging](Notes/Getting_Started/debugging)
 
 
-**Python expresions**
 
-- [Literals](./Notes/01_Expressions_Literals)
-  - [Strings](./Notes/01_Expressions_Literals_Strings)
-  - [Integers & Floats](./Notes/01_Expressions_Literals_Integers_Floats)
-  - [Boolean](./Notes/01_Expressions_Literals_Boolean)
-- [Arithmetic Operators](./Notes/01_Expressions_Operators)
-- [Assignment Operators](./Notes/01_Expressions_Operators_Assignment)
-- [Variables & Constants](./Notes/01_Expressions_Variables_Constants)
+
+
+**Python expressions**
+
+- [Literals](Notes/01_Expressions_Literals)
+  - [Strings](Notes/01_Expressions_Literals_Strings)
+  - [Integers & Floats](Notes/01_Expressions_Literals_Integers_Floats)
+  - [Boolean](Notes/01_Expressions_Literals_Boolean)
+- [Arithmetic Operators](Notes/01_Expressions_Operators)
+- [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
+- [Variables & Constants](Notes/01_Expressions_Variables_Constants)
 
 <!--
-  
 
 **Week 4 & 5**
 
-- [Functions](./Notes/01_Expressions_Functions)
+- [Functions](Notes/01_Expressions_Functions)
 
 **Week 6**
 
-- [Comparison and logical Operators](./Notes/01_Expressions_Operators_Logical)
-- [If statement](./Notes/03_Conditions_if)
+- [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
+- [If statement](Notes/03_Conditions_if)
 - [If/Else statement](./Notes/03_Conditions_if-else)
-- [Priority Operations](./Notes/01_Expressions_Priority_Operators)
+- [Priority Operations](Notes/01_Expressions_Priority_Operators)
 
 **Week 7**
 
-- [List](./Notes/02_list)
-- [For loop](./Notes/04_for_loop)
-- [List Comprehensions](./Notes/04_for_loop_list_comprehension)
+- [List](Notes/02_list)
+- [For loop](Notes/04_for_loop)
+- [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
 **Week 8**
 
-- [Dictionary](./Notes/02_Dictionaries)
+- [Dictionary](Notes/02_Dictionaries)
 
-- [Tuple](./Notes/02_Tuples)
+- [Tuple](Notes/02_Tuples)
 
 
 **Week 9**
@@ -72,8 +73,8 @@
 
 **Week 11**
 
-- Matplotlib
-- Graphs
+- Matplotlib TODO
+- Graphs TODO
 
 **Week 12**
 
