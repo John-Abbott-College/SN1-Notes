@@ -17,7 +17,7 @@
 - [Getting Started with PyCharm](./Notes/create_new_project)
 
 
-- [Debugging](./Notes/debugging)
+- [Debugging](Notes/debugging)
 
 
 
