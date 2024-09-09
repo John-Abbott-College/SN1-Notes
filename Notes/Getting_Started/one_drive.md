@@ -106,7 +106,7 @@ This other tutorial will walk you through the recommended steps for starting an 
 
    <img src="Images/onedrive_16.png" height=300 class=inline-img/>
 
-Nice! We almost ready to start coding!
+We are almost ready to start coding!
 
 6. We just need to open this in PyCharm!
 
@@ -142,13 +142,13 @@ Nice! We almost ready to start coding!
 
 16. Click Add **New Interpreter**  > **Add Local Interpreter** 
 
-    <img src="Images/onedrive_21.png" height=250 class=inline-img/>
+    <img src="Images/onedrive_21.png" height=200 class=inline-img/>
 
     
 
 17. On the school computers, choose **System Interpreter** > **OK**
 
-    <img src="Images/onedrive_22.png" height=650 class=inline-img/>
+    <img src="Images/onedrive_22.png" height=500 class=inline-img/>
 
 
 
@@ -156,8 +156,7 @@ This might take a few seconds to index the file....
 
 
 
-18. You should be able to start the lab and safely synchronize your files between computers. **DO NOT FORGET TO SAVE THE FILE (CTRL + S).** 
+18. You should be able to start the lab and safely synchronize your files between computers. **DO NOT FORGET TO SAVE (CTRL + S) AS YOU PROGRESS** 
 
-
-
+19. Yeeyy! Our file is synchronized everywhere!
 <img src="Images/onedrive_23.png" height=300 class=inline-img/>
