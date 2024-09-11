@@ -93,7 +93,7 @@ print(f"{pi:10.7})
 
 This will fill exactly 10 characters from that number, either with 9 characters for the decimal part or 7 characters. 
 
-<img src="../Images/f_string_alignment.png" height=200/>
+<img src="Images/f_string_alignment.png" height=200/>
 
 Notice that in the second example, the program fills the string with empty characters to reach exactly 10 character. 
 
@@ -101,7 +101,7 @@ Notice that in the second example, the program fills the string with empty chara
 
 Let's now discuss alignment using the `>` , `<` or `^`
 
-<img src="../Images/f_string_alignment2.png" height=200/>
+<img src="Images/f_string_alignment2.png" height=200/>
 
 
 
