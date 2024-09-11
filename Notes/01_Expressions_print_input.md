@@ -4,11 +4,11 @@ To better understand input and output functions, we must first differentiate bet
 
 When a user, let's say Bob runs the code, they will not see your source code. They will only see what is printed to the console window. If you need an information from the user, you must use the `input()` function instead. This function awaits an answer from the user before moving on to the next step. 
 
-<img src="../Images/user_vs_programmer.png" height=350/>
+<img src="Images/user_vs_programmer.png" height=350/>
 
 From Bob's perspective, he only sees what your program prints and the question your program requires an answer for. Bob can only type his answer:
 
-<img src="../Images/print_input.png" />
+<img src="Images/print_input.png" />
 
 ## Output with `print()`
 

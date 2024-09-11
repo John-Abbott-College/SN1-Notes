@@ -173,3 +173,12 @@ Coming soon...
 
 
 
+| Formatting                | f string symbol example |
+| ------------------------- | ----------------------- |
+| Floating Precision        | `:.2f`                  |
+| Scientific notation       | `:e`                    |
+| Comma separated thousands | `:,`                    |
+| String filling            | `:10.5`                 |
+| Sign of number            | `:+`                    |
+| Percent                   | `:%`                    |
+
