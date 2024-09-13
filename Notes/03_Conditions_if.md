@@ -1,19 +1,19 @@
 # Conditions 
 
-A programmer writes a program that asks questions, and the computer executes the program and provides answers. Computers can only respond with "yes, this is true" or "no, this is false." You will never get responses like "Let me think...", "I don't know", or "Probably yes, but I don't know for sure."
+A programmer writes a program that asks questions, and the computer executes the program and provides answers. When asked a question, computers can only respond with 1 or 0, `True` or `False`. In other words, they can easily answer: *"yes, this is true"* or *"no, this is false."* You will never get responses such as *"Let me think...", "I don't know"*, or *"Probably yes, but I don't know for sure."*
 
-Python uses special operators to ask these questions. To make effective use of the answers, you need a mechanism that allows you to do something if a condition is met and not do it if it isn't.
+Python uses special **operators** to ask these questions. To make effective use of the answers, you need a mechanism that makes decision based on the answer. 
 
-To make such decisions, Python offers conditional statements. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.
+To make such decisions, Python offers **conditional statements**. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.
 
 ### Logical conditions 
 
-- Equals: a == b
-- Not Equals: a != b
-- Less than: a < b
-- Less than or equal to: a <= b
-- Greater than: a > b
-- Greater than or equal to: a >= b
+- Equals: `a == b`
+- Not Equals: `a != b`
+- Less than: `a < b`
+- Less than or equal to: `a <= b`
+- Greater than: `a > b`
+- Greater than or equal to: `a >= b`
 
 A conditional statement in Python includes the following elements in this specific order:
 
