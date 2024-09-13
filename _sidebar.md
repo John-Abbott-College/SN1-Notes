@@ -34,10 +34,17 @@
 - [Arithmetic Operators](Notes/01_Expressions_Operators)
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
+- [Python basic I/O Functions](Notes/01_Expressions_print_input)
+
+
+
+**Additional notes**
+
+- [F string formatting](Notes/01_Expressions_Literals_f_strings)
 
 <!--
 
-**Week 4 & 5**
+**Coming up next on JAC TV...**
 
 - [Functions](Notes/01_Expressions_Functions)
 
