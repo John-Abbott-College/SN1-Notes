@@ -34,6 +34,9 @@
 - [Arithmetic Operators](Notes/01_Expressions_Operators)
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
+
+
+**Functions**
 - [Python basic I/O Functions](Notes/01_Expressions_print_input)
 
 
