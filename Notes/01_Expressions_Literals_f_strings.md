@@ -1,12 +1,79 @@
 # Additional notes on f-strings
 
 We have introduced f-strings earlier when learning about string concatenation. F-strings are a useful way to combine write a string while inserting numbers and formatting them in a specific way.
+
 This tutorial is about how to format numbers within an f-string. 
 
+**BASIC SYNTAX**: `f" some string "` or `f' some string '`
+
+* Notice that there is *no* space between the `f` and the first quote
+
+## Variables and Other Code (review)
+
+**BASIC SYNTAX**: `f" anything {`*`variable`*`} anything"`
+
+* *`variable`* is any python variable that is currently defined.  It can be of any type (`int`, `float`, `bool`, `str`, *etc*)
+* You do *not* have to convert the `variable` to a string, that is done automatically
+
+**BASIC SYNTAX**: `f" anything {`*`python code`*`} anything"`
+
+* *`python code`* that when evaluated, returns a value.
+
+  * Example 
+
+    ```python
+    x = 3
+    z = f"the value of x is {x + 2}"   # OK!, prints 5
+    z = f"Is x equal to 5? {x == 5}"	 # OK!, prints False
+    z = f"Setting x to 2 {x = 2}"      # NOT OK!, x=2 does not return a value
+    ```
+
+    
+
+## Formatting Variables
+
+Within the `{...}` part of the *f-string*, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)
+
+**BASIC SYNTAX**: `{`*`variable: format string`*`}`
+
+* notice that the variable name is followed by a colon `:` and then a format string which is used to define how to format your output.
+
+### Floating Point Numbers:  `m.nf`
+
+To control the decimal places of a float, use the `:`*`m.n`*`f` format. 
+
+**BASIC SYNTAX**: `{`*`float_or_integer_variable: m.n`*`f}`
+
+* *`m`* is the minimum numbers of characters of the resulting string, including the decimal point.  It will be padded with spaces if necessary.
+* if `m` is not defined, then the length of the string will be dependent on the size of the number (i.e. no extra padding)
+* *`n`* is the required precision (number of digits after the decimal point).
+
+![floating point details](../Images/float_format.png)
 
 
-## Decimal place `:.f`
-To control the decimal places of a float, use the `:.f` format. 
+
+
+
+**Examples**
+
+```python
+x = 375.2
+print( f"{x: .3f}" )     # 'm' is not specified, so only worry about number of digits after decimal point
+print( f"{x: 6.3f}" )    # the printed number will be greater than 6 digits, so the '6' is ignored
+print( f"{x: 10.3f}" )   # use at least 10 characters for this string, right aligned
+```
+
+Output:
+
+```text
+375.200
+375.200
+  375.200
+```
+
+
+
+
 
 For example, here are a few lines that print the value of pi at different precisions:
 
@@ -41,11 +108,24 @@ The value of pi with four decimal places: 3.1416
 
 
 
-## Large numbers `:e` and `:,`
+### Scientific Notation: `m.ne`
 
-- Large numbers can also be formatted in a special way using f-strings, e.g.: `333_300_000` :
-  - **Scientific notation**  `:e` will print the number in scientific notation i.e. with a coefficient (3.333), an exponent (10) and a base (8). Result`3.333000e+08`
-  - **Comma separated** thousands `:,` will print the number with `,` for every 1000th power of 10 Result: `333,300,000` 
+**BASIC SYNTAX**: `{`*`float_or_integer_variable: m.n`*`e}`
+
+* *`m`* is the minimum numbers of characters of the resulting string, including the decimal point.  It will be padded with spaces if necessary.  Note that one space is *always* reserved for the `+` symbol, even if it is not displayed.
+* if `m` is not defined, then the length of the string will be dependent on the size of the number (i.e. no extra padding)
+* *`n`* is the required precision (number of digits after the decimal point).
+
+![details of scientific notation](../Images/exponential_format.png)
+
+
+
+### Thousands Separator:  *`[,_]`*
+
+**BASIC SYNTAX**: `{`*`float_or_integer_variable: [,_]`*`}`
+* *`[,_]`* means *either* a `,` or `_`
+
+   
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.fZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank">         
@@ -60,7 +140,7 @@ population_usa = 333_300_000   # note: you are allowed to use _
 
 print(f'The population of the usa without formatting {population_usa}')
 
-print(f'The population of the usa in scientific notation {population_usa:e}')
+print(f'The population of the usa in scientific notation {population_usa:_}')
 
 print(f'The population of the usa with commas {population_usa:,}')
 ```
@@ -69,7 +149,7 @@ print(f'The population of the usa with commas {population_usa:,}')
 
 ```text
 The population of the usa without formatting 333300000
-The population of the usa in scientific notation 3.333000e+08
+The population of the usa in scientific notation 333_300_000
 The population of the usa with commas 333,300,000
 ```
 
@@ -113,30 +193,7 @@ weight_birth = 2945.48 #in g
 
 ## Aligning numbers  `:<` `:>` `:^`
 
-To align numbers together to the left or to the right, you can use fill characters with f-strings.
 
-There is another way of looking at an f-string, we might want to print a fixed number of characters after the decimal. 
-
-Let's go back to the example of `pi`  and run the following lines:
-
-```python
-pi_str10_8 = f"{pi:10.8f}"
-pi_str10_6 = f"{pi:10.6f}"
-
-print(f"{pi_str10_8} has a length of {len(pi_str10_8)}")
-print(f"{pi_str10_6} has a length of {len(pi_str10_6)}")  
-```
-
-This will fill exactly 10 characters for this string no matter the precision at which `pi` is displayed. If you were to print the length of these strings they would be identical. 
-
-**Output:** 
-
-```text
-3.14159265 has a length of 10
-3.141593   has a length of 10
-```
-
-<img src="Images/f_string_alignment.png" height=200/>
 
 Notice that in the second example, the program fills the string with empty characters to reach exactly 10 character. 
 
@@ -144,7 +201,7 @@ Notice that in the second example, the program fills the string with empty chara
 
 Let's now discuss alignment using the `>` , `<` or `^`
 
-<img src="Images/f_string_alignment2.png" height=200/>
+<img src="../Images/f_string_alignment2.png" height=200/>
 
 - To align an f string to the left use the `:<`
 
