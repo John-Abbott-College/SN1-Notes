@@ -14,7 +14,7 @@
 
 - [PyCharm: Installing on a Mac](Notes/Getting_Started/Installing_Pycharm_on_Mac.md)
 
-- [New- One Drive](Notes/Getting_Started/one_drive.md)
+- [One Drive](Notes/Getting_Started/one_drive.md)
 
 - [Getting Started with PyCharm](Notes/Getting_Started/create_new_project)
 
@@ -34,6 +34,9 @@
 - [Arithmetic Operators](Notes/01_Expressions_Operators)
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
+
+
+**Functions**
 - [Python basic I/O Functions](Notes/01_Expressions_print_input)
 
 

@@ -1,16 +1,115 @@
-# Additional notes on f-strings
+# *f-string* Review
 
 We have introduced f-strings earlier when learning about string concatenation. F-strings are a useful way to combine write a string while inserting numbers and formatting them in a specific way.
-This tutorial is about how to format numbers within an f-string. 
 
 
 
-## Decimal place `:.f`
-To control the decimal places of a float, use the `:.f` format. 
+
+## Variables and Other Code (review)
+
+> **BASIC SYNTAX**: `f" anything {`*`variable`*`} anything"`
+>
+> * *`variable`* is any python variable that is currently defined.  It can be of any type (`int`, `float`, `bool`, `str`, *etc*)
+> * You do *not* have to convert the `variable` to a string, that is done automatically
+> *  Notice that there is *no* space between the `f` and the first quote
+
+
+or
+
+> **BASIC SYNTAX**: `f" anything {`*`python code`*`} anything"`
+> 
+> * *`python code`* that when evaluated, returns a value.
+> *  Notice that there is *no* space between the `f` and the first quote
+
+
+
+
+Example 
+
+```python
+x = 3
+z = f"the value of x is {x + 2}"   # OK!, prints 5
+z = f"Is x equal to 5? {x == 5}"	 # OK!, prints False
+z = f"Setting x to 2 {x = 2}"      # NOT OK!, x=2 does not return a value
+```
+
+
+
+# Formatting Variables using *f-strings*
+
+This section is about how to format numbers within an f-string. 
+
+Within the `{...}` part of the *f-string*, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)
+
+
+
+> **BASIC SYNTAX**: `{`*`variable: format string`*`}`
+> 
+> * notice that the variable name is followed by a colon `:` and then a format string which is used to define how to format your output.
+
+
+
+## Length:
+
+> **BASIC SYNTAX**: `{`*`expression: m`*`}`
+>
+> * *`expression`* (variable or python expression) must have type `int` or `float` or `str`
+>* *`m`* is the minimum numbers of characters of the resulting string.  It will be padded with spaces if necessary.
+> 	* `int` and `float` will be padded so that the number is right aligned
+> 	* `str` will be padded so that the string will be left aligned
+
+![description of size format](../Images/format_length.png)
+
+
+
+
+## Floating Point Numbers: 
+
+
+
+To control the decimal places of a float, use the `:`*`m.n`*`f` format. 
+
+> **BASIC SYNTAX**: `{`*`expression: m.n`*`f}`
+>
+> * *`expression`* (variable or python expression) must have type `int` or `float`
+>
+> * *`m`* is the minimum numbers of characters of the resulting string.  It will be padded with spaces if necessary.
+>
+>   * if `m` is not specified, then the length of the string will be dependent on the size of the number (i.e. no extra padding)
+>
+> * *`.n`* is the required precision (number of digits after the decimal point).
+>   * if not specified, then zeros will be used to pad the number to accommodate the width of the string
+>
+
+
+![floating point details](../Images/format_float.png)
+
+
+
+
+
+**Examples**
+
+```python
+x = 375.2
+print( f"{x: .3f}" )     # 'm' is not specified, so only worry about number of digits after decimal point
+print( f"{x: 6.3f}" )    # the printed number will be greater than 6 digits, so the '6' is ignored
+print( f"{x: 10.3f}" )   # use at least 10 characters for this string, right aligned
+print( f"{x: 10})				 # use default number of digits after the decimal point
+```
+
+Output:
+
+```text
+375.200
+375.200
+  375.200
+    375.2
+```
+
+
 
 For example, here are a few lines that print the value of pi at different precisions:
-
-
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.fZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.oZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank">         
@@ -24,7 +123,7 @@ For example, here are a few lines that print the value of pi at different precis
 ```python
 pi = 3.141592653589793
 
-print("The value of pi without formatting: ", pi)  
+print("The value of pi without formatting: {pi}")  
 print(f"The value of pi with two decimal places: {pi:.2f}")
 print(f"The value of pi with three decimal places: {pi:.3f}")
 print(f"The value of pi with four decimal places: {pi:.4f}")
@@ -33,7 +132,7 @@ print(f"The value of pi with four decimal places: {pi:.4f}")
 **Output:**
 
 ```text
-The value of pi without formatting:  3.141592653589793
+The value of pi without formatting: 3.141592653589793
 The value of pi with two decimal places: 3.14
 The value of pi with three decimal places: 3.142
 The value of pi with four decimal places: 3.1416
@@ -41,43 +140,55 @@ The value of pi with four decimal places: 3.1416
 
 
 
-## Large numbers `:e` and `:,`
-
-- Large numbers can also be formatted in a special way using f-strings, e.g.: `333_300_000` :
-  - **Scientific notation**  `:e` will print the number in scientific notation i.e. with a coefficient (3.333), an exponent (10) and a base (8). Result`3.333000e+08`
-  - **Comma separated** thousands `:,` will print the number with `,` for every 1000th power of 10 Result: `333,300,000` 
-
-<div class="button-container">     
-    <a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.fZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
-
-```python
-population_usa = 333_300_000   # note: you are allowed to use _
-
-print(f'The population of the usa without formatting {population_usa}')
-
-print(f'The population of the usa in scientific notation {population_usa:e}')
-
-print(f'The population of the usa with commas {population_usa:,}')
-```
-
-**Output:** 
-
-```text
-The population of the usa without formatting 333300000
-The population of the usa in scientific notation 3.333000e+08
-The population of the usa with commas 333,300,000
-```
 
 
 
-## Measurements
 
-Values that represent a given measurement in your program might need to be rounded to keep the [**significant figures/digits**](https://www.youtube.com/watch?v=eCJ76hz7jPM&t=228s&ab_channel=KhanAcademy). 
+## Scientific Notation:
+
+
+
+> **BASIC SYNTAX**: `{`*`expression: m.n`*`e}`
+> 
+> * *`expression`* (variable or python expression) must have type `int` or `float`
+> * *`m`* is the minimum numbers of characters of the resulting string.  It will be padded with spaces if necessary.  Note that one space is *always* reserved for the `+` symbol, even if it is not displayed.
+> * if `m` is not defined, then the length of the string will be dependent on the size of the number (i.e. no extra padding)
+> * *`n`* is the required precision (number of digits after the decimal point).
+>   * if not specified, then zeros will be used to pad the number to accommodate the width of the string (+2) *WEIRD!*
+
+![details of scientific notation](../Images/format_exponential.png)
+
+
+
+
+
+
+
+## Generic Precision:  
+
+Values that represent a given measurement in your program might need to be rounded to keep the [**significant figures/digits**](https://www.youtube.com/watch?v=eCJ76hz7jPM&t=228s&ab_channel=KhanAcademy), regardless of the output format (scientific notation, or not).
+
+
+
+>**BASIC SYNTAX**: `{`*`expression: m.n`*`}`
+>
+>* *`expression`* (variable or python expression) must have type `float` or `str`
+>* *`m`* is the minimum numbers of characters of the resulting string.  It will be padded with spaces if necessary.
+>* if `m` is not defined, then the length of the string will be dependent on the size of the number (i.e. no extra padding)
+>* *`n`* is the number of significant digits (***not*** the number of digits after the decimal point)
+> * *`.n`* is the required precision (number of digits after the decimal point).
+> 
+>*WEIRD*: if `expression` is a string, then there can be no space between the `:` and the *`m.n`* 
+
+Python will determine which is the most appropriate representation
+
+
+
+![details of precision formatting](../Images/format_precision.png)
+
+
+
+**Examples**
 
 For example, let's take the length of an object measured with a ruler graduated to 1 mm:
 
@@ -87,7 +198,7 @@ length  = 153.256 # in mm
 
 Only 4 digits are said to significant.
 
-- To control the number of significant digits, you may use  `:.` without an "f" (as opposed to floating precision).
+- To control the just number of significant digits, you may use  `:.` without an "f" (as opposed to floating precision).
 
 ```python
 print(f"The length of the object is {length:.4}")
@@ -103,6 +214,7 @@ print(f"The length of the object is {length:.4}")
     </a> 
 </div>
 
+
 ```python
 weight_birth = 2945.48 #in g
 ```
@@ -111,48 +223,99 @@ weight_birth = 2945.48 #in g
 
 
 
-## Aligning numbers  `:<` `:>` `:^`
 
-To align numbers together to the left or to the right, you can use fill characters with f-strings.
 
-There is another way of looking at an f-string, we might want to print a fixed number of characters after the decimal. 
+## Thousands Separator:  
 
-Let's go back to the example of `pi`  and run the following lines:
+> **BASIC SYNTAX**: `{`*`float_or_integer_variable: [,_]`*`}`
+>
+> * *`[,_]`* means *either* a `,` or `_`
+
+   
+
+<div class="button-container">     
+    <a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.fZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank">         
+    <button class="codeboot-button">
+      <span>Run example</span>
+    </button>     
+    </a> 
+</div>
 
 ```python
-pi_str10_8 = f"{pi:10.8f}"
-pi_str10_6 = f"{pi:10.6f}"
+population_usa = 333_300_000   # note: you are allowed to use _
 
-print(f"{pi_str10_8} has a length of {len(pi_str10_8)}")
-print(f"{pi_str10_6} has a length of {len(pi_str10_6)}")  
+print(f'The population of the usa without formatting {population_usa}')
+
+print(f'The population of the usa in scientific notation {population_usa:_}')
+
+print(f'The population of the usa with commas {population_usa:,}')
 ```
-
-This will fill exactly 10 characters for this string no matter the precision at which `pi` is displayed. If you were to print the length of these strings they would be identical. 
 
 **Output:** 
 
 ```text
-3.14159265 has a length of 10
-3.141593   has a length of 10
+The population of the usa without formatting 333300000
+The population of the usa in scientific notation 333_300_000
+The population of the usa with commas 333,300,000
 ```
 
-<img src="Images/f_string_alignment.png" height=200/>
-
-Notice that in the second example, the program fills the string with empty characters to reach exactly 10 character. 
 
 
 
-Let's now discuss alignment using the `>` , `<` or `^`
 
-<img src="Images/f_string_alignment2.png" height=200/>
 
-- To align an f string to the left use the `:<`
 
-- To align an f string to the right use the `:>`
+## Alignment:
 
-- To center an f string use the `:^`
+When the minimum width of the string is specified (using the *m* argument), the resulting string will be padded with spaces. 
 
-  
+We can control whether the spaces are padded to the right or left or evenly on both sides of the value.
+
+To control the decimal places of a float, use the `:`*`m.n`*`f` format. 
+
+
+
+> **BASIC SYNTAX**: `{`*`expression: [><^]m ...}`
+>
+> * *`[<>^]` means either `>`, or `<`, or `^`
+>   * `>` aligns the value to the right (default for `float`s and `int`s)
+>   * `<` aligns the value to the left (defulat for `str`s)
+> * *`expression`* (variable or python expression) must have type `int` or `float` or `str`
+> * *`m`* is the minimum numbers of characters of the resulting string.  It will be padded with spaces if necessary.
+>* `...` refers to any other specific formatting instructions, such as *`.n`*`f` for floating point, etc.
+
+
+
+
+
+![alignment details](../Images/format_alignment.png)
+
+**Example**
+
+```python
+x=35.2
+print( f"not formatted: {x}")
+
+print( f"minimum size of 10 right aligned:              '{x:10}' ")
+print( f"minimum size of 10, 2 decimal - right aligned: '{x:>10.2f}' ")
+
+print( f"minimum size of 10 left aligned:               '{x:<10}' ")
+print( f"minimum size of 10, 2 decimal - left aligned:  '{x:<10.2f}' ")
+
+print( f"minimum size of 10 centered:                   '{x:^10}' ")
+print( f"minimum size of 10, 2 decimal - centered:      '{x:^10.2f}' ")
+```
+result:
+```text
+not formatted: 35.2
+minimum size of 10 right aligned:              '      35.2' 
+minimum size of 10, 2 decimal - right aligned: '     35.20' 
+minimum size of 10 left aligned:               '35.2      ' 
+minimum size of 10, 2 decimal - left aligned:  '35.20     ' 
+minimum size of 10 centered:                   '   35.2   ' 
+minimum size of 10, 2 decimal - centered:      '  35.20   ' 
+```
+
 
 ✍️  **Challenge 2:** Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.
 
@@ -249,16 +412,16 @@ print(f"{grade/total :%}")
 
 ### Summary
 
-| Formatting                | f string symbol example |
-| ------------------------- | ----------------------- |
-| Floating Precision        | `:.2f`                  |
-| Scientific notation       | `:e`                    |
-| Comma separated thousands | `:,`                    |
-| Significant figures       | `:.5`                   |
-| String filling            | `var:10`                |
-| String alignment          | `var:<10`               |
-| Sign of number            | `var:+`                 |
-| Percent                   | `var:.2%`               |
+| Formatting                | f string symbol example                                      |
+| ------------------------- | ------------------------------------------------------------ |
+| Floating Precision        | `{x:f}`, `{x:10.2f}`, `{x:.2f}`, `{x:10f}`                   |
+| Scientific notation       | `{x:e`}, `{x:10.2e}`, `{x:.2e}`, `{`*`var`*`:10e}`           |
+| Comma separated thousands | `{x:,}`, `{x:_}`                                             |
+| Significant figures       | `{x:10.5}`, `{x:.5}`                                         |
+| Minimum length            | `{x:10}`                                                     |
+| Alignment                 | `{x:<10}`, `{x:>10}`, `{x:^10}`, `{x:<10.2}`, `{x:<10.2}`, `{x:^10.2}`, `{x:<10.2f}`, `{x:<10.2f}`, `{x:^10.2f}`, etc |
+| Sign of number            | `{x:+}`                                                      |
+| Percent                   | `{x:10.2%}`,  `{x:.2%}`                                      |
 
 # Additional resources
 

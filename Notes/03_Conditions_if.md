@@ -115,3 +115,77 @@ The `if` statement checks if `a` is not greater than `b` by negating the result 
 Since `a > b` is `False`, `not a > b` is `True`, so the message "a is NOT greater than b" is printed.
 
 ✍️**Challenge**: Write a Python program to check if a number is divisible by both 2 and 3.
+
+
+
+## Order of Operations 
+
+Like **PEDMAS** for math equations ('Parenthesis', 'Exponents', 'Division/Multiplication', 'Addition/Subtraction'), there is an order of operations for resolving `True` and `False`
+
+
+
+**Order of Operations, from highest to lowest**
+
+| Operation | Order | Example | Explanation |
+| --------- | ----- | ------- | ----------- |
+|                |       |                                                          ||
+| `in`, `not in` | 1    | `'hi' in greetings` | is something in, or not in, a list (or list-like object) (returns `Boolean`) |
+| `is`, `is not` | 1    | `obj is None` | are two objects equivalent (not equal, but literally the same thing) (returns `Boolean`) |
+| `<`, `<=`, `>`, `>=`, `!=`, `==` | 1 | `x < y` | comparison of two things (returns `Boolean`) |
+| `not` | 2 | `not x` | negating the `True`/`False` value of `x` (returns `Boolean`) |
+| `and` | 3 | `x<y and x>z` | combining two `boolean` values (returns `Boolean`) |
+| `or` | 4 | `x<y or x>z` | combining two `boolean` values (returns `Boolean`) |
+
+These sets of equations are equivalent (assume all variables are boolean):
+
+```python
+x and y or z
+(x and y) or z
+
+x or y and z
+x or (y and z)
+
+x and not y or z
+(x and (not y) ) or z
+
+x or not y and z
+x or ( (not y) and z)
+```
+
+
+
+
+
+### Examples
+
+PAY ATTENTION TO THE PARENTHESIS
+
+I want a large pizza and either a coke or rootbeer
+
+```python
+if large_pizza==1 and (coke==1 or rootbeer==1):
+  print("OK")
+```
+
+
+
+I want a large pizza or 2 small pizzas and a coke
+
+```python
+if (large_pizza==1 or small_pizza==2) and coke==1:
+  print("OK")
+```
+
+
+
+I want 8 large pizzas and 15 cokes and 15 rootbeers, and if they don't have rootbeers, then 30 cokes
+
+```python
+if large_pizza == 8 and ( ( cokes == 15 and rootbeers == 15) or cokes == 30):
+	print("OK")
+```
+
+
+
+
+
