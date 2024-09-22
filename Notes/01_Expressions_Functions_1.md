@@ -29,9 +29,48 @@ Remember that in an **assignment operation**, the **right hand side is evaluated
 This means that the function will:
 
 1. receive it's inputs
+
 2. run to completion, and then
+
 3. return it's output
+
 4. the output will be assigned to the variable on the left.
+
+   
+
+#### Defining your own functions
+
+This is what the simplest function definition looks like:
+
+```python
+def function_name():
+    function_body
+ 
+```
+
+To define your own functions you must:
+
+- Use the keyword `def` followed by the name of your function
+- Add parenthesis `()` 
+- (optional) add as many parameters as you need separated by `,`
+- Use a semi-colon: `:`
+- Use an indentation character (TAB) for every line of code within the function.
+- (optional) use the keyword `return` and return a value or expression.
+
+**Example:**
+
+```python
+def message():
+    print("Enter a value: ")
+    
+message()
+```
+
+**output:**
+
+```python
+Enter a value:
+```
 
 
 
@@ -90,26 +129,23 @@ sin_pi = sin(math.pi)
 cos_pi = cos(math.pi)
 ```
 
+#### Parameterized functions
+
+- A function becomes more powerful when it can accept input, or **parameters**, from the caller. This makes the function flexible and adaptable. Parameters differ from regular variables in two key ways:
+  - They only exist within the function where they are defined.
+  - They receive their value when the function is called, through the corresponding **arguments** provided.
 
 
-#### Defining your own functions
-
-This is what the simplest function definition looks like:
 
 ```python
-def function_name():
-    function_body
+def function(parameter):
+    ###
  
 ```
 
-To define your own functions you must:
+A function can have **as many parameters as you want**, but the more parameters you have, the harder it is to memorize their roles and purposes.
 
-- Use the keyword `def` followed by the name of your function
-- Add parenthesis `()` 
-- (optional) add as many parameters as you need separated by `,`
-- Use a semi-colon: `:`
-- Use an indentation character (TAB) for every line of code within the function.
-- (optional) use the keyword `return` and return a value or expression.
+**Example:**
 
 ```python
 def sum(num1, num2):
