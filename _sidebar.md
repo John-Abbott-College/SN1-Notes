@@ -45,7 +45,10 @@
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
 
-<!--
+**Working with Functions**
+- [Functions](Notes/01_Expressions_Functions_1)
+
+  <!--
 
 **Coming up next on JAC TV...**
 
