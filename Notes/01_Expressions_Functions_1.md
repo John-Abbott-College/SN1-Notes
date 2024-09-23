@@ -38,7 +38,7 @@ This means that the function will:
 
    
 
-### ** Defining your own functions **
+### **Defining your own functions:**
 
 This is what the simplest function definition looks like:
 
@@ -156,7 +156,7 @@ def sum(num1, num2):
 
 <img src="../Images/function_1.png" height=300/>
 
-### ** How functions work **
+### **How functions work:**
 
 - when you **invoke** a function, Python remembers the place where it happened and *jumps* into the invoked function;
 
