@@ -38,6 +38,9 @@
 
 **Functions**
 - [Python basic I/O Functions](Notes/01_Expressions_print_input)
+- [Math module Functions](Notes/01_Expressions_Functions_math_module)
+- [Deeper look into Functions](01_Expressions_Functions)
+- [User defined functions](01_Expressions_Functions_user_defined)
 
 
 
@@ -45,17 +48,13 @@
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
 
-**Working with Functions**
-- [Functions](Notes/01_Expressions_Functions_1)
 
-  <!--
+
+<!--
 
 **Coming up next on JAC TV...**
 
-- [Functions](Notes/01_Expressions_Functions)
-
-**Week 6**
-
+- [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
 - [If statement](Notes/03_Conditions_if)
 - [If/Else statement](./Notes/03_Conditions_if-else)
