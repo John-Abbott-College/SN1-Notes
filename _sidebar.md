@@ -37,10 +37,10 @@
 
 
 **Functions**
-- [Python basic I/O Functions](Notes/01_Expressions_print_input)
+- [Python basic I/O Functions](Notes/01_Expressions_functions_print_input)
 - [Math module Functions](Notes/01_Expressions_Functions_math_module)
-- [Deeper look into Functions](01_Expressions_Functions)
-- [User defined functions](01_Expressions_Functions_user_defined)
+- [Deeper look into Functions](Notes/01_Expressions_Functions)
+- [User defined functions](Notes/01_Expressions_Functions_user_defined)
 
 
 
