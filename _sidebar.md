@@ -41,7 +41,7 @@
 - [Math module Functions](Notes/01_Expressions_Functions_math_module)
 - [Deeper look into Functions](Notes/01_Expressions_Functions)
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
-
+- [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 
 
 **Additional notes**
@@ -54,7 +54,6 @@
 
 **Coming up next on JAC TV...**
 
-- [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
 - [If statement](Notes/03_Conditions_if)
 - [If/Else statement](./Notes/03_Conditions_if-else)
