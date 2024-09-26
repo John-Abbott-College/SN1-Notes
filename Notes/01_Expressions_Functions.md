@@ -1,4 +1,4 @@
-# Functions
+# Deeper dive - Functions
 
 Before diving into this topic, ensure that you've already covered the following lectures:
 
