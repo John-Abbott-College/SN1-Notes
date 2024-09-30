@@ -42,7 +42,7 @@
 - [Deeper look into Functions](Notes/01_Expressions_Functions)
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
 - [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
-- [Functions - Another Look](Notes/01_Expressions_Functions_Cartoon.pdf)
+- [Functions - Another Look](./Notes/01_Expressions_Functions_Cartoon.pdf)
 
 
 **Additional notes**
