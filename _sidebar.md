@@ -23,7 +23,9 @@
 
 
 
+**Practice**
 
+- [Practice exercises](Practice_questions/Python Practice)
 
 **Python expressions**
 
