@@ -43,6 +43,7 @@
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
 - [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
+- [Functions, Loops and scopes](Notes/01_Functions and scopes)
 
 
 **Additional notes**
