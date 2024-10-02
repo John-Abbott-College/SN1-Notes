@@ -35,15 +35,15 @@
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
 
-
 **Functions**
+
 - [Python basic I/O Functions](Notes/01_Expressions_functions_print_input)
 - [Math module Functions](Notes/01_Expressions_Functions_math_module)
 - [Deeper look into Functions](Notes/01_Expressions_Functions)
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
 - [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
-- [Functions, scopes, and loops](Notes/01_Functions_and_scopes)
+- [Functions- scopes and loops](Notes/01_Functions_and_scopes)
 
 
 **Additional notes**
