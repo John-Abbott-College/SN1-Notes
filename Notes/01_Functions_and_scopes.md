@@ -44,7 +44,7 @@ Do I know that variable? 2
 
 
 
-✍️  **Challenge: What is the output? **
+✍️**Challenge: What is the output?**
 
 ```python 
 value = 50
