@@ -50,7 +50,7 @@
 
 **Practice**
 
-- [Practice exercises](Practice_questions/Python Practice)
+- [Practice exercises](Practice_questions/Python_Practice)
 
 <!--
 
