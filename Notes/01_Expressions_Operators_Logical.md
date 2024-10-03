@@ -2,17 +2,37 @@
 
 
 
-Logical operators are used to combine Boolean values and expressions (`True` or `False`).  They are helpful when programming decision making or creating more complex algorithms. We will learn more about conditional statements in the future. 
+Logical operators are used to combine Boolean values and expressions (`True` or `False`).  They are helpful when programming decision making or creating more complex algorithms. 
 
 There are instances where we need to test if multiple conditions are true at the same time. For example: 
 
-- The relative humidity index must be around 100% **AND** the temperature has to be decreasing for it to rain.
-- The oil in the car should be changed every 6 months **OR** every 5,000 km.
+- The relative humidity index must be 100% **AND** the temperature has to be decreasing for it to rain:
+
+  ```python
+  humidity_index < 100 and temperature_variation < 0
+  ```
+
+  
+
+- The oil in the car should be changed every 6 months **OR** every 5,000 km:
+
+  ```
+  num_months >= 6 or  milage >= 5000
+  ```
+
+  
+
 - To return a new sweater you must have the receipt **AND NOT** remove the price tag.
 
+  ```python
+  has_receipt = True
+  price_tage_removed = False
+  has_receipt and not price_tag_removed
+  ```
 
+  
 
-The combination of **AND**, **OR**, and **NOT** conditions with the boolean values `True` and `False` is called boolean algebra (or boolean logic), each operation has a special symbol in math and in Python.
+The combination of **AND**, **OR**, and **NOT** conditions with the boolean values `True` and `False` is called *boolean algebra* (or boolean logic), each operation has a special symbol in math and in Python.
 
 
 
@@ -64,6 +84,40 @@ You are at the library and can only borrow a new book if you do not have any ove
 
 
 
+## Order of Operations 
+
+Like **PEDMAS** for math equations ('Parenthesis', 'Exponents', 'Division/Multiplication', 'Addition/Subtraction'), there is an order of operations for resolving `True` and `False`
+
+
+
+**Order of Operations, from highest to lowest**
+
+| Operation                        | Order | Example             | Explanation                                                  |
+| -------------------------------- | ----- | ------------------- | ------------------------------------------------------------ |
+|                                  |       |                     |                                                              |
+| `in`, `not in`                   | 1     | `'hi' in greetings` | is something in, or not in, a list (or list-like object) (returns `Boolean`) |
+| `is`, `is not`                   | 1     | `obj is None`       | are two objects equivalent (not equal, but literally the same thing) (returns `Boolean`) |
+| `<`, `<=`, `>`, `>=`, `!=`, `==` | 1     | `x < y`             | comparison of two things (returns `Boolean`)                 |
+| `not`                            | 2     | `not x`             | negating the `True`/`False` value of `x` (returns `Boolean`) |
+| `and`                            | 3     | `x<y and x>z`       | combining two `boolean` values (returns `Boolean`)           |
+| `or`                             | 4     | `x<y or x>z`        | combining two `boolean` values (returns `Boolean`)           |
+
+These sets of equations are equivalent (assume all variables are boolean):
+
+```python
+x and y or z
+(x and y) or z
+
+x or y and z
+x or (y and z)
+
+x and not y or z
+(x and (not y) ) or z
+
+x or not y and z
+x or ( (not y) and z)
+```
+
 
 
 ✍️**Challenge**: The following program asks the user for the current year and determines if it is an olympic year. Manually execute the operations below and write the expected result. Check your answers by running the code.
@@ -75,6 +129,7 @@ You are at the library and can only borrow a new book if you do not have any ove
     </button>     
     </a> 
 </div>
+
 
 ```python
 year = 2024

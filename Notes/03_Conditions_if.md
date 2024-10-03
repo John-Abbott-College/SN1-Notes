@@ -6,7 +6,7 @@ Python uses special **operators** to ask these questions. To make effective use 
 
 To make such decisions, Python offers **conditional statements**. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.
 
-### Logical conditions 
+### Logical conditions - reminder
 
 - Equals: `a == b`
 - Not Equals: `a != b`
@@ -35,7 +35,7 @@ The statement works as follows:
 
 <img src="Images/if_1.png" height="300">
 
-## Conditional execution: the if statement
+## Conditional execution: the `if` statement
 
 Conditionally executed statements must be indented. This indentation creates a clear and readable structure, making it easy to see all possible execution paths in the code.
 
@@ -55,19 +55,42 @@ The `if` statement checks if the number is greater than `0`. If the condition is
 
 The second `print` statement is outside the `if` block and will execute every time the code runs, showing that it is independent of the `if` condition.
 
-## And
+## Logical operator - reminder
 
-The and keyword is a logical operator, and is used to combine conditional statements:
+- `and`: The and keyword is a logical operator, and is used to combine conditional statements:
+- `or`: The `or` keyword is a logical operator, and is used to combine conditional statements:
+- `not` : The `not` keyword is a logical operator, and is used to reverse the result of the conditional statement:
+
+
+
+## Combining conditional statements
 
 #### Example
+
+Consider the following numbers: `number1 = 200`,`number2 = 33`,`number3 = 500`. We would like to verify if number1 is greater than number2 **and** if number3 is greater than number1. We could write two nested ifs:
+
+- If number1 is greater than number2, then:
+  - If number 3 is greater than number2, then:
+    - Display: "number 2 is the smallest number"
+
+This would translate into:
+
+```python
+number1 = 200
+number2 = 33
+number3 = 500
+if number1 > number2:
+    if  number3 > number1:
+		print("Both conditions are True")
+```
 
 Test if `a` is greater than `b`, AND if `c` is greater than `a`:
 
 ```python
-a = 200
-b = 33
-c = 500
-if a > b and c > a:
+number1 = 200
+number2 = 33
+number3 = 500
+if number1 > number2 and number3 > number1:
 	print("Both conditions are True")
 ```
 
@@ -84,10 +107,10 @@ The `or` keyword is a logical operator, and is used to combine conditional state
 Test if `a` is greater than `b`, OR if `a` is greater than `c`:
 
 ```python
-a = 200
-b = 33
-c = 500
-if a > b or a > c:
+number1 = 200
+number2 = 33
+number3 = 500
+if (number1 > number2) or (anumber1> number3):
 	print("At least one of the conditions is True")
 ```
 
@@ -115,42 +138,6 @@ The `if` statement checks if `a` is not greater than `b` by negating the result 
 Since `a > b` is `False`, `not a > b` is `True`, so the message "a is NOT greater than b" is printed.
 
 ✍️**Challenge**: Write a Python program to check if a number is divisible by both 2 and 3.
-
-
-
-## Order of Operations 
-
-Like **PEDMAS** for math equations ('Parenthesis', 'Exponents', 'Division/Multiplication', 'Addition/Subtraction'), there is an order of operations for resolving `True` and `False`
-
-
-
-**Order of Operations, from highest to lowest**
-
-| Operation | Order | Example | Explanation |
-| --------- | ----- | ------- | ----------- |
-|                |       |                                                          ||
-| `in`, `not in` | 1    | `'hi' in greetings` | is something in, or not in, a list (or list-like object) (returns `Boolean`) |
-| `is`, `is not` | 1    | `obj is None` | are two objects equivalent (not equal, but literally the same thing) (returns `Boolean`) |
-| `<`, `<=`, `>`, `>=`, `!=`, `==` | 1 | `x < y` | comparison of two things (returns `Boolean`) |
-| `not` | 2 | `not x` | negating the `True`/`False` value of `x` (returns `Boolean`) |
-| `and` | 3 | `x<y and x>z` | combining two `boolean` values (returns `Boolean`) |
-| `or` | 4 | `x<y or x>z` | combining two `boolean` values (returns `Boolean`) |
-
-These sets of equations are equivalent (assume all variables are boolean):
-
-```python
-x and y or z
-(x and y) or z
-
-x or y and z
-x or (y and z)
-
-x and not y or z
-(x and (not y) ) or z
-
-x or not y and z
-x or ( (not y) and z)
-```
 
 
 

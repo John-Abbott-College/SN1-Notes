@@ -31,6 +31,8 @@
   - [Boolean](Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](Notes/01_Expressions_Operators)
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
+- [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
+- [Priority Operations](Notes/01_Expressions_Priority_Operators)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
 
 **Functions**
@@ -43,6 +45,15 @@
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
 - [Functions- scopes and loops](Notes/01_Functions_and_scopes)
 
+**For loops**
+
+- [For loop](Notes/04_for_loop)
+
+
+
+**Conditional statements**
+
+- [If statement](Notes/03_Conditions_if)
 
 **Additional notes**
 
@@ -54,17 +65,17 @@
 
 <!--
 
-**Coming up next on JAC TV...**
+To add to conditional statements
 
-- [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
 - [If statement](Notes/03_Conditions_if)
-- [If/Else statement](./Notes/03_Conditions_if-else)
-- [Priority Operations](Notes/01_Expressions_Priority_Operators)
 
-**Week 7**
+- [If/Else statement](Notes/03_Conditions_if-else)
+
+  
+
+To add to for-loops
 
 - [List](Notes/02_list)
-- [For loop](Notes/04_for_loop)
 - [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
 **Week 8**
