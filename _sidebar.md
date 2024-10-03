@@ -62,6 +62,12 @@
 **Practice**
 
 - [Practice exercises](Practice_questions/Python_Practice)
+- [Practice data types](Practice_questions/01_Practice_DataTypes)
+- [Practice arithmetic operations](Practice_questions/02_Practice_Arithmetics)
+- Practice math formulas (coming soon)
+- [Practice IO functions](Practice_questions/03_Practice_IO)
+- [Practice variables assignments](03_Practice_IO/04_Practice_Variables)
+- [Practice functions](Practice_questions/05_Practice_Functions)
 
 <!--
 
