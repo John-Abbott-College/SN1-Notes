@@ -133,7 +133,7 @@ We highly recommend you work on the exercises below with pen and paper to practi
    
    
 
-**Data Types - Answers**
+## **Answers**
 
 1.1 `int`
 1.2 `float`

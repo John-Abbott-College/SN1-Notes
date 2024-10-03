@@ -73,7 +73,7 @@ print(s, type(s))
 
    - `true`
 
-**Answers:**
+## **Answers:**
 
 1. False
 2. True, cannot use two assignment operators (= and +=) in the same expression. This should be done on two separate lines.
