@@ -52,8 +52,8 @@
 
 **Turtle notes**
 
-- [How to use turtle](Notes/01_Turtle Graphics)
-- [Examples ](Notes/01_Draw a simple house)
+- [How to use turtle](Notes/01_Turtle_Graphics)
+- [Examples ](Notes/01_Draw_a_simple_house)
 
 <!--
 
