@@ -50,7 +50,10 @@
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
 
+**Turtle notes**
 
+- [How to use turtle](Notes/01_Turtle Graphics)
+- [Examples ](Notes/01_Draw a simple house)
 
 <!--
 
