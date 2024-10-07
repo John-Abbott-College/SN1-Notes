@@ -45,6 +45,8 @@
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
 - [Functions- scopes and loops](Notes/01_Functions_and_scopes)
 
+**Math To Python**
+- [Accumulator and Series Pattern](Notes/04_accumulator_pattern)
 
 **Additional notes**
 
