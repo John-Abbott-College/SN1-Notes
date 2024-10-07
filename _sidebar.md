@@ -55,6 +55,15 @@
 - [How to use turtle](Notes/01_Turtle_Graphics)
 - [Examples ](Notes/01_Draw_a_simple_house)
 
+**Practice**
+
+- [Practice exercises](Practice_questions/Python_Practice)
+- [Practice data types](Practice_questions/01_Practice_DataTypes)
+- [Practice arithmetic operations](Practice_questions/02_Practice_Arithmetics)
+- [Practice IO functions](Practice_questions/03_Practice_IO)
+- [Practice variables assignments](Practice_questions/04_Practice_Variables)
+- [Practice functions](Practice_questions/05_Practice_Functions)
+
 <!--
 
 **Coming up next on JAC TV...**
