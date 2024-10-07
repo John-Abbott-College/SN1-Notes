@@ -1,21 +1,6 @@
 # For loop
 
-Another kind of loop available in Python comes from the observation that sometimes it's more important to **count the "turns" of the loop** than to check the conditions.
-
-Imagine that a loop's body needs to be executed exactly 10 times. If you would like to use the while loop to do it, it may look like this:
-
-```python
-i = 0
-while i < 100:
-    # do_something()
-    i += 1
-```
-
-You need to increment `i`, which acts as a counter to track the number of loops.
-
-⚠️ **Note:** In Python, we use indentation to define a block of code, such as the body of a loop. 
-
-For tasks like these, there's a loop specifically designed for the job, called the *for* loop.
+A `for-loop` allows you to repeat lines of code `n` amount of times.  Imagine a guessing game coded in python which lets the player guess a number.  What if the game would like to let the player have 10 tries. A `for` loop repeats the statement whiling  **counting the "turns"** .
 
 The *for* loop is actually capable of handling more complex tasks, such as **iterating through large collections of data, item by item**. We’ll explore that in more detail soon, but for now, we'll focus on a simpler use of the *for* loop.
 
@@ -36,30 +21,6 @@ Here are some key elements to understand:
 - In the example `for item in sequence:`, the loop will go through each item in the sequence and perform the specified action.
 
 
-
-## Looping Through a String
-
-Even strings are iterable objects, they contain a sequence of characters:
-
-**Example:**
-
-Loop through the letters in the word "banana":
-
-```python
-for x in "banana":
- print(x)
-```
-
-output:
-
-```python
-b
-a
-n
-a
-n
-a
-```
 
 
 
@@ -152,154 +113,65 @@ The value of i is currently 5
 
 
 
-## Python for loop with`else` clause
+## **Examples of Loops Inside Functions**
 
-A `for` loop can have an optional `else` clause. This `else` clause executes after the iteration completes.
+A `for` loop is often used inside functions to automate repetitive tasks. Here's a breakdown of how loops work with functions in Python.
 
-```python
-digits = [0, 1, 5]
 
-for i in digits:
-    print(i)
-else:
-    print("No items left.")
-```
 
-**Output**
 
-```
-0
-1
-5
-No items left.
-```
+#### **Example 1: Simple Function with a For Loop**
 
-Here, the `for` loop prints all the items of the digits list. When the loop finishes, it executes the `else` block and prints `No items left`.
-
-**Example**
-
-Write a program that sums all positive numbers in a list. If the list is empty or contains only non-positive numbers, print "No positive numbers found".
+This function prints the numbers from 1 to 5 using a `for` loop:
 
 ```python
-numbers = [0, -1, -2, -3]
-total = 0
-for number in numbers:
-    if number > 0:
-        total += number
-else:
-    if total == 0:
-        print("No positive numbers found")
-    else:
-        print("Sum of positive numbers:", total)
+def print_numbers():
+    for i in range(1, 6):
+        print(i)
+
+# Call the function
+print_numbers()
 ```
 
-output:
-
-```
-No positive numbers found
-```
+**Explanation**:
+The `for i in range(1, 6)` loop iterates over the numbers from 1 to 5, printing each value.
 
 
 
-✍️**Challenge**: What is the output of the following code?
+
+#### **Example 2: Sum of All Integers from 1 to `n`**
+
+This function calculates the sum of all integers from 1 to a given number `n`.
 
 ```python
-n = range(4)
- 
-for num in n:
-    print(num - 1)
-else:
-    print(num)
+def sum_numbers(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i
+    return total
+
+# Example usage:
+print(sum_numbers(5))  # Output: 15 (1+2+3+4+5)
 ```
 
+**Explanation**:
+The function uses a loop to sum up all the integers from 1 to `n`. When called with `n = 5`, it returns 15.
 
 
-## The break and continue statements
 
-Python provides two special instructions :
 
-- **break** – exits the loop immediately, and unconditionally ends the loop's operation; the program begins to execute the nearest instruction after the loop's body;
-- **continue** – behaves as if the program has suddenly reached the end of the body; the next turn is started and the condition expression is tested immediately.
-
-#### **break - example:**
+#### Example 3: Sum of Squares
 
 ```python
-print("The break instruction:") #Prints a message: "The break instruction:"
-for i in range(1, 6):     #Starts a loop from 1 to 5, taking each value in this range.
-    if i == 3:     # Checks if `i` is 3
-        break      # Exits the loop if `i` is 3.
-    print("Inside the loop.", i)   # Prints the current value of `i` if it is not 3.
-print("Outside the loop.")    # Prints a message after the loop ends.
+def sum_of_squares(n):
+    total = 0
+    for i in range(1, n + 1):
+        total += i ** 2
+    return total
+
+# Test the function
+print(sum_of_squares(4))  # Output: 30 (1^2 + 2^2 + 3^2 + 4^2)
 ```
 
-output:
-
-```python
-The break instruction:
-Inside the loop. 1
-Inside the loop. 2
-Outside the loop.
-```
-
-
-
-#### **continue - example:**
-
-```python
-print("The continue instruction:")  #Prints a message: "The continue instruction:"
-for i in range(1, 6):   #Starts a loop from 1 to 5, taking each value in this range.
-    if i == 3:     # Checks if `i` is 3
-        continue   # skips the rest of the current loop iteration and go for the next.
-    print("Inside the loop.", i)   # Prints the current value of `i` if it is not 3.
-print("Outside the loop.")  # Prints a message after the loop ends.
-```
-
-output:
-
-```python
-The continue instruction:
-Inside the loop. 1
-Inside the loop. 2
-Inside the loop. 4
-Inside the loop. 5
-Outside the loop.
-```
-
-
-
-**Example:**
-
-Checks if a list contains the number `5`, If the number `5` is found, print "Found 5". If the loop completes without finding `5`, print "5 not found".
-
-```python
-numbers = [1, 2, 3, 4, 6]
-for number in numbers:
-    if number == 5:
-        print("Found 5")
-        break
-else:
-    print("5 not found")  # 5 not found
-```
-
-
-
-✍️**Challenge:** Write a `for` loop to check if there are no duplicates in a list. If duplicates are found, print "Duplicates found". If no duplicates are found after checking all items, print "No duplicates found". items = ['apple', 'banana', 'cherry', 'apple']
-
-
-
-**Example:**
-
-Write a program that prints all numbers from `1` to `10`, skipping the number `5`. After the loop, print "Finished printing numbers."
-
-```python
-for i in range(1, 11):
-    if i == 5:
-        continue
-    print(i)
-else:
-    print("Finished printing numbers.")
-```
-
-
-
-**✍️Challenge:** Write a `for` loop that counts the number of even numbers in a list. Skip odd numbers and print the count of even numbers at the end.
+**Explanation**:
+The function loops through numbers from 1 to `n` and adds the square of each number to the total. For `n = 4`, the result is 30.

@@ -44,7 +44,8 @@ Do I know that variable? 2
 
 
 
-✍️  **Challenge: What is the output? **
+
+✍️**Challenge: What is the output?**
 
 ```python 
 value = 50
@@ -55,6 +56,7 @@ def function1():
 function1()
 print(value)
 ```
+
 
 
 
@@ -70,6 +72,7 @@ for variable in sequence:
 ```
 
 The loop iterates over a sequence, performing the same action for each item.
+
 
 
 
@@ -91,6 +94,7 @@ The `for i in range(1, 6)` loop iterates over the numbers from 1 to 5, printing 
 
 
 
+
 #### **Example 2: Sum of All Integers from 1 to `n`**
 
 This function calculates the sum of all integers from 1 to a given number `n`.
@@ -108,6 +112,7 @@ print(sum_numbers(5))  # Output: 15 (1+2+3+4+5)
 
 **Explanation**:
 The function uses a loop to sum up all the integers from 1 to `n`. When called with `n = 5`, it returns 15.
+
 
 
 

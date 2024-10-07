@@ -2,7 +2,7 @@
 
 You probably remember from you mathematics classes that there exists a hierarchy of priorities when evaluating a math expression. For example, a multiplication is evaluated before the addition in the following expression: 
 $$
-3 * 2 + 4 = (3*2) + 4 
+3 * 2 + 4 = (3*2) + 4
 $$
 The operation (3 * 2) should be evaluated first, then 4 is added to the result. 
 
