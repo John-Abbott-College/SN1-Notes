@@ -29,7 +29,7 @@ x = x**2    # x is now 81
 
 In **math**, it is not unusual to describe a sequence of numbers using subscripts.
 
-$\quad a_1, a_2, a_3 ... a_i ... a_n$
+$$\quad a_1, a_2, a_3 ... a_i ... a_n$$
 
 or to equate a given subscripted number as a function of the previous number
 
