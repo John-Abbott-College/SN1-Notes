@@ -79,7 +79,7 @@
 - [Practice IO functions](Practice_questions/03_Practice_IO)
 - [Practice variables assignments](Practice_questions/04_Practice_Variables)
 - [Practice functions](Practice_questions/05_Practice_Functions)
-- [Practice conditional statements](06_Practice_Conditional_statements)
+- [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
 
 <!--
 
