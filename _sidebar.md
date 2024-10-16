@@ -79,6 +79,7 @@
 - [Practice IO functions](Practice_questions/03_Practice_IO)
 - [Practice variables assignments](Practice_questions/04_Practice_Variables)
 - [Practice functions](Practice_questions/05_Practice_Functions)
+- [Practice for-loops](Practice_questions/07_Practice_Loops)
 - [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
 
 <!--
