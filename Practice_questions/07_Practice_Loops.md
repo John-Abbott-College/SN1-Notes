@@ -72,15 +72,15 @@
 
 3. Create a function which takes in a number `n` and returns the sum of all the integers values from
 
-    <img src="images_exos/7_1.png"/>
+    <img src="Practice_questions/images_exos/7_1.png"/>
 
 4. Create a function which takes a number `n` and returns the sum of squares of each value from:
 
-    <img src="images_exos/7_1.png"/>
+    <img src="Practice_questions/images_exos/7_1.png"/>
 
 5. Create a function which takes a number `n` and returns the factorial value:
 
-    <img src="images_exos/7_2.png"/>
+    <img src="Practice_questions/images_exos/7_2.png"/>
 
     When a metal rod is heated, its length increases due to thermal expansion. The expansion is  proportional to both the original length and the temperature increase.
 
@@ -90,7 +90,7 @@
 
 6. Create a function called `fibonacci()` which takes as input parameter `n` and returns the n-th term of the Fibonacci sequence. It must use a  for loop and not lists nor a while loop. You can also assume that `n` is greater than 0. The sequence is 0, 1, 1, 2, 3, 5, ..., Fn. where
 
-   <img src="images_exos/7_3.png"/>
+   <img src="Practice_questions/images_exos/7_3.png"/>
 
    Initial starting values: F0 = 0 and F0 = 1
 
@@ -104,7 +104,7 @@
 
 1. Consider the following math function $f(x)$ :
 
-   <img src="images_exos/7_4.png"/>
+   <img src="Practice_questions/images_exos/7_4.png"/>
 
    
 
@@ -118,7 +118,7 @@
 $$
 \lim_{x \to N} f(x)
 $$
-<img src="images_exos/7_5.png"/>	
+<img src="Practice_questions/images_exos/7_5.png"/>	
 
 b)  Create a function taking as input parameter `N` and and prints the value returned by $f(x)$ for x = 0, 1, 2, 3, 4, .... , N-1	
 
@@ -126,7 +126,7 @@ b)  Create a function taking as input parameter `N` and and prints the value ret
 
 2. Consider the following series of terms : a_0, a_1, a_2, .... , a_n where each term a_i is evaluated using the previous term $a_{i-1}$ following this relationship:
 
-   <img src="images_exos/7_6.png"/>
+   <img src="Practice_questions/images_exos/7_6.png"/>
 
    Starting $a_0 = 1$, create a function which takes as input parameter `n` and evaluates the $a_n$ -th term.
 
