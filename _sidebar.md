@@ -23,8 +23,6 @@
 
 
 
-
-
 **Python expressions**
 
 - [Literals](Notes/01_Expressions_Literals)
@@ -33,6 +31,7 @@
   - [Boolean](Notes/01_Expressions_Literals_Boolean)
 - [Arithmetic Operators](Notes/01_Expressions_Operators)
 - [Assignment Operators](Notes/01_Expressions_Operators_Assignment)
+- [Priority Operations](Notes/01_Expressions_Priority_Operators)
 - [Variables & Constants](Notes/01_Expressions_Variables_Constants)
 
 **Functions**
@@ -45,15 +44,42 @@
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
 - [Functions- scopes and loops](Notes/01_Functions_and_scopes)
 
+**Math To Python**
+
+- [Accumulator and Series Pattern](https://john-abbott-college.github.io/SN1-Notes/Notes/04_accumulator_pattern.pdf))
+
+**Loops** 
+
+- [For loop](Notes/04_for_loop)
+
+**Conditional statements**
+
+- [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
+
+- [If statement](Notes/03_Conditions_if)
+
+- [If/Else statement](./Notes/03_Conditions_if-else)
+
+  
 
 **Additional notes**
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
 
-**Turtle notes**
-
 - [How to use turtle](Notes/01_Turtle_Graphics)
-- [Examples ](Notes/01_Draw_a_simple_house)
+- [Examples of turtle](Notes/01_Draw_a_simple_house)
+
+
+
+**Practice**
+
+- [Practice exercises](Practice_questions/Python_Practice)
+- [Practice data types](Practice_questions/01_Practice_DataTypes)
+- [Practice arithmetic operations](Practice_questions/02_Practice_Arithmetics)
+- [Practice IO functions](Practice_questions/03_Practice_IO)
+- [Practice variables assignments](Practice_questions/04_Practice_Variables)
+- [Practice functions](Practice_questions/05_Practice_Functions)
+- [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
 
 **Practice**
 
@@ -68,23 +94,6 @@
 
 **Coming up next on JAC TV...**
 
-- [Comparison and logical Operators](Notes/01_Expressions_Operators_Logical)
-- [If statement](Notes/03_Conditions_if)
-- [If/Else statement](./Notes/03_Conditions_if-else)
-- [Priority Operations](Notes/01_Expressions_Priority_Operators)
-
-**Week 7**
-
-- [List](Notes/02_list)
-- [For loop](Notes/04_for_loop)
-- [List Comprehensions](Notes/04_for_loop_list_comprehension)
-
-**Week 8**
-
-- [Dictionary](Notes/02_Dictionaries)
-
-- [Tuple](Notes/02_Tuples)
-
 
 **Week 9**
 
@@ -92,19 +101,26 @@
 
 **Week 10**
 
-- [While loop](./Notes/04_while_loop)
-
-  
+- [List](Notes/02_list)
+- [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
 **Week 11**
+
+- [Dictionary](Notes/02_Dictionaries)
+
+- [Tuple](Notes/02_Tuples)
+
+**Week 10**
+
+- [While loop](./Notes/04_while_loop) ? 
 
 - Matplotlib TODO
 - Graphs TODO
 
 **Week 12**
 
-- Reading and Writing to a file
-- CSV files
+- Reading and Writing to a file TODO 
+- CSV files TODO 
 
 **Week 13**
 
