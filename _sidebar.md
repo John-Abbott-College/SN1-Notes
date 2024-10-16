@@ -73,7 +73,6 @@
 
 **Practice**
 
-- [Practice exercises](Practice_questions/Python_Practice)
 - [Practice data types](Practice_questions/01_Practice_DataTypes)
 - [Practice arithmetic operations](Practice_questions/02_Practice_Arithmetics)
 - [Practice IO functions](Practice_questions/03_Practice_IO)
@@ -82,14 +81,7 @@
 - [Practice for-loops](Practice_questions/07_Practice_Loops)
 - [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
 
-**Practice**
 
-- [Practice exercises](Practice_questions/Python_Practice)
-- [Practice data types](Practice_questions/01_Practice_DataTypes)
-- [Practice arithmetic operations](Practice_questions/02_Practice_Arithmetics)
-- [Practice IO functions](Practice_questions/03_Practice_IO)
-- [Practice variables assignments](Practice_questions/04_Practice_Variables)
-- [Practice functions](Practice_questions/05_Practice_Functions)
 
 <!--
 

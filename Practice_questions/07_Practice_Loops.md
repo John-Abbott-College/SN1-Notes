@@ -66,25 +66,33 @@
 
 **Level 2**
 
-1. Write a Python program that **prints** the powers of 2 from  $2^0$  to $2^{15}$. Each line should display the exponent and the corresponding power of 2. 
+1. Write a Python program that **prints** the powers of 2 from  2^0  to 2^15. Each line should display the exponent and the corresponding power of 2. 
+
 2. Write a program that uses a `for` loop to **print** the first 50 multiples of 5.
-3. Create a function which takes in a number `n` and returns the sum of all the integers values from 0, 1, ..., $n-1$:
 
-3. Create a function which takes a number `n` and returns the sum of squares of each value from 0,1,..., $n-1$
+3. Create a function which takes in a number `n` and returns the sum of all the integers values from
 
-4. Create a function which takes a number `n` and returns the factorial value:
+    <img src="images_exos/7_1.png"/>
 
-    $n! = 1 * 2 * 3 * ... * n$
+4. Create a function which takes a number `n` and returns the sum of squares of each value from:
 
-5. When a metal rod is heated, its length increases due to thermal expansion. The expansion is  proportional to both the original length and the temperature increase.
+    <img src="images_exos/7_1.png"/>
 
-   **Task**: A metal rod starts with a length of 5 meters at 0°C. For every 50°C increase in temperature, its length increases by 0.01 meters. Print the new length of the rod after heating it in intervals of 50°C up to 250°C.
+5. Create a function which takes a number `n` and returns the factorial value:
 
-   
+    <img src="images_exos/7_2.png"/>
 
-6. Create a function called `fibonacci()` which takes as input parameter `n` and returns the n-th term of the Fibonacci sequence. It must use a  for loop and not lists nor a while loop. You can also assume that `n` is greater than 0. The sequence is $0, 1, 1, 2, 3, 5, ..., F_n $. where $F_n = F_{n-1} + F_{n-2}$ 
+    When a metal rod is heated, its length increases due to thermal expansion. The expansion is  proportional to both the original length and the temperature increase.
 
-   Initial starting values: $F_0 = 0$ and $F_1 = 1$
+    **Task**: A metal rod starts with a length of 5 meters at 0°C. For every 50°C increase in temperature, its length increases by 0.01 meters. Print the new length of the rod after heating it in intervals of 50°C up to 250°C.
+
+    
+
+6. Create a function called `fibonacci()` which takes as input parameter `n` and returns the n-th term of the Fibonacci sequence. It must use a  for loop and not lists nor a while loop. You can also assume that `n` is greater than 0. The sequence is 0, 1, 1, 2, 3, 5, ..., Fn. where
+
+   <img src="images_exos/7_3.png"/>
+
+   Initial starting values: F0 = 0 and F0 = 1
 
    
 
@@ -95,9 +103,9 @@
 **Level 3:**
 
 1. Consider the following math function $f(x)$ :
-   $$
-   f(x) = \frac{3x^2 + 3x - 5}{(4x-3)(2x+1)}
-   $$
+
+   <img src="images_exos/7_4.png"/>
+
    
 
    a) Create a python function called `f` which takes `x` as input parameter which returns the formula above
@@ -110,17 +118,17 @@
 $$
 \lim_{x \to N} f(x)
 $$
-​	b)  Create a function taking as input parameter `N` and and prints the value returned by $f(x)$ for x = 0, 1, 2, 3, 4, .... , N-1	
+<img src="images_exos/7_5.png"/>	
+
+b)  Create a function taking as input parameter `N` and and prints the value returned by $f(x)$ for x = 0, 1, 2, 3, 4, .... , N-1	
 
 ​       c) Use your function to evaluate this limit numerically with: N = 100, N =1000. Is the solution converging to a number? What is this number?
 
-2. Consider the following series of terms : $a_0, a_1, a_2, .... , a_n$ where each term $a_i$ is evaluated using the previous term $a_{i-1}$ following this relationship:
-   $$
-   a_i = 3 \sqrt(a_{i-1})
-   $$
-   
+2. Consider the following series of terms : a_0, a_1, a_2, .... , a_n where each term a_i is evaluated using the previous term $a_{i-1}$ following this relationship:
 
-​	Starting $a_0 = 1$, create a function which takes as input parameter `n` and evaluates the $a_n$ -th term.
+   <img src="images_exos/7_6.png"/>
+
+   Starting $a_0 = 1$, create a function which takes as input parameter `n` and evaluates the $a_n$ -th term.
 
 
 
