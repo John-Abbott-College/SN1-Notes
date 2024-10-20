@@ -198,7 +198,6 @@ def sum_squares(n:int):
     for i in range(n):
         total += i**2
     return total
-
 print(sum_squares(5))
 ```
 
