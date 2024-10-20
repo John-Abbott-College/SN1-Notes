@@ -77,21 +77,21 @@ draw_square(100)
 
  **Level 1**
 
-1. 
+1. ```python
+   import turtle
+   
+   pen = turtle.Turtle()
+   
+   def draw_square(side:float):
+       for i in range(4):
+           pen.forward(side)
+           pen.right(90)
+   
+   draw_square(100)
+   draw_square(200)
+   ```
 
-```python
-import turtle
-
-pen = turtle.Turtle()
-
-def draw_square(side:float):
-    for i in range(4):
-        pen.forward(side)
-        pen.right(90)
-
-draw_square(100)
-draw_square(200)
-```
+   
 
 
 
@@ -126,22 +126,22 @@ draw_square(200)
 
 **Level 2**
 
-1. 
+1. ```python
+   import turtle
+   
+   pen = turtle.Turtle()
+   def draw_polygone(length_side:float, num_side:int):
+       for i in range(num_side):
+           pen.forward(length_side)
+           pen.right(360/num_side)
+           
+   draw_polygone(100,5)
+   draw_polygone(100,6)
+   draw_polygone(100,10)
+   draw_polygone(10,50) # this is how computers actually approximate curves and circles
+   ```
 
-```python
-import turtle
-
-pen = turtle.Turtle()
-def draw_polygone(length_side:float, num_side:int):
-    for i in range(num_side):
-        pen.forward(length_side)
-        pen.right(360/num_side)
-        
-draw_polygone(100,5)
-draw_polygone(100,6)
-draw_polygone(100,10)
-draw_polygone(10,50) # this is how computers actually approximate curves and circles
-```
+   
 
 
 

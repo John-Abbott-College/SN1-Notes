@@ -2,10 +2,6 @@
 
 
 
-**Turtle and for-loops**
-
-
-
 **Level 1**
 
 1. Print 5 times "hello" using a `for-loop`
@@ -60,9 +56,6 @@
    print(power)
    ```
 
-   
-
-
 
 **Level 2**
 
@@ -70,21 +63,17 @@
 
 2. Write a program that uses a `for` loop to **print** the first 50 multiples of 5.
 
-3. Create a function which takes in a number `n` and returns the sum of all the integers values from
+3. Create a function which takes in a number `n` and returns the sum of all the integers values:
 
     <img src="Practice_questions/images_exos/7_1.png"/>
 
-4. Create a function which takes a number `n` and returns the sum of squares of each value from:
+4. Create a function which takes a number `n` and returns the sum of squares of each value:
 
     <img src="Practice_questions/images_exos/7_1.png"/>
 
 5. Create a function which takes a number `n` and returns the factorial value:
 
     <img src="Practice_questions/images_exos/7_2.png"/>
-
-    When a metal rod is heated, its length increases due to thermal expansion. The expansion is  proportional to both the original length and the temperature increase.
-
-    **Task**: A metal rod starts with a length of 5 meters at 0°C. For every 50°C increase in temperature, its length increases by 0.01 meters. Print the new length of the rod after heating it in intervals of 50°C up to 250°C.
 
     
 
@@ -97,9 +86,6 @@
    
 
 
-
-
-
 **Level 3:**
 
 1. Consider the following math function $f(x)$ :
@@ -108,11 +94,11 @@
 
    
 
-   a) Create a python function called `f` which takes `x` as input parameter which returns the formula above
+   ​	a) Write a Python function named `f` that accepts `x` as input
+   
+   parameter and returns the value of f(x) based on the provided formula.
 
->  Note: We can make exceptions for variables names which apply to a purely math formula which no particular meaning.
->
-> 
+>  Note: We can make exceptions for variable names that are purely mathematical and do not have additional meaning.
 
 ​	Let's numerically evaluate the limit where x increases to N which is a large number: 
 $$
@@ -120,15 +106,27 @@ $$
 $$
 <img src="Practice_questions/images_exos/7_5.png"/>	
 
-b)  Create a function taking as input parameter `N` and and prints the value returned by $f(x)$ for x = 0, 1, 2, 3, 4, .... , N-1	
+​	b)  Write a function taking as input parameter `N` and and prints the value returned by f(x) for x = 0, 1, 2, 3, 4, .... , N-1	
 
-​       c) Use your function to evaluate this limit numerically with: N = 100, N =1000. Is the solution converging to a number? What is this number?
+​	c) Use your function to evaluate this limit numerically with: N = 100, N =1000. Is the solution converging to a number? What is this number?
 
 2. Consider the following series of terms : a_0, a_1, a_2, .... , a_n where each term a_i is evaluated using the previous term $a_{i-1}$ following this relationship:
 
    <img src="Practice_questions/images_exos/7_6.png"/>
 
    Starting $a_0 = 1$, create a function which takes as input parameter `n` and evaluates the $a_n$ -th term.
+
+3. When a metal rod is heated, its length increases due to thermal expansion. The expansion is  proportional to both the original length and the temperature increase.
+
+   **Task**: A metal rod starts with a length of 5 meters at 0°C. For every 50°C increase in temperature, its length increases by 0.01 meters. Print the new length of the rod after heating it in intervals of 50°C up to 250°C.
+
+
+
+**`break` and `continue` statements**
+
+1. Create a for loop that calculates and prints the cumulative sum of integers from 1 to 100. If the sum becomes divisible by 500, print a special message and break the loop.
+
+2. Write a for loop that checks numbers from 1 to 100, but only prints a number if it is both odd and divisible by 9. Exit the loop when the number 81 is reached.
 
 
 
@@ -198,7 +196,6 @@ def sum_squares(n:int):
     for i in range(n):
         total += i**2
     return total
-
 print(sum_squares(5))
 ```
 
@@ -318,4 +315,40 @@ def series(n:int)->float:
     return a
 
 ```
+
+3. 
+
+```python
+initial_length = 5  # meters
+expansion_rate = 0.01  # meters per 50°C
+
+for temperature in range(50, 301, 50):
+    new_length = initial_length + (temperature / 50) * expansion_rate
+    print(f"At {temperature}°C, the length of the rod is {new_length:.3f} meters")
+```
+
+
+
+**Break and continue**
+
+1. ```python
+   total = 0
+   for i in range(1, 101):
+       total += i
+       if total % 500 == 0:
+           print("Sum divisible by 500:", total)
+           break
+   ```
+
+   
+
+2. ```python
+   for i in range(1, 101):
+       if i == 81:
+           break
+       if i % 2 != 0 and i % 9 == 0:
+           print(i)
+   ```
+
+   
 
