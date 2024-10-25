@@ -350,5 +350,3 @@ for temperature in range(50, 301, 50):
            print(i)
    ```
 
-   
-
