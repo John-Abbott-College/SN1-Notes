@@ -80,6 +80,7 @@
 - [Practice functions](Practice_questions/05_Practice_Functions)
 - [Practice for-loops](Practice_questions/07_Practice_Loops)
 - [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
+- [Practice for-loops with turtle](Practice_questions/08_Practice_loops_drawing_with_turtle)
 
 
 
