@@ -60,15 +60,15 @@
 
 - [If/Else statement](./Notes/03_Conditions_if-else)
 
-  
+** Data structures **
+- [List](Notes/02_list)
 
 **Additional notes**
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
-
 - [How to use turtle](Notes/01_Turtle_Graphics)
 - [Examples of turtle](Notes/01_Draw_a_simple_house)
-
+- [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
 
 **Practice**
@@ -88,40 +88,31 @@
 **Coming up next on JAC TV...**
 
 
-**Week 9**
-
-- Test
-
-**Week 10**
-
-- [List](Notes/02_list)
-- [List Comprehensions](Notes/04_for_loop_list_comprehension)
-
 **Week 11**
 
 - [Dictionary](Notes/02_Dictionaries)
-
 - [Tuple](Notes/02_Tuples)
 
-**Week 10**
+**Week 12**
 
 - [While loop](./Notes/04_while_loop) ? 
-
 - Matplotlib TODO
 - Graphs TODO
 
-**Week 12**
+**Week 13**
 
 - Reading and Writing to a file TODO 
 - CSV files TODO 
 
-**Week 13**
-
-- Algorithm Design & Implementation
-
 **Week 14**
 
-- Intro to numpy
+- Intro to numpy TODO
+
+
+**Week 15**
+
+- Algorithm Design & Implementation
+- Exam level questions 
 
 **Week 15**
 
