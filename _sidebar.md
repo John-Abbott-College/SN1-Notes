@@ -60,7 +60,7 @@
 
 - [If/Else statement](./Notes/03_Conditions_if-else)
 
-** Data structures **
+**Data structures**
 - [List](Notes/02_list)
 
 **Additional notes**
