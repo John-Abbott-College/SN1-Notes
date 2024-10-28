@@ -47,6 +47,7 @@
 **Math To Python**
 
 - [Accumulator and Series Pattern](Notes/04_accumulator_pattern)
+- [Formula Translator](Notes/from_math_to_python)
 
 **Loops** 
 
