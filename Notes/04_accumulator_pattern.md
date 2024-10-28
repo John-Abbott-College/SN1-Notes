@@ -106,7 +106,7 @@ n: int = int(input("How many numbers do you want to add? "))
 
 total: float = 0 																		# t_0 = 0
 for i in range(n):	 																# loop from i=0 to i=n-1
-  	number: float = float("Enter your number ")			# get a_i
+    number: float = float("Enter your number ")			# get a_i
     total = total + number													# t_i <--- t_{i-1} + a_i
 print (f"Your total is: {total}")
 ```
@@ -141,9 +141,9 @@ n: int = int(input("Which number do you want the factorial for? "))
 
 factorial:int = 1																	# n = 1
 for i in range(n):                                # loop from i=1 to i=n
-  	m = i + 1																			
+    m = i + 1																			
     factorial = m * factorial		    							# m! <-- m (m-1)!
-print (f" )
+print (f"{n}! is {factorial} ")
 ```
 
 
@@ -170,13 +170,13 @@ $\quad F_n = F_{n-1} + F_{n-2}\quad\text{for}\quad n > 1$
 # ================================
 n: int = int(input("Which 'nth' Fibonacci number do you want? "))
 
-a = 1													# f_1
-b = 1												  # f_2
+a = 1                     # f_1
+b = 1                     # f_2
 
 for i in range(n-2):
-  f = a + b										# f_i     <--- f_{i-1} + f_{i-2}
-  a = b												# f_{i-2} <--- f_{i-1}
-  b = f                       # f_{i-1} <--- f
+  f = a + b	              # f_i     <--- f_{i-1} + f_{i-2}
+  a = b	                  # f_{i-2} <--- f_{i-1}
+  b = f                   # f_{i-1} <--- f
   
 print(f"The {n}th element of the fibonacci sequence is {f}")
   
