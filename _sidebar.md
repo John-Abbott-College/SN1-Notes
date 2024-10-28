@@ -40,13 +40,13 @@
 - [Math module Functions](Notes/01_Expressions_Functions_math_module)
 - [Deeper look into Functions](Notes/01_Expressions_Functions)
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
-- [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
+- [Functions - Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
-- [Functions- scopes and loops](Notes/01_Functions_and_scopes)
+- [Functions - scopes and loops](Notes/01_Functions_and_scopes)
 
 **Math To Python**
 
-- [Accumulator and Series Pattern](https://john-abbott-college.github.io/SN1-Notes/Notes/04_accumulator_pattern.pdf))
+- [Accumulator and Series Pattern](Notes/04_accumulator_pattern)
 
 **Loops** 
 
