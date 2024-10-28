@@ -104,10 +104,10 @@ Because we don't care about the intermediate values, ($t_{i-1}$) we don't have t
 ```python
 n: int = int(input("How many numbers do you want to add? "))
 
-total: float = 0 																		# t_0 = 0
-for i in range(n):	 																# loop from i=0 to i=n-1
-    number: float = float("Enter your number ")			# get a_i
-    total = total + number													# t_i <--- t_{i-1} + a_i
+total: float = 0                                     # t_0 = 0
+for i in range(n):                                   # loop from i=0 to i=n-1
+    number: float = float("Enter your number ")	     # get a_i
+    total = total + number                           # t_i <--- t_{i-1} + a_i
 print (f"Your total is: {total}")
 ```
 
