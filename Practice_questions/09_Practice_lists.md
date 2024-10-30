@@ -116,6 +116,20 @@ $$
 
    - Calculate the average on week days over two weeks.
 
+4. Consider the following students grades:
+
+   ```python
+   grades = [78,86,97,78,98,68,65,67,86,75,89,69,71,82,93,94]
+   ```
+
+   Student 0, 4, 12,14 have dropped the course.
+
+   - Calculate the group average excluding the students who dropped the course
+
+   - Create a function which calculates the same average for any list of `grades` and any list of grades to exclude from the average`ignore_indexes`
+
+     
+
 #### Level 3 
 
 1. Paired Lists: You have two lists, one with voltage readings, and one with current readings taken during a physics lab.
@@ -294,6 +308,47 @@ temperatures_week_days =  temperatures[1:6] + temperatures[8:13]
 average_week_days = sum(temperatures_week_days) / len(temperatures_week_days)
 print(f"The average temperature on week days for the past two weeks was {average_week_days:.2f}°C")
 ```
+
+
+
+4. 
+
+   ```python
+   # Using indices
+   def average(grades:list[float], ignore_indexes: list[int]):
+       total = 0
+       count = 0
+       for i in range(len(grades)):
+           if i not in ignore_indexes:
+               total += grades[i]
+               count += 1
+           else:
+               # just to validate 
+               print(f"Grade {i}: Value: {grades[i]} was ignored")
+       return total/count
+       
+   ```
+
+   
+
+   ```python
+   # Using enumerate and another list
+   def average(grades:list[float], ignore_indexes: list[int]):
+       filtered_grades = []
+       for index, grade in enumerate(grades):
+           if index not in ignore_indexes:
+               filtered_grades.append(grade)
+           else:
+               # just to validate 
+               print(f"Grade {i} Value: {grade}  was ignored")
+       return sum(filtered_grades)/len(filtered_grades)
+   ```
+
+
+
+​	
+
+
 
 
 
