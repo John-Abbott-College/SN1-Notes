@@ -441,11 +441,11 @@ plt.show()
 
 **Result:**
 
-<img src="images_exos/plot_sin.png" height=400/>
+<img src="Practice_questions/images_exos/plot_sin.png" height=400/>
 
 - The plot is not smooth because we are plotting with increments of $$\Delta x$$ = 0.5, we should probably reduce the resolution to smaller increments to get a nicer looking plot, for example $$\Delta x = 0.1$$
 
-<img src="images_exos/plot_sin2.png" height=400/>
+<img src="Practice_questions/images_exos/plot_sin2.png" height=400/>
 
 > **Sampling of a math function:**
 >
