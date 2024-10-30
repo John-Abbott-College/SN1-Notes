@@ -61,6 +61,8 @@
    **Part 2**
    
    Create a list with the following values (1, 3, 5)
+   
+   
 
 
 
@@ -72,6 +74,25 @@
 
 
 
+#### Level 3 -  Paired Lists
+
+1. You have two lists, one with voltage readings, and one with current readings taken during a physics lab.
+
+   ```python
+   measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
+                       521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
+   measured_current = [3.944899134858856, 1.5777028976680696, 2.7491943548717384, 3.670317402603832, 5.83579244326929,
+                       3.015612264536842, 7.93966836058325, 3.033586150442605, 8.267700560322258, 6.856525379569174]
+   ```
+
+   Create a function that returns the calculated resistance, by:
+
+   * Loop over both lists, and calculate the resistance (R = V/I) for each reading.
+   * Average the resistance results to get a reasonable value for R
+
+   Calculate the measured resistance for this data
+
+   
 
 
 ## Answers
@@ -139,9 +160,67 @@ a = [1, 3, 5]
 
 #### Level 2 - Applying list functions
 
+1.
+
 ```python
 a=['sandy', 'bob', 'bette', 'sally', 'rachel']
 for name in sorted(a):
   print(name)
+```
+
+
+
+#### Level 3 - Paired Lists
+
+1. (Note: Resistance is approx 100)
+
+```python
+# Using indices
+
+measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
+                    521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
+measured_current = [3.944899134858856, 1.5777028976680696, 2.7491943548717384, 3.670317402603832, 5.83579244326929,
+                    3.015612264536842, 7.93966836058325, 3.033586150442605, 8.267700560322258, 6.856525379569174]
+
+num_measurements = min( len(measured_voltage), len(measured_current) )
+
+def calculate_resistance(voltages,currents):
+    resistances = []
+    for i in range(num_measurements):
+        resistances.append(voltages[i]/currents[i])
+        
+    resistance = sum(resistances)/num_measurements
+    return resistance
+
+def main():
+    r = calculate_resistance(measured_voltage, measured_current)
+    print(f"The average measured resistance is: {r}")
+main()
+    
+```
+
+```python
+# Using zip
+
+measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
+                    521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
+measured_current = [3.944899134858856, 1.5777028976680696, 2.7491943548717384, 3.670317402603832, 5.83579244326929,
+                    3.015612264536842, 7.93966836058325, 3.033586150442605, 8.267700560322258, 6.856525379569174]
+
+num_measurements = min( len(measured_voltage), len(measured_current) )
+
+def calculate_resistance(voltages,currents):
+    resistances = []
+    for voltage, current in zip(voltages,currents):
+        resistances.append(voltage/current)
+        
+     resistance = sum(resistances)/num_measurements
+     return resistance
+
+def main():
+    r = calculate_resistance(measured_voltage, measured_current)
+    print(f"The average measured resistance is: {r}")
+main()
+    
 ```
 
