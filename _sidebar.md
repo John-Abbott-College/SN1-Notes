@@ -40,13 +40,14 @@
 - [Math module Functions](Notes/01_Expressions_Functions_math_module)
 - [Deeper look into Functions](Notes/01_Expressions_Functions)
 - [User defined functions](Notes/01_Expressions_Functions_user_defined)
-- [Functions -Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
+- [Functions - Type Hinting](Notes/01_Expressions_Functions_Type_Hint)
 - [Functions - Another Look](https://john-abbott-college.github.io/SN1-Notes/Notes/01_Expressions_Functions_Cartoon.pdf)
-- [Functions- scopes and loops](Notes/01_Functions_and_scopes)
+- [Functions - scopes and loops](Notes/01_Functions_and_scopes)
 
 **Math To Python**
 
-- [Accumulator and Series Pattern](https://john-abbott-college.github.io/SN1-Notes/Notes/04_accumulator_pattern.pdf))
+- [Accumulator and Series Pattern](Notes/04_accumulator_pattern)
+- [Formula Translator](Notes/from_math_to_python)
 
 **Loops** 
 
@@ -60,15 +61,15 @@
 
 - [If/Else statement](./Notes/03_Conditions_if-else)
 
-  
+**Data structures**
+- [List](Notes/02_list)
 
 **Additional notes**
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
-
 - [How to use turtle](Notes/01_Turtle_Graphics)
 - [Examples of turtle](Notes/01_Draw_a_simple_house)
-
+- [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
 
 **Practice**
@@ -80,6 +81,7 @@
 - [Practice functions](Practice_questions/05_Practice_Functions)
 - [Practice for-loops](Practice_questions/07_Practice_Loops)
 - [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
+- [Practice for-loops with turtle](Practice_questions/08_Practice_loops_drawing_with_turtle)
 
 
 
@@ -88,40 +90,31 @@
 **Coming up next on JAC TV...**
 
 
-**Week 9**
-
-- Test
-
-**Week 10**
-
-- [List](Notes/02_list)
-- [List Comprehensions](Notes/04_for_loop_list_comprehension)
-
 **Week 11**
 
 - [Dictionary](Notes/02_Dictionaries)
-
 - [Tuple](Notes/02_Tuples)
 
-**Week 10**
+**Week 12**
 
 - [While loop](./Notes/04_while_loop) ? 
-
 - Matplotlib TODO
 - Graphs TODO
 
-**Week 12**
+**Week 13**
 
 - Reading and Writing to a file TODO 
 - CSV files TODO 
 
-**Week 13**
-
-- Algorithm Design & Implementation
-
 **Week 14**
 
-- Intro to numpy
+- Intro to numpy TODO
+
+
+**Week 15**
+
+- Algorithm Design & Implementation
+- Exam level questions 
 
 **Week 15**
 

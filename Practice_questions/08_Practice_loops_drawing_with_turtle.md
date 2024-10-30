@@ -54,7 +54,7 @@ draw_square(100)
 
 2. Create a function called `draw_concentric_polygones()` which takes as input parameter the `num_sides`, the count of polygons to draw`num_polygones` . It draws polygons with `num_sides` that start with a side length of `0`, then grows by 1 each iteration (side: 1, 2, 3, ..., `num_polygones`-1). As shown below:
 
-   <img src="images_exos/spiral.png" height=400/>
+   <img src="Practice_questions/images_exos/spiral.png" height=400/>
 
    3. Create a function called `draw_star()` which takes the `vertexes` which draws a regular star. Use the following angle: `180 - 180/vertexes` to turn the pen. Note the function will only draw complete stars if the `vertexes` are odd:
 
@@ -68,9 +68,9 @@ draw_square(100)
       
 
       <div class="in-line"> 
-          <img src="images_exos/star_5.png" alt="Star 5" style="width:40">  
-          <img src="images_exos/star_7.png" alt="Star 7" style="width:40">  
-          <img src="images_exos/star_9.png" alt="Star 9" style="width:40"> 
+          <img src="Practice_questions/images_exos/star_5.png" alt="Star 5" style="width:40">  
+          <img src="Practice_questions/images_exos/star_7.png" alt="Star 7" style="width:40">  
+          <img src="Practice_questions/images_exos/star_9.png" alt="Star 9" style="width:40"> 
       </div>
    
    4. Start four individual turtles in the four corners of the grid:
