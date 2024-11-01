@@ -83,7 +83,7 @@
 - [Practice conditional statements](Practice_questions/06_Practice_Conditional_statements)
 - [Practice for-loops with turtle](Practice_questions/08_Practice_loops_drawing_with_turtle)
 
-
+- [Practice lists](Practice_questions/09_Practice_lists)
 
 <!--
 
@@ -97,9 +97,13 @@
 
 **Week 12**
 
-- [While loop](./Notes/04_while_loop) ? 
-- Matplotlib TODO
 - Graphs TODO
+
+- [While loop](./Notes/04_while_loop) ? 
+
+- Matplotlib TODO
+
+  
 
 **Week 13**
 
