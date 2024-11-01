@@ -92,16 +92,16 @@
 
 **Week 11**
 
-- [Dictionary](Notes/02_Dictionaries)
-- [Tuple](Notes/02_Tuples)
+- [Dictionary](Notes/02_Dictionaries)?
+- [Tuple](Notes/02_Tuples) ?
 
 **Week 12**
 
+- [Installing Matplotlib and Numpy](Notes/matplotlib_and_numpy)
+
 - Graphs TODO
 
-- [While loop](./Notes/04_while_loop) ? 
-
-- Matplotlib TODO
+- [While loop](./Notes/04_while_loop) ?
 
   
 
