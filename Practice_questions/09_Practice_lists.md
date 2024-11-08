@@ -227,10 +227,10 @@ for element in a:
 ```python
 a=["hello ", 3, "world, ", 6, "I ", 21,"am ",18,"fine", -2]
 
-# part 1
+"""part 1"""
 print (a[0], a[2], a[4], a[6], a[8])
 
-# Part 2
+"""Part 2"""
 for index in range(1,len(a),2):
   print(a[index])
 ```
@@ -252,7 +252,7 @@ print(total)
 6. 
 
 ```python
-# part 1
+""" part 1"""
 
 grades = []
 n: int = int( input("How many grades do you want to enter? "))
@@ -260,7 +260,7 @@ for i in range(n):
   grade: float = float( input(f"Enter grade for student {i+1}: "))
   grades.append(grade)
   
-# part 2
+""" part 2 """
 a = [1, 3, 5]
 ```
 
@@ -334,7 +334,7 @@ print(f"The average temperature on week days for the past two weeks was {average
 4. 
 
    ```python
-   # Using indices
+   """Using indices """
    def average(grades:list[float], ignore_indexes: list[int]):
        total = 0
        count = 0
@@ -352,7 +352,7 @@ print(f"The average temperature on week days for the past two weeks was {average
    
 
    ```python
-   # Using enumerate and another list
+   """Using enumerate and another list"""
    def average(grades:list[float], ignore_indexes: list[int]):
        filtered_grades = []
        for index, grade in enumerate(grades):
@@ -377,7 +377,7 @@ print(f"The average temperature on week days for the past two weeks was {average
 1. (Note: Resistance is approx 100)
 
 ```python
-# Using indices
+"""Using indices"""
 
 measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
                     521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
@@ -402,7 +402,7 @@ main()
 ```
 
 ```python
-# Using zip
+""" Using zip"""
 
 measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
                     521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
@@ -434,10 +434,10 @@ main()
 import math
 
 
-# Creating the x values
+""" Creating the x values"""
 time_values = [i/2 for i in range(0, 401)]
 
-# Creating the y values
+"""Creating the y values"""
 sin_values = [math.sinx(t) for t in time_values]
 
 ```
@@ -447,15 +447,15 @@ sin_values = [math.sinx(t) for t in time_values]
 ```python
 from matplotlib import pyplot as plt
 
-# Displaying
+""" Displaying"""
 plt.plot(time_values, sin_values)
 
-# Adding graph title and axis title
+"""Adding graph title and axis title"""
 plt.xlabel('time (s)')
 plt.ylabel('y')
 plt.title('sin(x)')
 
-# displaying the graph
+""" displaying the graph"""
 plt.show()
 ```
 
@@ -511,7 +511,7 @@ def print_bonus(candidate1_list: list[int], candidate2_list: list[int]):
 
     wins1 = 0
     wins2 = 0
-    # Method 1
+    # Method 1 (you can also use zip)
     for i in range(len(candidate1_list)):
         if candidate1_list[i] > candidate2_list[i]:
             print(f"Won by 🚩 in District {i+1}")
