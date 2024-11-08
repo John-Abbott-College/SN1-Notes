@@ -130,6 +130,26 @@ $$
 
      
 
+#### Elections Helper
+
+[Solution](#Elections Helper solution)
+
+If you've been following the US elections lately, you've probably realize that its a two-party electoral system. The seat of a district is awarded to the candidate with the most votes in that district. The winner of the elections wins the most seats, that means more than half (because only two parties).
+
+In a `main()` function:
+
+- asks the user how many electoral districts there are (num_district)
+
+- for each district, asks the user to enter the votes for candidate1 and candidate2
+
+- display the min number of votes, max number of votes, average number of votes for each candidate
+
+- **Bonus:** The winner won a majority of seats (greater than `num_districts` /2 ). Be careful to verify the two lists have the same length. 
+
+- **Bonus2:** Use a list comprehension i.e. `[x for x in sequence ]` to create two more lists with the percentage of popular vote each candidate got in each district. 
+
+  
+
 #### Level 3 
 
 1. Paired Lists: You have two lists, one with voltage readings, and one with current readings taken during a physics lab.
@@ -450,4 +470,112 @@ plt.show()
 > **Sampling of a math function:**
 >
 > Graphing a function relates to a concept called "Sampling"  which is to take a continuous function such as sin() (has infinite values) and reducing it to a discrete function (fixed number of values, in this case a list of 100 points). The sampling frequency is the number of samples taken per unit of x. In the first graph, we took 2 samples per second. Whereas in the second graph, we increased our sampling to 5 samples per second.
+
+
+
+
+
+#### Elections Helper solution
+
+```python
+"""
+Election helper
+- asks the user how many electoral districts there are (num_district)
+- for each district, asks the user to enter the votes for candidate1 and candidate2
+- save the vote count of each candidate in a list
+- display the min number of votes, max number of votes, average number of votes for each candidate
+- Bonus: who won the election?
+     * The winner won a majority of seats (greater than num_districts /2 )
+
+     * Use a list comprehension (ie [x for x in sequence]), to create the percentage of
+     popular vote each candidate got in each district
+"""
+
+
+
+def print_vote_stats(votes_list: list[int]):
+    print("Min votes", min(votes_list) ,"votes")
+    print("Min votes", max(votes_list) ,"votes")
+    avg1= sum(votes_list)/len(votes_list)
+    print("Average votes", avg1 ,"votes")
+
+def print_bonus(candidate1_list: list[int], candidate2_list: list[int]):
+    """Establishes the winner of an electoral campaign
+    Note: This assumes a bi-party electoral system"""
+    if len(candidate1_list) != len(candidate2_list):
+        print("There is a problem with the two lists, they aren't the same length!")
+        return  #Exists the function
+    # Both lists are the same length which corresponds to num_districts
+    num_districts = len(candidate1_list)
+
+
+    wins1 = 0
+    wins2 = 0
+    # Method 1
+    for i in range(len(candidate1_list)):
+        if candidate1_list[i] > candidate2_list[i]:
+            print(f"Won by 🚩 in District {i+1}")
+            wins1 += 1
+        elif candidate2_list[i] > candidate1_list[i]:
+            wins2 += 1
+            print(f"Won by 🏳️ in District {i+1}")
+        else:
+            print(f"Draw in District {i+1}")
+
+    """
+    In the case of the US elections:
+    Because it is a bi-party electoral system, to win the presidential elections, a candidate must win more 
+    than half the electoral districts seats. 
+    If neither candidate gets a majority of the 538 electoral votes, the election for President is decided in the 
+    House of Representatives, with each state delegation having one vote. A majority of states (26) is needed to win. 
+    Senators would elect the Vice-President, with each Senator having a vote. A majority of Senators (51) is needed 
+    to win.
+    """
+    if wins1 > num_districts //2 + 1 : # we can't have half of district
+        print("🚩🚩🚩🚩Candidate 1 won the elections! 🚩🚩🚩🚩")
+    elif wins2 > num_districts//2 +1 :
+        print("🏳️🏳️🏳️🏳️ Candidate 2 won the elections! 🏳️🏳️🏳️🏳️")
+    else:
+        print("😱😱😱 No winner! Caos time!!! 😱😱😱")
+        print("Actually, the election for President now have to be decided in the House of Representatives by the delegates \nof each state")
+
+
+
+
+def main():
+    print("Welcome to the election vote counter program 🗳️")
+
+    num_districts = int(input("Enter the number of districts "))
+    votes_list1 = []
+    votes_list2 = []
+    for i in range(num_districts):
+        print(f"District {i+1}")
+        votes1 = int(input("Enter votes for candidate 1: "))
+        votes_list1.append(votes1)
+
+        votes2 = int(input("Enter votes for the candidate 2: "))
+        votes_list2.append(votes2)
+
+        # This would be a great place to do the bonus because we can easily compare
+        # votes1 and votes2, but for the sake of practicing for the test, we'll do it at a later step XD=
+
+    print("Candidate 🚩 1 stats: ")
+    print_vote_stats(votes_list1)  # Note: Creating a function is useful as you can re-use this
+    print("---------------------")
+
+    print("Candidate 🏳️ 2 stats: ") # for a lack of blue flags, I used white XD
+    print_vote_stats(votes_list2)
+    print("---------------------")
+
+    print_bonus(votes_list1, votes_list2)
+
+
+    print()
+    print(f"Yeah... typing {num_districts} districts manually 🫤 was kind of long")
+    print("Stay tuned for the next part...reading files 😎")
+    print()
+
+if __name__ == "__main__":
+    main()
+```
 
