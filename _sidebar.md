@@ -62,6 +62,7 @@
 - [If/Else statement](./Notes/03_Conditions_if-else)
 
 **Data structures**
+
 - [List](Notes/02_list)
 
 **Additional notes**
@@ -71,6 +72,9 @@
 - [Examples of turtle](Notes/01_Draw_a_simple_house)
 - [List Comprehensions](Notes/04_for_loop_list_comprehension)
 
+**Graphing and scientific modules**
+
+- [Installing Matplotlib and Numpy](Notes/matplotlib_and_numpy)
 
 **Practice**
 
@@ -85,6 +89,8 @@
 
 - [Practice lists](Practice_questions/09_Practice_lists)
 
+
+
 <!--
 
 **Coming up next on JAC TV...**
@@ -96,8 +102,6 @@
 - [Tuple](Notes/02_Tuples) ?
 
 **Week 12**
-
-- [Installing Matplotlib and Numpy](Notes/matplotlib_and_numpy)
 
 - Graphs TODO
 
