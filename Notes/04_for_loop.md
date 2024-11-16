@@ -22,6 +22,161 @@ Here are some key elements to understand:
 
 
 
+## Generic `for` loop
+
+A `for` loop can be generalized to something that looks like:
+
+> Note: Using `sequence` in the following instructions is not exactly correct, but it is reasonable to think of sequences for now.
+
+`for `*`variable`*` in `*`sequence`*
+
+Where 
+
+* `variable` is just the name of a variable.  It can be any valid variable name
+
+* `sequence` is something that can be looped over 
+
+  *Sounds like a circular argument, I know, but its the best we can do at this level.*
+
+
+
+### Examples of `sequence`
+
+Think of sequences a a list of things to be processed.  Like a stack of papers to grade, or a to-do list, or a series of numbers to process.
+
+#### `range()`:
+
+When within a `for` loop, 
+
+* `range(n)` will provide the sequence of numbers  
+
+  $$0, 1, 2 ,... n-1$$
+
+* `range(start, end)` will provide the sequence of numbers 
+
+  $$\text{start}, \text{start}+1, \text{start} + 2 ,... \text{end}-1$$
+
+* `range(start, end, step)` will provide the sequence of numbers  
+
+  $$\text{start}, \text{start}+\text{step}, \text{start} + 2*\text{step} ,... \text{end}-1$$
+
+#### `list`
+
+When within a `for` loop, 
+
+* `list_variable` will provide the contents of the list, one element at a time
+
+#### `file`
+
+When within a `for` loop, 
+
+* `file` will provide the contents of the file, one line at a time
+
+#### `string`
+
+When within a `for` loop, 
+
+* `string_variable` will provide the individual characters of the string, one character at a time
+
+
+
+## How does a for-loop work?
+
+Given the following code
+
+```python
+for variable in sequence:
+  print(variable)
+```
+
+As the code starts, the variable will be set to the very 1st *thing* in the sequence (whatever that thing is)
+
+When the code has finished executing everything in the code block (indicated by indentations), then 
+
+* the code goes back to the beginning of the for loop, and
+* *variable* will be set the the *next* thing in the sequence
+
+This will continue until there are no *things* left in the sequence.
+
+**Example: for-loop over a number range**
+
+```python
+for i in range(3):
+  print("I am at index ", i)
+print ("all done")
+```
+
+Code trace:
+
+| code line # | i    | output printed to console | comment                                                      |
+| ----------- | ---- | ------------------------- | ------------------------------------------------------------ |
+| 1           | 0    |                           | `i` is set to 1st number in the range sequence (**0**, 1, 2) |
+| 2           |      | I am at index 0           |                                                              |
+| 1           | 1    |                           | `i` is set to 2nd number in the range sequence (<font color="#939393">0,</font> **1**, 2) |
+| 2           |      | I am at index 1           |                                                              |
+| 1           | 2    |                           | `i` is set to 3rd number in the range sequence (<font color="#939393">0, 1,</font> **2**) |
+| 2           |      | I am at index 2           |                                                              |
+| 1           |      |                           | There are no numbers in the range sequence, so for loop quits |
+| 3           |      | all done                  | No longer in the for loop                                    |
+
+
+
+
+
+**Example: for-loop over a list**
+
+```python
+fib_list = [1, 1, 2, 3, 5 ]
+for number in fib_list:
+  print("The next fibanocci number is ", i)
+print ("all done")
+```
+
+Code trace:
+
+| code line # | number | output printed to console      | comment                                                      |
+| ----------- | ------ | ------------------------------ | ------------------------------------------------------------ |
+| 1           | 1      |                                | `number` is set to 1st number in the fib_list  [**1**, 1, 2, 3, 5 ] |
+| 2           |        | The next fibanocci number is 1 |                                                              |
+| 1           | 1      |                                | `number` is set to 2nd number in the fib_list  [<font color="#939393">1</font>, **1**, 2, 3, 5 ] |
+| 2           |        | The next fibanocci number is 1 |                                                              |
+| 1           | 2      |                                | `number` is set to 3rd number in the fib_list  [<font color="#939393">1, 1,</font> **2**, 3, 5 ] |
+| 2           |        | The next fibanocci number is 2 |                                                              |
+| 1           | 3      |                                | `number` is set to 4th number in the fib_list. [<font color="#939393">1, 1, 2,</font> **3**, 5 ] |
+| 2           |        | The next fibanocci number is 3 |                                                              |
+| 1           | 5      |                                | `number` is set to 5th number in the fib_list.  [<font color="#939393">1, 1, 2, 3,</font> **5** ] |
+| 2           |        | The next fibanocci number is 5 |                                                              |
+| 1           |        |                                | There are no numbers left in the fib_list, so quit for-loop  |
+| 3           |        | all done                       | No longer in the for loop                                    |
+
+
+
+**Example: for-loop over a string**
+
+```python
+name = "sandy"
+for character in name:
+  print("Character:",)
+print ("all done")
+```
+
+Code trace:
+
+| code line # | Character | output printed to console | comment                                                      |
+| ----------- | --------- | ------------------------- | ------------------------------------------------------------ |
+| 1           | s         |                           | `character` is set to 1st character in name  "**s**andy"     |
+| 2           |           | Character: s              |                                                              |
+| 1           | a         |                           | `character` is set to 2nd character in name  "<font color="#939393">s</font>**a**ndy" |
+| 2           |           | Character: s              |                                                              |
+| 1           | n         |                           | `character` is set to 3rd character in name   <font color="#939393">sa</font>**n**dy" |
+| 2           |           | Character: s              |                                                              |
+| 1           | d         |                           | `character` is set to 4th character in name   <font color="#939393">san</font>**d**y" |
+| 2           |           | Character: s              |                                                              |
+| 1           | y         |                           | `character` is set to 5th character in name   <font color="#939393">sand</font>**y**" |
+| 2           |           | Character: s              |                                                              |
+| 1           |           |                           | There are no more characters in name, so quit for-loop       |
+| 3           |           | all done                  | No longer in the for loop                                    |
+
 
 
 ##  The range() function
