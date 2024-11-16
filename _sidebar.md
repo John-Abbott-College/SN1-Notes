@@ -65,6 +65,12 @@
 
 - [List](Notes/02_list)
 
+**Files**
+
+- [Reading/Writing Files](Notes/05-reading_files.md)
+  - Includes notes on CSV files
+
+
 **Additional notes**
 
 - [F string formatting](Notes/01_Expressions_Literals_f_strings)
@@ -113,6 +119,7 @@
 
 - Reading and Writing to a file TODO 
 - CSV files TODO 
+- Done
 
 **Week 14**
 
