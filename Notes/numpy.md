@@ -1,3 +1,9 @@
+# Intro to numpy
+
+Numpy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called numpy arrays.
+
+
+
 ## Importing `numpy`
 
 Import `numpy`. You may use the alias `np`
@@ -8,15 +14,84 @@ import numpy as np
 
 
 
-## Numpy array
+## Numpy arrays
 
-Coming soon.
+Numpy arrays are structures of data similar to lists. 
+
+Operations of numpy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++. 
 
 
 
-## Arithmetic operations 
+To create a `numpy` array from a Python list, simply use the following:
 
-Coming soon. 
+```python
+my_list = [1,2,4,5,7,8]
+my_array = np.array(my_list)
+
+```
+
+Alternatively, an array can be created in one line as such: 
+
+```python
+my_array = np.array([1,2,4,5,7,8])
+
+print(my_array)
+```
+
+Arrays mimic mathematical vectors and matrices
+
+**Example :** Force vector
+
+ Let two force vectors $$\vec{F1}$$ and $$\vec{F2}$$ represented as column vectors with their respective x and y force components (in Newtons N)
+$$
+\vec{F_1}  = \begin{bmatrix}
+           1  \\
+           3  \\
+         \end{bmatrix}
+$$
+
+$$
+\vec{F_2}  = \begin{bmatrix}
+   2 \\
+   3 \\
+ \end{bmatrix}
+$$
+
+The total force is:
+$$
+\vec{F_{tot}} = \vec{F_1} + \vec{F_2}
+= \begin{bmatrix}
+   1 + 2 \\
+   3 + 3 \\
+ \end{bmatrix} 
+ = \begin{bmatrix}
+   3 \\
+   6 \\
+ \end{bmatrix}
+$$
+The two forces can be represented using numpy arrays and the two arrays can be added using a `+`
+
+```python
+force_1 = np.array([1,3])
+force_2 = np.array([2,3])
+
+force_total = force_1 + force_2
+print(force_total)
+```
+
+
+
+**Result:**  [3 6] 
+
+- The x and y components of each force were added independently.
+
+- Had we done this with a simple lists, we would get `[1,3,2,3]`
+
+
+
+4. This [tutorial](https://www.programiz.com/python-programming/numpy/basic-array-operations) shows you all the arithmetic operations that are possible with numpy arrays. 
+
+
 
 
 
