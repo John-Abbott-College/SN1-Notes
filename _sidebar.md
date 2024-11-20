@@ -81,6 +81,7 @@
 **Graphing and scientific modules**
 
 - [Installing Matplotlib and Numpy](Notes/matplotlib_and_numpy)
+- [Intro to Numpy](Notes/numpy)
 
 **Practice**
 
