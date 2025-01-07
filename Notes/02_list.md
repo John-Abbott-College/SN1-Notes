@@ -179,6 +179,89 @@ The `append()` method in Python adds an element to the end of a list, while the 
 
 Pay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.
 
+## Looping through a list 
+
+Looping through a list involves visiting each item in the list one by one to perform an operation on it.  The`for` loop is the ideal tool to repeat a statement while iterating over whatever is in the list. The following 
+
+**Example** 
+
+```python
+my_list = ['a','b','c','d','e','f']
+for item in my_list:
+    print(item)
+```
+
+Alternatively, you may use a `for` in combination with`range()` to traverse each index of the list, but this strategy is  less efficient as it needs to call `len()` and needs to find the range of indices to traverse:
+
+```python
+for i in range(len(my_list)):
+	print(my_list[i])
+```
+
+The above method though is useful if you need to keep track of the iteration number`i`. That said, python offers the built-in function [ `enumerate()`](https://www.geeksforgeeks.org/enumerate-in-python/) to return both the `index` and the `item` without having  to use `range()` and `len()`.
+
+
+
+## Looping through multiple paired lists
+
+Consider the following two lists that represent various travel destinations and their associated ticket prices.
+
+```python
+destinations = ["Tokyo","Muscat", "Cancun", "Paris"]
+ticket_prices = [2769.00, 2680.00, 478.00, 1347.00]
+
+```
+
+What if we would like to display each destination and its ticket price as such:
+
+```
+Tokyo  2769.00$
+Muscat 2680.00$
+Cancun  478.00$
+Paris  1347.00$
+```
+
+An initial strategy would be to iterate over both lists using a `for` loop iterating over the indices with`range()`, assuming that both lists will always have the same length, such as :
+
+```python
+for i in range(len(destinations)):
+	destination = destinations[i]
+	price = ticket_prices[i]
+	print(destination, f"{price}$")
+```
+
+## **Zip()**
+
+The `zip()` function returns a single combined "sequence"  returning the pair of `destination` and its`price` :
+
+```python
+for price, destination in zip(ticket_prices,destinations):
+	print(destination, f"{price}$")
+```
+
+> Sidenote: You can actually "see" the resulting of zipping is by converting it into a list and printing it:
+>
+> ```
+> zip_result = zip(ticket_prices,destinations)
+> print(list(zip_result))
+> ```
+>
+> **Output:** It's a list of pairs of values : 
+>
+> [(2769.0, 'Tokyo'), (2680.0, 'Muscat'), (478.0, 'Cancun'), (1347.0, 'Paris')]
+
+
+
+You can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:
+
+```python
+durations = [7,8,3,5]
+for price, destination, duration in zip(ticket_prices, destinations, durations):
+	print(destination, f"{price}$", f"{duration} days")
+```
+
+
+
 ## Lists in action
 
 Imagine you need to rearrange the elements of a list by reversing their order: swapping the first with the fifth and the second with the fourth, while leaving the third element untouched.
