@@ -14,7 +14,7 @@ Imagine you have a turtle with a pen attached to its tail.  This turtle is sitti
 
 <img src="Images/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
 
-<img src="Images/turtle_pen_up.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
+<img src="Images/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
 
 * You can tell the turtle to put its pen up or down
 * You can modify the direction that the turtle is facing (turn right or left)
