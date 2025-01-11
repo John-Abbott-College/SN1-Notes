@@ -1,12 +1,65 @@
-### Python Turtle Graphics: How to Draw a Box
+### Python Turtle Graphics
 
 The `turtle` module in Python is an excellent tool for introducing programming through graphics. It allows you to control a "turtle" that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!
 
 In this tutorial, you'll learn the basics of using `turtle` in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.
 
+See the [official documentation](https://docs.python.org/3/library/turtle.html) for more information.
+
+----
+
+### Overview
+
+Imagine you have a turtle with a pen attached to its tail.  This turtle is sitting on a piece of paper.  
+
+<img src="../Images/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
+
+<img src="../Images/turtle_pen_up.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
+
+* You can tell the turtle to put its pen up or down
+* You can modify the direction that the turtle is facing (turn right or left)
+* You can tell the turtle to move forward (or backwards)
+* You can tell the turtle to go to specific locations
+
+With these simple commands, we can do amazing thing!  However, this is not all we can do.  See the [official documentation](https://docs.python.org/3/library/turtle.html) for more information.
+
+
+------
+### First turtle program
+
+```python
+import turtle
+turtle.forward(100)
+turtle.right(30)
+turtle.forward(50)
+turtle.mainloop()
+```
+
+#### Analysis
+
+**Line 1**
+
+​	To use the turtle program, you need to import the library
+
+**Line 2, Line 4**
+
+​	Tell to the turtle to move forward, in whatever direction it is currently facing
+
+**Line 3**
+
+​	Tell the turtle to turn right by 30 degrees
+
+**Line 5 ** - Important
+
+​	This just pauses the turtle program, so that you can see what the turtle has drawn.  Without this, the program just closes, and you can't see your wonderful art.  Do NOT add any new drawing commands after this, because you won't see them :(
+
 ------
 
-### Step 1: Import the Turtle Module
+
+
+## Using Turtle in a Python Program
+
+### Import the Turtle Module
 
 First, ensure that you have Python installed. The `turtle` module comes with Python, so you don’t need to install anything extra.
 
@@ -20,7 +73,158 @@ This line imports the turtle module so you can use its functions in your code.
 
 ------
 
-### Step 2: Set Up the Screen
+### To draw or not to draw?
+
+To draw, tell the turtle to put the pen down.  If you want to move the turtle without drawing, tell the turtle to put its tail up.
+
+- **`down()`**: Pull the pen down – drawing when moving.
+
+- **`up()`**: Pull the pen up – no drawing when moving.
+
+  
+
+**Example:**
+
+<img src="../Images/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;" />  Note that the "arrow" in the image is actually just the default image of the turtle.
+
+```python
+# Draw a dashed line
+import turtle
+turtle.forward(10)
+turtle.up()
+turtle.forward(10)
+turtle.down()
+turtle.forward(10)
+# ... repeat as necessary
+turtle.mainloop()
+```
+
+
+
+------
+
+### Move the Turtle
+
+You can move the turtle forward and backward, go to a specific location, and turn it to the left or right. Here are the basic movement commands:
+
+These commands let you control how the turtle moves around the screen.
+
+#### Move Forward and Backward:
+
+- **`forward(distance)`**: Moves the turtle forward by the specified distance.
+
+- **`backward(distance)`**: Moves the turtle backward by the specified distance.
+
+  
+
+**Example:**
+
+```python
+turtle.forward(100)  # Moves turtle forward by 100 units
+turtle.backward(50)  # Moves turtle backward by 50 units
+```
+
+#### Turn the Turtle:
+
+- **`right(angle)`**: Turns the turtle clockwise by the specified angle (in degrees!).
+- **`left(angle)`**: Turns the turtle counterclockwise by the specified angle (in degrees!).
+
+**Example:**
+
+```python
+turtle.right(90)  # Turns the turtle 90 degrees to the right
+turtle.left(45)   # Turns the turtle 45 degrees to the left
+```
+
+#### Go to a specify x,y coordinate:
+
+- **`goto(x,y)`**: Go to the specific location on the screen.
+
+**Example:**
+
+<img src="../Images/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;" />
+
+```python
+import turtle
+turtle.up()
+turtle.goto(-50,50)
+turtle.down()
+turtle.goto(50,-50)
+turtle.up()
+turtle.goto(50,50)
+turtle.down()
+turtle.goto(-50,-50)
+turtle.mainloop()
+```
+
+
+
+
+------
+
+### Turtle Speed 
+
+You can control how fast the turtle moves using the `speed()` function. This step is optional, but it helps you see how the turtle is drawing.
+
+```python
+turtle.speed(1)
+```
+
+- “fastest”: 0
+- “fast”: 10
+- “normal”: 6
+- “slow”: 3
+- “slowest”: 1
+
+------
+
+### Customizing the Turtle
+
+You can make your turtle more fun by changing its shape and color.
+
+#### Change Turtle Shape:
+
+The turtle’s appearance can be changed using the `shape()` function. Available shapes include `"turtle"`, `"arrow"`, `"circle"`, and more.
+
+```python
+turtle.shape("turtle")  # Sets the turtle to look like a turtle
+```
+
+-----
+
+### Colours and Backgrounds
+
+
+
+#### Change Pen Color and Width:
+
+The turtle draws lines as it moves, and you can customize the line’s color and thickness.
+
+```python
+turtle.pencolor("red")    # Sets the pen color to red
+turtle.pensize(3)         # Sets the pen width to 3 pixels
+```
+
+
+
+#### Fill Shapes with Color:
+
+To fill a shape with color, use `begin_fill()` before drawing the shape and `end_fill()` after.
+
+```python
+turtle.fillcolor("yellow")  # Sets the fill color to yellow
+turtle.begin_fill()
+for _ in range(4):
+    turtle.forward(100)
+    turtle.right(90)
+turtle.end_fill()
+```
+
+This draws a yellow-filled square.
+
+
+
+#### Screen colours
 
 Turtle graphics are drawn on a screen (or window), which is set up using the `Screen()` function:
 
@@ -34,211 +238,23 @@ This command creates the canvas where your turtle will draw. You can customize t
 screen.bgcolor("lightblue")  # Sets background color to light blue
 ```
 
-### Step 3: Create a Turtle Object
 
-The turtle that moves around on the screen is created by calling `turtle.Turtle()`. This object is the "pen" or "cursor" that you control to draw.
-
-```python
-t = turtle.Turtle()
-```
-
-Here, we create a turtle object `t` that we will use to draw on the screen. You can name your turtle anything you like.
 
 ------
 
-### Step 4: Set Turtle Speed (Optional)
-
-You can control how fast the turtle moves using the `speed()` function. This step is optional, but it helps you see how the turtle is drawing.
-
-```python
-t.speed(1)
-```
-
-Here, `1` is the slowest speed, making it easier to see each step of the drawing. You can set it to higher values (`10` is the fastest) if you want the turtle to move quickly.
-
-------
-
-### Step 5: Moving the Turtle
-
-You can move the turtle forward and backward, and turn it to the left or right. Here are the basic movement commands:
-
-#### Move Forward and Backward:
-
-- **`forward(distance)`**: Moves the turtle forward by the specified distance.
-
-- **`backward(distance)`**: Moves the turtle backward by the specified distance.
-
-  
-
-**Example:**
-
-```python
-t.forward(100)  # Moves turtle forward by 100 units
-t.backward(50)  # Moves turtle backward by 50 units
-```
-
-#### Turn the Turtle:
-
-- **`right(angle)`**: Turns the turtle clockwise by the specified angle.
-- **`left(angle)`**: Turns the turtle counterclockwise by the specified angle.
-
-**Example:**
-
-```python
-t.right(90)  # Turns the turtle 90 degrees to the right
-t.left(45)   # Turns the turtle 45 degrees to the left
-```
-
-These commands let you control how the turtle moves around the screen.
-
-------
-
-### Step 6: Drawing Shapes with Loops
-
-To draw shapes, you can combine movement and turning commands in loops. For example, to draw a square:
-
-```python
-for _ in range(4):
-    t.forward(100)  # Move forward 100 units
-    t.right(90)     # Turn right by 90 degrees
-```
-
-This loop repeats 4 times to draw four sides of a square, turning at each corner.
-
-#### Example: Drawing a Triangle
-
-```python
-for _ in range(3):
-    t.forward(100)
-    t.right(120)  # Turn right by 120 degrees (triangle angle)
-```
-
-------
-
-### Step 7: Customizing the Turtle
-
-You can make your turtle more fun by changing its shape and color.
-
-#### Change Turtle Shape:
-
-The turtle’s appearance can be changed using the `shape()` function. Available shapes include `"turtle"`, `"arrow"`, `"circle"`, and more.
-
-```python
-t.shape("turtle")  # Sets the turtle to look like a turtle
-```
-
-
-
-#### Change Pen Color and Width:
-
-The turtle draws lines as it moves, and you can customize the line’s color and thickness.
-
-```python
-t.pencolor("red")    # Sets the pen color to red
-t.pensize(3)         # Sets the pen width to 3 pixels
-```
-
-
-
-#### Fill Shapes with Color:
-
-To fill a shape with color, use `begin_fill()` before drawing the shape and `end_fill()` after.
-
-```python
-t.fillcolor("yellow")  # Sets the fill color to yellow
-t.begin_fill()
-for _ in range(4):
-    t.forward(100)
-    t.right(90)
-t.end_fill()
-```
-
-This draws a yellow-filled square.
-
-------
-
-### Step 8: Control Turtle's Speed
-
-You can control how fast the turtle moves with the `speed()` function. The speed range is from 0 to 10, where `1` is slow and `10` is the fastest. You can also use `"fastest"` or `"slowest"`.
-
-```python
-t.speed(5)  # Sets turtle speed to medium (5)
-```
-
-------
-
-### Step 9: Pen Control
-
-Sometimes, you might want the turtle to move without drawing, or you may want to lift or lower the pen to start or stop drawing:
-
-- **`penup()`**: Lifts the pen, so the turtle moves without drawing.
-- **`pendown()`**: Lowers the pen, so the turtle starts drawing again.
-
-**Example:**
-
-```python
-t.penup()       # Stops drawing
-t.forward(50)   # Moves forward without drawing
-t.pendown()     # Starts drawing again
-t.forward(50)   # Draws a line
-```
-
-------
-
-### Step 10: Clear and Reset the Drawing
-
-You can clear the screen or reset the turtle’s position using the following commands:
-
-- **`clear()`**: Clears the current drawing without moving the turtle.
-- **`reset()`**: Clears the drawing and moves the turtle back to the starting position.
-
-```python
-t.clear()   # Clears the drawing
-t.reset()   # Clears and resets turtle
-```
-
-------
-
-### Step 11: Close the Window
-
-When you are done drawing, you want the window to stay open until you close it. Use `exitonclick()` to keep the window open until a user clicks on it.
-
-```python
-screen.exitonclick()
-```
-
-------
-
-
-
-### Example: Full Turtle Program
-
-Here’s a simple example that uses many of the concepts from this tutorial:
+<img src="../Images/turtle_star_with_colour.png" style="zoom:25%;" />
 
 ```python
 import turtle
-
-# Set up the screen
-screen = turtle.Screen()
-screen.bgcolor("lightblue")
-
-# Create a turtle object
-t = turtle.Turtle()
-t.shape("turtle")
-t.pencolor("red")
-t.fillcolor("yellow")
-t.speed(5)
-
-# Draw a filled square
-t.begin_fill()
-for _ in range(4):
-    t.forward(100)
-    t.right(90)
-t.end_fill()
-
-# Close the window on click
-screen.exitonclick()
+turtle.fillcolor("blue")
+turtle.begin_fill()
+radius = 100
+for _ in range(50):
+    turtle.forward(radius)
+    turtle.right(170)
+    radius = radius + 10
+turtle.end_fill()
+turtle.mainloop()
 ```
 
-------
-
+ 
