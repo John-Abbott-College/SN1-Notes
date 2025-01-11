@@ -12,9 +12,9 @@ See the [official documentation](https://docs.python.org/3/library/turtle.html) 
 
 Imagine you have a turtle with a pen attached to its tail.  This turtle is sitting on a piece of paper.  
 
-<img src="../Images/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
+<img src="Images/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
 
-<img src="../Images/turtle_pen_up.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
+<img src="Images/turtle_pen_up.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
 
 * You can tell the turtle to put its pen up or down
 * You can modify the direction that the turtle is facing (turn right or left)
@@ -85,7 +85,7 @@ To draw, tell the turtle to put the pen down.  If you want to move the turtle wi
 
 **Example:**
 
-<img src="../Images/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;" />  Note that the "arrow" in the image is actually just the default image of the turtle.
+<img src="Images/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;" />  Note that the "arrow" in the image is actually just the default image of the turtle.
 
 ```python
 # Draw a dashed line
@@ -142,7 +142,7 @@ turtle.left(45)   # Turns the turtle 45 degrees to the left
 
 **Example:**
 
-<img src="../Images/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;" />
+<img src="Images/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;" />
 
 ```python
 import turtle
@@ -242,7 +242,7 @@ screen.bgcolor("lightblue")  # Sets background color to light blue
 
 ------
 
-<img src="../Images/turtle_star_with_colour.png" style="zoom:25%;" />
+<img src="Images/turtle_star_with_colour.png" style="zoom:25%;" />
 
 ```python
 import turtle
