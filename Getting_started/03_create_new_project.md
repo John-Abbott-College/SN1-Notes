@@ -10,7 +10,7 @@ To create a new project in PyCharm for Python, follow these steps:
 
 - If you see the **Welcome to PyCharm** dialog, click on "New Project".
 
-  <img src="Getting_Started/images/pc8.png" height="300" class="inline-img">
+  <img src="Getting_started/images/pc8.png" height="300" class="inline-img">
 
 - If you already have PyCharm open, go to the top menu and select **File > New Project**.
 
@@ -26,13 +26,13 @@ To create a new project in PyCharm for Python, follow these steps:
 
 - Select **Custom environment** > **Select existing**
 
-<img src="Getting_Started/images/pycharm_existing_env.png" height="500" class="inline-img">
+<img src="Getting_started/images/pycharm_existing_env.png" height="500" class="inline-img">
 
 **At home: 🏠**
 
 - You can use an existing interpreter or create a new virtual environment. To create a new virtual environment, select **New environment using** and choose `Virtualenv`. Note: That if you are using special packages such as `Numpy`, they will need to be installed.
 
-  <img src="Getting_Started/images/debug1.png" height="500" class="inline-img">
+  <img src="Getting_started/images/debug1.png" height="500" class="inline-img">
 
   **More Settings (Optional)**:
 
@@ -40,7 +40,7 @@ To create a new project in PyCharm for Python, follow these steps:
 
 
 
-<img src="Getting_Started/images/pycharm_create_env.png" height="400" class="inline-img" >"
+<img src="Getting_started/images/pycharm_create_env.png" height="400" class="inline-img" >"
 
 
 
@@ -55,7 +55,7 @@ To create a new project in PyCharm for Python, follow these steps:
   - The Output Window (Run the script to see it appear)
   - The Run buttons
 
-  <img src="Getting_Started/images/pycharm_layout.png" height="400" class="inline-img">
+  <img src="Getting_started/images/pycharm_layout.png" height="400" class="inline-img">
 
 - You will not see the Editor and the Output window for now
 
@@ -64,11 +64,11 @@ To create a new project in PyCharm for Python, follow these steps:
 - Once the project is created, you will see the project structure on the left side of the PyCharm window.
 - Right-click on the project folder and select **New > Python File** to create a new Python script.
 
-<img src="Getting_Started/images/debug2.png" height="300" class="inline-img">
+<img src="Getting_started/images/debug2.png" height="300" class="inline-img">
 
 - Choose a name for the new file, for example "main":
 
-  <img src="Getting_Started/images/debug2_2.png" height="150" class="inline-img">
+  <img src="Getting_started/images/debug2_2.png" height="150" class="inline-img">
 
 Now you should see the Editor and you're ready to **start coding** in your new PyCharm project!
 
@@ -78,7 +78,7 @@ Now you should see the Editor and you're ready to **start coding** in your new P
 
 - Right click on the project folder and select New > Directory:
 
-  <img src="Getting_Started/images/debug2_4.png" class ="inline-img" height="400"/>
+  <img src="Getting_started/images/debug2_4.png" class ="inline-img" height="400"/>
 
 - Name this new folder: "data"
 
@@ -86,11 +86,11 @@ Now you should see the Editor and you're ready to **start coding** in your new P
 
 - Right click the project folder, select Open In > Explorer:
 
-  <img src="Getting_Started/images/debug2_3.png" class ="inline-img" height="400"/>
+  <img src="Getting_started/images/debug2_3.png" class ="inline-img" height="400"/>
 
 - This should automatically open your project folder within the explorer:
 
-  <img src="Getting_Started/images/debug2_5.png" class ="inline-img" height="200"/>
+  <img src="Getting_started/images/debug2_5.png" class ="inline-img" height="200"/>
 
 - You'll notice that:
   -  The `main.py` file is accessible here
@@ -111,7 +111,7 @@ Now you should see the Editor and you're ready to **start coding** in your new P
 - You'll notice that PyCharm is coloring the different parts of your line of code to help you better see it.
 - You can run the program by clicking on the green play button at the top-right part of the screen:
 
-<img src="Getting_Started/images/debug3.png" height="300" class="inline-img">
+<img src="Getting_started/images/debug3.png" height="300" class="inline-img">
 
 - You'll notice that the output window appears at the bottom.
 
@@ -127,11 +127,11 @@ Now you should see the Editor and you're ready to **start coding** in your new P
 
 - The Python interpreter runs the program line by line from the top to the bottom of the file
 
-  <img src="Getting_Started/images/debug4.png" height="400" class="inline-img">
+  <img src="Getting_started/images/debug4.png" height="400" class="inline-img">
 
 - The output window should read:
 
-  <img src="Getting_Started/images/debug5.png" height="200" class="inline-img"/>
+  <img src="Getting_started/images/debug5.png" height="200" class="inline-img"/>
 
 ### Adding a comment
 
@@ -169,13 +169,13 @@ Now you should see the Editor and you're ready to **start coding** in your new P
 
   
 
-<img src="Getting_Started/images/debug6.png" height="300" class="inline-img"/>
+<img src="Getting_started/images/debug6.png" height="300" class="inline-img"/>
 
 - This is because `y` doesn't exist yet in the script, we must first create the variable `y`
 
 - Add a `y = 23` on the line before the `print(y)`:
 
-  <img src="Getting_Started/images/debug7.png" height="300" class="inline-img" class="inline-img"/>
+  <img src="Getting_started/images/debug7.png" height="300" class="inline-img" class="inline-img"/>
 
 - The error should disappear. 
 
@@ -187,11 +187,11 @@ Now you should see the Editor and you're ready to **start coding** in your new P
   - This causes a "weak" warning because a script should preferable end with an empty last line. 
   - The yellow bulb can help you automatically fix issues like these.
 
-  <img src="Getting_Started/images/debug8.png" class="inline-img"/>
+  <img src="Getting_started/images/debug8.png" class="inline-img"/>
 
 - When you see a green mark appear at the top right part of the screen, this means there are no errors nor warnings in your script:
 
-  <img src="Getting_Started/images/debug9.png" class="inline-img"/>
+  <img src="Getting_started/images/debug9.png" class="inline-img"/>
 
 ### **Run the Code**:
 
@@ -201,7 +201,7 @@ Now you should see the Editor and you're ready to **start coding** in your new P
   - Type: `python main.py`
   - Hit the enter button.
 
-​	<img src="Getting_Started/images/debug2_6.png" height="200" class="inline-img"/>
+​	<img src="Getting_started/images/debug2_6.png" height="200" class="inline-img"/>
 
 
 
