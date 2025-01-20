@@ -4,8 +4,6 @@
 - [Introduction to Python](Notes/03_introduction_to_Python.md)
 
 
-
-<!-- 
 **Python Data Types**
 - [What are literals](Notes/04_intro_literals.md)
 - [Integers & Floats](Notes/05_integers_floats.md)
@@ -37,7 +35,7 @@
 
 
 **Lists**
-- [List](Notes/28_lists.md) <!-- TODO:break it into multiple notes  
+- [List](Notes/28_lists.md) <!-- TODO:break it into multiple notes  -->
 
 **Statements** 
 - [For loop](Notes/23_1_for_loop)
@@ -61,7 +59,7 @@
 - [F string formatting](Notes/06_2_f_strings.md)
 - [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 
- -->
+
 
 
 

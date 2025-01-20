@@ -1,5 +1,0 @@
-- [Installation Windows](getting-started/01_1_python_installation_win.md)
-- [Installation Mac](getting-started/01_2_python_installation_mac.md)
-- [Creating a project](getting-started/03_create_new_project.md)
-- [Using Léa](getting-started/04_lea.md)
-- [Debugging](getting-started/05_debugging.md)
