@@ -29,13 +29,13 @@ Breakpoints are red markers added on the left margin to tell the Python Debugger
 
 PyCharm is an amazing Python IDE as it allows us to write code, run it and debug it all in the same interface. Add a breakpoint by clicking on the left margin of a line of code and then by clicking the debug button (looks like a green bug):
 
-<img src="Getting_Started/Getting_Started/images/debug_button.png" height=50/>
+<img src="Getting_started/images/debug_button.png" height=50/>
 
 **Funny memes (not in the exam)**
 
-<img src="Getting_Started/images/debugging_meme.jpg" height=600 class="inline-img"/>
+<img src="Getting_started/images/debugging_meme.jpg" height=600 class="inline-img"/>
 
-<img src="Getting_Started/images/debugging_meme_2.jpg" height=600/>
+<img src="Getting_started/images/debugging_meme_2.jpg" height=600/>
 
 
 
