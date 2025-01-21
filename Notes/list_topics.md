@@ -14,10 +14,11 @@
 - [Variables & Constants](Notes/08_variables.md)
 
 **Turtle Graphics**
-- [Intro to turtle](Notes/09_1_Turtle_Graphics.md)
+- [Intro to turtle](Notes/09_1_turtle_graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
 **Operators**
+
 - [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Assignment Operators](Notes/11_assignment_operators.md)
 - [Comparison Operators](Notes/12_comparison_operators.md)
@@ -58,7 +59,6 @@
 **Additional notes**
 - [F string formatting](Notes/06_2_f_strings.md)
 - [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
-
 
 
 
