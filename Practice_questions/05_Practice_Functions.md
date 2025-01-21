@@ -81,7 +81,7 @@ We recommend you do these exercises with pen and paper:
 
 4. Using the `calculate_area_cricle()`, `calculate_area_rectangle()` and `calculate_area_square()` functions, calculate the area of the following shape. You can assume that the red squares are perfect, that the green central ring is composed of two perfect inner and outer circles and that the blue borders are all perfect rectangles. :
 
-   <img src="Practice_questions/composite_area.png" height=250/>
+   <img src="Practice_questions/images_exos/composite_area.png" height=250/>
 
    **Level 3 Exercises**
 
