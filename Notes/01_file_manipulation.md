@@ -9,7 +9,6 @@
 Computers only *think* in terms of `1`s and `0`s (binary).  Every bit of information on your computer is coded in binary and the your computer will translate one set of of `1`s and `0`s to another when displaying information on your screen.
 
 <img src="./Images/binary_to_picture.png" />
-![binary data to cat picture](./Images/binary_to_picture.png)
 
 ## What is a file?
 
@@ -71,9 +70,7 @@ An excellent tutorial on using files on a Windows platform can be found [here](h
 
 ALWAYS VIEW YOUR FILES IN FILE EXPLORER IN `DETAIL` MODE TO SEE ALL THE PERTINENT INFORMATION.
 
-
-
-![file explorer](./Images/file_explorer.png)
+<img src="./Images/file_explorer.png" />
 
 In the image above the top line indicates all of the folders relative to each other:
 
@@ -93,19 +90,19 @@ And the list of files in the main window are the files that are contained in the
 
 #### Mac Finder
 
-<img src="./Images/01_mac_finder.png" alt="image-20250123073255520" style="zoom:50%;" />
+<img src="./Images/01_mac_finder.png" alt="MAC Finder symbol" style="zoom:50%;" />
 
 Unless you have really messed up your MAC, the file explorer ("Finder") icon is located at the bottom left of you Mac desktop.
 
 To see all of your files, with extensions, choose list or columns
 
-![image-20250123073741151](./Images/01_mac_finder_header.png)
+<img src="./Images/01_mac_finder_header.png" />
 
-![image-20250123074049746](./Images/01_mac_finder_select.png)
+<img src="./Images/01_mac_finder_select.png" />
 
 Sometimes (depending on the size of the "finder" window), you may see:  Choose one or the other.
 
-![](./Images/01_mac_finder_bigger.png)
+<img src="./Images/01_mac_finder_bigger.png" />
 
 *List view*
 
@@ -165,10 +162,9 @@ There are multiple ways to create a single file from a set of other files (LEA o
 *using finder*
 
   * Select the files that you want to zip
+    * `command-click` for inclusive selection
+    * `command-shift-click` for selecting one file at a time
 
-    <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" />`click` for inclusive selection
-
-    <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" /><img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/0f795759124f9320650e97ddd0ff4a84.png" style="zoom: 20%; " />`click` for selecting one file at a time
 
   * Right click your selection
 
