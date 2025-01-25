@@ -1,58 +1,77 @@
-* **Getting started**
-    * [Installation Windows](Getting_started/01_1_python_installation_win.md)
-    * [Installation Mac](Getting_started/01_2_python_installation_mac.md)
-    * [Creating a project](Getting_started/03_create_new_project.md)
-    * [Using Léa](Getting_started/04_lea.md)
-    * [Debugging](Getting_started/06_debugging.md)
-    * [OneDrive](Getting_started/07_one_drive.md)
+<style>
+/* Dropdown container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+}
 
-* **Topics**
-    * **[Introduction](Notes/01_introduction.md)**
-        * [Files & Folders](Notes/01_file_manipulation.md)
-        * [What's Programming](Notes/02_what_is_programming.md)
-        * [Introduction to Python](Notes/03_introduction_to_Python.md)
-    * **[Python Data Types](Notes/04_python_data_types.md)**
-        * [What are literals](Notes/04_intro_literals.md)
-        * [Integers & Floats](Notes/05_integers_floats.md)
-        * [Strings](Notes/06_1_strings.md)
-        * [Booleans](Notes/07_booleans.md)
-    * **[Variables](Notes/08_variables.md)**
-        * [Variables & Constants](Notes/08_variables.md)
-    * **[Turtle Graphics](Notes/09_turtle_graphics.md)**
-        * [Intro to turtle](Notes/09_1_turtle_graphics.md)
-        * [Draw a house](Notes/09_2_draw_house.md)
-    * **[Operators](Notes/10_operators.md)**
-        * [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
-        * [Assignment Operators](Notes/11_assignment_operators.md)
-        * [Comparison Operators](Notes/12_comparison_operators.md)
-        * [Logical Operators](Notes/13_logical_operators.md)
-        * [Priority Operations](Notes/14_priority_operations.md)
-    * **[Functions](Notes/16_functions.md)**
-        * [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
-        * [Math Functions](Notes/17_functions_math_module.md)
-        * [Basic I/O Functions](Notes/18_functions_print_input.md)
-        * [User defined functions](Notes/19_user_defined_functions.md)
-        * [Type Hinting](Notes/20_functions_type_hint.md)
-        * [Scopes](Notes/21_functions_and_scopes.md)
-    * **[Lists](Notes/28_lists.md)**
-        * [List introduction](Notes/28_1_lists.md)
-        * [Looping over list](Notes/28_2_lists.md)
-        * [List in action](Notes/28_3_lists.md)
-    * **[Statements](Notes/23_statements.md)**
-        * [For loop](Notes/23_1_for_loop)
-        * [If statement](Notes/26_conditions_if.md)
-        * [If/Else statement](/Notes/27_conditions_if_else.md)
-    * **[Math To Python](Notes/31_math_to_python.md)**
-        * [Accumulators & Series](Notes/31_accumulator_pattern.md)
-        * [Formula Translator](Notes/32_from_math_to_python.md)
-    * **[Scientific modules](Notes/33_scientific_modules.md)**
-        * [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
-        * [Intro to Numpy](Notes/33_2_numpy.md)
-    * **[Files](Notes/35_files.md)**
-        * [Reading/Writing Files](Notes/35_reading_files.md)
-    * **[Additional notes](Notes/06_additional_notes.md)**
-        * [F string formatting](Notes/06_2_f_strings.md)
-        * [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
+.navbar > div {
+    position: relative;
+}
 
-* **[Practice Exercises](Practice_questions/list_practice_by_topic.md)**
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
 
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.navbar .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<div class="navbar">
+    <div class="dropdown">
+        <a href="#">Getting started</a>
+        <div class="dropdown-content">
+            <a href="Getting_started/01_1_python_installation_win.md">Installation Windows</a>
+            <a href="Getting_started/01_2_python_installation_mac.md">Installation Mac</a>
+            <a href="Getting_started/03_create_new_project.md">Creating a project</a>
+            <a href="Getting_started/04_lea.md">Using Léa</a>
+            <a href="Getting_started/06_debugging.md">Debugging</a>
+            <a href="Getting_started/07_one_drive.md">OneDrive</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Topics</a>
+        <div class="dropdown-content">
+            <a href="Notes/01_introduction.md">Introduction</a>
+            <a href="Notes/04_python_data_types.md">Python Data Types</a>
+            <a href="Notes/08_variables.md">Variables</a>
+            <a href="Notes/09_turtle_graphics.md">Turtle Graphics</a>
+            <a href="Notes/10_operators.md">Operators</a>
+            <a href="Notes/16_functions.md">Functions</a>
+            <a href="Notes/28_lists.md">Lists</a>
+            <a href="Notes/23_statements.md">Statements</a>
+            <a href="Notes/31_math_to_python.md">Math To Python</a>
+            <a href="Notes/33_scientific_modules.md">Scientific modules</a>
+            <a href="Notes/35_files.md">Files</a>
+            <a href="Notes/06_additional_notes.md">Additional notes</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Practice Exercises</a>
+        <div class="dropdown-content">
+            <a href="Practice_questions/list_practice_by_topic.md">List of practice questions</a>
+        </div>
+    </div>
+</div>
