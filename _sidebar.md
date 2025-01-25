@@ -37,7 +37,9 @@
 
 
 **Lists**
-- [List](Notes/28_lists.md) <!-- TODO:break it into multiple notes  
+- [List introduction](Notes/28_1_lists.md) 
+- [Looping over list](Notes/28_2_lists.md)
+- [List in action](Notes/28_3_lists.md)
 
 **Statements** 
 - [For loop](Notes/23_1_for_loop)
@@ -58,11 +60,11 @@
 - [Reading/Writing Files](Notes/35_reading_files.md)
 
 **Additional notes**
+
 - [F string formatting](Notes/06_2_f_strings.md)
 - [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 
  -->
-
 
 
 
