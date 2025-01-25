@@ -9,12 +9,9 @@
 * **Topics**
   * [Introduction](Notes/list_introduction.md)
   * [Python Data Types](Notes/list_Python_Data_Types.md)
-    
-  * **[Variables](Notes/08_variables.md)**
-    * [Variables & Constants](Notes/08_variables.md)
-  * **[Turtle Graphics](Notes/09_turtle_graphics.md)**
-    * [Intro to turtle](Notes/09_1_turtle_graphics.md)
-    * [Draw a house](Notes/09_2_draw_house.md)
+  * [Variables & Constants](Notes/08_variables.md) 
+  * [Turtle Graphics](Notes/list_turtle_graphics.md)
+   
   * **[Operators](Notes/10_operators.md)**
     * [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
     * [Assignment Operators](Notes/11_assignment_operators.md)
