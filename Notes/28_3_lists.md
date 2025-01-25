@@ -147,7 +147,7 @@ print(list_3)  # Outputs: [3, 4, 5]
 
 If `start` is omitted, the slice starts from the beginning of the list. If `stop` is omitted, the slice goes up to the end of the list.
 
-#### 3. **Copying a List: **
+#### 3.  **Copying a List: **
 
 
 
@@ -163,7 +163,7 @@ print(list_1)  # Outputs: [2, 2, 3, 4, 5]
 
 
 
-#### 4. Slices – negative indices
+#### 4.  Slices – negative indices
 
 
 
