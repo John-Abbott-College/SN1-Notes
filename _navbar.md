@@ -7,10 +7,7 @@
   * [OneDrive](Getting_started/07_one_drive.md)
 
 * **Topics**
-  * **[Introduction](Notes/01_introduction.md)**
-    * [Files & Folders](Notes/01_file_manipulation.md)
-    * [What's Programming](Notes/02_what_is_programming.md)
-    * [Introduction to Python](Notes/03_introduction_to_Python.md)
+  * **[Introduction](Notes/list_introduction.md**
   * **[Python Data Types](Notes/04_python_data_types.md)**
     * [What are literals](Notes/04_intro_literals.md)
     * [Integers & Floats](Notes/05_integers_floats.md)
