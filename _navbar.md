@@ -8,11 +8,8 @@
 
 * **Topics**
   * [Introduction](Notes/list_introduction.md)
-  * **[Python Data Types](Notes/04_python_data_types.md)**
-    * [What are literals](Notes/04_intro_literals.md)
-    * [Integers & Floats](Notes/05_integers_floats.md)
-    * [Strings](Notes/06_1_strings.md)
-    * [Booleans](Notes/07_booleans.md)
+  * [Python Data Types](Notes/list_Python Data Types.md)
+    
   * **[Variables](Notes/08_variables.md)**
     * [Variables & Constants](Notes/08_variables.md)
   * **[Turtle Graphics](Notes/09_turtle_graphics.md)**
