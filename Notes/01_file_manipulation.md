@@ -8,6 +8,7 @@
 
 Computers only *think* in terms of `1`s and `0`s (binary).  Every bit of information on your computer is coded in binary and the your computer will translate one set of of `1`s and `0`s to another when displaying information on your screen.
 
+<img src="./Images/binary_to_picture.png" />
 ![binary data to cat picture](./Images/binary_to_picture.png)
 
 ## What is a file?
@@ -165,8 +166,9 @@ There are multiple ways to create a single file from a set of other files (LEA o
 
   * Select the files that you want to zip
 
-    * <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" />`click` for inclusive selection
-    * <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" /><img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/0f795759124f9320650e97ddd0ff4a84.png" style="zoom: 20%; " />`click` for selecting one file at a time
+    <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" />`click` for inclusive selection
+
+    <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" /><img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/0f795759124f9320650e97ddd0ff4a84.png" style="zoom: 20%; " />`click` for selecting one file at a time
 
   * Right click your selection
 
