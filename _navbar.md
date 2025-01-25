@@ -12,13 +12,9 @@
   * [Variables & Constants](Notes/08_variables.md) 
   * [Turtle Graphics](Notes/list_turtle_graphics.md) 
   * [Operators](Notes/list_operator.md) 
-  * [Functions](Notes/list_functions.md)
- 
-    
-  * **[Lists](Notes/28_lists.md)**
-    * [List introduction](Notes/28_1_lists.md)
-    * [Looping over list](Notes/28_2_lists.md)
-    * [List in action](Notes/28_3_lists.md)
+  * [Functions](Notes/list_functions.md) 
+  * [Lists](Notes/list_list.md)
+
   * **[Statements](Notes/23_statements.md)**
     * [For loop](Notes/23_1_for_loop)
     * [If statement](Notes/26_conditions_if.md)
