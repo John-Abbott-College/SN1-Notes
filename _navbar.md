@@ -8,7 +8,7 @@
 
 * **Topics**
   * [Introduction](Notes/list_introduction.md)
-  * [Python Data Types](Notes/list_Python Data Types.md)
+  * [Python Data Types](Notes/list_Python_Data_Types.md)
     
   * **[Variables](Notes/08_variables.md)**
     * [Variables & Constants](Notes/08_variables.md)
