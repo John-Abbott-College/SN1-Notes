@@ -27,7 +27,7 @@ For new projects, Python 3 is recommended. The course will use Python 3, and whi
 
  ## Demo: Using a Terminal to write your first lines of code
 
-
+*Windows*
 
 - On your Windows PC, type "CMD" in the search bar to open the ***Command Line Prompt*** 
 
@@ -37,8 +37,17 @@ For new projects, Python 3 is recommended. The course will use Python 3, and whi
   python
   ```
 
+*MAC*
 
-> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow this [tutorial]() to install python. 
+- On your Mac, hold the command key and the space bar simulatenously until the "Spotlight Search" window is open.  Type `terminal` in the search bar to open the ***Command Line Prompt*** 
+
+- Type the following command and hit the enter button: 
+
+  ```bash
+  python3
+  ```
+
+> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab "Getting Started" from these [notes]() to install python. 
 >
 > ⚠️ If you are sure to have correctly installed python, try this command instead `python3` 
 
