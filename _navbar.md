@@ -10,14 +10,10 @@
   * [Introduction](Notes/list_introduction.md)
   * [Python Data Types](Notes/list_Python_Data_Types.md)
   * [Variables & Constants](Notes/08_variables.md) 
-  * [Turtle Graphics](Notes/list_turtle_graphics.md)
-   
-  * **[Operators](Notes/10_operators.md)**
-    * [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
-    * [Assignment Operators](Notes/11_assignment_operators.md)
-    * [Comparison Operators](Notes/12_comparison_operators.md)
-    * [Logical Operators](Notes/13_logical_operators.md)
-    * [Priority Operations](Notes/14_priority_operations.md)
+  * [Turtle Graphics](Notes/list_turtle_graphics.md) 
+  * [Operators](Notes/list_operator.md)
+
+    
   * **[Functions](Notes/16_functions.md)**
     * [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
     * [Math Functions](Notes/17_functions_math_module.md)
