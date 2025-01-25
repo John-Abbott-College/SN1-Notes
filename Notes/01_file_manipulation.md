@@ -8,7 +8,7 @@
 
 Computers only *think* in terms of `1`s and `0`s (binary).  Every bit of information on your computer is coded in binary and the your computer will translate one set of of `1`s and `0`s to another when displaying information on your screen.
 
-![binary data to cat picture](../Images/binary_to_picture.png)
+![binary data to cat picture](./Images/binary_to_picture.png)
 
 ## What is a file?
 
@@ -24,13 +24,13 @@ In the old days, files used to be a document that was printed on paper.  Today, 
 
 Before computers were everywhere, most people and companies organized their files into folders.
 
-<img src="Images/real_file_folders.png" alt="image of paper file folders" style="zoom:33%;" />
+<img src="./Images/real_file_folders.png" alt="image of paper file folders" style="zoom:33%;" />
 
 Each folder would have a name, describing what types of files it contained (example: '*Project 1*', '*Project 2*')
 
 Maybe, if the number of files were large, the owner of a company might reorganize their files, so that the folder '*Project 1*' might be contain more folders (example: '*customer complains*', '*expenses*', etc.)
 
-<img src="Images/paper_folder_within_folder.png" alt="folders within folders" style="zoom:80%;" />
+<img src="./Images/paper_folder_within_folder.png" alt="folders within folders" style="zoom:80%;" />
 
 ### Computers
 
@@ -47,17 +47,17 @@ In short, folders (or directories) are organized into a *tree* format.
 ```text
 My Documents
      | --- English
-             Assignment 1.docx
-             Assignment 2.docx
+     |   |-> Assignment 1.docx
+     |   |-> Assignment 2.docx
      | --- Programming
-             | --- Assignment 1
-                   Instructions.pdf
-                   code.py
-                   output.txt
-              | --- Assignment 2
-                   Instructions.pdf
-                   code.py
-                   output.csv
+     |   | --- Assignment 1
+     |   |   |-> Instructions.pdf
+     |   |   |-> code.py
+     |   |   |-> output.txt
+     |   |   |--- Assignment 2
+     |   |   |   | -> Instructions.pdf
+     |   |   |   | -> code.py
+     |   |   |   | -> output.csv
 ```
 
 
@@ -72,7 +72,7 @@ ALWAYS VIEW YOUR FILES IN FILE EXPLORER IN `DETAIL` MODE TO SEE ALL THE PERTINEN
 
 
 
-![file explorer](../Images/file_explorer.png)
+![file explorer](./Images/file_explorer.png)
 
 In the image above the top line indicates all of the folders relative to each other:
 
@@ -90,11 +90,33 @@ Sandy
 
 And the list of files in the main window are the files that are contained in the folder `Solution_01`
 
+#### Mac Finder
 
+<img src="./Images/01_mac_finder.png" alt="image-20250123073255520" style="zoom:50%;" />
+
+Unless you have really messed up your MAC, the file explorer ("Finder") icon is located at the bottom left of you Mac desktop.
+
+To see all of your files, with extensions, choose list or columns
+
+![image-20250123073741151](./Images/01_mac_finder_header.png)
+
+![image-20250123074049746](./Images/01_mac_finder_select.png)
+
+Sometimes (depending on the size of the "finder" window), you may see:  Choose one or the other.
+
+![](./Images/01_mac_finder_bigger.png)
+
+*List view*
+
+<img src="./Images/01_mac_finder_listview.png"  style="zoom:25%;" />
+
+In the image above the bottom line indicates all of the folders and files of the file that is selected:
+
+`Macintosh HD/Users/sandy/PyCharmProjects/Dummy/lab_01/Archive.zip`
 
 ## What is a File Extension?
 
-The file extension is defined as the last bit of a file name that follows the last dot (`.`)
+The file extension is defined as the last bit of a file name that follows the last dot (`.`) Kinda of like a last name.
 
 Example: `code.py` has a file extension `.py`.  A word document typically has the extension `.docx`, so the filename is typically `assignment 1.docx`.
 
@@ -112,16 +134,16 @@ The file extensions give a hint to the operating system (Windows/Linux/Mac) as t
 
 Likewise if the file extension is `.docx`, double clicking the file in File Explorer will open Microsoft Office which in turn will read the file and display it to you.
 
-#### Import File Extensions in this course:
+#### Important File Extensions in this course:
 
 | Extension | Icon | Meaning                                                      |
 | --------- | ---- | -------------------------------------------------------- |
-| | <img src="Images/folder_icon.png" style="zoom:25%;" /> | Folders have no extension |
-| `.docx`   | <img src="Images/word_icon.png" style="zoom:25%;" /> | Word Document                                                |
-| `.py`     | <img src="Images/python_icon.png" style="zoom:25%;" />  |Python Code                                                  |
-| `.pdf`    | <img src="Images/pdf_icon.png" style="zoom:25%;" /> | Portable Document File (PDF) document.  Any printer can print this file without having any specialized software. |
-| `.csv`    | <img src="Images/csv_icon.png" style="zoom:25%;" /> |Comma Separated Values (can be read as a text file, or opened with Excel, where Excel will put data into the various columns, where each column data is separated by a comma) |
-| `.zip`    | <img src="Images/zipfile_icon.png" style="zoom:25%;" /> | Zip file.  Contains multiple files within one file. It needs to be `unzipped` before you can use the files within.  WARNING: In File Explorer it can look like it is not zipped, even though it is. |
+| | <img src="./Images/folder_icon.png" style="zoom:25%;" /> | Folders have no extension |
+| `.docx`   | <img src="./Images/word_icon.png" style="zoom:25%;" /> | Word Document                                                |
+| `.py`     | <img src="./Images/python_icon.png" style="zoom:25%;" />  |Python Code                                                  |
+| `.pdf`    | <img src="./Images/pdf_icon.png" style="zoom:25%;" /> | Portable Document File (PDF) document.  Any printer can print this file without having any specialized software. |
+| `.csv`    | <img src="./Images/csv_icon.png" style="zoom:25%;" /> |Comma Separated Values (can be read as a text file, or opened with Excel, where Excel will put data into the various columns, where each column data is separated by a comma) |
+| `.zip`    | <img src="./Images/zipfile_icon.png" style="zoom:25%;" /> | Zip file.  Contains multiple files within one file. It needs to be `unzipped` before you can use the files within.  WARNING: In File Explorer it can look like it is not zipped, even though it is. |
 
 
 
@@ -131,13 +153,42 @@ There are multiple ways to create a single file from a set of other files (LEA o
 
 ### MAC/Linux
 
+| symbol | name |
+| ------ | ---- |
+| <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:25%;" /> | command |
+|<img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/7b00c26c8add24c1d9728d21fbf8869a.png" style="zoom:25%;" /> | Fn (Function) |
+|<img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/1faa76ae5882af1040a984bf04c1f6ce.png" style="zoom:25%; " />| World |
+|<img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/e9bcb32d2329460fa9262bb80287aeb4.png" style="zoom: 25%; " />| Option |
+|<img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/0f795759124f9320650e97ddd0ff4a84.png" style="zoom: 25%; " />| Shift |
+
+*using finder*
+
+  * Select the files that you want to zip
+
+    * <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" />`click` for inclusive selection
+    * <img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/9f928381c28c623497170dc345644f9b.png" style="zoom:20%;" /><img src="https://help.apple.com/assets/6716D93AEF41EE42B10D2617/6716D93E49B75650FD0A13E4/en_US/0f795759124f9320650e97ddd0ff4a84.png" style="zoom: 20%; " />`click` for selecting one file at a time
+
+  * Right click your selection
+
+  * Select compress
+
+    <img src="./Images/01_mac_finder_to_compress.png" style="zoom:25%;" />
+    
+    This will create a file called "Archive.zip"
+    
+    <img src="./Images/01_mac_finder_archive.png" style="zoom:25%;" />
+    
+  * You can submit this "Archive.zip" file 'as-is' to LEA.
+
+ADVANCED: *command line*
+
 * open up the terminal window
 
 * to create a zip file type
 
   `zip -f somefilename.zip file1.txt, file2.csv ...` where you replace the filenames with the appropriate names of the files
 
-* to create a zip file type
+* to unzip a zip file
 
   `unzip somefilename.zip` where you replace the filenames with the appropriate names of the files
 
@@ -149,7 +200,7 @@ To zip,
 
 * select the files that you want to zip together, and right-click.  Select `send to` then `compressed folder`
 
-<img src="Images/create_zipfile.png" style="zoom:80%;" />
+<img src="./Images/create_zipfile.png" style="zoom:80%;" />
 
 To unzip
 
@@ -157,7 +208,7 @@ To unzip
 * Click the `Extract` tab at the top of the screen
 * Click `Extract All` button on the right, and follow instructions
 
-<img src="Images/unzip_files.png" style="zoom:80%;" />
+<img src="./Images/unzip_files.png" style="zoom:80%;" />
 
 
 
@@ -169,5 +220,6 @@ If you have `double-clicked` on a zip file, it will open a new window showing al
 
 **What to look out for**: - if the folder information ends with a zip file.
 
-<img src="Images/zipped_file_explorer.png" style="zoom:80%;" />
+<img src="./Images/zipped_file_explorer.png" style="zoom:80%;" />
 
+<font color="red" size=2>DO NOT EVER DOUBLE CLICK A `.py` FILE FROM WITHIN A ZIP FILE. YOUR CHANGES WILL NOT BE SAVED!! </font>
