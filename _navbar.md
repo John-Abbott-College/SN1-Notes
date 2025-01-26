@@ -18,9 +18,7 @@
   * [Math To Python](Notes/list_math_to_python.md)   
   * [Scientific modules](Notes/list_scientific_modules.md)  
   * [Files](Notes/35_reading_files.md)
+  * [Additional notes](Notes/list_additional_notes.md)
 
-  * **[Additional notes](Notes/06_additional_notes.md)**
-    * [F string formatting](Notes/06_2_f_strings.md)
-    * [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 
 * **[Practice Exercises](Practice_questions/list_practice_by_topic.md)**
