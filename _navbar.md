@@ -14,12 +14,10 @@
   * [Operators](Notes/list_operator.md) 
   * [Functions](Notes/list_functions.md) 
   * [Lists](Notes/list_list.md)
-  * [Statements](Notes/list_statement.md)
+  * [Statements](Notes/list_statement.md)  
+  * [Math To Python](Notes/list_math_to_python.md)
 
       
-  * **[Math To Python](Notes/31_math_to_python.md)**
-    * [Accumulators & Series](Notes/31_accumulator_pattern.md)
-    * [Formula Translator](Notes/32_from_math_to_python.md)
   * **[Scientific modules](Notes/33_scientific_modules.md)**
     * [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
     * [Intro to Numpy](Notes/33_2_numpy.md)
