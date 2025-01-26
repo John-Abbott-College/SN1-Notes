@@ -15,14 +15,10 @@
   * [Functions](Notes/list_functions.md) 
   * [Lists](Notes/list_list.md)
   * [Statements](Notes/list_statement.md)  
-  * [Math To Python](Notes/list_math_to_python.md)
+  * [Math To Python](Notes/list_math_to_python.md)   
+  * [Scientific modules](Notes/list_scientific_modules.md)  
+  * [Files](Notes/35_reading_files.md)
 
-      
-  * **[Scientific modules](Notes/33_scientific_modules.md)**
-    * [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
-    * [Intro to Numpy](Notes/33_2_numpy.md)
-  * **[Files](Notes/35_files.md)**
-    * [Reading/Writing Files](Notes/35_reading_files.md)
   * **[Additional notes](Notes/06_additional_notes.md)**
     * [F string formatting](Notes/06_2_f_strings.md)
     * [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
