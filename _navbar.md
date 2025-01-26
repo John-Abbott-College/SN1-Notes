@@ -14,11 +14,9 @@
   * [Operators](Notes/list_operator.md) 
   * [Functions](Notes/list_functions.md) 
   * [Lists](Notes/list_list.md)
+  * [Statements](Notes/list_statement.md)
 
-  * **[Statements](Notes/23_statements.md)**
-    * [For loop](Notes/23_1_for_loop)
-    * [If statement](Notes/26_conditions_if.md)
-    * [If/Else statement](/Notes/27_conditions_if_else.md)
+      
   * **[Math To Python](Notes/31_math_to_python.md)**
     * [Accumulators & Series](Notes/31_accumulator_pattern.md)
     * [Formula Translator](Notes/32_from_math_to_python.md)
