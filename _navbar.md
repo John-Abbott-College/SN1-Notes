@@ -20,5 +20,4 @@
   * [Files](Notes/35_reading_files.md)
   * [Additional notes](Notes/list_additional_notes.md)
 
-
 * **[Practice Exercises](Practice_questions/list_practice_by_topic.md)**
