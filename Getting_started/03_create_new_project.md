@@ -4,7 +4,17 @@ To create a new project in PyCharm for Python, follow these steps:
 
 **Open PyCharm**: Launch PyCharm from your start menu, desktop shortcut, or application launcher.
 
+## Open an Existing Project
 
+> An existing project can be any folder/directory, with or without files
+
+* Select `File`->`Open...`
+
+<img src="./Images/pycharm_open_existing_project_mac.png" />
+
+* Select a folder/directory (the application will either open a "Windows Explorer" or "Finder" app depending on which operating system)
+
+<img src="./Images/pycharm_select_existing_project.png"/>
 
 ## Start a New Project
 
