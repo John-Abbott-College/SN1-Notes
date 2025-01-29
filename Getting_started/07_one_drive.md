@@ -156,7 +156,7 @@ This might take a few seconds to index the file....
 
 
 
-18. You should be able to start the lab and safely synchronize your files between computers. **DO NOT FORGET TO SAVE (CTRL + S) AS YOU PROGRESS** 
+18. You should be able to start the lab and safely synchronize your files between computers. **DO NOT FORGET TO SAVE YOUR FILE (CTRL + S) AS YOU PROGRESS** 
 
 19. Yeeyy! Our file is synchronized everywhere!
 <img src="Getting_started/images/onedrive_23.png" height=300 class=inline-img/>
