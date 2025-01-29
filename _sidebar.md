@@ -3,10 +3,16 @@
 - [What's Programming](Notes/02_what_is_programming.md)
 - [Introduction to Python](Notes/03_introduction_to_Python.md)
 
+**Expressions & Variables**
 
+- [What are literals](Notes/04_intro_literals.md)
+- [Integers & Floats](Notes/05_integers_floats.md)
+- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
+- [Variables & Constants](Notes/08_variables.md)
 
 <!-- 
 **Python Data Types**
+
 - [What are literals](Notes/04_intro_literals.md)
 - [Integers & Floats](Notes/05_integers_floats.md)
 - [Strings](Notes/06_1_strings.md)
