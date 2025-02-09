@@ -9,6 +9,9 @@
 - [Integers & Floats](Notes/05_integers_floats.md)
 - [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Variables & Constants](Notes/08_variables.md)
+- [Assignment Operators](Notes/11_assignment_operators.md)
+- [Strings](Notes/06_1_strings.md)
+- [F string formatting](Notes/06_2_f_strings.md)
 
 <!-- 
 **Python Data Types**
@@ -22,6 +25,7 @@
 - [Variables & Constants](Notes/08_variables.md)
 
 **Turtle Graphics**
+
 - [Intro to turtle](Notes/09_1_Turtle_Graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
