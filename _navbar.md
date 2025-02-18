@@ -22,5 +22,10 @@
 
 * **Practice Exercises**
   * [Data Types](Practice_questions/01_Practice_DataTypes.md)
+  
   * [Arithmetic Operators](Practice_questions/02_Practice_Arithmetics.md)
-  * [Variables](Practice_questions/04_Practice_Variables.md)
+  
+  * [Assignment Operators](Practice_questions/04_Practice_Variables.md)
+  
+    
+
