@@ -3,36 +3,40 @@
 - [What's Programming](Notes/02_what_is_programming.md)
 - [Introduction to Python](Notes/03_introduction_to_Python.md)
 
-**Expressions & Variables**
+**Numeric Variables**
 
 - [What are literals](Notes/04_intro_literals.md)
-- [Integers & Floats](Notes/05_integers_floats.md)
-- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Variables & Constants](Notes/08_variables.md)
-- [Assignment Operators](Notes/11_assignment_operators.md)
+- [Integers & Floats](Notes/05_integers_floats.md)
+
+**Strings Variables**
+
 - [Strings](Notes/06_1_strings.md)
+- [String Operations](Notes/06_1_strings_operations.md)
 - [F string formatting](Notes/06_2_f_strings.md)
 
-<!-- 
-**Python Data Types**
+**Operators**
 
-- [What are literals](Notes/04_intro_literals.md)
-- [Integers & Floats](Notes/05_integers_floats.md)
-- [Strings](Notes/06_1_strings.md)
-- [Booleans](Notes/07_booleans.md)
-
-**Variables**
-- [Variables & Constants](Notes/08_variables.md)
+- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
+- [Assignment Operators](Notes/11_assignment_operators.md)
+- [Comparison Operators](Notes/12_comparison_operators.md)
+- [Logical Operators](Notes/13_logical_operators.md)
 
 **Turtle Graphics**
 
 - [Intro to turtle](Notes/09_1_Turtle_Graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
+<!-- 
+**Python Data Types**
+
+- [What are literals](Notes/04_intro_literals.md)
+- [Booleans](Notes/07_booleans.md)
+
+
+
 **Operators**
-- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
-- [Assignment Operators](Notes/11_assignment_operators.md)
-- [Comparison Operators](Notes/12_comparison_operators.md)
+
 - [Logical Operators](Notes/13_logical_operators.md)
 - [Priority Operations](Notes/14_priority_operations.md)
 
