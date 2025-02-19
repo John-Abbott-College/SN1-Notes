@@ -12,7 +12,7 @@
 **Strings Variables**
 
 - [Strings](Notes/06_1_strings.md)
-- [String Operations](Notes/06_1_strings_operations.md)
+- [String Operations](Notes/06_1_2_strings_operations.md)
 - [F string formatting](Notes/06_2_f_strings.md)
 
 **Operators**
