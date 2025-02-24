@@ -27,6 +27,11 @@
 - [Intro to turtle](Notes/09_1_turtle_graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
+**Statements** 
+
+- [If statement](Notes/26_conditions_if.md)
+- [For loop](Notes/23_1_for_loop)
+
 <!-- 
 **Python Data Types**
 

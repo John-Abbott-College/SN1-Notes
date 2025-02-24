@@ -27,5 +27,7 @@
   
   * [Assignment Operators](Practice_questions/04_Practice_Variables.md)
   
+  * [Loops](07_Practice_Loops.md)
+  
     
 
