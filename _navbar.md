@@ -29,5 +29,7 @@
   
   * [Loops](Practice_questions/07_Practice_Loops.md)
   
+  * [Loops and Turtle](Practice_questions/08_Practice_loops_drawing_with_turtle.md)
+  
     
 
