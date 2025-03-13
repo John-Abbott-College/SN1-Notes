@@ -161,6 +161,8 @@ $$
 
 
 ```python
+import turtle 
+pen = turtle.Turtle()
 num_squares = 5
 for i in range(num_squares):
     if i%2 == 0:
@@ -187,6 +189,8 @@ for i in range(num_squares):
 **Solution using a nested loop**
 
 ```python
+import turtle
+pen = turtle.Turtle()
 num_squares = 5
 side = 10
 for i in range(num_squares):
@@ -206,6 +210,9 @@ for i in range(num_squares):
 **Solution using a function**
 
 ```python
+import turtle
+pen = turtle.Turtle()
+
 def draw_square(side):
    for _ in range(4):
             pen.forward(side)

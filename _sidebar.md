@@ -32,30 +32,34 @@
 - [If statement](Notes/26_conditions_if.md)
 - [For loop](Notes/23_1_for_loop)
 
+**Functions**
+
+- [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
+
+- [Math Functions](Notes/17_functions_math_module.md)
+
+- [Basic I/O Functions](Notes/18_functions_print_input.md)
+
+- [User defined functions](Notes/19_user_defined_functions.md)
+
+  
+
 <!-- 
 **Python Data Types**
+
+- [Type Hinting](Notes/20_functions_type_hint.md)
+
+- [Scopes](Notes/21_functions_and_scopes.md)
+
+  
 
 - [What are literals](Notes/04_intro_literals.md)
 - [Booleans](Notes/07_booleans.md)
 
 
 
-**Operators**
-
-- [Logical Operators](Notes/13_logical_operators.md)
-- [Priority Operations](Notes/14_priority_operations.md)
-
-
-**Functions**
-- [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
-- [Math Functions](Notes/17_functions_math_module.md)
-- [Basic I/O Functions](Notes/18_functions_print_input.md)
-- [User defined functions](Notes/19_user_defined_functions.md)
-- [Type Hinting](Notes/20_functions_type_hint.md)
-- [Scopes](Notes/21_functions_and_scopes.md)
-
-
 **Lists**
+
 - [List introduction](Notes/28_1_lists.md) 
 - [Looping over list](Notes/28_2_lists.md)
 - [List in action](Notes/28_3_lists.md)
