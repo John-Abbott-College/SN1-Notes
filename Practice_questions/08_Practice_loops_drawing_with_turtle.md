@@ -4,7 +4,7 @@
 
 Write a script which draws red and blue squares with growing sides as such:
 
-<img src="images_exos/squares_red_blue.png" height=300/>
+<img src="Practice_questions/images_exos/squares_red_blue.png" height=300/>
 
 **Level 1**
 
