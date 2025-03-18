@@ -45,7 +45,7 @@ draw_square(100)
 
 **Level 2**
 
-1. Create a function called `draw_polygone()` which takes as input parameter the length `side` and the number of sides`num_sides` to draw any regular polygon. 
+1. Create a function called `draw_polygon()` which takes as input parameter the length `side` and the number of sides`num_sides` to draw any regular polygon. 
 
    > Hint: You must find a relationship between the external angles of the polygon and the number of sides.
 
@@ -58,7 +58,7 @@ draw_square(100)
 
  
 
-2. Create a function called `draw_concentric_polygones()` which takes as input parameter the `num_sides`, the count of polygons to draw`num_polygones` . It draws polygons with `num_sides` that start with a side length of `0`, then grows by 1 each iteration (side: 1, 2, 3, ..., `num_polygones`-1). As shown below:
+2. Create a function called `draw_concentric_polygons()` which takes as input parameter the `num_sides`, the count of polygons to draw`num_polygons` . It draws polygons with `num_sides` that start with a side length of `0`, then grows by 1 each iteration (side: 1, 2, 3, ..., `num_polygons`-1). As shown below:
 
    <img src="Practice_questions/images_exos/spiral.png" height=400/>
 
@@ -305,7 +305,7 @@ for i in range(num_squares):
 
 
 2. ```python
-   def draw_concentric_polygones(num_sides:int, num_poly: int):
+   def draw_concentric_polygons(num_sides:int, num_poly: int):
        side = 0
        for iteration in range(num_poly):
            side += 10
