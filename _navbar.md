@@ -1,12 +1,13 @@
 * **Getting started**
+  
   * [Installation Windows](Getting_started/01_1_python_installation_win.md)
   * [Installation Mac](Getting_started/01_2_python_installation_mac.md)
   * [Creating a project](Getting_started/03_create_new_project.md)
   * [Using Léa](Getting_started/04_lea.md)
   * [Debugging](Getting_started/06_debugging.md)
   * [OneDrive](Getting_started/07_one_drive.md)
-
-* **Topics**
+  
+* Topics
   * [Introduction](Pages/introduction_topics_page.md)
   * [Python Data Types](Pages/data_types_page.md)
   * [Variables & Constants](Notes/08_variables.md) 
@@ -30,6 +31,10 @@
   * [Loops](Practice_questions/07_Practice_Loops.md)
   
   * [Loops and Turtle](Practice_questions/08_Practice_loops_drawing_with_turtle.md)
+  
+  * [Conditional statements](Practice_questions/06_Practice_Conditional_statements.md)
+  
+  * [Functions](Practice_questions/05_Practice_Functions.md)
   
     
 
