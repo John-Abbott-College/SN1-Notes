@@ -1,8 +1,10 @@
 ## Looping through a list 
 
-Looping through a list involves visiting each item in the list one by one to perform an operation on it.  The`for` loop is the ideal tool to repeat a statement while iterating over whatever is in the list. The following 
+Looping through a list involves visiting each item in the list one by one to perform an operation on it.  The`for` loop is the ideal tool to repeat a statement while iterating over whatever is in the list. 
 
 **Example** 
+
+The following way traverses each letter one by one.
 
 ```python
 my_list = ['a','b','c','d','e','f']
@@ -10,18 +12,18 @@ for item in my_list:
     print(item)
 ```
 
-Alternatively, you may use a `for` in combination with`range()` to traverse each index of the list, but this strategy is  less efficient as it needs to call `len()` and needs to find the range of indices to traverse:
+
+
+If there is a need to keep track of the iteration number`i` of each element, Python offers the built-in function [ `enumerate()`](https://www.geeksforgeeks.org/enumerate-in-python/) to return both the `index` and the `item` without having  to use `range()` and `len()`.
 
 ```python
-for i in range(len(my_list)):
-	print(my_list[i])
+for i, item in enumerate(my_list):
+	print(i, item)
 ```
 
-The above method though is useful if you need to keep track of the iteration number`i`. That said, python offers the built-in function [ `enumerate()`](https://www.geeksforgeeks.org/enumerate-in-python/) to return both the `index` and the `item` without having  to use `range()` and `len()`.
 
 
-
-## Looping through multiple paired lists
+## Paired lists - using `Zip`
 
 Consider the following two lists that represent various travel destinations and their associated ticket prices.
 
@@ -40,11 +42,10 @@ Cancun  478.00$
 Paris  1347.00$
 ```
 
-An initial strategy would be to iterate over both lists using a `for` loop iterating over the indices with`range()`, assuming that both lists will always have the same length, such as :
+An initial strategy would be to iterate over both lists using a `for` loop iterating `enumerate()`, assuming that both lists will always have the same length, such as :
 
 ```python
-for i in range(len(destinations)):
-	destination = destinations[i]
+for i,destination in enumerate(destinations):
 	price = ticket_prices[i]
 	print(destination, f"{price}$")
 ```

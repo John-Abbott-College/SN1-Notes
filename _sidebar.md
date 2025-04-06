@@ -42,7 +42,11 @@
 
 - [User defined functions](Notes/19_user_defined_functions.md)
 
-  
+
+**Lists**
+
+- [List introduction](Notes/28_1_lists.md) 
+- [Looping over lists](Notes/28_2_lists.md)
 
 <!-- 
 **Python Data Types**
@@ -56,15 +60,12 @@
 - [What are literals](Notes/04_intro_literals.md)
 - [Booleans](Notes/07_booleans.md)
 
-
-
 **Lists**
 
-- [List introduction](Notes/28_1_lists.md) 
-- [Looping over list](Notes/28_2_lists.md)
 - [List in action](Notes/28_3_lists.md)
 
 **Statements** 
+
 - [For loop](Notes/23_1_for_loop)
 - [If statement](Notes/26_conditions_if.md)
 - [If/Else statement](/Notes/27_conditions_if_else.md)
