@@ -7,7 +7,7 @@
   * [Debugging](Getting_started/06_debugging.md)
   * [OneDrive](Getting_started/07_one_drive.md)
   
-* Topics
+* **Topics**
   * [Introduction](Pages/introduction_topics_page.md)
   * [Python Data Types](Pages/data_types_page.md)
   * [Variables & Constants](Notes/08_variables.md) 
@@ -22,6 +22,7 @@
   * [Additional notes](Pages/additional_notes_page.md)
 
 * **Practice Exercises**
+  
   * [Data Types](Practice_questions/01_Practice_DataTypes.md)
   
   * [Arithmetic Operators](Practice_questions/02_Practice_Arithmetics.md)
