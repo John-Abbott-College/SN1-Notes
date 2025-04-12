@@ -179,19 +179,24 @@ $$
 
 [Solution](#Elections Helper solution)
 
-If you've been following the US elections lately, you've probably realize that its a two-party electoral system. The seat of a district is awarded to the candidate with the most votes in that district. The winner of the elections wins the most seats, that means more than half (because only two parties).
+Create a votes counter program for a two-party-only electoral system. The seat of a district is awarded to the candidate with the most votes in that district. The winner of the elections wins the most seats.
 
 In a `main()` function:
 
-- asks the user how many electoral districts there are (num_district)
+- Asks the user how many electoral districts there are (`num_district`)
 
-- for each district, asks the user to enter the votes for candidate1 and candidate2
+- For each district, asks the user to enter the votes for candidate1 and candidate2
 
-- display the min number of votes, max number of votes, average number of votes for each candidate
+- Save the vote counts into two lists `votes1_list` and  `votes2_list`
 
-- **Bonus:** The winner won a majority of seats (greater than `num_districts` /2 ). Be careful to verify the two lists have the same length. 
+- Display the min number of votes, max number of votes, average number of votes for each candidate
 
-- **Bonus2:** Use a list comprehension i.e. `[x for x in sequence ]` to create two more lists with the percentage of popular vote each candidate got in each district. 
+- Determine the winner of the election (party with the most seats)
+
+- **Bonus2:** Use a list comprehension i.e. `[x for x in sequence ]` to create two more lists; 
+  - Candidate 1's percentage of popular vote in each district 
+  - Candidate 2's percentage of popular vote in each district 
+
 
 
 
@@ -213,6 +218,8 @@ print(len(numbers))
 a=['sandy', 'bob', 'bette', 'sally', 'rachel']
 ```
 
+
+
 3. 
 
 ```python
@@ -233,10 +240,10 @@ for element in a:
 ```python
 a=["hello ", 3, "world, ", 6, "I ", 21,"am ",18,"fine", -2]
 
-"""part 1"""
+#part 1
 print (a[0], a[2], a[4], a[6], a[8])
 
-"""Part 2"""
+# part2
 for index in range(1,len(a),2):
   print(a[index])
 ```
@@ -258,7 +265,7 @@ print(total)
 6. 
 
 ```python
-""" part 1"""
+#part 1
 
 grades = []
 n: int = int( input("How many grades do you want to enter? "))
@@ -266,7 +273,7 @@ for i in range(n):
   grade: float = float( input(f"Enter grade for student {i+1}: "))
   grades.append(grade)
   
-""" part 2 """
+#part 2
 a = [1, 3, 5]
 ```
 
@@ -337,28 +344,12 @@ print(f"The average temperature on week days for the past two weeks was {average
 
 
 
-4. 
-
-   ```python
-   """Using indices """
-   def average(grades:list[float], ignore_indexes: list[int]):
-       total = 0
-       count = 0
-       for i in range(len(grades)):
-           if i not in ignore_indexes:
-               total += grades[i]
-               count += 1
-           else:
-               # just to validate 
-               print(f"Grade {i}: Value: {grades[i]} was ignored")
-       return total/count
-       
-   ```
+4.    
 
    
-
+   
    ```python
-   """Using enumerate and another list"""
+   # Using enumerate and another list
    def average(grades:list[float], ignore_indexes: list[int]):
        filtered_grades = []
        for index, grade in enumerate(grades):
@@ -372,40 +363,13 @@ print(f"The average temperature on week days for the past two weeks was {average
 
 
 
-​	
-
-
-
 
 
 #### Level 3 - Paired Lists
 
-1. (Note: Resistance is approx 100)
+1. (Note: Resistance is approx. 100)
 
-```python
-"""Using indices"""
 
-measured_voltage = [15.101699904780466, 87.52514747233391, 205.2337707312554, 289.1094432508661, 414.7758261003678,
-                    521.0061492043556, 625.1419596586946, 709.8114743758281, 787.1784934174754, 905.4308513168793]
-measured_current = [3.944899134858856, 1.5777028976680696, 2.7491943548717384, 3.670317402603832, 5.83579244326929,
-                    3.015612264536842, 7.93966836058325, 3.033586150442605, 8.267700560322258, 6.856525379569174]
-
-num_measurements = min( len(measured_voltage), len(measured_current) )
-
-def calculate_resistance(voltages,currents):
-    resistances = []
-    for i in range(num_measurements):
-        resistances.append(voltages[i]/currents[i])
-        
-    resistance = sum(resistances)/num_measurements
-    return resistance
-
-def main():
-    r = calculate_resistance(measured_voltage, measured_current)
-    print(f"The average measured resistance is: {r}")
-main()
-    
-```
 
 ```python
 """ Using zip"""
@@ -490,10 +454,10 @@ Election helper
 - for each district, asks the user to enter the votes for candidate1 and candidate2
 - save the vote count of each candidate in a list
 - display the min number of votes, max number of votes, average number of votes for each candidate
-- Bonus: who won the election?
+- Who won the election?
      * The winner won a majority of seats (greater than num_districts /2 )
 
-     * Use a list comprehension (ie [x for x in sequence]), to create the percentage of
+- Bonus: Use a list comprehension (ie [x for x in sequence]), to create the percentage of
      popular vote each candidate got in each district
 """
 
@@ -505,7 +469,7 @@ def print_vote_stats(votes_list: list[int]):
     avg1= sum(votes_list)/len(votes_list)
     print("Average votes", avg1 ,"votes")
 
-def print_bonus(candidate1_list: list[int], candidate2_list: list[int]):
+def determine_winner(candidate1_list: list[int], candidate2_list: list[int]):
     """Establishes the winner of an electoral campaign
     Note: This assumes a bi-party electoral system"""
     if len(candidate1_list) != len(candidate2_list):
@@ -515,35 +479,27 @@ def print_bonus(candidate1_list: list[int], candidate2_list: list[int]):
     num_districts = len(candidate1_list)
 
 
-    wins1 = 0
-    wins2 = 0
-    # Method 1 (you can also use zip)
-    for i in range(len(candidate1_list)):
-        if candidate1_list[i] > candidate2_list[i]:
+    wins1, wins2 = 0, 0
+      
+    for i,vote1and2 in enumerate(zip(candidate1_list,candidate2_list)):
+        vote1, vote2 = vote1and2 # unpacking tuple
+        if vote1 > vote2:
             print(f"Won by 🚩 in District {i+1}")
             wins1 += 1
-        elif candidate2_list[i] > candidate1_list[i]:
+        elif vote2 > vote1:
             wins2 += 1
             print(f"Won by 🏳️ in District {i+1}")
         else:
             print(f"Draw in District {i+1}")
 
-    """
-    In the case of the US elections:
-    Because it is a bi-party electoral system, to win the presidential elections, a candidate must win more 
-    than half the electoral districts seats. 
-    If neither candidate gets a majority of the 538 electoral votes, the election for President is decided in the 
-    House of Representatives, with each state delegation having one vote. A majority of states (26) is needed to win. 
-    Senators would elect the Vice-President, with each Senator having a vote. A majority of Senators (51) is needed 
-    to win.
-    """
-    if wins1 > num_districts //2 + 1 : # we can't have half of district
+    # Moment of truth...
+    if wins1 > wins2 : 
         print("🚩🚩🚩🚩Candidate 1 won the elections! 🚩🚩🚩🚩")
-    elif wins2 > num_districts//2 +1 :
+    elif wins2 > wins1 :
         print("🏳️🏳️🏳️🏳️ Candidate 2 won the elections! 🏳️🏳️🏳️🏳️")
     else:
-        print("😱😱😱 No winner! Caos time!!! 😱😱😱")
-        print("Actually, the election for President now have to be decided in the House of Representatives by the delegates \nof each state")
+        #There needs to be a third option in case of a draw
+        print("😱😱😱 No winner! Chaos time!!! 😱😱😱")
 
 ```
 
@@ -570,15 +526,15 @@ def main():
     print_vote_stats(votes_list1)  # Note: Creating a function is useful as you can re-use this
     print("---------------------")
 
-    print("Candidate 🏳️ 2 stats: ") # for a lack of blue flags, I used white XD
+    print("Candidate 🏳️ 2 stats: ")
     print_vote_stats(votes_list2)
     print("---------------------")
 
-    print_bonus(votes_list1, votes_list2)
+    determine_winner(votes_list1, votes_list2)
 
 
     print()
-    print(f"Yeah... typing {num_districts} districts manually 🫤 was kind of long")
+    print(f"Yeah... typing the vote count for {num_districts} districts manually 🫤 was kind of long")
     print("Stay tuned for the next part...reading files 😎")
     print()
 
