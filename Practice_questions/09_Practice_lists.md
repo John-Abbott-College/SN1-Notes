@@ -87,9 +87,14 @@ $$
    ```
 
    - calculate and display the minimum
+   
    - calculate and display the maximum
+   
    - calculate and display the average 
-   - print the sorted list.
+   
+   - print the sorted list
+   
+     > Hint: Use the `.sort()` method.
 
 
 
@@ -130,26 +135,6 @@ $$
 
      
 
-#### Elections Helper
-
-[Solution](#Elections Helper solution)
-
-If you've been following the US elections lately, you've probably realize that its a two-party electoral system. The seat of a district is awarded to the candidate with the most votes in that district. The winner of the elections wins the most seats, that means more than half (because only two parties).
-
-In a `main()` function:
-
-- asks the user how many electoral districts there are (num_district)
-
-- for each district, asks the user to enter the votes for candidate1 and candidate2
-
-- display the min number of votes, max number of votes, average number of votes for each candidate
-
-- **Bonus:** The winner won a majority of seats (greater than `num_districts` /2 ). Be careful to verify the two lists have the same length. 
-
-- **Bonus2:** Use a list comprehension i.e. `[x for x in sequence ]` to create two more lists with the percentage of popular vote each candidate got in each district. 
-
-  
-
 #### Level 3 
 
 1. Paired Lists: You have two lists, one with voltage readings, and one with current readings taken during a physics lab.
@@ -181,11 +166,32 @@ $$
 
 **Part 2** (Plotting)
 
+- Using `matplotlib`
+
 - Plot the `sin_values` versus the `time_values`. 
 
 - Can you explain why plotted line is not smooth (has choppy lines instead of a smooth curve). What should you change to improve this?
 
-  
+
+4. - 
+
+#### Elections Helper
+
+[Solution](#Elections Helper solution)
+
+If you've been following the US elections lately, you've probably realize that its a two-party electoral system. The seat of a district is awarded to the candidate with the most votes in that district. The winner of the elections wins the most seats, that means more than half (because only two parties).
+
+In a `main()` function:
+
+- asks the user how many electoral districts there are (num_district)
+
+- for each district, asks the user to enter the votes for candidate1 and candidate2
+
+- display the min number of votes, max number of votes, average number of votes for each candidate
+
+- **Bonus:** The winner won a majority of seats (greater than `num_districts` /2 ). Be careful to verify the two lists have the same length. 
+
+- **Bonus2:** Use a list comprehension i.e. `[x for x in sequence ]` to create two more lists with the percentage of popular vote each candidate got in each district. 
 
 
 
@@ -539,8 +545,9 @@ def print_bonus(candidate1_list: list[int], candidate2_list: list[int]):
         print("😱😱😱 No winner! Caos time!!! 😱😱😱")
         print("Actually, the election for President now have to be decided in the House of Representatives by the delegates \nof each state")
 
+```
 
-
+```python
 
 def main():
     print("Welcome to the election vote counter program 🗳️")

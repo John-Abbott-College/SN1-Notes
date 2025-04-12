@@ -36,5 +36,7 @@
   
   * [Functions](Practice_questions/05_Practice_Functions.md)
   
+  * [Lists](Practice_questions/09_Practice_lists.md)
+  
     
 
