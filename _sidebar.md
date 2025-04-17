@@ -30,6 +30,7 @@
 **Statements** 
 
 - [If statement](Notes/26_conditions_if.md)
+- [If/Else statement](/Notes/27_conditions_if_else.md)
 - [For loop](Notes/23_1_for_loop)
 
 **Functions**
@@ -47,6 +48,12 @@
 
 - [List introduction](Notes/28_1_lists.md) 
 - [Looping over lists](Notes/28_2_lists.md)
+
+**Scientific modules**
+
+- [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
+
+  
 
 <!-- 
 **Python Data Types**
@@ -67,17 +74,18 @@
 **Statements** 
 
 - [For loop](Notes/23_1_for_loop)
-- [If statement](Notes/26_conditions_if.md)
-- [If/Else statement](/Notes/27_conditions_if_else.md)
 
+- [If statement](Notes/26_conditions_if.md)
+
+  
 
 **Math To Python**
+
 - [Accumulators & Series](Notes/31_accumulator_pattern.md)
 - [Formula Translator](Notes/32_from_math_to_python.md)
 
-
 **Scientific modules**
-- [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
+
 - [Intro to Numpy](Notes/33_2_numpy.md)
 
 **Files**
