@@ -8,6 +8,7 @@
 - [What are literals](Notes/04_intro_literals.md)
 - [Variables & Constants](Notes/08_variables.md)
 - [Integers & Floats](Notes/05_integers_floats.md)
+- [Booleans](Notes/07_booleans.md)
 
 **Strings Variables**
 
@@ -36,11 +37,8 @@
 **Functions**
 
 - [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
-
 - [Math Functions](Notes/17_functions_math_module.md)
-
 - [Basic I/O Functions](Notes/18_functions_print_input.md)
-
 - [User defined functions](Notes/19_user_defined_functions.md)
 
 
@@ -49,13 +47,21 @@
 - [List introduction](Notes/28_1_lists.md) 
 - [Looping over lists](Notes/28_2_lists.md)
 
+**Additional notes**
 
+- [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
+- [List in action](Notes/28_3_lists.md)
+
+**Files**
+
+- [Reading/Writing Files](Notes/35_reading_files.md)
 
 **Scientific modules**
 
 - [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
+- [Intro to Numpy](Notes/33_2_numpy.md)
 
-  
+
 
 <!-- 
 **Python Data Types**
@@ -64,8 +70,6 @@
 
 - [Scopes](Notes/21_functions_and_scopes.md)
 
-  
-
 - [What are literals](Notes/04_intro_literals.md)
 - [Booleans](Notes/07_booleans.md)
 
@@ -73,30 +77,10 @@
 
 - [List in action](Notes/28_3_lists.md)
 
-**Statements** 
-
-- [For loop](Notes/23_1_for_loop)
-
-- [If statement](Notes/26_conditions_if.md)
-
-  
-
 **Math To Python**
 
 - [Accumulators & Series](Notes/31_accumulator_pattern.md)
 - [Formula Translator](Notes/32_from_math_to_python.md)
-
-**Scientific modules**
-
-- [Intro to Numpy](Notes/33_2_numpy.md)
-
-**Files**
-- [Reading/Writing Files](Notes/35_reading_files.md)
-
-**Additional notes**
-
-- [F string formatting](Notes/06_2_f_strings.md)
-- [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 
  -->
 
