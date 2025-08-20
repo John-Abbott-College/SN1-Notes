@@ -15,14 +15,11 @@ Python has some pre-existing built-in modules like `math`, `turtle`, `datetime` 
 
 ## Importing and installing a module
 
-1. Create a new PyCharm project 
-2. In the project configuration window> Interpreter type: Make sure  **Project venv** is selected
+1. Ensure that the  PyCharm project is using the System's interpreter
 
-<img src= "Images/install_module/img_2.png"/>
+2. Add a python file to write your code.
 
-3. Add a python file to write your code.
-
-4. The `import` statement followed by the module name, allows you to import a module into your script. For example:
+3. The `import` statement followed by the module name, allows you to import a module into your script. For example:
 
    ```python
    import math   #comes built-in with python
@@ -44,7 +41,7 @@ Python has some pre-existing built-in modules like `math`, `turtle`, `datetime` 
    > print(sin(0))
    > ```
 
-5.  If you are importing a module that wasn't installed, it will be underlined in red:
+4. If you are importing a module that wasn't installed, it will be underlined in red:
 
    ```python
    import numpy as np
@@ -53,45 +50,39 @@ Python has some pre-existing built-in modules like `math`, `turtle`, `datetime` 
 
    <img src= "Images/install_module/img_4.png"/>
 
-6. If you see an error saying "Unresolved reference", that means you must install the module.
+5. If you see an error saying "Unresolved reference", that means the module **is not installed** on the computer.
 
-7. Click File > Settings to open the Settings menu:
+### **Installing via PyCharm**
 
-   <img src= "Images/install_module/img_3.png"/>
+1. Click File > Settings to open the Settings menu:
 
-8. Select Project > Project interpreter from the left hand side menu
+<img src= "Images/install_module/img_3.png"/>
 
-9. This is all the list of modules that are installed in my project, yours might not contain much for now.
+2. Select Project > Project interpreter from the left hand side menu
 
-10. To add a package/module, click the + button at the top of the list
+3. This is all the list of modules that are installed in my project, yours might not contain much for now.
 
-11. Search for the package you want installed: "*matlplotlib*" then click *Install Package*
+4. To add a package/module, click the + button at the top of the list
 
-    <img src= "Images/install_module/img_5.png"/>
+5. Search for the package you want installed: "*matlplotlib*" then click *Install Package*
 
-12. While you are here, install *numpy* as well:
+   <img src= "Images/install_module/img_5.png"/>
 
-    <img src= "Images/install_module/img_6.png"/>
+6. While you are here, install *numpy* as well:
 
-13. Now that the packages are installed, try typing those lines in your python file:
+   <img src= "Images/install_module/img_6.png"/>
 
-    ```python
-    import numpy as np
-    from matlplotlib import pyplot
-    
-    ```
+7. Now that the packages are installed, try typing those lines in your python file:
 
-Do I need to install the modules every time I start a new project? 
-
-On the school computers...yes unfortunately because you don't have the right permissions to install them for all projects. 
-
-But at home you can use a useful command called `pip install` to have them installed permanently and for all projects. 
+   ```python
+   import numpy as np
+   from matlplotlib import pyplot
+   
+   ```
 
 
 
-## Installing modules on your home PC
-
-**How to use the command line (like a pro 😎) - Windows**
+### **Installing via command line on Windows (like a pro 😎) **
 
 1. Type **cmd** in the Windows search bar and click the "Command Prompt" icon.
 
@@ -108,7 +99,7 @@ pip install matplotlib
 pip install numpy
 ```
 
-**How to use the command line (like a pro 😎) - Mac**
+### **Installing via Terminal on Mac (like a pro 😎)**
 
 1. From Launch page, search for an app called Terminal
 2. Type the following command in [Terminal](https://support.apple.com/en-ca/guide/terminal/welcome/mac):
@@ -152,7 +143,26 @@ import matplotlib.pyplot as plt
 
    
 
-3. Follow [this tutorial](https://www.w3schools.com/python/matplotlib_pyplot.asp) to learn the different ways of styling your graph:
+3. To draw a simple scatter point, you can use `plt.scatter(x,y)`:
+
+   ```python
+   plt.scatter(xpoints, ypoints)
+   plt.show()
+   ```
+
+   
+
+4. If you wish to save your graphs, use `plt.savefig()`. This will create a PNG image inside your project directory. 
+
+   ```python
+   plt.plot(xpoints, ypoints)
+   plt.savefig("my_first_graph.png")
+   plt.show() # This line is important to display your graph
+   ```
+
+   
+
+5. Follow [this tutorial](https://www.w3schools.com/python/matplotlib_pyplot.asp) to learn the different ways of styling your graph (colours, markers, titles, scales, etc)
 
    
 

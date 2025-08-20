@@ -1,4 +1,4 @@
-# What is Programming?
+## What is Programming?
 
 
 
@@ -52,7 +52,7 @@ Python was chosen for this course for the following reasons:
 
 Now this is great! But how are programming languages understood by computers? Answer: they are translated into machine code. For example, the Python code is translated by the Python interpreter into machine code.  
 
-<img src="Images/programming_process.png" height="300">
+<img src="./Getting_started/images/programming_process.png" height="300">
 
 The Central Processing Unit which acts as the brain of a computer will then execute (i.e.: run the instructions) the program.  
 
@@ -60,7 +60,7 @@ The Central Processing Unit which acts as the brain of a computer will then exec
 
 ## Demo: Using a Terminal to write your first lines of code
 
-
+*Windows*
 
 - On your Windows PC, type "CMD" in the search bar to open the ***Command Line Prompt*** 
 
@@ -70,8 +70,17 @@ The Central Processing Unit which acts as the brain of a computer will then exec
   python
   ```
 
+*MAC*
 
-> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow this [tutorial]() to install python. 
+- On your Mac, hold the command key and the space bar simulatenously until the "Spotlight Search" window is open.  Type `terminal` in the search bar to open the ***Command Line Prompt*** 
+
+- Type the following command and hit the enter button: 
+
+  ```bash
+  python3
+  ```
+
+> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab "Getting Started" from these [notes]() to install python. 
 >
 > ⚠️ If you are sure to have correctly installed python, try this command instead `python3` 
 
@@ -110,7 +119,7 @@ This will tell your computer that you will start writing instructions in the pro
 
 ## Additional notes
 
-**More on Binary **
+**More on Binary**
 
 - Also called base-2 (as oppose to base-10 which we are mostly used to)
 

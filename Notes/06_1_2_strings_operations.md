@@ -1,76 +1,12 @@
-
-
-# Strings
-
-
-
-When programming, textual data is represented by objects called *strings*.  Textual data can be words such as *Apple*, a short message such as *Hello World*, or longer sentences such as *In high school, Jimmy learned some programming. That's why cegep feels easy for him*.  They are made up of a sequence of alphanumeric characters.
-
-
-
-### Creating a string
-
-Strings can be created in different ways, by using `""`, `''` or `""" """`. Let's explore the various ways of creating strings.
-
-1. Using double quotes:
-
-   ```python
-   print("Hello World")
-   ```
-
- - ```python
-   my_string = "Johnny"
-   print(my_string)
-   ```
-
-​	However, what if we wanted to add a double quote inside the string so that it would read *Hello "World"* ? 
-
-> ​	Try this command `print(""Hello "World"")` What happens? What is the error?
-
-- There are a few workaround this issue:
-
-  - Use the escape character `\` in front of each double quote `print("Hello \"World\"")`
-
-  - Use another method to create the string (see below) while keeping the inner `""`
-
-    
-
-2. Using single quotes:
-
-   ```python
-   print('Hello "World" ')
-   ```
-
-   - In Python you can also use the single quote`'` to define a string, this is useful when trying to include a double quote `"` within the string. 
-
-   - Similarly to the double quote, you can use the escape character to include a single quote within the string.
-
-     ```python
-     print('I\'m enjoying programming! Well, when there are no bugs.')
-     ```
-
-     
-
-3. Using triple quotes:
-
-   ```python
-   print(""" This is a complex string with double quotes "" and a single quote '' that splits over
-   ...  another line""")
-   ```
-
-   - This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It's ideal for long paragraphs. 
-
-
+# String Operations
 
 ### Combining strings
+
+Combining or concatenating strings allows you to merge multiple strings into a single new string.
 
 ```python
 print('my name is ' + 'Jennifer')
 ```
-
-- Combining or concatenating strings allows you to merge multiple strings into a single new string.
-
-
 
 
 
@@ -82,6 +18,7 @@ last_name = 'Jose'
 age = "19"
 ... complete this
 ```
+
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">        
     <button class="codeboot-button">
@@ -89,6 +26,7 @@ age = "19"
     </button>     
     </a> 
 </div>
+
 
 
 **String formatting**
@@ -115,6 +53,7 @@ semester = 1
 number_credits = 15
 ... complete this
 ```
+
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.fY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">        
     <button class="codeboot-button">
@@ -122,6 +61,7 @@ number_credits = 15
     </button>     
     </a> 
 </div>  
+
 
 ### Splitting a string
 
@@ -149,12 +89,13 @@ print(names.split('#'))
 > - Unlike the `print()` it cannot be called on its own. Which means you have to use the `.` following the name the string variable that is being split.
 
 ✍️**Challenge 3**: The following script contains important values that should be seperated. Use the `split()` method to output the following values: `['15', '49', '56.2', '78.0', '89.2', '456']`
-```python
 
+```python
 raw_data="15 49 56.2 78.0 89.2 456"
 
 ...complete this
 ```
+
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.oY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.fY2hhbGxlbmdlXzNfc3RyaW5ncy5weQ==~XQAAgAA8AAAAAAAAAAA5GEtUbbz67SFqkqtVQMtKQ4Ewxqs3F3xg0Hw4CYhb7i9jwZHfKbrxFXCZFZfHrjZTzIFW_xqblguf_tzMAA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">        
     <button class="codeboot-button">
@@ -162,6 +103,7 @@ raw_data="15 49 56.2 78.0 89.2 456"
     </button>     
     </a> 
 </div>  
+
 
 > You'll notice that when the seperator is a space character ` `, you can call the `split()` method without specifying any input argument. By default, this method seperates a string using the ` `.
 > Comma seperated values (CSV) are popular files for sharing tables of data. We will see them a little but later in the course.
@@ -173,7 +115,7 @@ Observe the following raw string data "Student number: 123456". What if we are i
 
 Strings are nothing more than sequences of unicode character ('a','b','c',....'%','#',....). Each character in a string occupies a specific position or index. For example in "Hello World", the 'H' character is at index 0, the 'e' is at index 1, the 'l' is at index 2, etc.
 
-<img src="Images/strings_index.png" />
+<img src="C:/Users/Youmna.Badawy/Documents/repos/SN1-Notes/Notes/Images/strings_index.png" />
 
 To access a specific character within the string, use square brackets `[]` and the index of the character to select:
 
@@ -200,6 +142,4 @@ print(useful_data)    #Output: `123456`
 ```
 
 Notice that the `end_index` is one more than 21. That is because the range `16:22` will count 16, 17, 18, 19, 20, 21 and stop when the index reaches `end_index` (in this case: 22).  We will learn more about ranges with for loops. 
-
-
 

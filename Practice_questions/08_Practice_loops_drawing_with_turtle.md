@@ -1,5 +1,11 @@
 # Drawing with turtle and loops
 
+**Red and Blue squares**
+
+Write a script which draws red and blue squares with growing sides as such:
+
+<img src="Practice_questions/images_exos/squares_red_blue.png" height=300/>
+
 **Level 1**
 
 1. Use a `for-loop` to draw a square with turtle instead of repeating the lines multiple times. The draw:
@@ -39,7 +45,7 @@ draw_square(100)
 
 **Level 2**
 
-1. Create a function called `draw_polygone()` which takes as input parameter the length `side` and the number of sides`num_sides` to draw any regular polygon. 
+1. Create a function called `draw_polygon()` which takes as input parameter the length `side` and the number of sides`num_sides` to draw any regular polygon. 
 
    > Hint: You must find a relationship between the external angles of the polygon and the number of sides.
 
@@ -52,7 +58,7 @@ draw_square(100)
 
  
 
-2. Create a function called `draw_concentric_polygones()` which takes as input parameter the `num_sides`, the count of polygons to draw`num_polygones` . It draws polygons with `num_sides` that start with a side length of `0`, then grows by 1 each iteration (side: 1, 2, 3, ..., `num_polygones`-1). As shown below:
+2. Create a function called `draw_concentric_polygons()` which takes as input parameter the `num_sides`, the count of polygons to draw`num_polygons` . It draws polygons with `num_sides` that start with a side length of `0`, then grows by 1 each iteration (side: 1, 2, 3, ..., `num_polygons`-1). As shown below:
 
    <img src="Practice_questions/images_exos/spiral.png" height=400/>
 
@@ -102,6 +108,131 @@ draw_square(100)
 5. Create a function `spiral()` that moves the pen in an outward going spiral that circles round at least 10 times.
 
 ### Answers:
+
+**Red and Blue squares**
+
+**Solution using an accumulated `side` and variable `current_color`**
+
+```python
+import turtle 
+pen = turtle.Turtle()
+num_squares = 5
+side = 10
+current_color = "red"
+# sets the color
+pen.color(current_color)
+for i in range(num_squares):
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    
+    # moving the pen one more time to the left
+    pen.forward(side)
+    
+    # Incrementing the side for the next turn
+    side += 10
+    
+    #switching colors before next turn
+    if current_color == "red":
+    		current_color = "blue"
+    else:
+            current_color = "red"
+    
+    pen.color(current_color)  
+```
+
+**Solution using `i`**
+
+This solution uses the relationship between `i` and the side of each square in the series:
+
+| `i`    | 0    | 1    | 2    | 3    |
+| ------ | ---- | ---- | ---- | ---- |
+| `side` | 10   | 20   | 30   | 40   |
+
+We can establish that,
+$$
+side = 10 (i + 10)
+$$
+
+
+```python
+import turtle 
+pen = turtle.Turtle()
+num_squares = 5
+for i in range(num_squares):
+    if i%2 == 0:
+    		pen.color('blue')
+    else:
+            pen.color('red')
+  
+    side = (i+1)*10
+    
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    pen.forward(side)
+    pen.left(90)
+    
+    # moving the pen one more time to the left
+    pen.forward(side)
+
+```
+
+**Solution using a nested loop**
+
+```python
+import turtle
+pen = turtle.Turtle()
+num_squares = 5
+side = 10
+for i in range(num_squares):
+	if i%2 == 0:
+    		pen.color('blue')
+    else:
+            pen.color('red')
+    for _ in range(4):
+            pen.forward(side)
+            pen.left(90)
+    
+    # moving the pen one more time to the left
+    pen.forward(side)
+    side += 10
+```
+
+**Solution using a function**
+
+```python
+import turtle
+pen = turtle.Turtle()
+
+def draw_square(side):
+   for _ in range(4):
+            pen.forward(side)
+            pen.left(90)
+```
+
+```python
+num_squares = 5
+side = 10
+for i in range(num_squares):
+	if i%2 == 0:
+    		pen.color('blue')
+    else:
+            pen.color('red')
+    draw_square(side)
+    
+    # moving the pen one more time to the left
+    pen.forward(side)
+    side += 10
+```
 
  **Level 1**
 
@@ -158,15 +289,15 @@ draw_square(100)
    import turtle
    
    pen = turtle.Turtle()
-   def draw_polygone(length_side:float, num_side:int):
+   def draw_polygon(length_side:float, num_side:int):
        for i in range(num_side):
            pen.forward(length_side)
            pen.right(360/num_side)
            
-   draw_polygone(100,5)
-   draw_polygone(100,6)
-   draw_polygone(100,10)
-   draw_polygone(10,50) # this is how computers actually approximate curves and circles
+   draw_polygon(100,5)
+   draw_polygon(100,6)
+   draw_polygon(100,10)
+   draw_polygon(10,50) # this is how computers actually approximate curves and circles
    ```
 
    
@@ -174,7 +305,7 @@ draw_square(100)
 
 
 2. ```python
-   def draw_concentric_polygones(num_sides:int, num_poly: int):
+   def draw_concentric_polygons(num_sides:int, num_poly: int):
        side = 0
        for iteration in range(num_poly):
            side += 10

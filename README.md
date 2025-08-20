@@ -1,4 +1,4 @@
-# Programming in Science - Fall 2024
+# Programming in Science - Winter 2025
 
 *Welcome to 420-SN1 Programming in Science*
 

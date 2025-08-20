@@ -55,7 +55,7 @@ The `if` statement checks if the number is greater than `0`. If the condition is
 
 The second `print` statement is outside the `if` block and will execute every time the code runs, showing that it is independent of the `if` condition.
 
-## Logical operator - reminder
+## Logical operators
 
 - `and`: The and keyword is a logical operator, and is used to combine conditional statements:
 - `or`: The `or` keyword is a logical operator, and is used to combine conditional statements:

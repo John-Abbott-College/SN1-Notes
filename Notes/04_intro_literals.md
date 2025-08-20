@@ -33,3 +33,9 @@ We will discuss each of those in more details in this section.
 "Hello World"
 ```
 
+
+
+# References
+
+1. *2.6. Statements and Expressions — How to Think like a Computer Scientist: Interactive Edition*. (n.d.). https://runestone.academy/ns/books/published/thinkcspy/SimplePythonData/StatementsandExpressions.html
+2. *What are Python Variables, Python Constants and Literals? | Definition*. (2021, June 29). Toppr-guides. https://www.toppr.com/guides/python/python-introduction/variables-constants-literals/python-variables-constants-and-literals/#:~:text=Literals%20are%20raw%20values%20or,cannot%20be%20changed%20or%20updated.
