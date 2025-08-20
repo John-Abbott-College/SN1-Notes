@@ -1,8 +1,19 @@
-**Introduction**
-- [Files & Folders](Notes/01_file_manipulation.md)
-- [What's Programming](Notes/02_what_is_programming.md)
-- [Introduction to Python](Notes/03_introduction_to_Python.md)
+<!-- **Getting Started**
 
+- [Installation Windows](Getting_started/01_1_python_installation_win.md)
+- [Installation Mac](Getting_started/01_2_python_installation_mac.md)
+- [Creating a project](Getting_started/03_create_new_project.md)
+- [Using Léa](Getting_started/04_lea.md)
+- [Debugging](Getting_started/06_debugging.md)
+- [OneDrive](Getting_started/07_one_drive.md) -->
+
+**Introduction**
+
+- [What's Programming](Notes/02_what_is_programming.md)
+<!-- - [Files & Folders](Notes/01_file_manipulation.md)
+- [Introduction to Python](Notes/03_introduction_to_Python.md) -->
+
+<!--
 **Numeric Variables**
 
 - [What are literals](Notes/04_intro_literals.md)
@@ -28,7 +39,7 @@
 - [Intro to turtle](Notes/09_1_turtle_graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
-**Statements** 
+**Statements**
 
 - [If statement](Notes/26_conditions_if.md)
 - [If/Else statement](/Notes/27_conditions_if_else.md)
@@ -44,7 +55,7 @@
 
 **Lists**
 
-- [List introduction](Notes/28_1_lists.md) 
+- [List introduction](Notes/28_1_lists.md)
 - [Looping over lists](Notes/28_2_lists.md)
 
 **Additional notes**
@@ -59,11 +70,9 @@
 **Scientific modules**
 
 - [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
-- [Intro to Numpy](Notes/33_2_numpy.md)
+- [Intro to Numpy](Notes/33_2_numpy.md) -->
 
-
-
-<!-- 
+<!--
 **Python Data Types**
 
 - [Type Hinting](Notes/20_functions_type_hint.md)
@@ -83,16 +92,3 @@
 - [Formula Translator](Notes/32_from_math_to_python.md)
 
  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
