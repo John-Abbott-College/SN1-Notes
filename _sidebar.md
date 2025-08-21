@@ -7,10 +7,10 @@
 - [Debugging](Getting_started/06_debugging.md)
 - [OneDrive](Getting_started/07_one_drive.md) -->
 
-**Introduction**
+<!--  **Introduction**
 
 - [What's Programming](Notes/02_what_is_programming.md)
-<!-- - [Files & Folders](Notes/01_file_manipulation.md)
+- [Files & Folders](Notes/01_file_manipulation.md)
 - [Introduction to Python](Notes/03_introduction_to_Python.md) -->
 
 <!--
