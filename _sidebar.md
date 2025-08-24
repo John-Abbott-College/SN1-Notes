@@ -1,8 +1,10 @@
 **Getting Started**
 
 - [Installation](Getting_started/01_personal_computer_installation/01_personal_computer_installation.md)
+- [Creating a project](Getting_started/02_create_project/02_create_project.md)
 
-<!-- - [Creating a project](Getting_started/03_create_new_project.md)
+<!--
+- [OneDrive](Getting_started/07_one_drive.md)
 - [Using Léa](Getting_started/04_lea.md)
 - [Debugging](Getting_started/06_debugging.md)
 - [OneDrive](Getting_started/07_one_drive.md)
