@@ -1,19 +1,14 @@
 **Getting Started**
 
-- [Installation](Getting_started/01_personal_computer_installation/01_personal_computer_installation.md)
-- [Creating a project](Getting_started/02_create_project/02_create_project.md)
-
-<!--
-- [OneDrive](Getting_started/07_one_drive.md)
-- [Using Léa](Getting_started/04_lea.md)
-- [Debugging](Getting_started/06_debugging.md)
-- [OneDrive](Getting_started/07_one_drive.md)
+- [Installation](Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation.md)
+- [Creating a project](Notes/getting-started/02_create_project/02_create_project.md)
+- [Using Lea](Notes/getting-started/03_lea/03_lea.md)
 
   **Introduction**
 
+- [Files & Folders](Notes/introduction/01_file_manipulation/01_file_manipulation.md)
 - [What's Programming](Notes/02_what_is_programming.md)
-- [Files & Folders](Notes/01_file_manipulation.md)
-- [Introduction to Python](Notes/03_introduction_to_Python.md) -->
+- [Introduction to Python](Notes/03_introduction_to_Python.md)
 
 <!--
 **Numeric Variables**
