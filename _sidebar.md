@@ -7,8 +7,8 @@
   **Introduction**
 
 - [Files & Folders](Notes/introduction/01_file_manipulation/01_file_manipulation.md)
-- [What's Programming](Notes/02_what_is_programming.md)
-- [Introduction to Python](Notes/03_introduction_to_Python.md)
+- [What's Programming](Notes/introduction/02_what_is_programming/02_what_is_programming.md)
+- [Introduction to Python](Notes/introduction/03_introduction_to_Python/03_introduction_to_Python.md)
 
 <!--
 **Numeric Variables**

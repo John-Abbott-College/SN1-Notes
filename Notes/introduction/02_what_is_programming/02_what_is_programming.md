@@ -40,7 +40,7 @@ Python was chosen for this course for the following reasons:
 
 Now this is great! But how are programming languages understood by computers? Answer: they are translated into machine code. For example, the Python code is translated by the Python interpreter into machine code.
 
-<img src="./Getting_started/images/programming_process.png" height="300">
+![demo](./assets/programming_process.png)
 
 The Central Processing Unit which acts as the brain of a computer will then execute (i.e.: run the instructions) the program.
 
@@ -66,7 +66,7 @@ _MAC_
   python3
   ```
 
-> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab "Getting Started" from these [notes]() to install python.
+> ⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab "Getting Started" from these [notes](https://john-abbott-college.github.io/SN1-Notes/#/Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation) to install python.
 >
 > ⚠️ If you are sure to have correctly installed python, try this command instead `python3`
 
