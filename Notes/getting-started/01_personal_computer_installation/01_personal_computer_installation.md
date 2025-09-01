@@ -29,7 +29,8 @@ Again, the browser should detect your operating system and your computer’s “
 
 - Click the Apple logo 🍎 at the top left of your screen
 - Select **About This Mac**
-- Next to “Chip,” you’ll see either **Apple** or **Intel** depending on when you bought your computer
+  - **On Newer Macs:** Next to “Chip,” you’ll see either **Apple** or **Intel**
+  - **On Older Macs:** Next to "Processor," you'll see **Intel Core**
 
 ### Windows Users: Check Your Chip
 

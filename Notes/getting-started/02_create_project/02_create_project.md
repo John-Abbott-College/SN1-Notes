@@ -51,7 +51,8 @@ Select the **programming_in_science** folder from your **OneDrive**.
 
 Choose **Custom Environment** > **Select Existing** > **Create from Existing Sources**:
 
-![demo](./assets/pick-python.gif)
+- **On lab computers:** Select Python version `3.11` or newer
+- **On your personal computer:** Select the Python version you installed
 
 ## Create a folder
 

@@ -1,0 +1,12 @@
+{
+  "name": "sn1-notes",
+  "version": "1.0.0",
+  "description": "Programming in Science - Notes",
+  "devDependencies": {},
+  "scripts": {
+    "setup": "gem install bundler jekyll && bundle install",
+    "serve": "bundle exec jekyll serve --livereload"
+  },
+  "author": "",
+  "license": "ISC"
+}
