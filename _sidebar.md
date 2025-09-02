@@ -10,7 +10,7 @@
 - [What's Programming](Notes/introduction/02_what_is_programming/02_what_is_programming.md)
 - [Introduction to Python](Notes/introduction/03_introduction_to_Python/03_introduction_to_Python.md)
 
-<!--
+
 **Numeric Variables**
 
 - [What are literals](Notes/04_intro_literals.md)
@@ -23,7 +23,7 @@
 - [Strings](Notes/06_1_strings.md)
 - [String Operations](Notes/06_1_2_strings_operations.md)
 - [F string formatting](Notes/06_2_f_strings.md)
-
+<!--
 **Operators**
 
 - [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
