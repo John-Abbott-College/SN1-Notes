@@ -4,12 +4,11 @@
 - [Creating a project](Notes/getting-started/02_create_project/02_create_project.md)
 - [Using Lea](Notes/getting-started/03_lea/03_lea.md)
 
-  **Introduction**
+**Introduction**
 
 - [Files & Folders](Notes/introduction/01_file_manipulation/01_file_manipulation.md)
 - [What's Programming](Notes/introduction/02_what_is_programming/02_what_is_programming.md)
 - [Introduction to Python](Notes/introduction/03_introduction_to_Python/03_introduction_to_Python.md)
-
 
 **Numeric Variables**
 
@@ -23,8 +22,10 @@
 - [Strings](Notes/06_1_strings.md)
 - [String Operations](Notes/06_1_2_strings_operations.md)
 - [F string formatting](Notes/06_2_f_strings.md)
+
 <!--
 **Operators**
+
 
 - [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Assignment Operators](Notes/11_assignment_operators.md)
@@ -48,7 +49,6 @@
 - [Math Functions](Notes/17_functions_math_module.md)
 - [Basic I/O Functions](Notes/18_functions_print_input.md)
 - [User defined functions](Notes/19_user_defined_functions.md)
-
 
 **Lists**
 
