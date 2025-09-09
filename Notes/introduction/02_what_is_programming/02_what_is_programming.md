@@ -4,7 +4,9 @@ Computers are digital machines, which means they perform operations using binary
 
 Programming is the process of writing a **set of instructions** in the form of source code that can be understood by a computer.
 
-A **program** is a precise set of instructions that are used to perform a task. Programming is all about breaking down our thought process into small manageable steps for the computer to know how to run them.
+A **program** is a precise **set of instructions** that are used to perform a task. A set of instructions that correctly solves a task when followed is called an **algorithm**.
+
+Programming is all about breaking down our thought process into small manageable steps for the computer to know how to run them.
 
 > For example:
 >
@@ -16,9 +18,13 @@ A **program** is a precise set of instructions that are used to perform a task. 
 > 4. _Divide the sum by 2 = average_
 > 5. _Output average_
 
+In this case, the set of instructions (computing the sum, then dividing by the number of items) is the **algorithm**, and the expression of that algorithm in a programming languages is a **program**.
+
 **Machine Code versus Programming Languages**
 
-Computers only understand instructions that are written in **machine code**, which is really elemental and uses a binary number system. That is a numeric system which expresses every number in base-2, therefore becoming a sequence of ones and zeros such as "101001010101010100001". The reason behind why computers use binary is because they are physically made up of electric circuits more specifically transistors and logic gates. Electricity is either on ("1") or off ("0") in a given circuit. All instructions sent to a computer need to be described in a sequence of "ON" or "OFF" states and has to be very simple such as "take this number", "store this number here", "add these two numbers", "output this number there", etc.
+Computers only understand instructions that are written in **machine code**, which is really elemental and uses a binary number system. That is a numeric system which expresses every number in base-2, therefore becoming a sequence of ones and zeros such as "101001010101010100001".
+
+The reason behind why computers use binary is because they are physically made up of electric circuits more specifically transistors and logic gates. Electricity is either on ("1") or off ("0") in a given circuit. All instructions sent to a computer need to be described in a sequence of "ON" or "OFF" states and has to be very simple such as "take this number", "store this number here", "add these two numbers", "output this number there", etc.
 
 > 🔢 Use [this](https://www.convertbinary.com/text-to-binary/) online converter to write your name in Binary Code.
 
