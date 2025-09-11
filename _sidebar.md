@@ -55,10 +55,17 @@
 - [List introduction](Notes/28_1_lists.md)
 - [Looping over lists](Notes/28_2_lists.md)
 
+-->
+
 **Additional notes**
 
+- [Using the Pycharm Debugger](/Notes/pycharm/debugger.md)
+<!--
 - [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 - [List in action](Notes/28_3_lists.md)
+-->
+
+<!--
 
 **Files**
 
