@@ -23,7 +23,6 @@
 - [String Operations](Notes/06_1_2_strings_operations.md)
 - [F string formatting](Notes/06_2_f_strings.md)
 
-<!--
 **Operators**
 
 
@@ -32,6 +31,7 @@
 - [Comparison Operators](Notes/12_comparison_operators.md)
 - [Logical Operators](Notes/13_logical_operators.md)
 
+<!--
 **Turtle Graphics**
 
 - [Intro to turtle](Notes/09_1_turtle_graphics.md)
