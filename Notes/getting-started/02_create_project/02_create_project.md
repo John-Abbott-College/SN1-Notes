@@ -17,7 +17,11 @@ Log in using your John Abbott credentials:
 - Email: `student_id@johnabbottcollege.net`
 - Password: Same as the one you use in the labs
 
-![demo](./assets/onedrive_2.png)
+
+<figure>
+   <img src="/Notes/getting-started/02_create_project/assets/onedrive_2.png" style="margin: 0; max-width: 460px;" alt="OneDrive email and password entry form."/>
+   <figcaption style="font-style: italic;">Note: your student email address uses the domain <code>@johnabbottcollege.net</code>, NOT <code>@johnabbott.qc.ca</code> as shown in the image.</figcaption>
+</figure>
 
 Wait for the file scan to complete, then click **Start backup**. This makes sure your files are _always_ accessible:
 
