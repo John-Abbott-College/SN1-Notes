@@ -17,7 +17,7 @@ There are instances where we need to test if multiple conditions are true at the
 - The oil in the car should be changed every 6 months **OR** every 5,000 km:
 
   ```
-  num_months >= 6 or  milage >= 5000
+  num_months >= 6 or  mileage >= 5000
   ```
 
   
@@ -54,7 +54,7 @@ For a meal to be considered a "special", a client must by a pizza and a drink.
 
 | English                                                      | Math                                 | Python                                       |
 | ------------------------------------------------------------ | ------------------------------------ | -------------------------------------------- |
-| Omnivox is accessible if you are a student  **AND** have the correct password. | access = student ∧∧ correct password | `access = is_student and is_valid_password;` |
+| Omnivox is accessible if you are a student  **AND** have the correct password. | access = student ∧∧ correct password | `access = is_student and is_valid_password` |
 
 
 
@@ -64,7 +64,7 @@ For a meal to be considered a "special", a client must by a pizza and a drink.
 
 | English                           | Math                    | Python                      |
 | --------------------------------- | ----------------------- | --------------------------- |
-| Today is a weekday *OR* a weekend | day = weekend ⋁ weekday | `day = weekend or weekday;` |
+| Today is a weekday *OR* a weekend | day = weekend ⋁ weekday | `day = weekend or weekday` |
 
 So, we send our friend out to get pizza and drinks. They come back with pizza and a drink.
 
@@ -80,7 +80,7 @@ You are at the library and can only borrow a new book if you do not have any ove
 
 | English                                                 | Math                                 | Python                                        |
 | :------------------------------------------------------ | :----------------------------------- | :-------------------------------------------- |
-| I can borrow a book if I do *NOT* have an overdue book. | borrow permissible  = ¬ book overdue | `borrow_permissiable = not has_overdue_books` |
+| I can borrow a book if I do *NOT* have an overdue book. | borrow permissible  = ¬ book overdue | `borrow_permissible = not has_overdue_books` |
 
 
 
