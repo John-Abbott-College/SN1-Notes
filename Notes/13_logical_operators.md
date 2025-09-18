@@ -17,7 +17,7 @@ There are instances where we need to test if multiple conditions are true at the
 - The oil in the car should be changed every 6 months **OR** every 5,000 km:
 
   ```
-  num_months >= 6 or  milage >= 5000
+  num_months >= 6 or  mileage >= 5000
   ```
 
   
@@ -80,7 +80,7 @@ You are at the library and can only borrow a new book if you do not have any ove
 
 | English                                                 | Math                                 | Python                                        |
 | :------------------------------------------------------ | :----------------------------------- | :-------------------------------------------- |
-| I can borrow a book if I do *NOT* have an overdue book. | borrow permissible  = ¬ book overdue | `borrow_permissiable = not has_overdue_books` |
+| I can borrow a book if I do *NOT* have an overdue book. | borrow permissible  = ¬ book overdue | `borrow_permissible = not has_overdue_books` |
 
 
 
