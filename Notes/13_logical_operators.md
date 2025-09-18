@@ -54,7 +54,7 @@ For a meal to be considered a "special", a client must by a pizza and a drink.
 
 | English                                                      | Math                                 | Python                                       |
 | ------------------------------------------------------------ | ------------------------------------ | -------------------------------------------- |
-| Omnivox is accessible if you are a student  **AND** have the correct password. | access = student ∧∧ correct password | `access = is_student and is_valid_password;` |
+| Omnivox is accessible if you are a student  **AND** have the correct password. | access = student ∧∧ correct password | `access = is_student and is_valid_password` |
 
 
 
@@ -64,7 +64,7 @@ For a meal to be considered a "special", a client must by a pizza and a drink.
 
 | English                           | Math                    | Python                      |
 | --------------------------------- | ----------------------- | --------------------------- |
-| Today is a weekday *OR* a weekend | day = weekend ⋁ weekday | `day = weekend or weekday;` |
+| Today is a weekday *OR* a weekend | day = weekend ⋁ weekday | `day = weekend or weekday` |
 
 So, we send our friend out to get pizza and drinks. They come back with pizza and a drink.
 
