@@ -29,31 +29,32 @@
 
 **Operators**
 
-- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
+<!-- TODO - Replace the links from the /operators subfolder -->
+
 - [Assignment Operators](Notes/11_assignment_operators.md)
+- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Comparison Operators](Notes/12_comparison_operators.md)
 - [Logical Operators](Notes/13_logical_operators.md)
-
-<!-- **Turtle Graphics**
-
-- [Intro to turtle](Notes/09_1_turtle_graphics.md)
-- [Draw a house](Notes/09_2_draw_house.md)
 
 **Statements**
 
 - [If statement](Notes/26_conditions_if.md)
 - [If/Else statement](/Notes/27_conditions_if_else.md)
-- [For loop](Notes/23_1_for_loop) -->
+- [For loop](Notes/23_1_for_loop)
 
 **Functions**
 
-- [Math Functions](Notes/17_functions_math_module.md)
-
-<!--
-
 - [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
+- [Math Functions](Notes/17_functions_math_module.md)
 - [Basic I/O Functions](Notes/18_functions_print_input.md)
 - [User defined functions](Notes/19_user_defined_functions.md)
+
+**Turtle Graphics**
+
+- [Intro to turtle](Notes/09_1_turtle_graphics.md)
+- [Draw a house](Notes/09_2_draw_house.md)
+
+<!--
 
 **Lists**
 
