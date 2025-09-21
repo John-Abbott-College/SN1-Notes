@@ -1,5 +1,7 @@
 **Getting Started**
 
+<!-- TODO - poggie to rename this to /getting_started eventually to keep the naming schema consistent -->
+
 - [Installation](Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation.md)
 - [Creating a project](Notes/getting-started/02_create_project/02_create_project.md)
 - [Using Lea](Notes/getting-started/03_lea/03_lea.md)
