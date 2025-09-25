@@ -126,6 +126,8 @@ turtle.backward(50)  # Moves turtle backward by 50 units
 
 #### Turn the Turtle:
 
+You can turn the turtle, relative to the direction it is currently facing, using:
+
 - **`right(angle)`**: Turns the turtle clockwise by the specified angle (in degrees!).
 - **`left(angle)`**: Turns the turtle counterclockwise by the specified angle (in degrees!).
 
@@ -136,7 +138,20 @@ turtle.right(90)  # Turns the turtle 90 degrees to the right
 turtle.left(45)   # Turns the turtle 45 degrees to the left
 ```
 
-#### Go to a specify x,y coordinate:
+You can also turn the turtle without regarding the direction it is currently facing, using:
+
+- **`setheading(angle)`**: Turn the turtle to a specific direction (in degrees!)
+
+**Example:**
+
+```python
+turtle.setheading(0)  # Turns the turtle to face east
+turtle.setheading(90)  # Turns the turtle to face north
+turtle.setheading(180)  # Turns the turtle to face west
+turtle.setheading(270)  # Turns the turtle to face south
+```
+
+#### Go to a specific x,y coordinate:
 
 - **`goto(x,y)`**: Go to the specific location on the screen.
 
@@ -157,12 +172,14 @@ turtle.goto(-50,-50)
 turtle.mainloop()
 ```
 
+- **`teleport(x,y)`**: Go quickly to the specific location on the screen, *without drawing*.
 
+```python
+import turtle
+turtle.teleport(x,y)
+```
 
-
-------
-
-### Turtle Speed 
+### Turtle Speed
 
 You can control how fast the turtle moves using the `speed()` function. This step is optional, but it helps you see how the turtle is drawing.
 
@@ -190,11 +207,22 @@ The turtle’s appearance can be changed using the `shape()` function. Available
 turtle.shape("turtle")  # Sets the turtle to look like a turtle
 ```
 
+#### Change Turtle Color
+
+```python
+turtle.color("orange", "green")
+```
+
+#### Change Turtle Size
+
+```python
+turtle.resizemode('user')
+turtle.shapesize(2,2,3)
+```
+
 -----
 
 ### Colours and Backgrounds
-
-
 
 #### Change Pen Color and Width:
 
@@ -257,4 +285,17 @@ turtle.end_fill()
 turtle.mainloop()
 ```
 
- 
+### Working with User Input
+
+To get information from the user:
+
+```python
+number = turtle.numinput("Title", "Prompt")
+```
+
+To print output onto the turtle window:
+
+```python
+font = ('Arial', 20, 'bold')
+text_turtle.write("Message", font=font)
+```
