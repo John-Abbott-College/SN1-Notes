@@ -199,6 +199,20 @@ The turtle’s appearance can be changed using the `shape()` function. Available
 turtle.shape("turtle")  # Sets the turtle to look like a turtle
 ```
 
+#### Adding new turtle shapes
+
+You can use a custom image for the turtle, instead of the available shapes.
+
+You can do this using the `screen.addshape()` function. For example, if `treasure.gif` is an image located in the same directory as your python file, then:
+
+```python
+screen = turtle.Screen() # You only need to create the screen once
+screen.addshape("treasure.gif")  # adds treasure.gif to the available shapes
+turtle.shape("treasure.gif") # sets the turtle to look like the image stored in treasure.gif
+```
+
+> Note: the size of the `.gif` matters, it cannot be resized in python. Recommended: less than `64x64` pixels.
+
 #### Change Turtle Color
 
 ```python
@@ -212,7 +226,6 @@ turtle.resizemode('user')
 turtle.shapesize(2,2,3)
 ```
 
----
 
 ### Colours and Backgrounds
 
@@ -252,7 +265,10 @@ This command creates the canvas where your turtle will draw. You can customize t
 
 ```python
 screen.bgcolor("lightblue")  # Sets background color to light blue
+screen.bgpic("some-image.png") # Sets the background to be an image
 ```
+
+> NOTE: any images you use in `screen.bgpic()` MUST be stored in the same directory as the python code you are running.
 
 ---
 
@@ -284,4 +300,20 @@ To print output onto the turtle window:
 ```python
 font = ('Arial', 20, 'bold')
 text_turtle.write("Message", font=font)
+```
+
+### Using Multiple Turtles
+
+By default, there is a single turtle we can use to draw shapes, write text, etc.
+
+This is troublesome if we want to write messages and draw shapes in different spots without making the same turtle repeat steps.
+
+We can create multiple turtles by using variables, and the `turtle.Turtle()` function:
+
+```python
+text_turtle = turtle.Turtle()
+drawings_turtle = turtle.Turtle()
+
+text_turtle.teleport(100, 100) # this motion does not affect drawings_turtle
+drawings_turtle.teleport(-100, -100) # this motion does not affect text_turtle
 ```
