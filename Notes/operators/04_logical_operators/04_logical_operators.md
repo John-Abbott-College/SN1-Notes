@@ -36,31 +36,19 @@ The combination of **AND**, **OR**, and **NOT** conditions with the boolean valu
 
 ## Operator `and`
 
-**Example**
-
-For a meal to be considered a "special", a client must by a pizza and a drink.
-
 | English                                                                       | Math                                 | Python                                      |
 | ----------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------- |
 | Omnivox is accessible if you are a student **AND** have the correct password. | access = student ∧∧ correct password | `access = is_student and is_valid_password` |
 
 ### Operator `or`
 
-**Example**
-
 | English                           | Math                    | Python                     |
 | --------------------------------- | ----------------------- | -------------------------- |
 | Today is a weekday _OR_ a weekend | day = weekend ⋁ weekday | `day = weekend or weekday` |
 
-So, we send our friend out to get pizza and drinks. They come back with pizza and a drink.
-
 ### Operator `not`
 
 This operator transforms the variable into **its opposite**. It's also know as **negation**.
-
-**Example**
-
-You are at the library and can only borrow a new book if you do not have any overdue books.
 
 | English                                                 | Math                                | Python                                       |
 | :------------------------------------------------------ | :---------------------------------- | :------------------------------------------- |
