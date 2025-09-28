@@ -1,4 +1,4 @@
-# Custom functions
+# Custom Functions
 
 This is what the simplest function definition looks like:
 
@@ -51,10 +51,10 @@ A function can have **as many parameters as you want**, but the more parameters 
 
 ```python
 def sum(num1, num2):
-	return num1 + num2
+    return num1 + num2
 ```
 
-<img src="Images/function_1.png" height=300/>
+![demo](./assets/function_1.png)
 
 ### **How functions work:**
 
@@ -83,7 +83,7 @@ multiply(4,3)
 
 ```python
 def greetings():
-	print("Hello! Welcome to the AI world! How may I help you today?")
+    print("Hello! Welcome to the AI world! How may I help you today?")
 
 # Method call
 greetings()
@@ -109,7 +109,7 @@ even_odd(23)
 def divide(numerator, denominator=1):
     """Function to divide a numerator by a denominator.
     If denominator unspecified, the default value is 1. """
-	return numerator/denominator
+    return numerator/denominator
 
 
 # To call this function

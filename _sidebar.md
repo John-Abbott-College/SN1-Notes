@@ -48,10 +48,12 @@
 
 **Functions**
 
+<!-- TODO - Replace the links from the /functions subfolder -->
+
 - [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
-- [Math Functions](Notes/17_functions_math_module.md)
+- [The Math Module](Notes/17_functions_math_module.md)
 - [Basic I/O Functions](Notes/18_functions_print_input.md)
-- [User defined functions](Notes/19_user_defined_functions.md)
+- [Custom functions](Notes/19_user_defined_functions.md)
 
 **Turtle Graphics**
 
