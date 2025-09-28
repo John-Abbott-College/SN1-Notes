@@ -34,7 +34,7 @@ The combination of **AND**, **OR**, and **NOT** conditions with the boolean valu
 
 ![demo](./assets/09_and_or_not.png)
 
-## Operator `and`
+### Operator `and`
 
 | English                                                                       | Math                                 | Python                                      |
 | ----------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------- |
