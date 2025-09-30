@@ -292,8 +292,12 @@ turtle.mainloop()
 To get information from the user:
 
 ```python
-number = turtle.numinput("Title", "Prompt")
+number_input = turtle.numinput("Title", "Prompt") # Forces the input to be a number
+text_input = turtle.text_input("Title", "Prompt") # Will accept any characters
 ```
+
+Note that the `turtle.numinput()` and `turtle.textinput()` functions are similar to the Python `input()` function, in that they both return a `str` value .
+See the course notes on [input with `input()`](https://john-abbott-college.github.io/SN1-Notes/#/Notes/18_functions_print_input?id=input-with-input) for more information.
 
 To print output onto the turtle window:
 
@@ -317,3 +321,19 @@ drawings_turtle = turtle.Turtle()
 text_turtle.teleport(100, 100) # this motion does not affect drawings_turtle
 drawings_turtle.teleport(-100, -100) # this motion does not affect text_turtle
 ```
+
+### Keeping the Window Open
+
+By default, a turtle session will end without keeping the window open, which makes appreciating your beautiful Turtle drawings difficult.
+
+To pause the turtle session at the end of the turtle program, use **one** of the following three commands:
+
+```python
+turtle.mainloop() # Last statement in Turtle program, keeps the window open until closed by user.
+turtle.done() # exact same behavior as turtle.mainloop()
+turtle.exitonclick() # exact same behavior as above, except lets you exit by clicking on the screen directly.
+```
+
+After any of these three commands is run, the turtle program pauses with the window open. **NOTE:** no code after these lines will run, make sure they are the last line in your turtle program.
+
+

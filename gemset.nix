@@ -181,10 +181,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0hj6yxpi710g1pfyg0aysahqv6dzz8y3l949q1y6kw79a7br92dh";
+      sha256 = "0p5dafxjp6kqkf3yx737gz9lwpaljlkc1raynkvcn6yql68d895w";
       type = "gem";
     };
-    version = "2.14.1";
+    version = "2.15.0";
   };
   kramdown = {
     dependencies = ["rexml"];
@@ -296,10 +296,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1pcr8sn02lwzv3z6vx5n41b6ybcnw9g9h05s3lkv4vqdm0f2mq2z";
+      sha256 = "0kvz20sxih8f976ry45b6c8srkh4km0cw4ilc5ynlmyk2nkywkya";
       type = "gem";
     };
-    version = "2.2.17";
+    version = "2.2.18";
   };
   rake = {
     groups = ["default"];
@@ -347,10 +347,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0ynxxmvzczn9a6wd87jyh209590nq6f6ls55dmwiky8fvwi8c68h";
+      sha256 = "1pkp5icgm7s10b2n6b2pzbdsfiv0l5sxqyizx55qdmlpaxnk8xah";
       type = "gem";
     };
-    version = "4.6.0";
+    version = "4.6.1";
   };
   rspec = {
     dependencies = ["rspec-core" "rspec-expectations" "rspec-mocks"];
@@ -422,10 +422,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0hlgp52cc1a2zspjzi6nqslka4yns1w8dr8sljh9sa68p1yd223z";
+      sha256 = "1gi1gn4fj2kp6znvjgci111fflagzcg721hijaxr4ykzn1p7sp5l";
       type = "gem";
     };
-    version = "1.92.1";
+    version = "1.93.2";
   };
   terminal-table = {
     dependencies = ["unicode-display_width"];
