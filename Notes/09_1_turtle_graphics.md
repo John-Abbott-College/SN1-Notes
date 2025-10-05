@@ -322,6 +322,18 @@ text_turtle.teleport(100, 100) # this motion does not affect drawings_turtle
 drawings_turtle.teleport(-100, -100) # this motion does not affect text_turtle
 ```
 
+Using `turtle.Turtle()` creates new turtles that are copies of the default `turtle`, i.e. in the default location `(0, 0)` and with all the default settings for pensize, color, shape, etc.
+
+#### Cloning existing turtles
+
+Another way to create new turtles is to `clone` an existing turtle -- this makes a new turtle that has the same position and properties as an existing turtle. For example:
+
+```python
+some_turtle.teleport(100, 100)
+cloned_turtle = new_turtle.clone()
+cloned_turtle.pos() # returns (100, 100)
+```
+
 ### Keeping the Window Open
 
 By default, a turtle session will end without keeping the window open, which makes appreciating your beautiful Turtle drawings difficult.
