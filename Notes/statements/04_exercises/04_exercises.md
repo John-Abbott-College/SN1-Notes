@@ -1,4 +1,4 @@
-# Practice For Loops
+# For Loops
 
 ## Level 1
 
