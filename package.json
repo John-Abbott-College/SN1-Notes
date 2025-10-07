@@ -5,7 +5,8 @@
   "devDependencies": {},
   "scripts": {
     "setup": "gem install bundler jekyll && bundle install",
-    "serve": "bundle exec jekyll serve --livereload --force_polling"
+    "clean": "bundle exec jekyll clean",
+    "dev": "bundle exec jekyll serve --livereload --force_polling"
   },
   "author": "",
   "license": "ISC"
