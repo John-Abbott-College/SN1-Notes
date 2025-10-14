@@ -81,17 +81,17 @@ We highly recommend you work on the exercises below with pen and paper to practi
   <details>
     <summary>✅ Solution</summary>
     <pre><code class="language-python">
-      1.1 <class `int`>
-      1.2 <class `float`>
-      1.3 <class `float`>
-      1.4 <class `str`>
-      1.5 <class `int`>
-      1.6 <class `str`>
-      1.7 <class `bool`>
-      1.8 <class `float`>
-      1.9 <class `int`>
+      1.1 \<class `int`\>
+      1.2 \<class `float`\>
+      1.3 \<class `float`\>
+      1.4 \<class `str`\>
+      1.5 \<class `int`\>
+      1.6 \<class `str`\>
+      1.7 \<class `bool`\>
+      1.8 \<class `float`\>
+      1.9 \<class `int`\>
       1.10 Error, cannot use + on numeric data types with str.
-      1.11 <class `bool`>
+      1.11 \<class `bool`\>
     </code></pre>
   </details>
 
@@ -114,10 +114,8 @@ We highly recommend you work on the exercises below with pen and paper to practi
     <pre><code class="language-python">
       # Solution #1
       num2 = 4
-
       # Solution #2
       sum_val = num1 + int(num2)
-
       # Are there any other solutions you can come up with?
     </code></pre>
   </details>
