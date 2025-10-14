@@ -21,6 +21,7 @@
 - [Integers & Floats](Notes/05_integers_floats.md)
 - [Booleans](Notes/07_booleans.md)
 - [Strings](Notes/06_1_strings.md)
+- [<span class="practice-link">Practice with Datatypes</span>](Notes/variables/06_exercises/06_exercises.md)
 
 **String Formatting**
 
@@ -37,6 +38,7 @@
 - [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
 - [Comparison Operators](Notes/12_comparison_operators.md)
 - [Logical Operators](Notes/13_logical_operators.md)
+- [<span class="practice-link">Practice Operators</span>](Notes/operators/05_exercises/05_exercises.md)
 
 **Statements**
 
