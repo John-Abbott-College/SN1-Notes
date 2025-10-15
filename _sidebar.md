@@ -47,7 +47,8 @@
 - [If statement](Notes/26_conditions_if.md)
 - [If/Else statement](/Notes/27_conditions_if_else.md)
 - [For loop](Notes/23_1_for_loop)
-- [<span class="practice-link">Practice Statements</span>](Notes/statements/04_exercises/04_exercises.md)
+- [<span class="practice-link">Practice Loop Statements</span>](Notes/statements/04_exercises/04_exercises.md)
+- [<span class="practice-link">Practice Conditional Statements</span>](Notes/statements/05_conditional_exercises/05_conditional_exercises.md)
 
 **Functions**
 
