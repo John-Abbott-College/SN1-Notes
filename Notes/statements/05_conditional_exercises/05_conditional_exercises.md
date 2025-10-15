@@ -1,6 +1,6 @@
 ## Conditional statements
 
-**Level 1** `if`
+### Level 1: `if`
 
 1. Complete the following sample of code given the statement below and print a message when the condition is met:
 
@@ -210,7 +210,7 @@
     </code></pre>
   </details>
 
-**Level 2** `if/else` and logical operators `and`, `or`, `not`
+### Level 2: `if/else` and operators `and`, `or`, `not`
 
 1. Complete the following sample of code given the statement below and print a message when the condition is met and another message if it's not met:
 
@@ -379,7 +379,7 @@
   </details>
 
 
-**Level 3** `if/elif/else` and nested conditions
+### Level 3: `if/elif/else` and nested conditions
 
 1. Write a program which asks the user for the temperature. The program prints a different message for each of the following condition:
 
