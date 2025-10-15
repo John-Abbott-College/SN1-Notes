@@ -57,6 +57,11 @@
           export BUNDLE_PATH=vendor/bundle
           bundle lock --update
         '';
+        bundleInstall = pkgs.writeShellScriptBin "bundle-install" ''
+          export BUNDLE_FORCE_RUBY_PLATFORM=true
+          export BUNDLE_PATH=vendor/bundle
+          bundle install
+        '';
         bundleExec = pkgs.writeShellScriptBin "bundle-exec" ''
           export BUNDLE_FORCE_RUBY_PLATFORM=true
           export BUNDLE_PATH=vendor/bundle
@@ -82,6 +87,7 @@
                 bundixcli
                 bundleLock
                 bundleUpdate
+                bundleInstall
                 bundleExec
               ]
               ++ (with pkgs; [
