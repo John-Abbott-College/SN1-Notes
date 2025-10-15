@@ -57,6 +57,7 @@
 - [The Math Module](Notes/17_functions_math_module.md)
 - [Basic I/O Functions](Notes/18_functions_print_input.md)
 - [Custom functions](Notes/19_user_defined_functions.md)
+- [<span class="practice-link">Practice with IO functions</span>](/Notes/functions/05_exercises/05_exercises.md)
 
 **Turtle Graphics**
 
