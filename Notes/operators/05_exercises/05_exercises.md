@@ -1,5 +1,7 @@
 ## Arithmetic operators
 
+Note: if you forget what any of these operators do, review the lecture notes on Operators!
+
 1. What is the output of the following program:
 
    ```python
@@ -11,7 +13,7 @@
 
   <details>
     <summary>👀 Hint</summary>
-    <p>What does the ** operator do? What does the // operator do/></p>
+    <p>What does the <code>**</code> operator do? What does the <code>//</code> operator do?</p>
   </details>
   <details>
     <summary>✅ Solution</summary>

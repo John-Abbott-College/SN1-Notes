@@ -12,9 +12,21 @@ We highly recommend you work on the exercises below with pen and paper to practi
 
 1. Specify the data type printed at the end of each program:
 
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Make sure you read the NOTE above about the <code>type()</code> function!</p>
+  </details>
+
    1. ```python
       print(type(10))
       ```
+
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class 'int'
+    </code></pre>
+  </details>
 
    2. ```python
       import math
@@ -22,13 +34,34 @@ We highly recommend you work on the exercises below with pen and paper to practi
       print(type(PI))
       ```
 
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `float`
+    </code></pre>
+  </details>
+
    3. ```python
       print(type(3e-5))
       ```
 
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `float`
+    </code></pre>
+  </details>
+
    4. ```python
-      print(type("Hi"))
+      print(type("234"))
       ```
+
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `str`
+    </code></pre>
+  </details>
 
    5. ```python
       value = "2"
@@ -36,16 +69,37 @@ We highly recommend you work on the exercises below with pen and paper to practi
       print(type(value2))
       ```
 
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `int`
+    </code></pre>
+  </details>
+
    6. ```python
       name = input("What is your name?")
       print(type(name))
       ```
+
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `str`
+    </code></pre>
+  </details>
 
    7. ```python
       age = 25
       is_legal_age = (age>=18)
       print(type(is_legal_age))
       ```
+
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `bool`
+    </code></pre>
+  </details>
 
    8. ```python
       grade = 24
@@ -54,12 +108,26 @@ We highly recommend you work on the exercises below with pen and paper to practi
       print(type(ratio))
       ```
 
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `float`
+    </code></pre>
+  </details>
+
    9. ```python
       num_classrooms = 5
       pcs_per_classroom = 22
       total_pcs = num_classrooms * pcs_per_classroom
       print(type(total_pcs))
       ```
+
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      class `int`
+    </code></pre>
+  </details>
 
    10. ```python
        var1 = 1
@@ -68,6 +136,13 @@ We highly recommend you work on the exercises below with pen and paper to practi
        print(type(var1 + var2 + var3))
        ```
 
+  <details>
+    <summary>✅ Solution</summary>
+    <pre><code>
+      Error, cannot use + on numeric data types with str.
+    </code></pre>
+  </details>
+
    11. ```python
        temperature = 22
        is_freezing = (temperature < 0)
@@ -75,23 +150,9 @@ We highly recommend you work on the exercises below with pen and paper to practi
        ```
 
   <details>
-    <summary>👀 Hint</summary>
-    <p>Make sure you read the NOTE above about the <code>type()</code> function!</p>
-  </details>
-  <details>
     <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      1.1 \<class `int`\>
-      1.2 \<class `float`\>
-      1.3 \<class `float`\>
-      1.4 \<class `str`\>
-      1.5 \<class `int`\>
-      1.6 \<class `str`\>
-      1.7 \<class `bool`\>
-      1.8 \<class `float`\>
-      1.9 \<class `int`\>
-      1.10 Error, cannot use + on numeric data types with str.
-      1.11 \<class `bool`\>
+    <pre><code>
+      class `bool`
     </code></pre>
   </details>
 
