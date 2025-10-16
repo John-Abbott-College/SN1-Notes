@@ -41,7 +41,6 @@
   <details>
     <summary>✅ Solution</summary>
     <pre><code class="language-python">
-      temperature = 3.0
       if 18 <= age <= 25:
         print("You are eligible for a scholarship")
     </code></pre>
