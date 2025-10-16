@@ -144,3 +144,97 @@ Print only even numbers up to 100. ONLY if the number is divisible by 42 should 
             print(f"{i} is even")
   </code></pre>
 </details>
+
+### Break-out!
+
+Print numbers between 7 and 100 but stop as soon as you find a number that is divisble by 6.
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>Take a break with your rarely used operator modulus (%)</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+for num in range(7, 100):
+    if num % 6 == 0:
+        print(f"{num} is divisible by 6. Stopping.")
+        break
+&nbsp;
+print(num)
+  </code></pre>
+</details>
+
+### Factorial
+
+Calculate the factorial of a number. Start with:
+<pre><code class="language-python">
+number: int = int(input("Enter a number: "))
+  </code></pre>
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>The factorial of 3 is: 1 x 2 x 3</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+number: int = int(input("Enter a number: "))
+factorial: int = 1
+&nbsp;
+for i in range(1, number + 1):
+    factorial = factorial * i
+print(f"The factorial of {number} is: {factorial}")
+  </code></pre>
+</details>
+
+
+### sdrawkcaB
+
+Ask the user to enter some text, then print it backwards (using a loop). Start with:
+<pre><code class="language-python">
+something: str = input("Type something here: ")
+  </code></pre>
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>Adding isn't just for numbers!</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+something: str = input("Type something here: ")
+backwards: str = ""
+&nbsp;
+for letter in something:
+    backwards = letter + backwards
+print(f"You say '{something}', I say '{backwards}'")
+  </code></pre>
+</details>
+
+### Clock
+
+Display every minute of every hour in a day like:  
+0:00  
+0:01  
+0:02  
+...  
+23:58  
+23:59  
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>Save yourself a lot of typing by using 2 loops!</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+for hour in range(0, 24):
+    for minute in range(0, 60):
+        print(f"{hour}:{minute}")
+  </code></pre>
+</details>
