@@ -215,6 +215,38 @@ print(f"You say '{something}', I say '{backwards}'")
   </code></pre>
 </details>
 
+### 46?
+
+Ask yourself what the 2 outputs of this program should be and then try it out and make sure you understand what the code is doing!
+<pre><code class="language-python">
+x: int = 0
+
+for i in "four":
+    x = x + 1
+print(x)
+
+# reset back to zero:
+x = 0
+
+for i in "six":
+    x = x + 1
+print(x)
+</code></pre>
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>What value(s) will the loop variable i be assigned as the loops repeat?</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+4
+3
+  </code></pre>
+Each of these loops is iterating across the sequence of characters (e.g. letters) in a string, so a string of length 4 (meaning 4 characters long like "abcd" or "desk" or "four"...) will loop 4 times. This code is essentially counting how many characters are in a string and then printing the result.
+</details>
+
 ### Clock
 
 Display every minute of every hour in a day like:  
