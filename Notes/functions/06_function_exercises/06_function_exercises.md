@@ -118,3 +118,70 @@ Then, use it to evaluate $f(x,y)$ for the following values:
     </code>
     </pre>
 </details>
+
+## Level 2
+
+### The Average
+
+Consider the following function:
+
+```python
+def calculate_average(num1, num2):
+	result = (num1+num2)/2
+```
+
+_Part 1:_ What will be the output of the following line:
+
+```python
+average = calculate_average(3,4)
+```
+
+_Part 2:_ Explain the reason for this outcome and propose an improvement.
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre>
+    Part 1: `None`
+    
+    Part 2: The function doesn't return the average. 
+    This is why it evaluates as `None` instead of the expected result. 
+    To fix this we should add a return statement
+</pre>
+</details>
+
+### Fun Circles
+
+Write a simple function called `calculate_area_circle()` which takes the `radius` as an input and returns the area:
+
+$$
+A_{circle} = \pi r^2
+$$
+
+- Calculate the area of a circle with `radius=2` by using the function defined above.
+- Calculate the area of a circle with `radius=9` by using the function defined above.
+- Calculate the area of a ring which has an inner circle of radius 4 and an outer circle of radius 6.
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>What do you need to import for this to work?</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre>
+<code class="language-python">
+        import math
+
+        def calculate_area_circle(radius):
+            area = math.pi * (radius**2)
+            return area
+
+</code>
+
+<code class="language-python">
+    area1 = calculate_area_circle(2)
+    area2 = calculate_area_circle(9)
+    area_ring = calculate_area_circle(6) -calculate_area_circle(4)
+</code>
+    </pre>
+</details>
