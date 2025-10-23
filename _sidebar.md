@@ -1,6 +1,6 @@
 **Getting Started**
 
-<!-- TODO - poggie to rename this to /getting_started eventually to keep the naming schema consistent -->
+<!-- TODO - ⚠️ @poggie to rename this to /getting_started eventually to keep the naming schema consistent -->
 
 - [Installation](Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation.md)
 - [Creating a project](Notes/getting-started/02_create_project/02_create_project.md)
@@ -47,6 +47,7 @@
 - [If statement](Notes/26_conditions_if.md)
 - [If/Else statement](/Notes/27_conditions_if_else.md)
 - [For loop](Notes/23_1_for_loop)
+- [Scope & Statements](Notes/statements/06_scope/06_scope.md)
 - [<span class="practice-link">Practice Loop Statements</span>](Notes/statements/04_exercises/04_exercises.md)
 - [<span class="practice-link">Practice Conditional Statements</span>](Notes/statements/05_conditional_exercises/05_conditional_exercises.md)
 
@@ -63,54 +64,39 @@
 
 **Turtle Graphics**
 
+<!-- TODO - ⚠️ @poggie to migrate -->
+
 - [Intro to turtle](Notes/09_1_turtle_graphics.md)
 - [Draw a house](Notes/09_2_draw_house.md)
 
-<!--
-
 **Lists**
 
-- [List introduction](Notes/28_1_lists.md)
-- [Looping over lists](Notes/28_2_lists.md)
+- [List Intro](Notes/lists/01_into_to_lists/01_into_to_lists.md)
+- [Looping over lists](Notes/lists/02_looping_over_lists/02_looping_over_lists.md)
 
--->
-
-**Additional notes**
-
-- [Using the Pycharm Debugger](/Notes/pycharm/debugger.md)
+<!-- ! Advanced list topics that don't feel necessary atm -->
 <!--
 - [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
 - [List in action](Notes/28_3_lists.md)
   -->
 
-<!--
+**Additional notes**
 
-**Files**
+<!-- TODO - ⚠️ @poggie to migrate -->
 
-- [Reading/Writing Files](Notes/35_reading_files.md)
-
-**Scientific modules**
-
-- [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
-- [Intro to Numpy](Notes/33_2_numpy.md) -->
-
-<!--
-**Python Data Types**
-
+- [Using the Pycharm Debugger](/Notes/pycharm/debugger.md)
 - [Type Hinting](Notes/20_functions_type_hint.md)
 
-- [Scopes](Notes/21_functions_and_scopes.md)
+**Processing Data**
 
-- [What are literals](Notes/04_intro_literals.md)
-- [Booleans](Notes/07_booleans.md)
+<!-- TODO - ⚠️ @poggie to migrate -->
 
-**Lists**
+- [Reading/Writing Files](Notes/35_reading_files.md)
+- [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
+- [Intro to Numpy](Notes/33_2_numpy.md)
 
-- [List in action](Notes/28_3_lists.md)
-
+<!--
 **Math To Python**
-
 - [Accumulators & Series](Notes/31_accumulator_pattern.md)
 - [Formula Translator](Notes/32_from_math_to_python.md)
-
- -->
+  -->
