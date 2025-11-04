@@ -73,6 +73,7 @@
 
 - [List Intro](Notes/lists/01_into_to_lists/01_into_to_lists.md)
 - [Looping over lists](Notes/lists/02_looping_over_lists/02_looping_over_lists.md)
+- [List Inclusion](Notes/lists/04_list_inclusion/04_list_inclusion.md)
 - [<span class="practice-link">Practice Lists</span>](Notes/lists/03_exercises/03_exercises.md)
 
 <!-- ! Advanced list topics that don't feel necessary atm -->

@@ -1,10 +1,10 @@
 # Finding Elements in a List
 
-One of the most common tasks you’ll face when working with lists is finding elements within a list maybe for locating a single value, check if an item exists, or finding items matching certain conditions.
+When you work with lists, a very common task is checking whether a specific value is _inside_ the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition.
 
 ## Using the in Operator
 
-The in operator is one of the easiest ways to check if an element exists in a list.
+The `in` operator is the simplest way to check if an element is present in a list.
 
 ### Example
 
@@ -14,7 +14,7 @@ Let's say we have this delightful list
 test = [1,2,3,4,5,6]
 ```
 
-And we want to check if value 3 exists `in test`? Well we can simply write:
+If you want to check whether the value 3 is `in` the list, you can write:
 
 ```py
 if 3 in test:
