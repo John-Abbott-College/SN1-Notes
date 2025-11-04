@@ -185,3 +185,37 @@ $$
 </code>
     </pre>
 </details>
+
+
+### Calculus ?!
+
+Ok, just some easy calculus...
+
+Given:
+$$
+f(x)=ax^{n}
+$$
+
+Write a function called power_rule that has two int parameters called *coefficient* and *exponent*. The result of the function will be a **string** representation of the derivative with respect to x. Your string should look like:
+"6x^2"
+to represent $$6x^2$$
+
+Try your function like:
+```python
+derivative1: str = power_rule(3, 2)
+print(derivative1)
+```
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>If you're not sure how to make the string for the result, think of how you would just print the correct string first. Once you know your string is correct, then just return it instead of printing it.</p>
+</details>
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre>
+    def power_rule(coefficient: int, exponent: int) -> str:
+      result: str = f"{coefficient * exponent}x^{exponent - 1}"
+      return result
+</pre>
+</details>
