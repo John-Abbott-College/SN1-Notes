@@ -96,6 +96,7 @@
 - [Reading/Writing Files](Notes/35_reading_files.md)
 - [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
 - [Intro to Numpy](Notes/33_2_numpy.md)
+- [Intro to Matplotlib](/Notes/33_3_intro_to_matplotlib.md)
 
 <!--
 **Math To Python**
