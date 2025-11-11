@@ -1,6 +1,6 @@
 # University of Pennsylvania - Fall 2024
 
-Inspired by the [The University of Pennsylvania's Intro to Python practice exam](https://www.cis.upenn.edu/~cis110/current/py/assets/exams/exam1/fa24_practice.pdf), I added the questions relevant to our course :)
+Inspired by the The University of Pennsylvania's [Intro to Python practice exam](https://www.cis.upenn.edu/~cis110/current/py/assets/exams/exam1/fa24_practice.pdf), I added the questions relevant to our course :)
 
 ## Question 1 - List Math 🧮
 
