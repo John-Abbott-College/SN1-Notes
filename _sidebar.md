@@ -97,6 +97,13 @@
 - [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
 - [Intro to Numpy](Notes/33_2_numpy.md)
 
+**Challenge Problems**
+
+- [<span class="practice-link">Practice Midterm F25</span>](Notes/challenge_problems/practice_midterm_f25/practice_midterm_f25.md)
+
+<!-- - [<span class="practice-link">Complex Problems</span>]()
+- [<span class="practice-link">Final Exam W25</span>]() -->
+
 <!--
 **Math To Python**
 - [Accumulators & Series](Notes/31_accumulator_pattern.md)
