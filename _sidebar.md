@@ -101,9 +101,8 @@
 **Challenge Problems**
 
 - [<span class="practice-link">Practice Midterm F25</span>](Notes/challenge_problems/practice_midterm_f25/practice_midterm_f25.md)
-
-<!-- - [<span class="practice-link">Complex Problems</span>]()
-- [<span class="practice-link">Final Exam W25</span>]() -->
+- [<span class="practice-link">Final Exam W25</span>](Notes/challenge_problems/final_exam_w25/final_exam_w25.md)
+<!-- - [<span class="practice-link">Complex Problems</span>]() -->
 
 <!--
 **Math To Python**
