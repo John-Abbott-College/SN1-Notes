@@ -152,7 +152,7 @@ a, b = coefficients
 
 #### Using the coefficients
 
-Now, to calculate the corresponding `y` values for each `x` using the fitted line, you can utilize a list comprehension:
+Now, to calculate the corresponding `y` values for each `x` using the fitted line, you can loop through the list of x values and compute the expected y values using the formula based on the coefficients:
 
 ```python
 y_estimate = []
@@ -160,7 +160,7 @@ for x in x_observed:
 	y_estimate.append(a*x + b)
 ```
 
-Alternatively, to type this faster, you can use a list comprehension:
+Alternatively, to type this faster, you can use a Python *list comprehension*:
 
 ```python
 y_estimate = [a*x + b for x in x_observed]

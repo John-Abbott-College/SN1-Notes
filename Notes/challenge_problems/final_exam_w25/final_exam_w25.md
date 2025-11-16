@@ -141,12 +141,12 @@ Write Python code that:
 
 ```text
 ...
-may 23
-may 30
-jun 6
-jun 13 WOoOo, Friday the 13th
-jun 20
-jun 27
+May 23
+May 30
+Jun 6
+Jun 13 WOoOo, Friday the 13th
+Jun 20
+Jun 27
 ...
 ```
 
