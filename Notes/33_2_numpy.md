@@ -121,7 +121,7 @@ y_observed = [2,4,6,7,9,11]
 To fit a linear equation on observed data points `x` and `y_observed`, use: 
 
 ```python
-coefficients = np.polyfit(x=x, y=observed_y, deg=1)
+coefficients = np.polyfit(x=x_observed, y=y_observed, deg=1)
 ```
 
 #### Coefficients
@@ -135,7 +135,7 @@ print(coefficients)
 **Output**
 
 ```text
-array([1.74285714, 0.4       ])
+array([1.74285714, 0.4])
 ```
 
 #### **Accessing the coefficients**
@@ -157,7 +157,7 @@ Now, to calculate the corresponding `y` values for each `x` using the fitted lin
 ```python
 y_estimate = []
 for x in x_observed:
-	y_estimate.append(a*x + b)
+  y_estimate.append(a*x + b)
 ```
 
 Alternatively, to type this faster, you can use a Python *list comprehension*:
