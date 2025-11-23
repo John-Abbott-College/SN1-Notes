@@ -135,6 +135,7 @@ There are many variations on the rules, but the most standard is:
 
 - Data is separated into rows
 - Each row contains information about one thing, with the specific bits of information separated by a comma.
+- Often, the first line of the file holds strings which are the names of the "columns". If your file starts with the column names then you'll want to skip that row by reading it before you start reading and storing the data rows.
 
 Reading a csv file can be done just like an ordinary file, but it is not very convenient because reading one line at a time just gives a bunch of stuff with commas.
 
@@ -159,7 +160,7 @@ Learn how to open and read a simple `csv` file and parse the data using either l
 
 #### Example Input
 
-Each row contains information about a student, the course that they are taking, and grade that they achieved in that course. Often, the first line of the file holds strings which are the names of the "columns". If your file starts with the column names then you'll want to skip that row by reading it before you start reading and storing the data rows.
+Each row contains information about a student, the course that they are taking, and grade that they achieved in that course. 
 
 ```text
 First Name,Last Name,Program,Grade
