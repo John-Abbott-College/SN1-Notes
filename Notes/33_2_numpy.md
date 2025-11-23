@@ -247,7 +247,7 @@ Here are useful functions
 
 - Computes the standard deviation of `x_list`. The standard deviation is a measure of how dispersed the data in relation to its the mean. 
 
-The data is sometimes incomplete of made up of certain data points that aren't defined (i.e. equal to `np.nan` - not a number):
+The data is sometimes incomplete or made up of certain data points that aren't defined (i.e. equal to `np.nan` - **n**ot **a** **n**umber):
 
 ##### `np.nanmean(x_list)`: 
 
