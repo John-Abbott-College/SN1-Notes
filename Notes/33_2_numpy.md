@@ -210,16 +210,20 @@ $$
 In python this would be:
 
 ```python
-y_pred = a* x_new  + b
-print("Absolute error: ", abs(y_true-y_pred))
-print(f"Relative error (%): {abs(y_true-y_pred):%}")
+y_prediction = a * x_new + b
+
+absolute_error = abs(y_correct - y_prediction)
+relative_error = abs(y_correct - y_prediction) / y_correct
+
+print(f"Absolute error: {absolute_error}")
+print(f"Relative error (%): {relative_error:%}")
 ```
 
 
 
 ## Correlation Factor `R`
 
-The correlation factor or correlation coefficient is a numeric value that quantifies how much two variables vary together. We will be using Numpy's Pearson correlation coefficient:   `R = np.corrcoef(variable1_lsit, variable2_list)[0,1]`. 
+The correlation factor or correlation coefficient is a numeric value that quantifies how much two variables vary together. We will be using Numpy's Pearson correlation coefficient:   `R = np.corrcoef(variable1_list, variable2_list)[0,1]`. 
 
 An R close to 0 indicates no correlation, +1 indicates a strong positive correlation, and -1 indicates a strong negative correlation.
 
