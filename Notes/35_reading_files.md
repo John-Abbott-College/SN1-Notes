@@ -2,58 +2,74 @@
 
 ## Opening Files
 
+Files are like books: before you can read from or write into them you must open them! (When you're finished you should close them too.)
+
 SYNTAX: `variable_name = open(file_name, access_type)`
 
 where:
 
-- `variable_name` is just a name of a variable that you will reference later
-- `file_name` is the name of a file on your computer
+- `variable_name` is the name of a variable that you will use later
+- `file_name` is the name (or *path*) of a file on your computer
 - `access_type` can be:
   - `r` if you want to read the file, or
-  - `w` if you want to write to the file
+  - `a` if you want to append (add) to a file
+  - `w` if you want to write to the file (*but it will erase everything in the file first!*)
 
 ```python
-fh = open("my_input.txt","r")		# open a file for reading
-wf = open("my_other.txt", "w")  # open file for writing
+file_to_read = open("my_input.txt", "r")	# open a file for reading
+...do stuff...
+file_to_read.close()
 ```
+or
+```python
+writeable_file = open("my_output.txt", "w")  # open file for writing
+...do stuff...
+writeable_file.close()
+```
+
+Bad Things™ may happen if you forget to close a file when you're finished with it so Python has a way of opening files that guarantees that the file will automatically get closed when you're finished with it. This uses a Python statement called **with**:
+
+```python
+with open("my_input.txt", "r") as file_to_read:
+    ...do stuff...
+```
+or
+```python
+with open("my_output.txt", "w") as writeable_file:
+    ...do stuff...
+```
+
+Like other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you've opened. Once Python finds a line that is not indented, it will close the file for you.
 
 ## Reading from a file
 
 You can read the contents of a file one line at a time
 
 ```python
-fh = open("my_input.txt","r")
-line1 = fh.readline()
-line2 = fh.readline()
-line3 = fh.readline()
+with open("my_input.txt", "r") as file_to_read:
+    line1 = file_to_read.readline()     # reads the 1st line
+    line2 = file_to_read.readline()     # reads the 2nd line
+    line3 = file_to_read.readline()     # reads the 3rd line
 ```
 
 Or, you can read all of the lines of the file within a for-loop
 
 ```python
-fh = open("my_input.txt","r")
-
-for line in fh:
-  print(line)
-
-# close the file once you are done
-fh.close()
+with open("my_input.txt", "r") as file_to_read:
+    for line in file_to_read:
+        print(line)
 ```
 
 Or, even a mixture of both
 
 ```python
-fh = open("my_input.txt","r")
+with open("my_input.txt", "r") as file_to_read:
+    # read the first line of the file
+    line1 = file_to_read.readline()
 
-# read the first line of the file
-line1 = fh.readline()
-
-# read all of the REST of the lines in the file
-for line in fh:
-  print(line)
-
-# close the file once you are done
-fh.close()
+    # read all of the REST of the lines in the file
+    for line in file_to_read:
+        print(line)
 ```
 
 **Example**
@@ -71,14 +87,14 @@ And the clean ones are so seldom comical
 code:
 
 ```python
-fh = open("my_input.txt")
-line1 = fh.readline()
-print("Line 1 has been read")
-line2 = fh.readline()
-print("Line 2 has been read")
+with open("my_input.txt", "r") as file_to_read:
+    line1 = file_to_read.readline()
+    print("Line 1 has been read")
+    line2 = file_to_read.readline()
+    print("Line 2 has been read")
 
-for line in fh:
-  print(line)
+    for line in file_to_read:
+        print(line)
 ```
 
 Output:
@@ -95,25 +111,32 @@ And the clean ones are so seldom comical
 
 Once the file has been opened, you can use `print` to write stuff to your file.
 
-You will need to add "`file=variable`" (where _variable_ is the name you used when you openned the file)
+You will need to add "`file = variable`" (where _variable_ is the name you used when you opened the file)
 
 ```python
-with open("my_input.txt","w") as fh:   # variable is "fh"
-  print("Hello World!", file=fh)
+with open("my_output.txt", "w") as output_file:   # variable is "output_file"
+  print("Hello World!", file = output_file)
 ```
 
 ```python
-a_list = [1,1,2,3,5,8,13]
-with open("my_output.txt", "w") as fh:
+a_list = [1, 1, 2, 3, 5, 8, 13]
+with open("my_output.txt", "w") as output_file:
   for value in a_list:
-    print(value, file=fh)
+    print(value, file = output_file)
 ```
 
-### CSV File
+## CSV File Format
 
-So, reading a csv file can be done just like an ordinary file, but it is not very useful.
+In science, much of the data that you will receive will be stored in a _comma separated value_ (CSV) file. These files can be easily generated from Excel, GoogleSheets or any other similar tools.
 
-**CSV File**
+> **IMPORTANT**: Parsing and reviewing a CSV file _requires_ that the programmer knows how the data is organized in the file. For example, which column contains which data.
+
+There are many variations on the rules, but the most standard is:
+
+- Data is separated into rows
+- Each row contains information about one thing, with the specific bits of information separated by a comma.
+
+Reading a csv file can be done just like an ordinary file, but it is not very convenient because reading one line at a time just gives a bunch of stuff with commas.
 
 ```text
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -122,13 +145,11 @@ So, reading a csv file can be done just like an ordinary file, but it is not ver
 0.478,0.862,1.80334728033473,0.412036,0.412096536343494,6.507658,3.110660524,13.2459327149644,,,,,,,,,,,,,,,,,,,,
 ```
 
-Blech! Reading one line at a time just gives a bunch of stuff with commas.
-
-I want it sorted by columns!!
+I want it split into columns!!
 
 <div style="page-break-after: always;"></div>
 
-# ReadCSV - Simple
+# ReadCSV - Sample
 
 [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
 
@@ -136,22 +157,9 @@ I want it sorted by columns!!
 
 Learn how to open and read a simple `csv` file and parse the data using either lists or dictionaries.
 
-## Context
-
-In science, much of the data that you will receive will be stored in a _comma separated value_ (CSV) file. These files can be easily generated from Excel, GoogleSheets or any other similar tools.
-
-> **IMPORTANT**: Parsing and reviewing a CSV file _requires_ that the programmer knows how the data is organized in the file. For example, which column contains which data.
-
-### CSV File Format
-
-There are many variations on the rules, but the most standard is:
-
-- Data is separated by rows,
-- Each row contains information about one thing, with the specific bits of information separated by a comma.
-
 #### Example Input
 
-Each row contains information about a student, the course that they are taking, and grade that they achieved in that course.
+Each row contains information about a student, the course that they are taking, and grade that they achieved in that course. Often, the first line of the file holds strings which are the names of the "columns". If your file starts with the column names then you'll want to skip that row by reading it before you start reading and storing the data rows.
 
 ```text
 First Name,Last Name,Program,Grade
@@ -177,7 +185,7 @@ Elmer,Fudd,Singing,99
 
 To read a csv file, open the file in the standard way.
 
-Once your flie has been opened, it needs to be converted to either a standard `csv.reader`.
+Once your flie has been opened, it needs to be converted to a `csv.reader`.
 
 At this point it can be looped over, just like an ordinary file, with the following exceptions:
 
@@ -189,12 +197,11 @@ At this point it can be looped over, just like an ordinary file, with the follow
 import csv
 input_file = "input_file.csv"
 
-with open(input_file,"r") as fh:
-
-  	# create a csv reader, to parse the line as it is being read in
-    csv_file:csv.reader = csv.reader(fh)
+with open(input_file, "r") as fh:
+  	# create a csv reader, to parse each line as it is being read in
+    csv_file: csv.reader = csv.reader(fh)
     for line in csv_file:
-      print(line)
+        print(line)
 ```
 
 Output:
@@ -232,29 +239,28 @@ GRADE = 3
 grades: list[float] = []
 
 def main(input_file):
-    fh = open(input_file, "r")
+    with open(input_file, "r") as fh:
+        # read the header file now, because it is not part of the "real" data
+        fh.readline()
 
-    # read the header file now, because it is not part of the "real" data
-    fh.readline()
+        # create a csv reader so that it can parse the data correctly
+        csv_file: csv.reader = csv.reader(fh)
 
-    # create a csv reader so that it can parse the data correctly
-    csv_file: csv.reader = csv.reader(fh)
+        for line in csv_file:
+            # print the individual info
+            print(line[FIRST_NAME], line[PROGRAM])
 
-    for line in csv_file:
-        # print the individual info
-        print(line[FIRST_NAME], line[PROGRAM])
+            # append the grade in a new list
+            # Remember that the data from the csv file is always a string,
+            # so don't forget to convert to a number
+            grades.append(float(line[GRADE]))
 
-        # append the grade in a new list
-        # Remember that the data from the csv file is always a string,
-        # so don't forget to convert to a number
-        grades.append(float(line[GRADE]))
-
-    # what is the average grade
-    print("The average grade is: ", sum(grades)/len(grades))
+        # what is the average grade
+        print("The average grade is: ", sum(grades) / len(grades))
 
 if __name__ == "__main__":
-    input_file = input("Enter the csv file to read: ")
-    main(input_file)
+    filename = input("Enter the csv file to read: ")
+    main(filename)
 ```
 
 Sample output
@@ -372,24 +378,23 @@ GRADE = 3
 grades: list[float] = []
 
 def main(input_file):
-    fh = open(input_file, "r")
+    with open(input_file, "r") as fh:
+        # read the header file now, because it is not part of the "real" data
+        fh.readline()
 
-    # read the header file now, because it is not part of the "real" data
-    fh.readline()
+        # create a csv reader so that it can parse the data correctly
+        csv_file: csv.reader = csv.reader(fh)
 
-    # create a csv reader so that it can parse the data correctly
-    csv_file: csv.reader = csv.reader(fh)
-
-    for line in csv_file:
-        if line[FIRST_NAME] == "Elmer" and line[LAST_NAME] == "Fudd":
-            grade = float(line[GRADE])
-            print(f"{line[PROGRAM]:15}: {grade:4.1f}")
-            grades.append(grade)
-
-    # what is the average grade
-    print("Elmer Fudd's average grade is: ", sum(grades)/len(grades))
+        for line in csv_file:
+            if line[FIRST_NAME] == "Elmer" and line[LAST_NAME] == "Fudd":
+                grade = float(line[GRADE])
+                print(f"{line[PROGRAM]:15}: {grade:4.1f}")
+                grades.append(grade)
+                
+        # what is the average grade
+        print("Elmer Fudd's average grade is: ", sum(grades) / len(grades))
 
 if __name__ == "__main__":
-    input_file = input("Enter the csv file to read: ")
-    main(input_file)
+    filename = input("Enter the csv file to read: ")
+    main(filename)
 ```
