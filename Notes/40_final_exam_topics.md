@@ -4,7 +4,7 @@ This page has notes for effective studying for the Fall 2025 final exam.
 
 ## Final Exam Topics
 
-Using the SN1 notes website as reference, the following items are *not* included in your final exam:
+Using the SN1 notes website as reference, the following items are _not_ included in your final exam:
 
 - Getting Started & Introduction sections
 - Type hinting
@@ -12,9 +12,9 @@ Using the SN1 notes website as reference, the following items are *not* included
 - Splitting & slicing strings
 - Only basic f-string formatting required
 - Reading/writing files (input/output/.csv files)
-- Libraries (matplotlib, numpy, Turtle)
+- External libraries (matplotlib, numpy, Turtle)
 
-That means, everything else on this website *could be* included in your final exam.
+That means, everything else on this website _could be_ included in your final exam.
 
 ## Reference sheet
 
