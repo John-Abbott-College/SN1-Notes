@@ -3,5 +3,5 @@ include:
 - "_sidebar.md"
 
 plugins:
-- jekyll-mathjax
-- jekyll katex
+- jekyll-mathjax-csp
+- jekyll-katex
