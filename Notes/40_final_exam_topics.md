@@ -34,4 +34,26 @@ Not all questions have solutions provided -- try coding your answers in Pycharm 
 
 ## Teacher office hours
 
-In-person tutorial/question times at the college will be available at specific times during the weeks of Dec 8 and Dec 15. Your professor will inform you of these times shortly.
+Times and locations may change. _Last updated: December 11, 2025 @ 2:45 PM_
+
+**Thursday, December 11, 2025**
+
+- Keith in P-326, 13:00 - 16:00
+
+**Friday, December 12, 2025**
+
+- Michael in P311, 11:00 - 12:00
+- Peter in P-326, 13:00 - 16:00
+- Michael in room TBD, 13:00 - 15:00
+  
+**Tuesday, December 16, 2025**
+
+- Michael in P311, 11:00 - 12:00
+- POGGIE @ ???, 14:00 - 17:00
+- Michael in P311, 16:00 - 17:30
+
+**Wednesday, December 17, 2025**
+
+- POGGIE @ ???, 14:30 - 17:30
+- Keith in room TBD, 14:30 - 17:00
+- Michael in P311, 14:30 - 16:30
