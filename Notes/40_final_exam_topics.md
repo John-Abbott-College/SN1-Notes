@@ -38,7 +38,7 @@ Times and locations may change. _Last updated: December 11, 2025 @ 2:45 PM_
 
 **Thursday, December 11, 2025**
 
-- Keith in P-326, 13:00 - 16:00
+- Keith, Alex & Peter in P-326, 13:00 - 16:00
 
 **Friday, December 12, 2025**
 
@@ -53,6 +53,5 @@ Times and locations may change. _Last updated: December 11, 2025 @ 2:45 PM_
 
 **Wednesday, December 17, 2025**
 
-- POGGIE @ ???, 14:30 - 17:30
-- Keith in room TBD, 14:30 - 17:00
+- POGGIE, Keith in P-326, 14:30 - 17:00
 - Michael in P311, 14:30 - 16:30
