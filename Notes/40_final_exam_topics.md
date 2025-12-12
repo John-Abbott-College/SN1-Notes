@@ -50,6 +50,7 @@ Times and locations may change. _Last updated: December 11, 2025 @ 2:45 PM_
 
 - Michael in P311, 11:00 - 12:00
 - Michael in P311, 16:00 - 17:30
+- Keith in P-326, 15:00 - 17:00
 
 **Wednesday, December 17, 2025**
 
