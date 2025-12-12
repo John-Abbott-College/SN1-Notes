@@ -2,8 +2,6 @@
 
 Type hinting reinforces some additional constraints on the types or arguments and returned values of a user defined function. It is optional, but highly recommended to ensure that functions are used as intended.
 
-In this course, you are asked to use type hinting on all your defined functions. Marks will be deduced if you do not.
-
 <img src="Images\function_type_hinting.png" height=300/> 
 
 ```python
