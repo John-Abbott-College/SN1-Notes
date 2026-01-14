@@ -66,12 +66,10 @@
 
 **Data Processing**
 
-<!-- TODO - ⚠️ @poggie to migrate -->
-
-- [Reading/Writing Files](Notes/35_reading_files.md)
-- [Installing modules](Notes/33_1_matplotlib_and_numpy.md)
-- [Intro to Numpy](Notes/33_2_numpy.md)
-- [Intro to Matplotlib](/Notes/33_3_intro_to_matplotlib.md)
+- [Reading/Writing Files](Notes/data_processing/01_reading_files/01_reading_files.md)
+- [Installing modules](Notes/data_processing/02_installing_modules/02_installing_modules.md)
+- [Intro to Numpy](Notes/data_processing/03_numpy/03_numpy.md)
+- [Intro to Matplotlib](Notes/data_processing/04_matplotlib/04_matplotlib.md)
 
 **Tooling**
 
