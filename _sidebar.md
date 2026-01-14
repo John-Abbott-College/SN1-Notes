@@ -1,10 +1,8 @@
 **Getting Started**
 
-<!-- TODO - ⚠️ @poggie to rename this to /getting_started eventually to keep the naming schema consistent -->
-
-- [Installation](Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation.md)
-- [Creating a project](Notes/getting-started/02_create_project/02_create_project.md)
-- [Using Lea](Notes/getting-started/03_lea/03_lea.md)
+- [Installation](Notes/getting_started/01_personal_computer_installation/01_personal_computer_installation.md)
+- [Creating a project](Notes/getting_started/02_create_project/02_create_project.md)
+- [Using Lea](Notes/getting_started/03_lea/03_lea.md)
 
 **Introduction**
 
@@ -14,21 +12,17 @@
 
 **Variables**
 
-<!-- TODO - Replace the links from the /variables subfolder -->
-
-- [What are literals](Notes/04_intro_literals.md)
-- [Variables & Constants](Notes/08_variables.md)
-- [Integers & Floats](Notes/05_integers_floats.md)
-- [Booleans](Notes/07_booleans.md)
-- [Strings](Notes/06_1_strings.md)
-- [<span class="practice-link">Practice with Datatypes</span>](Notes/variables/06_exercises/06_exercises.md)
+- [What are literals](Notes/variables/01_intro_literals/01_intro_literals.md)
+- [Variables & Constants](Notes/variables/02_variables/02_variables.md)
+- [Integers & Floats](Notes/variables/03_integers_floats/03_integers_floats.md)
+- [Booleans](Notes/variables/04_booleans/04_booleans.md)
+- [Strings](Notes/variables/05_strings/05_strings.md)
+- [<span class="practice-link">Practice with Datatypes</span>](Notes/variables/exercises/data_types/data_types.md)
 
 **String Formatting**
 
-<!-- TODO - Replace the links from the /string_formatting subfolder -->
-
-- [String Operations](Notes/06_1_2_strings_operations.md)
-- [F string formatting](Notes/06_2_f_strings.md)
+- [String Operations](Notes/string_formatting/01_string_ops/01_string_ops.md)
+- [F string formatting](Notes/string_formatting/02_f_strings/02_f_strings.md)
 
 **Operators**
 
@@ -75,12 +69,6 @@
 - [Looping over lists](Notes/lists/02_looping_over_lists/02_looping_over_lists.md)
 - [List Inclusion](Notes/lists/04_list_inclusion/04_list_inclusion.md)
 - [<span class="practice-link">Practice Lists</span>](Notes/lists/03_exercises/03_exercises.md)
-
-<!-- ! Advanced list topics that don't feel necessary atm -->
-<!--
-- [List Comprehensions](Notes/23_3_for_loop_list_comprehension.md)
-- [List in action](Notes/28_3_lists.md)
-  -->
 
 **Additional notes**
 
