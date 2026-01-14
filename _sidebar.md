@@ -26,24 +26,21 @@
 
 **Operators**
 
-<!-- TODO - Replace the links from the /operators subfolder -->
-
-- [Assignment Operators](Notes/11_assignment_operators.md)
-- [Arithmetic Operators](Notes/10_arithmetic_operatos.md)
-- [Comparison Operators](Notes/12_comparison_operators.md)
-- [Logical Operators](Notes/13_logical_operators.md)
-- [<span class="practice-link">Practice Operators</span>](Notes/operators/05_exercises/05_exercises.md)
+- [Assignment Operators](Notes/operators/01_assignment_operator/01_assignment_operator.md)
+- [Arithmetic Operators](Notes/operators/02_arithmetic_operators/02_arithmetic_operators.md)
+- [Comparison Operators](Notes/operators/03_comparison_operators/03_comparison_operators.md)
+- [Logical Operators](Notes/operators/04_logical_operators/04_logical_operators.md)
+- [<span class="practice-link">Practice Operators</span>](Notes/operators/exercises/arithmetic_operators/arithmetic_operators.md)
+- [<span class="practice-link">Practice Operators & Variables</span>](Notes/operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.md)
 
 **Statements**
 
-<!-- TODO - Replace the links from the /statements subfolder -->
-
-- [If statement](Notes/26_conditions_if.md)
-- [If/Else statement](/Notes/27_conditions_if_else.md)
-- [For loop](Notes/23_1_for_loop)
-- [Scope & Statements](Notes/statements/06_scope/06_scope.md)
-- [<span class="practice-link">Practice Loop Statements</span>](Notes/statements/04_exercises/04_exercises.md)
-- [<span class="practice-link">Practice Conditional Statements</span>](Notes/statements/05_conditional_exercises/05_conditional_exercises.md)
+- [If statement](Notes/statements/01_if_statements/01_if_statements.md)
+- [If/Else statement](Notes/statements/02_if_else_statements/02_if_else_statements.md)
+- [For loop](Notes/statements/03_for_loop/03_for_loop.md)
+- [Scope & Statements](Notes/statements/04_scope/04_scope.md)
+- [<span class="practice-link">Practice Loop Statements</span>](Notes/statements/exercises/for_loops/for_loops.md)
+- [<span class="practice-link">Practice Conditional Statements</span>](Notes/statements/exercises/conditional/conditional.md)
 
 **Functions**
 
@@ -92,9 +89,3 @@
 - [<span class="practice-link">Practice Midterm F25</span>](Notes/challenge_problems/practice_midterm_f25/practice_midterm_f25.md)
 - [<span class="practice-link">Practice Exam F24 (UPenn)</span>](Notes/challenge_problems/upenn_exam_practice_f24/upenn_exam_practice_f24.md)
 - [<span class="practice-link">Final Exam W25</span>](Notes/challenge_problems/final_exam_w25/final_exam_w25.md)
-
-<!--
-**Math To Python**
-- [Accumulators & Series](Notes/31_accumulator_pattern.md)
-- [Formula Translator](Notes/32_from_math_to_python.md)
-  -->
