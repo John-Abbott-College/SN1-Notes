@@ -53,10 +53,8 @@
 
 **Turtle Graphics**
 
-<!-- TODO - ⚠️ @poggie to migrate -->
-
-- [Intro to turtle](Notes/09_1_turtle_graphics.md)
-- [Draw a house](Notes/09_2_draw_house.md)
+- [Intro to turtle](Notes/turtle/01_turtle_graphics/01_turtle_graphics.md)
+- [Draw a house](Notes/turtle/02_arts_and_crafts/02_arts_and_crafts.md)
 
 **Lists**
 
@@ -82,6 +80,8 @@
 - [Intro to Matplotlib](/Notes/33_3_intro_to_matplotlib.md)
 
 **Challenge Problems**
+
+<!-- TODO - ⚠️ @poggie to migrate -->
 
 - [Final Exam Topics](Notes/40_final_exam_topics.md)
 - [<span class="practice-link">Practice Midterm F25</span>](Notes/challenge_problems/practice_midterm_f25/practice_midterm_f25.md)
