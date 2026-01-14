@@ -75,11 +75,9 @@
 
 - [Using the Pycharm Debugger](Notes/tooling/01_debugger/01_debugger.md)
 
-**Challenge Problems**
+**Final Exam Prep**
 
-<!-- TODO - ⚠️ @poggie to migrate -->
-
-- [Final Exam Topics](Notes/40_final_exam_topics.md)
-- [<span class="practice-link">Practice Midterm F25</span>](Notes/challenge_problems/practice_midterm_f25/practice_midterm_f25.md)
-- [<span class="practice-link">Practice Exam F24 (UPenn)</span>](Notes/challenge_problems/upenn_exam_practice_f24/upenn_exam_practice_f24.md)
-- [<span class="practice-link">Final Exam W25</span>](Notes/challenge_problems/final_exam_w25/final_exam_w25.md)
+- [Final Exam Topics](Notes/final_exam_prep/01_study_guide/01_study_guide.md)
+- [<span class="practice-link">Practice Midterm F25</span>](Notes/final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.md)
+- [<span class="practice-link">Practice Exam F24 (UPenn)</span>](Notes/final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.md)
+- [<span class="practice-link">Final Exam W25</span>](Notes/final_exam_prep/exercises/final_exam_w25/final_exam_w25.md)
