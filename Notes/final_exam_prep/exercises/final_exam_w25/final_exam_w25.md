@@ -1,11 +1,5 @@
 # Final Exam - Winter 2025
 
-Solutions aren’t shown. Before jumping to look things up, try sitting with the problem for a moment. That uncomfortable feeling is unfortunately where the learning happens in this course lol
-
-- **Really stuck?** Draw it out
-- **Still really stuck?** Try explaining it to a friend
-- **It's been an hour tho?** Contact your prof to discuss IRL
-
 ## Question 1: Errors (3 marks)
 
 **Fix the errors.**

@@ -1,3 +1,8 @@
+**Objectives**
+
+- [Course Goals](Notes/objectives/01_course_goals/01_course_goals.md)
+- [Problem Solving](Notes/objectives/02_probelm_solving/02_probelm_solving.md)
+
 **Getting Started**
 
 - [Installation](Notes/getting_started/01_personal_computer_installation/01_personal_computer_installation.md)
