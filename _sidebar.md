@@ -44,14 +44,12 @@
 
 **Functions**
 
-<!-- TODO - Replace the links from the /functions subfolder -->
-
-- [What are functions](https://john-abbott-college.github.io/SN1-Notes/Notes/16_1_functions_cartoon.pdf)
-- [The Math Module](Notes/17_functions_math_module.md)
-- [Basic I/O Functions](Notes/18_functions_print_input.md)
+- [What are functions](Notes/functions/01_what_are_functions/01_what_are_functions.pdf)
+- [The Math Module](Notes/functions/02_math_functions/02_math_functions.md)
+- [Basic I/O Functions](Notes/functions/03_io/03_io.md)
 - [Custom functions](Notes/19_user_defined_functions.md)
-- [<span class="practice-link">Practice IO Functions</span>](/Notes/functions/05_exercises/05_exercises.md)
-- [<span class="practice-link">Practice Custom Functions</span>](Notes/functions/06_function_exercises/06_function_exercises.md)
+- [<span class="practice-link">Practice IO Functions</span>](Notes/functions/04_custom_functions/04_custom_functions.md)
+- [<span class="practice-link">Practice Custom Functions</span>](Notes/functions/exercises/custom_functions/custom_functions.md)
 
 **Turtle Graphics**
 
@@ -64,8 +62,8 @@
 
 - [List Intro](Notes/lists/01_into_to_lists/01_into_to_lists.md)
 - [Looping over lists](Notes/lists/02_looping_over_lists/02_looping_over_lists.md)
-- [List Inclusion](Notes/lists/04_list_inclusion/04_list_inclusion.md)
-- [<span class="practice-link">Practice Lists</span>](Notes/lists/03_exercises/03_exercises.md)
+- [List Inclusion](Notes/lists/03_list_inclusion/03_list_inclusion.md)
+- [<span class="practice-link">Practice Lists</span>](Notes/lists/exercises/lists/lists.md)
 
 **Additional notes**
 
