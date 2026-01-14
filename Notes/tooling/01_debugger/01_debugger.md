@@ -1,6 +1,6 @@
 # Debugging Python Code
 
-*These notes were adapted from https://www.jetbrains.com/help/pycharm/part-1-debugging-python-code.html*
+_These notes were adapted from https://www.jetbrains.com/help/pycharm/part-1-debugging-python-code.html_
 
 These notes demonstrate how to use the Pycharm debugger to step through your program one line at a time. This is an invaluable tool for better understanding how your program works and diagnosing any mistakes in your algorithms.
 
@@ -38,7 +38,7 @@ To place breakpoints, just click the gutter next to the line you want
 your application to suspend at:
 
 <figure>
-   <img src="/Notes/pycharm/assets/adding-a-breakpoint.png" style="margin: 0; max-width: 460px;" alt="solver.py with breakpoints at lines 6 and 18"/>
+   <img src="/Notes/tooling/01_debugger/assets/adding-a-breakpoint.png" style="margin: 0; max-width: 460px;" alt="solver.py with breakpoints at lines 6 and 18"/>
    <figcaption style="font-style: italic;">Clicking on the line number in Pycharm (in the "gutter") places a breakpoint at that line. Here, there are breakpoints placed at lines 6 and 18 in the solver.py program.</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ tab](https://www.jetbrains.com/help/pycharm/debug-tool-window-console.html) of t
 window, and lets you enter the desired values:
 
 <figure>
-   <img src="/Notes/pycharm/assets/debugging-console.png" style="margin: 0; max-width: 460px;" alt="debugging session showing that the console works the same as running the code"/>
+   <img src="/Notes/tooling/01_debugger/assets/debugging-console.png" style="margin: 0; max-width: 460px;" alt="debugging session showing that the console works the same as running the code"/>
    <figcaption style="font-style: italic;">The debugger has started and has not reached the breakpoint at line 18 yet -- here, the inputs a=1, b=10, and c=1 have been provided.</figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ The debugger suspends the program at the first breakpoint. It means that
 the line with the breakpoint is not yet executed. The line becomes blue:
 
 <figure>
-   <img src="/Notes/pycharm/assets/stop-at-first-breakpoint.png" style="margin: 0; max-width: 460px;" alt="stop at first breakpoint"/>
+   <img src="/Notes/tooling/01_debugger/assets/stop-at-first-breakpoint.png" style="margin: 0; max-width: 460px;" alt="stop at first breakpoint"/>
    <figcaption style="font-style: italic;">Pycharm interface when the debugger stops -- you can see the values of all local variables in the debugger console.</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ you will now see that the blue marker moves to the
 next breakpoint (on line 6).
 
 <figure>
-   <img src="/Notes/pycharm/assets/resume-to-next-breakpoint.png" style="margin: 0; max-width: 460px;" alt="resume to next breakpoint"/>
+   <img src="/Notes/tooling/01_debugger/assets/resume-to-next-breakpoint.png" style="margin: 0; max-width: 460px;" alt="resume to next breakpoint"/>
    <figcaption style="font-style: italic;">Clicking the Resume button brings you to the next breakpoint -- in this case, line 6 of the quadratic_formula function. Note that the value of the variable d has been computed and can be seen in the list of local variables.</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ to the next line in the program instead of skipping to the next breakpoint.
 Click the **Step over** button (the arrow that goes up and then down) to see the resulte of executing line 6:
 
 <figure>
-   <img src="/Notes/pycharm/assets/step-over-to-next-line.png" style="margin: 0; max-width: 460px;" alt="step over to next line"/>
+   <img src="Notes/tooling/01_debugger/assets/step-over-to-next-line.png" style="margin: 0; max-width: 460px;" alt="step over to next line"/>
    <figcaption style="font-style: italic;">Clicking the step over button brings you to the next line, updating all local variables with any new values as a result of executing the current line. In this case, the disc variable has been updated to compute the square root component of the quadratic equation.</figcaption>
 </figure>
 
@@ -104,6 +104,6 @@ Using breakpoints and the **Resume** and **Step over** buttons, you now have com
 
 In summary, you've learned:
 
-- You've learnt what *breakpoints* are and how to place them.
+- You've learnt what _breakpoints_ are and how to place them.
 - You've learnt how to begin the debugger session, and how to show the Python prompt in the debugger console.
 - You've practised stepping through code, and skipping to different breakpoints in your code.
