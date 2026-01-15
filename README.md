@@ -15,6 +15,6 @@ You can download a copy of the course outline from Léa.
 
 # Tools & Materials
 
-- PyCharm Community Edition 2024
+- PyCharm 2025
 - Python version 3.10 or above
 - Access to the Internet.
