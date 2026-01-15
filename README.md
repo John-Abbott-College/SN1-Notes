@@ -1,4 +1,4 @@
-# Programming in Science - Fall 2025
+# Programming in Science - Winter 2026
 
 _Welcome to 420-SN1 Programming in Science_
 
@@ -11,7 +11,7 @@ This website provides you with additional notes and practice exercises that can 
 
 # Course Outline
 
-You can download a copy of the course outline [here](https://john-abbott-college.github.io/SN1-Notes/Files/FALL_2025.COMPUTER_SCIENCE.420-SN1-RE.POGGIEE.pdf).
+You can download a copy of the course outline from Léa.
 
 # Tools & Materials
 
