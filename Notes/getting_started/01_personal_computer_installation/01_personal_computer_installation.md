@@ -12,17 +12,17 @@ Your browser _should_ automatically detect detect whether you’re on Mac or Win
 
 ### Windows
 - Click the link for the standalone installer 'Python 3.14.2'    
-<img src="./assets/install-python-windows.png" alt="Windows Python Installation" width="auto" height="400">
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/install-python-windows.png" alt="Windows Python Installation" width="auto" height="400">
 
 ### Mac
 - Click the big yellow button at the top of the page that says 'Download Python 3.14.2'  
-<img src="./assets/install-python-mac.png" alt="Mac Python Installation" width="auto" height="400">
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/install-python-mac.png" alt="Mac Python Installation" width="auto" height="400">
 
 ## Install PyCharm
 
 - Navigate to [www.jetbrains.com/pycharm](https://www.jetbrains.com/pycharm)
 - This time, click the big green button that says 'Download'  
-<img src="./assets/pycharm.png" alt="PyCharm Installation" width="auto" height="400">
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm.png" alt="PyCharm Installation" width="auto" height="400">
 
 Again, the browser should detect your operating system and your computer’s “chip.” If it doesn’t, just select the correct option manually following the below instructions
 
@@ -43,10 +43,10 @@ Again, the browser should detect your operating system and your computer’s “
 ### PyCharm Settings
 
 - Open the Settings in PyCharm and change this setting to *Merge With Main Toolbar*  
-<img src="./assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburger Settings" width="auto" height="400">
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburger Settings" width="auto" height="400">
 
 - Turn OFF this checkbox:  
-<img src="./assets/pycharm-settings-completion.png" alt="PyCharm Code Completion Settings" width="auto" height="400">
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-completion.png" alt="PyCharm Code Completion Settings" width="auto" height="400">
 
 ## Free Stuff (optional)
 
