@@ -6,13 +6,20 @@ If you’re sticking with the lab computers, you can skip all of this!!
 ⚠️ _Chromebook users: I have bad news for you, but this setup will not work on a Chromebook. You’ll need to use the lab computers 100%_
 
 ## Install Python
-
 - Navigate to [www.python.org/downloads/](https://www.python.org/downloads/)
-- Click the big yellow button at the top of the page that says 'Download Python 3.13'
-
-![Install](./assets/install.png)
 
 Your browser _should_ automatically detect detect whether you’re on Mac or Windows. If it failed to vibe check your computer, just scroll down and select the download link that matches your operating system.
+
+### Windows
+- Click the link for the standalone installer 'Python 3.14.2'
+
+![Install](./assets/install-python-windows.png)
+
+### Mac
+- Click the big yellow button at the top of the page that says 'Download Python 3.14.2'
+
+![Install](./assets/install-python-mac.png)
+
 
 ## Install PyCharm
 
