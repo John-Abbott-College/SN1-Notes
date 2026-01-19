@@ -11,22 +11,18 @@ If you’re sticking with the lab computers, you can skip all of this!!
 Your browser _should_ automatically detect detect whether you’re on Mac or Windows. If it failed to vibe check your computer, just scroll down and select the download link that matches your operating system.
 
 ### Windows
-- Click the link for the standalone installer 'Python 3.14.2'
-
-![Install](./assets/install-python-windows.png)
+- Click the link for the standalone installer 'Python 3.14.2'    
+<img src="./assets/install-python-windows.png" alt="Windows Python Installation" width="auto" height="400">
 
 ### Mac
-- Click the big yellow button at the top of the page that says 'Download Python 3.14.2'
-
-![Install](./assets/install-python-mac.png)
-
+- Click the big yellow button at the top of the page that says 'Download Python 3.14.2'  
+<img src="./assets/install-python-mac.png" alt="Mac Python Installation" width="auto" height="400">
 
 ## Install PyCharm
 
 - Navigate to [www.jetbrains.com/pycharm](https://www.jetbrains.com/pycharm)
-- This time, click the big green button that says 'Download'
-
-![PyCharm](./assets/pycharm.png)
+- This time, click the big green button that says 'Download'  
+<img src="./assets/pycharm.png" alt="PyCharm Installation" width="auto" height="400">
 
 Again, the browser should detect your operating system and your computer’s “chip.” If it doesn’t, just select the correct option manually following the below instructions
 
@@ -43,6 +39,14 @@ Again, the browser should detect your operating system and your computer’s “
 
 - Go to Settings > System > About
 - Look under System Type and you'll see either **x64-based PC** or **ARM64-based PC**
+
+### PyCharm Settings
+
+- Open the Settings in PyCharm and change this setting to *Merge With Main Toolbar*  
+<img src="./assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburger Settings" width="auto" height="400">
+
+- Turn OFF this checkbox:  
+<img src="./assets/pycharm-settings-completion.png" alt="PyCharm Code Completion Settings" width="auto" height="400">
 
 ## Free Stuff (optional)
 
