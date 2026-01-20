@@ -60,7 +60,7 @@ Again, the browser should detect your operating system and your computer’s “
 <img src="./Notes/getting_started/01_personal_computer_installation/assets/Turn_Off_Slop.png" alt="Disable Inline Completions Guide" width="auto" height="400">
 
 ## Get rid of the hamburger
-- Open Settings again (as above if you need it) in PyCharm and change this setting to *Merge With Main Toolbar*  
+- Open Settings again (same procedure as above) in PyCharm and change this setting to *Merge With Main Toolbar*  
 <img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburgling Guide" width="auto" height="400">
 
 <!-- - Turn OFF this checkbox:  
