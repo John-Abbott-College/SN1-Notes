@@ -40,13 +40,31 @@ Again, the browser should detect your operating system and your computer’s “
 - Go to Settings > System > About
 - Look under System Type and you'll see either **x64-based PC** or **ARM64-based PC**
 
-### PyCharm Settings
+### Important PyCharm Settings
 
-- Open the Settings in PyCharm and change this setting to *Merge With Main Toolbar*  
-<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburger Settings" width="auto" height="400">
+## Turn off Inline Completion
 
-- Turn OFF this checkbox:  
-<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-completion.png" alt="PyCharm Code Completion Settings" width="auto" height="400">
+- Go to the File menu (In the top left corner, you’ll need to click on the four stacked horizontal lines).
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/Hamburger_Menu.png" alt="PyCharm Hamburger Menu" width="auto" height="400">
+
+- If the File dropdown menu doesn’t open, click on “File”.
+
+- In the File dropdown click settings
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/Where_Is_Settings.png" alt="PyCharm Settings" width="auto" height="400">
+
+- In Setting go to Editor->General->Inline Completion
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/Where_Is_The_AI_Slop_Setting.png" alt="Inline Completions Setting location" width="auto" height="400">
+
+- Untick the box next to “Enable local full line completion suggestions”.
+- Press the “Apply” button. It should then look like this:
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/Turn_Off_Slop.png" alt="Disable Inline Completions Guide" width="auto" height="400">
+
+## Get rid of the hamburger
+- Open Settings again (as above if you need it) in PyCharm and change this setting to *Merge With Main Toolbar*  
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-hamburger.png" alt="PyCharm Hamburgling Guide" width="auto" height="400">
+
+<!-- - Turn OFF this checkbox:  
+<img src="./Notes/getting_started/01_personal_computer_installation/assets/pycharm-settings-completion.png" alt="PyCharm Code Completion Settings" width="auto" height="400"> -->
 
 ## Free Stuff (optional)
 
