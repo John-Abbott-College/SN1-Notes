@@ -52,7 +52,7 @@
 - [What are functions](Notes/functions/01_what_are_functions/01_what_are_functions.pdf)
 - [The Math Module](Notes/functions/02_math_functions/02_math_functions.md)
 - [Basic I/O Functions](Notes/functions/03_io/03_io.md)
-- [Custom functions](Notes/19_user_defined_functions.md)
+- [Custom functions](Notes/functions/04_custom_functions/04_custom_functions.md)
 - [Type Hinting (Extra Fun)](Notes/functions/05_type_hinting/05_type_hinting.md)
 - [<span class="practice-link">Practice IO Functions</span>](Notes/functions/04_custom_functions/04_custom_functions.md)
 - [<span class="practice-link">Practice Custom Functions</span>](Notes/functions/exercises/custom_functions/custom_functions.md)
