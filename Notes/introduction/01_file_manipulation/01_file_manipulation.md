@@ -143,11 +143,62 @@ Likewise if the file extension is `.docx`, double clicking the file in File Expl
 | `.csv`    | <img src="Notes/introduction/01_file_manipulation/assets/csv_icon.png" style="zoom:25%;" />     | Comma Separated Values (can be read as a text file, or opened with Excel, where Excel will put data into the various columns, where each column data is separated by a comma)                     |
 | `.zip`    | <img src="Notes/introduction/01_file_manipulation/assets/zipfile_icon.png" style="zoom:25%;" /> | Zip file. Contains multiple files within one file. It needs to be `unzipped` before you can use the files within. WARNING: In File Explorer it can look like it is not zipped, even though it is. |
 
-## Compressing / Uncompressing files (`zip`/`unzip`)
+## Working with `.zip` files
+
+`.zip` files allow use to store a group of files in one place, while also "compressing" them into a smaller size than the sum of all individual files.
+
+There are two important things to know about `.zip` files:
+  - They can be *created* by **compressing** a collection of files
+  - You can *access the files inside them* by **extracting** the `.zip`
+
+You can think of a `.zip` file like a suitcase with your clothing stuffed inside, where a `folder` is like a closet with your clothing hung up:
+  - the `.zip` is like a "suitcase" in that it's easy to transport all of your clothing at once, but you can't access the "clothing" (`files`) without "opening" (`extracting`) the suitcase.
+  - the `folder` is like a "closet" in that it's hard to transport the whole thing at once, but makes accessing each individual *file* (article of clothing) much easier.
+
+To understand how to use the `.zip` files in this course: please open and _read_ [this short explainer][zip_explainer].
+
+Advice: keep this document open while you are working, as it contains all of the information you need to use `.zip` files correctly
+
+[zip_explainer]: https://support.microsoft.com/en-us/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5
+
+More step-by-step instructions for working with `.zip` follow below:
+
+### Compressing / Uncompressing files (`zip`/`unzip`)
 
 There are multiple ways to create a single file from a set of other files (LEA only accepts one document). We will only be discussing one method in this document.
 
-### MAC/Linux
+#### Windows
+
+Open file explorer.
+
+To zip,
+
+- select the files that you want to zip together, and right-click. Select `send to` then `compressed folder`
+
+<img src="Notes/introduction/01_file_manipulation/assets/create_zipfile.png" style="zoom:80%;" />
+
+To unzip
+
+- Select the file you want to unzip
+- Click the `Extract` tab at the top of the screen
+- Click `Extract All` button on the right, and follow instructions
+
+<img src="Notes/introduction/01_file_manipulation/assets/unzip_files.png" style="zoom:80%;" />
+
+
+> **NOTE:** Zip Files can be Misleading! in File Explorer
+>
+> If you have `double-clicked` on a zip file, it will open a new window showing all the files within the zip file. This can be misleading because it looks just the same as if the files have been unzipped.
+>
+> Do not work with these files directly, because weird stuff can happen (not always, so it makes it even more confusing)
+>
+> **What to look out for**: - if the folder information ends with a zip file.
+>
+> <img src="Notes/introduction/01_file_manipulation/assets/zipped_file_explorer.png" style="zoom:80%;" />
+>
+> <font color="red" size=2>DO NOT EVER DOUBLE CLICK A `.py` FILE FROM WITHIN A ZIP FILE. YOUR CHANGES WILL NOT BE SAVED!! </font>
+
+#### MAC/Linux
 
 | symbol                                                                                                                                                       | name          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
@@ -188,32 +239,3 @@ ADVANCED: _command line_
 
   `unzip somefilename.zip` where you replace the filenames with the appropriate names of the files
 
-### Windows
-
-Open file explorer.
-
-To zip,
-
-- select the files that you want to zip together, and right-click. Select `send to` then `compressed folder`
-
-<img src="Notes/introduction/01_file_manipulation/assets/create_zipfile.png" style="zoom:80%;" />
-
-To unzip
-
-- Select the file you want to unzip
-- Click the `Extract` tab at the top of the screen
-- Click `Extract All` button on the right, and follow instructions
-
-<img src="Notes/introduction/01_file_manipulation/assets/unzip_files.png" style="zoom:80%;" />
-
-## Zip Files can be Misleading! in File Explorer
-
-If you have `double-clicked` on a zip file, it will open a new window showing all the files within the zip file. This can be misleading because it looks just the same as if the files have been unzipped.
-
-> Do not work with these files directly, because weird stuff can happen (not always, so it makes it even more confusing)
-
-**What to look out for**: - if the folder information ends with a zip file.
-
-<img src="Notes/introduction/01_file_manipulation/assets/zipped_file_explorer.png" style="zoom:80%;" />
-
-<font color="red" size=2>DO NOT EVER DOUBLE CLICK A `.py` FILE FROM WITHIN A ZIP FILE. YOUR CHANGES WILL NOT BE SAVED!! </font>
