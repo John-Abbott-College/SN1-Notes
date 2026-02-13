@@ -29,14 +29,27 @@ Mathematic functions are often described as a black box which maps an input set 
   ```python
   # math already imported
 
-  math.ceil(5.5)
-  math.floor(5.5)
-  math.sqrt(9)
-  math.sin(3.14)
-  math.cos(0)
-  math.atan(1)
-  math.acos(1)
-  math.asin(1)
+  # Rounding up/down:
+  math.ceil(5.5)      # 6
+  math.floor(5.5)     # 5
+
+  # square root:
+  math.sqrt(9)        # 3
+
+  # trigonometry:
+  math.sin(3.14)      # 1
+  math.cos(0)         # 1
+  math.atan(1)        # 0.785398163397448
+  math.acos(1)        # 0.0
+  math.asin(1)        # 1.5707963267948966
+
+  # mathematical constants:
+  math.pi             # 3.141592653589793
+  math.tau            # 6.283185307179586
+
+  # converting between degrees and radians:
+  math.radians(90)    # 1.5707963267948966
+  math.degrees(1.57)  # 89.95437383553924
   ```
 
 - If you intend on using a particular function often, you can import only the function you are interested in:
