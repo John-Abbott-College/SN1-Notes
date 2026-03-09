@@ -261,7 +261,7 @@ $$
 
 3. Using the `area_cricle()`, `area_rect()` and `area_square()` functions, calculate the area of the following shape. You can assume that the red squares are perfect, that the green central ring is composed of two perfect inner and outer circles and that the blue borders are all perfect rectangles. :
 
-   <img src="composite_area.png" height=250/>
+<img src="./composite_area.png" height=250/>
 
 <details>
   <summary>✅ Solution</summary>
