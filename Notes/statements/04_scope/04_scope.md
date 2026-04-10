@@ -1,122 +1,149 @@
 # Scope & Statements
 
-What happens in the function, stays in the function. What happens in the loops stays in the loop. What happens in the if statement stays in the if statement
+The **scope** of a variable or function **name** defines *where that can variable/function be accessed* in the code.
 
-## Functions and scopes
+The point of this concept is to deal with cases where there are name conflicts between
+function and variable names.
 
-The scope of a variable defines where it can be accessed in the code.
+Name conflicts between variable names and function names can happen all the time. 
 
-A function's parameter, for example, is only available within that function and can't be used outside of it. This concept is illustrated in the code provided.
+For example, consider the code below:
 
-```python
-def my_function():
-    print("Do I know that variable?", var)
+```py
+x = 1 # a variable name x
+x = 0 # update the value of x
+
+def function_1(x): # function parameter name x
+    print(x) # what is the value of x?
+    x = x**2
+    return x
+
+def function_2(x): # x again!
+    print(x) # what is the value of x?
+    x = x**3
+    return x
+
+def function_3(y): # y, not x
+    print(x) # is x defined?
+    y = y**3
+    return y
 
 
-var = 1
-my_function()
-print(var)
+print(x)
+print(function_1(2))
+print(x) # does x change after calling function_1?
+x = 1
+print(function_2(3))
+print(x) # what did x change to after the previous two lines of code?
+print(function_3(3))
+print(y) # is y defined?
 ```
 
-**output:**
+What gets printed to the console? That is, what is the value stored by the variable called
+`x` at the moment the `print` statement is called? What about the variable `y`?
 
-```
-Do I know that variable? 1
-1
-```
+To know for certain, we have to know the **scope** where the variables `x` and `y` are defined.
 
-A variable existing outside a function has scope inside the function's body.
+## Concepts
 
-```python
-def my_function():
-    var = 2
-    print("Do I know that variable?", var)
+There are two main concepts to know:
+
+1. **Global scope**: Variable and function names in *global scope* are available to *all* your code.
+1. **Local scope**: Variable and function names in the *local scope* are only available or visible to the code *within that scope*.
+
+## Rules
+
+How do we know when a variable or function is accessible in global or local scope? Here
+are the rules:
+
+1. By default, all variables and functions are created in *global scope*
+2. However, when a variable or function is created *inside a function*, that
+   variable/function is *only accessible inside that function*
+3. That is, *all functions* create a *local scope*, where all variables or functions
+   defined within the function body only exist within that local scope.
+
+Function parameters are examples of variables created inside a function, therefore
+*function parameters are only accessible inside that function* and cannot be used outside
+of it.
 
 
-var = 1
-my_function()
-print(var)
-```
+## Examples
 
-**output:**
+1. Can a variable created in global scope be accessed inside a function?
 
-```python
-Do I know that variable? 2
-1
-```
+    ```python
+    def my_function():
+        print("Do I know that variable?", var)
 
-✍️**Challenge: What is the output?**
+    var = 1
+    my_function()
+    print(var)
+    ```
 
-```python
-value = 50
-def function1():
-   value = 25
-   print(value)
+    **output:**
 
-function1()
-print(value)
-```
+    ```
+    Do I know that variable? 1
+    1
+    ```
 
-## **Using Loops Inside Functions**
+    A variable existing outside a function is in **global scope**, so it can be accessed inside the function's body.
+    
+    Careful though: the variable has to be *defined already* in order for it to be in
+    **global scope**:
 
-A `for` loop is often used inside functions to automate repetitive tasks. Here's a breakdown of how loops work with functions in Python.
+    ```python
+    def my_function():
+        print("Do I know that variable?", var)
 
-**For Loop Syntax**:
+    my_function()
+    var = 1
 
-```python
-for variable in sequence:
-    # code to execute in each iteration
-```
+    print(var)
+    ```
 
-The loop iterates over a sequence, performing the same action for each item.
+    **output:**
 
-#### **Example 1: Simple Function with a For Loop**
+    ```
+    error (var not defined)
+    ```
 
-This function prints the numbers from 1 to 5 using a `for` loop:
+2. Can a variable created in a local scope be accessed outside the function it was defined
+   in?
 
-```python
-def print_numbers():
-    for i in range(1, 6):
-        print(i)
+    ```python
+    def my_function():
+        var = 2
+        print("Do I know that variable?", var)
 
-# Call the function
-print_numbers()
-```
+    var = 1
+    my_function()
+    print(var)
+    ```
 
-**Explanation**:
-The `for i in range(1, 6)` loop iterates over the numbers from 1 to 5, printing each value.
+    **output:**
 
-#### **Example 2: Sum of All Integers from 1 to `n`**
+    ```python
+    Do I know that variable? 2
+    1
+    ```
 
-This function calculates the sum of all integers from 1 to a given number `n`.
+    Note that `var` is defined in **global scope** AND in the **local scope** of
+    `my_function` -- however, they do not store the same value since the scope is
+    different.
 
-```python
-def sum_numbers(n):
-    total = 0
-    for i in range(1, n+1):
-        total += i
-    return total
 
-# Example usage:
-print(sum_numbers(5))  # Output: 15 (1+2+3+4+5)
-```
+3. ✍️**Challenge: What is the output?**
 
-**Explanation**:
-The function uses a loop to sum up all the integers from 1 to `n`. When called with `n = 5`, it returns 15.
+    ```python
+    value = 50
+    def function1():
+       value = 25
+       print(value)
 
-#### Example 3: Sum of Squares
+    function1()
+    print(value)
+    ```
 
-```python
-
-def sum_of_squares(n):
-    total = 0
-    for i in range(1, n + 1):
-        total += i ** 2
-    return total
-
-# Test the function
-print(sum_of_squares(4))  # Output: 30 (1^2 + 2^2 + 3^2 + 4^2)
-```
-
-**Explanation**:
-The function loops through numbers from 1 to `n` and adds the square of each number to the total. For `n = 4`, the result is 30.
+Once you have done all three of these problems, return to the problem at the beginning of
+these notes -- can you get the output for all of the print statements?
