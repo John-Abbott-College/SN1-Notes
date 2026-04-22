@@ -211,7 +211,6 @@ Write a program that finds the average value without using `sum()`, `len()` nor 
     for num in numbers:
         total += num
         count += 1
-
     print(f"The average is:: {total/count}")
 </code></pre>
 </details>
@@ -228,11 +227,13 @@ tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]
 ```
 
 Write a program which asks the user for a `target` destination. If it finds the destination in the list, it should print the ticket price, otherwise it should print "Destination not found". The program cannot use the method`.index()` 
+
 **Example output 1**
 ```text
 Where would you like to travel? Cancun
 Found it! The price to go to Cancun is 480.00$
 ```
+
 **Example output 2**
 ```text
 Where would you like to travel? Cairo
@@ -242,22 +243,25 @@ Destination not found
   <summary>👀 Hint</summary>
   <p>You can `return` when a function is ready to exit</p>
 </details>
+
 <details>
   <summary>✅ Solution</summary>
   <pre><code class="language-python">
-  destinations= ["Cancun", "New York", "Rio", "Madrid", "Paris", "Vancouver"]
-  tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]
-  target_destination = input("Where would you like to travel? ")
-  if target_destination not in destinations:
-    print("Destination not found")
-    return  #No need to keep looking
+    destinations= ["Cancun", "New York", "Rio", "Madrid", "Paris", "Vancouver"]
+    tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]
+    
+    target_destination = input("Where would you like to travel? ")
+
+    if target_destination not in destinations:
+      print("Destination not found")
+      return  #No need to keep looking
 
   # search for the destination
   for dest, price in zip(destinations, tickets):
     if dest == target_destination:
       print(f"Found it! The ticket price for {dest} is {price:.2f}$ ")
       break 
-</code></pre>
+	</code></pre>
 </details>
 
 ### Numeric Calculus 
@@ -270,14 +274,21 @@ y_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.86073
 
 
 1. Write a function called `get_positives()` which takes as input a list of `xs` and a list of `ys`  and returns a list of x values where y is greater or equal to 0. 
+
 <details>
   <summary>✅ Solution</summary>
   <pre>
   <code class="language-python">
-
+    def get_positives(xs:list, ys:list)->list:
+      positive_xs = [] 
+      for x,y in zip(xs, ys):
+          if y >= 0:
+              positive_xs.append(x)
+      return positive_xs
   </code>
   </pre>
 </details>
+
 2. Write a function called `local_minima()` which takes as input a list of `xs` and a list of `ys` and returns a list of values where y is a local minima (larger than the previous y and larger than the next y): $ y_{i-1} > y_i < y_{i+1}$ 
 
 <details>
@@ -287,49 +298,40 @@ y_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.86073
 </details>
 
 <details>
-  <summary>✅ Solution</summary>
-  <pre>
-  <code class="language-python">
-
-def local_minima(xs:list, ys:list)->list:
+<summary>✅ Solution</summary>
+  <pre><code class="language-python">
+  def local_minima(xs:list, ys:list)->list:
     minima = []
     for i in range(1,len(xs)-1): # to avoid index out of range
         previous = ys[i-1]
         current = ys[i]
         next_y = ys[i+1]
-
         # making sure current is larger than its neighbours
         if previous > current < next_y:
             minima.append(xs[i]) #save the x value
-    
     return minima
-
-  </code>
-  </pre>
+  </code></pre>
 </details>   
 
 3. Write a function called `derive()` which takes as input a list of `xs` and a list of `ys` and finds an estimate of the derivative by calculating the slope $\frac{\Delta{y}}{\Delta{x}}$ at every point where $\Delta{x} = x_i - x_{i-1}$ and $\Delta{y} = y_i - y_{i-1}$. It should return a list of slope values for each value of x. 
 
 <details>
   <summary>👀 Hint</summary>
-  <p>Use `for i in range()` to loop over the list and compare each point to the previous one. Be careful of the index out of range!
-</p>
+  <p>Use `for i in range()` to loop over the list and compare each point to the previous one. Be careful of the index out of range!</p>
 </details>
+
 <details>
   <summary>✅ Solution</summary>
-  <pre>
-  <code class="language-python">
+  <pre><code class="language-python">
   def derive(xs:list, ys:list)->list:
     slopes = []
     for i in range(1, len(xs)):
-
-        delta_x= xs[i]-xs[i-1]
+        delta_x = xs[i]-xs[i-1]
         delta_y =  ys[i] - ys[i-1]
         slope =delta_y  /delta_x
         slopes.append(slope)
     return slopes
-  </code>
-  </pre>
+  </code></pre>
 </details>
 
 4. Write a function `is_increasing()` which takes a list of `values` and returns `True` if the values are always increasing, otherwise return `False`.
@@ -341,15 +343,13 @@ def local_minima(xs:list, ys:list)->list:
 
 <details>
   <summary>✅ Solution</summary>
-  <pre>
-  <code class="language-python">
-  def is_increasing(values:list) -> bool:
-    for i in range(1, len(values)):
-        if values[i] <= values[i-1]: #not increasing
-            return False
-    return False
-  </code>
-  </pre>
+  <pre><code class="language-python">
+    def is_increasing(values:list) -> bool:
+      for i in range(1, len(values)):
+          if values[i] <= values[i-1]: #not increasing
+              return False
+      return False
+  </code></pre>
 </details>
 
 ## Level 4
