@@ -211,3 +211,114 @@ Be able to create and call functions that:
   print (a_list[-1])		# prints -17
   print (a_list[-2])		# print 0
   ```
+
+
+
+## CSV files
+
+- What's a CSV file?
+
+- What does each line and column represents? 
+
+- Reading a csv file columns into a python lists and converting values to the appropriate data type using `csv.reader`
+
+  > Example: 
+  >
+  > Consider a CSV file with three columns: *Name, Age, Weight*
+  >
+  > Sample line:
+  >
+  > ```
+  > ["Bob", "28", "75.0"]
+  > ```
+
+  > ```python
+  > import csv
+  > 
+  > filename='example.csv'
+  > 
+  > 
+  > names = []
+  > ages = []
+  > weights = []
+  > 
+  > with open(filename, 'r') as file: #No need to memorize this part
+  >   reader = csv.reader(file)
+  > 	
+  >   for line in reader: #line is a list of strings
+  >     names.append(line[0]) #remains str
+  >     ages.append(int(line[1]) #age stored as int
+  >     weights.append(float(line[2])) #weight stored as float 
+  > ```
+
+  
+
+  
+
+## Scientific Library
+
+**Matplotlib**
+
+- Making a simple plot/scatter
+
+  ```python
+  from matplotlib import pyplot as plt
+  
+  x_values = [1,2,3,4,5,6]
+  y_values = [2,4,6,8,9,7]
+  
+  plt.plot(x_values, y_values) #Draws a line plot
+  plt.show()
+  
+  plt.scatter(x_values, y_values) #Draws a scatter point
+  ```
+
+  
+
+**Numpy**
+
+- Creating an array from a python list
+
+  ```python
+  import numpy as np
+  x_arr = np.array([1,2,3,4,5])
+  ```
+
+  
+
+- Fitting a polynomial function with given x and y data:
+
+  ```python
+  import numpy as np
+  x_values = [1,2,3,4,5,6]
+  y_values = [2,4,6,8,9,7]
+  
+  # degree 1
+  coefficients = np.polyfit(x_values, y_values, deg=1)
+  
+  slope = coefficients[0]
+  intercept = coefficients[1]
+  print(f"Linear : f(x) = {slope}x + {intercept}")
+  
+  # degree 2
+  coefficients = np.polyfit(x_values, y_values, deg=2)
+  
+  # Unpacking a,b, and c for f(x)=ax^2 + bx + c
+  a = coefficients[0]
+  b = coefficients[1]
+  c = coefficients[2]
+  
+  print(f"Quadratic : f(x) = {a}x^2 + {b}x + {c}")
+  ```
+
+
+
+- (Optional - but recommended) Performing element-wise arithmetic operations on an array:
+
+  ```python
+  # Applies f(x) = 2*x**2 to each x value in x_arr
+  
+  y_arr =  2*x_arr**2
+  ```
+
+  
