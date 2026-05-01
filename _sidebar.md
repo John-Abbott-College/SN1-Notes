@@ -82,7 +82,8 @@
 
 **Final Exam Prep**
 
-- [Final Exam Topics](Notes/final_exam_prep/01_study_guide/01_study_guide.md)
+<!-- - [Final Exam Topics](Notes/final_exam_prep/01_study_guide/01_study_guide.md) -->
+- [Reference Sheet](Notes/final_exam_prep/reference_sheet/reference_sheet.md)
 - [<span class="practice-link">Practice Midterm F25</span>](Notes/final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.md)
 - [<span class="practice-link">Practice Exam F24 (UPenn)</span>](Notes/final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.md)
 - [<span class="practice-link">Final Exam W25</span>](Notes/final_exam_prep/exercises/final_exam_w25/final_exam_w25.md)
