@@ -2,56 +2,73 @@
 
 ## Opening Files
 
-Files are like books: before you can read from or write into them you must open them! (When you're finished you should close them too.)
+Files are like books: before you can read from or write into them you must open them! 
 
-SYNTAX: `variable_name = open(file_name, access_type)`
+Then, when you're finished you should close them too.)
+
+SYNTAX: `file_variable = open(file_name, access_type)`
 
 where:
 
-- `variable_name` is the name of a variable that you will use later
+- `file_variable` is the name of a variable used to represent the file
 - `file_name` is the name (or _path_) of a file on your computer
 - `access_type` can be:
   - `r` if you want to read the file, or
-  - `a` if you want to append (add) to a file
-  - `w` if you want to write to the file (_but it will erase everything in the file first!_)
+  - `w` if you want to write to the file (*this will erase everything in the file first!*)
+  - `a` if you want to append (add) to a file (*this will preserve everything that was
+  already in the file beforehand*)
 
 ```python
-file_to_read = open("my_input.txt", "r")	# open a file for reading
-...do stuff...
+file_to_read = open("my_input.txt", "r")	# opens my_input.txt for reading
+first_line = file_to_read.readline() # puts the first line in the file in a variable
 file_to_read.close()
+print("The file is closed")
 ```
 
 or
 
 ```python
-writeable_file = open("my_output.txt", "w")  # open file for writing
-...do stuff...
+writeable_file = open("my_output.txt", "w")  # open my_input.txt for writing
+file_to_read.write("File content!") # writes the string "File content!", saving it in the my_output.txt file
 writeable_file.close()
+print("The file is closed")
 ```
 
-Bad Things™ may happen if you forget to close a file when you're finished with it so Python has a way of opening files that guarantees that the file will automatically get closed when you're finished with it. This uses a Python statement called **with**:
+### Automatic file open/close using `with open()` syntax
+
+Python has a way of opening files that guarantees that the file will automatically get closed when you're finished with it. 
+This uses a Python statement called `with`:
 
 ```python
 with open("my_input.txt", "r") as file_to_read:
-    ...do stuff...
+    # Note: everything in the with block needs a tab insert.
+    first_line = file_to_read.readline()
+
+# Everything after the file is closed does not have a tab insert
+print("The file is closed")
 ```
 
 or
 
 ```python
 with open("my_output.txt", "w") as writeable_file:
-    ...do stuff...
+    file_to_read.write("File content!") # writes the string "File content!", saving it in the my_output.txt file
 ```
 
-Like other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you've opened. Once Python finds a line that is not indented, it will close the file for you.
+Like other blocks in Python (`if-else`/`for`/`def`) you must indent all of the lines of code which will be dealing with the file you've opened. 
+Once Python finds a line that is not indented, it will close the file for you.
 
 ## Reading from a file
 
-You can read the contents of a file one line at a time
+You can read a line from a file using the `readline()` method on the file variable.
+
+### `file_variable.readline()`
+
+For example, you can read the contents of a file one line at a time:
 
 ```python
 with open("my_input.txt", "r") as file_to_read:
-    line1 = file_to_read.readline()     # reads the 1st line
+    line1 = file_to_read.readline()     # reads the 1st line from file_to_read
     line2 = file_to_read.readline()     # reads the 2nd line
     line3 = file_to_read.readline()     # reads the 3rd line
 ```
@@ -64,7 +81,9 @@ with open("my_input.txt", "r") as file_to_read:
         print(line)
 ```
 
-Or, even a mixture of both
+You can combine both methods.
+One common pattern:
+Read the first line (usually a header) separate from the rest of the document:
 
 ```python
 with open("my_input.txt", "r") as file_to_read:
@@ -76,7 +95,7 @@ with open("my_input.txt", "r") as file_to_read:
         print(line)
 ```
 
-**Example**
+#### Example
 
 Imagine your input file `my_input.txt` has the following lines
 
@@ -88,7 +107,7 @@ Are so seldom clean
 And the clean ones are so seldom comical
 ```
 
-code:
+We could read this file with the following code:
 
 ```python
 with open("my_input.txt", "r") as file_to_read:
@@ -101,56 +120,164 @@ with open("my_input.txt", "r") as file_to_read:
         print(line)
 ```
 
-Output:
+**Question**: After this code has been run, what is the console output?
 
-```text
-Line 1 has been read
-Line 2 has been read
-But the good ones I've seen
-Are so seldom clean
-And the clean ones are so seldom comical
-```
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+    Line 1 has been read
+    Line 2 has been read
+    But the good ones I've seen
+    Are so seldom clean
+    And the clean ones are so seldom comical
+  </code></pre>
+</details>
+
+**Question**: After this code has been run, what is stored in the `line1` and `line2` variables?
+
+<details>
+  <summary>✅ Solution</summary>
+  <pre><code class="language-python">
+    line1 == "The limerick packs laughs anatomical"
+    line2 == "Into space that is quite economical"
+  </code></pre>
+</details>
 
 ## Writing to a file
 
-Once the file has been opened, you can use `print` to write stuff to your file.
+There are a few ways to write to a file:
 
-You will need to add "`file = variable`" (where _variable_ is the name you used when you opened the file)
+1. using `file_variable.write(msg: str)`: good for writing one string at a time to a file
+1. using `file_variable.writelines(lines: list[str])`: good for writing a list of lines all
+at once to a file
+1. using `print(msg: str, file=file_variable)`: it turns out, you can also use good-old
+`print()`, with the optional `file` argument set to a `file_variable`.
+
+Each of these methods will be shown below.
+
+### `file_variable.write()`
+
+To write a single string to a file, the most common method is to use
+`file_variable.write()`.
+
+`write()` takes a single `str` parameter and puts the value of that parameter into the
+file, without adding any characters.
+
+**NOTE:** by default, this will not create a new line each time you write to the file!
+You will need to add `"\n"` to the end of your string:
 
 ```python
+with open("output_with_lines.txt", "w") as output_file:
+    output_file.write("Hello")
+    output_file.write("World!")
+
+with open("output_without_lines.txt", "w") as output_file:
+    output_file.write("Hello\n")
+    output_file.write("World!")
+```
+
+The code above results in the following files:
+
+```txt
+output_with_lines.txt:
+HelloWorld!
+
+output_without_lines.txt:
+Hello
+World!
+```
+
+**What is `\n`**? `"\n"` is called the [newline
+character](https://pythonguides.com/create-a-string-with-newline-in-python/#Method_1_Use_Pythons_n_Character).
+You can click on the link to learn more -- but, for our course, all you need to know is
+that it's the way computer's represent a "new line" in a file. 
+
+### `file_variable.writelines()`
+
+If you need to write many lines to a file at once, a much more convenient method is to use
+the `writelines()` function.
+
+Instead of taking a `str` parameter, `writelines()` takes a `list[str]` paramter -- a list
+of strings:
+
+```python
+lines_list = ["Hello", "World!"]
 with open("my_output.txt", "w") as output_file:   # variable is "output_file"
-  print("Hello World!", file = output_file)
+    output_file.writelines(lines_list)
 ```
 
-```python
-a_list = [1, 1, 2, 3, 5, 8, 13]
-with open("my_output.txt", "w") as output_file:
-  for value in a_list:
-    print(value, file = output_file)
+The code above results in the following file:
+
+```txt
+my_output.txt:
+Hello
+World!
 ```
+
+**Note**: you can also print a list of lines to a file just simply using `write()`;
+if you use a `for` loop and remember to add the `\n` character.
+The code below will have the exact same result as the code above:
+
+```python
+lines_list = ["Hello", "World!"]
+with open("my_output.txt", "w") as output_file:
+    for line in lines_list:
+        output_file.write(line + "\n") # NOTE: you will need to add "\n"
+```
+
+
+### `print(msg: str, file=file_variable)`
+
+Finally, you can also use the `print` function we have been using throughout the whole
+class.
+
+The difference is, in order to print to a file instead of the console, we need 
+to add a `file = file_variable` parameter:
+
+```python
+with open("my_output.txt", "w") as output_file:
+    print("Hello!", file=output_file)
+    print("World!", file=output_file)
+```
+
+The code above results in the following file:
+
+```txt
+my_output.txt:
+Hello
+World!
+```
+
+**NOTE**: with `print()`, you do *not* need to add a `\n` character. Why?
+By default, `print()` always includes a `\n` character!
+We can actually change that behavior by using the optional `end` parameter
+of the `print` function:
+
+```python
+with open("my_output.txt", "w") as output_file:
+    # This now works very similarly to the file_variable.write() method.
+    print("Hello!\n", file = output_file, end="")
+    print("World!", file = output_file, end="")
+```
+
 
 ## CSV File Format
 
-In science, much of the data that you will receive will be stored in a _comma separated value_ (CSV) file. These files can be easily generated from Excel, GoogleSheets or any other similar tools.
+In science, much of the data that you will receive will be stored in a _comma separated value_ (`.csv`) file.
+These files can be easily generated from Excel, GoogleSheets or any other similar tools.
 
-> **IMPORTANT**: Parsing and reviewing a CSV file _requires_ that the programmer knows how the data is organized in the file. For example, which column contains which data.
+> **IMPORTANT**: Parsing and reviewing a CSV file _requires_
+> that the programmer knows how the data is organized in the file.
+> For example, which column contains which data.
 
-There are many variations on the rules, but the most standard is:
+Here are the basics of `.csv` files:
 
-- Data is separated into rows
-- Each row contains information about one thing, with the specific bits of information separated by a comma.
-- Often, the first line of the file holds strings which are the names of the "columns". If your file starts with the column names then you'll want to skip that row by reading it before you start reading and storing the data rows.
-
-Reading a csv file can be done just like an ordinary file, but it is not very convenient because reading one line at a time just gives a bunch of stuff with commas.
-
-```text
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"Current in the circuit, I (A)","Voltage of the battery, Vbatt (V)","Load resistance, Rl (Ω)","Power delivered by the battery to the load, Pdelivered exp (W)","Theoretical power delivered by the battery, Pdelivered theo (W)","Electromotive force of the battery, ε (V)","Power provided by the battery, Pprovided (W)","Efficency of the battery, E (%)",,,,,,,,,,,,,,,,,,,,
-0.48,0.861,1.79375,0.41328,0.413340761950187,6.53028,3.1345344,13.1847332733053,,,,,,,,,,,,,,,,,,,,
-0.478,0.862,1.80334728033473,0.412036,0.412096536343494,6.507658,3.110660524,13.2459327149644,,,,,,,,,,,,,,,,,,,,
-```
-
-I want it split into columns!!
+- Data is separated into *rows*
+- Each row contains *columns*, where the columns are separated by a comma characters (`,`).
+- Often, the first line of the file is a "header" row, containing the names of the columns.
+  If your file starts with a header row,
+  you'll often want to skip that row by reading it before you start reading the rest of
+  the file
 
 <div style="page-break-after: always;"></div>
 
