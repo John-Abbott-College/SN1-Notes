@@ -1,7 +1,0 @@
-include:
-- "_navbar.md"
-- "_sidebar.md"
-
-plugins:
-- jekyll-mathjax-csp
-- jekyll-katex
