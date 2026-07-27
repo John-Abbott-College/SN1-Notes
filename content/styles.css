@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Subfolder accent rail and tint (third level only) */
-.sidebar-section.depth2 {
+.sidebar-section {
   margin-left: 0.35rem;
   padding-left: 0.65rem;
   border-left: 2px solid var(--sidebar-accent-border-color);

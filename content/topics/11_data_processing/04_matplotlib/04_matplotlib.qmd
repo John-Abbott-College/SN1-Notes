@@ -1,0 +1,46 @@
+---
+title: "Intro to Matplotlib"
+editor:
+  render-on-save: true
+---
+
+Matplotlib is a scientific library that allows python programmers to easily produce plots for reporting on experimental data.
+
+## Usage
+
+The main feature of `matplotlib` that we will use is a sub-module called `pyplot`
+
+1. You can import it in your script by using this line of code:
+
+```python
+import matplotlib.pyplot as plt
+```
+
+2. Draw a simple plot line using `plot.plot(x,y)`
+
+   ```python
+
+   xpoints = [1,2,3,4,5,6,7,8,9,10]
+   ypoints = [2,4,6,8,10,12,14,16,18,20]
+
+   plt.plot(xpoints, ypoints)
+
+   plt.show() # This line is important to display your graph
+   ```
+
+3. To draw a simple scatter point, you can use `plt.scatter(x,y)`:
+
+   ```python
+   plt.scatter(xpoints, ypoints)
+   plt.show()
+   ```
+
+4. If you wish to save your graphs, use `plt.savefig()`. This will create a PNG image inside your project directory.
+
+   ```python
+   plt.plot(xpoints, ypoints)
+   plt.savefig("my_first_graph.png")
+   plt.show() # This line is important to display your graph
+   ```
+
+5. Follow [this tutorial](https://www.w3schools.com/python/matplotlib_pyplot.asp) to learn the different ways of styling your graph (colours, markers, titles, scales, etc)

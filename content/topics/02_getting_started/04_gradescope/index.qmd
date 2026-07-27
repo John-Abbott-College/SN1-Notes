@@ -1,0 +1,6 @@
+---
+title: "index"
+editor:
+  render-on-save: true
+---
+

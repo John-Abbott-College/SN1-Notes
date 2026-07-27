@@ -12,32 +12,91 @@ website:
     background: light
     collapse-level: 1
     contents:
-      - section: "Objectives"
-        contents: "topics/01_objectives/**/*.md"
-      - section: "Getting started"
-        contents: "topics/02_getting_started/**/*.md"
-      - section: "Introduction"
-        contents: "topics/03_introduction/**/*.md"
-      - section: "Variables"
-        contents: topics/04_variables
-      - section: "String formatting"
-        contents: topics/05_string_formatting
-      - section: "Operators"
-        contents: topics/06_operators
-      - section: "Statements"
-        contents: topics/07_statements
-      - section: "Functions"
-        contents: topics/08_functions
-      - section: "Turtle"
-        contents: topics/09_turtle
-      - section: "Lists"
-        contents: topics/10_lists
-      - section: "Data processing"
-        contents: topics/11_data_processing
-      - section: "Tooling"
-        contents: topics/12_tooling
-      - section: "Final exam prep"
-        contents: topics/13_final_exam_prep
+    - section: Objectives
+      contents:
+      - topics/01_objectives/01_course_goals/01_course_goals.qmd
+      - topics/01_objectives/02_probelm_solving/02_probelm_solving.qmd
+    - section: Getting Started
+      contents:
+      - topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd
+      - topics/02_getting_started/02_create_project/02_create_project.qmd
+      - topics/02_getting_started/03_create_new_project.qmd
+      - topics/02_getting_started/03_lea/03_lea.qmd
+      - topics/02_getting_started/04_gradescope/index.qmd
+      - topics/02_getting_started/05_troubleshooting/index.qmd
+      - topics/02_getting_started/06_debugging.qmd
+      - topics/02_getting_started/README.qmd
+    - section: Introduction
+      contents:
+      - topics/03_introduction/01_file_manipulation/01_file_manipulation.qmd
+      - topics/03_introduction/02_what_is_programming/02_what_is_programming.qmd
+      - topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.qmd
+    - section: Variables & Data Types
+      contents:
+      - topics/04_variables/01_intro_literals/01_intro_literals.qmd
+      - topics/04_variables/02_variables/02_variables.qmd
+      - topics/04_variables/03_integers_floats/03_integers_floats.qmd
+      - topics/04_variables/04_booleans/04_booleans.qmd
+      - topics/04_variables/05_strings/05_strings.qmd
+      - topics/04_variables/exercises/data_types/data_types.qmd
+    - section: String Formatting
+      contents:
+      - topics/05_string_formatting/01_string_ops/01_string_ops.qmd
+      - topics/05_string_formatting/02_f_strings/02_f_strings.qmd
+    - section: Operators
+      contents:
+      - topics/06_operators/01_assignment_operator/01_assignment_operator.qmd
+      - topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd
+      - topics/06_operators/03_comparison_operators/03_comparison_operators.qmd
+      - topics/06_operators/04_logical_operators/04_logical_operators.qmd
+      - topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.qmd
+      - topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.qmd
+    - section: Statements
+      contents:
+      - topics/07_statements/01_if_statements/01_if_statements.qmd
+      - topics/07_statements/02_if_else_statements/02_if_else_statements.qmd
+      - topics/07_statements/03_for_loop/03_for_loop.qmd
+      - topics/07_statements/04_scope/04_scope.qmd
+      - topics/07_statements/exercises/conditional/conditional.qmd
+      - topics/07_statements/exercises/for_loops/for_loops.qmd
+    - section: Functions
+      contents:
+      - topics/08_functions/01_what_are_functions/01_what_are_functions.qmd
+      - topics/08_functions/02_math_functions/02_math_functions.qmd
+      - topics/08_functions/03_io/03_io.qmd
+      - topics/08_functions/04_custom_functions/04_custom_functions.qmd
+      - topics/08_functions/05_type_hinting/05_type_hinting.qmd
+      - topics/08_functions/exercises/custom_functions/custom_functions.qmd
+      - topics/08_functions/exercises/input_output/input_output.qmd
+    - section: Turtle graphics
+      contents:
+      - topics/09_turtle/01_turtle_graphics/01_turtle_graphics.qmd
+      - topics/09_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
+    - section: Lists
+      contents:
+      - topics/10_lists/01_into_to_lists/01_into_to_lists.qmd
+      - topics/10_lists/02_looping_over_lists/02_looping_over_lists.qmd
+      - topics/10_lists/03_list_inclusion/03_list_inclusion.qmd
+      - topics/10_lists/exercises/lists/lists.qmd
+    - section: Data Processing
+      contents:
+      - topics/11_data_processing/01_reading_files/01_reading_files.qmd
+      - topics/11_data_processing/02_installing_modules/02_installing_modules.qmd
+      - topics/11_data_processing/03_numpy/03_numpy.qmd
+      - topics/11_data_processing/04_matplotlib/04_matplotlib.qmd
+    - section: Tooling
+      contents:
+      - topics/12_tooling/12_01_debugger/01_debugger.qmd
+    - section: Final Exam Prep
+      contents:
+      - topics/13_final_exam_prep/01_study_guide/01_study_guide.qmd
+      - topics/13_final_exam_prep/exercises/final_exam_f24/final_exam_f24.qmd
+      - topics/13_final_exam_prep/exercises/final_exam_w25/final_exam_w25.qmd
+      - topics/13_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.qmd
+      - topics/13_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.qmd
+      - topics/13_final_exam_prep/index.qmd
+      - topics/13_final_exam_prep/reference_sheet/reference_sheet.qmd
+
       
 format:
   html:
