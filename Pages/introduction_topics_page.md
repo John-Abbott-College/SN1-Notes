@@ -1,4 +1,0 @@
-**Introduction**
-- [Files & Folders](Notes/01_file_manipulation.md)
-- [What's Programming](Notes/02_what_is_programming.md)
-- [Introduction to Python](Notes/03_introduction_to_Python.md)
