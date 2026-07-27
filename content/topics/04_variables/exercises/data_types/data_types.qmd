@@ -1,5 +1,5 @@
 ---
-title: "Data Types"
+title: "🎯 Variables & Data Types"
 editor:
   render-on-save: true
 ---

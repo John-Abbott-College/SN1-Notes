@@ -1,5 +1,5 @@
 ---
-title: "Final Exam Fall 2024"
+title: "🎯 Final Exam Fall 2024"
 editor:
   render-on-save: true
 ---

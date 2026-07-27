@@ -1,5 +1,5 @@
 ---
-title: "For Loops"
+title: "🎯 For Loops"
 editor:
   render-on-save: true
 ---

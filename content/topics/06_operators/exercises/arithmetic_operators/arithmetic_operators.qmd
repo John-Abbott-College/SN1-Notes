@@ -1,5 +1,5 @@
 ---
-title: "Arithmetic operators"
+title: "🎯 Arithmetic operators"
 editor:
   render-on-save: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Custom Functions"
+title: "🎯 Custom Functions"
 editor:
   render-on-save: true
 ---

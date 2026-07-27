@@ -1,5 +1,5 @@
 ---
-title: "Assignment operators and variables"
+title: "🎯 Assignment operators and variables"
 editor:
   render-on-save: true
 ---

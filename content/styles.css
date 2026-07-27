@@ -27,6 +27,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0;
   
 }
+/* Increase font size of sub-items under sections */
+#quarto-sidebar .sidebar-section .sidebar-item-text,
+#quarto-sidebar .sidebar-section .nav-link {
+  font-size: 1.1rem; /* Change this value to adjust size */
+  padding: 0.5rem 0;
+}
+
 
 /* Subfolder accent rail and tint (third level only) */
 .sidebar-section {
