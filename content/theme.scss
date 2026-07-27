@@ -1,0 +1,82 @@
+/*-- scss:defaults --*/
+$link-color: #39729E;
+$text-muted: #6a737b;
+
+// Quarto's body-secondary mixin (blockquotes, captions, asides, header
+// section numbers) defaults to theme-dim($body-color, 25%) = #6d7a86, only
+// 4.39:1 on white — a WCAG AA 1.4.3 failure (axe color-contrast-7ed054).
+// Defining $body-secondary makes the mixin use it instead; $text-muted is
+// 4.83:1.
+$body-secondary: $text-muted;
+
+// Code-block background: the darkest tint of the site's cosmo blue-gray that
+// still keeps every a11y-light syntax color at WCAG AA (>=4.5:1). a11y-light's
+// palette is tuned for a near-white background, so this stays pale; one step
+// darker (#eef1f4) drops the worst token (red #d91e18) below 4.5:1.
+$code-block-bg: #eff2f5;
+
+/*-- scss:rules --*/
+
+:root {
+  --sidebar-section-color: #2f3752;
+  --sidebar-subsection-color: #5f6787;
+  --sidebar-accent-border-color: rgba(69, 81, 112, 0.25);
+  --sidebar-accent-background: $gray-500;
+  --sidebar-active-background: rgba(57, 114, 158, 0.12);
+  --sidebar-active-color: #1f4c6b;
+  --sidebar-active-accent-color: #39729e;
+  --primary: #39729E;
+}
+
+// Quarto dims appendix content (footnotes, citation, reuse) to opacity .9,
+// which fades $link-color to an effective #4d80a8 = 4.22:1 on white — a WCAG
+// AA 1.4.3 failure (axe color-contrast-733538). Undo the fade; selectors
+// mirror Quarto's so this wins by cascade order in the light theme, while
+// the dark stylesheet (loaded after this one) re-asserts Quarto's .9 —
+// the dark link color passes even faded. Remove if quarto-cli fixes
+// this upstream.
+#quarto-appendix.default section {
+  *[role="doc-endnotes"],
+  > *:not(a) {
+    opacity: 1;
+  }
+}
+
+.layout-example {
+  background: $gray-500;
+  color: $white;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: $font-family-monospace;
+  font-size: .875em;
+  font-weight: 600;
+  padding-top: 1em;
+  border-radius: 3px;
+}
+
+.left {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1em;
+}
+
+.hello-quarto-banner h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#quarto-announcement {
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  color: $white;
+  background-color: #447099; 
+}
+
+#quarto-announcement a {
+  color: $white;
+}

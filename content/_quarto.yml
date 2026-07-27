@@ -1,0 +1,53 @@
+project:
+  type: website
+
+website:
+  title: "420-SN1 Notes"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Syllabus
+  sidebar:
+    style: "docked"
+    background: light
+    collapse-level: 1
+    contents:
+      - section: "Objectives"
+        contents: "topics/01_objectives/**/*.md"
+      - section: "Getting started"
+        contents: "topics/02_getting_started/**/*.md"
+      - section: "Introduction"
+        contents: "topics/03_introduction/**/*.md"
+      - section: "Variables"
+        contents: topics/04_variables
+      - section: "String formatting"
+        contents: topics/05_string_formatting
+      - section: "Operators"
+        contents: topics/06_operators
+      - section: "Statements"
+        contents: topics/07_statements
+      - section: "Functions"
+        contents: topics/08_functions
+      - section: "Turtle"
+        contents: topics/09_turtle
+      - section: "Lists"
+        contents: topics/10_lists
+      - section: "Data processing"
+        contents: topics/11_data_processing
+      - section: "Tooling"
+        contents: topics/12_tooling
+      - section: "Final exam prep"
+        contents: topics/13_final_exam_prep
+      
+format:
+  html:
+    grid:
+      sidebar-width: 350px
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+

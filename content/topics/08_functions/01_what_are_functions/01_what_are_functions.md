@@ -1,0 +1,5 @@
+# What are functions?
+
+<object data="https://john-abbott-college.github.io/SN1-Notes/Files/what_are_functions.pdf" type="application/pdf" width="100%" height="1000px">
+  <p><a href="https://john-abbott-college.github.io/SN1-Notes/Files/what_are_functions.pdf">Download the PDF</a> containing these lecture notes.</p>
+</object>
