@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is Programming? – 420-SN1 Notes</title>
+<title>Useful Definitions – 420-SN1 Notes</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -67,19 +73,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4f54e6ca6a0aaa5eb4a06482b0bf417a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-b5ded109daa43fb24931851856214164.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-4f54e6ca6a0aaa5eb4a06482b0bf417a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-54ccc3836fef00d51cd1bc2b46c819a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -310,8 +315,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">420-SN1 Notes</span>
     </a>
@@ -323,7 +326,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
@@ -338,7 +341,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html">What is Programming?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html">Useful Definitions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -348,10 +351,6 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -379,13 +378,42 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Files &amp; Folders</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Useful Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Programing Language</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.html" class="sidebar-item-text sidebar-link">
@@ -402,35 +430,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files &amp; Folders</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">What is Programming?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Python</span></a>
   </div>
 </li>
       </ul>
@@ -515,17 +514,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/01_assignment_operator/01_assignment_operator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment operator</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/01_assignment_operator/01_assignment_operator.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arithmetic operators</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
@@ -819,8 +812,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#demo-using-a-terminal-to-write-your-first-lines-of-code" id="toc-demo-using-a-terminal-to-write-your-first-lines-of-code" class="nav-link active" data-scroll-target="#demo-using-a-terminal-to-write-your-first-lines-of-code">Demo: Using a Terminal to write your first lines of code</a></li>
-  <li><a href="#additional-notes" id="toc-additional-notes" class="nav-link" data-scroll-target="#additional-notes">Additional notes</a></li>
+  <li><a href="#whats-binary" id="toc-whats-binary" class="nav-link active" data-scroll-target="#whats-binary">What’s binary?</a></li>
+  <li><a href="#what-is-programming" id="toc-what-is-programming" class="nav-link" data-scroll-target="#what-is-programming">What is Programming?</a></li>
+  <li><a href="#whats-a-program" id="toc-whats-a-program" class="nav-link" data-scroll-target="#whats-a-program">What’s a Program?</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#machine-code-versus-programming-languages" id="toc-machine-code-versus-programming-languages" class="nav-link" data-scroll-target="#machine-code-versus-programming-languages">Machine Code versus Programming Languages</a></li>
+  <li><a href="#whats-a-programming-language" id="toc-whats-a-programming-language" class="nav-link" data-scroll-target="#whats-a-programming-language">What’s a programming language?</a></li>
+  <li><a href="#what-does-it-mean-to-execute-a-program" id="toc-what-does-it-mean-to-execute-a-program" class="nav-link" data-scroll-target="#what-does-it-mean-to-execute-a-program">What does it mean to “execute” a program?</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -828,9 +829,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html">What is Programming?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html">Useful Definitions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">What is Programming?</h1>
+<h1 class="title">Useful Definitions</h1>
 </div>
 
 
@@ -847,84 +848,114 @@ window.Quarto = {
 </header>
 
 
-<p>Computers are digital machines, which means they perform operations using binary (1 or 0) operations. They are particularly useful to perform tasks in a <strong>deterministic</strong> way. This means that a repeated task produces the same result if provided with the same inputs. Therefore computers are very reliable in sending, receiving, processing information and will do so in a consistent manner.</p>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Describe</strong> what programming is and what it does.</li>
+<li><strong>Explain</strong> what is a programming language.</li>
+<li><strong>Explain</strong> what an algorithm is.</li>
+</ul>
+</div>
+</div>
+<section id="whats-binary" class="level1">
+<h1>What’s binary?</h1>
+<p>Computers are digital machines: they perform operations using binary (1 or 0) operations. They are useful to perform tasks in a <strong>deterministic</strong> way. This means that a repeated task produces the same result if provided with the same inputs. Therefore computers are very reliable in sending, receiving, processing information and will do so in a consistent manner.</p>
+</section>
+<section id="what-is-programming" class="level1">
+<h1>What is Programming?</h1>
 <p>Programming is the process of writing a <strong>set of instructions</strong> in the form of source code that can be understood by a computer.</p>
-<p>A <strong>program</strong> is a precise <strong>set of instructions</strong> that are used to perform a task. A set of instructions that correctly solves a task when followed is called an <strong>algorithm</strong>.</p>
-<p>Programming is all about breaking down our thought process into small manageable steps for the computer to know how to run them.</p>
-<blockquote class="blockquote">
-<p>For example:</p>
-<p><em>Calculating the average of two numbers:</em></p>
+</section>
+<section id="whats-a-program" class="level1">
+<h1>What’s a Program?</h1>
+<p>A <strong>program</strong> is a precise <strong>set of instructions</strong> that are used to perform a task. A set of instructions that correctly solves a task is called an <strong>algorithm</strong>. Building an algorithm involves finding a general recipe to solve a problem or perform a calculation, then breaking it down into steps a computer can run.</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Let’s look at a simple example:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Calculating an Average
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li><em>Input the first number</em></li>
-<li><em>Input the second number</em></li>
-<li><em>Add the two numbers = sum</em></li>
-<li><em>Divide the sum by 2 = average</em></li>
+<li><em>Define the first number</em></li>
+<li><em>Define the second number</em></li>
+<li><em>Add the two numbers</em></li>
+<li><em>Store the result in a variable: <code>sum</code></em></li>
+<li><em>Divide the sum by 2</em></li>
+<li><em>Store the result in a variable: <code>average</code></em></li>
 <li><em>Output average</em></li>
 </ol>
-</blockquote>
-<p>In this case, the set of instructions (computing the sum, then dividing by the number of items) is the <strong>algorithm</strong>, and the expression of that algorithm in a programming languages is a <strong>program</strong>.</p>
-<p><strong>Machine Code versus Programming Languages</strong></p>
-<p>Computers only understand instructions that are written in <strong>machine code</strong>, which is really elemental and uses a binary number system. That is a numeric system which expresses every number in base-2, therefore becoming a sequence of ones and zeros such as “101001010101010100001”.</p>
-<p>The reason behind why computers use binary is because they are physically made up of electric circuits more specifically transistors and logic gates. Electricity is either on (“1”) or off (“0”) in a given circuit. All instructions sent to a computer need to be described in a sequence of “ON” or “OFF” states and has to be very simple such as “take this number”, “store this number here”, “add these two numbers”, “output this number there”, etc.</p>
-<blockquote class="blockquote">
-<p>🔢 Use <a href="https://www.convertbinary.com/text-to-binary/">this</a> online converter to write your name in Binary Code.</p>
-</blockquote>
-<p>This is very hard for us humans to work with especially if we want to solve more complex tasks. That is where Programming Languages become useful.</p>
-<p><strong>Programming languages</strong> are tools used by humans to communicate with computers in a relatively intuitive way. For example Python, C#, Java, C++ are different programming languages. Learning one of these languages will require learning and practicing its syntax, semantics and how to correct your spelling mistakes just like learning French, English or Spanish. Programming languages have some similarities with one another, but will have typically different syntax and structure. The <strong>source code</strong> is the set of lines of code written in a given programming language and it is typically saved into a <strong>source file</strong>, which is just a text file.</p>
-<p><strong>Python</strong></p>
-<p>Python is a widely used programming language created by <a href="https://gvanrossum.github.io/">Guido van Rossum</a> who named if after the <a href="https://docs.python.org/3/faq/general.html#:~:text=Details%20here.-,Why%20is%20it%20called%20Python%3F,to%20call%20the%20language%20Python.">Monty Python’s Flying Circus</a>, a BBC comedy series from the 70s.</p>
-<p>Python was chosen for this course for the following reasons:</p>
-<ul>
-<li>It is easy to learn and use</li>
-<li>Is intuitive thanks to its English-like syntax</li>
-<li>It’s very accessible as it can run on Windows, Mac and Linux.</li>
-<li>There is a lot of support and help online.</li>
-<li>It can easily be equipped with add-ons called “modules” to help perform all kinds of scientific computation and charts (more on this later)</li>
-</ul>
-<p>Now this is great! But how are programming languages understood by computers? Answer: they are translated into machine code. For example, the Python code is translated by the Python interpreter into machine code.</p>
-<p><img src="Notes/introduction/02_what_is_programming/assets/programming_process.png" height="300"></p>
-<p>The Central Processing Unit which acts as the brain of a computer will then execute (i.e.: run the instructions) the program.</p>
-<section id="demo-using-a-terminal-to-write-your-first-lines-of-code" class="level2">
-<h2 class="anchored" data-anchor-id="demo-using-a-terminal-to-write-your-first-lines-of-code">Demo: Using a Terminal to write your first lines of code</h2>
-<p><em>Windows</em></p>
-<ul>
-<li><p>On your Windows PC, type “CMD” in the search bar to open the <strong><em>Command Line Prompt</em></strong></p></li>
-<li><p>Type the following command and hit the enter button:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ul>
-<p><em>MAC</em></p>
-<ul>
-<li><p>On your Mac, hold the command key and the space bar simulatenously until the “Spotlight Search” window is open. Type <code>terminal</code> in the search bar to open the <strong><em>Command Line Prompt</em></strong></p></li>
-<li><p>Type the following command and hit the enter button:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ul>
-<blockquote class="blockquote">
-<p>⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab “Getting Started” from these <a href="https://john-abbott-college.github.io/SN1-Notes/#/Notes/getting-started/01_personal_computer_installation/01_personal_computer_installation">notes</a> to install python.</p>
-<p>⚠️ If you are sure to have correctly installed python, try this command instead <code>python3</code></p>
-</blockquote>
-<p>This will tell your computer that you will start writing instructions in the programming language called <em>Python</em>. You can start typing python code directly here!</p>
-<ul>
-<li><p>Type the following line of code and hit the enter button:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello World'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><p>You should observe that “hello world” appears in the prompt under your written line of code. This is the response of the computer.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> print('hello world')</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hello world</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p><code>print()</code> is a very useful Python function which can help us output information to the user. Just like mathematical functions such as sin(), cos(), python uses functions which have names followed by round brackets. We will learn more about this in the future.</p></li>
-</ul></li>
-<li><p>You can type the following lines:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alex"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My name is "</span> <span class="op">+</span> name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>The line <code>name = "Alex"</code> creates a variable called <code>name</code> and assigns “Alex” as its value. We will come back to variables in the future.</li>
-<li>The second line <code>print("My name is " + name)</code> prints the combined text <em>“My name is”</em> with the value stored in the variable <code>name</code> (which is “Alex”). The “+” sign here will combine the two texts into one.</li>
-</ul></li>
-<li><p>Congratulations! You have written and executed your first lines of code! Now try to print your name and your age in the command prompt.</p></li>
-</ul>
+</div>
+</div>
+<p>In this case, the set of instructions (computing the sum, then dividing by the number of items) is an <strong>algorithm</strong>, and the translation of that algorithm in a programming languages is a <strong>program</strong>:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Calculating an Average in Python
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s the translated steps into python code: Try changing the numbers and re-run the code.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>number1 <span class="op">=</span> <span class="dv">20</span>  <span class="co"># Define the first number</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span> <span class="dv">30</span>  <span class="co"># Define the seond number</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sum_numbers <span class="op">=</span> number1 <span class="op">+</span> number2 <span class="co"># Add the numbers</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>average <span class="op">=</span> sum_numbers <span class="op">/</span> <span class="dv">2</span>        <span class="co"># Divide the sum</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The average is: "</span>, average) <span class="co"># Output the average</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </section>
-<section id="additional-notes" class="level2">
-<h2 class="anchored" data-anchor-id="additional-notes">Additional notes</h2>
-<p><strong>More on Binary</strong></p>
+<section id="machine-code-versus-programming-languages" class="level2">
+<h2 class="anchored" data-anchor-id="machine-code-versus-programming-languages">Machine Code versus Programming Languages</h2>
+<p>Computers only understand instructions that are written in <strong>machine code</strong>, which is really elemental and uses a binary number system. That is a numeric system which expresses every number in base-2, everything becomes a sequence of ones and zeros such as “101001010101010100001”.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Why do computers use Binary?">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why do computers use Binary?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Because they are physically made up of electric circuits: more specifically transistors and logic gates. Electricity is either on (“1”) or off (“0”) in a given circuit. All instructions sent to a computer need to be described in a sequence of “ON” or “OFF” states. This is why computer have a limited set of “elemental” instructions such as “take this number”, “store this number here”, “add these two numbers”, “output this number there”, etc.</p>
+<p>Everything a computer does is broken down into those elemental instructions.</p>
+<p>🔢 Use <a href="https://www.convertbinary.com/text-to-binary/">this</a> online converter to write your name in Binary Code.</p>
+</div>
+</div>
+</div>
+<p>Binary is hard for humans to work with because it isn’t close to how we speak and think. That is where <strong>Programming Languages</strong> become useful.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Additional Notes on Binary">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Additional Notes on Binary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
 <li><p>Also called base-2 (as oppose to base-10 which we are mostly used to)</p></li>
 <li><p>Base 10: Represents the bundles of powers composing a given number (<em>ones</em>, <em>tens</em>, <em>hundreds</em>, <em>thousands</em>, etc). Let’s use 231 in base 10</p>
@@ -947,14 +978,41 @@ window.Quarto = {
 \]</span></p></li>
 <li><p>Binary math is not covered in this course, but it if you wish to learn more about binary math and fundamentals of computers, here is an <a href="https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/number-systems-introduction">introductory video</a> on the topic.</p></li>
 </ul>
-<p><strong>What is a Command Prompt?</strong></p>
-<ul>
-<li>A Command Prompt or Terminal is a <strong>text-based</strong> user interface which allows us to send commands and interact with the computer.</li>
-<li>In contrast, the computer Desktop is a <strong>graphical</strong> user interface which allows you to use the mouse and keyboard to interact more easily with the computer.</li>
-<li>If you are using a Mac, computer the equivalent app is called: <em>Terminal</em></li>
-</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="whats-a-programming-language" class="level2">
+<h2 class="anchored" data-anchor-id="whats-a-programming-language">What’s a programming language?</h2>
+<p><strong>Programming languages</strong> are tools used by humans to communicate with computers in a relatively intuitive way. For example Python, C#, Java, C++ are different programming languages. Learning one of these languages will require learning and practicing its <strong>syntax</strong>, <strong>semantics</strong> and how to correct your spelling mistakes just like learning French, English or Spanish. Programming languages have some similarities with one another, but will have typically different syntax and structure. The <strong>source code</strong> is the set of lines of code written in a given programming language and it is typically saved into a <strong>source file</strong>, which is just a simple text file.</p>
+</section>
+<section id="what-does-it-mean-to-execute-a-program" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-it-mean-to-execute-a-program">What does it mean to “execute” a program?</h2>
+<p>When you hear your teacher say “Run” or “Execute” the program. This is when you click the play button ▶ in the code editor. Execution is the process where a computer loads the code, and performs all the tasks one by one.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="A deeper dive into execution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A deeper dive into execution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When pressing that run button, the computer will translate the source code written into machine code via a series of steps. The binary code is entirely basic instructions that are executed by the CPU. The CPU stands for Central Processing Unit and acts as the brain of a computer will then execute (i.e.: run the instructions) the program.</p>
+<p><img src="./assets/programming_process.png" class="img-fluid"> {width=80%}</p>
+</div>
+</div>
+</div>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>Python is a widely used programming language created by <a href="https://gvanrossum.github.io/">Guido van Rossum</a> who named if after the <a href="https://docs.python.org/3/faq/general.html#:~:text=Details%20here.-,Why%20is%20it%20called%20Python%3F,to%20call%20the%20language%20Python.">Monty Python’s Flying Circus</a>, a BBC comedy series from the 70s.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1044,7 +1102,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/john-abbott-college\.github\.io\/SN1-Notes\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

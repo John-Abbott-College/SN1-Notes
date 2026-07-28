@@ -2,23 +2,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – 420-SN1 Notes</title>
+<title>Arithmetic operators – 420-SN1 Notes</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -32,19 +73,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-ee6bf5d1c7b03e67d2b3f7888f1056a4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-7a4fef46e1553cd0c5a102d2186f6896.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-ee6bf5d1c7b03e67d2b3f7888f1056a4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-54ccc3836fef00d51cd1bc2b46c819a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +113,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -246,8 +315,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">420-SN1 Notes</span>
     </a>
@@ -259,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
@@ -274,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/05_troubleshooting/index.html">index</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Arithmetic operators</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -284,10 +351,6 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -315,13 +378,42 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Files &amp; Folders</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Programing Language</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.html" class="sidebar-item-text sidebar-link">
@@ -336,61 +428,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/03_create_new_project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Create your first project</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/04_gradescope/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">index</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/05_troubleshooting/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">index</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/06_debugging.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Debugging</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files &amp; Folders</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is Programming?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Python</span></a>
   </div>
 </li>
       </ul>
@@ -437,7 +476,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/exercises/data_types/data_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Types</span></a>
+ <span class="menu-text">🎯 Variables &amp; Data Types</span></a>
   </div>
 </li>
       </ul>
@@ -475,17 +514,11 @@ ul.task-list li input[type="checkbox"] {
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/01_assignment_operator/01_assignment_operator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment operator</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/01_assignment_operator/01_assignment_operator.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arithmetic operators</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
@@ -501,13 +534,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arithmetic operators</span></a>
+ <span class="menu-text">🎯 Arithmetic operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment operators and variables</span></a>
+ <span class="menu-text">🎯 Assignment operators and variables</span></a>
   </div>
 </li>
       </ul>
@@ -548,13 +581,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/07_statements/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditional statements</span></a>
+ <span class="menu-text">🎯 Conditional statements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/07_statements/exercises/for_loops/for_loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">For Loops</span></a>
+ <span class="menu-text">🎯 For Loops</span></a>
   </div>
 </li>
       </ul>
@@ -601,13 +634,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/08_functions/exercises/custom_functions/custom_functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Custom Functions</span></a>
+ <span class="menu-text">🎯 Custom Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/08_functions/exercises/input_output/input_output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Input/output functions</span></a>
+ <span class="menu-text">🎯 IO functions</span></a>
   </div>
 </li>
       </ul>
@@ -665,7 +698,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/10_lists/exercises/lists/lists.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lists</span></a>
+ <span class="menu-text">🎯 Lists</span></a>
   </div>
 </li>
       </ul>
@@ -740,31 +773,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/13_final_exam_prep/exercises/final_exam_f24/final_exam_f24.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final Exam Fall 2024</span></a>
+ <span class="menu-text">🎯 Final Exam Fall 2024</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/13_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final Exam - Winter 2025</span></a>
+ <span class="menu-text">🎯 Final Exam - Winter 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/13_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practice Midterm - Fall 2025</span></a>
+ <span class="menu-text">🎯 Practice Midterm - Fall 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/13_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University of Pennsylvania - Fall 2024</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/13_final_exam_prep/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final exam prep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -780,16 +807,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#combining-narrow-and-wider-types" id="toc-combining-narrow-and-wider-types" class="nav-link active" data-scroll-target="#combining-narrow-and-wider-types">Combining narrow and wider types</a></li>
+  <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link" data-scroll-target="#arithmetic-operators">Arithmetic operators</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/05_troubleshooting/index.html">index</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">index</h1>
+<h1 class="title">Arithmetic operators</h1>
 </div>
 
 
@@ -806,8 +840,230 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><strong>Operators</strong>: Similarly to mathematics, the <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> are operators used to perform arithmetic operations on numbers. In Python, complications may arise if you combine literals of different types.</p>
+<p>Let’s remind that there are three types of numeric literals and one type for strings in Python:</p>
+<p><strong>Numeric</strong></p>
+<ul>
+<li><code>int</code></li>
+<li><code>float</code></li>
+<li><code>complex</code> (Imaginary numbers are not covered in this course)</li>
+</ul>
+<p><strong>Text</strong></p>
+<ul>
+<li><code>string</code></li>
+</ul>
+<p><strong>Boolean</strong></p>
+<ul>
+<li><code>bool</code></li>
+</ul>
+<section id="combining-narrow-and-wider-types" class="level3">
+<h3 class="anchored" data-anchor-id="combining-narrow-and-wider-types">Combining narrow and wider types</h3>
+<p>To use arithmetic operators you firstly need to understand what happens when you combine different numeric types.</p>
+<p><strong>Integers to Floats</strong></p>
+<ul>
+<li><p>Any <code>int</code> value e.g.: <code>10</code> has a <code>float</code> equivalent e.g.: <code>10.0</code>.</p></li>
+<li><p>You can convert an integer into a float by using <code>float(10)</code></p></li>
+<li><p>Likewise, you can convert a <code>float</code> into an integer using <code>int(3.14)</code></p>
+<p>⚠️ <strong>Note:</strong> This will truncate the decimal part of the <code>float</code> number, the resulting <code>int</code> is <code>3</code>. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information. We say that <code>float</code>s are <strong>wider</strong> range than <code>int</code>or <code>int</code> are <strong>narrower</strong> than floats.</p></li>
+</ul>
+<p><strong>Boolean to integers or floats</strong></p>
+<p>Although extremely rare, arithmetic operations with the <code>bool</code> type are possible in Python.</p>
+<ul>
+<li>To convert a <code>bool</code> into an integer or a float, you can also use the <code>int(True)</code> or <code>float(True)</code> constructors.</li>
+<li>A Boolean value of <code>True</code> translates into the value <code>1</code> (or <code>1.0</code> ) and <code>False</code> translates into <code>0</code> (or into <code>0.0</code> ).</li>
+<li>If you perform an addition of two <code>bool</code>, for example <code>True + True</code>, Python will convert each <code>bool</code> into the next wider type, in this case <code>int</code>, and perform the operation (<code>1+1 = 2</code>). If it’s a more complex operation, for example <code>False / True</code>, the values will be converted to <code>float</code>, therefore the result will be <code>0.0 / 1.0 = 0.0</code></li>
+</ul>
+<p>In summary, when performing an arithmetic operation, the numbers will be converted to a <strong>wider</strong> type to ensure the operation is performed without losing information.</p>
+</section>
+<section id="arithmetic-operators" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-operators">Arithmetic operators</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 12%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th><code>string</code> with <code>string</code></th>
+<th><code>int</code> with <code>int</code></th>
+<th><code>float</code> with <code>float</code></th>
+<th><code>int</code> with <code>float</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>+</code></td>
+<td>mathematical addition</td>
+<td><code>"Hi " + "Charlie"</code>, result: <code>"Hi Charlie"</code> (<code>string</code>)</td>
+<td><code>3 + 2</code>, result:<code>5</code> (<code>int</code>)</td>
+<td><code>3.2 + 2.5</code>, result:<code>5.7</code> (<code>float</code>)</td>
+<td><code>3.0 + 2</code> , result <code>5.0</code> (<code>float</code>)</td>
+</tr>
+<tr class="even">
+<td><code>-</code></td>
+<td>mathematical subtraction</td>
+<td>Doesn’t exist for string literals and will cause an error.</td>
+<td><code>3 - 2</code>, result:<code>1</code> (<code>int</code>)</td>
+<td><code>3.2 - 2.0,  result:</code> <code>0.7 (float)</code></td>
+<td><code>3.0 - 2</code> , result <code>1.0</code> (<code>float</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>*</code></td>
+<td>mathematical multiplication</td>
+<td>Doesn’t exist for string literals and will cause an error.</td>
+<td><code>3 * 2</code>, result:<code>6</code> (<code>int</code>)</td>
+<td><code>3.5 * 2.0</code>, result: <code>7.0</code> (<code>float</code>)</td>
+<td><code>3.0 * 2</code>, result: <code>6.0</code> (<code>float</code>)</td>
+</tr>
+<tr class="even">
+<td><code>/</code></td>
+<td>mathematical division</td>
+<td>Doesn’t exist for string literals and will cause an error.</td>
+<td><code>3 / 2</code>, result:<code>1.5</code> (<code>float</code>)</td>
+<td><code>3.0 / 2.0</code>, result:<code>1.5</code> (<code>float</code>)</td>
+<td><code>3.0 / 2,  result:</code> 1.5<code>(</code>float<code>)  | |</code>//<code>| Divides the first operand by the second and rounds the result down to the nearest whole number. | Doesn't exist for string literals and will cause an error. |</code>3//2<code>, result:</code>1<code>(</code>int<code>)      |</code>4.0//3.0<code>, result:</code>1.0<code>(</code>float<code>)   |</code>4.0//2<code>, result:</code>1.0<code>(</code>float<code>)   | |</code>%<code>| Returns the remainder of the long division of the first operand by the second operand.          | Doesn't exist for string literals and will cause an error. |</code>10 % 7<code>, result:</code>3<code>(</code>int<code>)    |</code>7.0 % 5.0<code>, result:</code>2.0<code>(</code>float<code>)  |</code>7.0 % 5, result: <code>2.0</code> (<code>float</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>**</code></td>
+<td>Raises the first operand to the power of the second operand</td>
+<td>Doesn’t exist for string literals and will cause an error.</td>
+<td><code>4**2</code>, result :<code>16</code>(<code>int</code>)</td>
+<td><code>4.0**2.0</code>, result :<code>16.0</code>(<code>float</code>)</td>
+<td><code>4**2.0</code>, result :<code>16.0</code>(<code>float</code>)</td>
+</tr>
+</tbody>
+</table>
+<section id="modulus" class="level4">
+<h4 class="anchored" data-anchor-id="modulus">Modulus <code>%</code></h4>
+<ul>
+<li><p>To grasp this operator, it’s essential to recall what a division remainder is. Consider the following division:</p>
+<p><span class="math display">\[
+7/5 = 1.4  = 1 + 2/5
+\]</span></p>
+<p><img src="Notes/operators/02_arithmetic_operators/assets/Quotient_Remainder.png"></p>
+<ul>
+<li>Quotient: 1</li>
+<li>Remainder: 2</li>
+</ul></li>
+<li><p>The <strong>modulus</strong> operation returns the remainder of a long division (e.g.&nbsp;<code>7 % 5 = 2</code>). If is an easy way to verify if a number is divisible by another number (remainder is 0).</p></li>
+<li><p>If performing this operation with two <code>int</code>, the result will be an <code>int</code></p></li>
+<li><p>If performing this operation with two <code>float</code>, the result will be a <code>float</code> (e.g.: <code>7.0 % 5.0 = 2.0</code>)</p></li>
+<li><p>If performing this operation with an <code>int</code> and a <code>float</code>, the int is automatically converted into the wider type <code>float</code> and the result is a <code>float</code>.</p></li>
+<li><p>This operator doesn’t apply to string literals and will cause an error if used on strings.</p></li>
+<li><p>This operator is useful to determine if a number is odd or even. If it even, the remainder of a division by <code>2</code> would be <code>0</code>. Otherwise, if the number is odd, the remainder would be <code>1</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Odd numbers</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">51</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Even numbers</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">0</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">2</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">4</span> <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">50</span> <span class="op">%</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ul>
+</section>
+<section id="floor-division" class="level4">
+<h4 class="anchored" data-anchor-id="floor-division">Floor division <code>//</code></h4>
+<ul>
+<li>Divides the first operand by the second and rounds the result down to the nearest whole number.</li>
+<li>If two <code>int</code> are used in this operation, the result is and <code>int</code></li>
+<li>If any of the number is a <code>float</code>, the result will be a <code>float</code> and any integer will automatically be converted to the wider type <code>float</code>.</li>
+<li>This operator doesn’t apply to string literals and will cause an error if used on strings.</li>
+</ul>
+<p>✍️<strong>Challenge 1</strong>: Manually execute the operations of the program below and write the expected result. Check your answers by running the code.</p>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.fYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.~lang=py-novice.~showLineNumbers=true.a"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> w <span class="op">+</span> y</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> y <span class="op">-</span> w</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">10</span> <span class="op">%</span> <span class="dv">7</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> y <span class="op">//</span> w</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> y <span class="op">**</span> w</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> w <span class="op">*</span> x</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> y <span class="op">/</span> x</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c,d,e,f,g)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✍️<strong>Challenge 2</strong>: Manually execute the operations below and write the expected result. Check your answers by running the code.</p>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> a <span class="op">%</span> b</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> a <span class="op">//</span> c</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="button-container">
+<pre><code>&lt;a href=https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3MyLTItMi5weQ==~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.~lang=py-novice.~showLineNumbers=true.a&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">5.5</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> a <span class="op">%</span> b</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> a <span class="op">//</span> b</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.fYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.~lang=py-novice.~showLineNumbers=true.a1"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="op">-</span><span class="dv">7</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="op">-</span><span class="dv">4</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> a <span class="op">%</span> b</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (a <span class="op">+</span> b) <span class="op">//</span> b</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✍️<strong>Challenge 3</strong>: Write a short program that prompts the user to input an amount of money in dollars and then calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax.</p>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.fYXJpdGhtZXRpY3M1LnB5~XQAAgACVAAAAAAAAAAAxHUisBlhRhzTv1qXGok1pVDmUVkrMtVD6nJWBiDZJJ4c9FPmJGRUbqp-VFDM52jHbusSs6AbhD5NbyMOdHgD01mBL4n6-Ijgu60YYPJpRKGvNdpdvCWfK7BomfX5p7Tsmvo1d_Hki9fj8LjAEYN8f_DInXviDhzkfpbrnYAn-yWSA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>budget <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the amount of money in dollars ($)"</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>...to complete</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>🏆✍️<strong>Expert Challenge</strong>: Write a short program to help the school administration calculate the number of sections per course given a certain number of registered students. Most groups should have an even number of students, with at least 18 students per classroom and a maximum of 32 students. The administration tries to minimize the number of groups and balances the number of students per classroom.</p>
+<blockquote class="blockquote">
+<p>Note: There are many possible answers for this problem, but some answers are more optimal than others. You are allowed to use any arithmetic operators and simple if statements.</p>
+</blockquote>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.oc3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weQ==~XQAAgAC3AwAAAAAAAAARZ_6IyAHcsKA_gk8ErULb3y_0mEvwAQUvSH3Io5HuKO0lev5qHJtmUud-z0lOQyR4V5aTBthfzVxSylCfQyxTnKr23mg9xiuAJ0bEUJFpJbHv9MIsq-lktXXhTmnhrPY6MrWQI6HjUbh30gSnRHGTsz37WSSDvMx1STuZY19MoJ5zas8J9aUwZZzhZzVPp0j7w8mE_glYQPRLRqAcS3TVLgXqBwZBT9RnJgELR1Csakc8EMNeN37ReX5_TNtZQz_MSWXwMHId0TCjFkyOKeVjXdprzJ64S77CweI2YnN1TBgBuabcZHePq4pHbV3Yf1eyhhfCFq26Jq02dWDwuaHzoKazt0S29qpWLGhkL7Za9WsWtFENo76gcpJM9hsqdZNKXriIyFZRbsgAEE9M9bF055daGQcb-kjpvq5aFf-IU01recFkZJ24NSd6ddZConWiEAWqOB_u-_x75A==.fc3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5~XQAAgABVCAAAAAAAAAARaAQIZvNx2aPvSLSjLYQfdOpuOXia6VgdWdqdP6BlGcP6R0JD_HLKEarDGKRtsSjY-1tTLZ3jzLL25cCmEralncL5cLPelfiJci5_OwHVAyPm3pSgwDcDWZ2BLHVn5SCjSl2YqdnbXwyWS2SuBPseRjH9DAqI9TSAj8dVdn-VtFKoLjXU5S4bOxQkmUEB8XEmzojR4F_HEPOBpR_FJ-ZLafJ_mupI_JeDgBQQOHjhASaKSDA9C_6V7P1XBQ5dbCY_qjHx5yWBX1rbEu-5FTBkBDL3PAOlmGUUVZyc14fHlIDhg5NiGr8G_41npD0gwOwaU08BI3L7lYe6PL_gTeGJ46BwvadLTALvFHAeuhpZXEggwmZ7iKzO7dZdTMaO-y5-JgHuShKlO4S9lZQxb3jP3lsp9Xf_Lf1WIM54m5OGOTiz26pKH20lZa2GjNwZCGSiZjUhLkhpaFGS4VB5JVVvx_331JOEI3pY_M57WO2l7_Uz-TCbpvVwKTff4aVvzuRvS_2DTtIbYjBIlME25wmfBK8s-Q7ouKdptwBpAPkeBi3sYRyGtc5BLAvE7-usjbdDk6Nk56qKKQjBZyk_yAcoSKzcPfs3qiyzmWELx28irP0FvgpHU3UhAyygjjwUoPKEs74z7FRJHBIv-NuImjUqS0JTKwpWHkM5Y1ttJ7ar_QD7tzUY3d4xWmWxH5U3VVYXW8-IJsxKGkqcQBTzn1ZXlpbLZpiu0ZnZdSCcIuA5Ftb01-r_HOaCAVENHHu83UZfUDZT5Vrn-61kHmP1DDucS-CX9iEzaJl0IXYEWhx0qY0e5x8i9xAagcYGR5kigJZyJv_78gdHuZLwxgdhdGaRz4tXUbvnvyWPQyQHwf-ZTm2Yf1FUs1z-ekrxiRHvU6GV9tUmfCw5EFlwNuRr2ijv09XybRM_rZf75_8AFIzklxU6EN84tA25VLH_8MnCXA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.ibG9hZCgiYXJpdGhtZXRpY3M0LnB5IikKbG9hZCgiYXJpdGhtZXRpY3M0LnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weSIpCmxvYWQoInN0dWRlbnRzX3Blcl9jbGFzc3Jvb20ucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weSIpCmxvYWQoInN0dWRlbnRzX3Blcl9jbGFzc3Jvb20ucHkiKQoxNSoyNwpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKbG9hZCgic3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5IikKNDUwLzMyCjQ1MC8xNQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQoxNSozMApsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQoxNSozMAoxNSo0CjQ5MAo1NTEwCjQ5MCs2MApsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQpsb2FkKCJzdHVkZW50c19wZXJfY2xhc3Nyb29tXzIucHkiKQozMCoxNCszMQo=.e"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Possible Solution 1&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -896,7 +1152,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/john-abbott-college\.github\.io\/SN1-Notes\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

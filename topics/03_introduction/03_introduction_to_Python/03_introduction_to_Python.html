@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Python – 420-SN1 Notes</title>
+<title>Python Programing Language – 420-SN1 Notes</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -67,19 +73,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4f54e6ca6a0aaa5eb4a06482b0bf417a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-b5ded109daa43fb24931851856214164.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-4f54e6ca6a0aaa5eb4a06482b0bf417a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-54ccc3836fef00d51cd1bc2b46c819a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -281,8 +286,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">420-SN1 Notes</span>
     </a>
@@ -294,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
@@ -309,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html">Introduction to Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html">Python Programing Language</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -319,10 +322,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -350,13 +349,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Files &amp; Folders</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Python Programing Language</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.html" class="sidebar-item-text sidebar-link">
@@ -373,35 +401,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files &amp; Folders</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is Programming?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction to Python</span></a>
   </div>
 </li>
       </ul>
@@ -486,17 +485,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/01_assignment_operator/01_assignment_operator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment operator</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/01_assignment_operator/01_assignment_operator.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arithmetic operators</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
@@ -792,7 +785,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#why-python" id="toc-why-python" class="nav-link active" data-scroll-target="#why-python">Why Python?</a></li>
   <li><a href="#python-2-vs.-python-3" id="toc-python-2-vs.-python-3" class="nav-link" data-scroll-target="#python-2-vs.-python-3">Python 2 vs.&nbsp;Python 3</a></li>
-  <li><a href="#demo-using-a-terminal-to-write-your-first-lines-of-code" id="toc-demo-using-a-terminal-to-write-your-first-lines-of-code" class="nav-link" data-scroll-target="#demo-using-a-terminal-to-write-your-first-lines-of-code">Demo: Using a Terminal to write your first lines of code</a></li>
+  <li><a href="#using-a-terminal-to-write-code" id="toc-using-a-terminal-to-write-code" class="nav-link" data-scroll-target="#using-a-terminal-to-write-code">Using a Terminal to write code</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac">Mac</a></li>
+  <li><a href="#adding-a-little-more" id="toc-adding-a-little-more" class="nav-link" data-scroll-target="#adding-a-little-more">Adding a little More</a></li>
+  </ul></li>
+  <li><a href="#using-a-code-editor" id="toc-using-a-code-editor" class="nav-link" data-scroll-target="#using-a-code-editor">Using a code Editor</a></li>
   </ul>
 </nav>
     </div>
@@ -800,9 +799,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html">Introduction to Python</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html">Introduction</a></li><li class="breadcrumb-item"><a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html">Python Programing Language</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to Python</h1>
+<h1 class="title">Python Programing Language</h1>
+<p class="subtitle lead">A brief overview of the language used in this course</p>
 </div>
 
 
@@ -819,7 +819,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In this section, we will learn a little bit about the history of Python, different Python versions and implementations, and the impact that Python has had on modern-day programming. Let’s begin.</p>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Execute</strong> a simple Python Program.</li>
+</ul>
+</div>
+</div>
+<p>In this section, we will learn a little bit about the history of Python, different Python versions and implementations, and the impact that Python has had on modern-day programming. Let’s begin!</p>
 <section id="why-python" class="level3">
 <h3 class="anchored" data-anchor-id="why-python">Why Python?</h3>
 <p>Programmers of all levels prefer Python for several practical reasons:</p>
@@ -835,48 +850,106 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="python-2-vs.-python-3">Python 2 vs.&nbsp;Python 3</h3>
 <p>There are two main versions of Python: Python 2 and Python 3.</p>
 <ul>
-<li><strong>Python 2</strong>: An older version that is no longer actively developed for major changes but still receives updates for bug fixes and security issues. It is not compatible with Python 3, so code written in Python 2 needs to be revised to work with Python 3.</li>
-<li><strong>Python 3</strong>: The current and actively developed version of Python, which introduces its own standards and features. Python 3 is not backward compatible with Python 2, and migrating code from Python 2 can be complex and error-prone.</li>
+<li><p><strong>Python 2</strong>: An older version that is no longer actively developed for major changes but still receives updates for bug fixes and security issues. It is not compatible with Python 3, so code written in Python 2 needs to be revised to work with Python 3.</p></li>
+<li><p><strong>Python 3</strong>: The current and actively developed version of Python, which introduces its own standards and features. Python 3 is not backward compatible with Python 2, and migrating code from Python 2 can be complex and error-prone.</p></li>
 </ul>
 <p>For new projects, Python 3 is recommended. The course will use Python 3, and while there are differences between Python 3 releases, newer versions are compatible with earlier Python 3 versions.</p>
 </section>
-<section id="demo-using-a-terminal-to-write-your-first-lines-of-code" class="level2">
-<h2 class="anchored" data-anchor-id="demo-using-a-terminal-to-write-your-first-lines-of-code">Demo: Using a Terminal to write your first lines of code</h2>
-<p><em>Windows</em></p>
+<section id="using-a-terminal-to-write-code" class="level2">
+<h2 class="anchored" data-anchor-id="using-a-terminal-to-write-code">Using a Terminal to write code</h2>
+<p>Make sure you’ve installed Python first, before attempting the following steps!</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
 <ul>
 <li><p>On your Windows PC, type “CMD” in the search bar to open the <strong><em>Command Line Prompt</em></strong></p></li>
-<li><p>Type the following command and hit the enter button:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Type the following command and hit the enter button:</p></li>
 </ul>
-<p><em>MAC</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mac" class="level3">
+<h3 class="anchored" data-anchor-id="mac">Mac</h3>
 <ul>
 <li><p>On your Mac, hold the command key and the space bar simulatenously until the “Spotlight Search” window is open. Type <code>terminal</code> in the search bar to open the <strong><em>Command Line Prompt</em></strong></p></li>
-<li><p>Type the following command and hit the enter button:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Type the following command and hit the enter button:</p></li>
 </ul>
-<blockquote class="blockquote">
-<p>⚠️ If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the instructions on the tab “Getting Started” from these <a href="">notes</a> to install python.</p>
-<p>⚠️ If you are sure to have correctly installed python, try this command instead <code>python3</code></p>
-</blockquote>
-<p>This will tell your computer that you will start writing instructions in the programming language called <em>Python</em>. You can start typing python code directly here!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Installing Python">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Installing Python
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If python is not installed on your PC, this command will not be recognized. If you are trying this on your personal computer, follow the <a href="topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd">Geting Started</a> section to install python.</p>
+<p>If you are sure to have correctly installed python, try this command instead <code>python3</code></p>
+</div>
+</div>
+<p>You can start typing python code directly here!</p>
 <ul>
-<li><p>Type the following line of code and hit the enter button:</p>
+<li>Type the following line of code and hit the enter button:</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello World'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><p>You should observe that “hello world” appears in the prompt under your written line of code. This is the response of the computer.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> print('hello world')</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hello world</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p><code>print()</code> is a very useful Python function which can help us output information to the user. Just like mathematical functions such as sin(), cos(), python uses functions which have names followed by round brackets. We will learn more about this in the future.</p></li>
-</ul></li>
-<li><p>You can type the following lines:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alex"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My name is "</span> <span class="op">+</span> name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<li>You should observe that “Hello World” appears in the prompt under the line of code. This is the response of the computer.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Expand to undestand">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Expand to undestand
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>print()</code> is a very useful Python function which can help us output information to the user. Just like mathematical functions such as sin(), cos(), python uses functions which have names followed by round brackets. We will learn more about this in the future.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-a-little-more" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-little-more">Adding a little More</h3>
 <ul>
-<li>The line <code>name = "Alex"</code> creates a variable called <code>name</code> and assigns “Alex” as its value. We will come back to variables in the future.</li>
-<li>The second line <code>print("My name is " + name)</code> prints the combined text <em>“My name is”</em> with the value stored in the variable <code>name</code> (which is “Alex”). The “+” sign here will combine the two texts into one.</li>
-</ul></li>
+<li>Consider those lines of code:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alex"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My name is "</span> <span class="op">+</span> name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><p>The line <code>name = "Alex"</code> creates a variable called <code>name</code> and assigns “Alex” as its value. We will come back to variables in the future.</p></li>
+<li><p>The second line <code>print("My name is " + name)</code> prints the combined text <em>“My name is”</em> with the value stored in the variable <code>name</code> (which is “Alex”). The “+” sign here will combine the two texts into one.</p></li>
 <li><p>Congratulations! You have written and executed your first lines of code! Now try to print your name and your age in the command prompt.</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="What's a Command Prompt?">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What’s a Command Prompt?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A Command Prompt or Terminal is a <strong>text-based</strong> user interface which lets us to send commands and interact with the computer.</li>
+<li>In contrast, the computer Desktop is a <strong>graphical</strong> user interface which allows you to use the mouse and keyboard to interact more easily with the computer.</li>
+<li>If you are using a Mac, computer the equivalent app is called: <em>Terminal</em></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="using-a-code-editor" class="level2">
+<h2 class="anchored" data-anchor-id="using-a-code-editor">Using a code Editor</h2>
+<p>Most of the time, a program required multiple lines of code to perform a useful task. Therefore, we will be writting code in a code editor such as Thonny, VS Code or PyCharm and saving the Python source code under the extension <code>.py</code>.</p>
+<p>But first! You need to install the tool!</p>
 
 
 </section>
@@ -968,7 +1041,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/john-abbott-college\.github\.io\/SN1-Notes\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
