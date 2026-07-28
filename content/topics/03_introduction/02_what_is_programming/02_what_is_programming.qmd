@@ -43,7 +43,7 @@ In this case, the set of instructions (computing the sum, then dividing by the n
 
 Here's the translated steps into python code: Try changing the numbers and re-run the code. 
 
-```{python}
+```python
 number1 = 20  # Define the first number
 number2 = 30  # Define the seond number
 
