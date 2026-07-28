@@ -17,11 +17,6 @@ website:
       - topics/01_objectives/01_course_goals/01_course_goals.qmd
       - topics/01_objectives/02_probelm_solving/02_probelm_solving.qmd
       
-    - section: Getting Started
-      contents:
-      - topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd
-      - topics/02_getting_started/02_create_project/02_create_project.qmd
-      - topics/02_getting_started/03_lea/03_lea.qmd
 
     - section: Introduction
       contents:
@@ -29,6 +24,12 @@ website:
       - topics/03_introduction/02_what_is_programming/02_what_is_programming.qmd
       - topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.qmd
 
+    - section: Getting Started
+      contents:
+      - topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd
+      - topics/02_getting_started/02_create_project/02_create_project.qmd
+      - topics/02_getting_started/03_lea/03_lea.qmd
+      
     - section: Variables & Data Types
       contents:
       - topics/04_variables/01_intro_literals/01_intro_literals.qmd
