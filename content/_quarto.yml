@@ -3,6 +3,7 @@ project:
 
 website:
   title: "420-SN1 Notes"
+  site-url: https://john-abbott-college.github.io/SN1-Notes/
   navbar:
     left:
       - href: index.qmd
@@ -29,7 +30,7 @@ website:
       - topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd
       - topics/02_getting_started/02_create_project/02_create_project.qmd
       - topics/02_getting_started/03_lea/03_lea.qmd
-      
+
     - section: Variables & Data Types
       contents:
       - topics/04_variables/01_intro_literals/01_intro_literals.qmd

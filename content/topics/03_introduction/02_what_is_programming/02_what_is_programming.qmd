@@ -118,7 +118,7 @@ When you hear your teacher say "Run" or "Execute" the program. This is when you 
 
 When pressing that run button, the computer will translate the source code written into machine code via a series of steps. The binary code is entirely basic instructions that are executed by the CPU. The CPU stands for Central Processing Unit and acts as the brain of a computer will then execute (i.e.: run the instructions) the program.
 
-<img src="./assets/programming_process.png" width=80%>
+![](./assets/programming_process.png) {width=80%}
 
 :::
 

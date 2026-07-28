@@ -61,7 +61,7 @@ average  = sum / 2   # using another variable
 
 Let's break down the way variables are created and in Python, the following line is evaluated **from right to left**:
 
-<img src="Notes/variables/02_variables/assets/Variables_assignment.png" height=250/>
+![](assets/Variables_assignment.png){height=250}
 
 1. The expression on the **right side** of the `=` sign is evaluated first.
 2. Then, if the variable on the **left side** doesn't already exist, will be created.
@@ -133,7 +133,7 @@ Programmers came up with conventions to make code more easy to read and share. T
 | Snake case | two_words  | `avg_temperature`, `estimation_pi`, `area_under_curve` |
 | Camel Case | twoWords   | `avgTemperature`, `estimationPi`, `areaUnderCurve`     |
 
-<img src="Notes/variables/02_variables/assets/variables_snake_camel_case.png" height=300/>
+![](assets/variables_snake_camel_case.png) {height=300}
 
 Source: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-convention
 
@@ -231,7 +231,7 @@ Let's revisit the lengthy equation we initially introduced: `((16-  (16+ 18+ 19)
 
 This equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where `x_m` represents the mean of the grades.
 
-<img src="Notes/variables/02_variables/assets/variance.png" height=50/>
+![](assets/variance.png){height=50}
 
 Let's break it down in the following steps and implement them:
 
@@ -302,7 +302,7 @@ print("The variance is:", variance)
 
 ✍️**Challenge**: Calculate the gravitational potential energy of an object using the following formula, where `m` is the mass of the object, `g` is the acceleration of gravity which is 9.81 m/s^2, `h` is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.
 
-<img src="Notes/variables/02_variables/assets/gravitational_potential_energy.png" height=60/>
+![](assets/gravitational_potential_energy.png){height=60}
 
 <div class="button-container">     
     <a href="https://app.codeboot.org/5.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.obWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.odmFyaWFuY2VfY2FsY3VsYXRpb24ucHk=~XQAAgADuAQAAAAAAAAARiAboqXJXBpm36NqkJLaNPF1c1ucFcfiEh0ASRV_yMEV6v276KU1KmFL_6euCoH4XrTMEbhLF7p9xSVzg4QD0NvxH77fwjvaz3Wgm7QGxWY3PmcXpfzgzGPyfpbG2E6ExARnKdr6_2MtGFk5YzN3gF2iGDpUawUaL0FMJ5RMathH-I1Op9q8U3ho2iMOtj9nPoBaVDXaLMByGMEX7V7Qo6lkhy57YDcR6t4JTkR-7IYTLXWD84trQ17lalXiMPav-iYYaPP-zCIZfdvlvBA-XqF1wAAbdSWINLkhzUf_wOs6g.odmFyaWFibGVzX2NoYWxsZW5nZTEucHk=~XQAAgABYAAAAAAAAAAAwmcjVNAzI1sPTb1Rnd9nMwlZIpKAWg951RSFcvuLGhPFNLZy_RWTjWPIVTvhthfgdoQfOR8q5KNeb43Zsqm31fvjE9YA=.fdmFyaWFibGVzX2NoYWxsZW5nZTIucHk=~XQAAgACiAAAAAAAAAAAjlIQmAnNNrQCVCf48HqW0cEfvMtc8dhgTDH-0GM-qKH4b-38tGNpwASZYjBd7BeI0ZgeG0PoXiAy8z824TxqY25wTpBj2ahbMfJUtNa95eEM85oCAw1DR8oNSREQb4U9bdiHPuT4HW73r8PSZfNn_8NEwAA==.~lang=py-novice.~showLineNumbers=true.e1" target="_blank">         
