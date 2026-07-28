@@ -115,6 +115,11 @@ format:
       light: [cosmo, theme.scss]
       dark: [cosmo, theme-dark.scss]
     css: styles.css
+    syntax-highlighting:
+      light: atom-one
+      dark: dracula
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
     toc: true
 
 
