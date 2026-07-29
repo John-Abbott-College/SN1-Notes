@@ -36,8 +36,8 @@ website:
       # - topics/04_variables/01_intro_literals/01_intro_literals.qmd
       - topics/04_variables/02_variables/02_variables.qmd
       - topics/04_variables/03_integers_floats/03_integers_floats.qmd
-      - topics/04_variables/04_booleans/04_booleans.qmd
       - topics/04_variables/05_strings/05_strings.qmd
+      - topics/04_variables/04_booleans/04_booleans.qmd
       - topics/04_variables/exercises/data_types/data_types.qmd
 
     - section: String Formatting

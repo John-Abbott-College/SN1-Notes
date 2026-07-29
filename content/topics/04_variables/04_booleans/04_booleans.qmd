@@ -5,6 +5,8 @@ editor:
 ---
 ::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
 - **Recognize** the boolean data type
+- **Evaluate** a comparison between two numbers as True or False.
+- **Understand** that booleans can be converted to numbers (and vice versa)
 :::
 
 Python has several numeric types (`int`, `float`and `complex`) but only one logical type: the boolean type or `bool`. A boolean value can only have two values, either `True` or `False`.
@@ -14,14 +16,64 @@ This type becomes very useful when making yes-no type of decisions in the progra
 - If my age is greater or equal than 18, then print "You can vote"
 - If my age is lower than 18, then print "Sorry, you can't vote yet."
 
-### Conversion into numeric types
+# Creating a Boolean
 
-Booleans can be converted into numeric types. `True` is equivalent to 1 and `False` is equivalent to 0.
+Booleanas are simple types because they can only have two values. Boolean variables are often named with prefixes **is**, **has**, or **can** to indicate an affirmation if something is true or not. By convention and to avoid confusion, we avoid negative wording such as "is not", "has not", etc.
+
+## Using the literals `True` or `False`
+
+To create a boolean, you may simply use the literals `True` or `False` as such:
+
+```python
+is_raining_outside = True
+```
+
+Or, 
+
+```python
+has_driver_license = False
+```
+
+Or,
+
+```python
+can_edit = False
+```
+
+
+
+## Using comparison operators
+
+Another way of creating booleans is by using comparison operators `>`, `>=`, `<`, `<=`, etc, which will be covered in more depth later in the notes. In a nutshell, comparison operators such as `>` can determine if a variable is larger than another variable and the result is always a boolean (`True` or `False`). 
+
+
+For example, I want to the boolean variable `is_cold` to be `True` if the variable `temperature` is above `15`: 
+
+```python
+temperature = 20
+
+is_cold = temperature < 15 
+
+print(is_cold)
+```
+
+Output: True 
+
+
+:::{.callout-note collapse="true" title="Expand for more explanation"}
+This expression is evaluated from right to left in the following order:
+1. Is `temperature` greater than `15` (yes $\rightarrow$  `True`)
+2. Assign the result to `is_cold` (which now becomes `True`)
+:::
+
+# Conversion into numeric types
+
+Booleans can be converted into numeric types altough this isn't common use in this course. `True` is equivalent to 1 and `False` is equivalent to 0.
 
 - To convert a `bool` into an integer or a float, you can also use the `int(True)` or `float(True)` constructors.
 - To convert any other type into a `bool`, you can use the `bool()` function, e.g. `bool(0)` is `False` and `bool(1)` is `True`
 
-  - Note: That converting any number other than zero will be `True`, e.g. `bool(1234)` is `True`
+- Note: That converting any number other than zero will be `True`, e.g. `bool(1234)` is `True`
 
 We will learn more about booleans in conditional statements (i.e. `if/else` statements)
 
