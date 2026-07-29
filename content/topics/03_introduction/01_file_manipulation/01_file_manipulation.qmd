@@ -6,9 +6,7 @@ editor:
 ---
 
 
-::: {.callout-note .objectives icon="false"}
-# ☆ Learning Objectives 
-
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives"}
 - **Understand** what files and folders are
 - **Explain** the role of file extensions
 - **Identify** common file extensions

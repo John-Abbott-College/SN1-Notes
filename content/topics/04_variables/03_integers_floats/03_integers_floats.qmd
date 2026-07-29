@@ -3,57 +3,84 @@ title: "Integers & Floats"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Tell** the difference between an integer and a float
+- **Use** the `type()` function to determine the data type of a variable
+- **Recognize** scientific notation for large numbers
+- **Recognize** underscores between digits for large numbers
+- **Create** negative numbers
+- **Perform** conversions between`float` and `int` variables.
+:::
 
+# Integers versus Floats
 Integers or `int` are whole number i.e.: **do not have a fractional** value. On the other hand, `float` are floating-point numbers that **have a fractional** part. The reason why we make this distinction is because `int` and `float` are not stored in the same way within a computer's memory.
 
-To know if a value is of a specific type, you can use the `type()` function, for example (the commands below are typed within a terminal/repl):
-
-```cmd
->>> num = 3
->>> type(num)
+# The`type()` function
+To know if a value is of a specific type, you can use the `type()` function as shown below:
+```python
+num = 3
+print(type(num))
 ```
 
 Output: `int`
 
-```cmd
->>> another_num = 3.14
->>> type(another_num)
+```python
+another_num = 3.14
+print(type(another_num))
 ```
 
 Output: `float`
 
-### Scientific notation
+# Scientific notation
 
 Python supports scientific notation if you are dealing with large numbers:
 
 ```python
->>> 5e6
+large_num = 5e6
+
 ```
 
 This value corresponds to five million (5 000 000).
 
-### Underscores between digits
+# Underscores between digits
 
 The following corresponds to _eleven million one hundred eleven thousand one hundred eleven_. (11 111 111). Since we cannot separate the digits with spaces, there are two valid ways of writing this number in `Python`:
 
-```cmd
->>> 11111111
->>> 11_111_111
+```python
+number = 11111111
+number2 =  11_111_111 #has the same value, but is clearer to read
 ```
 
-> Python 3.6 has introduced underscores in numeric literals, allowing for the placement of single underscores tween digits and after base specifiers for improved readability. This feature is not available in older versions of Python. [1]
+:::{.callout-warning title="Python 3.6 or later"}
+Python 3.6 has introduced underscores in numeric literals, allowing for the placement of single underscores tween digits and after base specifiers for improved readability. This feature is not available in older versions of Python. [1]
+:::
 
-### Negative numbers
+# Negative numbers
 
 To create a negative integer, you can simply add a minus sign:
 
-```cmd
->>> -14568
+```python
+my_negatiive_num =  -14568
 ```
 
-### Converting from one type to another
+# Converting from one type to another
 
-You can convert an integer into a float by using the function`float()`, e.g: `float(10)` this returns `10.0`. Likewise, you can convert a `float` into an integer using `int(3.14)`. This will truncate the decimal part of the `float` number, the resulting `int` is `3`. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information. We say that `float`s are **wider** range than `int`or `int` are **narrower** than floats, because they include less possibilities of numbers.
+## `int` to `float`
+You can convert an integer into a float by using the function`float()`
+
+```python
+float(10)
+```
+
+Output: 10.0
+
+## `float` to `int`
+Likewise, you can convert a `float`:
+
+````python
+int(3.14)
+```
+This will truncate the decimal part of the `float` number, the resulting `int` is `3`. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information. 
 
 This will become more relevant when performing arithmetic operations between the different types.
 

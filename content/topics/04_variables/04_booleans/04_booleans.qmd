@@ -3,6 +3,9 @@ title: "Booleans"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Recognize** the boolean data type
+:::
 
 Python has several numeric types (`int`, `float`and `complex`) but only one logical type: the boolean type or `bool`. A boolean value can only have two values, either `True` or `False`.
 

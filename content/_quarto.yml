@@ -33,7 +33,7 @@ website:
 
     - section: Variables & Data Types
       contents:
-      - topics/04_variables/01_intro_literals/01_intro_literals.qmd
+      # - topics/04_variables/01_intro_literals/01_intro_literals.qmd
       - topics/04_variables/02_variables/02_variables.qmd
       - topics/04_variables/03_integers_floats/03_integers_floats.qmd
       - topics/04_variables/04_booleans/04_booleans.qmd
@@ -47,8 +47,8 @@ website:
 
     - section: Operators
       contents:
-      - topics/06_operators/01_assignment_operator/01_assignment_operator.qmd
-      - topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd
+      - topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.qmd
+      - topics/06_operators/02_assignment_operator/02_assignment_operator.qmd
       - topics/06_operators/03_comparison_operators/03_comparison_operators.qmd
       - topics/06_operators/04_logical_operators/04_logical_operators.qmd
       - topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.qmd
