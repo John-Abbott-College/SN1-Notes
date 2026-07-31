@@ -312,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/01_intro_literals/01_intro_literals.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -416,12 +416,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/01_intro_literals/01_intro_literals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Python expressions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables and Constants</span></a>
   </div>
@@ -434,14 +428,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Booleans</span></a>
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strings</span></a>
+  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Booleans</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -485,11 +479,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">topics/06_operators/01_assignment_operator/01_assignment_operator.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arithmetic operators</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/06_operators/02_arithmetic_operators/02_arithmetic_operators.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/06_operators/02_assignment_operator/02_assignment_operator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment operator</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
@@ -783,10 +783,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link active" data-scroll-target="#scientific-notation">Scientific notation</a></li>
+  <li><a href="#integers-versus-floats" id="toc-integers-versus-floats" class="nav-link active" data-scroll-target="#integers-versus-floats">Integers versus Floats</a></li>
+  <li><a href="#thetype-function" id="toc-thetype-function" class="nav-link" data-scroll-target="#thetype-function">The<code>type()</code> function</a></li>
+  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific notation</a></li>
   <li><a href="#underscores-between-digits" id="toc-underscores-between-digits" class="nav-link" data-scroll-target="#underscores-between-digits">Underscores between digits</a></li>
   <li><a href="#negative-numbers" id="toc-negative-numbers" class="nav-link" data-scroll-target="#negative-numbers">Negative numbers</a></li>
-  <li><a href="#converting-from-one-type-to-another" id="toc-converting-from-one-type-to-another" class="nav-link" data-scroll-target="#converting-from-one-type-to-another">Converting from one type to another</a></li>
+  <li><a href="#converting-from-one-type-to-another" id="toc-converting-from-one-type-to-another" class="nav-link" data-scroll-target="#converting-from-one-type-to-another">Converting from one type to another</a>
+  <ul class="collapse">
+  <li><a href="#int-to-float" id="toc-int-to-float" class="nav-link" data-scroll-target="#int-to-float"><code>int</code> to <code>float</code></a></li>
+  <li><a href="#float-to-int" id="toc-float-to-int" class="nav-link" data-scroll-target="#float-to-int"><code>float</code> to <code>int</code></a></li>
+  </ul></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 </nav>
@@ -795,7 +801,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/01_intro_literals/01_intro_literals.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Integers &amp; Floats</h1>
 </div>
@@ -814,38 +820,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Tell</strong> the difference between an integer and a float</li>
+<li><strong>Use</strong> the <code>type()</code> function to determine the data type of a variable</li>
+<li><strong>Recognize</strong> scientific notation for large numbers</li>
+<li><strong>Recognize</strong> underscores between digits for large numbers</li>
+<li><strong>Create</strong> negative numbers</li>
+<li><strong>Perform</strong> conversions between<code>float</code> and <code>int</code> variables.</li>
+</ul>
+</div>
+</div>
+<section id="integers-versus-floats" class="level1">
+<h1>Integers versus Floats</h1>
 <p>Integers or <code>int</code> are whole number i.e.: <strong>do not have a fractional</strong> value. On the other hand, <code>float</code> are floating-point numbers that <strong>have a fractional</strong> part. The reason why we make this distinction is because <code>int</code> and <code>float</code> are not stored in the same way within a computer’s memory.</p>
-<p>To know if a value is of a specific type, you can use the <code>type()</code> function, for example (the commands below are typed within a terminal/repl):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> num = 3</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> type(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="thetype-function" class="level1">
+<h1>The<code>type()</code> function</h1>
+<p>To know if a value is of a specific type, you can use the <code>type()</code> function as shown below:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output: <code>int</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> another_num = 3.14</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> type(another_num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>another_num <span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(another_num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output: <code>float</code></p>
-<section id="scientific-notation" class="level3">
-<h3 class="anchored" data-anchor-id="scientific-notation">Scientific notation</h3>
+</section>
+<section id="scientific-notation" class="level1">
+<h1>Scientific notation</h1>
 <p>Python supports scientific notation if you are dealing with large numbers:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">5e6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>large_num <span class="op">=</span> <span class="fl">5e6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This value corresponds to five million (5 000 000).</p>
 </section>
-<section id="underscores-between-digits" class="level3">
-<h3 class="anchored" data-anchor-id="underscores-between-digits">Underscores between digits</h3>
+<section id="underscores-between-digits" class="level1">
+<h1>Underscores between digits</h1>
 <p>The following corresponds to <em>eleven million one hundred eleven thousand one hundred eleven</em>. (11 111 111). Since we cannot separate the digits with spaces, there are two valid ways of writing this number in <code>Python</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> 11111111</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> 11_111_111</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">11111111</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span>  <span class="dv">11_111_111</span> <span class="co">#has the same value, but is clearer to read</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Python 3.6 or later">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Python 3.6 or later
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Python 3.6 has introduced underscores in numeric literals, allowing for the placement of single underscores tween digits and after base specifiers for improved readability. This feature is not available in older versions of Python. [1]</p>
-</blockquote>
+</div>
+</div>
 </section>
-<section id="negative-numbers" class="level3">
-<h3 class="anchored" data-anchor-id="negative-numbers">Negative numbers</h3>
+<section id="negative-numbers" class="level1">
+<h1>Negative numbers</h1>
 <p>To create a negative integer, you can simply add a minus sign:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;&gt;</span> -14568</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_negatiive_num <span class="op">=</span>  <span class="op">-</span><span class="dv">14568</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="converting-from-one-type-to-another" class="level3">
-<h3 class="anchored" data-anchor-id="converting-from-one-type-to-another">Converting from one type to another</h3>
-<p>You can convert an integer into a float by using the function<code>float()</code>, e.g: <code>float(10)</code> this returns <code>10.0</code>. Likewise, you can convert a <code>float</code> into an integer using <code>int(3.14)</code>. This will truncate the decimal part of the <code>float</code> number, the resulting <code>int</code> is <code>3</code>. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information. We say that <code>float</code>s are <strong>wider</strong> range than <code>int</code>or <code>int</code> are <strong>narrower</strong> than floats, because they include less possibilities of numbers.</p>
+<section id="converting-from-one-type-to-another" class="level1">
+<h1>Converting from one type to another</h1>
+<section id="int-to-float" class="level2">
+<h2 class="anchored" data-anchor-id="int-to-float"><code>int</code> to <code>float</code></h2>
+<p>You can convert an integer into a float by using the function<code>float()</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output: 10.0</p>
+</section>
+<section id="float-to-int" class="level2">
+<h2 class="anchored" data-anchor-id="float-to-int"><code>float</code> to <code>int</code></h2>
+<p>Likewise, you can convert a <code>float</code>:</p>
+<p>`<code>python int(3.14)</code> This will truncate the decimal part of the <code>float</code> number, the resulting <code>int</code> is <code>3</code>. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information.</p>
 <p>This will become more relevant when performing arithmetic operations between the different types.</p>
+</section>
 </section>
 <section id="reference" class="level1">
 <h1>Reference</h1>
