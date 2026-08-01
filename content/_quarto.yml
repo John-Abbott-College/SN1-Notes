@@ -42,8 +42,9 @@ website:
 
     - section: String Formatting
       contents:
-      - topics/05_string_formatting/01_string_ops/01_string_ops.qmd
-      - topics/05_string_formatting/02_f_strings/02_f_strings.qmd
+      - topics/05_string_formatting/01_f_strings/01_f_strings.qmd
+      - topics/05_string_formatting/02_string_ops/02_string_ops.qmd
+      
 
     - section: Operators
       contents:

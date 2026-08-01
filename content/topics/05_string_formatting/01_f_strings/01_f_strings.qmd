@@ -1,12 +1,59 @@
 ---
-title: "_f-string_ Review"
+title: "Formatted String __f-string__"
 editor:
   render-on-save: true
 ---
 
-We have introduced f-strings earlier when learning about string concatenation. F-strings are a useful way to combine write a string while inserting numbers and formatting them in a specific way.
+# __f-strings__
+Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string.
 
-## Variables and Other Code (review)
+Consider the following message:
+_Good morning John! You're networth is $23,500$_
+
+Let's imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total. 
+
+An f-string can help us create those generic messages by inserting variables as such:
+
+```{python}
+first_name = "John"
+account1 = 12_000
+account2 = 11_500
+total = account1 + account2 
+greeting = f"Good morning {first_name}! You're networth is {total}"
+
+print(greeting)
+```
+
+Now try changing the `fist_name` or any of the accounts value. The message template stays the same, but the final printed message changes accordingly. 
+
+✍️**Challenge 1**: Use f-strings to print the following message:
+_I am a John Abbott student in the Science program.
+I am currently in semester 1.
+I am taking 15 credits._
+
+```python
+school = "John Abbott"
+program = "Science"
+semester = 1
+number_credits = 15
+... complete this
+```
+
+:::{.callout-tip icon="false" title="Solution" collapse="true"}
+```python
+school = "John Abbott"
+program = "Science"
+semester = 1
+number_credits = 15
+
+print(f"I am a {school} student in the {program} program." )
+print(f"I am currently in semsteer {semester}. ")
+print(f"I am taking {number_credits} credits")
+```
+
+:::
+
+## Variables and Other Code 
 
 > **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`
 >
