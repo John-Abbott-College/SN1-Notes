@@ -65,7 +65,7 @@ my_negatiive_num =  -14568
 
 # Converting from one type to another
 
-## `int` to `float`
+## `int` $\rightarrow$ `float`
 You can convert an integer into a float by using the function`float()`
 
 ```python
@@ -74,7 +74,7 @@ float(10)
 
 Output: 10.0
 
-## `float` to `int`
+## `float` $\leftarrow$ `int`
 Likewise, you can convert a `float`:
 
 ````python
