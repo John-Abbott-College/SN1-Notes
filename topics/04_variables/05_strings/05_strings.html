@@ -457,14 +457,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">String Operations</span></a>
+  <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formatted String <strong>f-string</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_f_strings/02_f_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><em>f-string</em> Review</span></a>
+  <a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String Operations</span></a>
   </div>
 </li>
       </ul>
@@ -783,11 +783,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link active" data-scroll-target="#creating-a-string">Creating a string</a>
+  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
+  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
   <ul class="collapse">
   <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
   <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
   <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
+  </ul></li>
+  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
+  <ul class="collapse">
+  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
+  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -827,10 +833,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Recognize</strong> the string data type</li>
+<li><strong>Convert</strong> strings into numeric data types.</li>
 </ul>
 </div>
 </div>
-<p>When programming, textual data is represented by objects called <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters.</p>
+<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
+<section id="whats-a-string" class="level1">
+<h1>What’s a string?</h1>
+<p>Strings are nothing more than sequences of unicode character (‘a’,‘b’,‘c’,….’%‘,’#‘,….). Each character in a string occupies a specific position or index. For example in “Hello World”, the ’H’ character is at index 0, the ‘e’ is at index 1, the ‘l’ is at index 2, etc. <img src="assets/strings_index.png" width="60%/"></p>
+</section>
 <section id="creating-a-string" class="level1">
 <h1>Creating a string</h1>
 <p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
@@ -865,6 +877,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
 </ul>
+</section>
+</section>
+<section id="conversions-to-other-types" class="level1">
+<h1>Conversions to other types</h1>
+<p>Because strings store text, computers treat them as plain text rather than numbers—meaning they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
+<section id="convert-intfloat-to-str" class="level2">
+<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
+<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="convert-str-to-intfloat" class="level2">
+<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
+<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or,</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="This can crash!!!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>This can crash!!!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 
 
 </section>

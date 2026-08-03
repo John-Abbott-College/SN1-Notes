@@ -312,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html">String Operations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html">String Operations</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -457,14 +457,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">String Operations</span></a>
+  <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formatted String <strong>f-string</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_f_strings/02_f_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><em>f-string</em> Review</span></a>
+  <a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">String Operations</span></a>
   </div>
 </li>
       </ul>
@@ -783,9 +783,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#combining-strings" id="toc-combining-strings" class="nav-link active" data-scroll-target="#combining-strings">Combining strings</a></li>
+  <li><a href="#why-perform-string-operations" id="toc-why-perform-string-operations" class="nav-link active" data-scroll-target="#why-perform-string-operations">Why perform string operations?</a></li>
+  <li><a href="#string-concatenation" id="toc-string-concatenation" class="nav-link" data-scroll-target="#string-concatenation">String concatenation</a>
+  <ul class="collapse">
+  <li><a href="#string-multiplication" id="toc-string-multiplication" class="nav-link" data-scroll-target="#string-multiplication">String multiplication</a></li>
+  </ul></li>
+  <li><a href="#replacing-parts-of-a-string" id="toc-replacing-parts-of-a-string" class="nav-link" data-scroll-target="#replacing-parts-of-a-string">Replacing parts of a string</a></li>
   <li><a href="#splitting-a-string" id="toc-splitting-a-string" class="nav-link" data-scroll-target="#splitting-a-string">Splitting a string</a></li>
-  <li><a href="#reading-individual-characters-slicing" id="toc-reading-individual-characters-slicing" class="nav-link" data-scroll-target="#reading-individual-characters-slicing">Reading individual characters &amp; slicing</a></li>
+  <li><a href="#reading-individual-characters" id="toc-reading-individual-characters" class="nav-link" data-scroll-target="#reading-individual-characters">Reading individual characters</a></li>
+  <li><a href="#slicing" id="toc-slicing" class="nav-link" data-scroll-target="#slicing">Slicing</a></li>
   </ul>
 </nav>
     </div>
@@ -793,7 +799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_string_ops/01_string_ops.html">String Operations</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html">String Operations</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">String Operations</h1>
 </div>
@@ -812,93 +818,231 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="combining-strings" class="level3">
-<h3 class="anchored" data-anchor-id="combining-strings">Combining strings</h3>
-<p>Combining or concatenating strings allows you to merge multiple strings into a single new string.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'my name is '</span> <span class="op">+</span> <span class="st">'Jennifer'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>✍️<strong>Challenge 1</strong>: Use the <code>+</code> operator and print the following message: <em>My name is Jose Carlos. I am 19</em></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">'Carlos'</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">'Jose'</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="st">"19"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>... complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank"&gt;        
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Solution&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
+<div class="objectives callout callout-style-default callout-warning no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<p><strong>String formatting</strong></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>String formatting or string interpolation is a powerful way of creating a template and inserting strings or other types of data into specific positions with the created string.</p></li>
-<li><p>For example, here is another way of combining the strings above using <code>f''</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>combined_string <span class="op">=</span> <span class="ss">f'My name is </span><span class="sc">{</span>first_name<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>last_Name<span class="sc">}</span><span class="ss">. I am </span><span class="sc">{</span>age<span class="sc">}</span><span class="ss">'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>We will be discussing string formatting in more detail later for printtting or saving numbers.</p></li>
+<li><strong>Perform</strong> string concatenations using <code>+</code></li>
+<li><strong>Perform</strong> a string multiplication with the <code>*</code></li>
+<li><strong>Perform</strong> string splitting</li>
+<li><strong>Perform</strong> string slicing</li>
 </ul>
-<p>✍️<strong>Challenge 2</strong>: Use f-strings to print the following message: <em>I am a John Abbott student in the Science program. I am currently in semester 1. I am taking 15 credits.</em></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>school <span class="op">=</span> <span class="st">"John Abbott"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>program <span class="op">=</span> <span class="st">"Science"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>semester <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>number_credits <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>... complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.fY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank"&gt;        
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Solution&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
+</div>
+</div>
+<section id="why-perform-string-operations" class="level1">
+<h1>Why perform string operations?</h1>
+<p>While the material in this section is <strong>optional</strong> and will not be assessed on the final exam, it might come in handy for future assignments. Especially when dealing with real world which can be messy and requires cleaning. In this section we will dive deeper into string operations such as concatenation, character replacement, spliting and slicing.</p>
+</section>
+<section id="string-concatenation" class="level1">
+<h1>String concatenation</h1>
+<p>Concatenating (or combining) is the operation of joining multiple strings end-to-end, creating a longer sting. Think of it as putting multiple lego pieces together to form a larger piece. This is done with the <code>+</code> operator or with the <code>*</code> operator as shown here:</p>
+<div id="a9d366dd" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"John"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> greeting <span class="op">+</span> <span class="st">', '</span> <span class="op">+</span> name</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(message)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, John</code></pre>
+</div>
+</div>
+<p>✍️<strong>Challenge 1</strong>: Create the string variable <code>full_name</code> combining the first and last name. Then, print the following message: <em>My name is Jose Carlos. I am 19</em> (using the variable defined earlier)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">'Carlos'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">'Jose'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="st">"19"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>... complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">'Carlos'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">'Jose'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="st">"19"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> last_name</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My name is "</span> <span class="op">+</span> first_name <span class="op">+</span><span class="st">" "</span> <span class="op">+</span> last_name <span class="op">+</span><span class="st">". I am "</span> <span class="op">+</span> age) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<section id="string-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="string-multiplication">String multiplication</h2>
+<p>The <code>*</code> operator can be used to multiply a string with a intger in order to repeat the sting multiple times. For example:</p>
+<div id="2e21d097" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>repeated <span class="op">=</span> base <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(repeated)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>HelloHelloHello</code></pre>
+</div>
 </div>
 </section>
-<section id="splitting-a-string" class="level3">
-<h3 class="anchored" data-anchor-id="splitting-a-string">Splitting a string</h3>
-<p>As you practice working with strings, you will encounter situations where you must extract only parts of a string to obtain the information you need.</p>
-<p>Let’s use the following string as an example.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> <span class="st">"Alex#Jennifer#Carlos#Francine"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>What if we would like to extract all the names from this string?</p>
-<p>Luckily, there is a python “function” called <code>split()</code>which breaks a given string into a <code>list</code> of substrings using a specific separator character. In this case, we would need to divide up the string into 4 new substrings and using the <code>#</code> as the seperator.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(names.split(<span class="st">'#'</span>))</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Output : ['Alex', 'Jennifer', 'Carlos', 'Francine']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
+</section>
+<section id="replacing-parts-of-a-string" class="level1">
+<h1>Replacing parts of a string</h1>
+<p>Processing textual data often required “cleaning” formatted numbers that aren’t recognized by python. Consider the number <code>23,5</code> which uses a comma as a decimal seperator instead of <code>.</code>. This is common in the French system as well as in Europe and South America.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>We must relace the formatting commas: <code>,</code> with <code>.</code> before performing a conversion. Python has a “function” called <code>replace()</code> which replaced an <code>old</code> character with a <code>new</code> as such:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_eng <span class="op">=</span> data_fr.replace(<span class="st">","</span>, <span class="st">"."</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">float</span>(data_eng) <span class="co">#&lt;--Fixed! ✅</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To remove a character completely, the same function can be used to replace that character can with <strong>nothing</strong> (<code>""</code>):</p>
+<p>For example: Consider textual data stored as <code>"1,000,000,000"</code> and we must convert this into a number. If we tried to convert it into an <code>int</code> directly, this would cause an error:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"1,000,000,000"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_str) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Let’s remove the <code>,</code> with <code>replace()</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"1,000,000,000"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_clean <span class="op">=</span> data_str.replace(<span class="st">","</span>,<span class="st">""</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_clean) <span class="co">#&lt;--Fixed! ✅</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✍️<strong>Challenge 2</strong>: Upon reading a corrupted text file, Bruce got the following string to clean-up, help him find all <code>%</code> and change them into spaces and find all <code>0</code> and replace them into <code>o</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="st">"The%ancient%0ak%tree%whispered</span><span class="sc">%s</span><span class="st">ecrets%t0%the%wind%as%the</span><span class="sc">%f</span><span class="st">irst</span><span class="sc">%s</span><span class="st">tars%began%t0%twinkle</span><span class="sc">%i</span><span class="st">n%the</span><span class="sc">%d</span><span class="st">usk."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="75df956b" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="st">"The%ancient%0ak%tree%whispered</span><span class="sc">%s</span><span class="st">ecrets%t0%the%wind%as%the</span><span class="sc">%f</span><span class="st">irst</span><span class="sc">%s</span><span class="st">tars%began%t0%twinkle</span><span class="sc">%i</span><span class="st">n%the</span><span class="sc">%d</span><span class="st">usk."</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>clean_msg <span class="op">=</span> msg.replace(<span class="st">'%'</span>, <span class="st">' '</span>).replace(<span class="st">'0'</span>, <span class="st">'o'</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(clean_msg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The ancient oak tree whispered secrets to the wind as the first stars began to twinkle in the dusk.</code></pre>
+</div>
+</div>
 <ul>
-<li><code>split()</code> is actually a method not a function because a function doesn’t need any object to be called, just like <code>print()</code> it can be called on its own. On the other hand, a method is always associated with an object, like <code>&lt;a string&gt;.split()</code> which can only be called on strings.</li>
-<li>Unlike the <code>print()</code> it cannot be called on its own. Which means you have to use the <code>.</code> following the name the string variable that is being split.</li>
+<li>Note, that you can chain <code>.replace().replace()</code> as much as needed without having to create new variables each time.</li>
 </ul>
-</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="splitting-a-string" class="level1">
+<h1>Splitting a string</h1>
+<p>When working with structured data, the information we need might be stored in a large string with a repeated character seperating the imporatant pieces of information.</p>
+<p>Let’s use the following string as an example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_names <span class="op">=</span> <span class="st">"Alex#Jennifer#Carlos#Francine"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>How can we access the individual names “Alex”, “Jennifer”, “Carlos”, etc without the <code>#</code>?</p>
+<p>There is a python “function” called <code>split()</code>which breaks a given string into a <code>list</code> of substrings using a specific separator character. In this case, we would need to divide up the string into 4 new substrings and using the <code>#</code> as the seperator.</p>
+<div id="7dc69194" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_names <span class="op">=</span> <span class="st">"Alex#Jennifer#Carlos#Francine"</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> data_names.split(<span class="st">'#'</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(names)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Alex', 'Jennifer', 'Carlos', 'Francine']</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Additional Info">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Additional Info
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>replace()</code> and <code>split()</code> are actually a methods not functions because they are always associated with a string unlike a function which can be called on its own, just like <code>print()</code>. That’s why it’s always <code>a_string.replace()</code> or <code>a_string.split()</code>. You must use the <code>.</code> following the name the string variable.</p>
+</div>
+</div>
+</div>
 <p>✍️<strong>Challenge 3</strong>: The following script contains important values that should be seperated. Use the <code>split()</code> method to output the following values: <code>['15', '49', '56.2', '78.0', '89.2', '456']</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>raw_data<span class="op">=</span><span class="st">"15 49 56.2 78.0 89.2 456"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>...complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oY2hhbGxlbmdlXzFfc3RyaW5ncy5weQ==~XQAAgAB5AAAAAAAAAAAzGkqsDHS3yZVBWa5WuU7QM_KeWQeevEJUcGYfrL3-FaUb3PFP3rJh4MvDNO-UDmD7nJG24sb7kGPAIHJzWmmNcf0-KNRon71pjcon8QtB6nXlWgYLFl7yXfmAe4A=.oY2hhbGxlbmdlXzJfc3RyaW5ncy5weQ==~XQAAgADrAAAAAAAAAAA5mMlPmjxwaEyBlFtWP3n-9YeSldSHgTL78h6hzXIyH3YBvTPRPTOJLxjjl5relcBZwGdXsPrhe7qNy44XJap0ql2y_XKzIDNmiG6437VBP-YCAcPrWuhJKUBEwSzZekH5WyOpUybKsEz6ReRreyR90HwxivM-A9ZGCPUqTfQ70hq79iTl-H71AxJYOe6_FYaVPE7sJhv_3y34wA==.fY2hhbGxlbmdlXzNfc3RyaW5ncy5weQ==~XQAAgAA8AAAAAAAAAAA5GEtUbbz67SFqkqtVQMtKQ4Ewxqs3F3xg0Hw4CYhb7i9jwZHfKbrxFXCZFZfHrjZTzIFW_xqblguf_tzMAA==.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank"&gt;        
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Solution&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>raw_data<span class="op">=</span><span class="st">"15 49 56.2 78.0 89.2 456"</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>...complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<blockquote class="blockquote">
-<p>You’ll notice that when the seperator is a space character <code></code>, you can call the <code>split()</code> method without specifying any input argument. By default, this method seperates a string using the <code></code>. Comma seperated values (CSV) are popular files for sharing tables of data. We will see them a little but later in the course.</p>
-</blockquote>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>raw_data<span class="op">=</span><span class="st">"15 49 56.2 78.0 89.2 456"</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(raw_data.split())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Default seperator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Default seperator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Notice that when the seperator is a space character <code></code>, you can call the <code>split()</code> method without specifying any input argument. By default, this method seperates a string using the <code></code>.</li>
+<li>Comma seperated values (CSV) are popular files for sharing tables of data. We will see them a little but later in the course.</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="reading-individual-characters-slicing" class="level3">
-<h3 class="anchored" data-anchor-id="reading-individual-characters-slicing">Reading individual characters &amp; slicing</h3>
+<section id="reading-individual-characters" class="level1">
+<h1>Reading individual characters</h1>
 <p>Observe the following raw string data “Student number: 123456”. What if we are interested only in this part “123456”. There is no seperator character that allows us to split this string into ‘Student number:’ and ‘123456’. Therefore we must find a way to get parts of a string in a more precise way. To solve this problem, we must understand more deeply what strings are made up of.</p>
 <p>Strings are nothing more than sequences of unicode character (‘a’,‘b’,‘c’,….’%‘,’#‘,….). Each character in a string occupies a specific position or index. For example in “Hello World”, the ’H’ character is at index 0, the ‘e’ is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="Notes/string_formatting/01_string_ops/assets/strings_index.png"></p>
+<p><img src="assets/strings_index.png" width="80%/"></p>
 <p>To access a specific character within the string, use square brackets <code>[]</code> and the index of the character to select:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Hello World"</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">0</span>])   <span class="co">#Output: `H`</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">1</span>])   <span class="co">#Output: `e`</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">2</span>])   <span class="co">#Output: `l`</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">3</span>])   <span class="co">#Output: `l`</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">4</span>])   <span class="co">#Output: `o`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Slicing</strong></p>
+<div id="259e3c7a" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Hello World"</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">0</span>])  </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">1</span>])  </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">2</span>])   </span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">3</span>])  </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">4</span>])  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>H
+e
+l
+l
+o</code></pre>
+</div>
+</div>
+</section>
+<section id="slicing" class="level1">
+<h1>Slicing</h1>
 <p>Referring back to our example “Student number: 123456”, the information we want to extract is located between index 16 and 21 inclusive. To retrieve a specific portion of a string, use slicing with the format <code>&lt;start_index&gt;:&lt;end_index&gt;</code>. Note that the <code>end_index</code> is not included in the slice, there for we must specify <code>[16:22]</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> <span class="st">"Student number: 123456"</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>useful_data <span class="op">=</span> raw_data[<span class="dv">16</span>:<span class="dv">22</span>]</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(useful_data)    <span class="co">#Output: `123456`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3e8d57d7" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> <span class="st">"Student number: 123456"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>useful_data <span class="op">=</span> raw_data[<span class="dv">16</span>:<span class="dv">22</span>]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(useful_data)    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>123456</code></pre>
+</div>
+</div>
 <p>Notice that the <code>end_index</code> is one more than 21. That is because the range <code>16:22</code> will count 16, 17, 18, 19, 20, 21 and stop when the index reaches <code>end_index</code> (in this case: 22). We will learn more about ranges with for loops.</p>
 
 
