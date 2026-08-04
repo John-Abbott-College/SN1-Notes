@@ -82,9 +82,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-54ccc3836fef00d51cd1bc2b46c819a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4731dd772431a92bb2cb3c677c899d3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,6 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -457,14 +461,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strings</span></a>
+  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Booleans</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Booleans</span></a>
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -487,7 +491,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formatted String <strong>f-string</strong></span></a>
+ <span class="menu-text">Formatted Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -818,6 +822,7 @@ window.Quarto = {
   <li><a href="#using-comparison-operators" id="toc-using-comparison-operators" class="nav-link" data-scroll-target="#using-comparison-operators">Using comparison operators</a></li>
   </ul></li>
   <li><a href="#conversion-into-numeric-types" id="toc-conversion-into-numeric-types" class="nav-link" data-scroll-target="#conversion-into-numeric-types">Conversion into numeric types</a></li>
+  <li><a href="#boolean-logic" id="toc-boolean-logic" class="nav-link" data-scroll-target="#boolean-logic">Boolean Logic</a></li>
   </ul>
 </nav>
     </div>
@@ -911,10 +916,13 @@ window.Quarto = {
 <h1>Conversion into numeric types</h1>
 <p>Booleans can be converted into numeric types altough this isn’t common use in this course. <code>True</code> is equivalent to 1 and <code>False</code> is equivalent to 0.</p>
 <ul>
-<li><p>To convert a <code>bool</code> into an integer or a float, you can also use the <code>int(True)</code> or <code>float(True)</code> constructors.</p></li>
+<li><p>To convert a <code>bool</code> into an integer or a float, you can also use the <code>int(True)</code> or <code>float(True)</code> functions.</p></li>
 <li><p>To convert any other type into a <code>bool</code>, you can use the <code>bool()</code> function, e.g.&nbsp;<code>bool(0)</code> is <code>False</code> and <code>bool(1)</code> is <code>True</code></p></li>
 <li><p>Note: That converting any number other than zero will be <code>True</code>, e.g.&nbsp;<code>bool(1234)</code> is <code>True</code></p></li>
 </ul>
+</section>
+<section id="boolean-logic" class="level1">
+<h1>Boolean Logic</h1>
 <p>We will learn more about booleans in conditional statements (i.e.&nbsp;<code>if/else</code> statements)</p>
 <p>Boolean logic and conditional statements, can help us create interesting algorithms!</p>
 <p><img src="https://cdn.nulab.com/learn-wp/app/uploads/2018/12/14211222/engineering-flow-chart.png" height="400"></p>
@@ -922,9 +930,34 @@ window.Quarto = {
 <p><img src="https://preview.redd.it/be88jxsxeyn41.jpg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=bccd9910ba1edd490ab54869521ced70839b4f6f" height="350"></p>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../topics/04_variables/04_booleans";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

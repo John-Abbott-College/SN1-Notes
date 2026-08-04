@@ -82,9 +82,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-54ccc3836fef00d51cd1bc2b46c819a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-31b7b09b3416ed0b6e615a69b537a480.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4731dd772431a92bb2cb3c677c899d3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,6 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -457,14 +461,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strings</span></a>
+  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Booleans</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Booleans</span></a>
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -487,7 +491,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formatted String <strong>f-string</strong></span></a>
+ <span class="menu-text">Formatted Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -814,9 +818,17 @@ window.Quarto = {
   <ul>
   <li><a href="#variables" id="toc-variables" class="nav-link active" data-scroll-target="#variables"><strong>Variables</strong></a>
   <ul class="collapse">
-  <li><a href="#variable-naming-strict-rules" id="toc-variable-naming-strict-rules" class="nav-link" data-scroll-target="#variable-naming-strict-rules">Variable naming strict rules</a></li>
+  <li><a href="#defining-variables" id="toc-defining-variables" class="nav-link" data-scroll-target="#defining-variables">Defining Variables</a></li>
+  <li><a href="#modifying-a-variable" id="toc-modifying-a-variable" class="nav-link" data-scroll-target="#modifying-a-variable">Modifying a variable</a></li>
+  <li><a href="#why-use-variables" id="toc-why-use-variables" class="nav-link" data-scroll-target="#why-use-variables">Why use variables?</a>
+  <ul class="collapse">
+  <li><a href="#eliminating-magic-numbers" id="toc-eliminating-magic-numbers" class="nav-link" data-scroll-target="#eliminating-magic-numbers">Eliminating magic numbers</a></li>
+  <li><a href="#re-using-logic" id="toc-re-using-logic" class="nav-link" data-scroll-target="#re-using-logic">Re-using logic</a></li>
+  </ul></li>
+  <li><a href="#should-everything-be-turned-into-a-variable" id="toc-should-everything-be-turned-into-a-variable" class="nav-link" data-scroll-target="#should-everything-be-turned-into-a-variable">Should everything be turned into a variable?</a></li>
+  <li><a href="#variable-naming-rules" id="toc-variable-naming-rules" class="nav-link" data-scroll-target="#variable-naming-rules">Variable naming rules</a></li>
   <li><a href="#variable-naming-convention" id="toc-variable-naming-convention" class="nav-link" data-scroll-target="#variable-naming-convention">Variable naming convention</a></li>
-  <li><a href="#type-hinting" id="toc-type-hinting" class="nav-link" data-scroll-target="#type-hinting">Type Hinting</a></li>
+  <li><a href="#example---calculating-the-variance-of-three-numbers" id="toc-example---calculating-the-variance-of-three-numbers" class="nav-link" data-scroll-target="#example---calculating-the-variance-of-three-numbers">Example - Calculating the variance of three numbers</a></li>
   </ul></li>
   <li><a href="#constants" id="toc-constants" class="nav-link" data-scroll-target="#constants"><strong>Constants</strong></a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -873,17 +885,50 @@ window.Quarto = {
 <li><p>a word or sentence (aka. a “string”), such as the user’s name;</p></li>
 <li><p>many other things that we’ll visit later…</p></li>
 </ul>
-<p>Variables are composed of a <strong>name</strong> and a <strong>value</strong>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>variable_name <span class="op">=</span> value</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To create a variable in Python, simply write the name you wish to use and use the assignment <code>=</code> operator to assign it a value:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hourlyPay <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>numStudents <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">"Bob"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello there!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You may also store the result of an operation. For instance, the following line will create a variable named <em>my_sum</em> and store the result <code>335</code> in memory:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_sum <span class="op">=</span> <span class="dv">21</span> <span class="op">+</span> <span class="dv">314</span>       <span class="co"># operation</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>average  <span class="op">=</span> my_sum <span class="op">/</span> <span class="dv">2</span>   <span class="co"># using another variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="defining-variables" class="level2">
+<h2 class="anchored" data-anchor-id="defining-variables">Defining Variables</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTHAX</strong>: <code>variable_name = value</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Variables are composed of a <strong>name</strong> and a <strong>value</strong>.</li>
+<li>To which you can directly assign a <strong>value</strong></li>
+</ul>
+</div>
+</div>
+<p>Here are a few examples:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>hourlyPay <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>numStudents <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">"Bob"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello there!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternatively, you may also store the result of a Python expression:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTHAX</strong>: <code>variable_name = python_expression</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The expression is <strong>always</strong> to the right hand side of the <code>=</code></li>
+<li>The expression can be using other variables <strong>defined before</strong>.</li>
+</ul>
+</div>
+</div>
+<p>For instance, the following line will create a variable named <em>my_sum</em> and store the result <code>335</code> in memory:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_sum <span class="op">=</span> <span class="dv">21</span> <span class="op">+</span> <span class="dv">314</span>       <span class="co"># operation</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>average  <span class="op">=</span> my_sum <span class="op">/</span> <span class="dv">2</span>   <span class="co"># using another variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <!-- 
 Let's animate the execution of this code block (click the Play-Pause ⏯️ button):
 ```{=html}
@@ -909,8 +954,8 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <li>Now, when the variable is used it returns the most latest value.</li>
 </ol>
 <p>Given that assignments are evaluated from right to left in Python, the expression below is <strong>correct</strong> although it is mathematically not correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># This is valid in programming</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># This is valid in programming</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <!-- 
 
 <iframe 
@@ -922,19 +967,226 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
   sandbox="allow-scripts allow-same-origin allow-forms">
 </iframe> -->
 <p>The value of x is increased by 1.</p>
-<section id="variable-naming-strict-rules" class="level2">
-<h2 class="anchored" data-anchor-id="variable-naming-strict-rules">Variable naming strict rules</h2>
+</section>
+<section id="modifying-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="modifying-a-variable">Modifying a variable</h2>
+<p>Variables are <strong>mutable</strong>. This means their values can be <strong>changed</strong> or <strong>updated</strong> over time.</p>
+<p>For example, the following lines create a variable called <code>temperature</code>, initially setting its value to <code>23.0</code>. The second line, is updating its value to <code>26.0</code>. Thus erasing the previous value:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">26.0</span> <span class="co">#the value has changed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Avoid changing a variable's type">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Avoid changing a variable’s type
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In python, the value of a variable can be changed to a different type, though this practice is <strong>highly discouraged</strong>.</p>
+<p>For example, the following line assigns a literal of type string to a variable which initially was numeric:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="st">"too hot"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Later, we will learn why those types are not the same.</p>
+<ul>
+<li>To prevent assigning a variable a literal of a different type in Python, you can use <strong>type checking</strong>, we will discuss this later in the course.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>To use a variable after it was created, simply re-type its name where you need it (e.g.: <code>print(temperature)</code>, or (<code>temperature +3</code>)) and python will use its value in the expression.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span>  <span class="co"># This line creates the variable</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature)  <span class="co"># This line uses the variable, will print 23.0</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>temperature2 <span class="op">=</span> temperature <span class="op">+</span> <span class="dv">10</span>  <span class="co">#This line uses the variable to create a new one</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Temperature: "</span>, temperature)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Temperature2:"</span>, temperature2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled" title="Common Mistakes">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Common Mistakes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Using inexistent variables:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)   </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>x</code> doesn’t exist</li>
+</ul>
+<ol start="2" type="1">
+<li>Using a variable before <strong>creating it</strong>:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature3)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>temperature3 <span class="op">=</span> <span class="dv">20</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>This will cause an error because temperature3 doesn’t exist yet at this point.</li>
+</ul>
+<ol start="3" type="1">
+<li>Misspelling a variable:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Temperature)  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>This will cause an error because Python is case sensitive “T” is not the same as “t”</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="why-use-variables" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-variables">Why use variables?</h2>
+<p>Variables can help make the code easier to read and follow, but also re-use logic.</p>
+<section id="eliminating-magic-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="eliminating-magic-numbers">Eliminating magic numbers</h3>
+<p><strong>Magic</strong> numbers are unexplained values used in the code which make the code hard to read and understand:</p>
+<div id="01665c1f" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">*</span> <span class="fl">1.05</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>17.64</code></pre>
+</div>
+</div>
+<ul>
+<li>Here, the value <code>1.05</code> is not explained and is considered a magic number.</li>
+</ul>
+<p>Now consider this improved version using more variables:</p>
+<div id="8b65fd9d" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.05</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">+</span> price<span class="op">*</span>tax_rate</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>17.64</code></pre>
+</div>
+</div>
+<ul>
+<li><p>It’s now a little bit clearer that this program is calculating the cost of something afterapplying a <span class="math inline">\(5%\)</span> taxe rate.</p></li>
+<li><p>The first program was <strong>hardcoding</strong> the tax rate in the magic number <code>1.05</code></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Hardcoding">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hardcoding
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Hardcoding</strong> means to embed a value litterally as it is in the code. Think of it as permanantly tattooing your best friend’s phone number, and regretting it when they change numbers.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="re-using-logic" class="level3">
+<h3 class="anchored" data-anchor-id="re-using-logic">Re-using logic</h3>
+<p>Say, you’re creating a script implementing the Pythagorean theorem when <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are known. <span class="math display">\[
+a^2 + b^2 = c^2
+\]</span></p>
+<p>Consider the two program below implementing the same equation. What’s the maing difference?</p>
+<section id="program-1" class="level4">
+<h4 class="anchored" data-anchor-id="program-1">Program 1</h4>
+<div id="0dbf7605" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> <span class="dv">3</span><span class="op">*</span><span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span><span class="op">*</span><span class="dv">4</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>25</code></pre>
+</div>
+</div>
+</section>
+<section id="program-2" class="level4">
+<h4 class="anchored" data-anchor-id="program-2">Program 2</h4>
+<div id="22b49b2f" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> a<span class="op">*</span>a <span class="op">+</span> b<span class="op">*</span>b</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>25</code></pre>
+</div>
+</div>
+<p>One possible answer is: it’s much easier to read, and update the second program because the values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are well isolated in seperate variables.</p>
+<hr>
+<p>✍️<strong>Challenge</strong>: Improve the program below using variables:</p>
+<div id="36efec28" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 1 is: $ 10"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 2 is: $ 22"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The total cost is $ 32"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The cost of item 1 is: $ 10
+The cost of item 2 is: $ 22
+The total cost is $ 32</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>item1 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>item2 <span class="op">=</span> <span class="dv">22</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>total<span class="op">=</span>item1 <span class="op">+</span> item2</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 1 is: $"</span>, item1)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 2 is: $"</span>, item2)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The total cost is: $"</span>, total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="should-everything-be-turned-into-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="should-everything-be-turned-into-a-variable">Should everything be turned into a variable?</h2>
+<p>You don’t have to create variables for every piece of data in the program. There’s a fine line between making a code re-usable or making too long with too many variables. For example, if you’re implementing the Pythagrean equation, the power <code>2</code> can be written because it’s not expected to change.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span> <span class="co">#We'll learn more about operators later on</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Typically, the context of a problem will tell you if this is a variable or a fixed piece of information that isn’t expected to change.</li>
+</ul>
+</section>
+<section id="variable-naming-rules" class="level2">
+<h2 class="anchored" data-anchor-id="variable-naming-rules">Variable naming rules</h2>
 <ol type="1">
 <li><p>The variable name <strong>cannot</strong> start with a number, only with letters or <code>_</code></p></li>
 <li><p>It must <strong>contain only</strong> letters, numbers and underscores (<code>A-z</code>, <code>0-9</code>, and <code>_</code>)</p></li>
 <li><p>It cannot contain a <strong>space character</strong>, nor <strong>punctuation character</strong>, nor any <strong>special character</strong> (@, #, $, %, ?, etc..)</p></li>
 <li><p>It must not be any of the <a href="https://www.w3schools.com/python/python_ref_keywords.asp"><strong>Python keywords</strong></a>, as these are reserved by Python for predefined purposes.</p></li>
 </ol>
-<p><strong>Notes:</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Additional notes">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Additional notes
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li><p>Python is case sensitive! This means that uppercase <code>APPLE</code> and lowercase <code>apple</code> are not the same variable names, therefore will be considered by python as two different variables.</p></li>
 <li><p>You may use alphabet from other languages too for example: <code>sûr_la_mer</code>, <code>переменная</code>, <code>Adiós_Señora</code> are valid variable names.</p></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="variable-naming-convention" class="level2">
 <h2 class="anchored" data-anchor-id="variable-naming-convention">Variable naming convention</h2>
@@ -945,9 +1197,9 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <p>Anyone reading your code should be able to guess <strong>what the variable represents</strong> and <strong>how it will be used</strong> just based on the variable name.</p>
 </blockquote>
 <p>For example, using the variable <code>t</code> to represent a temperature reading could lead to confusion because <code>t</code> could also mean time, or any other quantity. It is therefore more meaningful to use <code>temperature</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="er">t</span> <span class="op">=</span> <span class="fl">23.0</span>           <span class="co"># ERROR (cannot start with number)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="fl">23.0</span>            <span class="co"># BAD!</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span>  <span class="co"># GOOD!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="er">t</span> <span class="op">=</span> <span class="fl">23.0</span>           <span class="co"># ERROR (cannot start with number)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="fl">23.0</span>            <span class="co"># BAD!</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span>  <span class="co"># GOOD!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You may also use abbreviations, so long as they are commonly known (e.g: <code>max</code> for the maximum, <code>min</code> for the minimum, <code>avg</code> for average)</p>
 <blockquote class="blockquote">
 <p>💣 Code submitted with poor variable names will have marks deducted.</p>
@@ -995,7 +1247,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 </div>
 ``` -->
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1004,47 +1256,19 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>two_weeks_pay <span class="op">=</span> <span class="fl">200.0</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>employee_num <span class="op">=</span> <span class="dv">5612</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>vacation_days_2024 <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>yearly_salary <span class="op">=</span> <span class="dv">4800</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>insurance_percent <span class="op">=</span> <span class="fl">3.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>two_weeks_pay <span class="op">=</span> <span class="fl">200.0</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>employee_num <span class="op">=</span> <span class="dv">5612</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>vacation_days_2024 <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>yearly_salary <span class="op">=</span> <span class="dv">4800</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>insurance_percent <span class="op">=</span> <span class="fl">3.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
-<p><strong>How to use variables</strong></p>
-<p>We say that variables are <strong>mutable</strong>, meaning their values can be changed or updated over time.</p>
-<p>For example, the following lines create a variable called <code>temperature</code>, initially setting its value to 23.0 and subsequently updating its value to 26.0:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">26.0</span> <span class="co">#the value has changed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To determine the type of a variable, you can use the function <code>type()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(temperature))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In python, the value of a variable can be changed to a different type, though this practice is <strong>highly discouraged</strong>.</p>
-<p>For example, the following line assigns a literal of type string to a variable which initially was numeric:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="st">"too hot"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To prevent assigning a variable a literal of a different type in Python, you can use <strong>type checking</strong>, we will discuss this later in the course.</p>
-<p>To use a variable after it was created, simply re-type its name where you need it (e.g.: <code>print(temperature)</code>, or (<code>temperature +3</code>)) and python will use its value in the expression.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">23.0</span>  <span class="co"># This line creates the variable</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature)  <span class="co"># This line uses the variable, will print 23.0</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>temperature2 <span class="op">=</span> temperature <span class="op">+</span> <span class="dv">10</span>  <span class="co">#This line uses the variable to create a new one</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Temperature: "</span>, temperature)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Temperature2:"</span>, temperature2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Common mistakes:</strong></p>
-<ol type="1">
-<li><p>Using inexistent variables:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)   <span class="co">#x doesn't exist</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Using a variable before <strong>creating it</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature3)  <span class="co">#this will cause an error because temperature3 doesn't exist yet at this point.</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>temperature3 <span class="op">=</span> <span class="dv">20</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Misspelling a variable:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Temperature)  <span class="co">#This will cause an error because Python is case sensitive "T" is not the same as "t"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-<p><strong>Example - Calculating the variance of three numbers</strong></p>
+</section>
+<section id="example---calculating-the-variance-of-three-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="example---calculating-the-variance-of-three-numbers">Example - Calculating the variance of three numbers</h2>
 <p>Let’s have a look at this lengthy equation: <code>((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3</code></p>
 <p>This equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where <code>x_m</code> represents the mean of the grades.</p>
 <p><img src="assets/variance.png" height="50"></p>
@@ -1058,25 +1282,25 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 </ol>
 <p><strong>Python implementation of the variance</strong></p>
 <p>Firstly, we need to define three variables representing the student grades and set their values:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create variables for the grades and enter their values</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>grade1 <span class="op">=</span> <span class="dv">16</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>grade2 <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>grade3 <span class="op">=</span> <span class="dv">19</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create variables for the grades and enter their values</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>grade1 <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>grade2 <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>grade3 <span class="op">=</span> <span class="dv">19</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Using variables allows us to reuse the calculation with different numbers if required.</p>
 <p>To calculate the mean we can add up the grades and divide by 3 and store the result in a new variable. This new variable can then be reused as many times as required.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Calculate the mean</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> (grade1 <span class="op">+</span> grade2 <span class="op">+</span> grade3)<span class="op">/</span><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Calculate the mean</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> (grade1 <span class="op">+</span> grade2 <span class="op">+</span> grade3)<span class="op">/</span><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To compute the squared difference of each grade, we can begin by calculating the difference from the mean and store these differences in new variables (<code>diff = grade - mean</code>). Then, using the power operator <code>**</code>, we can store the squared differences in another set of variables (e.g., <code>square_diff = diff ** 2</code>). While there are no limits in the amount of variable used, intermediate results like <code>diff</code> may not be necessary to retain. Hence, we can perform the difference and the power operations into a single calculation.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Calculate the squared difference for each value:</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>square_diff_1 <span class="op">=</span> (grade1 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>square_diff_2 <span class="op">=</span> (grade2 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>square_diff_3 <span class="op">=</span> (grade3 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Calculate the squared difference for each value:</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>square_diff_1 <span class="op">=</span> (grade1 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>square_diff_2 <span class="op">=</span> (grade2 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>square_diff_3 <span class="op">=</span> (grade3 <span class="op">-</span> mean)<span class="op">**</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The last step is to calculate the variance by averaging the squared differences:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the variance</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>variance <span class="op">=</span> (square_diff_1 <span class="op">+</span> square_diff_2 <span class="op">+</span> square_diff_3)<span class="op">/</span><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the variance</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>variance <span class="op">=</span> (square_diff_1 <span class="op">+</span> square_diff_2 <span class="op">+</span> square_diff_3)<span class="op">/</span><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Finally, we simply need to print the variance.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Output the variance</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The variance is:"</span>, variance)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Output the variance</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The variance is:"</span>, variance)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>✍️<strong>Challenge</strong>: Store your age in a variable as a number. Store one of your parent’s age in a variable as a number. Using those two variables, calculate the age difference and print it out in a message.</p>
 <!-- ```{=html}
 <div class="iframe-container" style="position: relative; width: 100%; height: 500px;">
@@ -1091,7 +1315,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 </div>
 ``` -->
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1100,14 +1324,14 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>parent_age <span class="op">=</span> <span class="dv">47</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>age_diff <span class="op">=</span> parent_age <span class="op">-</span> age</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The age diff is"</span>,age_diff)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>parent_age <span class="op">=</span> <span class="dv">47</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>age_diff <span class="op">=</span> parent_age <span class="op">-</span> age</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The age diff is"</span>,age_diff)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1116,7 +1340,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 E_p = m \times g \times h
 \]</span></p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1125,13 +1349,13 @@ E_p = m \times g \times h
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>GRAVITATION_ACC <span class="op">=</span> <span class="fl">9.81</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>energy <span class="op">=</span> GRAVITATION_ACC <span class="op">*</span> g <span class="op">*</span> h</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>GRAVITATION_ACC <span class="op">=</span> <span class="fl">9.81</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>energy <span class="op">=</span> GRAVITATION_ACC <span class="op">*</span> g <span class="op">*</span> h</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1148,28 +1372,19 @@ E_p = m \times g \times h
 </div>
 ``` -->
 </section>
-<section id="type-hinting" class="level2">
-<h2 class="anchored" data-anchor-id="type-hinting">Type Hinting</h2>
-<p>The value can be a numeric literal, a string, an operation, another variable , or a more complex expressions. Even though Python doesn’t require you to specify a variable’s type, we’ll use <strong><em>type hinting</em></strong> in this course to emphasize that a variable should always be of a specific type.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>hourlyPay: <span class="bu">int</span> <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>numStudents: <span class="bu">int</span> <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>userName: <span class="bu">str</span> <span class="op">=</span> <span class="st">"Bob"</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>greeting: <span class="bu">str</span> <span class="op">=</span> <span class="st">"Hello there!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 </section>
 <section id="constants" class="level1">
 <h1><strong>Constants</strong></h1>
 <p>Constants like in math are suppose to be values that never change. In python, they are treated the same way as variables but their values cannot be modified in the program. We say that constants are <strong>immutable</strong>. These values are universally acknowledged to be true and they should not changeover time.</p>
 <p>Typically, Python constants are declared and initialized on different modules or files and need to be imported within the source code. We will learn more about modules at a later moment.</p>
 <p>Within a created <code>constants.py</code> file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>PI <span class="op">=</span> <span class="fl">3.14159265359</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>GRAVITATION_ACC <span class="op">=</span> <span class="fl">9.81</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>PI <span class="op">=</span> <span class="fl">3.14159265359</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>GRAVITATION_ACC <span class="op">=</span> <span class="fl">9.81</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To <strong>use</strong> the constants into your <code>main.py</code> file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> constants <span class="co">#We will learn more about the import statement at a later point</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(constants.PI)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(constants.GRAVITATION_ACC)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> constants <span class="co">#We will learn more about the import statement at a later point</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(constants.PI)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(constants.GRAVITATION_ACC)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <!-- <iframe 
    src="https://app.codeboot.org/6.0.0/?init=.oY29uc3RhbnRzLnB5~XQAAgAApAAAAAAAAAAAoEkAC0ByzvCjtabl8Z6dvBqSFs4Ja8-Mtb6eYdqrKQyWKGFlBmPcj6dJn__9EtAAA.fbWFpbi5weQ==~XQAAgABGAAAAAAAAAAA0m0pnuFI8c82uP8D3Fk1IlyHNgwiBZDgkH_4O_wPGGIGdZI9eQx0G9DV7JFShOMad8E3zj__UqAAA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" 
    width="100%" 
@@ -1177,9 +1392,19 @@ E_p = m \times g \times h
    loading="lazy" 
    data-external="1">
 </iframe>  -->
-<blockquote class="blockquote">
-<p>⚠️ The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help “objects” that are constants and protected from modification.</p>
-</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="⚠️ Constants can still change">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>⚠️ Constants can still change
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help “objects” that are constants and protected from modification.</p>
+</div>
+</div>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
@@ -1189,9 +1414,34 @@ E_p = m \times g \times h
 </ol>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../topics/04_variables/02_variables";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

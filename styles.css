@@ -44,6 +44,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.25rem;
 }
 
+/* Making callout blocks more prominent */
+.callout-header {
+  font-size: 1.1rem !important;
+}
+.callout-body {
+  font-size: 1.0rem !important;
+}
+
 /* Making Objective callout blocks more prominent */
 .objectives .callout-header {
   font-size: 1.2rem !important;
