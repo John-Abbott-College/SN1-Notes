@@ -40,10 +40,11 @@ website:
       - topics/04_variables/05_strings/05_strings.qmd
       - topics/04_variables/exercises/data_types/data_types.qmd
 
-    - section: String Formatting
+    - section: String Handling
       contents:
       - topics/05_string_formatting/01_f_strings/01_f_strings.qmd
-      - topics/05_string_formatting/02_string_ops/02_string_ops.qmd
+      - topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.qmd
+      - topics/05_string_formatting/03_string_ops/03_string_ops.qmd
       
 
     - section: Operators
