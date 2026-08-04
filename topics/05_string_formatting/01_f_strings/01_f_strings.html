@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Formatted Strings – 420-SN1 Notes</title>
+<title>f-strings – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -345,7 +345,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">Formatted Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">f-strings</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -482,7 +482,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">String Formatting</span></a>
+ <span class="menu-text">String Handling</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -491,12 +491,18 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Formatted Strings</span></a>
+ <span class="menu-text">f-strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">f-string Formatting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">String Operations</span></a>
   </div>
 </li>
@@ -816,24 +822,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#f-strings" id="toc-f-strings" class="nav-link active" data-scroll-target="#f-strings"><strong>f-strings</strong></a>
-  <ul class="collapse">
-  <li><a href="#example-with-f-anything-variable" id="toc-example-with-f-anything-variable" class="nav-link" data-scroll-target="#example-with-f-anything-variable">Example with <code>f" anything {</code><em><code>variable</code></em><code>}"</code></a></li>
-  <li><a href="#examples-f-anything-python-code" id="toc-examples-f-anything-python-code" class="nav-link" data-scroll-target="#examples-f-anything-python-code">Examples <code>f" anything {</code><em><code>python code</code></em><code>}"</code></a></li>
-  </ul></li>
-  <li><a href="#formatting-variables-using-f-strings" id="toc-formatting-variables-using-f-strings" class="nav-link" data-scroll-target="#formatting-variables-using-f-strings">Formatting Variables using <em>f-strings</em></a>
-  <ul class="collapse">
-  <li><a href="#length" id="toc-length" class="nav-link" data-scroll-target="#length">Length:</a></li>
-  <li><a href="#floating-point-numbers" id="toc-floating-point-numbers" class="nav-link" data-scroll-target="#floating-point-numbers">Floating Point Numbers:</a></li>
-  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific Notation:</a></li>
-  <li><a href="#generic-precision" id="toc-generic-precision" class="nav-link" data-scroll-target="#generic-precision">Generic Precision:</a></li>
-  <li><a href="#thousands-separator" id="toc-thousands-separator" class="nav-link" data-scroll-target="#thousands-separator">Thousands Separator:</a></li>
-  <li><a href="#alignment" id="toc-alignment" class="nav-link" data-scroll-target="#alignment">Alignment:</a></li>
-  <li><a href="#percentage" id="toc-percentage" class="nav-link" data-scroll-target="#percentage">Percentage</a>
-  <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#f-strings" id="toc-f-strings" class="nav-link active" data-scroll-target="#f-strings"><strong>f-strings</strong></a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
   </ul>
 </nav>
@@ -842,9 +831,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">Formatted Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">f-strings</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Formatted Strings</h1>
+<h1 class="title">f-strings</h1>
 </div>
 
 
@@ -874,20 +863,19 @@ window.Quarto = {
 <ul>
 <li><strong>Construct</strong> f-strings to combine strings and other variables.</li>
 <li><strong>Format</strong> numbers in f-strings to control how many decimal places are shown.</li>
-<li><strong>Select</strong> the appropriate f-string formatting (not memorize) to achieve the expected output.</li>
 </ul>
 </div>
 </div>
 <section id="f-strings" class="level1">
 <h1><strong>f-strings</strong></h1>
 <p>Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It’s following the synthax below:</p>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span><strong>BASIC SYNTAX</strong>: <code>f" anything {</code><em><code>variable</code></em><code>} anything"</code>
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>f" anything {</code><em><code>variable</code></em><code>} anything"</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -898,14 +886,6 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<p>Or,</p>
-<p><strong>BASIC SYNTAX</strong>: <code>f" anything {</code><em><code>python code</code></em><code>} anything"</code></p>
-<ul>
-<li><em><code>python code</code></em> that when evaluated, returns a value.</li>
-<li>Notice that there is <em>no</em> space between the <code>f</code> and the first quote</li>
-</ul>
-<section id="example-with-f-anything-variable" class="level2">
-<h2 class="anchored" data-anchor-id="example-with-f-anything-variable">Example with <code>f" anything {</code><em><code>variable</code></em><code>}"</code></h2>
 <p>Consider the following message: <em>Good morning John! You’re networth is <span class="math inline">\(23,500\)</span></em></p>
 <p>Let’s imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total.</p>
 <p>An f-string can help us create those generic messages by inserting variables as shown below. Try changing the <code>first_name</code> or any of the accounts values. The message should change but follow the same template:</p>
@@ -918,7 +898,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZmlyc3RfbmFtZSA9IFwiSm9o
 </script>
 </div>
 <p>Now notice that the account value doesn’t use a comma <code>,</code> to seperate the thousands. We’ll learn about formatting in the next section.</p>
-<p>✍️<strong>Challenge 1</strong>: Use f-strings to print the following message:</p>
+<p>✍️<strong>Challenge</strong>: Use f-strings to print the following message:</p>
 <p><em>I am a John Abbott student in the Science program. I am currently in semester 1. I am taking 15 credits.</em></p>
 <p>You may use multiple <code>print()</code> statements to break it in to various lines.</p>
 <div>
@@ -952,11 +932,25 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2Nob29sID0gXCJKb2huIEFi
 </div>
 </div>
 </div>
-</section>
-<section id="examples-f-anything-python-code" class="level2">
-<h2 class="anchored" data-anchor-id="examples-f-anything-python-code">Examples <code>f" anything {</code><em><code>python code</code></em><code>}"</code></h2>
+<p>You can also create an f-string using a python expression:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>f" anything {</code><em><code>python code</code></em><code>} anything"</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><em><code>python code</code></em> that when evaluated, returns a value.</li>
+<li>Notice that there is <em>no</em> space between the <code>f</code> and the first quote</li>
+</ul>
+</div>
+</div>
 <p>What goes between the <code>{}</code> can also be a python expression such as an arithmetic operation or a comparison:</p>
-<div id="092c4aae" class="cell" data-execution_count="1">
+<div id="105d7a5b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"the value of x is </span><span class="sc">{</span>x <span class="op">+</span> <span class="dv">2</span><span class="sc">}</span><span class="ss">"</span>   <span class="co"># OK!, prints 5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"Is x equal to 5? </span><span class="sc">{</span>x <span class="op">==</span> <span class="dv">5</span><span class="sc">}</span><span class="ss">"</span>     <span class="co"># OK!, prints False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -986,7 +980,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpY2UgPSAxOS41NVxudGF4
 </script>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -995,7 +989,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpY2UgPSAxOS41NVxudGF4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">19.55</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.15</span></span>
@@ -1005,336 +999,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpY2UgPSAxOS41NVxudGF4
 </div>
 </div>
 </section>
-</section>
-<section id="formatting-variables-using-f-strings" class="level1">
-<h1>Formatting Variables using <em>f-strings</em></h1>
-<p>This section is about how to format numbers within an f-string.</p>
-<p>Within the <code>{...}</code> part of the <em>f-string</em>, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)</p>
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>variable: format string</code></em><code>}</code></p>
-<ul>
-<li>notice that the variable name is followed by a colon <code>:</code> and then a format string which is used to define how to format your output.</li>
-</ul>
-<section id="length" class="level2">
-<h2 class="anchored" data-anchor-id="length">Length:</h2>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m</code></em><code>}</code></p>
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.
-<ul>
-<li><code>int</code> and <code>float</code> will be padded so that the number is right aligned</li>
-<li><code>str</code> will be padded so that the string will be left aligned</li>
-</ul></li>
-</ul>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/format_length.png" class="img-fluid figure-img"></p>
-<figcaption>description of size format</figcaption>
-</figure>
-</div>
-</section>
-<section id="floating-point-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="floating-point-numbers">Floating Point Numbers:</h2>
-<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>f}</code></p>
-<ul>
-<li><p><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></p></li>
-<li><p><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</p>
-<ul>
-<li>if <code>m</code> is not specified, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-</ul></li>
-<li><p><em><code>.n</code></em> is the required precision (number of digits after the decimal point).</p>
-<ul>
-<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string</li>
-</ul></li>
-</ul>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/format_float.png" class="img-fluid figure-img"></p>
-<figcaption>floating point details</figcaption>
-</figure>
-</div>
-<p><strong>Examples</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">375.2</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: .3f}</span><span class="ss">"</span> )     <span class="co"># 'm' is not specified, so only worry about number of digits after decimal point</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 6.3f}</span><span class="ss">"</span> )    <span class="co"># the printed number will be greater than 6 digits, so the '6' is ignored</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10.3f}</span><span class="ss">"</span> )   <span class="co"># use at least 10 characters for this string, right aligned</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10}</span><span class="ss">)                # use default number of digits after the decimal point</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Output:</p>
-<pre class="text"><code>375.200
-375.200
-  375.200
-    375.2</code></pre>
-<p>For example, here are a few lines that print the value of pi at different precisions:</p>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.fZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.oZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Run example&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The value of pi without formatting: </span><span class="sc">{pi}</span><span class="st">"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with two decimal places: </span><span class="sc">{</span>pi<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with three decimal places: </span><span class="sc">{</span>pi<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with four decimal places: </span><span class="sc">{</span>pi<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Output:</strong></p>
-<pre class="text"><code>The value of pi without formatting: 3.141592653589793
-The value of pi with two decimal places: 3.14
-The value of pi with three decimal places: 3.142
-The value of pi with four decimal places: 3.1416</code></pre>
-</section>
-<section id="scientific-notation" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-notation">Scientific Notation:</h2>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>e}</code></p>
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary. Note that one space is <em>always</em> reserved for the <code>+</code> symbol, even if it is not displayed.</li>
-<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-<li><em><code>n</code></em> is the required precision (number of digits after the decimal point).
-<ul>
-<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string (+2) <em>WEIRD!</em></li>
-</ul></li>
-</ul>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/format_exponential.png" class="img-fluid figure-img"></p>
-<figcaption>details of scientific notation</figcaption>
-</figure>
-</div>
-</section>
-<section id="generic-precision" class="level2">
-<h2 class="anchored" data-anchor-id="generic-precision">Generic Precision:</h2>
-<p>Values that represent a given measurement in your program might need to be rounded to keep the <a href="https://www.youtube.com/watch?v=eCJ76hz7jPM&amp;t=228s&amp;ab_channel=KhanAcademy"><strong>significant figures/digits</strong></a>, regardless of the output format (scientific notation, or not).</p>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>}</code></p>
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
-<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-<li><em><code>n</code></em> is the number of significant digits (<strong><em>not</em></strong> the number of digits after the decimal point)</li>
-<li><em><code>.n</code></em> is the required precision (number of digits after the decimal point).</li>
-</ul>
-<p><em>WEIRD</em>: if <code>expression</code> is a string, then there can be no space between the <code>:</code> and the <em><code>m.n</code></em></p>
-</blockquote>
-<p>Python will determine which is the most appropriate representation</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/format_precision.png" class="img-fluid figure-img"></p>
-<figcaption>details of precision formatting</figcaption>
-</figure>
-</div>
-<p><strong>Examples</strong></p>
-<p>For example, let’s take the length of an object measured with a ruler graduated to 1 mm:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>length  <span class="op">=</span> <span class="fl">153.256</span> <span class="co"># in mm</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Only 4 digits are said to significant.</p>
-<ul>
-<li>To control the just number of significant digits, you may use <code>:.</code> without an “f” (as opposed to floating precision).</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The length of the object is </span><span class="sc">{</span>length<span class="sc">:.4}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>✍️ <strong>Challenge 1:</strong> You are working on a program used in an ultrasound machine. This device estimates the birth weight of babies and displays it to the screen. The system has a precision of +/- 1mm. Use <code>f-string</code> to print the weight with 5 significant figures:</p>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.oZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.fZl9zdHJpbmdzX3NpZ19maWcucHk=~XQAAgABMAAAAAAAAAAA7mUlx6qafz1LF6_bRQOU8o0bYIR4z21NYhzOcxwXn8q705FIqT6IAX3ZI2ypApfH_DqkMgP9JbsxVNWZSefGrcr-__9qSgAA=.oZl9zdHJpbmdzX3NpZ19maWdzMi5weQ==~XQAAgAAAAAAAAAAAAACD__v__8AAAAA=.~lang=py-novice.~hidden=true.e" target="_blank"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Run example&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>weight_birth <span class="op">=</span> <span class="fl">2945.48</span> <span class="co">#in g</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="thousands-separator" class="level2">
-<h2 class="anchored" data-anchor-id="thousands-separator">Thousands Separator:</h2>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>float_or_integer_variable: [,_]</code></em><code>}</code></p>
-<ul>
-<li><em><code>[,_]</code></em> means <em>either</em> a <code>,</code>or<code>\_</code></li>
-</ul>
-</blockquote>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.fZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.~lang=py-novice.~hidden=true.e" target="_blank"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Run example&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>population_usa <span class="op">=</span> <span class="dv">333_300_000</span>   <span class="co"># note: you are allowed to use _</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa without formatting </span><span class="sc">{</span>population_usa<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa in scientific notation </span><span class="sc">{</span>population_usa<span class="sc">:_}</span><span class="ss">'</span>)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa with commas </span><span class="sc">{</span>population_usa<span class="sc">:,}</span><span class="ss">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Output:</strong></p>
-<pre class="text"><code>The population of the usa without formatting 333300000
-The population of the usa in scientific notation 333_300_000
-The population of the usa with commas 333,300,000</code></pre>
-</section>
-<section id="alignment" class="level2">
-<h2 class="anchored" data-anchor-id="alignment">Alignment:</h2>
-<p>When the minimum width of the string is specified (using the <em>m</em> argument), the resulting string will be padded with spaces.</p>
-<p>We can control whether the spaces are padded to the right or left or evenly on both sides of the value.</p>
-<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
-<blockquote class="blockquote">
-<p><strong>BASIC SYNTAX</strong>: <code>{</code>*<code>expression: [&gt;&lt;^]m ...}</code></p>
-<ul>
-<li>*<code>[&lt;&gt;^]</code> means either <code>&gt;</code>, or <code>&lt;</code>, or <code>^</code>
-<ul>
-<li><code>&gt;</code> aligns the value to the right (default for <code>float</code>s and <code>int</code>s)</li>
-<li><code>&lt;</code> aligns the value to the left (defulat for <code>str</code>s)</li>
-</ul></li>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
-<li><code>...</code> refers to any other specific formatting instructions, such as <em><code>.n</code></em><code>f</code> for floating point, etc.</li>
-</ul>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/format_alignment.png" class="img-fluid figure-img"></p>
-<figcaption>alignment details</figcaption>
-</figure>
-</div>
-<p><strong>Example</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">35.2</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"not formatted: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 right aligned:              '</span><span class="sc">{</span>x<span class="sc">:10}</span><span class="ss">' "</span>)</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - right aligned: '</span><span class="sc">{</span>x<span class="sc">:&gt;10.2f}</span><span class="ss">' "</span>)</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 left aligned:               '</span><span class="sc">{</span>x<span class="sc">:&lt;10}</span><span class="ss">' "</span>)</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - left aligned:  '</span><span class="sc">{</span>x<span class="sc">:&lt;10.2f}</span><span class="ss">' "</span>)</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 centered:                   '</span><span class="sc">{</span>x<span class="sc">:^10}</span><span class="ss">' "</span>)</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - centered:      '</span><span class="sc">{</span>x<span class="sc">:^10.2f}</span><span class="ss">' "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>result:</p>
-<pre class="text"><code>not formatted: 35.2
-minimum size of 10 right aligned:              '      35.2'
-minimum size of 10, 2 decimal - right aligned: '     35.20'
-minimum size of 10 left aligned:               '35.2      '
-minimum size of 10, 2 decimal - left aligned:  '35.20     '
-minimum size of 10 centered:                   '   35.2   '
-minimum size of 10, 2 decimal - centered:      '  35.20   '</code></pre>
-<p>✍️ <strong>Challenge 2:</strong> Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.</p>
-<p>We wish to have all the numbers of the receipt aligned to the right.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>item1 <span class="op">=</span> <span class="fl">15.00</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>item2 <span class="op">=</span> <span class="fl">23.50</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>item3 <span class="op">=</span> <span class="fl">26.50</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.15</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>sub_total <span class="op">=</span> item1 <span class="op">+</span> item2 <span class="op">+</span> item3</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>tax_amount <span class="op">=</span> <span class="fl">0.15</span> <span class="op">*</span> sub_total</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> sub_total <span class="op">+</span> tax_amount</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>... complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.oZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.oZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABHAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjWUFofUEQg4CoLRsAivJS6trQfX4tDxWMC8fk51XsEkdbu3B7KWlffNiT__97lsAA=.fZl9zdHJpbmdfcmlnaHRfYWxpZ24ucHk=~XQAAgADwAQAAAAAAAAA0nQjOemBaOhYRjhJhRsiWrtvXRvTv-FcbIYKitGRb8-ntCvrbds63-1WahViQTPpoh9MFnQNssuMNs_iKD_VOVLwHcQizWdvJW2PLeRZAfKWpeZd7NuOKgh7NJbtfJE-IyMg_6-yu-MUKykINIlGVR6eHs1JBK7ymi1r_J8EMK2Ao-u7pSm4k4oI_fJapeJVOwbmrrmSH4XmTLW_-KbjgUM1pwai5MY8m__K1p1o=.~lang=py-novice.~hidden=true.e" target="_blank"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Solution&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-<p>✍️ <strong>Challenge 3:</strong> The following transactions appear in your bank statement:</p>
-<p>Using a combination of formatting seen above, display the number in the format described below.</p>
-<p>Note: You must also use the <code>:+</code> to display the signs of each number.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>transaction1 <span class="op">=</span> <span class="fl">120.00</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>transaction2 <span class="op">=</span> <span class="op">-</span><span class="fl">180.00</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>transaction3 <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>transaction4 <span class="op">=</span> <span class="op">-</span><span class="fl">50.00</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>transaction5 <span class="op">=</span> <span class="op">-</span><span class="fl">88.90</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>transaction6 <span class="op">=</span> <span class="op">-</span><span class="fl">12.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Expected output:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>   <span class="op">+</span><span class="fl">120.00</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span><span class="fl">180.00</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span><span class="fl">20.00</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">50.00</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">88.90</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">12.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oZl9zdHJpbmdzX2Zvcm1hdHRpbmcucHk=~XQAAgABBAQAAAAAAAAA4GkAC0ByzvCjtabl8Z6dvA39VetDTfwSgb7RGNRvQnDv3RW9NJFtUw8hFT52Q4dTZ47nqg-wXzPqbl1yK8U-SQNZzB2CTSFCH-3BSN7TggUuFbJFJpXp4U40J4sS0DncJAYSSXII4-9lXvhAZVnboYMFshgfQkVeCeL6D5FCo5s9lpBsjev_IWSAA.oZl9zdHJpbmdzX2xhcmdlX251bS5weQ==~XQAAgAD4AAAAAAAAAAA4G8poN568H4TKvrkNmV-Zm9bgyjtE5TseTHxDjNcidMZjB2a16QkeVInLHWVlYtZSrva4Y7oncz83r4XXa7GkR2Ex83rR25bPRwtURV0QxVb4J8FT1Yp5TrPUYdvU_P1NNV-xzTGJiovCEof6aWBplrQ3Z83V__86ToAA.fZl9zdHJpbmdzX3RyYW5zYWN0aW9ucy5weQ==~XQAAgABGAQAAAAAAAAA6HIhGlRN8UpG9oPgHogcbklM99BMeogJqT_a_kODmbJVfvOB0Kl4_3Rpejc8skSfaIrzwPVdGBpjaJoPYITqRVOlrTDpTJ7rYPH44tVUzeUt4zhxEHdOAQeFfG8_WLKgEP__3O-5A.~lang=py-novice.~hidden=true.e" target="_blank"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Solution&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-</section>
-<section id="percentage" class="level2">
-<h2 class="anchored" data-anchor-id="percentage">Percentage</h2>
-<ul>
-<li><p>Percent values can be automatically formatted using <code>:%</code></p>
-<pre class="text"><code>&gt;&gt;&gt; percentage = 0.58
-&gt;&gt;&gt; f"{percentage:%}"
-58.000000%</code></pre></li>
-<li><p>To reduce the number of decimals displayed:</p>
-<pre class="text"><code>&gt;&gt;&gt; f"{percentage:.0%}"
-58%</code></pre></li>
-</ul>
-<p>✍️ <strong>Challenge 1: </strong>Write a short program which displays the grade of a student in percentage. The value should read “72.0%”</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">25</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>grade<span class="op">/</span>total <span class="sc">:%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Formatting</th>
-<th>f string symbol example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Floating Precision</td>
-<td><code>{x:f}</code>, <code>{x:10.2f}</code>, <code>{x:.2f}</code>, <code>{x:10f}</code></td>
-</tr>
-<tr class="even">
-<td>Scientific notation</td>
-<td><code>{x:e</code>}, <code>{x:10.2e}</code>, <code>{x:.2e}</code>, <code>{</code><em><code>var</code></em><code>:10e}</code></td>
-</tr>
-<tr class="odd">
-<td>Comma separated thousands</td>
-<td><code>{x:,}</code>, <code>{x:_}</code></td>
-</tr>
-<tr class="even">
-<td>Significant figures</td>
-<td><code>{x:10.5}</code>, <code>{x:.5}</code></td>
-</tr>
-<tr class="odd">
-<td>Minimum length</td>
-<td><code>{x:10}</code></td>
-</tr>
-<tr class="even">
-<td>Alignment</td>
-<td><code>{x:&lt;10}</code>, <code>{x:&gt;10}</code>, <code>{x:^10}</code>, <code>{x:&lt;10.2}</code>, <code>{x:&lt;10.2}</code>, <code>{x:^10.2}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:^10.2f}</code>, etc</td>
-</tr>
-<tr class="odd">
-<td>Sign of number</td>
-<td><code>{x:+}</code></td>
-</tr>
-<tr class="even">
-<td>Percent</td>
-<td><code>{x:10.2%}</code>, <code>{x:.2%}</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-</section>
 <section id="additional-resources" class="level1">
 <h1>Additional resources</h1>
 <ol type="1">
 <li><a href="https://www.youtube.com/watch?v=EoNOWVYKyo0&amp;ab_channel=Indently">Video on f-strings</a></li>
-<li><a href="https://cissandbox.bentley.edu/sandbox/wp-content/uploads/2022-02-10-Documentation-on-f-strings-Updated.pdf">Complete Guide with examples</a></li>
-<li><a href="https://docs.python.org/3/tutorial/inputoutput.html">Official documentation</a></li>
 </ol>
 
 

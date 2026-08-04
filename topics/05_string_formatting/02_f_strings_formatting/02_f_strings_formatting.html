@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>String Operations – 420-SN1 Notes</title>
+<title>f-string Formatting – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -316,7 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html">String Operations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html">f-string Formatting</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -453,7 +453,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">String Formatting</span></a>
+ <span class="menu-text">String Handling</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -462,12 +462,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formatted Strings</span></a>
+ <span class="menu-text">f-strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">f-string Formatting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">String Operations</span></a>
   </div>
 </li>
@@ -787,15 +793,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-perform-string-operations" id="toc-why-perform-string-operations" class="nav-link active" data-scroll-target="#why-perform-string-operations">Why perform string operations?</a></li>
-  <li><a href="#string-concatenation" id="toc-string-concatenation" class="nav-link" data-scroll-target="#string-concatenation">String concatenation</a>
+  <li><a href="#length-or-padding" id="toc-length-or-padding" class="nav-link active" data-scroll-target="#length-or-padding">Length (or padding)</a></li>
+  <li><a href="#floating-point-numbers" id="toc-floating-point-numbers" class="nav-link" data-scroll-target="#floating-point-numbers">Floating Point Numbers</a></li>
+  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific Notation</a></li>
+  <li><a href="#generic-precision" id="toc-generic-precision" class="nav-link" data-scroll-target="#generic-precision">Generic Precision</a>
   <ul class="collapse">
-  <li><a href="#string-multiplication" id="toc-string-multiplication" class="nav-link" data-scroll-target="#string-multiplication">String multiplication</a></li>
+  <li><a href="#thousands-separator" id="toc-thousands-separator" class="nav-link" data-scroll-target="#thousands-separator">Thousands Separator:</a></li>
   </ul></li>
-  <li><a href="#replacing-parts-of-a-string" id="toc-replacing-parts-of-a-string" class="nav-link" data-scroll-target="#replacing-parts-of-a-string">Replacing parts of a string</a></li>
-  <li><a href="#splitting-a-string" id="toc-splitting-a-string" class="nav-link" data-scroll-target="#splitting-a-string">Splitting a string</a></li>
-  <li><a href="#reading-individual-characters" id="toc-reading-individual-characters" class="nav-link" data-scroll-target="#reading-individual-characters">Reading individual characters</a></li>
-  <li><a href="#slicing" id="toc-slicing" class="nav-link" data-scroll-target="#slicing">Slicing</a></li>
+  <li><a href="#alignment" id="toc-alignment" class="nav-link" data-scroll-target="#alignment">Alignment</a></li>
+  <li><a href="#percentage" id="toc-percentage" class="nav-link" data-scroll-target="#percentage">Percentage</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
   </ul>
 </nav>
     </div>
@@ -803,9 +813,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Formatting</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_string_ops/02_string_ops.html">String Operations</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html">f-string Formatting</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">String Operations</h1>
+<h1 class="title">f-string Formatting</h1>
 </div>
 
 
@@ -833,225 +843,469 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Perform</strong> string concatenations using <code>+</code></li>
-<li><strong>Perform</strong> a string multiplication with the <code>*</code></li>
-<li><strong>Perform</strong> string splitting</li>
-<li><strong>Perform</strong> string slicing</li>
+<li><strong>Select</strong> the appropriate f-string formatting (not memorize) to achieve the expected output.</li>
 </ul>
 </div>
 </div>
-<section id="why-perform-string-operations" class="level1">
-<h1>Why perform string operations?</h1>
-<p>While the material in this section is <strong>optional</strong> and will not be assessed on the final exam, it might come in handy for future assignments. Especially when dealing with real world which can be messy and requires cleaning. In this section we will dive deeper into string operations such as concatenation, character replacement, spliting and slicing.</p>
-</section>
-<section id="string-concatenation" class="level1">
-<h1>String concatenation</h1>
-<p>Concatenating (or combining) is the operation of joining multiple strings end-to-end, creating a longer sting. Think of it as putting multiple lego pieces together to form a larger piece. This is done with the <code>+</code> operator or with the <code>*</code> operator as shown here:</p>
-<div id="fa00f411" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"John"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> greeting <span class="op">+</span> <span class="st">', '</span> <span class="op">+</span> name</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(message)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello, John</code></pre>
-</div>
-</div>
-<p>✍️<strong>Challenge 1</strong>: Create the string variable <code>full_name</code> combining the first and last name. Then, print the following message: <em>My name is Jose Carlos. I am 19</em> (using the variable defined earlier)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">'Carlos'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">'Jose'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="st">"19"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>... complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">'Carlos'</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">'Jose'</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="st">"19"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> last_name</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My name is "</span> <span class="op">+</span> first_name <span class="op">+</span><span class="st">" "</span> <span class="op">+</span> last_name <span class="op">+</span><span class="st">". I am "</span> <span class="op">+</span> age) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<section id="string-multiplication" class="level2">
-<h2 class="anchored" data-anchor-id="string-multiplication">String multiplication</h2>
-<p>The <code>*</code> operator can be used to multiply a string with a intger in order to repeat the sting multiple times. For example:</p>
-<div id="2f786549" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> <span class="st">"Hello"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>repeated <span class="op">=</span> base <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(repeated)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>HelloHelloHello</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="replacing-parts-of-a-string" class="level1">
-<h1>Replacing parts of a string</h1>
-<p>Processing textual data often required “cleaning” formatted numbers that aren’t recognized by python. Consider the number <code>23,5</code> which uses a comma as a decimal seperator instead of <code>.</code>. This is common in the French system as well as in Europe and South America.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>We must relace the formatting commas: <code>,</code> with <code>.</code> before performing a conversion. Python has a “function” called <code>replace()</code> which replaced an <code>old</code> character with a <code>new</code> as such:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_eng <span class="op">=</span> data_fr.replace(<span class="st">","</span>, <span class="st">"."</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">float</span>(data_eng) <span class="co">#&lt;--Fixed! ✅</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To remove a character completely, the same function can be used to replace that character can with <strong>nothing</strong> (<code>""</code>):</p>
-<p>For example: Consider textual data stored as <code>"1,000,000,000"</code> and we must convert this into a number. If we tried to convert it into an <code>int</code> directly, this would cause an error:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"1,000,000,000"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_str) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Let’s remove the <code>,</code> with <code>replace()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"1,000,000,000"</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_clean <span class="op">=</span> data_str.replace(<span class="st">","</span>,<span class="st">""</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_clean) <span class="co">#&lt;--Fixed! ✅</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>✍️<strong>Challenge 2</strong>: Upon reading a corrupted text file, Bruce got the following string to clean-up, help him find all <code>%</code> and change them into spaces and find all <code>0</code> and replace them into <code>o</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="st">"The%ancient%0ak%tree%whispered</span><span class="sc">%s</span><span class="st">ecrets%t0%the%wind%as%the</span><span class="sc">%f</span><span class="st">irst</span><span class="sc">%s</span><span class="st">tars%began%t0%twinkle</span><span class="sc">%i</span><span class="st">n%the</span><span class="sc">%d</span><span class="st">usk."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div id="1f273e4a" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="st">"The%ancient%0ak%tree%whispered</span><span class="sc">%s</span><span class="st">ecrets%t0%the%wind%as%the</span><span class="sc">%f</span><span class="st">irst</span><span class="sc">%s</span><span class="st">tars%began%t0%twinkle</span><span class="sc">%i</span><span class="st">n%the</span><span class="sc">%d</span><span class="st">usk."</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>clean_msg <span class="op">=</span> msg.replace(<span class="st">'%'</span>, <span class="st">' '</span>).replace(<span class="st">'0'</span>, <span class="st">'o'</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(clean_msg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The ancient oak tree whispered secrets to the wind as the first stars began to twinkle in the dusk.</code></pre>
-</div>
-</div>
-<ul>
-<li>Note, that you can chain <code>.replace().replace()</code> as much as needed without having to create new variables each time.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="splitting-a-string" class="level1">
-<h1>Splitting a string</h1>
-<p>When working with structured data, the information we need might be stored in a large string with a repeated character seperating the imporatant pieces of information.</p>
-<p>Let’s use the following string as an example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_names <span class="op">=</span> <span class="st">"Alex#Jennifer#Carlos#Francine"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>How can we access the individual names “Alex”, “Jennifer”, “Carlos”, etc without the <code>#</code>?</p>
-<p>There is a python “function” called <code>split()</code>which breaks a given string into a <code>list</code> of substrings using a specific separator character. In this case, we would need to divide up the string into 4 new substrings and using the <code>#</code> as the seperator.</p>
-<div id="ebdc2bde" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_names <span class="op">=</span> <span class="st">"Alex#Jennifer#Carlos#Francine"</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> data_names.split(<span class="st">'#'</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(names)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>['Alex', 'Jennifer', 'Carlos', 'Francine']</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Additional Info">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Additional Info
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><code>replace()</code> and <code>split()</code> are actually a methods not functions because they are always associated with a string unlike a function which can be called on its own, just like <code>print()</code>. That’s why it’s always <code>a_string.replace()</code> or <code>a_string.split()</code>. You must use the <code>.</code> following the name the string variable.</p>
-</div>
-</div>
-</div>
-<p>✍️<strong>Challenge 3</strong>: The following script contains important values that should be seperated. Use the <code>split()</code> method to output the following values: <code>['15', '49', '56.2', '78.0', '89.2', '456']</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>raw_data<span class="op">=</span><span class="st">"15 49 56.2 78.0 89.2 456"</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>...complete this</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>raw_data<span class="op">=</span><span class="st">"15 49 56.2 78.0 89.2 456"</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(raw_data.split())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Default seperator">
+<p>This topic is not part of the final assessment, but might be useful for some assignments.</p>
+<p>This section is about how to format numbers within an f-string.</p>
+<p>Within the <code>{...}</code> part of the <em>f-string</em>, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Default seperator
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>variable: format string</code></em><code>}</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Notice that when the seperator is a space character <code></code>, you can call the <code>split()</code> method without specifying any input argument. By default, this method seperates a string using the <code></code>.</li>
-<li>Comma seperated values (CSV) are popular files for sharing tables of data. We will see them a little but later in the course.</li>
+<li>notice that the variable name is followed by a colon <code>:</code> and then a format string which is used to define how to format your output.</li>
 </ul>
 </div>
 </div>
+<section id="length-or-padding" class="level1">
+<h1>Length (or padding)</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m</code></em><code>}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
+<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
+<li><code>int</code> and <code>float</code> will be padded so that the number is right aligned</li>
+<li><code>str</code> will be padded so that the string will be left aligned</li>
+</ul>
+</div>
+</div>
+<p><img src="./assets/format_length.png" class="img-fluid" style="width:60.0%"></p>
 </section>
-<section id="reading-individual-characters" class="level1">
-<h1>Reading individual characters</h1>
-<p>Observe the following raw string data “Student number: 123456”. What if we are interested only in this part “123456”. There is no seperator character that allows us to split this string into ‘Student number:’ and ‘123456’. Therefore we must find a way to get parts of a string in a more precise way. To solve this problem, we must understand more deeply what strings are made up of.</p>
-<p>Strings are nothing more than sequences of unicode character (‘a’,‘b’,‘c’,….’%‘,’#‘,….). Each character in a string occupies a specific position or index. For example in “Hello World”, the ’H’ character is at index 0, the ‘e’ is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="80%/"></p>
-<p>To access a specific character within the string, use square brackets <code>[]</code> and the index of the character to select:</p>
-<div id="af47b0cb" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Hello World"</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">0</span>])  </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">1</span>])  </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">2</span>])   </span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">3</span>])  </span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string[<span class="dv">4</span>])  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="floating-point-numbers" class="level1">
+<h1>Floating Point Numbers</h1>
+<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>f}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></li>
+<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.
+<ul>
+<li>if <code>m</code> is not specified, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
+</ul></li>
+<li><em><code>.n</code></em> is the required precision (number of digits after the decimal point).
+<ul>
+<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p><img src="./assets/format_float.png" class="img-fluid" style="width:60.0%"></p>
+<p><strong>Examples</strong></p>
+<div id="6a6223a4" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">375.2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: .3f}</span><span class="ss">"</span> )     <span class="co"># 'm' is not specified, so only worry about number of digits after decimal point</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 6.3f}</span><span class="ss">"</span> )    <span class="co"># the printed number will be greater than 6 digits, so the '6' is ignored</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10.3f}</span><span class="ss">"</span> )   <span class="co"># use at least 10 characters for this string, right aligned</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10}</span><span class="ss"> "</span>)              <span class="co"># use default number of digits after the decimal point</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>H
-e
-l
-l
-o</code></pre>
+<pre><code> 375.200
+ 375.200
+   375.200
+     375.2 </code></pre>
+</div>
+</div>
+<!-- Output:
+
+```text
+375.200
+375.200
+  375.200
+    375.2
+``` -->
+<p>For example, here are a few lines that print the value of pi at different precisions:</p>
+<div id="e688b922" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The value of pi without formatting: "</span>, pi)  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with two decimal places: </span><span class="sc">{</span>pi<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with three decimal places: </span><span class="sc">{</span>pi<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with four decimal places: </span><span class="sc">{</span>pi<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with four decimal places: </span><span class="sc">{</span>pi<span class="sc">:,.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The value of pi without formatting:  3.141592653589793
+The value of pi with two decimal places: 3.14
+The value of pi with three decimal places: 3.142
+The value of pi with four decimal places: 3.1416
+The value of pi with four decimal places: 3.1416</code></pre>
 </div>
 </div>
 </section>
-<section id="slicing" class="level1">
-<h1>Slicing</h1>
-<p>Referring back to our example “Student number: 123456”, the information we want to extract is located between index 16 and 21 inclusive. To retrieve a specific portion of a string, use slicing with the format <code>&lt;start_index&gt;:&lt;end_index&gt;</code>. Note that the <code>end_index</code> is not included in the slice, there for we must specify <code>[16:22]</code> :</p>
-<div id="4674ba07" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> <span class="st">"Student number: 123456"</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>useful_data <span class="op">=</span> raw_data[<span class="dv">16</span>:<span class="dv">22</span>]</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(useful_data)    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="scientific-notation" class="level1">
+<h1>Scientific Notation</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>e}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></li>
+<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary. Note that one space is <em>always</em> reserved for the <code>+</code> symbol, even if it is not displayed.</li>
+<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
+<li><em><code>n</code></em> is the required precision (number of digits after the decimal point).</li>
+<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string (+2) <em>WEIRD!</em></li>
+</ul>
+</div>
+</div>
+<p><img src="./assets/format_exponential.png" class="img-fluid" style="width:60.0%"></p>
+</section>
+<section id="generic-precision" class="level1">
+<h1>Generic Precision</h1>
+<p>Values that represent a given measurement in your program might need to be rounded to keep the <a href="https://www.youtube.com/watch?v=eCJ76hz7jPM&amp;t=228s&amp;ab_channel=KhanAcademy"><strong>significant figures/digits</strong></a>, regardless of the output format (scientific notation, or not).</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><em><code>expression</code></em> (variable or python expression) must have type <code>float</code> or <code>str</code></li>
+<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
+<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
+<li><em><code>n</code></em> is the number of significant digits (<strong><em>not</em></strong> the number of digits after the decimal point)</li>
+<li><em><code>.n</code></em> is the required precision (number of digits after the decimal point).</li>
+</ul>
+<p><em>WEIRD</em>: if <code>expression</code> is a string, then there can be no space between the <code>:</code> and the <em><code>m.n</code></em></p>
+</div>
+</div>
+<p>Python will determine which is the most appropriate representation</p>
+<p><img src="./assets/format_precision.png" class="img-fluid" style="width:60.0%"></p>
+<p><strong>Examples</strong></p>
+<p>For example, let’s take the length of an object measured with a ruler graduated to 1 mm:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>length  <span class="op">=</span> <span class="fl">153.256</span> <span class="co"># in mm</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Only 4 digits are said to significant.</p>
+<ul>
+<li>To control the just number of significant digits, you may use <code>:.</code> without an “f” (as opposed to floating precision).</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The length of the object is </span><span class="sc">{</span>length<span class="sc">:.4}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✍️ <strong>Challenge:</strong> You are working on a program used in an ultrasound machine. This device estimates the birth weight of babies and displays it to the screen. The system has a precision of +/- 100mg. Use <code>f-string</code> to print the weight with 1 digit after the decimal.</p>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoid2VpZ2h0X2JpcnRoID0gMjk0NS40OCAjaW4gZ1xuXG4jIENvbXBsZXRlIHRoZSBmLXN0cmluZ1xucHJpbnQoZlwiVGhlIEVzdGltYXRlZCB3ZWlnaHQge3dlaWdodCB9IGdcIikifQ==
+</script>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>weight_birth <span class="op">=</span> <span class="fl">2945.48</span> <span class="co">#in g</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Estimated weight </span><span class="sc">{</span>weight_birth<span class="sc">:.5}</span><span class="ss"> g"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<section id="thousands-separator" class="level2">
+<h2 class="anchored" data-anchor-id="thousands-separator">Thousands Separator:</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>float_or_integer_variable: ,</code></em><code>}</code> or <code>{</code><em><code>float_or_integer_variable: _</code></em><code>}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>This is useful to format large numbers such as 10,000,000 or 10_000_000</li>
+</ul>
+</div>
+</div>
+<p>For instance, here’s the population of the United States:</p>
+<div id="9c8609ca" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>population_usa <span class="op">=</span> <span class="dv">340_110_088</span>  </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa without formatting </span><span class="sc">{</span>population_usa<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa in scientific notation </span><span class="sc">{</span>population_usa<span class="sc">:_}</span><span class="ss">'</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa with commas </span><span class="sc">{</span>population_usa<span class="sc">:,}</span><span class="ss">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>123456</code></pre>
+<pre><code>The population of the usa without formatting 340110088
+The population of the usa in scientific notation 340_110_088
+The population of the usa with commas 340,110,088</code></pre>
 </div>
 </div>
-<p>Notice that the <code>end_index</code> is one more than 21. That is because the range <code>16:22</code> will count 16, 17, 18, 19, 20, 21 and stop when the index reaches <code>end_index</code> (in this case: 22). We will learn more about ranges with for loops.</p>
+</section>
+</section>
+<section id="alignment" class="level1">
+<h1>Alignment</h1>
+<p>When the minimum width of the string is specified (using the <em>m</em> argument), the resulting string will be padded with spaces.</p>
+<p>We can control whether the spaces are padded to the right or left or evenly on both sides of the value.</p>
+<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code>*<code>expression: [&gt;&lt;^]m ...}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>*<code>[&lt;&gt;^]</code> means either <code>&gt;</code>, or <code>&lt;</code>, or <code>^</code>
+<ul>
+<li><code>&gt;</code> aligns the value to the right (default for <code>float</code>s and <code>int</code>s)</li>
+<li><code>&lt;</code> aligns the value to the left (defulat for <code>str</code>s)</li>
+</ul></li>
+<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
+<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
+<li><code>...</code> refers to any other specific formatting instructions, such as <em><code>.n</code></em><code>f</code> for floating point, etc.</li>
+</ul>
+</div>
+</div>
+<p><img src="./assets/format_alignment.png" class="img-fluid" style="width:60.0%"></p>
+<p><strong>Example</strong></p>
+<div id="3658acd2" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">35.2</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"not formatted: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 right aligned:              '</span><span class="sc">{</span>x<span class="sc">:10}</span><span class="ss">' "</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - right aligned: '</span><span class="sc">{</span>x<span class="sc">:&gt;10.2f}</span><span class="ss">' "</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 left aligned:               '</span><span class="sc">{</span>x<span class="sc">:&lt;10}</span><span class="ss">' "</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - left aligned:  '</span><span class="sc">{</span>x<span class="sc">:&lt;10.2f}</span><span class="ss">' "</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 centered:                   '</span><span class="sc">{</span>x<span class="sc">:^10}</span><span class="ss">' "</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - centered:      '</span><span class="sc">{</span>x<span class="sc">:^10.2f}</span><span class="ss">' "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>not formatted: 35.2
+minimum size of 10 right aligned:              '      35.2' 
+minimum size of 10, 2 decimal - right aligned: '     35.20' 
+minimum size of 10 left aligned:               '35.2      ' 
+minimum size of 10, 2 decimal - left aligned:  '35.20     ' 
+minimum size of 10 centered:                   '   35.2   ' 
+minimum size of 10, 2 decimal - centered:      '  35.20   ' </code></pre>
+</div>
+</div>
+<p>✍️ <strong>Challenge:</strong> Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.</p>
+<p>We wish to have all the numbers of the receipt aligned to the right.</p>
+<div>
+<div id="pyodide-2" class="exercise-cell">
+
+</div>
+<script type="pyodide-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaXRlbTEgPSAxNS4wMFxuaXRlbTIgPSAyMy41MFxuaXRlbTMgPSAyNi41MFxudGF4X3JhdGUgPSAwLjE1XG5cbnN1Yl90b3RhbCA9IGl0ZW0xICsgaXRlbTIgKyBpdGVtM1xudGF4X2Ftb3VudCA9IDAuMTUgKiBzdWJfdG90YWxcbnRvdGFsID0gc3ViX3RvdGFsICsgdGF4X2Ftb3VudFxuXG4jIENvbXBsZXRlIHRoZSBjb2RlIFxuXG4ifQ==
+</script>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>item1 <span class="op">=</span> <span class="fl">15.00</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>item2 <span class="op">=</span> <span class="fl">23.50</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>item3 <span class="op">=</span> <span class="fl">26.50</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.15</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>sub_total <span class="op">=</span> item1 <span class="op">+</span> item2 <span class="op">+</span> item3</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>tax_amount <span class="op">=</span> <span class="fl">0.15</span> <span class="op">*</span> sub_total</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> sub_total <span class="op">+</span> tax_amount</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item1 ..........</span><span class="sc">{</span>item1<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item2 ..........</span><span class="sc">{</span>item2<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item3 ..........</span><span class="sc">{</span>item3<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item3 ..........</span><span class="sc">{</span>item3<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--------------------------"</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sub total..........</span><span class="sc">{</span>sub_total<span class="sc">:&gt;7.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Taxes ..........</span><span class="sc">{</span>tax_amount<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total ..........</span><span class="sc">{</span>total<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>✍️ <strong>Challenge:</strong> The following transactions appear in your bank statement:</p>
+<p>Using a combination of formatting seen above, display the number in the format described below.</p>
+<p>Note: You must also use the <code>:+</code> to display the signs of each number.</p>
+<div>
+<div id="pyodide-3" class="exercise-cell">
+
+</div>
+<script type="pyodide-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidHJhbnNhY3Rpb24xID0gMTIwLjAwXG50cmFuc2FjdGlvbjIgPSAtMTgwLjAwXG50cmFuc2FjdGlvbjMgPSAyMFxudHJhbnNhY3Rpb240ID0gLTUwLjAwXG50cmFuc2FjdGlvbjUgPSAtODguOTBcbnRyYW5zYWN0aW9uNiA9IC0xMi41MFxuXG4jIENvbXBsZXRlIHRoaXMuLi5cbiJ9
+</script>
+</div>
+<p><strong>Expected output:</strong></p>
+<pre class="text"><code>   +120.00
+   -180.00
+    +20.00
+    -50.00
+    -88.90
+    -12.50</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>transaction1 <span class="op">=</span> <span class="fl">120.00</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>transaction2 <span class="op">=</span> <span class="op">-</span><span class="fl">180.00</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>transaction3 <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>transaction4 <span class="op">=</span> <span class="op">-</span><span class="fl">50.00</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>transaction5 <span class="op">=</span> <span class="op">-</span><span class="fl">88.90</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>transaction6 <span class="op">=</span> <span class="op">-</span><span class="fl">12.50</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction1<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction2<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction3<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction4<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction5<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>transaction6<span class="sc">:&lt;+10.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="percentage" class="level1">
+<h1>Percentage</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: %</code></em><code>}</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Percent values can be automatically formatted using <code>:%</code></li>
+</ul>
+</div>
+</div>
+<p>For instance:</p>
+<div id="d64fa225" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>To reduce the number of decimals displayed, you can combine it with an floating point precision formatting:</p>
+<div id="dfe8cd92" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>percentage<span class="sc">:.0%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>58%</code></pre>
+</div>
+</div>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formatting</th>
+<th>f string symbol example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Floating Precision</td>
+<td><code>{x:f}</code>, <code>{x:10.2f}</code>, <code>{x:.2f}</code>, <code>{x:10f}</code></td>
+</tr>
+<tr class="even">
+<td>Scientific notation</td>
+<td><code>{x:e</code>}, <code>{x:10.2e}</code>, <code>{x:.2e}</code>, <code>{</code><em><code>var</code></em><code>:10e}</code></td>
+</tr>
+<tr class="odd">
+<td>Comma separated thousands</td>
+<td><code>{x:,}</code>, <code>{x:_}</code></td>
+</tr>
+<tr class="even">
+<td>Significant figures</td>
+<td><code>{x:10.5}</code>, <code>{x:.5}</code></td>
+</tr>
+<tr class="odd">
+<td>Minimum length</td>
+<td><code>{x:10}</code></td>
+</tr>
+<tr class="even">
+<td>Alignment</td>
+<td><code>{x:&lt;10}</code>, <code>{x:&gt;10}</code>, <code>{x:^10}</code>, <code>{x:&lt;10.2}</code>, <code>{x:&lt;10.2}</code>, <code>{x:^10.2}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:^10.2f}</code>, etc</td>
+</tr>
+<tr class="odd">
+<td>Sign of number</td>
+<td><code>{x:+}</code></td>
+</tr>
+<tr class="even">
+<td>Percent</td>
+<td><code>{x:10.2%}</code>, <code>{x:.2%}</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="additional-resources" class="level1">
+<h1>Additional resources</h1>
+<ol type="1">
+<li><a href="https://www.youtube.com/watch?v=EoNOWVYKyo0&amp;ab_channel=Indently">Video on f-strings</a></li>
+<li><a href="https://cissandbox.bentley.edu/sandbox/wp-content/uploads/2022-02-10-Documentation-on-f-strings-Updated.pdf">Complete Guide with examples</a></li>
+<li><a href="https://docs.python.org/3/tutorial/inputoutput.html">Official documentation</a></li>
+</ol>
 
 
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -1072,7 +1326,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/05_string_formatting/02_string_ops";
+window._ojs.paths.runtimeToDoc = "../../topics/05_string_formatting/02_f_strings_formatting";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;
