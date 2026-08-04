@@ -5,6 +5,7 @@ editor:
 ---
 ::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
 - **Recognize** the string data type
+- **Create** a variable of type string.
 - **Convert** strings into numeric data types.
 :::
 
@@ -13,8 +14,17 @@ When programming, textual data is represented by _strings_. Textual data can be 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg){width=80%}
 
 # What's a string?
-Strings are nothing more than sequences of unicode character ('a','b','c',....'%','#',....). Each character in a string occupies a specific position or index. For example in "Hello World", the 'H' character is at index 0, the 'e' is at index 1, the 'l' is at index 2, etc.
+Strings are nothing more than sequences of [unicode](https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html) character ('a','b','c',....'%','#',....). Even space `" "` counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or **index**. 
+
+For example in "Hello World", the `'H'` character is at index **0**, the `'e'` is at index 1, the 'l' is at index 2, etc.
+
 <img src="assets/strings_index.png" width=60%/>
+
+:::{.callout-note collapse="true" title="Fun Fact about Unicode"}
+There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters. 
+
+Source: Wikiepdia 
+:::
 
 # Creating a string
 
@@ -63,7 +73,7 @@ print(""" This is a complex string with double quotes "" and a single quote '' t
 - This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It's ideal for long paragraphs.
 
 # Conversions to other types
-Because strings store text, computers treat them as plain text rather than numbers—meaning they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.
+Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.
 
 ## Convert `int`/`float` to `str`
 To convert a numeric variable to a string, you can use the `str()` function which wraps the number in `""`:
@@ -92,7 +102,7 @@ some_calculation = data_int*3 +4
 ```
 
 
-:::{.callout-warning title="This can crash!!!"}
+:::{.callout-important title="Converting a number from a string might crash!!"}
 Be careful! If the string has any characters that can't be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:
 
 ```python

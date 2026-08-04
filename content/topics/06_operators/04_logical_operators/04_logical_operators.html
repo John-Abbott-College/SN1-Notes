@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Strings – 420-SN1 Notes</title>
+<title>Logical operators – 420-SN1 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -333,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html">Operators</a></li><li class="breadcrumb-item"><a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html">Logical operators</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -432,13 +432,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Variables &amp; Data Types</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
@@ -459,7 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
@@ -496,13 +496,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Operators</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
@@ -523,7 +523,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Logical operators</span></a>
   </div>
 </li>
@@ -808,18 +808,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
-  <ul class="collapse">
-  <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
-  <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
-  <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
-  </ul></li>
-  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
-  <ul class="collapse">
-  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
-  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
-  </ul></li>
+  <li><a href="#operator-and" id="toc-operator-and" class="nav-link active" data-scroll-target="#operator-and">Operator <code>and</code></a></li>
+  <li><a href="#operator-or" id="toc-operator-or" class="nav-link" data-scroll-target="#operator-or">Operator <code>or</code></a></li>
+  <li><a href="#operator-not" id="toc-operator-not" class="nav-link" data-scroll-target="#operator-not">Operator <code>not</code></a></li>
+  <li><a href="#order-of-operations" id="toc-order-of-operations" class="nav-link" data-scroll-target="#order-of-operations">Order of Operations</a></li>
   </ul>
 </nav>
     </div>
@@ -827,9 +819,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html">Operators</a></li><li class="breadcrumb-item"><a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html">Logical operators</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html">Operators</a></li><li class="breadcrumb-item"><a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html">Logical operators</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Strings</h1>
+<h1 class="title">Logical operators</h1>
 </div>
 
 
@@ -846,119 +838,221 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>☆ Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>Logical operators are used to combine Boolean values and expressions (<code>True</code> or <code>False</code>). They are helpful when programming decision making or creating more complex algorithms.</p>
+<p>There are instances where we need to test if multiple conditions are true at the same time. For example:</p>
 <ul>
-<li><strong>Recognize</strong> the string data type</li>
-<li><strong>Create</strong> a variable of type string.</li>
-<li><strong>Convert</strong> strings into numeric data types.</li>
+<li><p>The relative humidity index must be 100% <strong>AND</strong> the temperature has to be decreasing for it to rain:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>humidity_index <span class="op">&lt;</span> <span class="dv">100</span> <span class="kw">and</span> temperature_variation <span class="op">&lt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>The oil in the car should be changed every 6 months <strong>OR</strong> every 5,000 km:</p>
+<pre><code>num_months &gt;= 6 or  mileage &gt;= 5000</code></pre></li>
+<li><p>To return a new sweater you must have the receipt <strong>AND NOT</strong> remove the price tag.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>has_receipt <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>price_tage_removed <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>has_receipt <span class="kw">and</span> <span class="kw">not</span> price_tag_removed</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
+<p>The combination of <strong>AND</strong>, <strong>OR</strong>, and <strong>NOT</strong> conditions with the boolean values <code>True</code> and <code>False</code> is called <em>boolean algebra</em> (or boolean logic), each operation has a special symbol in math and in Python.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">MATH</th>
+<th style="text-align: left;">Python</th>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">⋀</td>
+<td style="text-align: left;"><code>and</code></td>
+<td style="text-align: left;">AND</td>
+<td style="text-align: left;">True when all elements are true.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⋁</td>
+<td style="text-align: left;"><code>or</code></td>
+<td style="text-align: left;">OR</td>
+<td style="text-align: left;">True when at least one element is true.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">¬</td>
+<td style="text-align: left;"><code>not</code></td>
+<td style="text-align: left;">NOT</td>
+<td style="text-align: left;">The inverse of an element.</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/09_and_or_not.png" class="img-fluid figure-img"></p>
+<figcaption>demo</figcaption>
+</figure>
 </div>
-</div>
-<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
-<section id="whats-a-string" class="level1">
-<h1>What’s a string?</h1>
-<p>Strings are nothing more than sequences of <a href="https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html">unicode</a> character (‘a’,‘b’,‘c’,….’%‘,’#’,….). Even space <code>" "</code> counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or <strong>index</strong>.</p>
-<p>For example in “Hello World”, the <code>'H'</code> character is at index <strong>0</strong>, the <code>'e'</code> is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="60%/"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Fun Fact about Unicode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Fun Fact about Unicode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters.</p>
-<p>Source: Wikiepdia</p>
-</div>
-</div>
-</div>
+<section id="operator-and" class="level3">
+<h3 class="anchored" data-anchor-id="operator-and">Operator <code>and</code></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 49%">
+<col style="width: 23%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>English</th>
+<th>Math</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Omnivox is accessible if you are a student <strong>AND</strong> have the correct password.</td>
+<td>access = student ∧∧ correct password</td>
+<td><code>access = is_student and is_valid_password</code></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="creating-a-string" class="level1">
-<h1>Creating a string</h1>
-<p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
-<section id="using-double-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-double-quotes">Using double quotes <code>""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Johnny"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>​ However, what if we wanted to add a double quote inside the string so that it would read <em>Hello “World”</em> ?</p>
+<section id="operator-or" class="level3">
+<h3 class="anchored" data-anchor-id="operator-or">Operator <code>or</code></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 28%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>English</th>
+<th>Math</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Today is a weekday <em>OR</em> a weekend</td>
+<td>day = weekend ⋁ weekday</td>
+<td><code>day = weekend or weekday</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operator-not" class="level3">
+<h3 class="anchored" data-anchor-id="operator-not">Operator <code>not</code></h3>
+<p>This operator transforms the variable into <strong>its opposite</strong>. It’s also know as <strong>negation</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 26%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">English</th>
+<th style="text-align: left;">Math</th>
+<th style="text-align: left;">Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I can borrow a book if I do <em>NOT</em> have an overdue book.</td>
+<td style="text-align: left;">borrow permissible = ¬ book overdue</td>
+<td style="text-align: left;"><code>borrow_permissible = not has_overdue_books</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="order-of-operations" class="level2">
+<h2 class="anchored" data-anchor-id="order-of-operations">Order of Operations</h2>
+<p>Like <strong>PEDMAS</strong> for math equations (‘Parenthesis’, ‘Exponents’, ‘Division/Multiplication’, ‘Addition/Subtraction’), there is an order of operations for resolving <code>True</code> and <code>False</code></p>
+<p><strong>Order of Operations, from highest to lowest</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 3%">
+<col style="width: 13%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Order</th>
+<th>Example</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>in</code>, <code>not in</code></td>
+<td>1</td>
+<td><code>'hi' in greetings</code></td>
+<td>is something in, or not in, a list (or list-like object) (returns <code>Boolean</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>is</code>, <code>is not</code></td>
+<td>1</td>
+<td><code>obj is None</code></td>
+<td>are two objects equivalent (not equal, but literally the same thing) (returns <code>Boolean</code>)</td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
+<td>1</td>
+<td><code>x &lt; y</code></td>
+<td>comparison of two things (returns <code>Boolean</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>not</code></td>
+<td>2</td>
+<td><code>not x</code></td>
+<td>negating the <code>True</code>/<code>False</code> value of <code>x</code> (returns <code>Boolean</code>)</td>
+</tr>
+<tr class="even">
+<td><code>and</code></td>
+<td>3</td>
+<td><code>x&lt;y and x&gt;z</code></td>
+<td>combining two <code>boolean</code> values (returns <code>Boolean</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>or</code></td>
+<td>4</td>
+<td><code>x&lt;y or x&gt;z</code></td>
+<td>combining two <code>boolean</code> values (returns <code>Boolean</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>These sets of equations are equivalent (assume all variables are boolean):</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="kw">and</span> y <span class="kw">or</span> z</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(x <span class="kw">and</span> y) <span class="kw">or</span> z</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x <span class="kw">or</span> y <span class="kw">and</span> z</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>x <span class="kw">or</span> (y <span class="kw">and</span> z)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>x <span class="kw">and</span> <span class="kw">not</span> y <span class="kw">or</span> z</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>(x <span class="kw">and</span> (<span class="kw">not</span> y) ) <span class="kw">or</span> z</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>x <span class="kw">or</span> <span class="kw">not</span> y <span class="kw">and</span> z</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>x <span class="kw">or</span> ( (<span class="kw">not</span> y) <span class="kw">and</span> z)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✍️<strong>Challenge</strong>: The following program asks the user for the current year and determines if it is an olympic year. Manually execute the operations below and write the expected result. Check your answers by running the code.</p>
+<div class="button-container">
+<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.oYm9va3NfZXhhbXBsZS5weQ==~XQAAgABhAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggDKbp1GC36d_lK_fEZlyd9INBaTxy9fpTMv3N2bhLYG5SelCOFyB2Z95_8YitA.fb2x5bXBpY195ZWFyLnB5~XQAAgAAUAQAAAAAAAAA8mUhJnNeTvgcHkuX6AKbvV44PQEueSO04tYqSeNwNpQw3aHA63QYB9T_K98jsUjlhK0oH-Tj_fEaUlYRNW7jtRw7NdNvfEaww9YUxJMC_6w_QlXlRiFipOXqsfFiEeeQmWuxuBRQBuoD-4j_WkC1MRH9lIei-wS8G8IvFmM-f6DUMXm9z78XVDIK4bFqtoP30gwU=.~lang=py-novice.~showLineNumbers=true.~hidden=true.e"&gt;         
+&lt;button class="codeboot-button"&gt;
+  &lt;span&gt;Check answer&lt;/span&gt;
+&lt;/button&gt;     
+&lt;/a&gt; </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">2024</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>time_to_next_olympiad  <span class="op">=</span> year <span class="op">%</span> <span class="dv">4</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>is_summer_olympics <span class="op">=</span> (time_to_next_olympiad <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>is_winter_olympics <span class="op">=</span> (time_to_next_olympiad <span class="op">==</span> <span class="dv">2</span>)  <span class="kw">and</span> ((year <span class="op">%</span> <span class="dv">2</span>) <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"True or False, this year is an olympic Games year?"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_summer_olympics <span class="kw">or</span> is_winter_olympics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>​ Try this command <code>print(""Hello "World"")</code> What happens? What is the error?</p>
+<p><em>The last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year.</em> Source: <a href="https://olympics.com/ioc/faq/history-and-origin-of-the-games/since-when-have-the-summer-and-winter-games-no-longer-been-held-in-the-same-year">International Olympic Committee</a> algorithm.</p>
 </blockquote>
-<ul>
-<li><p>There are a few workaround this issue:</p></li>
-<li><p>Use the escape character <code>\</code> in front of each double quote <code>print("Hello \"World\"")</code></p></li>
-<li><p>Use another method to create the string (see below) while keeping the inner <code>""</code></p></li>
-</ul>
-</section>
-<section id="using-single-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-single-quotes">Using single quotes <code>''</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello "World" '</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>In Python you can also use the single quote<code>'</code> to define a string, this is useful when trying to include a double quote <code>"</code> within the string.</li>
-<li>Similarly to the double quote, you can use the escape character to include a single quote within the string.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I</span><span class="ch">\'</span><span class="st">m enjoying programming! Well, when there are no bugs.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="using-triple-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-triple-quotes">Using triple quotes <code>""""""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""" This is a complex string with double quotes "" and a single quote '' that splits over</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">...  another line"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
-</ul>
-</section>
-</section>
-<section id="conversions-to-other-types" class="level1">
-<h1>Conversions to other types</h1>
-<p>Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
-<section id="convert-intfloat-to-str" class="level2">
-<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
-<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="convert-str-to-intfloat" class="level2">
-<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
-<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Converting a number from a string might crash!!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
 
 
 <script type="ojs-module-contents">
@@ -976,7 +1070,6 @@ eyJjb250ZW50cyI6W119
 W10=
 </script>
 </section>
-</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
@@ -984,7 +1077,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/04_variables/05_strings";
+window._ojs.paths.runtimeToDoc = "../../topics/06_operators/04_logical_operators";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;

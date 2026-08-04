@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Strings – 420-SN1 Notes</title>
+<title>Intro to NumPy – 420-SN1 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,6 +132,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -333,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/01_reading_files/01_reading_files.html">Data Processing</a></li><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/03_numpy/03_numpy.html">Intro to NumPy</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -432,13 +461,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Variables &amp; Data Types</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
@@ -459,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
@@ -701,13 +730,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">Data Processing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/11_data_processing/01_reading_files/01_reading_files.html" class="sidebar-item-text sidebar-link">
@@ -722,7 +751,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/11_data_processing/03_numpy/03_numpy.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/11_data_processing/03_numpy/03_numpy.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Intro to NumPy</span></a>
   </div>
 </li>
@@ -808,17 +837,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
+  <li><a href="#importing-numpy" id="toc-importing-numpy" class="nav-link active" data-scroll-target="#importing-numpy">Importing <code>numpy</code></a></li>
+  <li><a href="#numpy-arrays" id="toc-numpy-arrays" class="nav-link" data-scroll-target="#numpy-arrays">Numpy arrays</a></li>
+  <li><a href="#polynomial-fitting" id="toc-polynomial-fitting" class="nav-link" data-scroll-target="#polynomial-fitting"><strong>Polynomial fitting</strong></a></li>
+  <li><a href="#correlation-factor-r" id="toc-correlation-factor-r" class="nav-link" data-scroll-target="#correlation-factor-r">Correlation Factor <code>R</code></a>
   <ul class="collapse">
-  <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
-  <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
-  <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
-  </ul></li>
-  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
-  <ul class="collapse">
-  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
-  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
+  <li><a href="#calculating-statistical-values-using-numpy" id="toc-calculating-statistical-values-using-numpy" class="nav-link" data-scroll-target="#calculating-statistical-values-using-numpy">Calculating statistical values using NumPy</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -827,9 +851,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/01_reading_files/01_reading_files.html">Data Processing</a></li><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/03_numpy/03_numpy.html">Intro to NumPy</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/01_reading_files/01_reading_files.html">Data Processing</a></li><li class="breadcrumb-item"><a href="../../../topics/11_data_processing/03_numpy/03_numpy.html">Intro to NumPy</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Strings</h1>
+<h1 class="title">Intro to NumPy</h1>
 </div>
 
 
@@ -846,119 +870,198 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>☆ Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Recognize</strong> the string data type</li>
-<li><strong>Create</strong> a variable of type string.</li>
-<li><strong>Convert</strong> strings into numeric data types.</li>
-</ul>
-</div>
-</div>
-<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
-<section id="whats-a-string" class="level1">
-<h1>What’s a string?</h1>
-<p>Strings are nothing more than sequences of <a href="https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html">unicode</a> character (‘a’,‘b’,‘c’,….’%‘,’#’,….). Even space <code>" "</code> counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or <strong>index</strong>.</p>
-<p>For example in “Hello World”, the <code>'H'</code> character is at index <strong>0</strong>, the <code>'e'</code> is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="60%/"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Fun Fact about Unicode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Fun Fact about Unicode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters.</p>
-<p>Source: Wikiepdia</p>
-</div>
-</div>
-</div>
+<p>Numpy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called numpy arrays.</p>
+<section id="importing-numpy" class="level2">
+<h2 class="anchored" data-anchor-id="importing-numpy">Importing <code>numpy</code></h2>
+<p>Import <code>numpy</code>. You may use the alias <code>np</code></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="creating-a-string" class="level1">
-<h1>Creating a string</h1>
-<p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
-<section id="using-double-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-double-quotes">Using double quotes <code>""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Johnny"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>​ However, what if we wanted to add a double quote inside the string so that it would read <em>Hello “World”</em> ?</p>
+<section id="numpy-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="numpy-arrays">Numpy arrays</h2>
+<p>Numpy arrays are structures of data similar to lists.</p>
+<p>Operations with numpy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++.</p>
+<p>To create a <code>numpy</code> array from a Python list, simply use the following:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_array <span class="op">=</span> np.array(my_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternatively, an array can be created in one line as such:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_array <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Arrays mimic mathematical vectors and matrices</p>
+<p><strong>Example :</strong> Force vector</p>
+<p>Let two force vectors <span class="math display">\[\vec{F1}\]</span> and <span class="math display">\[\vec{F2}\]</span> represented as column vectors with their respective x and y force components (in Newtons N)</p>
+<p><span class="math display">\[
+\vec{F_1}  = \begin{bmatrix}
+           1  \\
+           3  \\
+         \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\vec{F_2}  = \begin{bmatrix}
+   2 \\
+   3 \\
+\end{bmatrix}
+\]</span></p>
+<p>The total force is:</p>
+<p><span class="math display">\[
+\vec{F_{tot}} = \vec{F_1} + \vec{F_2}
+= \begin{bmatrix}
+   1 + 2 \\
+   3 + 3 \\
+\end{bmatrix}
+= \begin{bmatrix}
+   3 \\
+   6 \\
+\end{bmatrix}
+\]</span></p>
+<p>The two forces can be represented using numpy arrays and the two arrays can be added using a <code>+</code></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>force_1 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">3</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>force_2 <span class="op">=</span> np.array([<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>force_total <span class="op">=</span> force_1 <span class="op">+</span> force_2</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(force_total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Result:</strong> [3 6]</p>
+<ul>
+<li><p>The x and y components of each force were added independently.</p></li>
+<li><p>Had we done this with a simple python lists, we would get <code>[1,3,2,3]</code></p></li>
+</ul>
+<ol start="4" type="1">
+<li>This <a href="https://www.programiz.com/python-programming/numpy/basic-array-operations">tutorial</a> shows you all the arithmetic operations that are possible with NumPy arrays.</li>
+</ol>
+</section>
+<section id="polynomial-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="polynomial-fitting"><strong>Polynomial fitting</strong></h2>
+<p>In most cases in real life, we only have access to historic data and don’t know the analytical function that describes a relationship between two variables <span class="math display">\[f(x)\]</span>.</p>
+<p>Polynomial fitting, or regression, models the relationship between an independent variable <span class="math inline">\(x\)</span> and a dependant variable <span class="math inline">\(y\)</span> based on the observed data points. It finds the coefficients of a polynomial function of a given degree (1,2 , etc.) that best fits the observed data:</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*_UaCxPswsCxkj9JzYXCiWg.png"></p>
 <blockquote class="blockquote">
-<p>​ Try this command <code>print(""Hello "World"")</code> What happens? What is the error?</p>
+<p>Source: Abhigyan. (2024, January 12). Understanding Polynomial Regression - Analytics Vidhya - Medium. <em>Medium</em>. https://medium.com/analytics-vidhya/understanding-polynomial-regression-5ac25b970e18</p>
 </blockquote>
+<section id="numpy.polyfit" class="level4">
+<h4 class="anchored" data-anchor-id="numpy.polyfit"><strong>numpy.polyfit()</strong></h4>
+<p><code>polyfit()</code> is a <code>numpy</code> function that allows programmers to fit polynomial function onto the data. In this example the data is stored in simple python lists:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x_observed <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>y_observed <span class="op">=</span> [<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">11</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="fitting" class="level4">
+<h4 class="anchored" data-anchor-id="fitting">Fitting</h4>
+<p>To fit a linear equation on observed data points <code>x</code> and <code>y_observed</code>, use:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>coefficients <span class="op">=</span> np.polyfit(x<span class="op">=</span>x_observed, y<span class="op">=</span>y_observed, deg<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="coefficients" class="level4">
+<h4 class="anchored" data-anchor-id="coefficients">Coefficients</h4>
+<p>The returned coefficients are a numpy array with [a, b] corresponding to the slope and intercept <span class="math display">\[y = ax + b \]</span></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coefficients)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Output</strong></p>
+<pre class="text"><code>array([1.74285714, 0.4])</code></pre>
+</section>
+<section id="accessing-the-coefficients" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-the-coefficients"><strong>Accessing the coefficients</strong></h4>
+<p>Similarly to Python lists, elements in a NumPy array are accessed using the index:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> coefficients[<span class="dv">0</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> coefficients[<span class="dv">1</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternatively you can unpack a, b like this:</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>a, b <span class="op">=</span> coefficients</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-the-coefficients" class="level4">
+<h4 class="anchored" data-anchor-id="using-the-coefficients">Using the coefficients</h4>
+<p>Now, to calculate the corresponding <code>y</code> values for each <code>x</code> using the fitted line, you can loop through the list of x values and compute the expected y values using the formula based on the coefficients:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>y_estimate <span class="op">=</span> []</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> x_observed:</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  y_estimate.append(a<span class="op">*</span>x <span class="op">+</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternatively, to type this faster, you can use a Python <em>list comprehension</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>y_estimate <span class="op">=</span> [a<span class="op">*</span>x <span class="op">+</span> b <span class="cf">for</span> x <span class="kw">in</span> x_observed]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>Optionally, you can use a NumPy array to be even more efficient:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>y_estimate <span class="op">=</span> b <span class="op">+</span> a<span class="op">*</span>np.array(x_observed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</blockquote>
+</section>
+<section id="predictions-for-new-values" class="level4">
+<h4 class="anchored" data-anchor-id="predictions-for-new-values">Predictions for new values</h4>
+<p>To “predict” the value of y for new values of x (for example in the future), simply apply the linear equation:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x_new <span class="op">=</span> <span class="dv">12</span> <span class="co">#A value of x we don't have in our raw data</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y_prediction <span class="op">=</span> a<span class="op">*</span>x_new <span class="op">+</span> b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="second-degree-polynomial" class="level4">
+<h4 class="anchored" data-anchor-id="second-degree-polynomial">Second degree polynomial</h4>
+<p><code>polyfit()</code> can also be used to fit a polynomial function of any degree <span class="math inline">\(n\)</span> :</p>
+<p>To fit a second degree polynomial, set the <code>deg</code> parameter to 2:</p>
+<pre><code>coefficients = np.polyfit(x=x_observed, y=observed_y, deg=2)
+a, b, c = coefficients
+
+y_prediction_2 = a*x_new**2 + b*x_new + c
+
+y_estimate2 = [a*x**2 + b*x + c for x in x_observed]</code></pre>
+</section>
+<section id="evaluating-the-performance" class="level4">
+<h4 class="anchored" data-anchor-id="evaluating-the-performance">Evaluating the performance</h4>
+<p>In the field of data science, evaluating the performance of a model can be tricky. However, in the context of this course, we will focus only on the absolute and relative errors produced by the model for any <em>new data point</em> <code>x_new</code>, where the true value <code>y_correct</code> is known. The evaluation involves comparing the predicted value <code>y_prediction</code> to the actual value <code>y_correct</code>.</p>
+<p><span class="math display">\[
+Absolute Error = | Correct - Prediction|
+\]</span></p>
+<p><span class="math display">\[
+Relative Error (\%) = 100 * \frac{|Correct - Prediction|}{Correct}
+\]</span></p>
+<p>In python this would be:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>y_prediction <span class="op">=</span> a <span class="op">*</span> x_new <span class="op">+</span> b</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>absolute_error <span class="op">=</span> <span class="bu">abs</span>(y_correct <span class="op">-</span> y_prediction)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>relative_error <span class="op">=</span> <span class="bu">abs</span>(y_correct <span class="op">-</span> y_prediction) <span class="op">/</span> y_correct</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute error: </span><span class="sc">{</span>absolute_error<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Relative error (%): </span><span class="sc">{</span>relative_error<span class="sc">:%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="correlation-factor-r" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-factor-r">Correlation Factor <code>R</code></h2>
+<p>The correlation factor or correlation coefficient is a numeric value that quantifies how much two variables vary together. We will be using Numpy’s Pearson correlation coefficient: <code>R = np.corrcoef(variable1_list, variable2_list)[0,1]</code>.</p>
+<p>An R close to 0 indicates no correlation, +1 indicates a strong positive correlation, and -1 indicates a strong negative correlation.</p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/Correl.png" height="250/"></p>
+<section id="calculating-statistical-values-using-numpy" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-statistical-values-using-numpy">Calculating statistical values using NumPy</h3>
+<p>Here are useful functions</p>
+<section id="np.meanx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.meanx_list"><code>np.mean(x_list)</code>:</h5>
 <ul>
-<li><p>There are a few workaround this issue:</p></li>
-<li><p>Use the escape character <code>\</code> in front of each double quote <code>print("Hello \"World\"")</code></p></li>
-<li><p>Use another method to create the string (see below) while keeping the inner <code>""</code></p></li>
+<li>Computes the mean value of <code>x_list</code></li>
 </ul>
 </section>
-<section id="using-single-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-single-quotes">Using single quotes <code>''</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello "World" '</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="np.medianx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.medianx_list"><code>np.median(x_list)</code>:</h5>
 <ul>
-<li>In Python you can also use the single quote<code>'</code> to define a string, this is useful when trying to include a double quote <code>"</code> within the string.</li>
-<li>Similarly to the double quote, you can use the escape character to include a single quote within the string.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I</span><span class="ch">\'</span><span class="st">m enjoying programming! Well, when there are no bugs.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="using-triple-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-triple-quotes">Using triple quotes <code>""""""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""" This is a complex string with double quotes "" and a single quote '' that splits over</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">...  another line"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
+<li>Computes the median value of <code>x_list</code></li>
 </ul>
 </section>
+<section id="np.stdx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.stdx_list"><code>np.std(x_list)</code></h5>
+<ul>
+<li>Computes the standard deviation of <code>x_list</code>. The standard deviation is a measure of how dispersed the data in relation to its the mean.</li>
+</ul>
+<p>The data is sometimes incomplete or made up of certain data points that aren’t defined (i.e.&nbsp;equal to <code>np.nan</code> - <strong>n</strong>ot <strong>a</strong> <strong>n</strong>umber):</p>
 </section>
-<section id="conversions-to-other-types" class="level1">
-<h1>Conversions to other types</h1>
-<p>Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
-<section id="convert-intfloat-to-str" class="level2">
-<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
-<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="np.nanmeanx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.nanmeanx_list"><code>np.nanmean(x_list)</code>:</h5>
+<ul>
+<li>Computes the mean value of <code>x_list</code> ignoring <code>nan</code></li>
+</ul>
 </section>
-<section id="convert-str-to-intfloat" class="level2">
-<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
-<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Converting a number from a string might crash!!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+<section id="np.nanmedianx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.nanmedianx_list"><code>np.nanmedian(x_list)</code>:</h5>
+<ul>
+<li>Computes the median value of <code>x_list</code> ignoring <code>nan</code></li>
+</ul>
+</section>
+<section id="np.nanstdx_list" class="level5">
+<h5 class="anchored" data-anchor-id="np.nanstdx_list"><code>np.nanstd(x_list)</code></h5>
+<ul>
+<li>Computes the standard deviation of <code>x_list</code> ignoring <code>nan</code></li>
+</ul>
+<blockquote class="blockquote">
+<p>Learn more about <a href="https://en.wikipedia.org/wiki/NaN">NaN</a></p>
+</blockquote>
 
 
 <script type="ojs-module-contents">
@@ -977,6 +1080,7 @@ W10=
 </script>
 </section>
 </section>
+</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
@@ -984,7 +1088,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/04_variables/05_strings";
+window._ojs.paths.runtimeToDoc = "../../topics/11_data_processing/03_numpy";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;

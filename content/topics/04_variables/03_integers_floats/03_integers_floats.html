@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Strings – 420-SN1 Notes</title>
+<title>Integers &amp; Floats – 420-SN1 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,6 +132,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -333,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -447,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Integers &amp; Floats</span></a>
   </div>
 </li>
@@ -459,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
@@ -808,18 +837,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
+  <li><a href="#integers-versus-floats" id="toc-integers-versus-floats" class="nav-link active" data-scroll-target="#integers-versus-floats">Integers versus Floats</a></li>
+  <li><a href="#thetype-function" id="toc-thetype-function" class="nav-link" data-scroll-target="#thetype-function">The<code>type()</code> function</a></li>
+  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific notation</a></li>
+  <li><a href="#underscores-between-digits" id="toc-underscores-between-digits" class="nav-link" data-scroll-target="#underscores-between-digits">Underscores between digits</a></li>
+  <li><a href="#negative-numbers" id="toc-negative-numbers" class="nav-link" data-scroll-target="#negative-numbers">Negative numbers</a></li>
+  <li><a href="#converting-from-one-type-to-another" id="toc-converting-from-one-type-to-another" class="nav-link" data-scroll-target="#converting-from-one-type-to-another">Converting from one type to another</a>
   <ul class="collapse">
-  <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
-  <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
-  <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
+  <li><a href="#int-rightarrow-float" id="toc-int-rightarrow-float" class="nav-link" data-scroll-target="#int-rightarrow-float"><code>int</code> <span class="math inline">\(\rightarrow\)</span> <code>float</code></a></li>
+  <li><a href="#float-leftarrow-int" id="toc-float-leftarrow-int" class="nav-link" data-scroll-target="#float-leftarrow-int"><code>float</code> <span class="math inline">\(\leftarrow\)</span> <code>int</code></a></li>
   </ul></li>
-  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
-  <ul class="collapse">
-  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
-  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
-  </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -827,9 +855,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html">Integers &amp; Floats</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Strings</h1>
+<h1 class="title">Integers &amp; Floats</h1>
 </div>
 
 
@@ -857,108 +885,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Recognize</strong> the string data type</li>
-<li><strong>Create</strong> a variable of type string.</li>
-<li><strong>Convert</strong> strings into numeric data types.</li>
+<li><strong>Tell</strong> the difference between an integer and a float</li>
+<li><strong>Use</strong> the <code>type()</code> function to determine the data type of a variable</li>
+<li><strong>Recognize</strong> scientific notation for large numbers</li>
+<li><strong>Recognize</strong> underscores between digits for large numbers</li>
+<li><strong>Create</strong> negative numbers</li>
+<li><strong>Perform</strong> conversions between<code>float</code> and <code>int</code> variables.</li>
 </ul>
 </div>
 </div>
-<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
-<section id="whats-a-string" class="level1">
-<h1>What’s a string?</h1>
-<p>Strings are nothing more than sequences of <a href="https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html">unicode</a> character (‘a’,‘b’,‘c’,….’%‘,’#’,….). Even space <code>" "</code> counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or <strong>index</strong>.</p>
-<p>For example in “Hello World”, the <code>'H'</code> character is at index <strong>0</strong>, the <code>'e'</code> is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="60%/"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Fun Fact about Unicode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Fun Fact about Unicode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters.</p>
-<p>Source: Wikiepdia</p>
-</div>
-</div>
-</div>
+<section id="integers-versus-floats" class="level1">
+<h1>Integers versus Floats</h1>
+<p>Integers or <code>int</code> are whole number i.e.: <strong>do not have a fractional</strong> value. On the other hand, <code>float</code> are floating-point numbers that <strong>have a fractional</strong> part. The reason why we make this distinction is because <code>int</code> and <code>float</code> are not stored in the same way within a computer’s memory.</p>
 </section>
-<section id="creating-a-string" class="level1">
-<h1>Creating a string</h1>
-<p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
-<section id="using-double-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-double-quotes">Using double quotes <code>""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Johnny"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>​ However, what if we wanted to add a double quote inside the string so that it would read <em>Hello “World”</em> ?</p>
-<blockquote class="blockquote">
-<p>​ Try this command <code>print(""Hello "World"")</code> What happens? What is the error?</p>
-</blockquote>
-<ul>
-<li><p>There are a few workaround this issue:</p></li>
-<li><p>Use the escape character <code>\</code> in front of each double quote <code>print("Hello \"World\"")</code></p></li>
-<li><p>Use another method to create the string (see below) while keeping the inner <code>""</code></p></li>
-</ul>
+<section id="thetype-function" class="level1">
+<h1>The<code>type()</code> function</h1>
+<p>To know if a value is of a specific type, you can use the <code>type()</code> function as shown below:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output: <code>int</code></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>another_num <span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(another_num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output: <code>float</code></p>
 </section>
-<section id="using-single-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-single-quotes">Using single quotes <code>''</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello "World" '</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>In Python you can also use the single quote<code>'</code> to define a string, this is useful when trying to include a double quote <code>"</code> within the string.</li>
-<li>Similarly to the double quote, you can use the escape character to include a single quote within the string.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I</span><span class="ch">\'</span><span class="st">m enjoying programming! Well, when there are no bugs.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="scientific-notation" class="level1">
+<h1>Scientific notation</h1>
+<p>Python supports scientific notation if you are dealing with large numbers:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>large_num <span class="op">=</span> <span class="fl">5e6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This value corresponds to five million (5 000 000).</p>
 </section>
-<section id="using-triple-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-triple-quotes">Using triple quotes <code>""""""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""" This is a complex string with double quotes "" and a single quote '' that splits over</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">...  another line"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
-</ul>
-</section>
-</section>
-<section id="conversions-to-other-types" class="level1">
-<h1>Conversions to other types</h1>
-<p>Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
-<section id="convert-intfloat-to-str" class="level2">
-<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
-<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="convert-str-to-intfloat" class="level2">
-<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
-<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
+<section id="underscores-between-digits" class="level1">
+<h1>Underscores between digits</h1>
+<p>The following corresponds to <em>eleven million one hundred eleven thousand one hundred eleven</em>. (11 111 111). Since we cannot separate the digits with spaces, there are two valid ways of writing this number in <code>Python</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">11111111</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span>  <span class="dv">11_111_111</span> <span class="co">#has the same value, but is clearer to read</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Python 3.6 or later">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Converting a number from a string might crash!!
+<span class="screen-reader-only">Warning</span>Python 3.6 or later
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Python 3.6 has introduced underscores in numeric literals, allowing for the placement of single underscores tween digits and after base specifiers for improved readability. This feature is not available in older versions of Python. [1]</p>
 </div>
 </div>
+</section>
+<section id="negative-numbers" class="level1">
+<h1>Negative numbers</h1>
+<p>To create a negative integer, you can simply add a minus sign:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_negatiive_num <span class="op">=</span>  <span class="op">-</span><span class="dv">14568</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="converting-from-one-type-to-another" class="level1">
+<h1>Converting from one type to another</h1>
+<section id="int-rightarrow-float" class="level2">
+<h2 class="anchored" data-anchor-id="int-rightarrow-float"><code>int</code> <span class="math inline">\(\rightarrow\)</span> <code>float</code></h2>
+<p>You can convert an integer into a float by using the function<code>float()</code></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output: 10.0</p>
+</section>
+<section id="float-leftarrow-int" class="level2">
+<h2 class="anchored" data-anchor-id="float-leftarrow-int"><code>float</code> <span class="math inline">\(\leftarrow\)</span> <code>int</code></h2>
+<p>Likewise, you can convert a <code>float</code>:</p>
+<p>`<code>python int(3.14)</code> This will truncate the decimal part of the <code>float</code> number, the resulting <code>int</code> is <code>3</code>. Therefore, you must be careful when performing those conversion because this might result in loosing precision or loosing information.</p>
+<p>This will become more relevant when performing arithmetic operations between the different types.</p>
+</section>
+</section>
+<section id="reference" class="level1">
+<h1>Reference</h1>
+<ol type="1">
+<li><em>Cisco skills for all</em>. (n.d.). https://skillsforall.com/launch?id=da0847b7-e6fc-4597-bc31-38ddd6b07a2e&amp;tab=curriculum&amp;view=7f5e478b-86ed-59e1-a590-7c95a41832d5]</li>
+</ol>
 
 
 <script type="ojs-module-contents">
@@ -976,7 +975,6 @@ eyJjb250ZW50cyI6W119
 W10=
 </script>
 </section>
-</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
@@ -984,7 +982,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/04_variables/05_strings";
+window._ojs.paths.runtimeToDoc = "../../topics/04_variables/03_integers_floats";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;

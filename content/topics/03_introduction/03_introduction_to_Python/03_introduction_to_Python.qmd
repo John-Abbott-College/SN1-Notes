@@ -77,7 +77,7 @@ print('Hello World')
 
 - You should observe that "Hello World" appears in the prompt under the line of code. This is the response of the computer.
 
-::: {.callout-note collapse="true" title="Expand to undestand"}
+::: {.callout-note collapse="true" title="Expand to understand"}
 
 `print()` is a very useful Python function which can help us output information to the user. Just like mathematical functions such as sin(), cos(), python uses functions which have names followed by round brackets. We will learn more about this in the future.
 :::

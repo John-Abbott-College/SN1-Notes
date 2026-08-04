@@ -1,20 +1,42 @@
 ---
-title: "Formatted String __f-string__"
+title: "Formatted Strings"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Construct** f-strings to combine strings and other variables.
+- **Format** numbers in f-strings to control how many decimal places are shown.
+- **Select** the appropriate f-string formatting (not memorize) to achieve the expected output.
+:::
 
 # __f-strings__
-Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string.
+Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It's following the synthax below: 
 
+:::{.callout-caution}
+# **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`
+
+- _`variable`_ is any python variable that is currently defined. It can be of any type (`int`, `float`, `bool`, `str`, _etc_)
+- You do _not_ have to convert the `variable` to a string, that is done automatically 
+- Notice that there is _no_ space between the `f` and the first quote
+:::
+
+Or,
+
+**BASIC SYNTAX**: `f" anything {`_`python code`_`} anything"`
+
+- _`python code`_ that when evaluated, returns a value.
+- Notice that there is _no_ space between the `f` and the first quote
+
+
+## Example with `f" anything {`_`variable`_`}"` 
 Consider the following message:
 _Good morning John! You're networth is $23,500$_
 
 Let's imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total. 
 
-An f-string can help us create those generic messages by inserting variables as such:
+An f-string can help us create those generic messages by inserting variables as shown below. Try changing the `first_name` or any of the accounts values. The message should change but follow the same template: 
 
-```{python}
+```{pyodide}
 first_name = "John"
 account1 = 12_000
 account2 = 11_500
@@ -24,19 +46,25 @@ greeting = f"Good morning {first_name}! You're networth is {total}"
 print(greeting)
 ```
 
-Now try changing the `fist_name` or any of the accounts value. The message template stays the same, but the final printed message changes accordingly. 
+Now notice that the account value doesn't use a comma `,` to seperate the thousands. We'll learn about formatting in the next section. 
 
 ✍️**Challenge 1**: Use f-strings to print the following message:
+
 _I am a John Abbott student in the Science program.
 I am currently in semester 1.
 I am taking 15 credits._
 
-```python
+You may use multiple `print()` statements to break it in to various lines. 
+```{pyodide}
 school = "John Abbott"
 program = "Science"
 semester = 1
 number_credits = 15
-... complete this
+
+# Complete the code here...
+
+
+
 ```
 
 :::{.callout-tip icon="false" title="Solution" collapse="true"}
@@ -53,29 +81,49 @@ print(f"I am taking {number_credits} credits")
 
 :::
 
-## Variables and Other Code 
+## Examples `f" anything {`_`python code`_`}"`
 
-> **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`
->
-> - _`variable`_ is any python variable that is currently defined. It can be of any type (`int`, `float`, `bool`, `str`, _etc_)
-> - You do _not_ have to convert the `variable` to a string, that is done automatically
-> - Notice that there is _no_ space between the `f` and the first quote
+What goes between the `{}` can also be a python expression such as an arithmetic operation or a comparison:
 
-or
-
-> **BASIC SYNTAX**: `f" anything {`_`python code`_`} anything"`
->
-> - _`python code`_ that when evaluated, returns a value.
-> - Notice that there is _no_ space between the `f` and the first quote
-
-Example
-
-```python
+```{python}
 x = 3
 z = f"the value of x is {x + 2}"   # OK!, prints 5
 z = f"Is x equal to 5? {x == 5}"	 # OK!, prints False
+
+```
+
+:::{.callout-warning title="An assignment is not going to work!"}
+
+On the other hand, assignning a variable in an f-string will cause an error. Because this isn't an expression, it's an assignment which doesn't return a value. 
+
+```python
+x = 3
 z = f"Setting x to 2 {x = 2}"      # NOT OK!, x=2 does not return a value
 ```
+:::
+
+✍️**Challenge 2**: Given the price of an item and the tax rate, use f-strings to print the price with taxes, **without** creating an additional variable:
+*Total: $22.4825*
+
+```{pyodide}
+price = 19.55
+tax_rate = 0.15
+
+# Complete this 
+
+
+
+
+```
+:::{.callout-tip icon="false" title="Solution" collapse="true"}
+```python
+price = 19.55
+tax_rate = 0.15
+
+print(f"Total: ${price*tax_rate + price}")
+```
+:::
+
 
 # Formatting Variables using _f-strings_
 
@@ -83,9 +131,9 @@ This section is about how to format numbers within an f-string.
 
 Within the `{...}` part of the _f-string_, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)
 
-> **BASIC SYNTAX**: `{`_`variable: format string`_`}`
->
-> - notice that the variable name is followed by a colon `:` and then a format string which is used to define how to format your output.
+**BASIC SYNTAX**: `{`_`variable: format string`_`}`
+
+- notice that the variable name is followed by a colon `:` and then a format string which is used to define how to format your output.
 
 ## Length:
 

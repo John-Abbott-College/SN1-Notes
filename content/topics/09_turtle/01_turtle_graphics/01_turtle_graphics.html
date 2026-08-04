@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Strings – 420-SN1 Notes</title>
+<title>Python Turtle Graphics – 420-SN1 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -333,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Turtle graphics</a></li><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Python Turtle Graphics</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -432,13 +432,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Variables &amp; Data Types</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
@@ -459,7 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
@@ -643,16 +643,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Turtle graphics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Python Turtle Graphics</span></a>
   </div>
 </li>
@@ -808,17 +808,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#first-turtle-program" id="toc-first-turtle-program" class="nav-link" data-scroll-target="#first-turtle-program">First turtle program</a></li>
+  <li><a href="#using-turtle-in-a-python-program" id="toc-using-turtle-in-a-python-program" class="nav-link" data-scroll-target="#using-turtle-in-a-python-program">Using Turtle in a Python Program</a>
   <ul class="collapse">
-  <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
-  <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
-  <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
-  </ul></li>
-  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
-  <ul class="collapse">
-  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
-  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
+  <li><a href="#import-the-turtle-module" id="toc-import-the-turtle-module" class="nav-link" data-scroll-target="#import-the-turtle-module">Import the Turtle Module</a></li>
+  <li><a href="#to-draw-or-not-to-draw" id="toc-to-draw-or-not-to-draw" class="nav-link" data-scroll-target="#to-draw-or-not-to-draw">To draw or not to draw?</a></li>
+  <li><a href="#move-the-turtle" id="toc-move-the-turtle" class="nav-link" data-scroll-target="#move-the-turtle">Move the Turtle</a></li>
+  <li><a href="#turtle-speed" id="toc-turtle-speed" class="nav-link" data-scroll-target="#turtle-speed">Turtle Speed</a></li>
+  <li><a href="#customizing-the-turtle" id="toc-customizing-the-turtle" class="nav-link" data-scroll-target="#customizing-the-turtle">Customizing the Turtle</a></li>
+  <li><a href="#colours-and-backgrounds" id="toc-colours-and-backgrounds" class="nav-link" data-scroll-target="#colours-and-backgrounds">Colours and Backgrounds</a></li>
+  <li><a href="#working-with-user-input" id="toc-working-with-user-input" class="nav-link" data-scroll-target="#working-with-user-input">Working with User Input</a></li>
+  <li><a href="#using-multiple-turtles" id="toc-using-multiple-turtles" class="nav-link" data-scroll-target="#using-multiple-turtles">Using Multiple Turtles</a></li>
+  <li><a href="#keeping-the-window-open" id="toc-keeping-the-window-open" class="nav-link" data-scroll-target="#keeping-the-window-open">Keeping the Window Open</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -827,9 +829,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Turtle graphics</a></li><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Python Turtle Graphics</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Turtle graphics</a></li><li class="breadcrumb-item"><a href="../../../topics/09_turtle/01_turtle_graphics/01_turtle_graphics.html">Python Turtle Graphics</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Strings</h1>
+<h1 class="title">Python Turtle Graphics</h1>
 </div>
 
 
@@ -846,119 +848,254 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>☆ Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>The <code>turtle</code> module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!</p>
+<p>In this tutorial, you’ll learn the basics of using <code>turtle</code> in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.</p>
+<p>See the <a href="https://docs.python.org/3/library/turtle.html">official documentation</a> for more information.</p>
+<hr>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>Imagine you have a turtle with a pen attached to its tail. This turtle is sitting on a piece of paper.</p>
+<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;"> If the pen is down, and the turtle moves, a line is drawn.</p>
+<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;"> If the pen is up, and the turtle moves, no line is drawn.</p>
 <ul>
-<li><strong>Recognize</strong> the string data type</li>
-<li><strong>Create</strong> a variable of type string.</li>
-<li><strong>Convert</strong> strings into numeric data types.</li>
+<li>You can tell the turtle to put its pen up or down</li>
+<li>You can modify the direction that the turtle is facing (turn right or left)</li>
+<li>You can tell the turtle to move forward (or backwards)</li>
+<li>You can tell the turtle to go to specific locations</li>
 </ul>
-</div>
-</div>
-<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
-<section id="whats-a-string" class="level1">
-<h1>What’s a string?</h1>
-<p>Strings are nothing more than sequences of <a href="https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html">unicode</a> character (‘a’,‘b’,‘c’,….’%‘,’#’,….). Even space <code>" "</code> counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or <strong>index</strong>.</p>
-<p>For example in “Hello World”, the <code>'H'</code> character is at index <strong>0</strong>, the <code>'e'</code> is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="60%/"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Fun Fact about Unicode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Fun Fact about Unicode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters.</p>
-<p>Source: Wikiepdia</p>
-</div>
-</div>
-</div>
+<p>With these simple commands, we can do amazing thing! However, this is not all we can do. See the <a href="https://docs.python.org/3/library/turtle.html">official documentation</a> for more information.</p>
+<hr>
 </section>
-<section id="creating-a-string" class="level1">
-<h1>Creating a string</h1>
-<p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
-<section id="using-double-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-double-quotes">Using double quotes <code>""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Johnny"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>​ However, what if we wanted to add a double quote inside the string so that it would read <em>Hello “World”</em> ?</p>
+<section id="first-turtle-program" class="level3">
+<h3 class="anchored" data-anchor-id="first-turtle-program">First turtle program</h3>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">100</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>turtle.right(<span class="dv">30</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">50</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>turtle.mainloop()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="analysis" class="level4">
+<h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
+<p><strong>Line 1</strong></p>
+<p>​ To use the turtle program, you need to import the library</p>
+<p><strong>Line 2, Line 4</strong></p>
+<p>​ Tell to the turtle to move forward, in whatever direction it is currently facing</p>
+<p><strong>Line 3</strong></p>
+<p>​ Tell the turtle to turn right by 30 degrees</p>
+<p><strong>Line 5</strong> - Important</p>
+<p>​ This just pauses the turtle program, so that you can see what the turtle has drawn. Without this, the program just closes, and you can’t see your wonderful art. Do NOT add any new drawing commands after this, because you won’t see them :(</p>
+<hr>
+</section>
+</section>
+<section id="using-turtle-in-a-python-program" class="level2">
+<h2 class="anchored" data-anchor-id="using-turtle-in-a-python-program">Using Turtle in a Python Program</h2>
+<section id="import-the-turtle-module" class="level3">
+<h3 class="anchored" data-anchor-id="import-the-turtle-module">Import the Turtle Module</h3>
+<p>First, ensure that you have Python installed. The <code>turtle</code> module comes with Python, so you don’t need to install anything extra.</p>
+<p>Start by importing the <code>turtle</code> module. This module provides all the functions you need to draw shapes on the screen.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This line imports the turtle module so you can use its functions in your code.</p>
+<hr>
+</section>
+<section id="to-draw-or-not-to-draw" class="level3">
+<h3 class="anchored" data-anchor-id="to-draw-or-not-to-draw">To draw or not to draw?</h3>
+<p>To draw, tell the turtle to put the pen down. If you want to move the turtle without drawing, tell the turtle to put its tail up.</p>
+<ul>
+<li><p><strong><code>down()</code></strong>: Pull the pen down – drawing when moving.</p></li>
+<li><p><strong><code>up()</code></strong>: Pull the pen up – no drawing when moving.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;"> Note that the “arrow” in the image is actually just the default image of the turtle.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a dashed line</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">10</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>turtle.up()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">10</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>turtle.down()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">10</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ... repeat as necessary</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>turtle.mainloop()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="move-the-turtle" class="level3">
+<h3 class="anchored" data-anchor-id="move-the-turtle">Move the Turtle</h3>
+<p>You can move the turtle forward and backward, go to a specific location, and turn it to the left or right. Here are the basic movement commands:</p>
+<p>These commands let you control how the turtle moves around the screen.</p>
+<section id="move-forward-and-backward" class="level4">
+<h4 class="anchored" data-anchor-id="move-forward-and-backward">Move Forward and Backward</h4>
+<ul>
+<li><p><strong><code>forward(distance)</code></strong>: Moves the turtle forward by the specified distance.</p></li>
+<li><p><strong><code>backward(distance)</code></strong>: Moves the turtle backward by the specified distance.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">100</span>)  <span class="co"># Moves turtle forward by 100 units</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>turtle.backward(<span class="dv">50</span>)  <span class="co"># Moves turtle backward by 50 units</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="turn-the-turtle" class="level4">
+<h4 class="anchored" data-anchor-id="turn-the-turtle">Turn the Turtle</h4>
+<p>You can turn the turtle, relative to the direction it is currently facing, using:</p>
+<ul>
+<li><strong><code>right(angle)</code></strong>: Turns the turtle clockwise by the specified angle (in degrees!).</li>
+<li><strong><code>left(angle)</code></strong>: Turns the turtle counterclockwise by the specified angle (in degrees!).</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>turtle.right(<span class="dv">90</span>)  <span class="co"># Turns the turtle 90 degrees to the right</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>turtle.left(<span class="dv">45</span>)   <span class="co"># Turns the turtle 45 degrees to the left</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can also turn the turtle without regarding the direction it is currently facing, using:</p>
+<ul>
+<li><strong><code>setheading(angle)</code></strong>: Turn the turtle to a specific direction (in degrees!)</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>turtle.setheading(<span class="dv">0</span>)  <span class="co"># Turns the turtle to face east</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>turtle.setheading(<span class="dv">90</span>)  <span class="co"># Turns the turtle to face north</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>turtle.setheading(<span class="dv">180</span>)  <span class="co"># Turns the turtle to face west</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>turtle.setheading(<span class="dv">270</span>)  <span class="co"># Turns the turtle to face south</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="go-to-a-specific-xy-coordinate" class="level4">
+<h4 class="anchored" data-anchor-id="go-to-a-specific-xy-coordinate">Go to a specific x,y coordinate</h4>
+<ul>
+<li><strong><code>goto(x,y)</code></strong>: Go to the specific location on the screen.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;"></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>turtle.up()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>turtle.goto(<span class="op">-</span><span class="dv">50</span>,<span class="dv">50</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>turtle.down()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>turtle.goto(<span class="dv">50</span>,<span class="op">-</span><span class="dv">50</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>turtle.up()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>turtle.goto(<span class="dv">50</span>,<span class="dv">50</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>turtle.down()</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>turtle.goto(<span class="op">-</span><span class="dv">50</span>,<span class="op">-</span><span class="dv">50</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>turtle.mainloop()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong><code>teleport(x,y)</code></strong>: Go quickly to the specific location on the screen, <em>without drawing</em>.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>turtle.teleport(x,y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="turtle-speed" class="level3">
+<h3 class="anchored" data-anchor-id="turtle-speed">Turtle Speed</h3>
+<p>You can control how fast the turtle moves using the <code>speed()</code> function. This step is optional, but it helps you see how the turtle is drawing.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>turtle.speed(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>“fastest”: 0</li>
+<li>“fast”: 10</li>
+<li>“normal”: 6</li>
+<li>“slow”: 3</li>
+<li>“slowest”: 1</li>
+</ul>
+<hr>
+</section>
+<section id="customizing-the-turtle" class="level3">
+<h3 class="anchored" data-anchor-id="customizing-the-turtle">Customizing the Turtle</h3>
+<p>You can make your turtle more fun by changing its shape and color.</p>
+<section id="change-turtle-shape" class="level4">
+<h4 class="anchored" data-anchor-id="change-turtle-shape">Change Turtle Shape</h4>
+<p>The turtle’s appearance can be changed using the <code>shape()</code> function. Available shapes include <code>"turtle"</code>, <code>"arrow"</code>, <code>"circle"</code>, and more.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>turtle.shape(<span class="st">"turtle"</span>)  <span class="co"># Sets the turtle to look like a turtle</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="adding-new-turtle-shapes" class="level4">
+<h4 class="anchored" data-anchor-id="adding-new-turtle-shapes">Adding new turtle shapes</h4>
+<p>You can use a custom image for the turtle, instead of the available shapes.</p>
+<p>You can do this using the <code>screen.addshape()</code> function. For example, if <code>treasure.gif</code> is an image located in the same directory as your python file, then:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>screen <span class="op">=</span> turtle.Screen() <span class="co"># You only need to create the screen once</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>screen.addshape(<span class="st">"treasure.gif"</span>)  <span class="co"># adds treasure.gif to the available shapes</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>turtle.shape(<span class="st">"treasure.gif"</span>) <span class="co"># sets the turtle to look like the image stored in treasure.gif</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>​ Try this command <code>print(""Hello "World"")</code> What happens? What is the error?</p>
+<p>Note: the size of the <code>.gif</code> matters, it cannot be resized in python. Recommended: less than <code>64x64</code> pixels.</p>
 </blockquote>
-<ul>
-<li><p>There are a few workaround this issue:</p></li>
-<li><p>Use the escape character <code>\</code> in front of each double quote <code>print("Hello \"World\"")</code></p></li>
-<li><p>Use another method to create the string (see below) while keeping the inner <code>""</code></p></li>
-</ul>
 </section>
-<section id="using-single-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-single-quotes">Using single quotes <code>''</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello "World" '</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>In Python you can also use the single quote<code>'</code> to define a string, this is useful when trying to include a double quote <code>"</code> within the string.</li>
-<li>Similarly to the double quote, you can use the escape character to include a single quote within the string.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I</span><span class="ch">\'</span><span class="st">m enjoying programming! Well, when there are no bugs.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="change-turtle-color" class="level4">
+<h4 class="anchored" data-anchor-id="change-turtle-color">Change Turtle Color</h4>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>turtle.color(<span class="st">"orange"</span>, <span class="st">"green"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="using-triple-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-triple-quotes">Using triple quotes <code>""""""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""" This is a complex string with double quotes "" and a single quote '' that splits over</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">...  another line"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
-</ul>
+<section id="change-turtle-size" class="level4">
+<h4 class="anchored" data-anchor-id="change-turtle-size">Change Turtle Size</h4>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>turtle.resizemode(<span class="st">'user'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>turtle.shapesize(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="conversions-to-other-types" class="level1">
-<h1>Conversions to other types</h1>
-<p>Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
-<section id="convert-intfloat-to-str" class="level2">
-<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
-<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="colours-and-backgrounds" class="level3">
+<h3 class="anchored" data-anchor-id="colours-and-backgrounds">Colours and Backgrounds</h3>
+<section id="change-pen-color-and-width" class="level4">
+<h4 class="anchored" data-anchor-id="change-pen-color-and-width">Change Pen Color and Width</h4>
+<p>The turtle draws lines as it moves, and you can customize the line’s color and thickness.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>turtle.pencolor(<span class="st">"red"</span>)    <span class="co"># Sets the pen color to red</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>turtle.pensize(<span class="dv">3</span>)         <span class="co"># Sets the pen width to 3 pixels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="convert-str-to-intfloat" class="level2">
-<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
-<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Converting a number from a string might crash!!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+<section id="fill-shapes-with-color" class="level4">
+<h4 class="anchored" data-anchor-id="fill-shapes-with-color">Fill Shapes with Color</h4>
+<p>To fill a shape with color, use <code>begin_fill()</code> before drawing the shape and <code>end_fill()</code> after.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>turtle.fillcolor(<span class="st">"yellow"</span>)  <span class="co"># Sets the fill color to yellow</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>turtle.begin_fill()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    turtle.forward(<span class="dv">100</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    turtle.right(<span class="dv">90</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>turtle.end_fill()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This draws a yellow-filled square.</p>
+</section>
+<section id="screen-colours" class="level4">
+<h4 class="anchored" data-anchor-id="screen-colours">Screen colours</h4>
+<p>Turtle graphics are drawn on a screen (or window), which is set up using the <code>Screen()</code> function:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>screen <span class="op">=</span> turtle.Screen()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command creates the canvas where your turtle will draw. You can customize the background color of the screen with:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>screen.bgcolor(<span class="st">"lightblue"</span>)  <span class="co"># Sets background color to light blue</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>screen.bgpic(<span class="st">"some-image.png"</span>) <span class="co"># Sets the background to be an image</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>NOTE: any images you use in <code>screen.bgpic()</code> MUST be stored in the same directory as the python code you are running.</p>
+</blockquote>
+<hr>
+<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_star_with_colour.png" style="zoom:25%;"></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>turtle.fillcolor(<span class="st">"blue"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>turtle.begin_fill()</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">50</span>):</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    turtle.forward(radius)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    turtle.right(<span class="dv">170</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    radius <span class="op">=</span> radius <span class="op">+</span> <span class="dv">10</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>turtle.end_fill()</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>turtle.mainloop()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="working-with-user-input" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-user-input">Working with User Input</h3>
+<p>To get information from the user:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>number_input <span class="op">=</span> turtle.numinput(<span class="st">"Title"</span>, <span class="st">"Prompt"</span>) <span class="co"># Forces the input to be a number</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>text_input <span class="op">=</span> turtle.text_input(<span class="st">"Title"</span>, <span class="st">"Prompt"</span>) <span class="co"># Will accept any characters</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note that the <code>turtle.numinput()</code> and <code>turtle.textinput()</code> functions are similar to the Python <code>input()</code> function, in that they both return a <code>str</code> value . See the course notes on <a href="https://john-abbott-college.github.io/SN1-Notes/#/Notes/18_functions_print_input?id=input-with-input">input with <code>input()</code></a> for more information.</p>
+<p>To print output onto the turtle window:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>font <span class="op">=</span> (<span class="st">'Arial'</span>, <span class="dv">20</span>, <span class="st">'bold'</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>text_turtle.write(<span class="st">"Message"</span>, font<span class="op">=</span>font)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-multiple-turtles" class="level3">
+<h3 class="anchored" data-anchor-id="using-multiple-turtles">Using Multiple Turtles</h3>
+<p>By default, there is a single turtle we can use to draw shapes, write text, etc.</p>
+<p>This is troublesome if we want to write messages and draw shapes in different spots without making the same turtle repeat steps.</p>
+<p>We can create multiple turtles by using variables, and the <code>turtle.Turtle()</code> function:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>text_turtle <span class="op">=</span> turtle.Turtle()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>drawings_turtle <span class="op">=</span> turtle.Turtle()</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>text_turtle.teleport(<span class="dv">100</span>, <span class="dv">100</span>) <span class="co"># this motion does not affect drawings_turtle</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>drawings_turtle.teleport(<span class="op">-</span><span class="dv">100</span>, <span class="op">-</span><span class="dv">100</span>) <span class="co"># this motion does not affect text_turtle</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Using <code>turtle.Turtle()</code> creates new turtles that are copies of the default <code>turtle</code>, i.e.&nbsp;in the default location <code>(0, 0)</code> and with all the default settings for pensize, color, shape, etc.</p>
+<section id="cloning-existing-turtles" class="level4">
+<h4 class="anchored" data-anchor-id="cloning-existing-turtles">Cloning existing turtles</h4>
+<p>Another way to create new turtles is to <code>clone</code> an existing turtle – this makes a new turtle that has the same position and properties as an existing turtle. For example:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>some_turtle.teleport(<span class="dv">100</span>, <span class="dv">100</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>cloned_turtle <span class="op">=</span> new_turtle.clone()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>cloned_turtle.pos() <span class="co"># returns (100, 100)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="keeping-the-window-open" class="level3">
+<h3 class="anchored" data-anchor-id="keeping-the-window-open">Keeping the Window Open</h3>
+<p>By default, a turtle session will end without keeping the window open, which makes appreciating your beautiful Turtle drawings difficult.</p>
+<p>To pause the turtle session at the end of the turtle program, use <strong>one</strong> of the following three commands:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>turtle.mainloop() <span class="co"># Last statement in Turtle program, keeps the window open until closed by user.</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>turtle.done() <span class="co"># exact same behavior as turtle.mainloop()</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>turtle.exitonclick() <span class="co"># exact same behavior as above, except lets you exit by clicking on the screen directly.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After any of these three commands is run, the turtle program pauses with the window open. <strong>NOTE:</strong> no code after these lines will run, make sure they are the last line in your turtle program.</p>
 
 
 <script type="ojs-module-contents">
@@ -984,7 +1121,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/04_variables/05_strings";
+window._ojs.paths.runtimeToDoc = "../../topics/09_turtle/01_turtle_graphics";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;

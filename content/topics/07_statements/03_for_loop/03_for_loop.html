@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Strings – 420-SN1 Notes</title>
+<title>For loop – 420-SN1 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,6 +132,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -333,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/07_statements/01_if_statements/01_if_statements.html">Statements</a></li><li class="breadcrumb-item"><a href="../../../topics/07_statements/03_for_loop/03_for_loop.html">For loop</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -432,13 +461,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Variables &amp; Data Types</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
@@ -459,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
@@ -543,13 +572,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Statements</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/07_statements/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
@@ -564,7 +593,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_statements/03_for_loop/03_for_loop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/07_statements/03_for_loop/03_for_loop.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">For loop</span></a>
   </div>
 </li>
@@ -808,18 +837,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-string" id="toc-whats-a-string" class="nav-link active" data-scroll-target="#whats-a-string">What’s a string?</a></li>
-  <li><a href="#creating-a-string" id="toc-creating-a-string" class="nav-link" data-scroll-target="#creating-a-string">Creating a string</a>
+  <li><a href="#generic-for-loop" id="toc-generic-for-loop" class="nav-link active" data-scroll-target="#generic-for-loop">Generic <code>for</code> loop</a>
   <ul class="collapse">
-  <li><a href="#using-double-quotes" id="toc-using-double-quotes" class="nav-link" data-scroll-target="#using-double-quotes">Using double quotes <code>""</code></a></li>
-  <li><a href="#using-single-quotes" id="toc-using-single-quotes" class="nav-link" data-scroll-target="#using-single-quotes">Using single quotes <code>''</code></a></li>
-  <li><a href="#using-triple-quotes" id="toc-using-triple-quotes" class="nav-link" data-scroll-target="#using-triple-quotes">Using triple quotes <code>""""""</code></a></li>
+  <li><a href="#examples-of-sequence" id="toc-examples-of-sequence" class="nav-link" data-scroll-target="#examples-of-sequence">Examples of <code>sequence</code></a></li>
   </ul></li>
-  <li><a href="#conversions-to-other-types" id="toc-conversions-to-other-types" class="nav-link" data-scroll-target="#conversions-to-other-types">Conversions to other types</a>
+  <li><a href="#how-does-a-for-loop-work" id="toc-how-does-a-for-loop-work" class="nav-link" data-scroll-target="#how-does-a-for-loop-work">How does a for-loop work?</a></li>
+  <li><a href="#the-range-function" id="toc-the-range-function" class="nav-link" data-scroll-target="#the-range-function">The range() function</a>
   <ul class="collapse">
-  <li><a href="#convert-intfloat-to-str" id="toc-convert-intfloat-to-str" class="nav-link" data-scroll-target="#convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></a></li>
-  <li><a href="#convert-str-to-intfloat" id="toc-convert-str-to-intfloat" class="nav-link" data-scroll-target="#convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></a></li>
+  <li><a href="#two-arguments-range-function" id="toc-two-arguments-range-function" class="nav-link" data-scroll-target="#two-arguments-range-function">Two arguments range() function</a></li>
+  <li><a href="#three-arguments-range-function" id="toc-three-arguments-range-function" class="nav-link" data-scroll-target="#three-arguments-range-function">Three arguments range() function</a></li>
   </ul></li>
+  <li><a href="#examples-of-loops-inside-functions" id="toc-examples-of-loops-inside-functions" class="nav-link" data-scroll-target="#examples-of-loops-inside-functions"><strong>Examples of Loops Inside Functions</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -827,9 +855,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/04_variables/02_variables/02_variables.html">Variables &amp; Data Types</a></li><li class="breadcrumb-item"><a href="../../../topics/04_variables/05_strings/05_strings.html">Strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/07_statements/01_if_statements/01_if_statements.html">Statements</a></li><li class="breadcrumb-item"><a href="../../../topics/07_statements/03_for_loop/03_for_loop.html">For loop</a></li></ol></nav><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/07_statements/01_if_statements/01_if_statements.html">Statements</a></li><li class="breadcrumb-item"><a href="../../../topics/07_statements/03_for_loop/03_for_loop.html">For loop</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Strings</h1>
+<h1 class="title">For loop</h1>
 </div>
 
 
@@ -846,119 +874,431 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>☆ Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>A <code>for-loop</code> allows you to repeat lines of code <code>n</code> amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A <code>for</code> loop repeats the statement whiling <strong>counting the “turns”</strong> .</p>
+<p>The <em>for</em> loop is actually capable of handling more complex tasks, such as <strong>iterating through large collections of data, item by item</strong>. We’ll explore that in more detail soon, but for now, we’ll focus on a simpler use of the <em>for</em> loop.</p>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> sequence:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do_something()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here are some key elements to understand:</p>
 <ul>
-<li><strong>Recognize</strong> the string data type</li>
-<li><strong>Create</strong> a variable of type string.</li>
-<li><strong>Convert</strong> strings into numeric data types.</li>
+<li>The <em>for</em> keyword starts the loop, and no condition is needed as the loop manages this internally.</li>
+<li>The variable following the <em>for</em> keyword, known as the <strong>control variable</strong>, automatically tracks the loop’s iterations.</li>
+<li>The <em>in</em> keyword defines the sequence of values the control variable will iterate over.</li>
+<li>The loop body can contain instructions like <em>do_something()</em>, but if no action is needed, you can use the <em>pass</em> keyword as a placeholder.</li>
+<li>In the example <code>for item in sequence:</code>, the loop will go through each item in the sequence and perform the specified action.</li>
 </ul>
-</div>
-</div>
-<p>When programming, textual data is represented by <em>strings</em>. Textual data can be words such as <em>Apple</em>, a short message such as <em>Hello World</em>, or longer sentences such as <em>In high school, Jimmy learned some programming. That’s why cegep feels easy for him</em>. They are made up of a sequence of alphanumeric characters:</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/String_example.svg" class="img-fluid" style="width:80.0%"></p>
-<section id="whats-a-string" class="level1">
-<h1>What’s a string?</h1>
-<p>Strings are nothing more than sequences of <a href="https://blog.unicode.org/2014/06/announcing-unicode-standard-version-70.html">unicode</a> character (‘a’,‘b’,‘c’,….’%‘,’#’,….). Even space <code>" "</code> counts as a character. This includes emojis 😀! Each character in a string occupies a specific position or <strong>index</strong>.</p>
-<p>For example in “Hello World”, the <code>'H'</code> character is at index <strong>0</strong>, the <code>'e'</code> is at index 1, the ‘l’ is at index 2, etc.</p>
-<p><img src="assets/strings_index.png" width="60%/"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Fun Fact about Unicode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Fun Fact about Unicode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are over 230,000 unicode characters covering over 170 scripts as well as multiple symbols. Traditionally, computers used the ASCII code which had 256 characters including only 95 english focussed printable characters.</p>
-<p>Source: Wikiepdia</p>
-</div>
-</div>
-</div>
-</section>
-<section id="creating-a-string" class="level1">
-<h1>Creating a string</h1>
-<p>Strings can be created in different ways, by using <code>""</code>, <code>''</code> or <code>""" """</code>. Let’s explore the various ways of creating strings.</p>
-<section id="using-double-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-double-quotes">Using double quotes <code>""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"Johnny"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_string)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>​ However, what if we wanted to add a double quote inside the string so that it would read <em>Hello “World”</em> ?</p>
+<section id="generic-for-loop" class="level2">
+<h2 class="anchored" data-anchor-id="generic-for-loop">Generic <code>for</code> loop</h2>
+<p>A <code>for</code> loop can be generalized to something that looks like:</p>
 <blockquote class="blockquote">
-<p>​ Try this command <code>print(""Hello "World"")</code> What happens? What is the error?</p>
+<p>Note: Using <code>sequence</code> in the following instructions is not exactly correct, but it is reasonable to think of sequences for now.</p>
 </blockquote>
+<p><code>for</code><em><code>variable</code></em><code>in</code><em><code>sequence</code></em></p>
+<p>Where</p>
 <ul>
-<li><p>There are a few workaround this issue:</p></li>
-<li><p>Use the escape character <code>\</code> in front of each double quote <code>print("Hello \"World\"")</code></p></li>
-<li><p>Use another method to create the string (see below) while keeping the inner <code>""</code></p></li>
+<li><p><code>variable</code> is just the name of a variable. It can be any valid variable name</p></li>
+<li><p><code>sequence</code> is something that can be looped over</p>
+<p><em>Sounds like a circular argument, I know, but its the best we can do at this level.</em></p></li>
+</ul>
+<section id="examples-of-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="examples-of-sequence">Examples of <code>sequence</code></h3>
+<p>Think of sequences a a list of things to be processed. Like a stack of papers to grade, or a to-do list, or a series of numbers to process.</p>
+<section id="range" class="level4">
+<h4 class="anchored" data-anchor-id="range"><code>range()</code>:</h4>
+<p>When within a <code>for</code> loop,</p>
+<ul>
+<li><p><code>range(n)</code> will provide the sequence of numbers</p>
+<p><span class="math display">\[0, 1, 2 ,... n-1\]</span></p></li>
+<li><p><code>range(start, end)</code> will provide the sequence of numbers</p>
+<p><span class="math display">\[\text{start}, \text{start}+1, \text{start} + 2 ,... \text{end}-1\]</span></p></li>
+<li><p><code>range(start, end, step)</code> will provide the sequence of numbers</p>
+<p><span class="math display">\[\text{start}, \text{start}+\text{step}, \text{start} + 2*\text{step} ,... \text{end}-1\]</span></p></li>
 </ul>
 </section>
-<section id="using-single-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-single-quotes">Using single quotes <code>''</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello "World" '</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="list" class="level4">
+<h4 class="anchored" data-anchor-id="list"><code>list</code></h4>
+<p>When within a <code>for</code> loop,</p>
 <ul>
-<li>In Python you can also use the single quote<code>'</code> to define a string, this is useful when trying to include a double quote <code>"</code> within the string.</li>
-<li>Similarly to the double quote, you can use the escape character to include a single quote within the string.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I</span><span class="ch">\'</span><span class="st">m enjoying programming! Well, when there are no bugs.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="using-triple-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="using-triple-quotes">Using triple quotes <code>""""""</code></h2>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""" This is a complex string with double quotes "" and a single quote '' that splits over</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">...  another line"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This method of creating strings is called multistring as you can type many lines as well as double quotes and single quotes. It’s ideal for long paragraphs.</li>
+<li><code>list_variable</code> will provide the contents of the list, one element at a time</li>
 </ul>
 </section>
+<section id="file" class="level4">
+<h4 class="anchored" data-anchor-id="file"><code>file</code></h4>
+<p>When within a <code>for</code> loop,</p>
+<ul>
+<li><code>file</code> will provide the contents of the file, one line at a time</li>
+</ul>
 </section>
-<section id="conversions-to-other-types" class="level1">
-<h1>Conversions to other types</h1>
-<p>Because strings store text, computers treat them as plain text rather than numbers. This means they can’t be used directly in mathematical calculations. Learning how to convert strings to other data types is essential whenever you need to work with numeric data.</p>
-<section id="convert-intfloat-to-str" class="level2">
-<h2 class="anchored" data-anchor-id="convert-intfloat-to-str">Convert <code>int</code>/<code>float</code> to <code>str</code></h2>
-<p>To convert a numeric variable to a string, you can use the <code>str()</code> function which wraps the number in <code>""</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="fl">23.5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>value_str <span class="op">=</span> <span class="bu">str</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="string" class="level4">
+<h4 class="anchored" data-anchor-id="string"><code>string</code></h4>
+<p>When within a <code>for</code> loop,</p>
+<ul>
+<li><code>string_variable</code> will provide the individual characters of the string, one character at a time</li>
+</ul>
 </section>
-<section id="convert-str-to-intfloat" class="level2">
-<h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
-<p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Converting a number from a string might crash!!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:</p>
-<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_fr <span class="op">=</span> <span class="st">"23,5"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_fr) <span class="co">#&lt;--Error ❌</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+</section>
+</section>
+<section id="how-does-a-for-loop-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-a-for-loop-work">How does a for-loop work?</h2>
+<p>Given the following code</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable <span class="kw">in</span> sequence:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(variable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>As the code starts, the variable will be set to the very 1st <em>thing</em> in the sequence (whatever that thing is)</p>
+<p>When the code has finished executing everything in the code block (indicated by indentations), then</p>
+<ul>
+<li>the code goes back to the beginning of the for loop, and</li>
+<li><em>variable</em> will be set the the <em>next</em> thing in the sequence</li>
+</ul>
+<p>This will continue until there are no <em>things</em> left in the sequence.</p>
+<p><strong>Example: for-loop over a number range</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"I am at index "</span>, i)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Code trace:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 2%">
+<col style="width: 19%">
+<col style="width: 69%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>code line #</th>
+<th>i</th>
+<th>output printed to console</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td></td>
+<td><code>i</code> is set to 1st number in the range sequence (<strong>0</strong>, 1, 2)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>I am at index 0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+<td><code>i</code> is set to 2nd number in the range sequence (<font color="#939393">0,</font> <strong>1</strong>, 2)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>I am at index 1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>2</td>
+<td></td>
+<td><code>i</code> is set to 3rd number in the range sequence (<font color="#939393">0, 1,</font> <strong>2</strong>)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>I am at index 2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td></td>
+<td></td>
+<td>There are no numbers in the range sequence, so for loop quits</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>all done</td>
+<td>No longer in the for loop</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: for-loop over a list</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fib_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span> ]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> fib_list:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"The next fibanocci number is "</span>, i)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Code trace:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 20%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>code line #</th>
+<th>number</th>
+<th>output printed to console</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+<td><code>number</code> is set to 1st number in the fib_list [<strong>1</strong>, 1, 2, 3, 5 ]</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>The next fibanocci number is 1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+<td><code>number</code> is set to 2nd number in the fib_list [<font color="#939393">1</font>, <strong>1</strong>, 2, 3, 5 ]</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>The next fibanocci number is 1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>2</td>
+<td></td>
+<td><code>number</code> is set to 3rd number in the fib_list [<font color="#939393">1, 1,</font> <strong>2</strong>, 3, 5 ]</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>The next fibanocci number is 2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3</td>
+<td></td>
+<td><code>number</code> is set to 4th number in the fib_list. [<font color="#939393">1, 1, 2,</font> <strong>3</strong>, 5 ]</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>The next fibanocci number is 3</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>5</td>
+<td></td>
+<td><code>number</code> is set to 5th number in the fib_list. [<font color="#939393">1, 1, 2, 3,</font> <strong>5</strong> ]</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>The next fibanocci number is 5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td></td>
+<td></td>
+<td>There are no numbers left in the fib_list, so quit for-loop</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>all done</td>
+<td>No longer in the for loop</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: for-loop over a string</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"sandy"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> character <span class="kw">in</span> name:</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Character:"</span>,)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Code trace:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 19%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>code line #</th>
+<th>Character</th>
+<th>output printed to console</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>s</td>
+<td></td>
+<td><code>character</code> is set to 1st character in name “<strong>s</strong>andy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>a</td>
+<td></td>
+<td><code>character</code> is set to 2nd character in name “<font color="#939393">s</font><strong>a</strong>ndy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>n</td>
+<td></td>
+<td><code>character</code> is set to 3rd character in name <font color="#939393">sa</font><strong>n</strong>dy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>d</td>
+<td></td>
+<td><code>character</code> is set to 4th character in name <font color="#939393">san</font><strong>d</strong>y”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>y</td>
+<td></td>
+<td><code>character</code> is set to 5th character in name <font color="#939393">sand</font><strong>y</strong>”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td></td>
+<td></td>
+<td>There are no more characters in name, so quit for-loop</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>all done</td>
+<td>No longer in the for loop</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-range-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-range-function">The range() function</h2>
+<p>In Python, the <code>range()</code>function returns a sequence of numbers.</p>
+<p><strong>Example:</strong></p>
+<pre><code>values = range(4)</code></pre>
+<p>Here, <code>range(4)</code> returns a sequence of <strong>0</strong>, <strong>1</strong>, <strong>2</strong> ,and <strong>3</strong>.</p>
+<p>Since the <code>range()</code> function returns a sequence of numbers, we can iterate over it using a <code>for</code> loop.</p>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate from i = 0 to i = 4</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">0</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">1</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The loop has been executed 5 times (it’s the range() function’s argument), the last control variable’s value is 4 (not 5, as <strong>it starts from 0</strong>, not from 1)</p>
+<section id="two-arguments-range-function" class="level3">
+<h3 class="anchored" data-anchor-id="two-arguments-range-function">Two arguments range() function</h3>
+<p>The range() function invocation may be equipped with two arguments, not just one:</p>
+<p>⚠️ <strong>Note:</strong> the range() function <strong>accepts only integers as its arguments</strong>, and generates sequences of integers.</p>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">8</span>):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.</p>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">6</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">7</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first value shown is 2 (taken from the range()’s first argument.), and the last is 7 (although the range()’s second argument is 8).</p>
+</section>
+<section id="three-arguments-range-function" class="level3">
+<h3 class="anchored" data-anchor-id="three-arguments-range-function">Three arguments range() function</h3>
+<p>The range() function may also accept <strong>three arguments</strong></p>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">3</span>):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The third argument is an <strong>increment</strong> – it’s a value added to control the variable at every loop turn (as you may suspect, the <strong>default value of the increment is 1</strong>).</p>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="examples-of-loops-inside-functions" class="level2">
+<h2 class="anchored" data-anchor-id="examples-of-loops-inside-functions"><strong>Examples of Loops Inside Functions</strong></h2>
+<p>A <code>for</code> loop is often used inside functions to automate repetitive tasks. Here’s a breakdown of how loops work with functions in Python.</p>
+<section id="example-1-simple-function-with-a-for-loop" class="level4">
+<h4 class="anchored" data-anchor-id="example-1-simple-function-with-a-for-loop"><strong>Example 1: Simple Function with a For Loop</strong></h4>
+<p>This function prints the numbers from 1 to 5 using a <code>for</code> loop:</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_numbers():</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>print_numbers()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explanation</strong>: The <code>for i in range(1, 6)</code> loop iterates over the numbers from 1 to 5, printing each value.</p>
+</section>
+<section id="example-2-sum-of-all-integers-from-1-to-n" class="level4">
+<h4 class="anchored" data-anchor-id="example-2-sum-of-all-integers-from-1-to-n"><strong>Example 2: Sum of All Integers from 1 to <code>n</code></strong></h4>
+<p>This function calculates the sum of all integers from 1 to a given number <code>n</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_numbers(n):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> i</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage:</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_numbers(<span class="dv">5</span>))  <span class="co"># Output: 15 (1+2+3+4+5)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explanation</strong>: The function uses a loop to sum up all the integers from 1 to <code>n</code>. When called with <code>n = 5</code>, it returns 15.</p>
+</section>
+<section id="example-3-sum-of-squares" class="level4">
+<h4 class="anchored" data-anchor-id="example-3-sum-of-squares">Example 3: Sum of Squares</h4>
+<div class="code-copy-outer-scaffold"><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_of_squares(n):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> i <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test the function</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_of_squares(<span class="dv">4</span>))  <span class="co"># Output: 30 (1^2 + 2^2 + 3^2 + 4^2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explanation</strong>: The function loops through numbers from 1 to <code>n</code> and adds the square of each number to the total. For <code>n = 4</code>, the result is 30.</p>
 
 
 <script type="ojs-module-contents">
@@ -984,7 +1324,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/04_variables/05_strings";
+window._ojs.paths.runtimeToDoc = "../../topics/07_statements/03_for_loop";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;

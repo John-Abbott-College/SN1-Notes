@@ -18,3 +18,37 @@ This website provides you with additional notes and practice exercises that can 
 You can download a copy of the course outline from Léa.
 
 # Tools & Materials
+
+# Website conventions
+
+## Callout blocks
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+These are the core objecives to be covered in the course and could be part of the final evaluation. 
+:::
+
+::: {.callout-warning .objectives icon="false" title="☆ Optional Objectives "}
+These are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher.
+:::
+
+::: {.callout-note title="Hightlighted content"}
+This is part of the core content and should be studied. 
+:::
+
+::: {.callout-important title="Common mistakes/ code crashes"}
+This is a warning often related to code that might lead to errors or crash in your program. They are meant to teach you about common mistakes. 
+:::
+
+::: {.callout-warning title="Warning related to a Python configuration"}
+This is warning related to a required installation or configuration. Altough it doesn't affect your understanding of the concepts it might hinder you while coding.
+:::
+
+::: {.callout-note title="Expand to understand" collapse="true"}
+Additional information that is not part of the core content. It's collapsed for you to optionally look at. 
+:::
+
+
+:::{.callout-tip title="Solution for an exercise" collapse="true"}
+This is a solution for an exercise and is collapsed for you to optionally look at.
+:::
+
+

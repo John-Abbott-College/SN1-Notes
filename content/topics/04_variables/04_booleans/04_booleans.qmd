@@ -70,10 +70,12 @@ This expression is evaluated from right to left in the following order:
 
 Booleans can be converted into numeric types altough this isn't common use in this course. `True` is equivalent to 1 and `False` is equivalent to 0.
 
-- To convert a `bool` into an integer or a float, you can also use the `int(True)` or `float(True)` constructors.
+- To convert a `bool` into an integer or a float, you can also use the `int(True)` or `float(True)` functions.
 - To convert any other type into a `bool`, you can use the `bool()` function, e.g. `bool(0)` is `False` and `bool(1)` is `True`
 
 - Note: That converting any number other than zero will be `True`, e.g. `bool(1234)` is `True`
+
+# Boolean Logic 
 
 We will learn more about booleans in conditional statements (i.e. `if/else` statements)
 

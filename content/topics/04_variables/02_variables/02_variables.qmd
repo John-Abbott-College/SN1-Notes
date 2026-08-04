@@ -23,13 +23,16 @@ The value inside a variable can be of different types, for example:
 
 - many other things that we'll visit later...
 
-Variables are composed of a **name** and a **value**.
+## Defining Variables
 
-```python
-variable_name = value
-```
+:::{.callout-note icon="false"}
+# **BASIC SYNTHAX**: `variable_name = value`
 
-To create a variable in Python, simply write the name you wish to use and use the assignment `=` operator to assign it a value:
+- Variables are composed of a **name** and a **value**.
+- To which you can directly assign a **value**
+:::
+
+Here are a few examples:
 
 ```python
 hourlyPay = 21
@@ -39,8 +42,16 @@ userName = "Bob"
 greeting = "Hello there!"
 ```
 
+Alternatively, you may also store the result of a Python expression: 
 
-You may also store the result of an operation. For instance, the following line will create a variable named _my_sum_ and store the result `335` in memory:
+:::{.callout-note icon="false"}
+# **BASIC SYNTHAX**: `variable_name = python_expression`
+
+- The expression is **always** to the right hand side of the `=`
+- The expression can be using other variables **defined before**.
+:::
+
+For instance, the following line will create a variable named _my_sum_ and store the result `335` in memory:
 
 ```python
 my_sum = 21 + 314       # operation
@@ -94,7 +105,157 @@ x = x + 1  # This is valid in programming
 
 The value of x is increased by 1.
 
-## Variable naming strict rules
+
+## Modifying a variable
+
+Variables are **mutable**. This means their values can be **changed** or **updated** over time.
+
+For example, the following lines create a variable called `temperature`, initially setting its value to `23.0`. The second line, is updating its value to `26.0`. Thus erasing the previous value:
+
+```python
+temperature = 23.0
+temperature = 26.0 #the value has changed
+```
+:::{.callout-note collapse="true" title="Avoid changing a variable's type"}
+
+In python, the value of a variable can be changed to a different type, though this practice is **highly discouraged**.
+
+For example, the following line assigns a literal of type string to a variable which initially was numeric:
+
+```python
+temperature = 23.0
+temperature = "too hot"
+```
+ Later, we will learn why those types are not the same. 
+ 
+- To prevent assigning a variable a literal of a different type in Python, you can use **type checking**, we will discuss this later in the course.
+
+:::
+
+To use a variable after it was created, simply re-type its name where you need it (e.g.: `print(temperature)`, or (`temperature +3 `)) and python will use its value in the expression.
+
+```python
+temperature = 23.0  # This line creates the variable
+print(temperature)  # This line uses the variable, will print 23.0
+
+temperature2 = temperature + 10  #This line uses the variable to create a new one
+
+print("Temperature: ", temperature)
+print("Temperature2:", temperature2)
+```
+
+
+:::{.callout-important title="Common Mistakes"}
+
+1. Using inexistent variables:
+
+```python
+print(x)   
+```
+- `x` doesn't exist
+
+2. Using a variable before **creating it**:
+
+```python
+print(temperature3)
+temperature3 = 20
+```
+-  This will cause an error because temperature3 doesn't exist yet at this point.
+
+3. Misspelling a variable:
+
+```python
+print(Temperature)  
+```
+- This will cause an error because Python is case sensitive "T" is not the same as "t"
+:::
+
+
+
+## Why use variables?
+Variables can help make the code easier to read and follow, but also re-use logic. 
+
+### Eliminating magic numbers
+**Magic** numbers are unexplained values used in the code which make the code hard to read and understand:
+
+```{python}
+price = 16.80
+total = price * 1.05
+print(total)
+```
+
+- Here, the value `1.05` is not explained and is considered a magic number. 
+
+Now consider this improved version using more variables:
+```{python}
+price = 16.80
+tax_rate = 0.05 
+total = price + price*tax_rate
+print(total)
+```
+- It's now a little bit clearer that this program is calculating the cost of something afterapplying a $5%$ taxe rate.
+
+- The first program was **hardcoding** the tax rate in the magic number `1.05`
+
+:::{.callout-note title="Hardcoding" collapse="true"}
+**Hardcoding** means to embed a value litterally as it is in the code. Think of it as permanantly tattooing your best friend's phone number, and regretting it when they change numbers. 
+:::
+
+### Re-using logic
+Say, you're creating a script implementing the Pythagorean theorem when $a$ and $b$ are known. 
+$$
+a^2 + b^2 = c^2
+$$
+
+Consider the two program below implementing the same equation. What's the maing difference?
+
+#### Program 1
+```{python}
+c_2 = 3*3 + 4*4
+print(c_2)
+```
+#### Program 2
+```{python}
+a = 3
+b = 4
+c_2 = a*a + b*b
+print(c_2)
+```
+
+One possible answer is: it's much easier to read, and update the second program because the values of $a$ and $b$ are well isolated in seperate variables.
+
+---
+✍️**Challenge**: Improve the program below using variables:
+```{python}
+print("The cost of item 1 is: $ 10")
+print("The cost of item 2 is: $ 22")
+print("The total cost is $ 32")
+```
+:::{.callout-tip collapse="true" title="Solution"}
+```python
+item1 = 10
+item2 = 22
+total=item1 + item2
+
+print("The cost of item 1 is: $", item1)
+print("The cost of item 2 is: $", item2)
+print("The total cost is: $", total)
+```
+:::
+
+## Should everything be turned into a variable?
+
+You don't have to create variables for every piece of data in the program. There's a fine line between making a code re-usable or making too long with too many variables. For example, if you're implementing the Pythagrean equation, the power `2` can be written because it's not expected to change. 
+
+```python
+a = 3
+b = 4
+c_2 = a**2 + b**2 #We'll learn more about operators later on
+```
+- Typically, the context of a problem will tell you if this is a variable or a fixed piece of information that isn't expected to change. 
+
+
+## Variable naming rules
 
 1. The variable name **cannot** start with a number, only with letters or `_`
 
@@ -104,11 +265,11 @@ The value of x is increased by 1.
 
 4. It must not be any of the [**Python keywords**](https://www.w3schools.com/python/python_ref_keywords.asp), as these are reserved by Python for predefined purposes.
 
-**Notes:**
-
+:::{.callout-note title="Additional notes"}
 - Python is case sensitive! This means that uppercase `APPLE` and lowercase `apple` are not the same variable names, therefore will be considered by python as two different variables.
 
 - You may use alphabet from other languages too for example: `sûr_la_mer`, `переменная`, `Adiós_Señora` are valid variable names.
+:::
 
 ## Variable naming convention
 
@@ -168,68 +329,9 @@ insurance_percent = 3.0
 ```
 :::
 
-**How to use variables**
 
-We say that variables are **mutable**, meaning their values can be changed or updated over time.
 
-For example, the following lines create a variable called `temperature`, initially setting its value to 23.0 and subsequently updating its value to 26.0:
-
-```python
-temperature = 23.0
-temperature = 26.0 #the value has changed
-```
-
-To determine the type of a variable, you can use the function `type()`:
-
-```python
-print(type(temperature))
-```
-
-In python, the value of a variable can be changed to a different type, though this practice is **highly discouraged**.
-
-For example, the following line assigns a literal of type string to a variable which initially was numeric:
-
-```python
-temperature = 23.0
-temperature = "too hot"
-```
-
-To prevent assigning a variable a literal of a different type in Python, you can use **type checking**, we will discuss this later in the course.
-
-To use a variable after it was created, simply re-type its name where you need it (e.g.: `print(temperature)`, or (`temperature +3 `)) and python will use its value in the expression.
-
-```python
-temperature = 23.0  # This line creates the variable
-print(temperature)  # This line uses the variable, will print 23.0
-
-temperature2 = temperature + 10  #This line uses the variable to create a new one
-
-print("Temperature: ", temperature)
-print("Temperature2:", temperature2)
-```
-
-**Common mistakes:**
-
-1. Using inexistent variables:
-
-   ```python
-   print(x)   #x doesn't exist
-   ```
-
-2. Using a variable before **creating it**:
-
-   ```python
-   print(temperature3)  #this will cause an error because temperature3 doesn't exist yet at this point.
-   temperature3 = 20
-   ```
-
-3. Misspelling a variable:
-
-   ```python
-   print(Temperature)  #This will cause an error because Python is case sensitive "T" is not the same as "t"
-   ```
-
-**Example - Calculating the variance of three numbers**
+## Example - Calculating the variance of three numbers 
 
 Let's have a look at this lengthy equation: `((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3`
 
@@ -342,18 +444,6 @@ energy = GRAVITATION_ACC * g * h
 </div>
 ``` -->
 
-## Type Hinting
-
-The value can be a numeric literal, a string, an operation, another variable , or a more complex expressions. Even though Python doesn't require you to specify a variable's type, we'll use **_type hinting_** in this course to emphasize that a variable should always be of a specific type.
-
-```python
-hourlyPay: int = 21
-numStudents: int = 30
-
-userName: str = "Bob"
-greeting: str = "Hello there!"
-```
-
 # **Constants**
 
 Constants like in math are suppose to be values that never change. In python, they are treated the same way as variables but their values cannot be modified in the program. We say that constants are **immutable**. These values are universally acknowledged to be true and they should not changeover time.
@@ -385,7 +475,9 @@ print(constants.GRAVITATION_ACC)
 </iframe>  -->
 
 
-> ⚠️ The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help "objects" that are constants and protected from modification.
+:::{.callout-note icon="false" title="⚠️ Constants can still change"}
+The constants can still be modified since there is no built-in way to prevent this in Python. However, programmers follow the convention of using uppercase letters to name constants and treat them as immutable. There are also external modules available that can help "objects" that are constants and protected from modification.
+:::
 
 # References
 
