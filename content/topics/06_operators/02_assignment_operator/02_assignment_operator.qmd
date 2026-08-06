@@ -3,58 +3,67 @@ title: "Assignment operator"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Differentiate** between an assignment operation and a mathematical equal $=$
+- **Apply** assignment operations (`=`, `+=`, `-=`, `*=`, `/=`, etc.) correctly.
+- **Trace** how the value of variables changes during program execution.
+:::
 
-Assignment operators are used to set the value of a variable, unlike mathematics. For instance, in math 5 + 3 = 8 is a correct **statement**. However in Python, executing`5 + 3 = 8` will cause a syntax error. This is because the `=` operator is not used for arithmetic operations or equality. In programming, `5 + 3` is an expression that cannot be reassigned.
+# Assignment vesus Equality
 
-Assignment operators are evaluated from right to left, the value or expression on the right hand side of the operator is evaluated first. Then the result of this expression is assigned to the variable on the left hand side. Python expects the left hand side of the equality to be a variable.
+Assignment operators are used to set the value of a variable, unlike in math where the symbol $=$ means an equivalence/equality (e.g 5 + 3 = 8). However in Python, executing`5 + 3 = 8` will cause a syntax error. This is because an assignment should be understood as a left arrow (`←`), i.e setting the result of the expression to that variable (`variable ← value/ expression`). The value or expression on the right hand side of the operator is evaluated first. Then the result of this expression is assigned to the variable on the left hand side. So running `5 + 3` in Python doesn't make sense because an expression cannot be **reassigned**. The value or expression on the right hand side of the operator is evaluated first. Then, the result is assigned to the variable on the left hand side.
 
-![assignment](./assets/Variables_assignment.png)
+
+ **Python expects the left hand side of the equality to be a variable.**
+
+![](./assets/Variables_assignment.png)
 
 There exists much more assignment operators, but we will only focus on the following ones.
 
-### Assignment `=`
+# Table of assignment operators
+| Assignment Operator |  Effect on variable | Description                                               | Example   | Result (if `x = 10` initially) |
+| ------------------- | --------------------- | ---------------------------------------------------------- | --------- | ------------------------------ |
+| `=`                 | `x ←  value`           | Assigns a new value to a variable.                         | `x = 5`   | `x` becomes `5`                |
+| `+=`                | `x ←  x + value`       | Adds a value to the variable and stores the result.        | `x += 3`  | `x` becomes `13`               |
+| `-=`                | `x ←  x - value`       | Subtracts a value from the variable and stores the result. | `x -= 4`  | `x` becomes `6`                |
+| `*=`                | `x ←  x * value`       | Multiplies the variable by a value and stores the result.  | `x *= 2`  | `x` becomes `20`               |
+| `/=`                | `x ←  x / value`       | Divides the variable by a value and stores the result.     | `x /= 2`  | `x` becomes `5`                |
+| `%=`                | `x ←  x % value`       | Replaces the variable with the remainder after division.   | `x %= 3`  | `x` becomes `1`                |
+| `**=`               | `x ←  x ** value`      | Raises the variable to a power and stores the result.      | `x **= 2` | `x` becomes `100`              |
+| `//=`               | `x ←  x // value`      | Performs floor (integer) division and stores the result.   | `x //= 3` | `x` becomes `3`                |
+
+
+
+
+# Tracing a variable
+
+Tracing a variable is to keep track of its value as its being assigned or reassigned during a program's execution. You can use this tool: [Codeboot](https://codeboot.org/6.0.0/) to help visualize the impact of the assignment operators on variables, in the following examples. 
+
+## Assignment `=`
 
 Assigns a value to a variable (e.g.: `name = "Julie"` , result: assigns the value `"Julie`" to the variable `name`)
 
-⚠️ This operator does not have the same definition as in math. In math and algebra, = is a **statement** used to communicate that two values are equal as in 5+3 = 8. In Python, `=` is an **assignment**, it sets the value of a variable. `5 + 3 = 8` would cause a syntax error in Python because you cannot reassign the value of a literal or an expression.
-
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.fYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.~lang=py-novice.~showLineNumbers=true.a">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+[ ⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.fYXNzaWdubWVudF8xLnB5~XQAAgAAxAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_atNqzxy6pmZvbFlfOC6HpHnw1znFy_jpamHKSU_3S1_8IWwA.~lang=py-novice.~showLineNumbers=true.a){target="_blank"}
 
 ```python
 name = "Julie"
-sum  = 5 + 3
-average = sum / 2
+total  = 5 + 3
+average = total / 2
 ```
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.fYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.~lang=py-novice.~showLineNumbers=true.e">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+[ ⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.fYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.~lang=py-novice.~showLineNumbers=true.e){target="_blank"}
+
 
 ```python
 5 + 3 = 8 # This will cause an error
 ```
 
-### Addition assignment `+=`
+## Addition assignment `+=`
 
 - Performs an addition (numeric addition or string concatenation) on the two operands and **assigns** the result to the left operand.
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+[ ⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a){target="_blank"}
+
 
 ```python
 value = 6
@@ -62,14 +71,7 @@ value += 2
 print(value) # output: 8
 ```
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzIucHk=~XQAAgAAqAAAAAAAAAAA3GEn9-d2KwgquAeQuSLwRz6Cqke6qg6gX-Mz_0bJzRbF9mH-blJSf___YPIAA.~lang=py-novice.~showLineNumbers=true.a">         
-    <button style="border: none; background-color: transparent;">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+[ ⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzIucHk=~XQAAgAAqAAAAAAAAAAA3GEn9-d2KwgquAeQuSLwRz6Cqke6qg6gX-Mz_0bJzRbF9mH-blJSf___YPIAA.~lang=py-novice.~showLineNumbers=true.a"){target="_blank"}
 
 ```python
 name = "Emma"
@@ -77,17 +79,11 @@ name += "Watson"
 print(name) # output: "EmmaWatson"
 ```
 
-### Subtraction assignment `-=`
+## Subtraction assignment `-=`
 
 - Performs a subtraction on the two operands and **assigns** the result to the left operand.
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.obWludXNfZXF1YWwucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQWRok9oPwc4AHCfa7_CrqzOIf_qQQAA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+ [⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.obWludXNfZXF1YWwucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQWRok9oPwc4AHCfa7_CrqzOIf_qQQAA==.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a){target="_blank"}
 
 ```python
 value = 6
@@ -95,17 +91,11 @@ value -= 2
 print(value) # output: 4
 ```
 
-### Multiplication assignment `*=`
+## Multiplication assignment `*=`
 
 - Performs a multiplication on the two operands and **assigns** the result to the left operand.
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.ob3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.oYXNzaWdubWVudF9kaXZfZXF1YWw=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQW4TQ9oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEtMy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWduX211bHRfcGx1cy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVXog9oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a8">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+ [⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.fYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.ob3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.oYXNzaWdubWVudF9kaXZfZXF1YWw=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQW4TQ9oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEtMy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWduX211bHRfcGx1cy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVXog9oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a8){target="_blank"}
 
 ```python
 value = 6
@@ -113,33 +103,22 @@ value *= 2
 print(value) # output: 12
 ```
 
-### Division assignment `/=`
+## Division assignment `/=`
 
 - Performs a division on the two operands and **assigns** the result to the left operand.
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.ob3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.fYXNzaWdubWVudF9kaXZfZXF1YWw=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQW4TQ9oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEtMy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a60">         
-    <button class="codeboot-button">
-      <span>Run example</span>
-    </button>     
-    </a> 
-</div>
+
+ [⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.ob3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.fYXNzaWdubWVudF9kaXZfZXF1YWw=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQW4TQ9oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEtMy5weQ==~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.~lang=py-novice.~showLineNumbers=true.a60){target="_blank"}
 
 ```python
 value = 6
 value /= 2
 print(value) # output: 3
 ```
-
+# Tracing Challenge
 ✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal.
 
-<div class="button-container">     
-    <a target="_blank" href="https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.fb3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e">         
-    <button class="codeboot-button">
-      <span>Check answer</span>
-    </button>     
-    </a> 
-</div>
+[⏯️ Animate Execution](https://app.codeboot.org/6.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.fb3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.~lang=py-novice.~showLineNumbers=true.a){target="_blank"}
 
 ```python
 day = 1
