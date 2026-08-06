@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fdc6e206f0b03d440abb5b99c4bba8b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-6b0a672b71649d438c3c3ce77f2045f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-fdc6e206f0b03d440abb5b99c4bba8b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4731dd772431a92bb2cb3c677c899d3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-e9ddbf6121f7733744c4bae1e95138b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -793,12 +793,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#equality-operator" id="toc-equality-operator" class="nav-link active" data-scroll-target="#equality-operator">Equality operator <code>==</code></a></li>
-  <li><a href="#inequality-operator" id="toc-inequality-operator" class="nav-link" data-scroll-target="#inequality-operator">Inequality operator !=</a></li>
+  <li><a href="#adding-conditional-logic" id="toc-adding-conditional-logic" class="nav-link active" data-scroll-target="#adding-conditional-logic">Adding Conditional Logic</a>
+  <ul class="collapse">
+  <li><a href="#equality-operator" id="toc-equality-operator" class="nav-link" data-scroll-target="#equality-operator">Equality operator <code>==</code></a></li>
+  <li><a href="#inequality-operator" id="toc-inequality-operator" class="nav-link" data-scroll-target="#inequality-operator">Inequality operator <code>!=</code></a></li>
   <li><a href="#greater-than" id="toc-greater-than" class="nav-link" data-scroll-target="#greater-than">Greater than <code>&gt;</code></a></li>
   <li><a href="#greater-than-or-equal" id="toc-greater-than-or-equal" class="nav-link" data-scroll-target="#greater-than-or-equal">Greater than or equal <code>&gt;=</code></a></li>
   <li><a href="#less-than" id="toc-less-than" class="nav-link" data-scroll-target="#less-than">Less than <code>&lt;</code></a></li>
   <li><a href="#less-than-or-equal" id="toc-less-than-or-equal" class="nav-link" data-scroll-target="#less-than-or-equal">Less than or equal <code>&lt;=</code></a></li>
+  </ul></li>
+  <li><a href="#summary-of-comparison-operators" id="toc-summary-of-comparison-operators" class="nav-link" data-scroll-target="#summary-of-comparison-operators">Summary of comparison operators</a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
   </ul>
 </nav>
     </div>
@@ -825,35 +830,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The comparison operators are used to determine how two values compare to eachother : <em>Are these two values equal?</em> <em>Is the first value greater than this second value?</em> <em>Is the first value less than or equal to the second value?</em> The result of the operation is a Boolean: <code>True</code> or <code>False</code>.</p>
-<p>For instance, let’s say I borrowed 13 books at the library and I would like to check if I can rent more given that the maximum amount of books is 15.</p>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.fYm9va3NfZXhhbXBsZS5weQ==~XQAAgABhAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggDKbp1GC36d_lK_fEZlyd9INBaTxy9fpTMv3N2bhLYG5SelCOFyB2Z95_8YitA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Run example&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>MAX_BOOKS <span class="op">=</span> <span class="dv">15</span>    <span class="co">#Note this variable is capitalized because it is a constant.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">=</span> <span class="dv">13</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">+=</span><span class="dv">1</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">+=</span><span class="dv">1</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Why use such operators? Those operators will come in handy when we introduce conditional statements (<code>if</code>,<code>else</code>). They allow you to establish the relationship between values and make simple decision. For example, if the age of the user is below 18, print “Sorry, you cannot vote”, otherwise print “You can vote”.</p>
-<section id="equality-operator" class="level3">
-<h3 class="anchored" data-anchor-id="equality-operator">Equality operator <code>==</code></h3>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>The double equal operator<code>==</code> compares two operands, if they are equal the result is <code>True</code> otherwise the result is <code>False</code>.</li>
+<li><strong>Interpret</strong> what a comparison operation is.</li>
+<li><strong>Apply</strong> comparison operations (<code>==</code>, <code>!=</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&lt;</code>) accurately.</li>
 </ul>
+</div>
+</div>
+<p>The comparison operators are used to determine how two values compare to eachother : <em>Are these two values equal?</em> <em>Is the first value greater than this second value?</em> <em>Is the first value less than or equal to the second value?</em> The result of the operation is a Boolean: <code>True</code> or <code>False</code>.</p>
+<p>For instance, let’s say I borrowed 13 books at the library and I would like to check if I can borrow more given that the maximum is 15 books.</p>
+<p><a href="https://app.codeboot.org/6.0.0/?init=.oaW50cm9fdmFyaWFibGVzLnB5~XQAAgAAqAAAAAAAAAAA2nkgDa8sHY-qYmqhI845RcTD-OTvw7E5uhnmp3SLeliWSurqH0TD__6F6AAA=.fY29tcGFyaXNvbnMucHk=~XQAAgABSAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggJxDXamn5n_oMwYA==.~lang=py-novice.e1" target="_blank">⏯️ Step by step Execution</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>MAX_BOOKS <span class="op">=</span> <span class="dv">15</span>    <span class="co">#Note this variable is capitalized because it is a constant.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">=</span> <span class="dv">13</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>my_book_count <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Can I borrow more books?"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_book_count <span class="op">&lt;</span> MAX_BOOKS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="adding-conditional-logic" class="level1">
+<h1>Adding Conditional Logic</h1>
+<p>Why use such operators? Those operators will come in handy when we introduce conditional statements (<code>if</code>,<code>else</code>). They allow a program to establish the relationship between values and make simple decisions. For example, if the age of the user is below 18, print “Sorry, you cannot vote”, otherwise print “You can vote”.</p>
+<section id="equality-operator" class="level2">
+<h2 class="anchored" data-anchor-id="equality-operator">Equality operator <code>==</code></h2>
+<p>The double equal operator<code>==</code> compares two operands, if they are equal the result is <code>True</code> otherwise the result is <code>False</code>.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -873,11 +888,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="inequality-operator" class="level3">
-<h3 class="anchored" data-anchor-id="inequality-operator">Inequality operator !=</h3>
-<ul>
-<li>Returns <code>True</code> if the operands are not equal and <code>False</code> if they are equal</li>
-</ul>
+<section id="inequality-operator" class="level2">
+<h2 class="anchored" data-anchor-id="inequality-operator">Inequality operator <code>!=</code></h2>
+<p>Checks if the two oeprands <strong>are not equal</strong>. If they aren’t euqal, the result is <code>True</code> otherwise (if they’re equal) the result is <code>False</code>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 72%">
@@ -901,11 +914,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="greater-than" class="level3">
-<h3 class="anchored" data-anchor-id="greater-than">Greater than <code>&gt;</code></h3>
-<ul>
-<li>Return <code>True</code> if the left side operand is greater than the right side operand. Returns <code>False</code> otherwise.</li>
-</ul>
+<section id="greater-than" class="level2">
+<h2 class="anchored" data-anchor-id="greater-than">Greater than <code>&gt;</code></h2>
+<p>Checks if the left <code>True</code> if the left side operand is greater than the right side operand. Returns <code>False</code> otherwise.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 67%">
@@ -925,11 +936,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="greater-than-or-equal" class="level3">
-<h3 class="anchored" data-anchor-id="greater-than-or-equal">Greater than or equal <code>&gt;=</code></h3>
-<ul>
-<li>Return <code>True</code> if the left side operand is greater or equal than the right side operand. Returns <code>False</code> otherwise.</li>
-</ul>
+<section id="greater-than-or-equal" class="level2">
+<h2 class="anchored" data-anchor-id="greater-than-or-equal">Greater than or equal <code>&gt;=</code></h2>
+<p>Return <code>True</code> if the left side operand is greater or equal than the right side operand. Returns <code>False</code> otherwise.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 74%">
@@ -949,12 +958,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="less-than" class="level3">
-<h3 class="anchored" data-anchor-id="less-than">Less than <code>&lt;</code></h3>
-<ul>
-<li>Return <code>True</code> if the left side operand is less than the right side operand. Returns <code>False</code> otherwise.</li>
-<li>e.g.: <code>3 &lt; 6</code> result: <code>True</code> , <code>3 &lt; 2</code>, result: <code>False</code></li>
-</ul>
+<section id="less-than" class="level2">
+<h2 class="anchored" data-anchor-id="less-than">Less than <code>&lt;</code></h2>
+<p>Return <code>True</code> if the left side operand is less than the right side operand. Returns <code>False</code> otherwise. - e.g.: <code>3 &lt; 6</code> result: <code>True</code> , <code>3 &lt; 2</code>, result: <code>False</code></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 61%">
@@ -974,11 +980,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="less-than-or-equal" class="level3">
-<h3 class="anchored" data-anchor-id="less-than-or-equal">Less than or equal <code>&lt;=</code></h3>
-<ul>
-<li>Return <code>True</code> if the left side operand is less or equal than the right side operand. Returns <code>False</code> otherwise.</li>
-</ul>
+<section id="less-than-or-equal" class="level2">
+<h2 class="anchored" data-anchor-id="less-than-or-equal">Less than or equal <code>&lt;=</code></h2>
+<p>Return <code>True</code> if the left side operand is less or equal than the right side operand. Returns <code>False</code> otherwise.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 72%">
@@ -997,26 +1001,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</section>
+</section>
+<section id="summary-of-comparison-operators" class="level1">
+<h1>Summary of comparison operators</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 12%">
+<col style="width: 48%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison Operator</th>
+<th>Example</th>
+<th>Meaning</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td><code>5 == 5</code></td>
+<td>Is 5 equal to 5?</td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td><code>5 != 3</code></td>
+<td>Is 5 not equal to 3?</td>
+<td><code>True</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td><code>7 &gt; 4</code></td>
+<td>Is 7 greater than 4?</td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td><code>2 &lt; 6</code></td>
+<td>Is 2 less than 6?</td>
+<td><code>True</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td><code>5 &gt;= 5</code></td>
+<td>Is 5 greater than or equal to 5?</td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td><code>3 &lt;= 2</code></td>
+<td>Is 3 less than or equal to 2?</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Comparison operators compare two values and evaluate to a Boolean value: <code>True</code> or <code>False</code>.</p>
+</section>
+<section id="challenge" class="level1">
+<h1>Challenge</h1>
 <p>✍️<strong>Challenge</strong>: Manually execute the operations below and write the expected result. Check your answers by running the code.</p>
-<div class="button-container">
-<pre><code>&lt;a href="https://app.codeboot.org/5.0.0/?init=.fY29tcGFyaXNvbl9jaGFsbGVuZ2VzLnB5~XQAAgADRAAAAAAAAAAARiAToaYFPsVi6rkOY_gtPVhVlVMgMy9wU4vlKRmkTVwrDJddUdRiQhJT3EwSKPiJ8zQXpx7-QY0pis40KWc1I1vWP_QdVVdu0Rerf-ZlAqTc5tMK1TBKFDURcro9LSSbcbpYKde0MLEoG3M-JI9UFvVzEvV_9YtQA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e"&gt;         
-&lt;button class="codeboot-button"&gt;
-  &lt;span&gt;Check answer&lt;/span&gt;
-&lt;/button&gt;     
-&lt;/a&gt; </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">11.999</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">12</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">&lt;</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (<span class="dv">30</span> <span class="op">/</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">3</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span><span class="op">**</span><span class="dv">3</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">==</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (<span class="dv">25</span> <span class="op">//</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">10</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">!=</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">7</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span><span class="dv">1</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">&gt;=</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="https://app.codeboot.org/5.0.0/?init=.fY29tcGFyaXNvbl9jaGFsbGVuZ2VzLnB5~XQAAgADRAAAAAAAAAAARiAToaYFPsVi6rkOY_gtPVhVlVMgMy9wU4vlKRmkTVwrDJddUdRiQhJT3EwSKPiJ8zQXpx7-QY0pis40KWc1I1vWP_QdVVdu0Rerf-ZlAqTc5tMK1TBKFDURcro9LSSbcbpYKde0MLEoG3M-JI9UFvVzEvV_9YtQA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e" target="_blank">⏯️ Animate Execution</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">11.999</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">&lt;</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (<span class="dv">30</span> <span class="op">/</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span><span class="op">**</span><span class="dv">3</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">==</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (<span class="dv">25</span> <span class="op">//</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">!=</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">7</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span><span class="dv">1</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">&gt;=</span> b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 <script type="ojs-module-contents">
