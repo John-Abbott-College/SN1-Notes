@@ -12,7 +12,7 @@ The comparison operators are used to determine how two values compare to eachoth
 
 For instance, let's say I borrowed 13 books at the library and I would like to check if I can borrow more given that the maximum is 15 books.
 
-[ ⏯️ Animate Execution]("https://app.codeboot.org/5.0.0/?init=.fYm9va3NfZXhhbXBsZS5weQ==~XQAAgABhAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggDKbp1GC36d_lK_fEZlyd9INBaTxy9fpTMv3N2bhLYG5SelCOFyB2Z95_8YitA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e){target="_blank"}
+[ ⏯️ Step by step Execution](https://app.codeboot.org/6.0.0/?init=.oaW50cm9fdmFyaWFibGVzLnB5~XQAAgAAqAAAAAAAAAAA2nkgDa8sHY-qYmqhI845RcTD-OTvw7E5uhnmp3SLeliWSurqH0TD__6F6AAA=.fY29tcGFyaXNvbnMucHk=~XQAAgABSAQAAAAAAAAAmkEdXvOTiBd_V7Sg2UnzxiMPkGnPkqjQFb6bsOFALs1usuIst7u1dKnSr12RkABkw8rxC5uZF2R3k_d80JTCGKk1cqSLRu68iR3cGLQam7oYOHgSyRUv-KLVXoxsnxg82x0PHN_h2fmcxo7awM2dhsjiuCPpnXAa5Es7TYHq8VT6G2ggJxDXamn5n_oMwYA==.~lang=py-novice.e1){target="_blank"}
 
 ```python
 MAX_BOOKS = 15    #Note this variable is capitalized because it is a constant.
@@ -44,7 +44,7 @@ The double equal operator`==` compares two operands, if they are equal the resul
 | Did I borrow 14 books at the library? | `my_book_count == 14`  |
 | Is the user's name "Alice"?           | `user_name == "Alice"` |
 
-## Inequality operator !=
+## Inequality operator `!=`
 
 Checks if the two oeprands **are not equal**. If they aren't euqal, the result is `True` otherwise (if they're equal) the result is `False`.
 
@@ -55,7 +55,7 @@ Checks if the two oeprands **are not equal**. If they aren't euqal, the result i
 
 ## Greater than `>`
 
-Return `True` if the left side operand is greater than the right side operand. Returns `False` otherwise.
+Checks if the left  `True` if the left side operand is greater than the right side operand. Returns `False` otherwise.
 
 | English                                                                                         | Python                                         |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- |
