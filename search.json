@@ -669,243 +669,207 @@
     ]
   },
   {
-    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html",
-    "href": "topics/07_statements/03_for_loop/03_for_loop.html",
-    "title": "For loop",
+    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html",
+    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html",
+    "title": "The if-else statement",
     "section": "",
-    "text": "A for-loop allows you to repeat lines of code n amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A for loop repeats the statement whiling counting the “turns” .\nThe for loop is actually capable of handling more complex tasks, such as iterating through large collections of data, item by item. We’ll explore that in more detail soon, but for now, we’ll focus on a simpler use of the for loop.\nExample:\nHere are some key elements to understand:",
+    "text": "An if statement can have an optional else clause. The else statement executes if the condition in the if statement evaluates to False.\nHere, if the condition inside the if statement evaluates to\nConsider the following code:\nSample output",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "For loop"
+      "The if-else statement"
     ]
   },
   {
-    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#generic-for-loop",
-    "href": "topics/07_statements/03_for_loop/03_for_loop.html#generic-for-loop",
-    "title": "For loop",
-    "section": "Generic for loop",
-    "text": "Generic for loop\nA for loop can be generalized to something that looks like:\n\nNote: Using sequence in the following instructions is not exactly correct, but it is reasonable to think of sequences for now.\n\nforvariableinsequence\nWhere\n\nvariable is just the name of a variable. It can be any valid variable name\nsequence is something that can be looped over\nSounds like a circular argument, I know, but its the best we can do at this level.\n\n\nExamples of sequence\nThink of sequences a a list of things to be processed. Like a stack of papers to grade, or a to-do list, or a series of numbers to process.\n\nrange():\nWhen within a for loop,\n\nrange(n) will provide the sequence of numbers\n\\[0, 1, 2 ,... n-1\\]\nrange(start, end) will provide the sequence of numbers\n\\[\\text{start}, \\text{start}+1, \\text{start} + 2 ,... \\text{end}-1\\]\nrange(start, end, step) will provide the sequence of numbers\n\\[\\text{start}, \\text{start}+\\text{step}, \\text{start} + 2*\\text{step} ,... \\text{end}-1\\]\n\n\n\nlist\nWhen within a for loop,\n\nlist_variable will provide the contents of the list, one element at a time\n\n\n\nfile\nWhen within a for loop,\n\nfile will provide the contents of the file, one line at a time\n\n\n\nstring\nWhen within a for loop,\n\nstring_variable will provide the individual characters of the string, one character at a time",
+    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#the-elif-statement",
+    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#the-elif-statement",
+    "title": "The if-else statement",
+    "section": "The elif statement",
+    "text": "The elif statement\nThe if...else statement is used to execute a block of code among two alternatives.\nHowever, if we need to make a choice between more than two alternatives, we use the if...elif...else statement.\nThe elif keyword is short for “else if” and is used to check multiple conditions, stopping as soon as it finds the first true condition.\nif condition1:\n    # code block 1\n\nelif condition2:\n    # code block 2\n\nelse:\n    # code block 3\n\n\n\ndemo\n\n\nThe way to assemble subsequent if-elif-else statements is sometimes called a cascade.\nSome additional attention has to be paid in this case:\n\nyou mustn’t use else without a preceding if;\nelse is always the last branch of the cascade, regardless of whether you’ve used elif or not;\nelse is an optional part of the cascade, and may be omitted;\nif there is an else branch in the cascade, only one of all the branches is executed;\nif there is no else branch, it’s possible that none of the available branches is executed.\n\nThis may sound a little puzzling, but hopefully some simple examples will help shed more light.\nConsider the following code:\nnumber = -5\n\nif number &gt; 0:\n    print('Positive number')\n\nelif number &lt; 0:\n    print('Negative number')\n\nelse:\n    print('Zero')\n\nprint('This statement is always executed')\nSample output\nNegative number\nThis statement is always executed\nHere, the first condition, number &gt; 0, evaluates to False. In this scenario, the second condition is checked.\nThe second condition, number &lt; 0, evaluates to True. Therefore, the statements inside the elif block is executed.\nIn the above program, it is important to note that regardless the value of number variable, only one block of code will be executed.\n✍️Challenge: Write a Python program that asks the user to input a temperature in Celsius and then checks if the temperature is below freezing, above boiling, or in between.",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "For loop"
+      "The if-else statement"
     ]
   },
   {
-    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#how-does-a-for-loop-work",
-    "href": "topics/07_statements/03_for_loop/03_for_loop.html#how-does-a-for-loop-work",
-    "title": "For loop",
-    "section": "How does a for-loop work?",
-    "text": "How does a for-loop work?\nGiven the following code\nfor variable in sequence:\n  print(variable)\nAs the code starts, the variable will be set to the very 1st thing in the sequence (whatever that thing is)\nWhen the code has finished executing everything in the code block (indicated by indentations), then\n\nthe code goes back to the beginning of the for loop, and\nvariable will be set the the next thing in the sequence\n\nThis will continue until there are no things left in the sequence.\nExample: for-loop over a number range\nfor i in range(3):\n  print(\"I am at index \", i)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\ni\noutput printed to console\ncomment\n\n\n\n\n1\n0\n\ni is set to 1st number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 0\n\n\n\n1\n1\n\ni is set to 2nd number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 1\n\n\n\n1\n2\n\ni is set to 3rd number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 2\n\n\n\n1\n\n\nThere are no numbers in the range sequence, so for loop quits\n\n\n3\n\nall done\nNo longer in the for loop\n\n\n\nExample: for-loop over a list\nfib_list = [1, 1, 2, 3, 5 ]\nfor number in fib_list:\n  print(\"The next fibanocci number is \", i)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\nnumber\noutput printed to console\ncomment\n\n\n\n\n1\n1\n\nnumber is set to 1st number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 1\n\n\n\n1\n1\n\nnumber is set to 2nd number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 1\n\n\n\n1\n2\n\nnumber is set to 3rd number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 2\n\n\n\n1\n3\n\nnumber is set to 4th number in the fib_list. [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 3\n\n\n\n1\n5\n\nnumber is set to 5th number in the fib_list. [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 5\n\n\n\n1\n\n\nThere are no numbers left in the fib_list, so quit for-loop\n\n\n3\n\nall done\nNo longer in the for loop\n\n\n\nExample: for-loop over a string\nname = \"sandy\"\nfor character in name:\n  print(\"Character:\",)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\nCharacter\noutput printed to console\ncomment\n\n\n\n\n1\ns\n\ncharacter is set to 1st character in name “sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\na\n\ncharacter is set to 2nd character in name “sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\nn\n\ncharacter is set to 3rd character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\nd\n\ncharacter is set to 4th character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\ny\n\ncharacter is set to 5th character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\n\n\nThere are no more characters in name, so quit for-loop\n\n\n3\n\nall done\nNo longer in the for loop",
+    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#nested-if-else-statements",
+    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#nested-if-else-statements",
+    "title": "The if-else statement",
+    "section": "Nested if-else statements",
+    "text": "Nested if-else statements\nConsider the case where the instruction placed after the if is another if.\nIt is possible to include an if statement inside another if statement.\nif condition:\n    if nested_condition:\n        # ested code block 1\n     else:\n        # nested code block 2\n else:\n     # nested code block 3\n\nExample:\nnumber = 5\n\n# outer if statement\nif number &gt;= 0:\n    # inner if statement\n    if number == 0:\n      print('Number is 0')\n\n    # inner else statement\n    else:\n        print('Number is positive')\n\n# outer else statement\nelse:\n    print('Number is negative')\nSample output\nNumber is positive\nHere’s how this program works.\n\n\n\ndemo\n\n\n\n\nHere are two important points:\n\nthis use of the if statement is known as nesting; remember that every else refers to the if which lies at the same indentation level; you need to know this to determine how the ifs and elses pair up;\nconsider how the indentation improves readability, and makes the code easier to understand and trace.\n\n✍️Challenge: Write a Python program that assigns a letter grade based on a numeric score. Ask the user to input a score, then determine and print the letter grade:\n\nA: 90-100\nB: 80-89\nC: 70-79\nD: 60-69\nF: below 60",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "For loop"
+      "The if-else statement"
     ]
   },
   {
-    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#the-range-function",
-    "href": "topics/07_statements/03_for_loop/03_for_loop.html#the-range-function",
-    "title": "For loop",
-    "section": "The range() function",
-    "text": "The range() function\nIn Python, the range()function returns a sequence of numbers.\nExample:\nvalues = range(4)\nHere, range(4) returns a sequence of 0, 1, 2 ,and 3.\nSince the range() function returns a sequence of numbers, we can iterate over it using a for loop.\nExample:\n# iterate from i = 0 to i = 4\nfor i in range(5):\n    print(\"The value of i is currently\", i)\noutput:\nThe value of i is currently 0\nThe value of i is currently 1\nThe value of i is currently 2\nThe value of i is currently 3\nThe value of i is currently 4\nThe loop has been executed 5 times (it’s the range() function’s argument), the last control variable’s value is 4 (not 5, as it starts from 0, not from 1)\n\nTwo arguments range() function\nThe range() function invocation may be equipped with two arguments, not just one:\n⚠️ Note: the range() function accepts only integers as its arguments, and generates sequences of integers.\nExample:\nfor i in range(2, 8):\n    print(\"The value of i is currently\", i)\nIn this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.\noutput:\nThe value of i is currently 2\nThe value of i is currently 3\nThe value of i is currently 4\nThe value of i is currently 5\nThe value of i is currently 6\nThe value of i is currently 7\nThe first value shown is 2 (taken from the range()’s first argument.), and the last is 7 (although the range()’s second argument is 8).\n\n\nThree arguments range() function\nThe range() function may also accept three arguments\nExample:\nfor i in range(2, 8, 3):\n    print(\"The value of i is currently\", i)\nThe third argument is an increment – it’s a value added to control the variable at every loop turn (as you may suspect, the default value of the increment is 1).\noutput:\nThe value of i is currently 2\nThe value of i is currently 5",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "For loop"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#examples-of-loops-inside-functions",
-    "href": "topics/07_statements/03_for_loop/03_for_loop.html#examples-of-loops-inside-functions",
-    "title": "For loop",
-    "section": "Examples of Loops Inside Functions",
-    "text": "Examples of Loops Inside Functions\nA for loop is often used inside functions to automate repetitive tasks. Here’s a breakdown of how loops work with functions in Python.\n\nExample 1: Simple Function with a For Loop\nThis function prints the numbers from 1 to 5 using a for loop:\ndef print_numbers():\n    for i in range(1, 6):\n        print(i)\n\n# Call the function\nprint_numbers()\nExplanation: The for i in range(1, 6) loop iterates over the numbers from 1 to 5, printing each value.\n\n\nExample 2: Sum of All Integers from 1 to n\nThis function calculates the sum of all integers from 1 to a given number n.\ndef sum_numbers(n):\n    total = 0\n    for i in range(1, n+1):\n        total += i\n    return total\n\n# Example usage:\nprint(sum_numbers(5))  # Output: 15 (1+2+3+4+5)\nExplanation: The function uses a loop to sum up all the integers from 1 to n. When called with n = 5, it returns 15.\n\n\nExample 3: Sum of Squares\ndef sum_of_squares(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i ** 2\n    return total\n\n# Test the function\nprint(sum_of_squares(4))  # Output: 30 (1^2 + 2^2 + 3^2 + 4^2)\nExplanation: The function loops through numbers from 1 to n and adds the square of each number to the total. For n = 4, the result is 30.",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "For loop"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/exercises/conditional/conditional.html",
-    "href": "topics/07_statements/exercises/conditional/conditional.html",
-    "title": "🎯 Conditional statements",
+    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html",
+    "href": "topics/07_statements/exercises/for_loops/for_loops.html",
+    "title": "🎯 For Loops",
     "section": "",
-    "text": "Level 1: if\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nIf the temperature is below zero, display it’s freezing.\ntemperature = 3.0\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operator is needed to express “less than”?\n\n\n\n\n✅ Solution\n\n\n      if temperature &lt; 0:\n        print(\"It's freezing outside\")\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nDisplay “you are eligible for a scholarship” if the age of a person is between 18 and 25 (inclusive)\nage = int(input(\"What is your age?\"))\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operators are needed to express “less than or equal to” and “greater than or equal to”?\n\n\n\n\n✅ Solution\n\n\n      if 18 &lt;= age &lt;= 25:\n        print(\"You are eligible for a scholarship\")\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”\npassword = \"easypassword123\"\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operator is needed to express “equal to”?\n\n\n\n\n✅ Solution\n\n\n      if password == \"L0ngP@33w0rd34512\":\n        print(\"Successful login\")\n    \n\n\nNote: This is not really how passwords are used in programs – writing your password down as a variable in a program is a really bad idea, because everyone who can read your code can read your password! Most programs store the hashed version of the password – click this link if you want to learn more.\n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nI will go to school if the bus has arrived\nbus_arrived = True\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nHow can you use a boolean variable in an if statement?\n\n\n\n\n✅ Solution\n\n\n      if bus_arrived:\n          print(\"I will go to school\")\n    \n\n\nComplete the following function given the statement below and print a message when the condition is met:\nEnsure that the percentage of increase entered by the user is between -100.0 and +100.0. If it’s the case calculate the increase amount\n\nstock_value = 100_000\nincrease_percent = float(input(\"What is the percent increase this year (in %)? \"))\nincrease_amount = 0\n\n# Your answer goes here\n\n\n👀 Hint\n\n\nHere you have to test a condition and calculate a percentage, but only if the condition is true.\n\n\n\n\n✅ Solution\n\n\n      increase_amount = 0\n      if -100 &lt;= increase &lt;=100:\n        increase_amount = stock_value * (increase/100)\n    \n\n\nTranslate (to English) the meaning of the following lines of code.\nr_score = 35\nif r_score &gt;= 30:\n    print(\"You are eligible for the scholarship.\")\n\n\n\n👀 Hint\n\n\nYour answer should be in the form: If (some condition is met), then (some event takes place).\n\n\n\n\n✅ Solution\n\n\n      If the r-score is above 30, a message saying \"You are eligible for a scholarship\" is displayed.\n    \n\n\nTranslate the following lines of code:\ntemperature = 12.0\n\nif 0 &lt;= temperature &lt; 16:\n    print(\"It is chill outside.\")\n\n\n\n👀 Hint\n\n\nTake care to be precise about whether something is strictly less/greater than, or less/greater than or equal to (it’s different!)\n\n\n\n\n✅ Solution\n\n\n      If the temperature is greater than or equal to 0, or if the temperature is less than 16, a message saying \"It is chill outside.\" is displayed.\n    \n\n\nWrite down the messages that are printed at the end of this program.\nday=1\nraining_outside = False\ntemperature =14.5\nhumidity = 0.80\n\nday+=1\ntemperature -=3\nhumidity += 0.1\n\nday+=1\ntemperature -=2\nhumidity += 0.1\n\nif humidity&gt; 0.7 and temperature &lt;=12.0:\n    raining_outside = True\n\nday+=1\ntemperature -= 2\nhumidity/= 2\n\nif raining_outside and humidity &lt; 0.7:\n    raining_outside = False\n    temperature+=2.0\n\n\nprint(\"The temperature is\", temperature )\n\nprint(\"The humidity is\", humidity)\n\nprint(\"Is it raining outside?\", raining_outside)\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ Solution\n\n\n      The temperature is 9.5\n      The humidity is 0.5\n      Is it raining outside? False\n    \n\n\n\nLevel 2: if/else and operators and, or, not\n\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”, and “Unsuccessful login” if the password is incorrect\npassword = \"easypassword123\"\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n✅ Solution\n\n\n      password = \"easypassword123\"\n      if password == \"L0ngP@33w0rd34512\":\n          \"Successful login\"\n      else:\n          \"Unsuccessful login\"\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “The store is open” if the current hour is between 8 and 17, otherwise display the store is closed:\ncurrent_hour = 21\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n✅ Solution\n\n\n      if 8 &lt;= current_hour &lt;= 17:\n          print(\"The store is open\")\n      else:\n          print(\"The store is not open\")\n      \n\n\nWrite a function which takes two numbers as input parameters and prints the two numbers in ascending order (no return):\ndef order_ascend(num1:int, num2:int):\n\n   # Your answer goes here\n\n\n\n👀 Hint\n\n\nYou should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.\n\n\n\n\n✅ Solution\n\n\n      def order_ascending(num1: int, num2: int):\n          if num1 &lt; num2:\n              print(num1, num2)\n          else:\n              print(num2, num1)\n        \n\n\nTranslate the following python code to English:\ndef print_salary(salary, paygrade, level):\n    if paygrade == 7:\n        if 0 &lt;= level &lt;= 8:\n            salary *= 1.05\n        else:\n            salary *= 1.04\n    else:\n        salary *= 1.06\n    print(\"Your salary is\", salary)\n\n\n\n👀 Hint\n\n\nYour answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.\n\n\n\n\n✅ Solution\n\nIf the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.\n\n\nWrite a function which displays “Change your car oil” if the user has enough money (needs 80.00$) and if one of these two conditions apply: they reached 5000km or it’s been more than 3 months since the last oil change:\ndef print_change_oil(savings: float, mileage: int, months: int):\n    # to be completed\n\n\n\n👀 Hint\n\n\nYou can chain multiple conditions in one if statement using and/or. You can use brackets to control the order of logical operations in a sequence of operations.\n\n\n\n\n✅ Solution\n\n\n      def print_change_oil(savings: float, mileage: int, months: int):\n          if (savings &gt; 80.0) and ((mileage &gt;= 5000) or (months &gt;= 3)):\n              print(\"Change your car oil\")\n    \n\n\nWrite a function which displays “You are eligible to vote.” if the user is a citizen and if their age is above or equal to 18. Otherwise display “You can’t vote.”\ndef print_vote_eligibility(age: int, is_citizen: bool):      \n # To be completed...\n\n\n\n👀 Hint\n\n\nYou can use boolean variables directly in an if statement, and can combine them with logical operations using and/or.\n\n\n\n\n✅ Solution\n\n\n      def print_vote_eligibility(age: int, is_citizen: bool): \n          if age &gt;= 18 and is_citizen:\n              print(\"You are eligible to vote\")\n          else:\n              print(\"You can't vote\")\n    \n\n\nWrite a function which displays “You can go camping this weekend” if the camping site is available, if it’s not raining and they have access to a car. The function must return a boolean if all conditions are met.\ndef can_go_camping(is_site_available: bool,is_raining:bool, has_car: bool) -&gt; bool:\n # To be completed...\n\n\n\n👀 Hint\n\n\nUse the return statement to control what a function returns.\n\n\n\n\n✅ Solution\n\n\n      def can_go_camping(is_site_available: bool, is_raining:bool, has_car: bool) -&gt; bool:\n          if camping_available and not is_raining and has_car: \n              print(\"You can go camping this weekend\")\n              return True\n          else:\n              return False\n    \n\n\n\nLevel 3: if/elif/else and nested conditions\n\nWrite a program which asks the user for the temperature. The program prints a different message for each of the following condition:\nIf the temperature is:\n\nabove 25: it’s hot outside\nbelow 25 but above 15: it’s pretty warm outside\nbelow 15 but above 0: it’s pretty chill outside.\nbelow zero: it’s freezing outside\n\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ Solution\n\n\n      temperature = float(input(\"Please enter the temperature: \"))\n      if temperature &gt;= 25.0:\n          print(\"It's hot outside\")\n      elif temperature &gt;= 15.0:\n          print(\"It's pretty warm outside\")\n      elif temperature &gt;= 0.0:\n          print(\"It's chill outside\")\n      else: \n          print(\"It's freezing outside\")\n    \n\n\nWrite a functions which takes three numbers as input parameters and prints them in ascending order. No return:\n\ndef order_ascending(num1: int, num2: int, num3: int):\n  # Your answer goes here\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ One possible solution\n\n\n      def order_ascending(num1: int, num2: int, num3: int):\n          if num1 &lt; num2:\n              if num2 &lt; num3:\n                  print(num1, num2, num3)\n              elif num1 &lt; num3:\n                  print(num1, num3, num2)\n              else:\n                  print(num3, num1, num2)\n          elif num1 &lt; num3:\n              print(num2, num1, num3)\n          elif num2 &lt; num3:\n              print(num2, num3, num1)\n          else:\n              print(num3, num2, num1)\n    \n\n\n\n✅ Another possible solution\n\n\n      def order_ascending(num1: int, num2: int, num3: int):\n          if num1 &lt; num2 and num2 &lt; num3:\n              print(num1, num2, num3)\n          elif num1 &lt; num2 and num3 &lt; num2:\n              print(num1, num3, num2)\n          elif num2 &lt; num1 and num1 &lt; num3:\n              print(num2, num1, num3)\n          elif num2 &lt; num1 and num3 &lt; num1:\n              print(num2, num3, num1)\n          elif num3 &lt; num2 and num2 &lt; num1:\n              print(num3, num2, num1)\n          else:\n              print(num3,num1,num2)",
+    "text": "Print 5 times “hello” using a for-loop\n\n\n👀 Hint\n\n\nhow do you create ranges?\n\n\n\n\n✅ Solution\n\n\n    for i in range(5):\n        print(\"hello\")\n  \n\n\n\n\nPrint the values from 1 to 10.\n\n\n👀 Hint\n\n\nHow can you define the start and end of a range?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 11):\n        print(i)\n  \n\n\n\n\nWhat will be the output of this program?\ngrade = 1\nfor _ in range(10):\n    grade+=1\nprint(grade)\n\n\n👀 Hint\n\n\nWhat happens when I add 1 to a grade 10 times?\n\n\n\n\n✅ Solution\n\n\n11\n\n\n\n\n\nWhat will be the output of this program:\nnumber = 3\nvalue = 0\nfor i in range(4):\n    value += number\nprint(value)\n\n\n👀 Hint\n\n\nWhat happens when I add 3 to a value 4 times?\n\n\n\n\n✅ Solution\n\n\n12",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "🎯 Conditional statements"
+      "🎯 For Loops"
     ]
   },
   {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html",
-    "title": "Conditions",
+    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html#level-1",
+    "href": "topics/07_statements/exercises/for_loops/for_loops.html#level-1",
+    "title": "🎯 For Loops",
     "section": "",
-    "text": "A programmer writes a program that asks questions, and the computer executes the program and provides answers. When asked a question, computers can only respond with 1 or 0, True or False. In other words, they can easily answer: “yes, this is true” or “no, this is false.” You will never get responses such as “Let me think…”, “I don’t know”, or “Probably yes, but I don’t know for sure.”\nPython uses special operators to ask these questions. To make effective use of the answers, you need a mechanism that makes decision based on the answer.\nTo make such decisions, Python offers conditional statements. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.",
+    "text": "Print 5 times “hello” using a for-loop\n\n\n👀 Hint\n\n\nhow do you create ranges?\n\n\n\n\n✅ Solution\n\n\n    for i in range(5):\n        print(\"hello\")\n  \n\n\n\n\nPrint the values from 1 to 10.\n\n\n👀 Hint\n\n\nHow can you define the start and end of a range?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 11):\n        print(i)\n  \n\n\n\n\nWhat will be the output of this program?\ngrade = 1\nfor _ in range(10):\n    grade+=1\nprint(grade)\n\n\n👀 Hint\n\n\nWhat happens when I add 1 to a grade 10 times?\n\n\n\n\n✅ Solution\n\n\n11\n\n\n\n\n\nWhat will be the output of this program:\nnumber = 3\nvalue = 0\nfor i in range(4):\n    value += number\nprint(value)\n\n\n👀 Hint\n\n\nWhat happens when I add 3 to a value 4 times?\n\n\n\n\n✅ Solution\n\n\n12",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "Conditions"
+      "🎯 For Loops"
     ]
   },
   {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#conditional-execution-the-if-statement",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html#conditional-execution-the-if-statement",
-    "title": "Conditions",
-    "section": "Conditional execution: the if statement",
-    "text": "Conditional execution: the if statement\nConditionally executed statements must be indented. This indentation creates a clear and readable structure, making it easy to see all possible execution paths in the code.\nConsider the following code:\nnumber = 7\n\n# check if number is greater than 0\nif number &gt; 0:\n    print(f'{number} is a positive number.')\n\nprint('A statement outside the if statement.')\nThe if statement checks if the number is greater than 0. If the condition is true, it prints that the number is positive.\nThe second print statement is outside the if block and will execute every time the code runs, showing that it is independent of the if condition.",
+    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html#level-2",
+    "href": "topics/07_statements/exercises/for_loops/for_loops.html#level-2",
+    "title": "🎯 For Loops",
+    "section": "Level 2",
+    "text": "Level 2\n\nYou got the Power\nWrite a program that prints the powers of 2 from 2^0 to 2^15. Each line should display the exponent and the corresponding power of 2 in the format:\n2 to the power of 0 is 1\n2 to the power of 1 is 2\n...\n2 to the power of 15 is 32768\n\n\n👀 Hint\n\n\nThink about starting with the smallest power, 2^0, and repeatedly multiplying by 2. The base case is the first power, 2^0 = 1.\n\n\n\n\n✅ Solution\n\n\n    power = 1\n    for expo in range(16):\n        print(f\"2 to the power of {expo} is {power}\")\n        power *= 2\n  \n\n\n\nThat’s odd\nPrint only odd numbers up to 100\n\n\n👀 Hint\n\n\nA number is even if is divisible by 2 and to check divisibility, you can use an operator that gives the remainder of a division. Which operator in Python tells you the remainder when dividing by 2?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 101):\n    if i % 2 != 0:\n        print(i)\n  \n\n\n\nDon’t Panic\nPrint only even numbers up to 100. ONLY if the number is divisible by 42 should you print “DON’T PANIC”\n\n\n👀 Hint\n\n\nHow do you check if a number is even? Apply the same idea to test divisibility by 42 👀\n\n\n\n\n✅ Solution\n\n\n    for i in range(100):\n        if i % 42 == 0 and i != 0:\n            print(\"DON’T PANIC\")\n        if i % 42 != 0 and i % 2 == 0:\n            print(f\"{i} is even\")\n  \n\n\n\nBreak-out!\nPrint numbers between 7 and 100 but stop as soon as you find a number that is divisble by 6.\n\n\n👀 Hint\n\n\nTake a break with your rarely used operator modulus (%)\n\n\n\n\n✅ Solution\n\n\nfor num in range(7, 100):\n    if num % 6 == 0:\n        print(f\"{num} is divisible by 6. Stopping.\")\n        break\n \nprint(num)\n  \n\n\n\nFactorial\nCalculate the factorial of a number. Start with:\n\nnumber: int = int(input(\"Enter a number: \"))\n  \n\n\n👀 Hint\n\n\nThe factorial of 3 is: 1 x 2 x 3\n\n\n\n\n✅ Solution\n\n\nnumber: int = int(input(\"Enter a number: \"))\nfactorial: int = 1\n \nfor i in range(1, number + 1):\n    factorial = factorial * i\nprint(f\"The factorial of {number} is: {factorial}\")\n  \n\n\n\nsdrawkcaB\nAsk the user to enter some text, then print it backwards (using a loop). Start with:\n\nsomething: str = input(\"Type something here: \")\n  \n\n\n👀 Hint\n\n\nAdding isn’t just for numbers!\n\n\n\n\n✅ Solution\n\n\nsomething: str = input(\"Type something here: \")\nbackwards: str = \"\"\n \nfor letter in something:\n    backwards = letter + backwards\nprint(f\"You say '{something}', I say '{backwards}'\")\n  \n\n\n\n46?\nAsk yourself what the 2 outputs of this program should be and then try it out and make sure you understand what the code is doing!\n\nx: int = 0\n\nfor i in \"four\":\n    x = x + 1\nprint(x)\n\n# reset back to zero:\nx = 0\n\nfor i in \"six\":\n    x = x + 1\nprint(x)\n\n\n\n👀 Hint\n\n\nWhat value(s) will the loop variable i be assigned as the loops repeat?\n\n\n\n\n✅ Solution\n\n\n4\n3\n  \nEach of these loops is iterating across the sequence of characters (e.g. letters) in a string, so a string of length 4 (meaning 4 characters long like “abcd” or “desk” or “four”…) will loop 4 times. This code is essentially counting how many characters are in a string and then printing the result.\n\n\n\nClock\nDisplay every minute of every hour in a day like:\n0:00\n0:01\n0:02\n…\n23:58\n23:59\n\n\n👀 Hint\n\n\nSave yourself a lot of typing by using 2 loops!\n\n\n\n\n✅ Solution\n\n\nfor hour in range(0, 24):\n    for minute in range(0, 60):\n        print(f\"{hour}:{minute}\")",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "Conditions"
+      "🎯 For Loops"
     ]
   },
   {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#logical-operators",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html#logical-operators",
-    "title": "Conditions",
-    "section": "Logical operators",
-    "text": "Logical operators\n\nand: The and keyword is a logical operator, and is used to combine conditional statements:\nor: The or keyword is a logical operator, and is used to combine conditional statements:\nnot : The not keyword is a logical operator, and is used to reverse the result of the conditional statement:",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Conditions"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#combining-conditional-statements",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html#combining-conditional-statements",
-    "title": "Conditions",
-    "section": "Combining conditional statements",
-    "text": "Combining conditional statements\n\nExample\nConsider the following numbers: number1 = 200,number2 = 33,number3 = 500. We would like to verify if number1 is greater than number2 and if number3 is greater than number1. We could write two nested ifs:\n\nIf number1 is greater than number2, then:\n\nIf number 3 is greater than number2, then:\n\nDisplay: “number 2 is the smallest number”\n\n\n\nThis would translate into:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif number1 &gt; number2:\n    if  number3 &gt; number1:\n        print(\"Both conditions are True\")\nTest if a is greater than b, AND if c is greater than a:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif number1 &gt; number2 and number3 &gt; number1:\n    print(\"Both conditions are True\")\nThe if statement checks if both a &gt; b and c &gt; a are True using the and operator.\nBecause both conditions are indeed True, the code prints “Both conditions are True.”",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Conditions"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#or",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html#or",
-    "title": "Conditions",
-    "section": "Or",
-    "text": "Or\nThe or keyword is a logical operator, and is used to combine conditional statements:\n\nExample:\nTest if a is greater than b, OR if a is greater than c:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif (number1 &gt; number2) or (anumber1&gt; number3):\n    print(\"At least one of the conditions is True\")\nThe if statement checks if either a &gt; b or a &gt; c is True using the or operator.\nBecause a &gt; b is True, the overall condition is True, so the code prints “At least one of the conditions is True.”",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Conditions"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#not",
-    "href": "topics/07_statements/01_if_statements/01_if_statements.html#not",
-    "title": "Conditions",
-    "section": "Not",
-    "text": "Not\nThe not keyword is a logical operator, and is used to reverse the result of the conditional statement:\n\nExample:\nTest if a is NOT greater than b:\na = 33\nb = 200\nif not a &gt; b:\n    print(\"a is NOT greater than b\")\nThe if statement checks if a is not greater than b by negating the result of the comparison a &gt; b using the not operator.\nSince a &gt; b is False, not a &gt; b is True, so the message “a is NOT greater than b” is printed.\n✍️Challenge: Write a Python program to check if a number is divisible by both 2 and 3.\n\n\nExamples\nPAY ATTENTION TO THE PARENTHESIS\nI want a large pizza and either a coke or rootbeer\nif large_pizza==1 and (coke==1 or rootbeer==1):\n  print(\"OK\")\nI want a large pizza or 2 small pizzas and a coke\nif (large_pizza==1 or small_pizza==2) and coke==1:\n  print(\"OK\")\nI want 8 large pizzas and 15 cokes and 15 rootbeers, and if they don’t have rootbeers, then 30 cokes\nif large_pizza == 8 and ( ( cokes == 15 and rootbeers == 15) or cokes == 30):\n    print(\"OK\")",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Conditions"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/04_matplotlib/04_matplotlib.html",
-    "href": "topics/11_data_processing/04_matplotlib/04_matplotlib.html",
-    "title": "Intro to Matplotlib",
+    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html",
+    "href": "topics/11_data_processing/03_numpy/03_numpy.html",
+    "title": "Intro to NumPy",
     "section": "",
-    "text": "Matplotlib is a scientific library that allows python programmers to easily produce plots for reporting on experimental data.",
+    "text": "Numpy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called numpy arrays.",
     "crumbs": [
       "Syllabus",
       "Data Processing",
-      "Intro to Matplotlib"
+      "Intro to NumPy"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/04_matplotlib/04_matplotlib.html#usage",
-    "href": "topics/11_data_processing/04_matplotlib/04_matplotlib.html#usage",
-    "title": "Intro to Matplotlib",
-    "section": "Usage",
-    "text": "Usage\nThe main feature of matplotlib that we will use is a sub-module called pyplot\n\nYou can import it in your script by using this line of code:\n\nimport matplotlib.pyplot as plt\n\nDraw a simple plot line using plot.plot(x,y)\n\nxpoints = [1,2,3,4,5,6,7,8,9,10]\nypoints = [2,4,6,8,10,12,14,16,18,20]\n\nplt.plot(xpoints, ypoints)\n\nplt.show() # This line is important to display your graph\nTo draw a simple scatter point, you can use plt.scatter(x,y):\nplt.scatter(xpoints, ypoints)\nplt.show()\nIf you wish to save your graphs, use plt.savefig(). This will create a PNG image inside your project directory.\nplt.plot(xpoints, ypoints)\nplt.savefig(\"my_first_graph.png\")\nplt.show() # This line is important to display your graph\nFollow this tutorial to learn the different ways of styling your graph (colours, markers, titles, scales, etc)",
+    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#importing-numpy",
+    "href": "topics/11_data_processing/03_numpy/03_numpy.html#importing-numpy",
+    "title": "Intro to NumPy",
+    "section": "Importing numpy",
+    "text": "Importing numpy\nImport numpy. You may use the alias np\nimport numpy as np",
     "crumbs": [
       "Syllabus",
       "Data Processing",
-      "Intro to Matplotlib"
+      "Intro to NumPy"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html",
-    "title": "Reading/Writing Files",
+    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#numpy-arrays",
+    "href": "topics/11_data_processing/03_numpy/03_numpy.html#numpy-arrays",
+    "title": "Intro to NumPy",
+    "section": "Numpy arrays",
+    "text": "Numpy arrays\nNumpy arrays are structures of data similar to lists.\nOperations with numpy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++.\nTo create a numpy array from a Python list, simply use the following:\nmy_list = [1,2,4,5,7,8]\nmy_array = np.array(my_list)\nAlternatively, an array can be created in one line as such:\nmy_array = np.array([1,2,4,5,7,8])\n\nprint(my_array)\nArrays mimic mathematical vectors and matrices\nExample : Force vector\nLet two force vectors \\[\\vec{F1}\\] and \\[\\vec{F2}\\] represented as column vectors with their respective x and y force components (in Newtons N)\n\\[\n\\vec{F_1}  = \\begin{bmatrix}\n           1  \\\\\n           3  \\\\\n         \\end{bmatrix}\n\\]\n\\[\n\\vec{F_2}  = \\begin{bmatrix}\n   2 \\\\\n   3 \\\\\n\\end{bmatrix}\n\\]\nThe total force is:\n\\[\n\\vec{F_{tot}} = \\vec{F_1} + \\vec{F_2}\n= \\begin{bmatrix}\n   1 + 2 \\\\\n   3 + 3 \\\\\n\\end{bmatrix}\n= \\begin{bmatrix}\n   3 \\\\\n   6 \\\\\n\\end{bmatrix}\n\\]\nThe two forces can be represented using numpy arrays and the two arrays can be added using a +\nforce_1 = np.array([1,3])\nforce_2 = np.array([2,3])\n\nforce_total = force_1 + force_2\nprint(force_total)\nResult: [3 6]\n\nThe x and y components of each force were added independently.\nHad we done this with a simple python lists, we would get [1,3,2,3]\n\n\nThis tutorial shows you all the arithmetic operations that are possible with NumPy arrays.",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Intro to NumPy"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#polynomial-fitting",
+    "href": "topics/11_data_processing/03_numpy/03_numpy.html#polynomial-fitting",
+    "title": "Intro to NumPy",
+    "section": "Polynomial fitting",
+    "text": "Polynomial fitting\nIn most cases in real life, we only have access to historic data and don’t know the analytical function that describes a relationship between two variables \\[f(x)\\].\nPolynomial fitting, or regression, models the relationship between an independent variable \\(x\\) and a dependant variable \\(y\\) based on the observed data points. It finds the coefficients of a polynomial function of a given degree (1,2 , etc.) that best fits the observed data:\n\n\nSource: Abhigyan. (2024, January 12). Understanding Polynomial Regression - Analytics Vidhya - Medium. Medium. https://medium.com/analytics-vidhya/understanding-polynomial-regression-5ac25b970e18\n\n\nnumpy.polyfit()\npolyfit() is a numpy function that allows programmers to fit polynomial function onto the data. In this example the data is stored in simple python lists:\nimport numpy as np\n\nx_observed = [1,2,3,4,5,6]\ny_observed = [2,4,6,7,9,11]\n\n\nFitting\nTo fit a linear equation on observed data points x and y_observed, use:\ncoefficients = np.polyfit(x=x_observed, y=y_observed, deg=1)\n\n\nCoefficients\nThe returned coefficients are a numpy array with [a, b] corresponding to the slope and intercept \\[y = ax + b \\]\nprint(coefficients)\nOutput\narray([1.74285714, 0.4])\n\n\nAccessing the coefficients\nSimilarly to Python lists, elements in a NumPy array are accessed using the index:\na = coefficients[0]\nb = coefficients[1]\n\n# Alternatively you can unpack a, b like this:\na, b = coefficients\n\n\nUsing the coefficients\nNow, to calculate the corresponding y values for each x using the fitted line, you can loop through the list of x values and compute the expected y values using the formula based on the coefficients:\ny_estimate = []\nfor x in x_observed:\n  y_estimate.append(a*x + b)\nAlternatively, to type this faster, you can use a Python list comprehension:\ny_estimate = [a*x + b for x in x_observed]\n\nOptionally, you can use a NumPy array to be even more efficient:\ny_estimate = b + a*np.array(x_observed)\n\n\n\nPredictions for new values\nTo “predict” the value of y for new values of x (for example in the future), simply apply the linear equation:\nx_new = 12 #A value of x we don't have in our raw data\ny_prediction = a*x_new + b\n\n\nSecond degree polynomial\npolyfit() can also be used to fit a polynomial function of any degree \\(n\\) :\nTo fit a second degree polynomial, set the deg parameter to 2:\ncoefficients = np.polyfit(x=x_observed, y=observed_y, deg=2)\na, b, c = coefficients\n\ny_prediction_2 = a*x_new**2 + b*x_new + c\n\ny_estimate2 = [a*x**2 + b*x + c for x in x_observed]\n\n\nEvaluating the performance\nIn the field of data science, evaluating the performance of a model can be tricky. However, in the context of this course, we will focus only on the absolute and relative errors produced by the model for any new data point x_new, where the true value y_correct is known. The evaluation involves comparing the predicted value y_prediction to the actual value y_correct.\n\\[\nAbsolute Error = | Correct - Prediction|\n\\]\n\\[\nRelative Error (\\%) = 100 * \\frac{|Correct - Prediction|}{Correct}\n\\]\nIn python this would be:\ny_prediction = a * x_new + b\n\nabsolute_error = abs(y_correct - y_prediction)\nrelative_error = abs(y_correct - y_prediction) / y_correct\n\nprint(f\"Absolute error: {absolute_error}\")\nprint(f\"Relative error (%): {relative_error:%}\")",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Intro to NumPy"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#correlation-factor-r",
+    "href": "topics/11_data_processing/03_numpy/03_numpy.html#correlation-factor-r",
+    "title": "Intro to NumPy",
+    "section": "Correlation Factor R",
+    "text": "Correlation Factor R\nThe correlation factor or correlation coefficient is a numeric value that quantifies how much two variables vary together. We will be using Numpy’s Pearson correlation coefficient: R = np.corrcoef(variable1_list, variable2_list)[0,1].\nAn R close to 0 indicates no correlation, +1 indicates a strong positive correlation, and -1 indicates a strong negative correlation.\n\n\nCalculating statistical values using NumPy\nHere are useful functions\n\nnp.mean(x_list):\n\nComputes the mean value of x_list\n\n\n\nnp.median(x_list):\n\nComputes the median value of x_list\n\n\n\nnp.std(x_list)\n\nComputes the standard deviation of x_list. The standard deviation is a measure of how dispersed the data in relation to its the mean.\n\nThe data is sometimes incomplete or made up of certain data points that aren’t defined (i.e. equal to np.nan - not a number):\n\n\nnp.nanmean(x_list):\n\nComputes the mean value of x_list ignoring nan\n\n\n\nnp.nanmedian(x_list):\n\nComputes the median value of x_list ignoring nan\n\n\n\nnp.nanstd(x_list)\n\nComputes the standard deviation of x_list ignoring nan\n\n\nLearn more about NaN",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Intro to NumPy"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/02_installing_modules/02_installing_modules.html",
+    "href": "topics/11_data_processing/02_installing_modules/02_installing_modules.html",
+    "title": "Installing Python Modules",
     "section": "",
-    "text": "Files are like books: before you can read from or write into them you must open them!\nThen, when you’re finished you should close them too.)\nSYNTAX: file_variable = open(file_name, access_type)\nwhere:\n\nfile_variable is the name of a variable used to represent the file\nfile_name is the name (or path) of a file on your computer\naccess_type can be:\n\nr if you want to read the file, or\nw if you want to write to the file (this will erase everything in the file first!)\na if you want to append (add) to a file (this will preserve everything that was already in the file beforehand)\n\n\nfile_to_read = open(\"my_input.txt\", \"r\")    # opens my_input.txt for reading\nfirst_line = file_to_read.readline() # puts the first line in the file in a variable\nfile_to_read.close()\nprint(\"The file is closed\")\nor\nwriteable_file = open(\"my_output.txt\", \"w\")  # open my_input.txt for writing\nfile_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nwriteable_file.close()\nprint(\"The file is closed\")\n\n\nPython has a way of opening files that guarantees that the file will automatically get closed when you’re finished with it. This uses a Python statement called with:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # Note: everything in the with block needs a tab insert.\n    first_line = file_to_read.readline()\n\n# Everything after the file is closed does not have a tab insert\nprint(\"The file is closed\")\nor\nwith open(\"my_output.txt\", \"w\") as writeable_file:\n    file_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nLike other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you’ve opened. Once Python finds a line that is not indented, it will close the file for you.",
+    "text": "In this course, we have used a variety of built-in modules like math, turtle, datetime.\nWe are not limited to these built-in modules: developers from all over the world can create new modules that serve particular needs.\nIn the final chapter of our course, we will make extensive use of the following external libraries, popular for scientific research:\nFor these modules, extra steps are needed: they are not built-in to Python, so we have to install them separately.",
     "crumbs": [
       "Syllabus",
       "Data Processing",
-      "Reading/Writing Files"
+      "Installing Python Modules"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#opening-files",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#opening-files",
-    "title": "Reading/Writing Files",
+    "objectID": "topics/11_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
+    "href": "topics/11_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
+    "title": "Installing Python Modules",
+    "section": "Importing and installing a module",
+    "text": "Importing and installing a module\n\nEnsure that the PyCharm project is using the System’s interpreter\nAdd a python file to write your code.\nThe import statement followed by the module name, allows you to import a module into your script. For example:\nimport math   #comes built-in with python\n\nNote: You can use an alias to “nickname” a package and shorten your lines of code by using the as keyword For example:\nimport math as m\n\nprint(m.pi)\nNote: You can also import a function or a sub-module within a given module\nfrom math import sin\n\nprint(sin(0))\n\nIf you are importing a module that wasn’t installed, it will be underlined in red:\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n\n\n\nwow\n\n\n\nIf you see an error saying “Unresolved reference”, that means the module is not installed on the computer.\n\n\nInstalling via PyCharm\n\nClick File &gt; Settings to open the Settings menu:\n\n\n\n\nwow\n\n\n\nSelect Project &gt; Project interpreter from the left hand side menu\nThis is all the list of modules that are installed in my project, yours might not contain much for now.\nTo add a package/module, click the + button at the top of the list\nSearch for the package you want installed: “matlplotlib” then click Install Package\n\n\n\n\nwow\n\n\n\nWhile you are here, install numpy as well:\n\n\n\n\nwow\n\n\n\nNow that the packages are installed, try typing those lines in your python file:\nimport numpy as np\nfrom matlplotlib import pyplot\n\n\n\nInstalling via command line on Windows (like a pro 😎)\n\nType cmd in the Windows search bar and click the “Command Prompt” icon.\nType the following command in the command prompt:\n\npip install --upgrade pip\n\nInstall your packages:\n\npip install matplotlib\npip install numpy\n\n\nInstalling via Terminal on Mac (like a pro 😎)\n\nFrom Launch page, search for an app called Terminal\nType the following command in Terminal:\n\npip3 install --upgrade pip\n\nInstall your packages with the following commands:\n\npip3 install matplotlib\npip3 install numpy",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Installing Python Modules"
+    ]
+  },
+  {
+    "objectID": "topics/08_functions/03_io/03_io.html",
+    "href": "topics/08_functions/03_io/03_io.html",
+    "title": "Basic I/O",
     "section": "",
-    "text": "Files are like books: before you can read from or write into them you must open them!\nThen, when you’re finished you should close them too.)\nSYNTAX: file_variable = open(file_name, access_type)\nwhere:\n\nfile_variable is the name of a variable used to represent the file\nfile_name is the name (or path) of a file on your computer\naccess_type can be:\n\nr if you want to read the file, or\nw if you want to write to the file (this will erase everything in the file first!)\na if you want to append (add) to a file (this will preserve everything that was already in the file beforehand)\n\n\nfile_to_read = open(\"my_input.txt\", \"r\")    # opens my_input.txt for reading\nfirst_line = file_to_read.readline() # puts the first line in the file in a variable\nfile_to_read.close()\nprint(\"The file is closed\")\nor\nwriteable_file = open(\"my_output.txt\", \"w\")  # open my_input.txt for writing\nfile_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nwriteable_file.close()\nprint(\"The file is closed\")\n\n\nPython has a way of opening files that guarantees that the file will automatically get closed when you’re finished with it. This uses a Python statement called with:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # Note: everything in the with block needs a tab insert.\n    first_line = file_to_read.readline()\n\n# Everything after the file is closed does not have a tab insert\nprint(\"The file is closed\")\nor\nwith open(\"my_output.txt\", \"w\") as writeable_file:\n    file_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nLike other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you’ve opened. Once Python finds a line that is not indented, it will close the file for you.",
+    "text": "To better understand input and output functions, we must first differentiate between the programmer (you) and the user (anyone who runs your code). When you type lines of code such as print('Hello') you are instructing the python program to display the message “Hello!” in the console window.\nWhen a user, let’s say Bob runs the code, they will not see your source code. They will only see what is printed to the console window. If you need an information from the user, you must use the input() function instead. This function awaits an answer from the user before moving on to the next step.\nFrom Bob’s perspective, he only sees what your program prints and the question your program requires an answer for. Bob can only type his answer:",
     "crumbs": [
       "Syllabus",
-      "Data Processing",
-      "Reading/Writing Files"
+      "Functions",
+      "Basic I/O"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#reading-from-a-file",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#reading-from-a-file",
-    "title": "Reading/Writing Files",
-    "section": "Reading from a file",
-    "text": "Reading from a file\nYou can read a line from a file using the readline() method on the file variable.\n\nfile_variable.readline()\nFor example, you can read the contents of a file one line at a time:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    line1 = file_to_read.readline()     # reads the 1st line from file_to_read\n    line2 = file_to_read.readline()     # reads the 2nd line\n    line3 = file_to_read.readline()     # reads the 3rd line\nOr, you can read all of the lines of the file within a for-loop\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    for line in file_to_read:\n        print(line)\nYou can combine both methods. One common pattern: Read the first line (usually a header) separate from the rest of the document:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # read the first line of the file\n    line1 = file_to_read.readline()\n\n    # read all of the REST of the lines in the file\n    for line in file_to_read:\n        print(line)\n\nExample\nImagine your input file my_input.txt has the following lines\nThe limerick packs laughs anatomical\nInto space that is quite economical\nBut the good ones I've seen\nAre so seldom clean\nAnd the clean ones are so seldom comical\nWe could read this file with the following code:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    line1 = file_to_read.readline()\n    print(\"Line 1 has been read\")\n    line2 = file_to_read.readline()\n    print(\"Line 2 has been read\")\n\n    for line in file_to_read:\n        print(line)\nQuestion: After this code has been run, what is the console output?\n\n\n✅ Solution\n\n\n    Line 1 has been read\n    Line 2 has been read\n    But the good ones I've seen\n    Are so seldom clean\n    And the clean ones are so seldom comical\n  \n\nQuestion: After this code has been run, what is stored in the line1 and line2 variables?\n\n\n✅ Solution\n\n\n    line1 == \"The limerick packs laughs anatomical\"\n    line2 == \"Into space that is quite economical\"",
+    "objectID": "topics/08_functions/03_io/03_io.html#output-with-print",
+    "href": "topics/08_functions/03_io/03_io.html#output-with-print",
+    "title": "Basic I/O",
+    "section": "Output with print()",
+    "text": "Output with print()\nPrint is a built-in python function which prints the specified message to the screen or console window of your program:\n\nTo print a simple string, you may just type the string within the parenthesis:\n\nprint(\"Hello\")\n\nTo print a variable, you may simply write the name of the variable within parenthesis:\n\na = 10\nprint(a)\n\nTo print multiple objects, you may use the comma separator, between the objects. The various printed objects will be separated by a space ’ ’:\n\na = 10\nb = 15\nc = 20\nprint(\"The values are: \", a, b, c)\nOutput:\nThe values are: 10 15 20\n\nTo print a string combined with a number, you must first convert the number into a string, then concatenate them using the + operator:\n\na = 10\nprint(\"The value of a is \" + str(a))\n\nTo print a string combined with a number, you may also use f-strings:\n\na = 10\nprint(f\"The of a is {a}\")",
     "crumbs": [
       "Syllabus",
-      "Data Processing",
-      "Reading/Writing Files"
+      "Functions",
+      "Basic I/O"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#writing-to-a-file",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#writing-to-a-file",
-    "title": "Reading/Writing Files",
-    "section": "Writing to a file",
-    "text": "Writing to a file\nThere are a few ways to write to a file:\n\nusing file_variable.write(msg: str): good for writing one string at a time to a file\nusing file_variable.writelines(lines: list[str]): good for writing a list of lines all at once to a file\nusing print(msg: str, file=file_variable): it turns out, you can also use good-old print(), with the optional file argument set to a file_variable.\n\nEach of these methods will be shown below.\n\nfile_variable.write()\nTo write a single string to a file, the most common method is to use file_variable.write().\nwrite() takes a single str parameter and puts the value of that parameter into the file, without adding any characters.\nNOTE: by default, this will not create a new line each time you write to the file! You will need to add \"\\n\" to the end of your string:\nwith open(\"output_with_lines.txt\", \"w\") as output_file:\n    output_file.write(\"Hello\")\n    output_file.write(\"World!\")\n\nwith open(\"output_without_lines.txt\", \"w\") as output_file:\n    output_file.write(\"Hello\\n\")\n    output_file.write(\"World!\")\nThe code above results in the following files:\noutput_with_lines.txt:\nHelloWorld!\n\noutput_without_lines.txt:\nHello\nWorld!\nWhat is \\n? \"\\n\" is called the newline character. You can click on the link to learn more – but, for our course, all you need to know is that it’s the way computer’s represent a “new line” in a file.\n\n\nfile_variable.writelines()\nIf you need to write many lines to a file at once, a much more convenient method is to use the writelines() function.\nInstead of taking a str parameter, writelines() takes a list[str] paramter – a list of strings:\nlines_list = [\"Hello\", \"World!\"]\nwith open(\"my_output.txt\", \"w\") as output_file:   # variable is \"output_file\"\n    output_file.writelines(lines_list)\nThe code above results in the following file:\nmy_output.txt:\nHello\nWorld!\nNote: you can also print a list of lines to a file just simply using write(); if you use a for loop and remember to add the \\n character. The code below will have the exact same result as the code above:\nlines_list = [\"Hello\", \"World!\"]\nwith open(\"my_output.txt\", \"w\") as output_file:\n    for line in lines_list:\n        output_file.write(line + \"\\n\") # NOTE: you will need to add \"\\n\"\n\n\nprint(msg: str, file=file_variable)\nFinally, you can also use the print function we have been using throughout the whole class.\nThe difference is, in order to print to a file instead of the console, we need to add a file = file_variable parameter:\nwith open(\"my_output.txt\", \"w\") as output_file:\n    print(\"Hello!\", file=output_file)\n    print(\"World!\", file=output_file)\nThe code above results in the following file:\nmy_output.txt:\nHello\nWorld!\nNOTE: with print(), you do not need to add a \\n character. Why? By default, print() always includes a \\n character! We can actually change that behavior by using the optional end parameter of the print function:\nwith open(\"my_output.txt\", \"w\") as output_file:\n    # This now works very similarly to the file_variable.write() method.\n    print(\"Hello!\\n\", file = output_file, end=\"\")\n    print(\"World!\", file = output_file, end=\"\")",
+    "objectID": "topics/08_functions/03_io/03_io.html#input-with-input",
+    "href": "topics/08_functions/03_io/03_io.html#input-with-input",
+    "title": "Basic I/O",
+    "section": "Input with input()",
+    "text": "Input with input()\nInput is a built-in function that enables interactions with the users by gathering input during the program’s execution.\n\nTo use the input function, simply use parenthesis to call it () and this will be sufficient to require an input from the user.\n\nname = input()\n\nThe question asked to the user can be specified in between parenthesis:\n\nname = input(\"What is your name?\")\n\nThe returned value of the input() function is always a string str:\n\nage = input(\"What is your age?\")\nage + 3           # &lt;--- error\nprint(type(age))  # This will return `&lt;class str&gt;`\n\nTo use the inputted value, you must convert it into the appropriate numeric type by using the int() or float() functions\n\nage = int(input(\"What is your age? \"))\nage + 3\n\nYou must be careful to use the correct data type for conversion because if the user inputs a value of a wider type, this will cause an error:\n\nheight = int(input(\"What is your height?\"))\nprint(height)\n&gt;&gt;&gt; What is your height? 5.5\n\nIn this case, the correct conversion function is float():\n\nheight = float(input(\"What is your height?\"))\nprint(height)\n &gt;&gt;&gt; What is your height? 5.5\n 5.5",
     "crumbs": [
       "Syllabus",
-      "Data Processing",
-      "Reading/Writing Files"
+      "Functions",
+      "Basic I/O"
     ]
   },
   {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#csv-file-format",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#csv-file-format",
-    "title": "Reading/Writing Files",
-    "section": "CSV File Format",
-    "text": "CSV File Format\nIn science, much of the data that you will receive will be stored in a comma separated value (.csv) file. These files can be easily generated from Excel, GoogleSheets or any other similar tools.\n\nIMPORTANT: Parsing and reviewing a CSV file requires that the programmer knows how the data is organized in the file. For example, which column contains which data.\n\nHere are the basics of .csv files:\n\nData is separated into rows\nEach row contains columns, where the columns are separated by a comma characters (,).\nOften, the first line of the file is a “header” row, containing the names of the columns. If your file starts with a header row, you’ll often want to skip that row by reading it before you start reading the rest of the file",
+    "objectID": "topics/08_functions/03_io/03_io.html#common-mistakes",
+    "href": "topics/08_functions/03_io/03_io.html#common-mistakes",
+    "title": "Basic I/O",
+    "section": "Common mistakes",
+    "text": "Common mistakes\nPrint without parenthesis\nprint \"hi\"  #&lt;--- print is a function, you must call it with parenthesis\nCorrect answer:\nprint(\"hi\")\nPrinting many objects \nprint(\"hi\")  name age height # &lt;--- ERROR\nPossible answer 1\nCombining strings using the + operator.\nprint(\"hi \" + name + \" your age is: \" + str(age) + \" and your height is: \" + str(height))\nPossible answer 2\nUse comma , to separate multiple objects within the print() call\nprint(\"hi \", name, \"your age is :\", age, \" and your height is: \", height)\nPossible answer 3\nUse f-strings\nprint(f\"hi {name}  your age is: {age} and your height is: {height}\")\nAnswer instead of a question\nname = input(\"Robert\")  # &lt;--- Error: putting the answer instead of question\nname = input(\"What is your name?\")\nUsing input everywhere\n\nOnly use input() wherever you require an answer from the user, otherwise there is no need in using it.\n\nx = input(3 + 2)    #&lt;--- input() should not be used here\nCorrect answer:\nx = 3 + 2",
     "crumbs": [
       "Syllabus",
-      "Data Processing",
-      "Reading/Writing Files"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#goals",
-    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#goals",
-    "title": "Reading/Writing Files",
-    "section": "Goals",
-    "text": "Goals\nLearn how to open and read a simple csv file and parse the data using either lists or dictionaries.\n\nExample Input\nEach row contains information about a student, the course that they are taking, and grade that they achieved in that course.\nFirst Name,Last Name,Program,Grade\nMickey,Mouse,Singing,33\nMickey,Mouse,Acting,85\nDonald,Duck,Singing,33\nDonald,Duck,Anger Management,20\nDonald,Duck,Acting,97\nBugs,Bunny,Singing,95\nBugs,Bunny,Acting,100\nBugs,Bunny,Diction,85\nBugs,Bunny,Anger Management,95\nYosemite,Sam,Anger Management,0\nYosemite,Sam,Dragon Management,65\nYosemite,Sam,Acting,100\nElmer,Fudd,Diction,75\nElmer,Fudd,Hunting Law,61\nElmer,Fudd,Acting,81\nElmer,Fudd,Singing,99\n\n\nUsing Python with CSV Files\nTo read a csv file, open the file in the standard way.\nOnce your flie has been opened, it needs to be converted to a csv.reader.\nAt this point it can be looped over, just like an ordinary file, with the following exceptions:\n\nIf looping over a csv.reader reader, it will return a list object, with each element the individual data separated by commas\n\nExample - csv.reader\nimport csv\ninput_file = \"input_file.csv\"\n\nwith open(input_file, \"r\") as fh:\n    # create a csv reader, to parse each line as it is being read in\n    csv_file: csv.reader = csv.reader(fh)\n    for line in csv_file:\n        print(line)\nOutput:\nImportant Notice that all the “lines” are actually a list AND that the grades are strings (you will need to convert to numbers if you need them to be numbers)\n['First Name', 'Last Name', 'Program', 'Grade']\n['Mickey', 'Mouse', 'Singing', '33']\n['Mickey', 'Mouse', 'Acting', '85']\n['Donald', 'Duck', 'Singing', '33']\n...\n\nExample Problem # 1\nAssume the data in an input.csv file is the same as the above data\nWrite a main function that:\n\nAsks user for the filename to read\nRead the file using the csv.reader and for each row, print out the first name of each student, as well as the program(s) that they are in.\nCreate a list of grades so that we can calculate the average grade\n\nimport csv\n\n# constants representing which column index goes with what data\nFIRST_NAME = 0\nLAST_NAME = 1\nPROGRAM = 2\nGRADE = 3\n\n# create an empty list for the grades\ngrades: list[float] = []\n\ndef main(input_file):\n    with open(input_file, \"r\") as fh:\n        # read the header file now, because it is not part of the \"real\" data\n        fh.readline()\n\n        # create a csv reader so that it can parse the data correctly\n        csv_file: csv.reader = csv.reader(fh)\n\n        for line in csv_file:\n            # print the individual info\n            print(line[FIRST_NAME], line[PROGRAM])\n\n            # append the grade in a new list\n            # Remember that the data from the csv file is always a string,\n            # so don't forget to convert to a number\n            grades.append(float(line[GRADE]))\n\n        # what is the average grade\n        print(\"The average grade is: \", sum(grades) / len(grades))\n\nif __name__ == \"__main__\":\n    filename = input(\"Enter the csv file to read: \")\n    main(filename)\nSample output\nEnter the csv file to read: input_file.csv\nMickey Singing\nMickey Acting\nDonald Singing\nDonald Anger Management\nDonald Acting\nBugs Singing\nBugs Acting\nBugs Diction\nBugs Anger Management\nYosemite Anger Management\nYosemite Dragon Management\nYosemite Acting\nElmer Diction\nElmer Hunting Law\nElmer Acting\nElmer Singing\nThe average grade is:  70.25\n\n\n\nCoding Challenge\n\nThe answer will be given below, but see if you can do this on your own :)\n\nWrite a main function that:\n\nAsks user for the filename to read\nRead the file using the csv.reader and, only for Elmer Fudd, print out the program name and the grade.\nWhat is the average grade for Elmer Fudd?\n\nEnter the csv file to read: input_file.csv\nDiction        : 75.0\nHunting Law    : 61.0\nActing         : 81.0\nSinging        : 99.0\nElmer Fudd's average grade is:  79.0\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\nimport csv\n\n# constants representing which column index goes with what data\nFIRST_NAME = 0\nLAST_NAME = 1\nPROGRAM = 2\nGRADE = 3\n\n# create an empty list for the grades\ngrades: list[float] = []\n\ndef main(input_file):\n    with open(input_file, \"r\") as fh:\n        # read the header file now, because it is not part of the \"real\" data\n        fh.readline()\n\n        # create a csv reader so that it can parse the data correctly\n        csv_file: csv.reader = csv.reader(fh)\n\n        for line in csv_file:\n            if line[FIRST_NAME] == \"Elmer\" and line[LAST_NAME] == \"Fudd\":\n                grade = float(line[GRADE])\n                print(f\"{line[PROGRAM]:15}: {grade:4.1f}\")\n                grades.append(grade)\n\n        # what is the average grade\n        print(\"Elmer Fudd's average grade is: \", sum(grades) / len(grades))\n\nif __name__ == \"__main__\":\n    filename = input(\"Enter the csv file to read: \")\n    main(filename)",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Reading/Writing Files"
+      "Functions",
+      "Basic I/O"
     ]
   },
   {
@@ -1565,255 +1529,271 @@
     ]
   },
   {
-    "objectID": "topics/08_functions/03_io/03_io.html",
-    "href": "topics/08_functions/03_io/03_io.html",
-    "title": "Basic I/O",
-    "section": "",
-    "text": "To better understand input and output functions, we must first differentiate between the programmer (you) and the user (anyone who runs your code). When you type lines of code such as print('Hello') you are instructing the python program to display the message “Hello!” in the console window.\nWhen a user, let’s say Bob runs the code, they will not see your source code. They will only see what is printed to the console window. If you need an information from the user, you must use the input() function instead. This function awaits an answer from the user before moving on to the next step.\nFrom Bob’s perspective, he only sees what your program prints and the question your program requires an answer for. Bob can only type his answer:",
-    "crumbs": [
-      "Syllabus",
-      "Functions",
-      "Basic I/O"
-    ]
-  },
-  {
-    "objectID": "topics/08_functions/03_io/03_io.html#output-with-print",
-    "href": "topics/08_functions/03_io/03_io.html#output-with-print",
-    "title": "Basic I/O",
-    "section": "Output with print()",
-    "text": "Output with print()\nPrint is a built-in python function which prints the specified message to the screen or console window of your program:\n\nTo print a simple string, you may just type the string within the parenthesis:\n\nprint(\"Hello\")\n\nTo print a variable, you may simply write the name of the variable within parenthesis:\n\na = 10\nprint(a)\n\nTo print multiple objects, you may use the comma separator, between the objects. The various printed objects will be separated by a space ’ ’:\n\na = 10\nb = 15\nc = 20\nprint(\"The values are: \", a, b, c)\nOutput:\nThe values are: 10 15 20\n\nTo print a string combined with a number, you must first convert the number into a string, then concatenate them using the + operator:\n\na = 10\nprint(\"The value of a is \" + str(a))\n\nTo print a string combined with a number, you may also use f-strings:\n\na = 10\nprint(f\"The of a is {a}\")",
-    "crumbs": [
-      "Syllabus",
-      "Functions",
-      "Basic I/O"
-    ]
-  },
-  {
-    "objectID": "topics/08_functions/03_io/03_io.html#input-with-input",
-    "href": "topics/08_functions/03_io/03_io.html#input-with-input",
-    "title": "Basic I/O",
-    "section": "Input with input()",
-    "text": "Input with input()\nInput is a built-in function that enables interactions with the users by gathering input during the program’s execution.\n\nTo use the input function, simply use parenthesis to call it () and this will be sufficient to require an input from the user.\n\nname = input()\n\nThe question asked to the user can be specified in between parenthesis:\n\nname = input(\"What is your name?\")\n\nThe returned value of the input() function is always a string str:\n\nage = input(\"What is your age?\")\nage + 3           # &lt;--- error\nprint(type(age))  # This will return `&lt;class str&gt;`\n\nTo use the inputted value, you must convert it into the appropriate numeric type by using the int() or float() functions\n\nage = int(input(\"What is your age? \"))\nage + 3\n\nYou must be careful to use the correct data type for conversion because if the user inputs a value of a wider type, this will cause an error:\n\nheight = int(input(\"What is your height?\"))\nprint(height)\n&gt;&gt;&gt; What is your height? 5.5\n\nIn this case, the correct conversion function is float():\n\nheight = float(input(\"What is your height?\"))\nprint(height)\n &gt;&gt;&gt; What is your height? 5.5\n 5.5",
-    "crumbs": [
-      "Syllabus",
-      "Functions",
-      "Basic I/O"
-    ]
-  },
-  {
-    "objectID": "topics/08_functions/03_io/03_io.html#common-mistakes",
-    "href": "topics/08_functions/03_io/03_io.html#common-mistakes",
-    "title": "Basic I/O",
-    "section": "Common mistakes",
-    "text": "Common mistakes\nPrint without parenthesis\nprint \"hi\"  #&lt;--- print is a function, you must call it with parenthesis\nCorrect answer:\nprint(\"hi\")\nPrinting many objects \nprint(\"hi\")  name age height # &lt;--- ERROR\nPossible answer 1\nCombining strings using the + operator.\nprint(\"hi \" + name + \" your age is: \" + str(age) + \" and your height is: \" + str(height))\nPossible answer 2\nUse comma , to separate multiple objects within the print() call\nprint(\"hi \", name, \"your age is :\", age, \" and your height is: \", height)\nPossible answer 3\nUse f-strings\nprint(f\"hi {name}  your age is: {age} and your height is: {height}\")\nAnswer instead of a question\nname = input(\"Robert\")  # &lt;--- Error: putting the answer instead of question\nname = input(\"What is your name?\")\nUsing input everywhere\n\nOnly use input() wherever you require an answer from the user, otherwise there is no need in using it.\n\nx = input(3 + 2)    #&lt;--- input() should not be used here\nCorrect answer:\nx = 3 + 2",
-    "crumbs": [
-      "Syllabus",
-      "Functions",
-      "Basic I/O"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/02_installing_modules/02_installing_modules.html",
-    "href": "topics/11_data_processing/02_installing_modules/02_installing_modules.html",
-    "title": "Installing Python Modules",
-    "section": "",
-    "text": "In this course, we have used a variety of built-in modules like math, turtle, datetime.\nWe are not limited to these built-in modules: developers from all over the world can create new modules that serve particular needs.\nIn the final chapter of our course, we will make extensive use of the following external libraries, popular for scientific research:\nFor these modules, extra steps are needed: they are not built-in to Python, so we have to install them separately.",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Installing Python Modules"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
-    "href": "topics/11_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
-    "title": "Installing Python Modules",
-    "section": "Importing and installing a module",
-    "text": "Importing and installing a module\n\nEnsure that the PyCharm project is using the System’s interpreter\nAdd a python file to write your code.\nThe import statement followed by the module name, allows you to import a module into your script. For example:\nimport math   #comes built-in with python\n\nNote: You can use an alias to “nickname” a package and shorten your lines of code by using the as keyword For example:\nimport math as m\n\nprint(m.pi)\nNote: You can also import a function or a sub-module within a given module\nfrom math import sin\n\nprint(sin(0))\n\nIf you are importing a module that wasn’t installed, it will be underlined in red:\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n\n\n\nwow\n\n\n\nIf you see an error saying “Unresolved reference”, that means the module is not installed on the computer.\n\n\nInstalling via PyCharm\n\nClick File &gt; Settings to open the Settings menu:\n\n\n\n\nwow\n\n\n\nSelect Project &gt; Project interpreter from the left hand side menu\nThis is all the list of modules that are installed in my project, yours might not contain much for now.\nTo add a package/module, click the + button at the top of the list\nSearch for the package you want installed: “matlplotlib” then click Install Package\n\n\n\n\nwow\n\n\n\nWhile you are here, install numpy as well:\n\n\n\n\nwow\n\n\n\nNow that the packages are installed, try typing those lines in your python file:\nimport numpy as np\nfrom matlplotlib import pyplot\n\n\n\nInstalling via command line on Windows (like a pro 😎)\n\nType cmd in the Windows search bar and click the “Command Prompt” icon.\nType the following command in the command prompt:\n\npip install --upgrade pip\n\nInstall your packages:\n\npip install matplotlib\npip install numpy\n\n\nInstalling via Terminal on Mac (like a pro 😎)\n\nFrom Launch page, search for an app called Terminal\nType the following command in Terminal:\n\npip3 install --upgrade pip\n\nInstall your packages with the following commands:\n\npip3 install matplotlib\npip3 install numpy",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Installing Python Modules"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html",
-    "href": "topics/11_data_processing/03_numpy/03_numpy.html",
-    "title": "Intro to NumPy",
-    "section": "",
-    "text": "Numpy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called numpy arrays.",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Intro to NumPy"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#importing-numpy",
-    "href": "topics/11_data_processing/03_numpy/03_numpy.html#importing-numpy",
-    "title": "Intro to NumPy",
-    "section": "Importing numpy",
-    "text": "Importing numpy\nImport numpy. You may use the alias np\nimport numpy as np",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Intro to NumPy"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#numpy-arrays",
-    "href": "topics/11_data_processing/03_numpy/03_numpy.html#numpy-arrays",
-    "title": "Intro to NumPy",
-    "section": "Numpy arrays",
-    "text": "Numpy arrays\nNumpy arrays are structures of data similar to lists.\nOperations with numpy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++.\nTo create a numpy array from a Python list, simply use the following:\nmy_list = [1,2,4,5,7,8]\nmy_array = np.array(my_list)\nAlternatively, an array can be created in one line as such:\nmy_array = np.array([1,2,4,5,7,8])\n\nprint(my_array)\nArrays mimic mathematical vectors and matrices\nExample : Force vector\nLet two force vectors \\[\\vec{F1}\\] and \\[\\vec{F2}\\] represented as column vectors with their respective x and y force components (in Newtons N)\n\\[\n\\vec{F_1}  = \\begin{bmatrix}\n           1  \\\\\n           3  \\\\\n         \\end{bmatrix}\n\\]\n\\[\n\\vec{F_2}  = \\begin{bmatrix}\n   2 \\\\\n   3 \\\\\n\\end{bmatrix}\n\\]\nThe total force is:\n\\[\n\\vec{F_{tot}} = \\vec{F_1} + \\vec{F_2}\n= \\begin{bmatrix}\n   1 + 2 \\\\\n   3 + 3 \\\\\n\\end{bmatrix}\n= \\begin{bmatrix}\n   3 \\\\\n   6 \\\\\n\\end{bmatrix}\n\\]\nThe two forces can be represented using numpy arrays and the two arrays can be added using a +\nforce_1 = np.array([1,3])\nforce_2 = np.array([2,3])\n\nforce_total = force_1 + force_2\nprint(force_total)\nResult: [3 6]\n\nThe x and y components of each force were added independently.\nHad we done this with a simple python lists, we would get [1,3,2,3]\n\n\nThis tutorial shows you all the arithmetic operations that are possible with NumPy arrays.",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Intro to NumPy"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#polynomial-fitting",
-    "href": "topics/11_data_processing/03_numpy/03_numpy.html#polynomial-fitting",
-    "title": "Intro to NumPy",
-    "section": "Polynomial fitting",
-    "text": "Polynomial fitting\nIn most cases in real life, we only have access to historic data and don’t know the analytical function that describes a relationship between two variables \\[f(x)\\].\nPolynomial fitting, or regression, models the relationship between an independent variable \\(x\\) and a dependant variable \\(y\\) based on the observed data points. It finds the coefficients of a polynomial function of a given degree (1,2 , etc.) that best fits the observed data:\n\n\nSource: Abhigyan. (2024, January 12). Understanding Polynomial Regression - Analytics Vidhya - Medium. Medium. https://medium.com/analytics-vidhya/understanding-polynomial-regression-5ac25b970e18\n\n\nnumpy.polyfit()\npolyfit() is a numpy function that allows programmers to fit polynomial function onto the data. In this example the data is stored in simple python lists:\nimport numpy as np\n\nx_observed = [1,2,3,4,5,6]\ny_observed = [2,4,6,7,9,11]\n\n\nFitting\nTo fit a linear equation on observed data points x and y_observed, use:\ncoefficients = np.polyfit(x=x_observed, y=y_observed, deg=1)\n\n\nCoefficients\nThe returned coefficients are a numpy array with [a, b] corresponding to the slope and intercept \\[y = ax + b \\]\nprint(coefficients)\nOutput\narray([1.74285714, 0.4])\n\n\nAccessing the coefficients\nSimilarly to Python lists, elements in a NumPy array are accessed using the index:\na = coefficients[0]\nb = coefficients[1]\n\n# Alternatively you can unpack a, b like this:\na, b = coefficients\n\n\nUsing the coefficients\nNow, to calculate the corresponding y values for each x using the fitted line, you can loop through the list of x values and compute the expected y values using the formula based on the coefficients:\ny_estimate = []\nfor x in x_observed:\n  y_estimate.append(a*x + b)\nAlternatively, to type this faster, you can use a Python list comprehension:\ny_estimate = [a*x + b for x in x_observed]\n\nOptionally, you can use a NumPy array to be even more efficient:\ny_estimate = b + a*np.array(x_observed)\n\n\n\nPredictions for new values\nTo “predict” the value of y for new values of x (for example in the future), simply apply the linear equation:\nx_new = 12 #A value of x we don't have in our raw data\ny_prediction = a*x_new + b\n\n\nSecond degree polynomial\npolyfit() can also be used to fit a polynomial function of any degree \\(n\\) :\nTo fit a second degree polynomial, set the deg parameter to 2:\ncoefficients = np.polyfit(x=x_observed, y=observed_y, deg=2)\na, b, c = coefficients\n\ny_prediction_2 = a*x_new**2 + b*x_new + c\n\ny_estimate2 = [a*x**2 + b*x + c for x in x_observed]\n\n\nEvaluating the performance\nIn the field of data science, evaluating the performance of a model can be tricky. However, in the context of this course, we will focus only on the absolute and relative errors produced by the model for any new data point x_new, where the true value y_correct is known. The evaluation involves comparing the predicted value y_prediction to the actual value y_correct.\n\\[\nAbsolute Error = | Correct - Prediction|\n\\]\n\\[\nRelative Error (\\%) = 100 * \\frac{|Correct - Prediction|}{Correct}\n\\]\nIn python this would be:\ny_prediction = a * x_new + b\n\nabsolute_error = abs(y_correct - y_prediction)\nrelative_error = abs(y_correct - y_prediction) / y_correct\n\nprint(f\"Absolute error: {absolute_error}\")\nprint(f\"Relative error (%): {relative_error:%}\")",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Intro to NumPy"
-    ]
-  },
-  {
-    "objectID": "topics/11_data_processing/03_numpy/03_numpy.html#correlation-factor-r",
-    "href": "topics/11_data_processing/03_numpy/03_numpy.html#correlation-factor-r",
-    "title": "Intro to NumPy",
-    "section": "Correlation Factor R",
-    "text": "Correlation Factor R\nThe correlation factor or correlation coefficient is a numeric value that quantifies how much two variables vary together. We will be using Numpy’s Pearson correlation coefficient: R = np.corrcoef(variable1_list, variable2_list)[0,1].\nAn R close to 0 indicates no correlation, +1 indicates a strong positive correlation, and -1 indicates a strong negative correlation.\n\n\nCalculating statistical values using NumPy\nHere are useful functions\n\nnp.mean(x_list):\n\nComputes the mean value of x_list\n\n\n\nnp.median(x_list):\n\nComputes the median value of x_list\n\n\n\nnp.std(x_list)\n\nComputes the standard deviation of x_list. The standard deviation is a measure of how dispersed the data in relation to its the mean.\n\nThe data is sometimes incomplete or made up of certain data points that aren’t defined (i.e. equal to np.nan - not a number):\n\n\nnp.nanmean(x_list):\n\nComputes the mean value of x_list ignoring nan\n\n\n\nnp.nanmedian(x_list):\n\nComputes the median value of x_list ignoring nan\n\n\n\nnp.nanstd(x_list)\n\nComputes the standard deviation of x_list ignoring nan\n\n\nLearn more about NaN",
-    "crumbs": [
-      "Syllabus",
-      "Data Processing",
-      "Intro to NumPy"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html",
-    "href": "topics/07_statements/exercises/for_loops/for_loops.html",
-    "title": "🎯 For Loops",
-    "section": "",
-    "text": "Print 5 times “hello” using a for-loop\n\n\n👀 Hint\n\n\nhow do you create ranges?\n\n\n\n\n✅ Solution\n\n\n    for i in range(5):\n        print(\"hello\")\n  \n\n\n\n\nPrint the values from 1 to 10.\n\n\n👀 Hint\n\n\nHow can you define the start and end of a range?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 11):\n        print(i)\n  \n\n\n\n\nWhat will be the output of this program?\ngrade = 1\nfor _ in range(10):\n    grade+=1\nprint(grade)\n\n\n👀 Hint\n\n\nWhat happens when I add 1 to a grade 10 times?\n\n\n\n\n✅ Solution\n\n\n11\n\n\n\n\n\nWhat will be the output of this program:\nnumber = 3\nvalue = 0\nfor i in range(4):\n    value += number\nprint(value)\n\n\n👀 Hint\n\n\nWhat happens when I add 3 to a value 4 times?\n\n\n\n\n✅ Solution\n\n\n12",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "🎯 For Loops"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html#level-1",
-    "href": "topics/07_statements/exercises/for_loops/for_loops.html#level-1",
-    "title": "🎯 For Loops",
-    "section": "",
-    "text": "Print 5 times “hello” using a for-loop\n\n\n👀 Hint\n\n\nhow do you create ranges?\n\n\n\n\n✅ Solution\n\n\n    for i in range(5):\n        print(\"hello\")\n  \n\n\n\n\nPrint the values from 1 to 10.\n\n\n👀 Hint\n\n\nHow can you define the start and end of a range?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 11):\n        print(i)\n  \n\n\n\n\nWhat will be the output of this program?\ngrade = 1\nfor _ in range(10):\n    grade+=1\nprint(grade)\n\n\n👀 Hint\n\n\nWhat happens when I add 1 to a grade 10 times?\n\n\n\n\n✅ Solution\n\n\n11\n\n\n\n\n\nWhat will be the output of this program:\nnumber = 3\nvalue = 0\nfor i in range(4):\n    value += number\nprint(value)\n\n\n👀 Hint\n\n\nWhat happens when I add 3 to a value 4 times?\n\n\n\n\n✅ Solution\n\n\n12",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "🎯 For Loops"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/exercises/for_loops/for_loops.html#level-2",
-    "href": "topics/07_statements/exercises/for_loops/for_loops.html#level-2",
-    "title": "🎯 For Loops",
-    "section": "Level 2",
-    "text": "Level 2\n\nYou got the Power\nWrite a program that prints the powers of 2 from 2^0 to 2^15. Each line should display the exponent and the corresponding power of 2 in the format:\n2 to the power of 0 is 1\n2 to the power of 1 is 2\n...\n2 to the power of 15 is 32768\n\n\n👀 Hint\n\n\nThink about starting with the smallest power, 2^0, and repeatedly multiplying by 2. The base case is the first power, 2^0 = 1.\n\n\n\n\n✅ Solution\n\n\n    power = 1\n    for expo in range(16):\n        print(f\"2 to the power of {expo} is {power}\")\n        power *= 2\n  \n\n\n\nThat’s odd\nPrint only odd numbers up to 100\n\n\n👀 Hint\n\n\nA number is even if is divisible by 2 and to check divisibility, you can use an operator that gives the remainder of a division. Which operator in Python tells you the remainder when dividing by 2?\n\n\n\n\n✅ Solution\n\n\n    for i in range(1, 101):\n    if i % 2 != 0:\n        print(i)\n  \n\n\n\nDon’t Panic\nPrint only even numbers up to 100. ONLY if the number is divisible by 42 should you print “DON’T PANIC”\n\n\n👀 Hint\n\n\nHow do you check if a number is even? Apply the same idea to test divisibility by 42 👀\n\n\n\n\n✅ Solution\n\n\n    for i in range(100):\n        if i % 42 == 0 and i != 0:\n            print(\"DON’T PANIC\")\n        if i % 42 != 0 and i % 2 == 0:\n            print(f\"{i} is even\")\n  \n\n\n\nBreak-out!\nPrint numbers between 7 and 100 but stop as soon as you find a number that is divisble by 6.\n\n\n👀 Hint\n\n\nTake a break with your rarely used operator modulus (%)\n\n\n\n\n✅ Solution\n\n\nfor num in range(7, 100):\n    if num % 6 == 0:\n        print(f\"{num} is divisible by 6. Stopping.\")\n        break\n \nprint(num)\n  \n\n\n\nFactorial\nCalculate the factorial of a number. Start with:\n\nnumber: int = int(input(\"Enter a number: \"))\n  \n\n\n👀 Hint\n\n\nThe factorial of 3 is: 1 x 2 x 3\n\n\n\n\n✅ Solution\n\n\nnumber: int = int(input(\"Enter a number: \"))\nfactorial: int = 1\n \nfor i in range(1, number + 1):\n    factorial = factorial * i\nprint(f\"The factorial of {number} is: {factorial}\")\n  \n\n\n\nsdrawkcaB\nAsk the user to enter some text, then print it backwards (using a loop). Start with:\n\nsomething: str = input(\"Type something here: \")\n  \n\n\n👀 Hint\n\n\nAdding isn’t just for numbers!\n\n\n\n\n✅ Solution\n\n\nsomething: str = input(\"Type something here: \")\nbackwards: str = \"\"\n \nfor letter in something:\n    backwards = letter + backwards\nprint(f\"You say '{something}', I say '{backwards}'\")\n  \n\n\n\n46?\nAsk yourself what the 2 outputs of this program should be and then try it out and make sure you understand what the code is doing!\n\nx: int = 0\n\nfor i in \"four\":\n    x = x + 1\nprint(x)\n\n# reset back to zero:\nx = 0\n\nfor i in \"six\":\n    x = x + 1\nprint(x)\n\n\n\n👀 Hint\n\n\nWhat value(s) will the loop variable i be assigned as the loops repeat?\n\n\n\n\n✅ Solution\n\n\n4\n3\n  \nEach of these loops is iterating across the sequence of characters (e.g. letters) in a string, so a string of length 4 (meaning 4 characters long like “abcd” or “desk” or “four”…) will loop 4 times. This code is essentially counting how many characters are in a string and then printing the result.\n\n\n\nClock\nDisplay every minute of every hour in a day like:\n0:00\n0:01\n0:02\n…\n23:58\n23:59\n\n\n👀 Hint\n\n\nSave yourself a lot of typing by using 2 loops!\n\n\n\n\n✅ Solution\n\n\nfor hour in range(0, 24):\n    for minute in range(0, 60):\n        print(f\"{hour}:{minute}\")",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "🎯 For Loops"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html",
-    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html",
-    "title": "The if-else statement",
-    "section": "",
-    "text": "An if statement can have an optional else clause. The else statement executes if the condition in the if statement evaluates to False.\nHere, if the condition inside the if statement evaluates to\nConsider the following code:\nSample output",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "The if-else statement"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#the-elif-statement",
-    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#the-elif-statement",
-    "title": "The if-else statement",
-    "section": "The elif statement",
-    "text": "The elif statement\nThe if...else statement is used to execute a block of code among two alternatives.\nHowever, if we need to make a choice between more than two alternatives, we use the if...elif...else statement.\nThe elif keyword is short for “else if” and is used to check multiple conditions, stopping as soon as it finds the first true condition.\nif condition1:\n    # code block 1\n\nelif condition2:\n    # code block 2\n\nelse:\n    # code block 3\n\n\n\ndemo\n\n\nThe way to assemble subsequent if-elif-else statements is sometimes called a cascade.\nSome additional attention has to be paid in this case:\n\nyou mustn’t use else without a preceding if;\nelse is always the last branch of the cascade, regardless of whether you’ve used elif or not;\nelse is an optional part of the cascade, and may be omitted;\nif there is an else branch in the cascade, only one of all the branches is executed;\nif there is no else branch, it’s possible that none of the available branches is executed.\n\nThis may sound a little puzzling, but hopefully some simple examples will help shed more light.\nConsider the following code:\nnumber = -5\n\nif number &gt; 0:\n    print('Positive number')\n\nelif number &lt; 0:\n    print('Negative number')\n\nelse:\n    print('Zero')\n\nprint('This statement is always executed')\nSample output\nNegative number\nThis statement is always executed\nHere, the first condition, number &gt; 0, evaluates to False. In this scenario, the second condition is checked.\nThe second condition, number &lt; 0, evaluates to True. Therefore, the statements inside the elif block is executed.\nIn the above program, it is important to note that regardless the value of number variable, only one block of code will be executed.\n✍️Challenge: Write a Python program that asks the user to input a temperature in Celsius and then checks if the temperature is below freezing, above boiling, or in between.",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "The if-else statement"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#nested-if-else-statements",
-    "href": "topics/07_statements/02_if_else_statements/02_if_else_statements.html#nested-if-else-statements",
-    "title": "The if-else statement",
-    "section": "Nested if-else statements",
-    "text": "Nested if-else statements\nConsider the case where the instruction placed after the if is another if.\nIt is possible to include an if statement inside another if statement.\nif condition:\n    if nested_condition:\n        # ested code block 1\n     else:\n        # nested code block 2\n else:\n     # nested code block 3\n\nExample:\nnumber = 5\n\n# outer if statement\nif number &gt;= 0:\n    # inner if statement\n    if number == 0:\n      print('Number is 0')\n\n    # inner else statement\n    else:\n        print('Number is positive')\n\n# outer else statement\nelse:\n    print('Number is negative')\nSample output\nNumber is positive\nHere’s how this program works.\n\n\n\ndemo\n\n\n\n\nHere are two important points:\n\nthis use of the if statement is known as nesting; remember that every else refers to the if which lies at the same indentation level; you need to know this to determine how the ifs and elses pair up;\nconsider how the indentation improves readability, and makes the code easier to understand and trace.\n\n✍️Challenge: Write a Python program that assigns a letter grade based on a numeric score. Ask the user to input a score, then determine and print the letter grade:\n\nA: 90-100\nB: 80-89\nC: 70-79\nD: 60-69\nF: below 60",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "The if-else statement"
-    ]
-  },
-  {
-    "objectID": "topics/07_statements/04_scope/04_scope.html",
-    "href": "topics/07_statements/04_scope/04_scope.html",
+    "objectID": "topics/08_functions/05_scope/05_scope.html",
+    "href": "topics/08_functions/05_scope/05_scope.html",
     "title": "Scope & Statements",
     "section": "",
-    "text": "The scope of a variable or function name defines where that can variable/function be accessed in the code.\nThe point of this concept is to deal with cases where there are name conflicts between function and variable names.\nName conflicts between variable names and function names can happen all the time.\nFor example, consider the code below:\nWhat gets printed to the console? That is, what is the value stored by the variable called x at the moment the print statement is called? What about the variable y?\nTo know for certain, we have to know the scope where the variables x and y are defined.",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Scope & Statements"
-    ]
+    "text": "The scope of a variable or function name defines where that can variable/function be accessed in the code.\nThe point of this concept is to deal with cases where there are name conflicts between function and variable names.\nName conflicts between variable names and function names can happen all the time.\nFor example, consider the code below:\nWhat gets printed to the console? That is, what is the value stored by the variable called x at the moment the print statement is called? What about the variable y?\nTo know for certain, we have to know the scope where the variables x and y are defined."
   },
   {
-    "objectID": "topics/07_statements/04_scope/04_scope.html#concepts",
-    "href": "topics/07_statements/04_scope/04_scope.html#concepts",
+    "objectID": "topics/08_functions/05_scope/05_scope.html#concepts",
+    "href": "topics/08_functions/05_scope/05_scope.html#concepts",
     "title": "Scope & Statements",
     "section": "Concepts",
-    "text": "Concepts\nThere are two main concepts to know:\n\nGlobal scope: Variable and function names in global scope are available to all your code.\nLocal scope: Variable and function names in the local scope are only available or visible to the code within that scope.",
-    "crumbs": [
-      "Syllabus",
-      "Statements",
-      "Scope & Statements"
-    ]
+    "text": "Concepts\nThere are two main concepts to know:\n\nGlobal scope: Variable and function names in global scope are available to all your code.\nLocal scope: Variable and function names in the local scope are only available or visible to the code within that scope."
   },
   {
-    "objectID": "topics/07_statements/04_scope/04_scope.html#rules",
-    "href": "topics/07_statements/04_scope/04_scope.html#rules",
+    "objectID": "topics/08_functions/05_scope/05_scope.html#rules",
+    "href": "topics/08_functions/05_scope/05_scope.html#rules",
     "title": "Scope & Statements",
     "section": "Rules",
-    "text": "Rules\nHow do we know when a variable or function is accessible in global or local scope? Here are the rules:\n\nBy default, all variables and functions are created in global scope\nHowever, when a variable or function is created inside a function, that variable/function is only accessible inside that function\nThat is, all functions create a local scope, where all variables or functions defined within the function body only exist within that local scope.\n\nFunction parameters are examples of variables created inside a function, therefore function parameters are only accessible inside that function and cannot be used outside of it.",
+    "text": "Rules\nHow do we know when a variable or function is accessible in global or local scope? Here are the rules:\n\nBy default, all variables and functions are created in global scope\nHowever, when a variable or function is created inside a function, that variable/function is only accessible inside that function\nThat is, all functions create a local scope, where all variables or functions defined within the function body only exist within that local scope.\n\nFunction parameters are examples of variables created inside a function, therefore function parameters are only accessible inside that function and cannot be used outside of it."
+  },
+  {
+    "objectID": "topics/08_functions/05_scope/05_scope.html#examples",
+    "href": "topics/08_functions/05_scope/05_scope.html#examples",
+    "title": "Scope & Statements",
+    "section": "Examples",
+    "text": "Examples\n\nCan a variable created in global scope be accessed inside a function?\ndef my_function():\n    print(\"Do I know that variable?\", var)\n\nvar = 1\nmy_function()\nprint(var)\noutput:\nDo I know that variable? 1\n1\nA variable existing outside a function is in global scope, so it can be accessed inside the function’s body.\nCareful though: the variable has to be defined already in order for it to be in global scope:\ndef my_function():\n    print(\"Do I know that variable?\", var)\n\nmy_function()\nvar = 1\n\nprint(var)\noutput:\nerror (var not defined)\nCan a variable created in a local scope be accessed outside the function it was defined in?\ndef my_function():\n    var = 2\n    print(\"Do I know that variable?\", var)\n\nvar = 1\nmy_function()\nprint(var)\noutput:\nDo I know that variable? 2\n1\nNote that var is defined in global scope AND in the local scope of my_function – however, they do not store the same value since the scope is different.\n✍️Challenge: What is the output?\nvalue = 50\ndef function1():\n   value = 25\n   print(value)\n\nfunction1()\nprint(value)\n\nOnce you have done all three of these problems, return to the problem at the beginning of these notes – can you get the output for all of the print statements?"
+  },
+  {
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html",
+    "title": "Reading/Writing Files",
+    "section": "",
+    "text": "Files are like books: before you can read from or write into them you must open them!\nThen, when you’re finished you should close them too.)\nSYNTAX: file_variable = open(file_name, access_type)\nwhere:\n\nfile_variable is the name of a variable used to represent the file\nfile_name is the name (or path) of a file on your computer\naccess_type can be:\n\nr if you want to read the file, or\nw if you want to write to the file (this will erase everything in the file first!)\na if you want to append (add) to a file (this will preserve everything that was already in the file beforehand)\n\n\nfile_to_read = open(\"my_input.txt\", \"r\")    # opens my_input.txt for reading\nfirst_line = file_to_read.readline() # puts the first line in the file in a variable\nfile_to_read.close()\nprint(\"The file is closed\")\nor\nwriteable_file = open(\"my_output.txt\", \"w\")  # open my_input.txt for writing\nfile_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nwriteable_file.close()\nprint(\"The file is closed\")\n\n\nPython has a way of opening files that guarantees that the file will automatically get closed when you’re finished with it. This uses a Python statement called with:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # Note: everything in the with block needs a tab insert.\n    first_line = file_to_read.readline()\n\n# Everything after the file is closed does not have a tab insert\nprint(\"The file is closed\")\nor\nwith open(\"my_output.txt\", \"w\") as writeable_file:\n    file_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nLike other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you’ve opened. Once Python finds a line that is not indented, it will close the file for you.",
     "crumbs": [
       "Syllabus",
-      "Statements",
-      "Scope & Statements"
+      "Data Processing",
+      "Reading/Writing Files"
     ]
   },
   {
-    "objectID": "topics/07_statements/04_scope/04_scope.html#examples",
-    "href": "topics/07_statements/04_scope/04_scope.html#examples",
-    "title": "Scope & Statements",
-    "section": "Examples",
-    "text": "Examples\n\nCan a variable created in global scope be accessed inside a function?\ndef my_function():\n    print(\"Do I know that variable?\", var)\n\nvar = 1\nmy_function()\nprint(var)\noutput:\nDo I know that variable? 1\n1\nA variable existing outside a function is in global scope, so it can be accessed inside the function’s body.\nCareful though: the variable has to be defined already in order for it to be in global scope:\ndef my_function():\n    print(\"Do I know that variable?\", var)\n\nmy_function()\nvar = 1\n\nprint(var)\noutput:\nerror (var not defined)\nCan a variable created in a local scope be accessed outside the function it was defined in?\ndef my_function():\n    var = 2\n    print(\"Do I know that variable?\", var)\n\nvar = 1\nmy_function()\nprint(var)\noutput:\nDo I know that variable? 2\n1\nNote that var is defined in global scope AND in the local scope of my_function – however, they do not store the same value since the scope is different.\n✍️Challenge: What is the output?\nvalue = 50\ndef function1():\n   value = 25\n   print(value)\n\nfunction1()\nprint(value)\n\nOnce you have done all three of these problems, return to the problem at the beginning of these notes – can you get the output for all of the print statements?",
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#opening-files",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#opening-files",
+    "title": "Reading/Writing Files",
+    "section": "",
+    "text": "Files are like books: before you can read from or write into them you must open them!\nThen, when you’re finished you should close them too.)\nSYNTAX: file_variable = open(file_name, access_type)\nwhere:\n\nfile_variable is the name of a variable used to represent the file\nfile_name is the name (or path) of a file on your computer\naccess_type can be:\n\nr if you want to read the file, or\nw if you want to write to the file (this will erase everything in the file first!)\na if you want to append (add) to a file (this will preserve everything that was already in the file beforehand)\n\n\nfile_to_read = open(\"my_input.txt\", \"r\")    # opens my_input.txt for reading\nfirst_line = file_to_read.readline() # puts the first line in the file in a variable\nfile_to_read.close()\nprint(\"The file is closed\")\nor\nwriteable_file = open(\"my_output.txt\", \"w\")  # open my_input.txt for writing\nfile_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nwriteable_file.close()\nprint(\"The file is closed\")\n\n\nPython has a way of opening files that guarantees that the file will automatically get closed when you’re finished with it. This uses a Python statement called with:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # Note: everything in the with block needs a tab insert.\n    first_line = file_to_read.readline()\n\n# Everything after the file is closed does not have a tab insert\nprint(\"The file is closed\")\nor\nwith open(\"my_output.txt\", \"w\") as writeable_file:\n    file_to_read.write(\"File content!\") # writes the string \"File content!\", saving it in the my_output.txt file\nLike other blocks in Python (if-else/for/def) you must indent all of the lines of code which will be dealing with the file you’ve opened. Once Python finds a line that is not indented, it will close the file for you.",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Reading/Writing Files"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#reading-from-a-file",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#reading-from-a-file",
+    "title": "Reading/Writing Files",
+    "section": "Reading from a file",
+    "text": "Reading from a file\nYou can read a line from a file using the readline() method on the file variable.\n\nfile_variable.readline()\nFor example, you can read the contents of a file one line at a time:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    line1 = file_to_read.readline()     # reads the 1st line from file_to_read\n    line2 = file_to_read.readline()     # reads the 2nd line\n    line3 = file_to_read.readline()     # reads the 3rd line\nOr, you can read all of the lines of the file within a for-loop\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    for line in file_to_read:\n        print(line)\nYou can combine both methods. One common pattern: Read the first line (usually a header) separate from the rest of the document:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    # read the first line of the file\n    line1 = file_to_read.readline()\n\n    # read all of the REST of the lines in the file\n    for line in file_to_read:\n        print(line)\n\nExample\nImagine your input file my_input.txt has the following lines\nThe limerick packs laughs anatomical\nInto space that is quite economical\nBut the good ones I've seen\nAre so seldom clean\nAnd the clean ones are so seldom comical\nWe could read this file with the following code:\nwith open(\"my_input.txt\", \"r\") as file_to_read:\n    line1 = file_to_read.readline()\n    print(\"Line 1 has been read\")\n    line2 = file_to_read.readline()\n    print(\"Line 2 has been read\")\n\n    for line in file_to_read:\n        print(line)\nQuestion: After this code has been run, what is the console output?\n\n\n✅ Solution\n\n\n    Line 1 has been read\n    Line 2 has been read\n    But the good ones I've seen\n    Are so seldom clean\n    And the clean ones are so seldom comical\n  \n\nQuestion: After this code has been run, what is stored in the line1 and line2 variables?\n\n\n✅ Solution\n\n\n    line1 == \"The limerick packs laughs anatomical\"\n    line2 == \"Into space that is quite economical\"",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Reading/Writing Files"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#writing-to-a-file",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#writing-to-a-file",
+    "title": "Reading/Writing Files",
+    "section": "Writing to a file",
+    "text": "Writing to a file\nThere are a few ways to write to a file:\n\nusing file_variable.write(msg: str): good for writing one string at a time to a file\nusing file_variable.writelines(lines: list[str]): good for writing a list of lines all at once to a file\nusing print(msg: str, file=file_variable): it turns out, you can also use good-old print(), with the optional file argument set to a file_variable.\n\nEach of these methods will be shown below.\n\nfile_variable.write()\nTo write a single string to a file, the most common method is to use file_variable.write().\nwrite() takes a single str parameter and puts the value of that parameter into the file, without adding any characters.\nNOTE: by default, this will not create a new line each time you write to the file! You will need to add \"\\n\" to the end of your string:\nwith open(\"output_with_lines.txt\", \"w\") as output_file:\n    output_file.write(\"Hello\")\n    output_file.write(\"World!\")\n\nwith open(\"output_without_lines.txt\", \"w\") as output_file:\n    output_file.write(\"Hello\\n\")\n    output_file.write(\"World!\")\nThe code above results in the following files:\noutput_with_lines.txt:\nHelloWorld!\n\noutput_without_lines.txt:\nHello\nWorld!\nWhat is \\n? \"\\n\" is called the newline character. You can click on the link to learn more – but, for our course, all you need to know is that it’s the way computer’s represent a “new line” in a file.\n\n\nfile_variable.writelines()\nIf you need to write many lines to a file at once, a much more convenient method is to use the writelines() function.\nInstead of taking a str parameter, writelines() takes a list[str] paramter – a list of strings:\nlines_list = [\"Hello\", \"World!\"]\nwith open(\"my_output.txt\", \"w\") as output_file:   # variable is \"output_file\"\n    output_file.writelines(lines_list)\nThe code above results in the following file:\nmy_output.txt:\nHello\nWorld!\nNote: you can also print a list of lines to a file just simply using write(); if you use a for loop and remember to add the \\n character. The code below will have the exact same result as the code above:\nlines_list = [\"Hello\", \"World!\"]\nwith open(\"my_output.txt\", \"w\") as output_file:\n    for line in lines_list:\n        output_file.write(line + \"\\n\") # NOTE: you will need to add \"\\n\"\n\n\nprint(msg: str, file=file_variable)\nFinally, you can also use the print function we have been using throughout the whole class.\nThe difference is, in order to print to a file instead of the console, we need to add a file = file_variable parameter:\nwith open(\"my_output.txt\", \"w\") as output_file:\n    print(\"Hello!\", file=output_file)\n    print(\"World!\", file=output_file)\nThe code above results in the following file:\nmy_output.txt:\nHello\nWorld!\nNOTE: with print(), you do not need to add a \\n character. Why? By default, print() always includes a \\n character! We can actually change that behavior by using the optional end parameter of the print function:\nwith open(\"my_output.txt\", \"w\") as output_file:\n    # This now works very similarly to the file_variable.write() method.\n    print(\"Hello!\\n\", file = output_file, end=\"\")\n    print(\"World!\", file = output_file, end=\"\")",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Reading/Writing Files"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#csv-file-format",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#csv-file-format",
+    "title": "Reading/Writing Files",
+    "section": "CSV File Format",
+    "text": "CSV File Format\nIn science, much of the data that you will receive will be stored in a comma separated value (.csv) file. These files can be easily generated from Excel, GoogleSheets or any other similar tools.\n\nIMPORTANT: Parsing and reviewing a CSV file requires that the programmer knows how the data is organized in the file. For example, which column contains which data.\n\nHere are the basics of .csv files:\n\nData is separated into rows\nEach row contains columns, where the columns are separated by a comma characters (,).\nOften, the first line of the file is a “header” row, containing the names of the columns. If your file starts with a header row, you’ll often want to skip that row by reading it before you start reading the rest of the file",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Reading/Writing Files"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/01_reading_files/01_reading_files.html#goals",
+    "href": "topics/11_data_processing/01_reading_files/01_reading_files.html#goals",
+    "title": "Reading/Writing Files",
+    "section": "Goals",
+    "text": "Goals\nLearn how to open and read a simple csv file and parse the data using either lists or dictionaries.\n\nExample Input\nEach row contains information about a student, the course that they are taking, and grade that they achieved in that course.\nFirst Name,Last Name,Program,Grade\nMickey,Mouse,Singing,33\nMickey,Mouse,Acting,85\nDonald,Duck,Singing,33\nDonald,Duck,Anger Management,20\nDonald,Duck,Acting,97\nBugs,Bunny,Singing,95\nBugs,Bunny,Acting,100\nBugs,Bunny,Diction,85\nBugs,Bunny,Anger Management,95\nYosemite,Sam,Anger Management,0\nYosemite,Sam,Dragon Management,65\nYosemite,Sam,Acting,100\nElmer,Fudd,Diction,75\nElmer,Fudd,Hunting Law,61\nElmer,Fudd,Acting,81\nElmer,Fudd,Singing,99\n\n\nUsing Python with CSV Files\nTo read a csv file, open the file in the standard way.\nOnce your flie has been opened, it needs to be converted to a csv.reader.\nAt this point it can be looped over, just like an ordinary file, with the following exceptions:\n\nIf looping over a csv.reader reader, it will return a list object, with each element the individual data separated by commas\n\nExample - csv.reader\nimport csv\ninput_file = \"input_file.csv\"\n\nwith open(input_file, \"r\") as fh:\n    # create a csv reader, to parse each line as it is being read in\n    csv_file: csv.reader = csv.reader(fh)\n    for line in csv_file:\n        print(line)\nOutput:\nImportant Notice that all the “lines” are actually a list AND that the grades are strings (you will need to convert to numbers if you need them to be numbers)\n['First Name', 'Last Name', 'Program', 'Grade']\n['Mickey', 'Mouse', 'Singing', '33']\n['Mickey', 'Mouse', 'Acting', '85']\n['Donald', 'Duck', 'Singing', '33']\n...\n\nExample Problem # 1\nAssume the data in an input.csv file is the same as the above data\nWrite a main function that:\n\nAsks user for the filename to read\nRead the file using the csv.reader and for each row, print out the first name of each student, as well as the program(s) that they are in.\nCreate a list of grades so that we can calculate the average grade\n\nimport csv\n\n# constants representing which column index goes with what data\nFIRST_NAME = 0\nLAST_NAME = 1\nPROGRAM = 2\nGRADE = 3\n\n# create an empty list for the grades\ngrades: list[float] = []\n\ndef main(input_file):\n    with open(input_file, \"r\") as fh:\n        # read the header file now, because it is not part of the \"real\" data\n        fh.readline()\n\n        # create a csv reader so that it can parse the data correctly\n        csv_file: csv.reader = csv.reader(fh)\n\n        for line in csv_file:\n            # print the individual info\n            print(line[FIRST_NAME], line[PROGRAM])\n\n            # append the grade in a new list\n            # Remember that the data from the csv file is always a string,\n            # so don't forget to convert to a number\n            grades.append(float(line[GRADE]))\n\n        # what is the average grade\n        print(\"The average grade is: \", sum(grades) / len(grades))\n\nif __name__ == \"__main__\":\n    filename = input(\"Enter the csv file to read: \")\n    main(filename)\nSample output\nEnter the csv file to read: input_file.csv\nMickey Singing\nMickey Acting\nDonald Singing\nDonald Anger Management\nDonald Acting\nBugs Singing\nBugs Acting\nBugs Diction\nBugs Anger Management\nYosemite Anger Management\nYosemite Dragon Management\nYosemite Acting\nElmer Diction\nElmer Hunting Law\nElmer Acting\nElmer Singing\nThe average grade is:  70.25\n\n\n\nCoding Challenge\n\nThe answer will be given below, but see if you can do this on your own :)\n\nWrite a main function that:\n\nAsks user for the filename to read\nRead the file using the csv.reader and, only for Elmer Fudd, print out the program name and the grade.\nWhat is the average grade for Elmer Fudd?\n\nEnter the csv file to read: input_file.csv\nDiction        : 75.0\nHunting Law    : 61.0\nActing         : 81.0\nSinging        : 99.0\nElmer Fudd's average grade is:  79.0\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\n\n\n**keep scrolling down for solution\n\n\n\n\n\nimport csv\n\n# constants representing which column index goes with what data\nFIRST_NAME = 0\nLAST_NAME = 1\nPROGRAM = 2\nGRADE = 3\n\n# create an empty list for the grades\ngrades: list[float] = []\n\ndef main(input_file):\n    with open(input_file, \"r\") as fh:\n        # read the header file now, because it is not part of the \"real\" data\n        fh.readline()\n\n        # create a csv reader so that it can parse the data correctly\n        csv_file: csv.reader = csv.reader(fh)\n\n        for line in csv_file:\n            if line[FIRST_NAME] == \"Elmer\" and line[LAST_NAME] == \"Fudd\":\n                grade = float(line[GRADE])\n                print(f\"{line[PROGRAM]:15}: {grade:4.1f}\")\n                grades.append(grade)\n\n        # what is the average grade\n        print(\"Elmer Fudd's average grade is: \", sum(grades) / len(grades))\n\nif __name__ == \"__main__\":\n    filename = input(\"Enter the csv file to read: \")\n    main(filename)",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Reading/Writing Files"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/04_matplotlib/04_matplotlib.html",
+    "href": "topics/11_data_processing/04_matplotlib/04_matplotlib.html",
+    "title": "Intro to Matplotlib",
+    "section": "",
+    "text": "Matplotlib is a scientific library that allows python programmers to easily produce plots for reporting on experimental data.",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Intro to Matplotlib"
+    ]
+  },
+  {
+    "objectID": "topics/11_data_processing/04_matplotlib/04_matplotlib.html#usage",
+    "href": "topics/11_data_processing/04_matplotlib/04_matplotlib.html#usage",
+    "title": "Intro to Matplotlib",
+    "section": "Usage",
+    "text": "Usage\nThe main feature of matplotlib that we will use is a sub-module called pyplot\n\nYou can import it in your script by using this line of code:\n\nimport matplotlib.pyplot as plt\n\nDraw a simple plot line using plot.plot(x,y)\n\nxpoints = [1,2,3,4,5,6,7,8,9,10]\nypoints = [2,4,6,8,10,12,14,16,18,20]\n\nplt.plot(xpoints, ypoints)\n\nplt.show() # This line is important to display your graph\nTo draw a simple scatter point, you can use plt.scatter(x,y):\nplt.scatter(xpoints, ypoints)\nplt.show()\nIf you wish to save your graphs, use plt.savefig(). This will create a PNG image inside your project directory.\nplt.plot(xpoints, ypoints)\nplt.savefig(\"my_first_graph.png\")\nplt.show() # This line is important to display your graph\nFollow this tutorial to learn the different ways of styling your graph (colours, markers, titles, scales, etc)",
+    "crumbs": [
+      "Syllabus",
+      "Data Processing",
+      "Intro to Matplotlib"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html",
+    "title": "Conditions",
+    "section": "",
+    "text": "A programmer writes a program that asks questions, and the computer executes the program and provides answers. When asked a question, computers can only respond with 1 or 0, True or False. In other words, they can easily answer: “yes, this is true” or “no, this is false.” You will never get responses such as “Let me think…”, “I don’t know”, or “Probably yes, but I don’t know for sure.”\nPython uses special operators to ask these questions. To make effective use of the answers, you need a mechanism that makes decision based on the answer.\nTo make such decisions, Python offers conditional statements. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.",
     "crumbs": [
       "Syllabus",
       "Statements",
-      "Scope & Statements"
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#conditional-execution-the-if-statement",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html#conditional-execution-the-if-statement",
+    "title": "Conditions",
+    "section": "Conditional execution: the if statement",
+    "text": "Conditional execution: the if statement\nConditionally executed statements must be indented. This indentation creates a clear and readable structure, making it easy to see all possible execution paths in the code.\nConsider the following code:\nnumber = 7\n\n# check if number is greater than 0\nif number &gt; 0:\n    print(f'{number} is a positive number.')\n\nprint('A statement outside the if statement.')\nThe if statement checks if the number is greater than 0. If the condition is true, it prints that the number is positive.\nThe second print statement is outside the if block and will execute every time the code runs, showing that it is independent of the if condition.",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#logical-operators",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html#logical-operators",
+    "title": "Conditions",
+    "section": "Logical operators",
+    "text": "Logical operators\n\nand: The and keyword is a logical operator, and is used to combine conditional statements:\nor: The or keyword is a logical operator, and is used to combine conditional statements:\nnot : The not keyword is a logical operator, and is used to reverse the result of the conditional statement:",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#combining-conditional-statements",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html#combining-conditional-statements",
+    "title": "Conditions",
+    "section": "Combining conditional statements",
+    "text": "Combining conditional statements\n\nExample\nConsider the following numbers: number1 = 200,number2 = 33,number3 = 500. We would like to verify if number1 is greater than number2 and if number3 is greater than number1. We could write two nested ifs:\n\nIf number1 is greater than number2, then:\n\nIf number 3 is greater than number2, then:\n\nDisplay: “number 2 is the smallest number”\n\n\n\nThis would translate into:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif number1 &gt; number2:\n    if  number3 &gt; number1:\n        print(\"Both conditions are True\")\nTest if a is greater than b, AND if c is greater than a:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif number1 &gt; number2 and number3 &gt; number1:\n    print(\"Both conditions are True\")\nThe if statement checks if both a &gt; b and c &gt; a are True using the and operator.\nBecause both conditions are indeed True, the code prints “Both conditions are True.”",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#or",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html#or",
+    "title": "Conditions",
+    "section": "Or",
+    "text": "Or\nThe or keyword is a logical operator, and is used to combine conditional statements:\n\nExample:\nTest if a is greater than b, OR if a is greater than c:\nnumber1 = 200\nnumber2 = 33\nnumber3 = 500\nif (number1 &gt; number2) or (anumber1&gt; number3):\n    print(\"At least one of the conditions is True\")\nThe if statement checks if either a &gt; b or a &gt; c is True using the or operator.\nBecause a &gt; b is True, the overall condition is True, so the code prints “At least one of the conditions is True.”",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/01_if_statements/01_if_statements.html#not",
+    "href": "topics/07_statements/01_if_statements/01_if_statements.html#not",
+    "title": "Conditions",
+    "section": "Not",
+    "text": "Not\nThe not keyword is a logical operator, and is used to reverse the result of the conditional statement:\n\nExample:\nTest if a is NOT greater than b:\na = 33\nb = 200\nif not a &gt; b:\n    print(\"a is NOT greater than b\")\nThe if statement checks if a is not greater than b by negating the result of the comparison a &gt; b using the not operator.\nSince a &gt; b is False, not a &gt; b is True, so the message “a is NOT greater than b” is printed.\n✍️Challenge: Write a Python program to check if a number is divisible by both 2 and 3.\n\n\nExamples\nPAY ATTENTION TO THE PARENTHESIS\nI want a large pizza and either a coke or rootbeer\nif large_pizza==1 and (coke==1 or rootbeer==1):\n  print(\"OK\")\nI want a large pizza or 2 small pizzas and a coke\nif (large_pizza==1 or small_pizza==2) and coke==1:\n  print(\"OK\")\nI want 8 large pizzas and 15 cokes and 15 rootbeers, and if they don’t have rootbeers, then 30 cokes\nif large_pizza == 8 and ( ( cokes == 15 and rootbeers == 15) or cokes == 30):\n    print(\"OK\")",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "Conditions"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/exercises/conditional/conditional.html",
+    "href": "topics/07_statements/exercises/conditional/conditional.html",
+    "title": "🎯 Conditional statements",
+    "section": "",
+    "text": "Level 1: if\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nIf the temperature is below zero, display it’s freezing.\ntemperature = 3.0\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operator is needed to express “less than”?\n\n\n\n\n✅ Solution\n\n\n      if temperature &lt; 0:\n        print(\"It's freezing outside\")\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nDisplay “you are eligible for a scholarship” if the age of a person is between 18 and 25 (inclusive)\nage = int(input(\"What is your age?\"))\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operators are needed to express “less than or equal to” and “greater than or equal to”?\n\n\n\n\n✅ Solution\n\n\n      if 18 &lt;= age &lt;= 25:\n        print(\"You are eligible for a scholarship\")\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”\npassword = \"easypassword123\"\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nWhat logical operator is needed to express “equal to”?\n\n\n\n\n✅ Solution\n\n\n      if password == \"L0ngP@33w0rd34512\":\n        print(\"Successful login\")\n    \n\n\nNote: This is not really how passwords are used in programs – writing your password down as a variable in a program is a really bad idea, because everyone who can read your code can read your password! Most programs store the hashed version of the password – click this link if you want to learn more.\n\n\nComplete the following sample of code given the statement below and print a message when the condition is met:\nI will go to school if the bus has arrived\nbus_arrived = True\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nHow can you use a boolean variable in an if statement?\n\n\n\n\n✅ Solution\n\n\n      if bus_arrived:\n          print(\"I will go to school\")\n    \n\n\nComplete the following function given the statement below and print a message when the condition is met:\nEnsure that the percentage of increase entered by the user is between -100.0 and +100.0. If it’s the case calculate the increase amount\n\nstock_value = 100_000\nincrease_percent = float(input(\"What is the percent increase this year (in %)? \"))\nincrease_amount = 0\n\n# Your answer goes here\n\n\n👀 Hint\n\n\nHere you have to test a condition and calculate a percentage, but only if the condition is true.\n\n\n\n\n✅ Solution\n\n\n      increase_amount = 0\n      if -100 &lt;= increase &lt;=100:\n        increase_amount = stock_value * (increase/100)\n    \n\n\nTranslate (to English) the meaning of the following lines of code.\nr_score = 35\nif r_score &gt;= 30:\n    print(\"You are eligible for the scholarship.\")\n\n\n\n👀 Hint\n\n\nYour answer should be in the form: If (some condition is met), then (some event takes place).\n\n\n\n\n✅ Solution\n\n\n      If the r-score is above 30, a message saying \"You are eligible for a scholarship\" is displayed.\n    \n\n\nTranslate the following lines of code:\ntemperature = 12.0\n\nif 0 &lt;= temperature &lt; 16:\n    print(\"It is chill outside.\")\n\n\n\n👀 Hint\n\n\nTake care to be precise about whether something is strictly less/greater than, or less/greater than or equal to (it’s different!)\n\n\n\n\n✅ Solution\n\n\n      If the temperature is greater than or equal to 0, or if the temperature is less than 16, a message saying \"It is chill outside.\" is displayed.\n    \n\n\nWrite down the messages that are printed at the end of this program.\nday=1\nraining_outside = False\ntemperature =14.5\nhumidity = 0.80\n\nday+=1\ntemperature -=3\nhumidity += 0.1\n\nday+=1\ntemperature -=2\nhumidity += 0.1\n\nif humidity&gt; 0.7 and temperature &lt;=12.0:\n    raining_outside = True\n\nday+=1\ntemperature -= 2\nhumidity/= 2\n\nif raining_outside and humidity &lt; 0.7:\n    raining_outside = False\n    temperature+=2.0\n\n\nprint(\"The temperature is\", temperature )\n\nprint(\"The humidity is\", humidity)\n\nprint(\"Is it raining outside?\", raining_outside)\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ Solution\n\n\n      The temperature is 9.5\n      The humidity is 0.5\n      Is it raining outside? False\n    \n\n\n\nLevel 2: if/else and operators and, or, not\n\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”, and “Unsuccessful login” if the password is incorrect\npassword = \"easypassword123\"\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n✅ Solution\n\n\n      password = \"easypassword123\"\n      if password == \"L0ngP@33w0rd34512\":\n          \"Successful login\"\n      else:\n          \"Unsuccessful login\"\n    \n\n\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “The store is open” if the current hour is between 8 and 17, otherwise display the store is closed:\ncurrent_hour = 21\n\n# Your answer goes here\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n✅ Solution\n\n\n      if 8 &lt;= current_hour &lt;= 17:\n          print(\"The store is open\")\n      else:\n          print(\"The store is not open\")\n      \n\n\nWrite a function which takes two numbers as input parameters and prints the two numbers in ascending order (no return):\ndef order_ascend(num1:int, num2:int):\n\n   # Your answer goes here\n\n\n\n👀 Hint\n\n\nYou should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.\n\n\n\n\n✅ Solution\n\n\n      def order_ascending(num1: int, num2: int):\n          if num1 &lt; num2:\n              print(num1, num2)\n          else:\n              print(num2, num1)\n        \n\n\nTranslate the following python code to English:\ndef print_salary(salary, paygrade, level):\n    if paygrade == 7:\n        if 0 &lt;= level &lt;= 8:\n            salary *= 1.05\n        else:\n            salary *= 1.04\n    else:\n        salary *= 1.06\n    print(\"Your salary is\", salary)\n\n\n\n👀 Hint\n\n\nYour answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.\n\n\n\n\n✅ Solution\n\nIf the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.\n\n\nWrite a function which displays “Change your car oil” if the user has enough money (needs 80.00$) and if one of these two conditions apply: they reached 5000km or it’s been more than 3 months since the last oil change:\ndef print_change_oil(savings: float, mileage: int, months: int):\n    # to be completed\n\n\n\n👀 Hint\n\n\nYou can chain multiple conditions in one if statement using and/or. You can use brackets to control the order of logical operations in a sequence of operations.\n\n\n\n\n✅ Solution\n\n\n      def print_change_oil(savings: float, mileage: int, months: int):\n          if (savings &gt; 80.0) and ((mileage &gt;= 5000) or (months &gt;= 3)):\n              print(\"Change your car oil\")\n    \n\n\nWrite a function which displays “You are eligible to vote.” if the user is a citizen and if their age is above or equal to 18. Otherwise display “You can’t vote.”\ndef print_vote_eligibility(age: int, is_citizen: bool):      \n # To be completed...\n\n\n\n👀 Hint\n\n\nYou can use boolean variables directly in an if statement, and can combine them with logical operations using and/or.\n\n\n\n\n✅ Solution\n\n\n      def print_vote_eligibility(age: int, is_citizen: bool): \n          if age &gt;= 18 and is_citizen:\n              print(\"You are eligible to vote\")\n          else:\n              print(\"You can't vote\")\n    \n\n\nWrite a function which displays “You can go camping this weekend” if the camping site is available, if it’s not raining and they have access to a car. The function must return a boolean if all conditions are met.\ndef can_go_camping(is_site_available: bool,is_raining:bool, has_car: bool) -&gt; bool:\n # To be completed...\n\n\n\n👀 Hint\n\n\nUse the return statement to control what a function returns.\n\n\n\n\n✅ Solution\n\n\n      def can_go_camping(is_site_available: bool, is_raining:bool, has_car: bool) -&gt; bool:\n          if camping_available and not is_raining and has_car: \n              print(\"You can go camping this weekend\")\n              return True\n          else:\n              return False\n    \n\n\n\nLevel 3: if/elif/else and nested conditions\n\nWrite a program which asks the user for the temperature. The program prints a different message for each of the following condition:\nIf the temperature is:\n\nabove 25: it’s hot outside\nbelow 25 but above 15: it’s pretty warm outside\nbelow 15 but above 0: it’s pretty chill outside.\nbelow zero: it’s freezing outside\n\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ Solution\n\n\n      temperature = float(input(\"Please enter the temperature: \"))\n      if temperature &gt;= 25.0:\n          print(\"It's hot outside\")\n      elif temperature &gt;= 15.0:\n          print(\"It's pretty warm outside\")\n      elif temperature &gt;= 0.0:\n          print(\"It's chill outside\")\n      else: \n          print(\"It's freezing outside\")\n    \n\n\nWrite a functions which takes three numbers as input parameters and prints them in ascending order. No return:\n\ndef order_ascending(num1: int, num2: int, num3: int):\n  # Your answer goes here\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n✅ One possible solution\n\n\n      def order_ascending(num1: int, num2: int, num3: int):\n          if num1 &lt; num2:\n              if num2 &lt; num3:\n                  print(num1, num2, num3)\n              elif num1 &lt; num3:\n                  print(num1, num3, num2)\n              else:\n                  print(num3, num1, num2)\n          elif num1 &lt; num3:\n              print(num2, num1, num3)\n          elif num2 &lt; num3:\n              print(num2, num3, num1)\n          else:\n              print(num3, num2, num1)\n    \n\n\n\n✅ Another possible solution\n\n\n      def order_ascending(num1: int, num2: int, num3: int):\n          if num1 &lt; num2 and num2 &lt; num3:\n              print(num1, num2, num3)\n          elif num1 &lt; num2 and num3 &lt; num2:\n              print(num1, num3, num2)\n          elif num2 &lt; num1 and num1 &lt; num3:\n              print(num2, num1, num3)\n          elif num2 &lt; num1 and num3 &lt; num1:\n              print(num2, num3, num1)\n          elif num3 &lt; num2 and num2 &lt; num1:\n              print(num3, num2, num1)\n          else:\n              print(num3,num1,num2)",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "🎯 Conditional statements"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html",
+    "href": "topics/07_statements/03_for_loop/03_for_loop.html",
+    "title": "For loop",
+    "section": "",
+    "text": "A for-loop allows you to repeat lines of code n amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A for loop repeats the statement whiling counting the “turns” .\nThe for loop is actually capable of handling more complex tasks, such as iterating through large collections of data, item by item. We’ll explore that in more detail soon, but for now, we’ll focus on a simpler use of the for loop.\nExample:\nHere are some key elements to understand:",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "For loop"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#generic-for-loop",
+    "href": "topics/07_statements/03_for_loop/03_for_loop.html#generic-for-loop",
+    "title": "For loop",
+    "section": "Generic for loop",
+    "text": "Generic for loop\nA for loop can be generalized to something that looks like:\n\nNote: Using sequence in the following instructions is not exactly correct, but it is reasonable to think of sequences for now.\n\nforvariableinsequence\nWhere\n\nvariable is just the name of a variable. It can be any valid variable name\nsequence is something that can be looped over\nSounds like a circular argument, I know, but its the best we can do at this level.\n\n\nExamples of sequence\nThink of sequences a a list of things to be processed. Like a stack of papers to grade, or a to-do list, or a series of numbers to process.\n\nrange():\nWhen within a for loop,\n\nrange(n) will provide the sequence of numbers\n\\[0, 1, 2 ,... n-1\\]\nrange(start, end) will provide the sequence of numbers\n\\[\\text{start}, \\text{start}+1, \\text{start} + 2 ,... \\text{end}-1\\]\nrange(start, end, step) will provide the sequence of numbers\n\\[\\text{start}, \\text{start}+\\text{step}, \\text{start} + 2*\\text{step} ,... \\text{end}-1\\]\n\n\n\nlist\nWhen within a for loop,\n\nlist_variable will provide the contents of the list, one element at a time\n\n\n\nfile\nWhen within a for loop,\n\nfile will provide the contents of the file, one line at a time\n\n\n\nstring\nWhen within a for loop,\n\nstring_variable will provide the individual characters of the string, one character at a time",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "For loop"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#how-does-a-for-loop-work",
+    "href": "topics/07_statements/03_for_loop/03_for_loop.html#how-does-a-for-loop-work",
+    "title": "For loop",
+    "section": "How does a for-loop work?",
+    "text": "How does a for-loop work?\nGiven the following code\nfor variable in sequence:\n  print(variable)\nAs the code starts, the variable will be set to the very 1st thing in the sequence (whatever that thing is)\nWhen the code has finished executing everything in the code block (indicated by indentations), then\n\nthe code goes back to the beginning of the for loop, and\nvariable will be set the the next thing in the sequence\n\nThis will continue until there are no things left in the sequence.\nExample: for-loop over a number range\nfor i in range(3):\n  print(\"I am at index \", i)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\ni\noutput printed to console\ncomment\n\n\n\n\n1\n0\n\ni is set to 1st number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 0\n\n\n\n1\n1\n\ni is set to 2nd number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 1\n\n\n\n1\n2\n\ni is set to 3rd number in the range sequence (0, 1, 2)\n\n\n2\n\nI am at index 2\n\n\n\n1\n\n\nThere are no numbers in the range sequence, so for loop quits\n\n\n3\n\nall done\nNo longer in the for loop\n\n\n\nExample: for-loop over a list\nfib_list = [1, 1, 2, 3, 5 ]\nfor number in fib_list:\n  print(\"The next fibanocci number is \", i)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\nnumber\noutput printed to console\ncomment\n\n\n\n\n1\n1\n\nnumber is set to 1st number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 1\n\n\n\n1\n1\n\nnumber is set to 2nd number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 1\n\n\n\n1\n2\n\nnumber is set to 3rd number in the fib_list [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 2\n\n\n\n1\n3\n\nnumber is set to 4th number in the fib_list. [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 3\n\n\n\n1\n5\n\nnumber is set to 5th number in the fib_list. [1, 1, 2, 3, 5 ]\n\n\n2\n\nThe next fibanocci number is 5\n\n\n\n1\n\n\nThere are no numbers left in the fib_list, so quit for-loop\n\n\n3\n\nall done\nNo longer in the for loop\n\n\n\nExample: for-loop over a string\nname = \"sandy\"\nfor character in name:\n  print(\"Character:\",)\nprint (\"all done\")\nCode trace:\n\n\n\n\n\n\n\n\n\ncode line #\nCharacter\noutput printed to console\ncomment\n\n\n\n\n1\ns\n\ncharacter is set to 1st character in name “sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\na\n\ncharacter is set to 2nd character in name “sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\nn\n\ncharacter is set to 3rd character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\nd\n\ncharacter is set to 4th character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\ny\n\ncharacter is set to 5th character in name sandy”\n\n\n2\n\nCharacter: s\n\n\n\n1\n\n\nThere are no more characters in name, so quit for-loop\n\n\n3\n\nall done\nNo longer in the for loop",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "For loop"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#the-range-function",
+    "href": "topics/07_statements/03_for_loop/03_for_loop.html#the-range-function",
+    "title": "For loop",
+    "section": "The range() function",
+    "text": "The range() function\nIn Python, the range()function returns a sequence of numbers.\nExample:\nvalues = range(4)\nHere, range(4) returns a sequence of 0, 1, 2 ,and 3.\nSince the range() function returns a sequence of numbers, we can iterate over it using a for loop.\nExample:\n# iterate from i = 0 to i = 4\nfor i in range(5):\n    print(\"The value of i is currently\", i)\noutput:\nThe value of i is currently 0\nThe value of i is currently 1\nThe value of i is currently 2\nThe value of i is currently 3\nThe value of i is currently 4\nThe loop has been executed 5 times (it’s the range() function’s argument), the last control variable’s value is 4 (not 5, as it starts from 0, not from 1)\n\nTwo arguments range() function\nThe range() function invocation may be equipped with two arguments, not just one:\n⚠️ Note: the range() function accepts only integers as its arguments, and generates sequences of integers.\nExample:\nfor i in range(2, 8):\n    print(\"The value of i is currently\", i)\nIn this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.\noutput:\nThe value of i is currently 2\nThe value of i is currently 3\nThe value of i is currently 4\nThe value of i is currently 5\nThe value of i is currently 6\nThe value of i is currently 7\nThe first value shown is 2 (taken from the range()’s first argument.), and the last is 7 (although the range()’s second argument is 8).\n\n\nThree arguments range() function\nThe range() function may also accept three arguments\nExample:\nfor i in range(2, 8, 3):\n    print(\"The value of i is currently\", i)\nThe third argument is an increment – it’s a value added to control the variable at every loop turn (as you may suspect, the default value of the increment is 1).\noutput:\nThe value of i is currently 2\nThe value of i is currently 5",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "For loop"
+    ]
+  },
+  {
+    "objectID": "topics/07_statements/03_for_loop/03_for_loop.html#examples-of-loops-inside-functions",
+    "href": "topics/07_statements/03_for_loop/03_for_loop.html#examples-of-loops-inside-functions",
+    "title": "For loop",
+    "section": "Examples of Loops Inside Functions",
+    "text": "Examples of Loops Inside Functions\nA for loop is often used inside functions to automate repetitive tasks. Here’s a breakdown of how loops work with functions in Python.\n\nExample 1: Simple Function with a For Loop\nThis function prints the numbers from 1 to 5 using a for loop:\ndef print_numbers():\n    for i in range(1, 6):\n        print(i)\n\n# Call the function\nprint_numbers()\nExplanation: The for i in range(1, 6) loop iterates over the numbers from 1 to 5, printing each value.\n\n\nExample 2: Sum of All Integers from 1 to n\nThis function calculates the sum of all integers from 1 to a given number n.\ndef sum_numbers(n):\n    total = 0\n    for i in range(1, n+1):\n        total += i\n    return total\n\n# Example usage:\nprint(sum_numbers(5))  # Output: 15 (1+2+3+4+5)\nExplanation: The function uses a loop to sum up all the integers from 1 to n. When called with n = 5, it returns 15.\n\n\nExample 3: Sum of Squares\ndef sum_of_squares(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i ** 2\n    return total\n\n# Test the function\nprint(sum_of_squares(4))  # Output: 30 (1^2 + 2^2 + 3^2 + 4^2)\nExplanation: The function loops through numbers from 1 to n and adds the square of each number to the total. For n = 4, the result is 30.",
+    "crumbs": [
+      "Syllabus",
+      "Statements",
+      "For loop"
     ]
   },
   {
@@ -1977,7 +1957,12 @@
     "href": "topics/06_operators/05_order_operations/05_order_operations.html",
     "title": "Order of Operations",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nEvaluate Python expressions containing assignment, arithmetic, comparison and logical operators.\nWrite Python expressions with the correct order or operations.\n\n\n\nLike PEDMAS for math equations (‘Parenthesis’, ‘Exponents’, ‘Division/Multiplication’, ‘Addition/Subtraction’), there is an order of operations for resolving programming operations (assignment, comparison, arithemetic and logical)\nOrder of Operations, from highest to lowest\n\n\n\nOperation\nOrder\nExample\nExplanation\n\n\n\n\n()\n1\n(x + y) * z\ngrouping expressions to force them to be evaluated first\n\n\n**\n2\n2 ** 3\nexponentiation (raising one value to the power of another)\n\n\n*, /, //, %\n3\nx * y\nmultiplication, division, floor division, and remainder (modulo)\n\n\n+, -\n4\nx + y\naddition and subtraction\n\n\nin, not in *\n5\n'hi' in greetings\nis something in, or not in, a list (or list-like object) (returns Boolean)\n\n\n&lt;, &lt;=, &gt;, &gt;=, !=, ==\n5\nx &lt; y\ncomparison of two things (returns Boolean)\n\n\nnot\n6\nnot x\nnegating the True/False value of x (returns Boolean)\n\n\nand\n7\nx &lt; y and x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\nor\n8\nx &lt; y or x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\n=, +=, -=, *=, /=, //=, %=**=\n9\nx += 1\nassigning or updating the value of a variable\n\n\n\n*\n\n\n\n\n\n\nNoteWhat’s in\n\n\n\nThis is called the membership operator and checks if an element is found in a structure of elements. For example is “c” found in “cocoa”. We will see it a little bit later in the course.\n\n\nThese sets of equations are equivalent (assume all variables are boolean):\nx and y or z\n(x and y) or z\n\nx or y and z\nx or (y and z)\n\nx and not y or z\n(x and (not y) ) or z\n\nx or not y and z\nx or ( (not y) and z)\n\nPython’s handling of operations with the same priority?\nConsider the following math function \\(y = \\frac{x^2 + x}{2x}\\) implemented in Python as such:\n\nx = 3\n\ny = (x**2 +x) / 2*x\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 18.0\n\n\nThis isn’t the correct value of \\(f(3)\\), which should be \\(2\\). Why is that?\nThe answer lies in how the denominator has been implemented /2*x. This is ambigious because both the / and the * have the same priority. Python doesn’t know that 2*x must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.\nTo remove the ambiguity, the best is to use parenthesis ():\n\nx = 3\n\ny = (x**2 +x) / (2*x)\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 2.0\n\n\nAdding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.\n\n\nChallenge\n✍️Challenge: The following checks if the current year is an olympic year (summer or winter). Manually execute the operations below and write the expected result. Check your answers by running the code.\n\n\n\n\n\n\n\nThe last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year. Source: International Olympic Committee algorithm."
+    "text": "Note☆ Learning Objectives\n\n\n\n\nEvaluate Python expressions containing assignment, arithmetic, comparison and logical operators.\nWrite Python expressions with the correct order or operations.\n\n\n\nLike PEDMAS for math equations (‘Parenthesis’, ‘Exponents’, ‘Division/Multiplication’, ‘Addition/Subtraction’), there is an order of operations for resolving programming operations (assignment, comparison, arithemetic and logical)\nOrder of Operations, from highest to lowest\n\n\n\nOperation\nOrder\nExample\nExplanation\n\n\n\n\n()\n1\n(x + y) * z\ngrouping expressions to force them to be evaluated first\n\n\n**\n2\n2 ** 3\nexponentiation (raising one value to the power of another)\n\n\n*, /, //, %\n3\nx * y\nmultiplication, division, floor division, and remainder (modulo)\n\n\n+, -\n4\nx + y\naddition and subtraction\n\n\nin, not in *\n5\n'hi' in greetings\nis something in, or not in, a list (or list-like object) (returns Boolean)\n\n\n&lt;, &lt;=, &gt;, &gt;=, !=, ==\n5\nx &lt; y\ncomparison of two things (returns Boolean)\n\n\nnot\n6\nnot x\nnegating the True/False value of x (returns Boolean)\n\n\nand\n7\nx &lt; y and x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\nor\n8\nx &lt; y or x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\n=, +=, -=, *=, /=, //=, %=**=\n9\nx += 1\nassigning or updating the value of a variable\n\n\n\n*\n\n\n\n\n\n\nNoteWhat’s in\n\n\n\nThis is called the membership operator and checks if an element is found in a structure of elements. For example is “c” found in “cocoa”. We will see it a little bit later in the course.\n\n\nThese sets of equations are equivalent (assume all variables are boolean):\nx and y or z\n(x and y) or z\n\nx or y and z\nx or (y and z)\n\nx and not y or z\n(x and (not y) ) or z\n\nx or not y and z\nx or ( (not y) and z)\n\nPython’s handling of operations with the same priority?\nConsider the following math function \\(y = \\frac{x^2 + x}{2x}\\) implemented in Python as such:\n\nx = 3\n\ny = (x**2 +x) / 2*x\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 18.0\n\n\nThis isn’t the correct value of \\(f(3)\\), which should be \\(2\\). Why is that?\nThe answer lies in how the denominator has been implemented /2*x. This is ambigious because both the / and the * have the same priority. Python doesn’t know that 2*x must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.\nTo remove the ambiguity, the best is to use parenthesis ():\n\nx = 3\n\ny = (x**2 +x) / (2*x)\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 2.0\n\n\nAdding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.\n\n\nChallenge\n✍️Challenge: The following checks if the current year is an olympic year (summer or winter). Manually execute the operations below and write the expected result. Check your answers by running the code.\n\n\n\n\n\n\n\nThe last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year. Source: International Olympic Committee algorithm.",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "Order of Operations"
+    ]
   },
   {
     "objectID": "topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html",
