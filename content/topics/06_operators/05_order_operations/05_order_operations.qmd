@@ -1,0 +1,94 @@
+---
+title: "Order of Operations"
+editor:
+  render-on-save: true
+---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Evaluate** Python expressions containing assignment, arithmetic, comparison and logical operators.
+- **Write** Python expressions with the correct order or operations. 
+:::
+
+
+Like **PEDMAS** for math equations ('Parenthesis', 'Exponents', 'Division/Multiplication', 'Addition/Subtraction'), there is an order of operations for resolving programming operations (assignment, comparison, arithemetic and logical)
+
+**Order of Operations, from highest to lowest**
+
+| Operation                                         | Order | Example             | Explanation                                                                  |
+| ------------------------------------------------- | ----- | ------------------- | ---------------------------------------------------------------------------- |
+| `()`                                              | 1     | `(x + y) * z`       | grouping expressions to force them to be evaluated first                     |
+| `**`                                              | 2     | `2 ** 3`            | exponentiation (raising one value to the power of another)                   |
+| `*`, `/`, `//`, `%`                               | 3     | `x * y`             | multiplication, division, floor division, and remainder (modulo)             |
+| `+`, `-`                                          | 4     | `x + y`             | addition and subtraction                                                     |
+| `in`, `not in` [*](#covered-later)                                   | 5     | `'hi' in greetings` | is something in, or not in, a list (or list-like object) (returns `Boolean`) |
+| `<`, `<=`, `>`, `>=`, `!=`, `==`                  | 5     | `x < y`             | comparison of two things (returns `Boolean`)                                 |
+| `not`                                             | 6     | `not x`             | negating the `True`/`False` value of `x` (returns `Boolean`)                 |
+| `and`                                             | 7     | `x < y and x > z`   | combining two `Boolean` values (returns `Boolean`)                           |
+| `or`                                              | 8     | `x < y or x > z`    | combining two `Boolean` values (returns `Boolean`)                           |
+| `=`, `+=`, `-=`, `*=`, `/=`, `//=`, `%=`<br>`**=` | 9     | `x += 1`            | assigning or updating the value of a variable                                |
+
+*<a id="covered-later"></a>
+
+:::{.callout-note title="What's `in`"} 
+This is called the **membership** operator and checks if an element is found in a structure of elements. For example is "c" found in "cocoa". We will see it a little bit later in the course.
+:::
+
+These sets of equations are equivalent (assume all variables are boolean):
+
+```python
+x and y or z
+(x and y) or z
+
+x or y and z
+x or (y and z)
+
+x and not y or z
+(x and (not y) ) or z
+
+x or not y and z
+x or ( (not y) and z)
+```
+
+# Python's handling of operations with the same priority?
+
+Consider the following math function $y = \frac{x^2 + x}{2x}$ implemented in Python as such:
+
+```{python}
+x = 3
+
+y = (x**2 +x) / 2*x
+
+print(f"f({x})= {y}")
+```
+
+This isn't the correct value of $f(3)$, which should be $2$. Why is that?
+
+The answer lies in how the denominator has been implemented `/2*x`. This is ambigious because both the `/` and the `*` have the **same priority**. Python doesn't know that  `2*x` must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication. 
+
+To remove the ambiguity, the best is to use parenthesis `()`:
+
+```{python}
+x = 3
+
+y = (x**2 +x) / (2*x)
+
+print(f"f({x})= {y}")
+```
+
+Adding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.
+
+# Challenge
+
+✍️**Challenge**: The following checks if the current year is an olympic year (summer or winter). Manually execute the operations below and write the expected result. Check your answers by running the code.
+
+
+```{pyodide}
+year = 2026        # Change this to current year if teachers didn't update it ;)
+
+time_to_next_olympiad  = year % 4
+is_summer_olympics = (time_to_next_olympiad == 0)
+is_winter_olympics = (time_to_next_olympiad == 2)  and ((year % 2) == 0)
+print("True or False, this year is an olympic Games year?")
+print(is_summer_olympics or is_winter_olympics)
+```
+
+> _The last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year._ Source: [International Olympic Committee](https://olympics.com/ioc/faq/history-and-origin-of-the-games/since-when-have-the-summer-and-winter-games-no-longer-been-held-in-the-same-year) algorithm.
