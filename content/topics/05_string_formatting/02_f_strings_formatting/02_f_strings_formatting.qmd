@@ -115,7 +115,7 @@ Values that represent a given measurement in your program might need to be round
 
 Python will determine which is the most appropriate representation
 
-![ ](./assets/format_precision.png){width=60%}
+![ ](./assets/format_precision.png){width=50%}
 
 **Examples**
 
