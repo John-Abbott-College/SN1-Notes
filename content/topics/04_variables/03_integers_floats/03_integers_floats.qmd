@@ -5,7 +5,6 @@ editor:
 ---
 ::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
 - **Tell** the difference between an integer and a float
-- **Use** the `type()` function to determine the data type of a variable
 - **Recognize** scientific notation for large numbers
 - **Recognize** underscores between digits for large numbers
 - **Create** negative numbers
@@ -15,7 +14,7 @@ editor:
 # Integers versus Floats
 Integers or `int` are whole number i.e.: **do not have a fractional** value. On the other hand, `float` are floating-point numbers that **have a fractional** part. The reason why we make this distinction is because `int` and `float` are not stored in the same way within a computer's memory.
 
-# The`type()` function
+<!-- # The`type()` function
 To know if a value is of a specific type, you can use the `type()` function as shown below:
 ```python
 num = 3
@@ -29,7 +28,7 @@ another_num = 3.14
 print(type(another_num))
 ```
 
-Output: `float`
+Output: `float` -->
 
 # Scientific notation
 
