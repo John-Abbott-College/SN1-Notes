@@ -1,104 +1,251 @@
 ---
-title: "🎯 Arithmetic operators"
+title: "✍️ Arithmetic operators"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="Learning Objectives Checklist"}
+
+- [ ] **Apply** the addition (+), subtraction (-), multiplication (*), and division (/) operators in Python expressions.
+- [ ] **Apply** the exponentiation (**) operator to calculate powers.
+- [ ] **Apply** the modulo (%) and floor division (//) operators to solve programming problems.
+- [ ]  **Evaluate** arithmetic expressions on variables of the different basic data types: `int`, `float`, `string`, `bool`
+- [ ]  **Evaluate** Python expressions by applying the correct priority of operations.
+:::
 
 Note: if you forget what any of these operators do, review the lecture notes on Operators!
 
-1. What is the output of the following program:
+# ✍️ **Practice**
+What is the output of the following programs?
 
-   ```python
-   x = 5
-   y = 2
-   print(x ** y)
-   print(x // y)
-   ```
+## 1. Double Star Double Slash
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>What does the <code>**</code> operator do? What does the <code>//</code> operator do?</p>
-  </details>
-  <details>
-    <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      25
-      2
-    </code></pre>
-  </details>
+```python 
+x = 5
+y = 2
+print(x ** y)
+print(x // y)
+```
 
-2. What is the output of the following program:
+<details>
+  <summary>👀 Hint</summary>
+  <p>What does the <code>**</code> operator do? What does the <code>//</code> operator do?</p>
+</details>
 
-   ```python
-   print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
-   
-   ```
+:::{.callout-tip title="Solution" collapse="true"}
+```
+25
+2
+```
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>The <code>print</code> function will insert a space between each comma-separated argument.</p>
-  </details>
-  <details>
-    <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      -0.5 0.5 0 -1
-    </code></pre>
-  </details>
+## 2. Division Divisions
 
-3. What is the output of the following program:
+```python
+print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
+```
 
-   ```python
-   print(1/1)
-   ```
+<details>
+  <summary>👀 Hint</summary>
+  <p>The <code>print</code> function will insert a space between each comma-separated argument.</p>
+</details>
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Does the <code>/</code> operator return an <code>int</code> or <code>float</code>?</p>
-  </details>
-  <details>
-    <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      1.0
-    </code></pre>
-  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```
+-0.5 0.5 0 -1
+```
+:::
 
-4. What is the output of the following program:
+## 3. One divided by One
+Wha't the output and resulting data type of the following program?
 
-   ```python
-   x = 1 / 2 + 3 // 3 + 4 ** 2
-   print(x)
-   ```
+```python
+print(1/1)
+```
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Remember the BEDMAS (bracket/exponent/division/multiplaction/addition/subtraction) rules!</p>
-  </details>
-  <details>
-    <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      17.5
-    </code></pre>
-  </details>
+<details>
+  <summary>👀 Hint</summary>
+  <p>Does the <code>/</code> operator return an <code>int</code> or <code>float</code>?</p>
+</details>
+
+:::{.callout-tip title="Solution" collapse="true"}
+```
+1.0
+```
+**float**
+:::
+
+## 4. No parenthesis
+What is the output of the following program? 
+
+```python
+x = 1 / 2 + 3 // 3 + 4 ** 2
+print(x)
+```
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>Remember the PEDMAS (bracket/exponent/division/multiplication/addition/subtraction) rules!</p>
+</details>
+
+:::{.callout-tip title="Solution" collapse="true"}
+```
+17.5
+```
+:::
+
+## 5. Modulo
+What is the output of the following program?
+```python
+x = 7
+y = 5
+x = x % y
+x = x % y
+y = y % x
+print(y)
+```
+
+<details>
+<summary>👀 Hint</summary>
+<p>Make sure you pay attention to the changes in <code>x</code> and <code>y</code> from line to line.</p>
+</details>
+
+:::{.callout-tip title="Solution" collapse="true"}
+```
+1
+```
+:::
+
+## 6. All operators
+What is the output of the following program?
+
+```python
+a = 9
+b = 4
+c = 5
+x = a % b
+y = a // c
+print(x, y)
+a = 5.5
+b = 5
+
+x = a % b
+y = a // b
+print(x, y)
+a = -7
+b = -4
+x = a % b
+y = (a + b) // b
+print(x, y)
+```
+:::{.callout-tip title="Solution" collapse="true"}
+```{python}
+a = 9
+b = 4
+c = 5
+x = a % b
+y = a // c
+print(x, y)
+a = 5.5
+b = 5
+
+x = a % b
+y = a // b
+print(x, y)
+a = -7
+b = -4
+x = a % b
+y = (a + b) // b
+print(x, y)
+```
+:::
 
 
-5. What is the output of the following program if the user enters `7` and `5` respectively:
+# 🧩 **Problem Solving**
 
-   ```python
-   x = int(input())
-   y = int(input())
-   x = x % y
-   x = x % y
-   y = y % x
-   print(y)
-   ```
+## 1. T-shirts
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Make sure you pay attention to the changes in <code>x</code> and <code>y</code> from line to line.</p>
-  </details>
-  <details>
-    <summary>✅ Solution</summary>
-    <pre><code class="language-python">
-      1
-    </code></pre>
-  </details>
+Write a short program which given a `budget`, calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax.
+
+```{pyodide}
+budget = 115.0
+
+# Complete this...
+
+```
+:::{.callout-tip collapse="true" title="Solution"}
+
+```{python}
+budget = 115.0
+cost_one = 15.0
+
+num_t_shirts = budget//cost_one
+
+```
+
+:::
+
+## 2. Egg Feast
+Given a required number of eggs (`num_eggs`), where eggs can only be purchased in containers of 30, 12, 6, or as individual eggs, determine the number of containers of each size needed to purchase exactly the required number of eggs with no waste.
+
+For example, if I need 24 eggs, I should purchase 2 containers of 12 rather than 1 container of 30.
+
+Complete the following code:
+<details>
+  <summary>👀 Hint 1</summary>
+  <p>Start by figuring out how many of the largest containers you can buy without exceeding the number of eggs you need.</p>
+</details>
+
+<details>
+  <summary>👀 Hint 2</summary>
+  <p>Calculate how many eggs are still needed after buying the largest containers, then repeat the process with the next container size.</p>
+</details>
+
+
+```{pyodide}
+
+num_eggs = 100
+
+
+
+```
+:::{.callout-tip collapse="true" title="Solution"}
+```{python}
+num_eggs = 100
+large_size = 30
+normal_size = 12
+small_size = 6
+
+# 1. Finding how many large can fit in num_eggs
+large_count = num_eggs // large_size
+
+# 2. How many eggs are left after buying the large containers
+remaining = num_eggs % large_size
+
+
+normal_count = remaining // normal_size
+remaining_n = remaining % normal_size
+
+small_count = remaining_n // small_size
+
+# What's left are individual eggs to purchase 
+individual_count = remaining_n % small_size
+
+print("Here's what you need to purchase...")
+print("Count large: ", large_count)
+print("Count normal: ", normal_count)
+print("Count small: ", small_count)
+print("Individual eggs: ", individual_count)
+```
+:::
+
+
+# 🚀 **Challenge**
+
+Write a short program to help the school administration calculate the number of sections per course given a certain number of registered students. Most groups should have an even number of students, with at least 18 students per classroom and a maximum of 32 students. The administration tries to minimize the number of groups and balances the number of students per classroom.
+
+> Note: There are many possible answers for this problem, but some answers are more optimal than others. You are allowed to use any arithmetic operators and simple if statements.
+
+:::{.callout-tip collapse="true" title="Solution"}
+
+Find it [here](https://app.codeboot.org/5.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXJpdGhtZXRpY3MzLnB5~XQAAgAAvAAAAAAAAAAAwiAOiEYBKyZe2I4QdWm7UXFjOvyviV84ZJSWiNp-9cEcuUekImN8jtfnmf3_4HMgA.oYXJpdGhtZXRpY3M0LnB5~XQAAgAA0AAAAAAAAAAAwiAOiES9Ps37Inw0qfG9M7-T-i9pIlseMPdretZIdGs5iE_XRmjDhfUT9FqrYzaHB_-xOgAA=.oc3R1ZGVudHNfcGVyX2NsYXNzcm9vbS5weQ==~XQAAgAC3AwAAAAAAAAARZ_6IyAHcsKA_gk8ErULb3y_0mEvwAQUvSH3Io5HuKO0lev5qHJtmUud-z0lOQyR4V5aTBthfzVxSylCfQyxTnKr23mg9xiuAJ0bEUJFpJbHv9MIsq-lktXXhTmnhrPY6MrWQI6HjUbh30gSnRHGTsz37WSSDvMx1STuZY19MoJ5zas8J9aUwZZzhZzVPp0j7w8mE_glYQPRLRqAcS3TVLgXqBwZBT9RnJgELR1Csakc8EMNeN37ReX5_TNtZQz_MSWXwMHId0TCjFkyOKeVjXdprzJ64S77CweI2YnN1TBgBuabcZHePq4pHbV3Yf1eyhhfCFq26Jq02dWDwuaHzoKazt0S29qpWLGhkL7Za9WsWtFENo76gcpJM9hsqdZNKXriIyFZRbsgAEE9M9bF055daGQcb-kjpvq5aFf-IU01recFkZJ24NSd6ddZConWiEAWqOB_u-_x75A==.fc3R1ZGVudHNfcGVyX2NsYXNzcm9vbV8yLnB5~XQAAgABVCAAAAAAAAAARaAQIZvNx2aPvSLSjLYQfdOpuOXia6VgdWdqdP6BlGcP6R0JD_HLKEarDGKRtsSjY-1tTLZ3jzLL25cCmEralncL5cLPelfiJci5_OwHVAyPm3pSgwDcDWZ2BLHVn5SCjSl2YqdnbXwyWS2SuBPseRjH9DAqI9TSAj8dVdn-VtFKoLjXU5S4bOxQkmUEB8XEmzojR4F_HEPOBpR_FJ-ZLafJ_mupI_JeDgBQQOHjhASaKSDA9C_6V7P1XBQ5dbCY_qjHx5yWBX1rbEu-5FTBkBDL3PAOlmGUUVZyc14fHlIDhg5NiGr8G_41npD0gwOwaU08BI3L7lYe6PL_gTeGJ46BwvadLTALvFHAeuhpZXEggwmZ7iKzO7dZdTMaO-y5-JgHuShKlO4S9lZQxb3jP3lsp9Xf_Lf1WIM54m5OGOTiz26pKH20lZa2GjNwZCGSiZjUhLkhpaFGS4VB5JVVvx_331JOEI3pY_M57WO2l7_Uz-TCbpvVwKTff4aVvzuRvS_2DTtIbYjBIlME25wmfBK8s-Q7ouKdptwBpAPkeBi3sYRyGtc5BLAvE7-usjbdDk6Nk56qKKQjBZyk_yAcoSKzcPfs3qiyzmWELx28irP0FvgpHU3UhAyygjjwUoPKEs74z7FRJHBIv-NuImjUqS0JTKwpWHkM5Y1ttJ7ar_QD7tzUY3d4xWmWxH5U3VVYXW8-IJsxKGkqcQBTzn1ZXlpbLZpiu0ZnZdSCcIuA5Ftb01-r_HOaCAVENHHu83UZfUDZT5Vrn-61kHmP1DDucS-CX9iEzaJl0IXYEWhx0qY0e5x8i9xAagcYGR5kigJZyJv_78gdHuZLwxgdhdGaRz4tXUbvnvyWPQyQHwf-ZTm2Yf1FUs1z-ekrxiRHvU6GV9tUmfCw5EFlwNuRr2ijv09XybRM_rZf75_8AFIzklxU6EN84tA25VLH_8MnCXA==.~lang=py-novice.~showLineNumbers=true.e)
+:::

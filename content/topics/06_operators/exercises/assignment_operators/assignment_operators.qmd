@@ -1,0 +1,109 @@
+---
+title: "✍️ Assignment operators"
+editor:
+  render-on-save: true
+---
+::: {.callout-note .objectives icon="false" title=" Learning Objectives Checklist"}
+- [ ] **Apply** assignment operations (`=`, `+=`, `-=`, `*=`, `/=`, etc.) correctly.
+- [ ] **Trace** how the value of variables changes during program execution.
+:::
+
+# ✍️ **Practice**
+
+## True or False, the following programs contains a `SyntaxError`:
+
+### Program 1 
+
+```python
+value = 2
+value = value + 3
+```
+:::{.callout-tip title="Solution" collapse="true"}
+False
+:::
+
+### Program 2
+
+```python
+value = 4
+value2 = value+=2
+```
+:::{.callout-tip title="Solution" collapse="true"}
+True, cannot use two assignment operators (= and +=) in the same expression. This should be done on two separate lines.
+:::
+
+### Program 3
+
+```python
+value = 10
+print(value-=1)
+```
+:::{.callout-tip title="Solution" collapse="true"}
+True, cannot print and assignment expression. This should be done on two separate lines.
+:::
+
+### Program 4
+
+```python
+value1 = 34
+value2 = 44
+value1 += value2
+```
+:::{.callout-tip title="Solution" collapse="true"}
+False
+:::
+
+## Trace the following programs and the data types of variables
+
+### Program 5
+What's the ouput of the program and the data type of `num1`, `num2`, and `num3`:
+
+```python
+num1 = 23
+num2 = 45
+num3 = "234"
+num1 += 1
+num2 -= num1
+num3 += str(num1)
+num3 += str(num2)
+num2 = num2 * 2
+print(num1, num2, num3)
+
+```
+:::{.callout-tip collapse="true" title="Solution"}
+```
+24 42 "2342421"
+```
+`int`, `int`, `str`
+
+:::
+
+### Program 6
+What's the ouput of the program and the data type of `a`, `b`, and `s`:
+
+```python
+a = 15
+b = 15
+s = "111"
+
+a = b//a
+b = b % 4
+
+s += "1"
+a = b / a
+
+print(a, type(a))
+print(b, type(b))
+print(s, type(s))
+```
+:::{.callout-tip collapse="true" title="Solution"}
+```
+3.0
+3
+"111"
+```
+`float`
+`int`
+`str`
+:::
+
