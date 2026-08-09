@@ -591,6 +591,18 @@
     ]
   },
   {
+    "objectID": "topics/04_variables/exercises/data_types/data_types.html#string-creation",
+    "href": "topics/04_variables/exercises/data_types/data_types.html#string-creation",
+    "title": "✍️ Variables & Data Types",
+    "section": "3. String Creation",
+    "text": "3. String Creation\nMake a string to store the following text: The quick brown fox jumps over the lazy dog.Pack my box with five dozen liquor jugs. Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack.\n\n\n👀 Hint\n\n\nIt’s a multi-line string\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nstory = \"\"\"The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack.\"\"",
+    "crumbs": [
+      "Syllabus",
+      "Variables & Data Types",
+      "✍️ Variables & Data Types"
+    ]
+  },
+  {
     "objectID": "topics/04_variables/exercises/data_types/data_types.html#sum-of-mismatched-types",
     "href": "topics/04_variables/exercises/data_types/data_types.html#sum-of-mismatched-types",
     "title": "✍️ Variables & Data Types",
