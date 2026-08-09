@@ -106,12 +106,13 @@ $code-block-bg: #eff2f5;
 }
 
 .cell-output-stderr {
-  border-left-color: #e0a800;
-  background-color: #fff8e6;
+  color: #d9534f;
+  background-color: #fdecea;
 }
 .cell-output-stderr::before {
-  content: "WARNING";
-  color: #e0a800;
+  content: "ERROR";
+  color: #d9534f;
+  background-color: #fdecea;
 }
 
 .cell-output-error {

@@ -222,12 +222,13 @@ img.footer-logo {
 }
 
 .cell-output-stderr {
-  border-left-color: #f0b429;
-  background-color: #2b2617;
+  border-left-color: #f2726f;
+  background-color: #2e1b1a;
 }
 .cell-output-stderr::before {
-  content: "WARNING";
-  color: #f0b429;
+  content: "ERROR";
+  border-left-color: #f2726f;
+  background-color: #2e1b1a;
 }
 
 .cell-output-error {

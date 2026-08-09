@@ -168,6 +168,24 @@ Which of the following variable names are **illegal**?
 `True` — reserved keyword for the Boolean type.
 :::
 
+## 3. String Creation
+
+Make a string to store the following text:
+_The quick brown fox jumps over the lazy dog.Pack my box with five dozen liquor jugs.
+Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack._
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>It's a multi-line string</p>
+</details>
+
+:::{.callout-tip collapse="true" title="Solution"}
+```python
+story = """The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack.""
+
+```
+:::
+
 # 🧩 **Problem Solving**
 
 ## 1. Sum of Mismatched Types
@@ -179,6 +197,7 @@ num2 = "4"
 
 # Intended result: sum_val gets the value 6.
 sum_val = num1 + num2
+print(sum_val)
 ```
 
 <details>
@@ -210,7 +229,7 @@ Fix the calculation error in the program below, which is supposed to calculate a
 grade1 = 25
 grade2 = 26
 
-average = int(grade1+grade2/2)
+average = int((grade1+grade2)/2)
 print(average)
 ```
 
@@ -233,9 +252,7 @@ print(average)
 Calculate the gravitational potential energy of an object using the following formula, where $m$ is the mass of the object, $g$ is the acceleration of gravity which is 9.81 $m/s^2$, $h$ is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.
 
 $$
-
 E_p = m \times g \times h
-
 $$
 
 <details>
@@ -254,4 +271,53 @@ height = 200
 energy = GRAVITATION_ACC * mass * height
 
 ```
+:::
+
+# 4. Renovations
+
+Jac Reno needs your assistance in estimating the area of Brittain Hall with a `python` script. We can approximate the shape of BH with a trapezoid with bases $b_1$ and $b2$ and a triangle with base $b3$. We can then estimate the area with the following equation using the width of the hallway $w$ and multiply by **N = 4** (the number of floors). The script must print the estimated area of Brittain hall. 
+
+
+The measures below are approximations, they may change later on.
+$$
+Area_{BH} =N \left( \frac{b_1 + b_2}{2}  w + \frac{b_3  w}{2}\right)
+$$
+<img src="assets/BH.png" height=200 width=40%/>
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>Use variables and break down the equations in as many terms to make it more readable. </p>
+</details>
+
+```{pyodide}
+
+
+
+
+
+
+
+
+
+
+```
+:::{.callout-tip collapse="true" title="Solution"}
+```{python}
+num_floors = 4 
+base1 = 18 # in meters
+base2 = 20 # in meters
+base3 = 3  # in meters
+width = 15 # in meters
+
+trapezoid = width*(base1 + base2)/2 
+triangle = width * base3 / 2
+area_one_floor= trapezoid + triangle
+area_bh = num_floors * area_one_floor
+
+print("The estimated area of Brittain hall is: ", area_bh)
+```
+Note: There are other valid solutions, but there are better implementations than others:
+- Using variables makes the code easier to update with more precise measures
+- Breaking down an equation into multiple terms helps making it more readable
+- Using comments (`#`) with the units of measurements helps understand the context.
 :::
