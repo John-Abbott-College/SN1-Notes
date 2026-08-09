@@ -7,11 +7,32 @@
     "text": "Welcome to 420-SN1 Programming in Science\nIn this course, you will learn everything about the basics of programming to solve scientific problems, read data from files, clean up the data, apply mathematical formulas, and so much more.\nThis image was AI generated.\nThis website provides you with additional notes and practice exercises that can help you better understand and master the concepts seen in class."
   },
   {
-    "objectID": "index.html#callout-blocks",
-    "href": "index.html#callout-blocks",
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
     "title": "Programming in Science",
-    "section": "Callout blocks",
-    "text": "Callout blocks\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are the core objecives to be covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Optional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher.\n\n\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning often related to code that might lead to errors or crash in your program. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is warning related to a required installation or configuration. Altough it doesn’t affect your understanding of the concepts it might hinder you while coding.\n\n\n\n\n\n\n\n\nNoteExpand to understand\n\n\n\n\n\nAdditional information that is not part of the core content. It’s collapsed for you to optionally look at.\n\n\n\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are the core objecives to be covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Optional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher."
+  },
+  {
+    "objectID": "index.html#content-bubbles",
+    "href": "index.html#content-bubbles",
+    "title": "Programming in Science",
+    "section": "Content bubbles",
+    "text": "Content bubbles\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning often related to code that might lead to errors or crash in your program. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is warning related to a required installation or configuration. Altough it doesn’t affect your understanding of the concepts it might hinder you while coding."
+  },
+  {
+    "objectID": "index.html#hidden-content",
+    "href": "index.html#hidden-content",
+    "title": "Programming in Science",
+    "section": "Hidden content",
+    "text": "Hidden content\n\n\n\n\n\n\nNoteExpand to understand\n\n\n\n\n\nAdditional information that is not part of the core content. It’s collapsed for you to optionally look at."
+  },
+  {
+    "objectID": "index.html#practice-exercises",
+    "href": "index.html#practice-exercises",
+    "title": "Programming in Science",
+    "section": "Practice exercises",
+    "text": "Practice exercises\n🎯 Test Myself: These are short questions found inside each topic notes to help you grasp the concept.\n✍️ Practice: These practice problems are found at the end of each module, they are meant to consolidate your understanding of a topic by repetiion. Do as many as you need to feel comfortable with the topic.\n🧩 Problem Solving: These questions are meant to integrate the topics to your previous knowledge and push you to think a little bit further. These are excellent preparation for Quizzes and Tests.\n🚀 Challenge : Harder optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam.\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
   },
   {
     "objectID": "topics/12_data_processing/04_matplotlib/04_matplotlib.html",
@@ -198,7 +219,7 @@
     "href": "topics/06_operators/04_logical_operators/04_logical_operators.html",
     "title": "Logical operators",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nInterpret what a logical operation is (and, or, not)\nDifferentiate the behaviours of an and and an or.\nEvaluate logical expressions accurately.\n\n\n\nLogical operators are used to combine Boolean values and expressions (True or False). They are helpful when programming more complex decision making. There are instances where we need to test if multiple conditions are true at the same time.\n\n\n\n\n\n\nNoteExamples\n\n\n\nThe relative humidity index must be below 100% AND the temperature has to be decreasing for it to rain.\nThe oil in the car should be changed every 6 months OR every 5,000 km.\nTo return a new sweater you must have the receipt AND NOT remove the price tag.\n\n\nThe combination of AND, OR, and NOT conditions with the boolean values True and False is called boolean algebra (or boolean logic), each operation has a special symbol in math and in Python.\n\nTable of logical operators\n\n\n\nMATH\nPython\nOperation\nDescription\n\n\n\n\n⋀\nand\nAND\nTrue when all elements are true.\n\n\n⋁\nor\nOR\nTrue when at least one element is true.\n\n\n¬\nnot\nNOT\nThe inverse of an element.\n\n\n\n\n\n\nOperator and\nBoth operands must be True for the entire statement to be True\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nThe relative humidity index must be below 100% AND the temperature has to be decreasing for it to rain\nhumidity_index &lt; 100 and temperature_variation &lt; 0\n\n\n\n\n\nOperator or\nAt least one of the operans must be True for the entire statement to be True\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nThe oil in the car should be changed every 6 months OR every 5,000 km:\nnum_months &gt;= 6 or  mileage &gt;= 5000\n\n\n\n\n\nOperator not\nThis operator acts as a negation. It transforms the variable into its opposite. It only takes one operand unlike the and and or which have 2 operands.\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nI can borrow a book if I do NOT have an overdue book.\nis_permissible = not has_overdue_books\n\n\n\n\n\nChallenges\nTranslate the following english expressions into Python code provided the starting sample code.\n✍️Challenge: The relative humidity index must be below 100% AND the temperature has to be decreasing (negative variation) for it to rain:\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nrel_humidity = 88.0\n\ntemp_variation = -4\n\nexpression = rel_humidity &lt; 100.0 and temp_variation &lt; 0                      \nprint(\"Will it rain? (True/False): \", expression)\n\n\n\n✍️Challenge: The oil in the car should be changed every 6 months (inclusive) OR if the travelled distance exceeds 5,000 km:\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nduration = 3.5\ntravelled_distance = 6_500\n\nexpression = duration &gt;= 6 or travelled_distance &gt; 5000\n\n\nprint(\"Should I change oil?\", expression)\n\n\n\n✍️Challenge: To return a new sweater you must have the receipt AND NOT remove the price tag.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nhas_receipt = True\nhas_removed_tag = False\n\nexpression =  has_receipt and not has_removed_tag                     \n\nprint(\"Can the sweater be returned?: \", expression)",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nInterpret what a logical operation is (and, or, not)\nDifferentiate the behaviours of an and and an or.\nEvaluate logical expressions accurately.\n\n\n\nLogical operators are used to combine Boolean values and expressions (True or False). They are helpful when programming more complex decision making. There are instances where we need to test if multiple conditions are true at the same time.\n\n\n\n\n\n\nNoteExamples\n\n\n\nThe relative humidity index must be below 100% AND the temperature has to be decreasing for it to rain.\nThe oil in the car should be changed every 6 months OR every 5,000 km.\nTo return a new sweater you must have the receipt AND NOT remove the price tag.\n\n\nThe combination of AND, OR, and NOT conditions with the boolean values True and False is called boolean algebra (or boolean logic), each operation has a special symbol in math and in Python.\n\nTable of logical operators\n\n\n\nMATH\nPython\nOperation\nDescription\n\n\n\n\n⋀\nand\nAND\nTrue when all elements are true.\n\n\n⋁\nor\nOR\nTrue when at least one element is true.\n\n\n¬\nnot\nNOT\nThe inverse of an element.\n\n\n\n\n\n\nOperator and\nBoth operands must be True for the entire statement to be True\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nThe relative humidity index must be below 100% AND the temperature has to be decreasing for it to rain\nhumidity_index &lt; 100 and temperature_variation &lt; 0\n\n\n\n\n\nOperator or\nAt least one of the operans must be True for the entire statement to be True\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nThe oil in the car should be changed every 6 months OR every 5,000 km:\nnum_months &gt;= 6 or  mileage &gt;= 5000\n\n\n\n\n\nOperator not\nThis operator acts as a negation. It transforms the variable into its opposite. It only takes one operand unlike the and and or which have 2 operands.\n\n\n\n\n\n\n\nEnglish\nPython\n\n\n\n\nI can borrow a book if I do NOT have an overdue book.\nis_permissible = not has_overdue_books\n\n\n\n\n\nChallenges\nTranslate the following english expressions into Python code provided the starting sample code.\n🎯 Test Myself: The relative humidity index must be below 100% AND the temperature has to be decreasing (negative variation) for it to rain:\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nrel_humidity = 88.0\n\ntemp_variation = -4\n\nexpression = rel_humidity &lt; 100.0 and temp_variation &lt; 0                      \nprint(\"Will it rain? (True/False): \", expression)\n\n\n\n🎯 Test Myself: The oil in the car should be changed every 6 months (inclusive) OR if the travelled distance exceeds 5,000 km:\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nduration = 3.5\ntravelled_distance = 6_500\n\nexpression = duration &gt;= 6 or travelled_distance &gt; 5000\n\n\nprint(\"Should I change oil?\", expression)\n\n\n\n🎯 Test Myself: To return a new sweater you must have the receipt AND NOT remove the price tag.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nhas_receipt = True\nhas_removed_tag = False\n\nexpression =  has_receipt and not has_removed_tag                     \n\nprint(\"Can the sweater be returned?: \", expression)",
     "crumbs": [
       "Syllabus",
       "Operators",
@@ -278,16 +299,25 @@
     ]
   },
   {
-    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html",
-    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html",
-    "title": "🎯 Arithmetic operators",
+    "objectID": "topics/06_operators/exercises/assignment_operators/assignment_operators.html",
+    "href": "topics/06_operators/exercises/assignment_operators/assignment_operators.html",
+    "title": "✍️ Assignment operators",
     "section": "",
-    "text": "Note: if you forget what any of these operators do, review the lecture notes on Operators!\n\nWhat is the output of the following program:\nx = 5\ny = 2\nprint(x ** y)\nprint(x // y)\n\n\n\n👀 Hint\n\n\nWhat does the ** operator do? What does the // operator do?\n\n\n\n\n✅ Solution\n\n\n      25\n      2\n    \n\n\nWhat is the output of the following program:\nprint((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))\n\n\n\n👀 Hint\n\n\nThe print function will insert a space between each comma-separated argument.\n\n\n\n\n✅ Solution\n\n\n      -0.5 0.5 0 -1\n    \n\n\nWhat is the output of the following program:\nprint(1/1)\n\n\n\n👀 Hint\n\n\nDoes the / operator return an int or float?\n\n\n\n\n✅ Solution\n\n\n      1.0\n    \n\n\nWhat is the output of the following program:\nx = 1 / 2 + 3 // 3 + 4 ** 2\nprint(x)\n\n\n\n👀 Hint\n\n\nRemember the BEDMAS (bracket/exponent/division/multiplaction/addition/subtraction) rules!\n\n\n\n\n✅ Solution\n\n\n      17.5\n    \n\n\nWhat is the output of the following program if the user enters 7 and 5 respectively:\nx = int(input())\ny = int(input())\nx = x % y\nx = x % y\ny = y % x\nprint(y)\n\n\n\n👀 Hint\n\n\nMake sure you pay attention to the changes in x and y from line to line.\n\n\n\n\n✅ Solution\n\n\n      1",
-    "crumbs": [
-      "Syllabus",
-      "Operators",
-      "🎯 Arithmetic operators"
-    ]
+    "text": "::: {.callout-note .objectives icon=“false” title=” Learning Objectives Checklist”} - [ ] Apply assignment operations (=, +=, -=, *=, /=, etc.) correctly. - [ ] Trace how the value of variables changes during program execution. :::"
+  },
+  {
+    "objectID": "topics/06_operators/exercises/assignment_operators/assignment_operators.html#true-or-false-the-following-programs-contains-a-syntaxerror",
+    "href": "topics/06_operators/exercises/assignment_operators/assignment_operators.html#true-or-false-the-following-programs-contains-a-syntaxerror",
+    "title": "✍️ Assignment operators",
+    "section": "True or False, the following programs contains a SyntaxError:",
+    "text": "True or False, the following programs contains a SyntaxError:\n\nProgram 1\nvalue = 2\nvalue = value + 3\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nFalse\n\n\n\n\n\nProgram 2\nvalue = 4\nvalue2 = value+=2\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nTrue, cannot use two assignment operators (= and +=) in the same expression. This should be done on two separate lines.\n\n\n\n\n\nProgram 3\nvalue = 10\nprint(value-=1)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nTrue, cannot print and assignment expression. This should be done on two separate lines.\n\n\n\n\n\nProgram 4\nvalue1 = 34\nvalue2 = 44\nvalue1 += value2\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nFalse"
+  },
+  {
+    "objectID": "topics/06_operators/exercises/assignment_operators/assignment_operators.html#trace-the-following-programs-and-the-data-types-of-variables",
+    "href": "topics/06_operators/exercises/assignment_operators/assignment_operators.html#trace-the-following-programs-and-the-data-types-of-variables",
+    "title": "✍️ Assignment operators",
+    "section": "Trace the following programs and the data types of variables",
+    "text": "Trace the following programs and the data types of variables\n\nProgram 5\nWhat’s the ouput of the program and the data type of num1, num2, and num3:\nnum1 = 23\nnum2 = 45\nnum3 = \"234\"\nnum1 += 1\nnum2 -= num1\nnum3 += str(num1)\nnum3 += str(num2)\nnum2 = num2 * 2\nprint(num1, num2, num3)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n24 42 \"2342421\"\nint, int, str\n\n\n\n\n\nProgram 6\nWhat’s the ouput of the program and the data type of a, b, and s:\na = 15\nb = 15\ns = \"111\"\n\na = b//a\nb = b % 4\n\ns += \"1\"\na = b / a\n\nprint(a, type(a))\nprint(b, type(b))\nprint(s, type(s))\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n3.0\n3\n\"111\"\nfloat int str"
   },
   {
     "objectID": "topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html",
@@ -354,7 +384,7 @@
     "href": "topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html#floor-division",
     "title": "Arithmetic operators",
     "section": "Floor division //",
-    "text": "Floor division //\nDivides the first operand by the second and rounds the result down to the nearest whole number. It’ll compute the division, but then discard the fractional part and the result is always an integer.\n\nIt’s useful when dealing with “countable” elements such as count of people, count of objects, number of pixel. These enties can be divided further, the result of the operation must be an integer.\nYou can also replace the use of the // by performing a normal division with /, then converting the result into an int: x // y is the same as int(x/y)\n\n\na = 4\nb = 3\n\nresult = a//b\n\nIs the\n\n\n\n\n\n\nNoteFloor Division on other types\n\n\n\n\n\n\nIf two int are used in this operation, the result is and int\nIf any of the number is a float, the result will be a float and any integer will automatically be converted to the wider type float.\nThis operator doesn’t apply to string literals and will cause an error if used on strings.\n\n\n\n\n✍️Challenge 1: Manually execute the operations of the program below and write the expected result. Check your answers by running the code.\n\n\n\n\n\n\n✍️Challenge 2: Manually execute the operations below and write the expected result. Check your answers by running the code.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✍️Challenge 3: Write a short program which given a budget, calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nbudget = 115.0\ncost_one = 15.0\n\nnum_t_shirts = budget//cost_one\n\n\n\n\n🏆✍️Expert Challenge: Write a short program to help the school administration calculate the number of sections per course given a certain number of registered students. Most groups should have an even number of students, with at least 18 students per classroom and a maximum of 32 students. The administration tries to minimize the number of groups and balances the number of students per classroom.\n\nNote: There are many possible answers for this problem, but some answers are more optimal than others. You are allowed to use any arithmetic operators and simple if statements.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nFind it here",
+    "text": "Floor division //\nDivides the first operand by the second and rounds the result down to the nearest whole number. It’ll compute the division, but then discard the fractional part and the result is always an integer.\n\nIt’s useful when dealing with “countable” elements such as count of people, count of objects, number of pixel. These enties can be divided further, the result of the operation must be an integer.\nYou can also replace the use of the // by performing a normal division with /, then converting the result into an int: x // y is the same as int(x/y)\n\n\na = 4\nb = 3\n\nresult = a//b\n\nIs the\n\n\n\n\n\n\nNoteFloor Division on other types\n\n\n\n\n\n\nIf two int are used in this operation, the result is and int\nIf any of the number is a float, the result will be a float and any integer will automatically be converted to the wider type float.\nThis operator doesn’t apply to string literals and will cause an error if used on strings.\n\n\n\n\n🎯 Test Myself: Manually execute the operations of the program below and write the expected result. Check your answers by running the code.",
     "crumbs": [
       "Syllabus",
       "Operators",
@@ -426,7 +456,7 @@
     "href": "topics/04_variables/02_variables/02_variables.html",
     "title": "Variables and Constants",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nDescribe what are variables in a program.\nUse variables and constants.\nUnderstand variable naming rules and conventions.\nRecognize the various basic data types: str, int, float and bool",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nDescribe what are variables in a program.\nUse variables and constants.\nDistinguish legal from illegal Python variable names.\nFollow Python variable naming conventions.\nRecognize the various basic data types: str, int, float and bool",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
@@ -462,7 +492,7 @@
     "href": "topics/04_variables/02_variables/02_variables.html#why-use-variables",
     "title": "Variables and Constants",
     "section": "Why use variables?",
-    "text": "Why use variables?\nVariables can help make the code easier to read and follow, but also re-use logic.\n\nEliminating magic numbers\nMagic numbers are unexplained values used in the code which make the code hard to read and understand:\n\nprice = 16.80\ntotal = price * 1.05\nprint(total)\n\n17.64\n\n\n\nHere, the value 1.05 is not explained and is considered a magic number.\n\nNow consider this improved version using more variables:\n\nprice = 16.80\ntax_rate = 0.05 \ntotal = price + price*tax_rate\nprint(total)\n\n17.64\n\n\n\nIt’s now a little bit clearer that this program is calculating the cost of something afterapplying a \\(5%\\) taxe rate.\nThe first program was hardcoding the tax rate in the magic number 1.05\n\n\n\n\n\n\n\nNoteHardcoding\n\n\n\n\n\nHardcoding means to embed a value litterally as it is in the code. Think of it as permanantly tattooing your best friend’s phone number, and regretting it when they change numbers.\n\n\n\n\n\nRe-using logic\nSay, you’re creating a script implementing the Pythagorean theorem when \\(a\\) and \\(b\\) are known. \\[\na^2 + b^2 = c^2\n\\]\nConsider the two program below implementing the same equation. What’s the maing difference?\n\nProgram 1\n\nc_2 = 3*3 + 4*4\nprint(c_2)\n\n25\n\n\n\n\nProgram 2\n\na = 3\nb = 4\nc_2 = a*a + b*b\nprint(c_2)\n\n25\n\n\nOne possible answer is: it’s much easier to read, and update the second program because the values of \\(a\\) and \\(b\\) are well isolated in seperate variables.\n\n✍️Challenge: Improve the program below using variables:\n\nprint(\"The cost of item 1 is: $ 10\")\nprint(\"The cost of item 2 is: $ 22\")\nprint(\"The total cost is $ 32\")\n\nThe cost of item 1 is: $ 10\nThe cost of item 2 is: $ 22\nThe total cost is $ 32\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nitem1 = 10\nitem2 = 22\ntotal=item1 + item2\n\nprint(\"The cost of item 1 is: $\", item1)\nprint(\"The cost of item 2 is: $\", item2)\nprint(\"The total cost is: $\", total)",
+    "text": "Why use variables?\nVariables can help make the code easier to read and follow, but also re-use logic.\n\nEliminating magic numbers\nMagic numbers are unexplained values used in the code which make the code hard to read and understand:\n\nprice = 16.80\ntotal = price * 1.05\nprint(total)\n\n17.64\n\n\n\nHere, the value 1.05 is not explained and is considered a magic number.\n\nNow consider this improved version using more variables:\n\nprice = 16.80\ntax_rate = 0.05 \ntotal = price + price*tax_rate\nprint(total)\n\n17.64\n\n\n\nIt’s now a little bit clearer that this program is calculating the cost of something afterapplying a \\(5%\\) taxe rate.\nThe first program was hardcoding the tax rate in the magic number 1.05\n\n\n\n\n\n\n\nNoteHardcoding\n\n\n\n\n\nHardcoding means to embed a value litterally as it is in the code. Think of it as permanantly tattooing your best friend’s phone number, and regretting it when they change numbers.\n\n\n\n\n\nRe-using logic\nSay, you’re creating a script implementing the Pythagorean theorem when \\(a\\) and \\(b\\) are known. \\[\na^2 + b^2 = c^2\n\\]\nConsider the two program below implementing the same equation. What’s the maing difference?\n\nProgram 1\n\nc_2 = 3*3 + 4*4\nprint(c_2)\n\n25\n\n\n\n\nProgram 2\n\na = 3\nb = 4\nc_2 = a*a + b*b\nprint(c_2)\n\n25\n\n\nOne possible answer is: it’s much easier to read, and update the second program because the values of \\(a\\) and \\(b\\) are well isolated in seperate variables.\n\n🎯 Test Myself: Improve the program below by creating variables for each item price and the total:\n\nprint(\"The cost of item 1 is: $ 10\")\nprint(\"The cost of item 2 is: $ 22\")\nprint(\"The total cost is $ 32\")\n\nThe cost of item 1 is: $ 10\nThe cost of item 2 is: $ 22\nThe total cost is $ 32\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nitem1 = 10\nitem2 = 22\ntotal=item1 + item2\n\nprint(\"The cost of item 1 is: $\", item1)\nprint(\"The cost of item 2 is: $\", item2)\nprint(\"The total cost is: $\", total)",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
@@ -498,7 +528,7 @@
     "href": "topics/04_variables/02_variables/02_variables.html#variable-naming-convention",
     "title": "Variables and Constants",
     "section": "Variable naming convention",
-    "text": "Variable naming convention\nNow that you’ve seen that programming expressions don’t play by the math rules, let’s break away even more from your math habits.\nWhile, you can use simple names just like x, y, it is preferable to give variables a name that is more descriptive of what they represent.\n\n👉 Variable name should be meaningful!\nAnyone reading your code should be able to guess what the variable represents and how it will be used just based on the variable name.\n\nFor example, using the variable t to represent a temperature reading could lead to confusion because t could also mean time, or any other quantity. It is therefore more meaningful to use temperature.\n3t = 23.0           # ERROR (cannot start with number)\nt = 23.0            # BAD!\ntemperature = 23.0  # GOOD!\nYou may also use abbreviations, so long as they are commonly known (e.g: max for the maximum, min for the minimum, avg for average)\n\n💣 Code submitted with poor variable names will have marks deducted.\n\nProgrammers came up with conventions to make code more easy to read and share. The PEP 8 – Style Guide for Python Code contains this list of conventions. Here are a few useful conventions we will reinforce in this course. You may select any of these conventions so long as you are consistent throughout your solutions.\n\n\n\n\n\n\n\n\nConvention\nFormatting\nExamples\n\n\n\n\nSnake case\ntwo_words\navg_temperature, estimation_pi, area_under_curve\n\n\nCamel Case\ntwoWords\navgTemperature, estimationPi, areaUnderCurve\n\n\n\n {height=300}\nSource: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-convention\n✍️Challenge: The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the camel case naming convention. Repeat the exercise, this time using the snake case convention. Use a Python Terminal to validate your answers.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\ntwo_weeks_pay = 200.0\nemployee_num = 5612\nvacation_days_2024 = 2\nyearly_salary = 4800\ninsurance_percent = 3.0",
+    "text": "Variable naming convention\nNow that you’ve seen that programming expressions don’t play by the math rules, let’s break away even more from your math habits.\nWhile, you can use simple names just like x, y, it is preferable to give variables a name that is more descriptive of what they represent.\n\n👉 Variable name should be meaningful!\nAnyone reading your code should be able to guess what the variable represents and how it will be used just based on the variable name.\n\nFor example, using the variable t to represent a temperature reading could lead to confusion because t could also mean time, or any other quantity. It is therefore more meaningful to use temperature.\n3t = 23.0           # ERROR (cannot start with number)\nt = 23.0            # BAD!\ntemperature = 23.0  # GOOD!\nYou may also use abbreviations, so long as they are commonly known (e.g: max for the maximum, min for the minimum, avg for average)\n\n💣 Code submitted with poor variable names will have marks deducted.\n\nProgrammers came up with conventions to make code more easy to read and share. The PEP 8 – Style Guide for Python Code contains this list of conventions. Here are a few useful conventions we will reinforce in this course. You may select any of these conventions so long as you are consistent throughout your solutions.\n\n\n\n\n\n\n\n\nConvention\nFormatting\nExamples\n\n\n\n\nSnake case\ntwo_words\navg_temperature, estimation_pi, area_under_curve\n\n\nCamel Case\ntwoWords\navgTemperature, estimationPi, areaUnderCurve\n\n\n\n {height=300}\nSource: Convert Naming Convention, https://github.com/NewGuy012/convert-naming-convention\n🎯 Test Myself: The following variable names contain mistakes. Identify and fix them, then ensure that the new name follow the camel case naming convention. Repeat the exercise, this time using the snake case convention. Use a Python Terminal to validate your answers.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\ntwo_weeks_pay = 200.0\nemployee_num = 5612\nvacation_days_2024 = 2\nyearly_salary = 4800\ninsurance_percent = 3.0",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
@@ -510,7 +540,7 @@
     "href": "topics/04_variables/02_variables/02_variables.html#example---calculating-the-variance-of-three-numbers",
     "title": "Variables and Constants",
     "section": "Example - Calculating the variance of three numbers",
-    "text": "Example - Calculating the variance of three numbers\nLet’s have a look at this lengthy equation: ((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3\nThis equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where x_m represents the mean of the grades.\n\nLet’s break it down in the following steps and implement them:\n\nDefine the results of each student.\nCalculate the mean and store it.\nCalculate the squared difference of each grade and store the results.\nCalculate the variance and store it into a new variable.\nOutput the variance\n\nPython implementation of the variance\nFirstly, we need to define three variables representing the student grades and set their values:\n# Step 1: Create variables for the grades and enter their values\ngrade1 = 16\ngrade2 = 18\ngrade3 = 19\nUsing variables allows us to reuse the calculation with different numbers if required.\nTo calculate the mean we can add up the grades and divide by 3 and store the result in a new variable. This new variable can then be reused as many times as required.\n# Step 2: Calculate the mean\nmean = (grade1 + grade2 + grade3)/3\nTo compute the squared difference of each grade, we can begin by calculating the difference from the mean and store these differences in new variables (diff = grade - mean). Then, using the power operator **, we can store the squared differences in another set of variables (e.g., square_diff = diff ** 2). While there are no limits in the amount of variable used, intermediate results like diff may not be necessary to retain. Hence, we can perform the difference and the power operations into a single calculation.\n# Step 3: Calculate the squared difference for each value:\nsquare_diff_1 = (grade1 - mean)**2\nsquare_diff_2 = (grade2 - mean)**2\nsquare_diff_3 = (grade3 - mean)**2\nThe last step is to calculate the variance by averaging the squared differences:\n# Step 4: Calculate the variance\nvariance = (square_diff_1 + square_diff_2 + square_diff_3)/3\nFinally, we simply need to print the variance.\n# Step 5: Output the variance\nprint(\"The variance is:\", variance)\n✍️Challenge: Store your age in a variable as a number. Store one of your parent’s age in a variable as a number. Using those two variables, calculate the age difference and print it out in a message.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nage = 17\nparent_age = 47\n\nage_diff = parent_age - age\n\nprint(\"The age diff is\",age_diff)\n\n\n\n✍️Challenge: Calculate the gravitational potential energy of an object using the following formula, where m is the mass of the object, g is the acceleration of gravity which is 9.81 m/s^2, h is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.\n\\[\nE_p = m \\times g \\times h\n\\]\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nGRAVITATION_ACC = 9.81\ng = 18\nh = 200\n\nenergy = GRAVITATION_ACC * g * h",
+    "text": "Example - Calculating the variance of three numbers\nLet’s have a look at this lengthy equation: ((16-  (16+ 18+ 19)/3)**2 + (18-  (16+ 18+ 19)/3)**2 + (19-  (16+ 18+ 19)/3)**2)/3\nThis equation computes the variance of the grades of three students. The formula to calculate the variance of three numbers is as follows, where x_m represents the mean of the grades.\n\nLet’s break it down in the following steps and implement them:\n\nDefine the results of each student.\nCalculate the mean and store it.\nCalculate the squared difference of each grade and store the results.\nCalculate the variance and store it into a new variable.\nOutput the variance\n\nPython implementation of the variance\nFirstly, we need to define three variables representing the student grades and set their values:\n# Step 1: Create variables for the grades and enter their values\ngrade1 = 16\ngrade2 = 18\ngrade3 = 19\nUsing variables allows us to reuse the calculation with different numbers if required.\nTo calculate the mean we can add up the grades and divide by 3 and store the result in a new variable. This new variable can then be reused as many times as required.\n# Step 2: Calculate the mean\nmean = (grade1 + grade2 + grade3)/3\nTo compute the squared difference of each grade, we can begin by calculating the difference from the mean and store these differences in new variables (diff = grade - mean). Then, using the power operator **, we can store the squared differences in another set of variables (e.g., square_diff = diff ** 2). While there are no limits in the amount of variable used, intermediate results like diff may not be necessary to retain. Hence, we can perform the difference and the power operations into a single calculation.\n# Step 3: Calculate the squared difference for each value:\nsquare_diff_1 = (grade1 - mean)**2\nsquare_diff_2 = (grade2 - mean)**2\nsquare_diff_3 = (grade3 - mean)**2\nThe last step is to calculate the variance by averaging the squared differences:\n# Step 4: Calculate the variance\nvariance = (square_diff_1 + square_diff_2 + square_diff_3)/3\nFinally, we simply need to print the variance.\n# Step 5: Output the variance\nprint(\"The variance is:\", variance)\n🎯 Test Myself: Store your age in a variable as a number. Store one of your parent’s age in a variable as a number. Using those two variables, calculate the age difference and print it out in a message.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nage = 17\nparent_age = 47\n\nage_diff = parent_age - age\n\nprint(\"The age diff is\",age_diff)",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
@@ -527,13 +557,61 @@
   {
     "objectID": "topics/04_variables/exercises/data_types/data_types.html",
     "href": "topics/04_variables/exercises/data_types/data_types.html",
-    "title": "🎯 Variables & Data Types",
+    "title": "✍️ Variables & Data Types",
     "section": "",
-    "text": "We highly recommend you work on the exercises below with pen and paper to practice for quizzes and exams.\n\nNOTE: the type() function in python returns a tag denoting the type of data given to it as an argument.\nFor example: - type(1) returns &lt;class 'int'&gt; - type(2.0) returns &lt;class 'float'&gt; - type(\"hello\") returns &lt;class 'str'&gt; - type(True) returns &lt;class 'bool'&gt;\n\n\nSpecify the data type printed at the end of each program:\n\n\n\n👀 Hint\n\n\nMake sure you read the NOTE above about the type() function!\n\n\n\nprint(type(10))\n\n\n\n✅ Solution\n\n\n      class 'int'\n    \n\n\nimport math\nPI  = math.pi\nprint(type(PI))\n\n\n\n✅ Solution\n\n\n      class `float`\n    \n\n\nprint(type(3e-5))\n\n\n\n✅ Solution\n\n\n      class `float`\n    \n\n\nprint(type(\"234\"))\n\n\n\n✅ Solution\n\n\n      class `str`\n    \n\n\nvalue = \"2\"\nvalue2 = int(value)\nprint(type(value2))\n\n\n\n✅ Solution\n\n\n      class `int`\n    \n\n\nname = input(\"What is your name?\")\nprint(type(name))\n\n\n\n✅ Solution\n\n\n      class `str`\n    \n\n\nage = 25\nis_legal_age = (age&gt;=18)\nprint(type(is_legal_age))\n\n\n\n✅ Solution\n\n\n      class `bool`\n    \n\n\ngrade = 24\ntotal = 25\nratio = grade / total\nprint(type(ratio))\n\n\n\n✅ Solution\n\n\n      class `float`\n    \n\n\nnum_classrooms = 5\npcs_per_classroom = 22\ntotal_pcs = num_classrooms * pcs_per_classroom\nprint(type(total_pcs))\n\n\n\n✅ Solution\n\n\n      class `int`\n    \n\n\nvar1 = 1\nvar2 = 2\nvar3 = \"3\"\nprint(type(var1 + var2 + var3))\n\n\n\n✅ Solution\n\n\n      Error, cannot use + on numeric data types with str.\n    \n\n\ntemperature = 22\nis_freezing = (temperature &lt; 0)\nprint(type(is_freezing))\n\n\n\n✅ Solution\n\n\n      class `bool`\n    \n\n\nFix the mistakes in the program below:\nnum1 = 2\nnum2 = \"4\"\n\n# Intended result: sum_val gets the value 6.\nsum_val = num1 + num2\n\n\n\n👀 Hint\n\n\nDouble check the data types of the inputs!\n\n\n\n\n✅ Solution\n\n\n      # Solution #1\n      num2 = 4\n      # Solution #2\n      sum_val = num1 + int(num2)\n      # Are there any other solutions you can come up with?\n    \n\n\nFix the calculation error in the program below which is suppose to calculate a simple average of grades:\ngrade1 = 25\ngrade2 = 26\n\naverage = int(grade1+grade2/2)\n\n\n\n👀 Hint\n\n\nThere is more than one issue in the code above. How are averages calculated? And what type of data should they be?\n\n\n\n\n✅ Solution\n\n\n      grade1 = 25\n      grade2 = 26\n      average = (grade1+grade2)/2\n    \n\n\nFix the errors below:\nschool = John Abbott College\nstreet_name =  275 Rue Lakeshore Road\nstreet_number = 21\ncity = Sainte-Anne-de-Bellevue\nprovince = QC\npostal_code = H9X 1S2\nphone_number  = +1-(514)-457-5036\nyear_creation = \"1971\"\nschool_age = \"2025\" - year_creation\naddress = street_name + street_number + city + province + postal_code\nprint(\"{school} was founded in {year_creation} and is {school_age} years old\")\nprint(\"Address: {address}\")\nprint(\"Contact: {phone_number}\")\n\n# Intended result:\n# John Abbott College was founded in 1971 and is 54 years old\n# Address: 275 Rue Lakeshore Road #21, Sainte-Anne-de-Bellevue, QC H9X 1S2\n# Contact: +1-(514)-457-5036\n\n\n\n👀 Hint\n\n\nDouble check that the intended data type for each variable is initialized correctly. Use f-strings!\n\n\n\n\n✅ Solution\n\n\n      school = \"John Abbott College\"\n      street_name =  \"275 Rue Lakeshore Road\"\n      street_number = 21\n      city = \"Sainte-Anne-de-Bellevue\"\n      province = \"QC\"\n      postal_code = \"H9X 1S2\"\n      phone_number  = \"+1-(514)-457-5036\"\n      year_creation = 1971\n      school_age = 2025 - year_creation\n      address = f\"{street_name} #{street_number}, {city}, {province} {postal_code}\"\n      print(f\"{school} was founded in {year_creation} and is {school_age} years old\")\n      print(f\"Address: {address}\")\n      print(f\"Contact: {phone_number}\")",
+    "text": "NoteLearning Objectives Checklist\n\n\n\n\nRecognize the various basic data types: str, int, float and bool\nRecognize scientific notation for large numbers\nEvaluate the resulting data type of expressions that mix different data types.\nEvaluate a comparison between two numbers as True or False.\nPerform type conversions (int(), float(), str()) to fix type-related errors in code.\nDistinguish legal from illegal Python variable names.\nWe highly recommend you work on the exercises below with pen and paper to practice for quizzes and exams.",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
-      "🎯 Variables & Data Types"
+      "✍️ Variables & Data Types"
+    ]
+  },
+  {
+    "objectID": "topics/04_variables/exercises/data_types/data_types.html#type-check",
+    "href": "topics/04_variables/exercises/data_types/data_types.html#type-check",
+    "title": "✍️ Variables & Data Types",
+    "section": "1. Type Check",
+    "text": "1. Type Check\na.\nvariable = 10\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n'int'\n\n\n\nb.\nPI = 3.14\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n'float'\n\n\n\nc.\nvariable = 3e-5\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n'float'\n\n\n\nd.\nnumber = \"234\"\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n'str'\n\n\n\ne.\nvalue = \"2\"\nvalue2 = int(value)\nprint(type(value2))\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nvalue→ str value2 → int\n\n\n\nf.\ngrade = 24\ntotal = 25\nratio = grade / total\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\ngrade → int total → int ratio → float\n\n\n\ng.\nnum_classrooms = 5\npcs_per_classroom = 22\ntotal_pcs = num_classrooms * pcs_per_classroom\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n‘int’\n\n\n\nh.\nvar1 = 1\nvar2 = 2\nvar3 = \"3\"\nvar4 = var1 + var2 + var3\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nvar1 → int var2 → int var3 → str var4 → Error, cannot use + on numeric data types with str.\n\n\n\ni.\nis_freezing = False\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n‘bool’\n\n\n\nj.\nage = 25\nis_legal_age = (age &gt;= 18)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nint ‘bool’\n\n\n\nk .\ncars_count = 3\nhas_cars = bool(cars_count)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nint bool",
+    "crumbs": [
+      "Syllabus",
+      "Variables & Data Types",
+      "✍️ Variables & Data Types"
+    ]
+  },
+  {
+    "objectID": "topics/04_variables/exercises/data_types/data_types.html#illegal-variable-names",
+    "href": "topics/04_variables/exercises/data_types/data_types.html#illegal-variable-names",
+    "title": "✍️ Variables & Data Types",
+    "section": "2. Illegal Variable Names",
+    "text": "2. Illegal Variable Names\nWhich of the following variable names are illegal?\n\nTRUE\nTrue\ntrue\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nTrue — reserved keyword for the Boolean type.",
+    "crumbs": [
+      "Syllabus",
+      "Variables & Data Types",
+      "✍️ Variables & Data Types"
+    ]
+  },
+  {
+    "objectID": "topics/04_variables/exercises/data_types/data_types.html#sum-of-mismatched-types",
+    "href": "topics/04_variables/exercises/data_types/data_types.html#sum-of-mismatched-types",
+    "title": "✍️ Variables & Data Types",
+    "section": "1. Sum of Mismatched Types",
+    "text": "1. Sum of Mismatched Types\nFix the mistakes in the program below so that sum_val gets the value 6.\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nDouble check the data types of the inputs!\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n# Solution #1\nnum1 = 2\nnum2 = 4\nsum_val = num1 + num2\n\n# Solution #2\n# num1 = 2\n# num2 = \"4\"\n# sum_val = num1 + int(num2)\n\n# Are there any other solutions you can come up with?\nprint(sum_val)\n\n6",
+    "crumbs": [
+      "Syllabus",
+      "Variables & Data Types",
+      "✍️ Variables & Data Types"
+    ]
+  },
+  {
+    "objectID": "topics/04_variables/exercises/data_types/data_types.html#average-grades",
+    "href": "topics/04_variables/exercises/data_types/data_types.html#average-grades",
+    "title": "✍️ Variables & Data Types",
+    "section": "2. Average Grades",
+    "text": "2. Average Grades\nFix the calculation error in the program below, which is supposed to calculate a simple average of two grades.\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nThere is more than one issue in the code above. How are averages calculated? And what type of data should they be?\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\ngrade1 = 25\ngrade2 = 26\naverage = (grade1 + grade2) / 2\nprint(average)\n\n25.5",
+    "crumbs": [
+      "Syllabus",
+      "Variables & Data Types",
+      "✍️ Variables & Data Types"
     ]
   },
   {
@@ -1022,7 +1100,7 @@
     "href": "topics/05_string_formatting/01_f_strings/01_f_strings.html",
     "title": "f-strings",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nConstruct f-strings to combine strings and other variables.\nFormat numbers in f-strings to control how many decimal places are shown.\n\n\n\n\nf-strings\nFormatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It’s following the synthax below:\n\n\n\n\n\n\nNoteBASIC SYNTAX: f\" anything {variable} anything\"\n\n\n\n\nvariable is any python variable that is currently defined. It can be of any type (int, float, bool, str, etc)\nYou do not have to convert the variable to a string, that is done automatically\nNotice that there is no space between the f and the first quote\n\n\n\nConsider the following message: Good morning John! You’re networth is \\(23,500\\)\nLet’s imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total.\nAn f-string can help us create those generic messages by inserting variables as shown below. Try changing the first_name or any of the accounts values. The message should change but follow the same template:\n\n\n\n\n\n\nNow notice that the account value doesn’t use a comma , to seperate the thousands. We’ll learn about formatting in the next section.\n✍️Challenge: Use f-strings to print the following message:\nI am a John Abbott student in the Science program. I am currently in semester 1. I am taking 15 credits.\nYou may use multiple print() statements to break it in to various lines.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nschool = \"John Abbott\"\nprogram = \"Science\"\nsemester = 1\nnumber_credits = 15\n\nprint(f\"I am a {school} student in the {program} program.\" )\nprint(f\"I am currently in semsteer {semester}. \")\nprint(f\"I am taking {number_credits} credits\")\n\n\n\nYou can also create an f-string using a python expression:\n\n\n\n\n\n\nNoteBASIC SYNTAX: f\" anything {python code} anything\"\n\n\n\n\npython code that when evaluated, returns a value.\nNotice that there is no space between the f and the first quote\n\n\n\nWhat goes between the {} can also be a python expression such as an arithmetic operation or a comparison:\n\nx = 3\nz = f\"the value of x is {x + 2}\"   # OK!, prints 5\nz = f\"Is x equal to 5? {x == 5}\"     # OK!, prints False\n\n\n\n\n\n\n\nWarningAn assignment is not going to work!\n\n\n\nOn the other hand, assignning a variable in an f-string will cause an error. Because this isn’t an expression, it’s an assignment which doesn’t return a value.\nx = 3\nz = f\"Setting x to 2 {x = 2}\"      # NOT OK!, x=2 does not return a value\n\n\n✍️Challenge 2: Given the price of an item and the tax rate, use f-strings to print the price with taxes, without creating an additional variable: Total: $22.4825\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nprice = 19.55\ntax_rate = 0.15\n\nprint(f\"Total: ${price*tax_rate + price}\")\n\n\n\n\n\nAdditional resources\n\nVideo on f-strings",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nConstruct f-strings to combine strings and other variables.\nFormat numbers in f-strings to control how many decimal places are shown.\n\n\n\n\nf-strings\nFormatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It’s following the synthax below:\n\n\n\n\n\n\nNoteBASIC SYNTAX: f\" anything {variable} anything\"\n\n\n\n\nvariable is any python variable that is currently defined. It can be of any type (int, float, bool, str, etc)\nYou do not have to convert the variable to a string, that is done automatically\nNotice that there is no space between the f and the first quote\n\n\n\nConsider the following message: Good morning John! You’re networth is \\(23,500\\)\nLet’s imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total.\nAn f-string can help us create those generic messages by inserting variables as shown below. Try changing the first_name or any of the accounts values. The message should change but follow the same template:\n\n\n\n\n\n\nNow notice that the account value doesn’t use a comma , to seperate the thousands. We’ll learn about formatting in the next section.\n🎯 Test Myself: Use f-strings to print the following message:\nI am a John Abbott student in the Science program. I am currently in semester 1. I am taking 15 credits.\nYou may use multiple print() statements to break it in to various lines.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nschool = \"John Abbott\"\nprogram = \"Science\"\nsemester = 1\nnumber_credits = 15\n\nprint(f\"I am a {school} student in the {program} program.\" )\nprint(f\"I am currently in semsteer {semester}. \")\nprint(f\"I am taking {number_credits} credits\")\n\n\n\nYou can also create an f-string using a python expression:\n\n\n\n\n\n\nNoteBASIC SYNTAX: f\" anything {python code} anything\"\n\n\n\n\npython code that when evaluated, returns a value.\nNotice that there is no space between the f and the first quote\n\n\n\nWhat goes between the {} can also be a python expression such as an arithmetic operation or a comparison:\n\nx = 3\nz = f\"the value of x is {x + 2}\"   # OK!, prints 5\nz = f\"Is x equal to 5? {x == 5}\"     # OK!, prints False\n\n\n\n\n\n\n\nWarningAn assignment is not going to work!\n\n\n\nOn the other hand, assignning a variable in an f-string will cause an error. Because this isn’t an expression, it’s an assignment which doesn’t return a value.\nx = 3\nz = f\"Setting x to 2 {x = 2}\"      # NOT OK!, x=2 does not return a value\n\n\n🎯 Test Myself: Given the price of an item and the tax rate, use f-strings to print the price with taxes, without creating an additional variable: Total: $22.4825\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nprice = 19.55\ntax_rate = 0.15\n\nprint(f\"Total: ${price*tax_rate + price}\")\n\n\n\n\n\nAdditional resources\n\nVideo on f-strings",
     "crumbs": [
       "Syllabus",
       "String Handling",
@@ -1738,7 +1816,7 @@
     "href": "topics/04_variables/03_integers_floats/03_integers_floats.html",
     "title": "Integers & Floats",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nTell the difference between an integer and a float\nUse the type() function to determine the data type of a variable\nRecognize scientific notation for large numbers\nRecognize underscores between digits for large numbers\nCreate negative numbers\nPerform conversions betweenfloat and int variables.",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nTell the difference between an integer and a float\nRecognize scientific notation for large numbers\nRecognize underscores between digits for large numbers\nCreate negative numbers\nPerform conversions betweenfloat and int variables.",
     "crumbs": [
       "Syllabus",
       "Variables & Data Types",
@@ -1894,7 +1972,7 @@
     "href": "topics/06_operators/05_order_operations/05_order_operations.html",
     "title": "Order of Operations",
     "section": "",
-    "text": "Note☆ Learning Objectives\n\n\n\n\nEvaluate Python expressions containing assignment, arithmetic, comparison and logical operators.\nWrite Python expressions with the correct order or operations.\n\n\n\nLike PEDMAS for math equations (‘Parenthesis’, ‘Exponents’, ‘Division/Multiplication’, ‘Addition/Subtraction’), there is an order of operations for resolving programming operations (assignment, comparison, arithemetic and logical)\nOrder of Operations, from highest to lowest\n\n\n\nOperation\nOrder\nExample\nExplanation\n\n\n\n\n()\n1\n(x + y) * z\ngrouping expressions to force them to be evaluated first\n\n\n**\n2\n2 ** 3\nexponentiation (raising one value to the power of another)\n\n\n*, /, //, %\n3\nx * y\nmultiplication, division, floor division, and remainder (modulo)\n\n\n+, -\n4\nx + y\naddition and subtraction\n\n\nin, not in *\n5\n'hi' in greetings\nis something in, or not in, a list (or list-like object) (returns Boolean)\n\n\n&lt;, &lt;=, &gt;, &gt;=, !=, ==\n5\nx &lt; y\ncomparison of two things (returns Boolean)\n\n\nnot\n6\nnot x\nnegating the True/False value of x (returns Boolean)\n\n\nand\n7\nx &lt; y and x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\nor\n8\nx &lt; y or x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\n=, +=, -=, *=, /=, //=, %=**=\n9\nx += 1\nassigning or updating the value of a variable\n\n\n\n*\n\n\n\n\n\n\nNoteWhat’s in\n\n\n\nThis is called the membership operator and checks if an element is found in a structure of elements. For example is “c” found in “cocoa”. We will see it a little bit later in the course.\n\n\nThese sets of equations are equivalent (assume all variables are boolean):\nx and y or z\n(x and y) or z\n\nx or y and z\nx or (y and z)\n\nx and not y or z\n(x and (not y) ) or z\n\nx or not y and z\nx or ( (not y) and z)\n\nPython’s handling of operations with the same priority?\nConsider the following math function \\(y = \\frac{x^2 + x}{2x}\\) implemented in Python as such:\n\nx = 3\n\ny = (x**2 +x) / 2*x\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 18.0\n\n\nThis isn’t the correct value of \\(f(3)\\), which should be \\(2\\). Why is that?\nThe answer lies in how the denominator has been implemented /2*x. This is ambigious because both the / and the * have the same priority. Python doesn’t know that 2*x must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.\nTo remove the ambiguity, the best is to use parenthesis ():\n\nx = 3\n\ny = (x**2 +x) / (2*x)\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 2.0\n\n\nAdding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.\n\n\nChallenge\n✍️Challenge: The following checks if the current year is an olympic year (summer or winter). Manually execute the operations below and write the expected result. Check your answers by running the code.\n\n\n\n\n\n\n\nThe last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year. Source: International Olympic Committee algorithm.",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nEvaluate Python expressions containing assignment, arithmetic, comparison and logical operators.\nWrite Python expressions with the correct order or operations.\n\n\n\nLike PEDMAS for math equations (‘Parenthesis’, ‘Exponents’, ‘Division/Multiplication’, ‘Addition/Subtraction’), there is an order of operations for resolving programming operations (assignment, comparison, arithemetic and logical)\nOrder of Operations, from highest to lowest\n\n\n\nOperation\nOrder\nExample\nExplanation\n\n\n\n\n()\n1\n(x + y) * z\ngrouping expressions to force them to be evaluated first\n\n\n**\n2\n2 ** 3\nexponentiation (raising one value to the power of another)\n\n\n*, /, //, %\n3\nx * y\nmultiplication, division, floor division, and remainder (modulo)\n\n\n+, -\n4\nx + y\naddition and subtraction\n\n\nin, not in *\n5\n'hi' in greetings\nis something in, or not in, a list (or list-like object) (returns Boolean)\n\n\n&lt;, &lt;=, &gt;, &gt;=, !=, ==\n5\nx &lt; y\ncomparison of two things (returns Boolean)\n\n\nnot\n6\nnot x\nnegating the True/False value of x (returns Boolean)\n\n\nand\n7\nx &lt; y and x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\nor\n8\nx &lt; y or x &gt; z\ncombining two Boolean values (returns Boolean)\n\n\n=, +=, -=, *=, /=, //=, %=**=\n9\nx += 1\nassigning or updating the value of a variable\n\n\n\n*\n\n\n\n\n\n\nNoteWhat’s in\n\n\n\nThis is called the membership operator and checks if an element is found in a structure of elements. For example is “c” found in “cocoa”. We will see it a little bit later in the course.\n\n\nThese sets of equations are equivalent (assume all variables are boolean):\nx and y or z\n(x and y) or z\n\nx or y and z\nx or (y and z)\n\nx and not y or z\n(x and (not y) ) or z\n\nx or not y and z\nx or ( (not y) and z)\n\nPython’s handling of operations with the same priority?\nConsider the following math function \\(y = \\frac{x^2 + x}{2x}\\) implemented in Python as such:\n\nx = 3\n\ny = (x**2 +x) / 2*x\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 18.0\n\n\nThis isn’t the correct value of \\(f(3)\\), which should be \\(2\\). Why is that?\nThe answer lies in how the denominator has been implemented /2*x. This is ambigious because both the / and the * have the same priority. Python doesn’t know that 2*x must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.\nTo remove the ambiguity, the best is to use parenthesis ():\n\nx = 3\n\ny = (x**2 +x) / (2*x)\n\nprint(f\"f({x})= {y}\")\n\nf(3)= 2.0\n\n\nAdding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.",
     "crumbs": [
       "Syllabus",
       "Operators",
@@ -1902,27 +1980,111 @@
     ]
   },
   {
-    "objectID": "topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html",
-    "href": "topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html",
-    "title": "🎯 Assignment operators and variables",
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html",
+    "title": "✍️ Arithmetic operators",
     "section": "",
-    "text": "True or False, the following program contains a SyntaxError :",
+    "text": "NoteLearning Objectives Checklist\n\n\n\n\nApply the addition (+), subtraction (-), multiplication (*), and division (/) operators in Python expressions.\nApply the exponentiation (**) operator to calculate powers.\nApply the modulo (%) and floor division (//) operators to solve programming problems.\nEvaluate arithmetic expressions on variables of the different basic data types: int, float, string, bool\nEvaluate Python expressions by applying the correct priority of operations.\nNote: if you forget what any of these operators do, review the lecture notes on Operators!",
     "crumbs": [
       "Syllabus",
       "Operators",
-      "🎯 Assignment operators and variables"
+      "✍️ Arithmetic operators"
     ]
   },
   {
-    "objectID": "topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html#answers",
-    "href": "topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html#answers",
-    "title": "🎯 Assignment operators and variables",
-    "section": "Answers:",
-    "text": "Answers:\n\nFalse\nTrue, cannot use two assignment operators (= and +=) in the same expression. This should be done on two separate lines.\nTrue, cannot print and assignment expression. This should be done on two separate lines.\nFalse\n24 42 “2342421”\n3.0 float 3 int 1111 str\nTrue, reserved keyword for Boolean type",
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#double-star-double-slash",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#double-star-double-slash",
+    "title": "✍️ Arithmetic operators",
+    "section": "1. Double Star Double Slash",
+    "text": "1. Double Star Double Slash\nx = 5\ny = 2\nprint(x ** y)\nprint(x // y)\n\n\n👀 Hint\n\n\nWhat does the ** operator do? What does the // operator do?\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n25\n2",
     "crumbs": [
       "Syllabus",
       "Operators",
-      "🎯 Assignment operators and variables"
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#division-divisions",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#division-divisions",
+    "title": "✍️ Arithmetic operators",
+    "section": "2. Division Divisions",
+    "text": "2. Division Divisions\nprint((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))\n\n\n👀 Hint\n\n\nThe print function will insert a space between each comma-separated argument.\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n-0.5 0.5 0 -1",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#one-divided-by-one",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#one-divided-by-one",
+    "title": "✍️ Arithmetic operators",
+    "section": "3. One divided by One",
+    "text": "3. One divided by One\nWha’t the output and resulting data type of the following program?\nprint(1/1)\n\n\n👀 Hint\n\n\nDoes the / operator return an int or float?\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n1.0\nfloat",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#no-parenthesis",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#no-parenthesis",
+    "title": "✍️ Arithmetic operators",
+    "section": "4. No parenthesis",
+    "text": "4. No parenthesis\nWhat is the output of the following program?\nx = 1 / 2 + 3 // 3 + 4 ** 2\nprint(x)\n\n\n👀 Hint\n\n\nRemember the PEDMAS (bracket/exponent/division/multiplication/addition/subtraction) rules!\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n17.5",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#modulo",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#modulo",
+    "title": "✍️ Arithmetic operators",
+    "section": "5. Modulo",
+    "text": "5. Modulo\nWhat is the output of the following program?\nx = 7\ny = 5\nx = x % y\nx = x % y\ny = y % x\nprint(y)\n\n\n👀 Hint\n\n\nMake sure you pay attention to the changes in x and y from line to line.\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n1",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#all-operators",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#all-operators",
+    "title": "✍️ Arithmetic operators",
+    "section": "6. All operators",
+    "text": "6. All operators\nWhat is the output of the following program?\na = 9\nb = 4\nc = 5\nx = a % b\ny = a // c\nprint(x, y)\na = 5.5\nb = 5\n\nx = a % b\ny = a // b\nprint(x, y)\na = -7\nb = -4\nx = a % b\ny = (a + b) // b\nprint(x, y)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\na = 9\nb = 4\nc = 5\nx = a % b\ny = a // c\nprint(x, y)\na = 5.5\nb = 5\n\nx = a % b\ny = a // b\nprint(x, y)\na = -7\nb = -4\nx = a % b\ny = (a + b) // b\nprint(x, y)\n\n1 1\n0.5 1.0\n-3 2",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#t-shirts",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#t-shirts",
+    "title": "✍️ Arithmetic operators",
+    "section": "1. T-shirts",
+    "text": "1. T-shirts\nWrite a short program which given a budget, calculates how many t-shirts they can purchase. Assume each t-shirt costs $15, including tax.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nbudget = 115.0\ncost_one = 15.0\n\nnum_t_shirts = budget//cost_one",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
+    ]
+  },
+  {
+    "objectID": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#egg-feast",
+    "href": "topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html#egg-feast",
+    "title": "✍️ Arithmetic operators",
+    "section": "2. Egg Feast",
+    "text": "2. Egg Feast\nGiven a required number of eggs (num_eggs), where eggs can only be purchased in containers of 30, 12, 6, or as individual eggs, determine the number of containers of each size needed to purchase exactly the required number of eggs with no waste.\nFor example, if I need 24 eggs, I should purchase 2 containers of 12 rather than 1 container of 30.\nComplete the following code:\n\n\n👀 Hint 1\n\n\nStart by figuring out how many of the largest containers you can buy without exceeding the number of eggs you need.\n\n\n\n\n👀 Hint 2\n\n\nCalculate how many eggs are still needed after buying the largest containers, then repeat the process with the next container size.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nnum_eggs = 100\nlarge_size = 30\nnormal_size = 12\nsmall_size = 6\n\n# 1. Finding how many large can fit in num_eggs\nlarge_count = num_eggs // large_size\n\n# 2. How many eggs are left after buying the large containers\nremaining = num_eggs % large_size\n\n\nnormal_count = remaining // normal_size\nremaining_n = remaining % normal_size\n\nsmall_count = remaining_n // small_size\n\n# What's left are individual eggs to purchase \nindividual_count = remaining_n % small_size\n\nprint(\"Here's what you need to purchase...\")\nprint(\"Count large: \", large_count)\nprint(\"Count normal: \", normal_count)\nprint(\"Count small: \", small_count)\nprint(\"Individual eggs: \", individual_count)\n\nHere's what you need to purchase...\nCount large:  3\nCount normal:  0\nCount small:  1\nIndividual eggs:  4",
+    "crumbs": [
+      "Syllabus",
+      "Operators",
+      "✍️ Arithmetic operators"
     ]
   },
   {

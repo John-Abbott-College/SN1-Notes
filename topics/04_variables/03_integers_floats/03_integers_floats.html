@@ -474,7 +474,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/04_variables/exercises/data_types/data_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🎯 Variables &amp; Data Types</span></a>
+ <span class="menu-text">✍️ Variables &amp; Data Types</span></a>
   </div>
 </li>
       </ul>
@@ -550,15 +550,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🎯 Arithmetic operators</span></a>
+ <span class="menu-text">✍️ Arithmetic operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🎯 Assignment operators and variables</span></a>
-  </div>
-</li>
+ <span class="menu-text">topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -822,7 +819,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#integers-versus-floats" id="toc-integers-versus-floats" class="nav-link active" data-scroll-target="#integers-versus-floats">Integers versus Floats</a></li>
-  <li><a href="#thetype-function" id="toc-thetype-function" class="nav-link" data-scroll-target="#thetype-function">The<code>type()</code> function</a></li>
   <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific notation</a></li>
   <li><a href="#underscores-between-digits" id="toc-underscores-between-digits" class="nav-link" data-scroll-target="#underscores-between-digits">Underscores between digits</a></li>
   <li><a href="#negative-numbers" id="toc-negative-numbers" class="nav-link" data-scroll-target="#negative-numbers">Negative numbers</a></li>
@@ -870,7 +866,6 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Tell</strong> the difference between an integer and a float</li>
-<li><strong>Use</strong> the <code>type()</code> function to determine the data type of a variable</li>
 <li><strong>Recognize</strong> scientific notation for large numbers</li>
 <li><strong>Recognize</strong> underscores between digits for large numbers</li>
 <li><strong>Create</strong> negative numbers</li>
@@ -881,28 +876,33 @@ window.Quarto = {
 <section id="integers-versus-floats" class="level1">
 <h1>Integers versus Floats</h1>
 <p>Integers or <code>int</code> are whole number i.e.: <strong>do not have a fractional</strong> value. On the other hand, <code>float</code> are floating-point numbers that <strong>have a fractional</strong> part. The reason why we make this distinction is because <code>int</code> and <code>float</code> are not stored in the same way within a computer’s memory.</p>
-</section>
-<section id="thetype-function" class="level1">
-<h1>The<code>type()</code> function</h1>
-<p>To know if a value is of a specific type, you can use the <code>type()</code> function as shown below:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Output: <code>int</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>another_num <span class="op">=</span> <span class="fl">3.14</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(another_num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Output: <code>float</code></p>
+<!-- # The`type()` function
+To know if a value is of a specific type, you can use the `type()` function as shown below:
+```python
+num = 3
+print(type(num))
+```
+
+Output: `int`
+
+```python
+another_num = 3.14
+print(type(another_num))
+```
+
+Output: `float` -->
 </section>
 <section id="scientific-notation" class="level1">
 <h1>Scientific notation</h1>
 <p>Python supports scientific notation if you are dealing with large numbers:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>large_num <span class="op">=</span> <span class="fl">5e6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>large_num <span class="op">=</span> <span class="fl">5e6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This value corresponds to five million (5 000 000).</p>
 </section>
 <section id="underscores-between-digits" class="level1">
 <h1>Underscores between digits</h1>
 <p>The following corresponds to <em>eleven million one hundred eleven thousand one hundred eleven</em>. (11 111 111). Since we cannot separate the digits with spaces, there are two valid ways of writing this number in <code>Python</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">11111111</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span>  <span class="dv">11_111_111</span> <span class="co">#has the same value, but is clearer to read</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">11111111</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span>  <span class="dv">11_111_111</span> <span class="co">#has the same value, but is clearer to read</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-warning callout-titled" title="Python 3.6 or later">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -920,14 +920,14 @@ window.Quarto = {
 <section id="negative-numbers" class="level1">
 <h1>Negative numbers</h1>
 <p>To create a negative integer, you can simply add a minus sign:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_negatiive_num <span class="op">=</span>  <span class="op">-</span><span class="dv">14568</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_negatiive_num <span class="op">=</span>  <span class="op">-</span><span class="dv">14568</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="converting-from-one-type-to-another" class="level1">
 <h1>Converting from one type to another</h1>
 <section id="int-rightarrow-float" class="level2">
 <h2 class="anchored" data-anchor-id="int-rightarrow-float"><code>int</code> <span class="math inline">\(\rightarrow\)</span> <code>float</code></h2>
 <p>You can convert an integer into a float by using the function<code>float()</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output: 10.0</p>
 </section>
 <section id="float-leftarrow-int" class="level2">
