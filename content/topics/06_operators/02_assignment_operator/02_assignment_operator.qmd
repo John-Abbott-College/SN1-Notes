@@ -116,7 +116,7 @@ value /= 2
 print(value) # output: 3
 ```
 # Tracing Challenge
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal.
+🎯 **Test Myself**: Manually execute the operations below and write the expected result. Check your answers by copying the code into a Python editor or terminal.
 
 [⏯️ Animate Execution](https://app.codeboot.org/6.0.0/?init=.oYXJpdGhtZXRpY3MxLnB5~XQAAgABzAAAAAAAAAAA7iAOiEWEBkg99P3WsHCwTzyEnkel2CBOuLrjllUppjR2CUAq-gAuD7LU2oyanmA9U_RpSi-drNpr416lu9L-NrvGsbtQ5a-GEWkgA0kTkSGfwDTPluIsbrwON_vHxgA==.oYXJpdGhtZXRpY3MyLnB5~XQAAgAAyAAAAAAAAAAAwiAOiEahbOGuxQe1CZvIjyRYu5mub1I1Va1AIIODnRLN-GxtFSkmZFiGNPbP__7xKAAA=.oYXNzaWdubWVudF9wbHVzX2VxdWFsXzEucHk=~XQAAgAAhAAAAAAAAAAA7GEncQfTWSH3AOTZQVq949oPwc4AHCfa7_CrqzOIf_qQQAA==.oYXNzaWdubWVudF8xLnB5~XQAAgAAtAAAAAAAAAAA3GEn9-d2KwgqzO3WiO93_asMbSuJMPn19rh4Ws-7u99O1ogE7PwqtmXBsxnv_-HNgAA==.oYXNzaWdubWVudF9lcnJvci5weQ==~XQAAgAAJAAAAAAAAAAAaiAG1DW5pPxYc_ZQa__3KsAA=.fb3BlcmF0b3JzX2NoYWxsZW5nZTEucHk=~XQAAgABoAQAAAAAAAAAyGEuUHxEvL_uf85Adn-YPLdgd9bjdwPPfaaBxGsx9NvHx1yG6xtpH-jzukUm0BsSAfCsTE1pQA6lcsmm9M5PZB7uVg8DzAk81mds4hcDAxgHOxTF8V_3PTUz7kBOaqbF7VO60KlzSQ-X03fTR1HmgNMnaQv814WAA.~lang=py-novice.~showLineNumbers=true.a){target="_blank"}
 

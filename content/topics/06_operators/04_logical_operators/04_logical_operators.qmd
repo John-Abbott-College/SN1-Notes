@@ -61,7 +61,7 @@ This operator acts as a **negation**. It transforms the variable into **its oppo
 
 Translate the following english expressions into Python code provided the starting sample code.
 
-✍️**Challenge**: *The relative humidity index must be below 100% **AND** the temperature has to be decreasing (negative variation) for it to rain:*
+🎯 **Test Myself**: *The relative humidity index must be below 100% **AND** the temperature has to be decreasing (negative variation) for it to rain:*
 
 ```{pyodide}
 rel_humidity = 88.0
@@ -85,7 +85,7 @@ print("Will it rain? (True/False): ", expression)
 ```
 :::
 
-✍️**Challenge**: *The oil in the car should be changed every 6 months (inclusive) **OR** if the travelled distance **exceeds** 5,000 km*:
+🎯 **Test Myself**: *The oil in the car should be changed every 6 months (inclusive) **OR** if the travelled distance **exceeds** 5,000 km*:
 ```{pyodide}
 
 # Since the last oil change: 
@@ -112,7 +112,7 @@ print("Should I change oil?", expression)
 ```
 :::
 
-✍️**Challenge**: *To return a new sweater you must have the receipt **AND NOT** remove the price tag.*
+🎯 **Test Myself**: *To return a new sweater you must have the receipt **AND NOT** remove the price tag.*
 
 ```{pyodide}
 has_receipt = True

@@ -101,8 +101,8 @@ Return `True` if the left side operand is less or equal than the right side oper
 **Note:** Comparison operators compare two values and evaluate to a Boolean value: `True` or `False`.
 
 
-# Challenge
-✍️**Challenge**: Manually execute the operations below and write the expected result. Check your answers by running the code.
+# Practice
+🎯 **Test Myself**: Manually execute the operations below and write the expected result. Check your answers by running the code.
 
 [ ⏯️ Animate Execution](https://app.codeboot.org/5.0.0/?init=.fY29tcGFyaXNvbl9jaGFsbGVuZ2VzLnB5~XQAAgADRAAAAAAAAAAARiAToaYFPsVi6rkOY_gtPVhVlVMgMy9wU4vlKRmkTVwrDJddUdRiQhJT3EwSKPiJ8zQXpx7-QY0pis40KWc1I1vWP_QdVVdu0Rerf-ZlAqTc5tMK1TBKFDURcro9LSSbcbpYKde0MLEoG3M-JI9UFvVzEvV_9YtQA.~lang=py-novice.~showLineNumbers=true.~hidden=true.e){target="_blank"}
 
@@ -129,3 +129,5 @@ a = 10
 b = 7**2 +1
 print(a >= b)
 ```
+
+More practice questions on comparison operators are found in the conditionals section. 

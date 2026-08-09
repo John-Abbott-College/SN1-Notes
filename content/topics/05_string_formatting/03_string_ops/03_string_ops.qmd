@@ -27,7 +27,7 @@ print(message)
 
 
 
-✍️**Challenge 1**: Create the string variable `full_name` combining the first and last name. Then, print the following message: _My name is Jose Carlos. I am 19_ (using the variable defined earlier)
+🎯 **Test Myself**:Create the string variable `full_name` combining the first and last name. Then, print the following message: _My name is Jose Carlos. I am 19_ (using the variable defined earlier)
 ```python
 first_name = 'Carlos'
 last_name = 'Jose'
@@ -90,7 +90,7 @@ data_clean = data_str.replace(",","")
 data_int = int(data_clean) #<--Fixed! ✅
 ```
 
-✍️**Challenge 2**: Upon reading a corrupted text file, Bruce got the following string to clean-up, help him find all `%` and change them into spaces and find all `0` and replace them into `o`: 
+🎯 **Test Myself**: Upon reading a corrupted text file, Bruce got the following string to clean-up, help him find all `%` and change them into spaces and find all `0` and replace them into `o`: 
 ```python
 msg = "The%ancient%0ak%tree%whispered%secrets%t0%the%wind%as%the%first%stars%began%t0%twinkle%in%the%dusk."
 ``` 
@@ -131,7 +131,7 @@ print(names)
 
 :::
 
-✍️**Challenge 3**: The following script contains important values that should be seperated. Use the `split()` method to output the following values: `['15', '49', '56.2', '78.0', '89.2', '456']`
+🎯 **Test Myself**: The following script contains important values that should be seperated. Use the `split()` method to output the following values: `['15', '49', '56.2', '78.0', '89.2', '456']`
 
 ```python
 raw_data="15 49 56.2 78.0 89.2 456"

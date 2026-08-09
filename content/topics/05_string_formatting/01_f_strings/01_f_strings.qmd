@@ -38,7 +38,7 @@ print(greeting)
 
 Now notice that the account value doesn't use a comma `,` to seperate the thousands. We'll learn about formatting in the next section. 
 
-✍️**Challenge**: Use f-strings to print the following message:
+🎯 **Test Myself**:  Use f-strings to print the following message:
 
 _I am a John Abbott student in the Science program.
 I am currently in semester 1.
@@ -98,7 +98,7 @@ z = f"Setting x to 2 {x = 2}"      # NOT OK!, x=2 does not return a value
 ```
 :::
 
-✍️**Challenge 2**: Given the price of an item and the tax rate, use f-strings to print the price with taxes, **without** creating an additional variable:
+🎯 **Test Myself**:  Given the price of an item and the tax rate, use f-strings to print the price with taxes, **without** creating an additional variable:
 *Total: $22.4825*
 
 ```{pyodide}

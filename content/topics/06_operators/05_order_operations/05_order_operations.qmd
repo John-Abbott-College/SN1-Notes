@@ -76,19 +76,4 @@ print(f"f({x})= {y}")
 
 Adding more parenthesis than necessary is always better than not enough! When writing complex expressions, use as many parentheses as needed to make the order of operations clear.
 
-# Challenge
 
-✍️**Challenge**: The following checks if the current year is an olympic year (summer or winter). Manually execute the operations below and write the expected result. Check your answers by running the code.
-
-
-```{pyodide}
-year = 2026        # Change this to current year if teachers didn't update it ;)
-
-time_to_next_olympiad  = year % 4
-is_summer_olympics = (time_to_next_olympiad == 0)
-is_winter_olympics = (time_to_next_olympiad == 2)  and ((year % 2) == 0)
-print("True or False, this year is an olympic Games year?")
-print(is_summer_olympics or is_winter_olympics)
-```
-
-> _The last Summer and Winter Games held in the same year were in Barcelona (Summer) and Albertville (Winter) in 1992. Since then, the Summer and Winter Games are each still held every four years but the Summer Games are celebrated during the first year of an Olympiad and the Winter Games held in the third year._ Source: [International Olympic Committee](https://olympics.com/ioc/faq/history-and-origin-of-the-games/since-when-have-the-summer-and-winter-games-no-longer-been-held-in-the-same-year) algorithm.

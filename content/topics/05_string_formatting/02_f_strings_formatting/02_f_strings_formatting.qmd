@@ -129,26 +129,12 @@ Only 4 digits are said to significant.
 
 - To control the just number of significant digits, you may use `:.` without an "f" (as opposed to floating precision).
 
-```python
+```{python}
+length  = 153.256 # in mm
 print(f"The length of the object is {length:.4}")
 ```
 
-✍️ **Challenge:** You are working on a program used in an ultrasound machine. This device estimates the birth weight of babies and displays it to the screen. The system has a precision of +/- 100mg. Use `f-string` to print the weight with 1 digit after the decimal.
-```{pyodide}
-weight_birth = 2945.48 #in g
 
-# Complete the f-string
-print(f"The Estimated weight {weight } g")
-
-```
-
-:::{.callout-tip title="Solution" collapse="true"}
-```python
-weight_birth = 2945.48 #in g
-
-print(f"Estimated weight {weight_birth:.5} g")
-```
-:::
 
 ## Thousands Separator:
 
@@ -209,7 +195,7 @@ print( f"minimum size of 10, 2 decimal - centered:      '{x:^10.2f}' ")
 ```
 
 
-✍️ **Challenge:** Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.
+🎯 **Test Myself**: Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.
 
 We wish to have all the numbers of the receipt aligned to the right.
 
@@ -251,53 +237,6 @@ print(f"Total ..........{total:>10.2f}$")
 ```
 :::
 
-✍️ **Challenge:** The following transactions appear in your bank statement:
-
-Using a combination of formatting seen above, display the number in the format described below.
-
-Note: You must also use the `:+` to display the signs of each number.
-
-```{pyodide}
-transaction1 = 120.00
-transaction2 = -180.00
-transaction3 = 20
-transaction4 = -50.00
-transaction5 = -88.90
-transaction6 = -12.50
-
-# Complete this...
-
-
-```
-
-**Expected output:**
-
-```text
-   +120.00
-   -180.00
-    +20.00
-    -50.00
-    -88.90
-    -12.50
-```
-
-:::{.callout-tip collapse="true" title="Solution"}
-```python
-transaction1 = 120.00
-transaction2 = -180.00
-transaction3 = 20
-transaction4 = -50.00
-transaction5 = -88.90
-transaction6 = -12.50
-
-print(f"{transaction1:<+10.2f}")
-print(f"{transaction2:<+10.2f}")
-print(f"{transaction3:<+10.2f}")
-print(f"{transaction4:<+10.2f}")
-print(f"{transaction5:<+10.2f}")
-print(f"{transaction6:<+10.2f}")
-```
-:::
 
 # Percentage
 :::{.callout-note icon="false"}
