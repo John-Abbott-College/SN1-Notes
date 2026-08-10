@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Conditions – 420-SN1 Notes</title>
+<title>Conditional Statements – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -316,7 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Conditions</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html">Conditions</a></li><li class="breadcrumb-item"><a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html">Conditional Statements</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -531,22 +531,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Conditions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/01_if_statements/01_if_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Conditional Statements</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/02_if_else_statements/02_if_else_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The if-else statement</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/exercises/conditional/conditional.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🎯 Conditional statements</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -789,14 +798,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#logical-conditions---reminder" id="toc-logical-conditions---reminder" class="nav-link active" data-scroll-target="#logical-conditions---reminder">Logical conditions - reminder</a></li>
-  <li><a href="#conditional-execution-the-if-statement" id="toc-conditional-execution-the-if-statement" class="nav-link" data-scroll-target="#conditional-execution-the-if-statement">Conditional execution: the <code>if</code> statement</a></li>
-  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical operators</a></li>
-  <li><a href="#combining-conditional-statements" id="toc-combining-conditional-statements" class="nav-link" data-scroll-target="#combining-conditional-statements">Combining conditional statements</a></li>
-  <li><a href="#or" id="toc-or" class="nav-link" data-scroll-target="#or">Or</a></li>
-  <li><a href="#not" id="toc-not" class="nav-link" data-scroll-target="#not">Not</a>
+  <li><a href="#the-if-statement" id="toc-the-if-statement" class="nav-link active" data-scroll-target="#the-if-statement">The <code>if</code> statement</a></li>
+  <li><a href="#the-condition-of-the-if" id="toc-the-condition-of-the-if" class="nav-link" data-scroll-target="#the-condition-of-the-if">The <code>condition</code> of the <code>if</code></a>
+  <ul class="collapse">
+  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">Comparison operators</a></li>
+  <li><a href="#boolean-variables" id="toc-boolean-variables" class="nav-link" data-scroll-target="#boolean-variables">Boolean variables</a></li>
+  <li><a href="#combining-conditions" id="toc-combining-conditions" class="nav-link" data-scroll-target="#combining-conditions">Combining conditions</a></li>
+  <li><a href="#complex-conditions" id="toc-complex-conditions" class="nav-link" data-scroll-target="#complex-conditions">Complex conditions</a>
   <ul class="collapse">
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-statement_body-of-the-if" id="toc-the-statement_body-of-the-if" class="nav-link" data-scroll-target="#the-statement_body-of-the-if">The <code>statement_body</code> of the <code>if</code></a>
+  <ul class="collapse">
+  <li><a href="#updating-a-variable" id="toc-updating-a-variable" class="nav-link" data-scroll-target="#updating-a-variable">Updating a variable</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -805,9 +820,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html">Conditions</a></li><li class="breadcrumb-item"><a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html">Conditional Statements</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Conditions</h1>
+<h1 class="title">Conditional Statements</h1>
 </div>
 
 
@@ -824,11 +839,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>A programmer writes a program that asks questions, and the computer executes the program and provides answers. When asked a question, computers can only respond with 1 or 0, <code>True</code> or <code>False</code>. In other words, they can easily answer: <em>“yes, this is true”</em> or <em>“no, this is false.”</em> You will never get responses such as <em>“Let me think…”, “I don’t know”</em>, or <em>“Probably yes, but I don’t know for sure.”</em></p>
-<p>Python uses special <strong>operators</strong> to ask these questions. To make effective use of the answers, you need a mechanism that makes decision based on the answer.</p>
-<p>To make such decisions, Python offers <strong>conditional statements</strong>. These statements allow actions to be taken based on whether specific conditions are true or false. Due to their nature and application, they are called conditional instructions or conditional statements.</p>
-<section id="logical-conditions---reminder" class="level3">
-<h3 class="anchored" data-anchor-id="logical-conditions---reminder">Logical conditions - reminder</h3>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Write</strong> <code>if</code> statements using correct syntax, indentation, and conditions.</li>
+<li><strong>Use</strong> <code>if</code> statements to control program behaviour based on conditions.</li>
+<li><strong>Combine</strong> multiple conditions using comparison and logical operators.</li>
+<li><strong>Evaluate</strong> complex conditions using operator precedence and parentheses.</li>
+<li><strong>Predict</strong> the output and variable values of a program containing conditional statements.</li>
+</ul>
+</div>
+</div>
+<p>So far you’ve only written programs that run the same instructions everytime. But what if a program needs to <strong>make a choice</strong> and based on it change behaviours?</p>
+<p>For example, one might ask:</p>
+<p><em>Is the password correct?</em></p>
+<p>The answer could be <code>True</code> or <code>False</code>. Based on that, the program must behave differently: - If <code>True</code>, display <strong>Access Granted!</strong> - If <code>False</code>, display <strong>Access Denied</strong></p>
+<p>Python use comparison operators and logical operators to ask YES/NO questions. Then, based on the answer it uses <strong>conditional statements</strong> to change the behvaiour of the program.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Reminder">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reminder
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Useful reminder before starting the section</p>
+<p><strong>Comparison operators</strong></p>
 <ul>
 <li>Equals: <code>a == b</code></li>
 <li>Not Equals: <code>a != b</code></li>
@@ -837,110 +885,176 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Greater than: <code>a &gt; b</code></li>
 <li>Greater than or equal to: <code>a &gt;= b</code></li>
 </ul>
-<p>A conditional statement in Python includes the following elements in this specific order:</p>
+<p><strong>Logical operators</strong></p>
+<ul>
+<li><code>and</code>: combines two conditions as <code>True</code> if both are <code>True</code>.</li>
+<li><code>or</code>: combines two conditions as <code>True</code> if either is <code>True</code>.</li>
+<li><code>not</code> : inverts a condition.</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="the-if-statement" class="level1">
+<h1>The <code>if</code> statement</h1>
+<p>Conditionally execute a set of instrcutions if a given condition is true.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTHAX `if`">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>BASIC SYNTHAX <code>if</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A conditional <code>if</code> statement in Python includes the following elements in this specific order.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    body of if_statement</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    statement_body</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li>The <code>if</code> keyword followed by a space</li>
-<li>A condition that evaluates to <code>True</code> (non-zero value) or <code>False</code> (zero value).</li>
-<li>A colon followed by a newline.</li>
-<li>An indented instruction or set of instructions.</li>
-<li>All lines in the indented part must have the same indentation. Mixing spaces and tabs is not allowed in Python 3.</li>
+<li>A <code>condition</code> that evaluates to <code>True</code>/<code>False</code>.</li>
+<li>A colon <code>:</code> followed by a newline.</li>
+<li>An indented instruction (<code>statement_body</code>) or set of instructions executed if the <code>condition</code> is <code>True</code>.</li>
 </ol>
+</div>
+</div>
 <p>The statement works as follows:</p>
 <ul>
-<li>If the <code>condition</code> is true (non-zero value), the indented statement(s) will be executed.</li>
-<li>If the <code>condition</code> is false (zero value), the indented statement(s) will be skipped, and execution will continue with the instruction after the indentation block.</li>
+<li>If the condition evaluates to True, the indented statement(s) are executed.</li>
+<li>If the condition evaluates to False, the indented statement(s) are skipped, and execution continues with the instruction after the if block.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/if_1.png" class="img-fluid figure-img"></p>
-<figcaption>demo</figcaption>
-</figure>
+<p><img src="./assets/if_1.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Not indenting error">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Not indenting error
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A common mistake beginners make it to forget the indentation of the lines of code within the <code>if</code> statment</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">==</span> <span class="dv">10</span>:    <span class="co">#  &lt;--- Error ❌</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"It's equal to 10!"</span>). <span class="co">#This line must be indented with the TAB </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Most IDEs will automatically indent lines of code after an if</li>
+<li><strong>Be careful!</strong> An indententation is not the same as a space. Hit the TAB button to indent not the SPACE button.</li>
+</ul>
+</div>
 </div>
 </section>
-<section id="conditional-execution-the-if-statement" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-execution-the-if-statement">Conditional execution: the <code>if</code> statement</h2>
-<p>Conditionally executed statements must be indented. This indentation creates a clear and readable structure, making it easy to see all possible execution paths in the code.</p>
-<p>Consider the following code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check if number is greater than 0</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> number <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is a positive number.'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'A statement outside the if statement.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>if</code> statement checks if the number is greater than <code>0</code>. If the condition is true, it prints that the number is positive.</p>
-<p>The second <code>print</code> statement is outside the <code>if</code> block and will execute every time the code runs, showing that it is independent of the <code>if</code> condition.</p>
-</section>
-<section id="logical-operators" class="level2">
-<h2 class="anchored" data-anchor-id="logical-operators">Logical operators</h2>
+<section id="the-condition-of-the-if" class="level1">
+<h1>The <code>condition</code> of the <code>if</code></h1>
+<p>Let’s focus on how to build conditions using comparison operators, booleans and logical operators effectively.</p>
+<section id="comparison-operators" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-operators">Comparison operators</h2>
+<p>This will be the most common way of building conditional statements in a program for this course. Comparing variables, especially numbers with each other to add decisions.</p>
+<p>For instance, let’s consider a program which determines if a user is old enough to vote:</p>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiXG5hZ2UgPSAxN1xuXG5pZiBhZ2UgPj0gMTg6IFxuICAgIHByaW50KFwiWW91IGNhbiB2b3RlIVwiKVxuXG5pZiBhZ2UgPCAxODogXG4gICAgcHJpbnQoXCJZb3UgY2FuJ3Qgdm90ZSFcIilcblxucHJpbnQoXCJJJ20gRG9uZVwiKSJ9
+</script>
+</div>
 <ul>
-<li><code>and</code>: The and keyword is a logical operator, and is used to combine conditional statements:</li>
-<li><code>or</code>: The <code>or</code> keyword is a logical operator, and is used to combine conditional statements:</li>
-<li><code>not</code> : The <code>not</code> keyword is a logical operator, and is used to reverse the result of the conditional statement:</li>
+<li>The first <code>if</code> statement checks if the <code>age</code> is greater or equal to 18. If the condition is true, it prints <strong>You can vote</strong>.</li>
+<li>The second <code>if</code> statement checks the opposite condition, so if the user’s <code>age</code> is lower than 18. If it’s true, it prints <strong>You can’t vote</strong>.</li>
+<li>The last <code>print</code> statement is outside the <code>if</code> blocks and will execute every time the code runs, no matter the <code>age</code> variable’s value. Showing that it is independent from the <code>if</code> condition.</li>
 </ul>
+<p>🎯 <strong>Test Myself</strong>: Modify the value <code>age</code> in the code above to display <strong>You can vote</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Set the value of <code>age</code> to 18 (or greater).</p>
+</div>
+</div>
+</div>
 </section>
-<section id="combining-conditional-statements" class="level2">
-<h2 class="anchored" data-anchor-id="combining-conditional-statements">Combining conditional statements</h2>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Consider the following numbers: <code>number1 = 200</code>,<code>number2 = 33</code>,<code>number3 = 500</code>. We would like to verify if number1 is greater than number2 <strong>and</strong> if number3 is greater than number1. We could write two nested ifs:</p>
+<section id="boolean-variables" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-variables">Boolean variables</h2>
+<p>Boolean variables and conditional statements are designed to be used together. Since a <code>condition</code> is a boolean, you can simply use the boolean <strong>as is</strong> in an <code>if</code> statement. For instance, consider the boolean <code>is_raining</code>. We would like to display a message if this boolean is <code>True</code>. One might be tempted to write:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>is_raining <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_raining <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"It's raining!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This isn’t wrong, but it’s redundant!</p>
 <ul>
-<li>If number1 is greater than number2, then:
-<ul>
-<li>If number 3 is greater than number2, then:
-<ul>
-<li>Display: “number 2 is the smallest number”</li>
-</ul></li>
-</ul></li>
+<li>That’s because <code>is_raining == True</code> creates a boolean expression that asks whether <code>is_raining</code> is <code>True</code> (or not).</li>
+<li>Since, the boolean already has the value <code>True</code>, it can serve directly as the condition of the <code>if</code></li>
 </ul>
-<p>This would translate into:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number1 <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span> <span class="dv">33</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>number3 <span class="op">=</span> <span class="dv">500</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> number1 <span class="op">&gt;</span> number2:</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>  number3 <span class="op">&gt;</span> number1:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Both conditions are True"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Test if <code>a</code> is greater than <code>b</code>, AND if <code>c</code> is greater than <code>a</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>number1 <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span> <span class="dv">33</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>number3 <span class="op">=</span> <span class="dv">500</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> number1 <span class="op">&gt;</span> number2 <span class="kw">and</span> number3 <span class="op">&gt;</span> number1:</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Both conditions are True"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>if</code> statement checks if both <code>a &gt; b</code> and <code>c &gt; a</code> are <code>True</code> using the <code>and</code> operator.</p>
-<p>Because both conditions are indeed <code>True</code>, the code prints “Both conditions are True.”</p>
+<p>This code can be re-written as such:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>is_raining <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_raining:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"It's raining!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="combining-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="combining-conditions">Combining conditions</h2>
+<p>When adding decision making, we sometimes need to check if multiple conditions are met at the same time or if one of them is met. This is when logical operators come in handy!</p>
+<p>Let’s go back an example we’ve used in a previous topic. You’re trying to make a program which verifies if it will rain tomorrow based on the <code>humidy_index</code> and the <code>temperature_variation</code>:</p>
+<p><strong>It will rain tomorrow if the humidify is above 0.8 AND the temperature is decreasing (variation is negative)</strong></p>
+<p>To combine these two conditions we can use the <strong><code>and</code></strong> operator:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>humidity <span class="op">=</span> <span class="fl">0.77</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temperature_variation  <span class="op">=</span> <span class="op">-</span><span class="fl">3.2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> humidity <span class="op">&gt;</span> <span class="fl">0.8</span> <span class="kw">and</span> temperature_variation <span class="op">&lt;</span><span class="dv">0</span>:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"It will rain tomorrow"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>🎯 <strong>Test Myself</strong>: What would be the output of the program if we replaced the <code>and</code> with an <code>or</code>?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The conditon will be <code>True</code> since the <strong>OR</strong> required at least one to be <code>True</code>. The output will be: <code>"It will rain tomorrow"</code></p>
+</div>
+</div>
+</div>
 </section>
-<section id="or" class="level2">
-<h2 class="anchored" data-anchor-id="or">Or</h2>
-<p>The <code>or</code> keyword is a logical operator, and is used to combine conditional statements:</p>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example:</h4>
-<p>Test if <code>a</code> is greater than <code>b</code>, OR if <code>a</code> is greater than <code>c</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>number1 <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span> <span class="dv">33</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>number3 <span class="op">=</span> <span class="dv">500</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (number1 <span class="op">&gt;</span> number2) <span class="kw">or</span> (anumber1<span class="op">&gt;</span> number3):</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"At least one of the conditions is True"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>if</code> statement checks if either <code>a &gt; b</code> or <code>a &gt; c</code> is <code>True</code> using the <code>or</code> operator.</p>
-<p>Because <code>a &gt; b</code> is <code>True</code>, the overall condition is <code>True</code>, so the code prints “At least one of the conditions is True.”</p>
-</section>
-</section>
-<section id="not" class="level2">
-<h2 class="anchored" data-anchor-id="not">Not</h2>
-<p>The <code>not</code> keyword is a logical operator, and is used to reverse the result of the conditional statement:</p>
-<section id="example-2" class="level4">
-<h4 class="anchored" data-anchor-id="example-2">Example:</h4>
-<p>Test if <code>a</code> is NOT greater than <code>b</code>:</p>
+<section id="complex-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="complex-conditions">Complex conditions</h2>
+<p>Keep in mind the order of operations when evaluating a conditional statement. For instance, let’s test if <code>a</code> is smaller or equal to <code>b</code> and <code>c</code> is <strong>NOT</strong> true in the following example:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">33</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> a <span class="op">&gt;</span> b:</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"a is NOT greater than b"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>if</code> statement checks if <code>a</code> is not greater than <code>b</code> by negating the result of the comparison <code>a &gt; b</code> using the <code>not</code> operator.</p>
-<p>Since <code>a &gt; b</code> is <code>False</code>, <code>not a &gt; b</code> is <code>True</code>, so the message “a is NOT greater than b” is printed.</p>
-<p>✍️<strong>Challenge</strong>: Write a Python program to check if a number is divisible by both 2 and 3.</p>
-</section>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>  a <span class="op">&lt;=</span> b <span class="kw">and</span> <span class="kw">not</span> c:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Yeeyy"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="https://app.codeboot.org/6.0.0/?init=.oaW50cm9fdmFyaWFibGVzLnB5~XQAAgAAqAAAAAAAAAAA2nkgDa8sHY-qYmqhI845RcTD-OTvw7E5uhnmp3SLeliWSurqH0TD__6F6AAA=.fY29uZGl0aW9uc19wcmlvcml0eS5weQ==~XQAAgABpAAAAAAAAAAAwiAOiEXKguO8oQCi_fr5KEAxZGtKJRmd3cgX-ir_9_eV-JlhqhZlBzDWx5yMRJh-A1hWnLVZO5FGQDK9xxz_xr6lA3xavpdIPY7PTtvyurUtnb2NhM3u4Lsik92QO0Pw8mEA=.~lang=py-novice.a">⏯️ Animate Execution</a></p>
+<p>Let’s break it down:</p>
+<ol type="1">
+<li>The comparison operation <code>&lt;=</code> takes precedence over the rest and runs first:
+<ul>
+<li>Since <code>a</code> is smaller than <code>b</code>, so <code>a &lt;=b</code> → <strong><code>True</code></strong></li>
+</ul></li>
+<li>The <code>not</code> operation takes precedence over the <code>and</code> and runs second
+<ul>
+<li>Since the the value of <code>c</code> is <code>True</code> it gets inverted by the <code>not</code> becoming <strong><code>True</code></strong>.</li>
+</ul></li>
+<li>The <code>and</code> is now executed combining: <code>True and True</code> → <strong><code>True</code></strong></li>
+<li>Since the condition of the <code>if</code> is <code>True</code>, the condition body is executed next</li>
+<li>Lastly, the <code>print("Yeeyy")</code> gets executed.</li>
+</ol>
+<p><strong>Remember using more <code>()</code> than required is always better than writing ambigious statements</strong></p>
 <section id="examples" class="level3">
 <h3 class="anchored" data-anchor-id="examples">Examples</h3>
 <p>PAY ATTENTION TO THE PARENTHESIS</p>
@@ -953,10 +1067,134 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I want 8 large pizzas and 15 cokes and 15 rootbeers, and if they don’t have rootbeers, then 30 cokes</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> large_pizza <span class="op">==</span> <span class="dv">8</span> <span class="kw">and</span> ( ( cokes <span class="op">==</span> <span class="dv">15</span> <span class="kw">and</span> rootbeers <span class="op">==</span> <span class="dv">15</span>) <span class="kw">or</span> cokes <span class="op">==</span> <span class="dv">30</span>):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"OK"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>🎯 <strong>Test Myself</strong>: Complete the following program to print <strong>Team C qualifies!</strong> if they won at least one game. <strong>Or</strong>, if they lost none, but scored <strong>at least</strong> 3 goals <strong>while</strong> conceding <strong>not more</strong> than 1 goal.</p>
+<div>
+<div id="pyodide-2" class="exercise-cell">
+
+</div>
+<script type="pyodide-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZ2FtZXNfd29uID0gMFxuZ2FuZXNfbG9zdCA9IDBcbmdvYWxzX3Njb3JlZCA9IDRcbmdvYWxzX2FnYWluc3QgPSAyXG5cbnByaW50KFwiV2lsbCBUZWFtIEMgcXVhbGlmeT9cIilcblxuXG5wcmludChcIlByb2dyYW0gaXMgZG9uZSFcIikifQ==
+</script>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>games_won <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>games_lost <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>goals_scored <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>goals_against <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Will Team C qualify?"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (games_won <span class="op">&gt;=</span> <span class="dv">1</span>) <span class="kw">or</span> (games_lost <span class="op">==</span><span class="dv">0</span> <span class="kw">and</span> goals_scored <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> goals_against <span class="op">&lt;=</span> <span class="dv">1</span>):</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Team C qualifies!"</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Program is done!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="the-statement_body-of-the-if" class="level1">
+<h1>The <code>statement_body</code> of the <code>if</code></h1>
+<p>All the lines indented under the <code>if condition:</code> are part of the body and are executed if the condition is <code>True</code>, otherwise they’re skipped.</p>
+<section id="updating-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="updating-a-variable">Updating a variable</h2>
+<p>A variable defined before an <code>if</code> statement can be modified inside its body. If the condition is <code>True</code>, the instructions in the <code>if</code> body are executed, and any changes made to the variable are retained after the <code>if</code> block.</p>
+<p>For example, imagine a game where a player earns 10 points each time they successfully complete a mission:</p>
+<div id="ef29f31f" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># First mission</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>has_succeeded <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the mission was successful</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> has_succeeded:</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Mission Passed"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Respect+"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    score <span class="op">+=</span> <span class="dv">10</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(score)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mission Passed
+Respect+
+10</code></pre>
+</div>
+</div>
+<p>Since <code>has_succeeded</code> is <code>True</code>:</p>
+<ul>
+<li>The <code>if</code> condition is satisfied, so its body is executed.</li>
+<li>Both messages are displayed.</li>
+<li><code>score</code> is increased by 10, changing its value from <code>0</code> to <code>10</code>.</li>
+<li>After the <code>if</code> block finishes, <code>score</code> still has the value <code>10</code>.</li>
+</ul>
+<p>🎯 <strong>Test Myself</strong>: What would be the output of this program if the assignment changes to<code>has_succeeded = False</code>?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The score stays at 0.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Nesting `if` statements">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nesting <code>if</code> statements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Nesting a condition is placing it inside an outer condition.</p>
+<p>For instance, consider those numbers: <code>number1 = 200</code>,<code>number2 = 33</code>,<code>number3 = 500</code>. Let’s imagine we’re trying to verify if <code>number2</code> is the smaller number. This translates in verifying if <code>number1 &gt; number2</code>, then if that’s true, verify if <code>number3 &gt; number2</code> to conclude if it’s the smallest number:</p>
+<ul>
+<li>If number1 is greater than number2, then:</li>
+<li>If number 3 is greater than number2, then:
+<ul>
+<li>Display: “number 2 is the smallest number”</li>
+</ul></li>
+</ul>
+<p>This would translate into:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>number1 <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>number2 <span class="op">=</span> <span class="dv">33</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>number3 <span class="op">=</span> <span class="dv">500</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> number1 <span class="op">&gt;</span> number2:</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>  number3 <span class="op">&gt;</span> number1:</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Both conditions are True"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These nested conditions can often be simplified using logical operators and counter conditions.</p>
+</div>
+</div>
+</div>
 
 
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">

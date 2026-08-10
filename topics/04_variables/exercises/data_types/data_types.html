@@ -568,14 +568,23 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/01_if_statements/01_if_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../../topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Statements</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/02_if_else_statements/02_if_else_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../../topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The if-else statement</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/exercises/conditional/conditional.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../../topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🎯 Conditional statements</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -828,9 +837,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sum-of-mismatched-types" id="toc-sum-of-mismatched-types" class="nav-link" data-scroll-target="#sum-of-mismatched-types">1. Sum of Mismatched Types</a></li>
   <li><a href="#average-grades" id="toc-average-grades" class="nav-link" data-scroll-target="#average-grades">2. Average Grades</a></li>
-  </ul></li>
   <li><a href="#gravitational-potential-energy" id="toc-gravitational-potential-energy" class="nav-link" data-scroll-target="#gravitational-potential-energy">3. Gravitational potential energy</a></li>
   <li><a href="#renovations" id="toc-renovations" class="nav-link" data-scroll-target="#renovations">4. Renovations</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -957,8 +966,7 @@ window.Quarto = {
 </div>
 <p><strong>e.</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="st">"2"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>value2 <span class="op">=</span> <span class="bu">int</span>(value)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(value2))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>value2 <span class="op">=</span> <span class="bu">int</span>(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -991,7 +999,9 @@ window.Quarto = {
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><code>grade</code> → <code>int</code> <code>total</code> → <code>int</code> <code>ratio</code> → <code>float</code></p>
+<p><code>grade</code> → <code>int</code></p>
+<p><code>total</code> → <code>int</code></p>
+<p><code>ratio</code> → <code>float</code></p>
 </div>
 </div>
 </div>
@@ -1032,7 +1042,10 @@ window.Quarto = {
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>var1 → <code>int</code> var2 → <code>int</code> var3 → <code>str</code> var4 → Error, cannot use + on numeric data types with str.</p>
+<p>var1 → <code>int</code></p>
+<p>var2 → <code>int</code></p>
+<p>var3 → <code>str</code></p>
+<p>var4 → Error, cannot use + on numeric data types with str.</p>
 </div>
 </div>
 </div>
@@ -1069,7 +1082,8 @@ window.Quarto = {
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><code>int</code> ‘bool’</p>
+<p><code>int</code></p>
+<p>‘bool’</p>
 </div>
 </div>
 </div>
@@ -1088,7 +1102,8 @@ window.Quarto = {
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><code>int</code> <code>bool</code></p>
+<p><code>int</code></p>
+<p><code>bool</code></p>
 </div>
 </div>
 </div>
@@ -1180,7 +1195,7 @@ Double check the data types of the inputs!
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="7be3fdfd" class="cell" data-execution_count="1">
+<div id="d359434c" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution #1</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>num1 <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>num2 <span class="op">=</span> <span class="dv">4</span></span>
@@ -1232,7 +1247,7 @@ There is more than one issue in the code above. How are averages calculated? And
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="c270e3cd" class="cell" data-execution_count="2">
+<div id="60f3973e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>grade1 <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>grade2 <span class="op">=</span> <span class="dv">26</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>average <span class="op">=</span> (grade1 <span class="op">+</span> grade2) <span class="op">/</span> <span class="dv">2</span></span>
@@ -1245,9 +1260,8 @@ There is more than one issue in the code above. How are averages calculated? And
 </div>
 </div>
 </section>
-</section>
-<section id="gravitational-potential-energy" class="level1">
-<h1>3. Gravitational potential energy</h1>
+<section id="gravitational-potential-energy" class="level2">
+<h2 class="anchored" data-anchor-id="gravitational-potential-energy">3. Gravitational potential energy</h2>
 <p>Calculate the gravitational potential energy of an object using the following formula, where <span class="math inline">\(m\)</span> is the mass of the object, <span class="math inline">\(g\)</span> is the acceleration of gravity which is 9.81 <span class="math inline">\(m/s^2\)</span>, <span class="math inline">\(h\)</span> is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.</p>
 <p><span class="math display">\[
 E_p = m \times g \times h
@@ -1282,8 +1296,8 @@ Python variable names should be meaningful!
 </div>
 </div>
 </section>
-<section id="renovations" class="level1">
-<h1>4. Renovations</h1>
+<section id="renovations" class="level2">
+<h2 class="anchored" data-anchor-id="renovations">4. Renovations</h2>
 <p>Jac Reno needs your assistance in estimating the area of Brittain Hall with a <code>python</code> script. We can approximate the shape of BH with a trapezoid with bases <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b2\)</span> and a triangle with base <span class="math inline">\(b3\)</span>. We can then estimate the area with the following equation using the width of the hallway <span class="math inline">\(w\)</span> and multiply by <strong>N = 4</strong> (the number of floors). The script must print the estimated area of Brittain hall.</p>
 <p>The measures below are approximations, they may change later on. <span class="math display">\[
 Area_{BH} =N \left( \frac{b_1 + b_2}{2}  w + \frac{b_3  w}{2}\right)
@@ -1316,7 +1330,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiXG5cblxuXG5cblxuXG5cbiJ9
 </div>
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="302bff86" class="cell" data-execution_count="3">
+<div id="43f5e3b7" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>num_floors <span class="op">=</span> <span class="dv">4</span> </span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>base1 <span class="op">=</span> <span class="dv">18</span> <span class="co"># in meters</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>base2 <span class="op">=</span> <span class="dv">20</span> <span class="co"># in meters</span></span>
@@ -1356,6 +1370,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2RO
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->

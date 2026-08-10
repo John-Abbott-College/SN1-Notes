@@ -568,14 +568,23 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/01_if_statements/01_if_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Statements</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/02_if_else_statements/02_if_else_statements.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The if-else statement</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">topics/07_statements/exercises/conditional/conditional.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🎯 Conditional statements</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -964,7 +973,7 @@ window.Quarto = {
 <section id="pythons-handling-of-operations-with-the-same-priority" class="level1">
 <h1>Python’s handling of operations with the same priority?</h1>
 <p>Consider the following math function <span class="math inline">\(y = \frac{x^2 + x}{2x}\)</span> implemented in Python as such:</p>
-<div id="4368e15d" class="cell" data-execution_count="1">
+<div id="0de49e57" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span>x) <span class="op">/</span> <span class="dv">2</span><span class="op">*</span>x</span>
@@ -977,7 +986,7 @@ window.Quarto = {
 <p>This isn’t the correct value of <span class="math inline">\(f(3)\)</span>, which should be <span class="math inline">\(2\)</span>. Why is that?</p>
 <p>The answer lies in how the denominator has been implemented <code>/2*x</code>. This is ambigious because both the <code>/</code> and the <code>*</code> have the <strong>same priority</strong>. Python doesn’t know that <code>2*x</code> must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.</p>
 <p>To remove the ambiguity, the best is to use parenthesis <code>()</code>:</p>
-<div id="9810d2ef" class="cell" data-execution_count="2">
+<div id="174c9591" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span>x) <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>x)</span>
