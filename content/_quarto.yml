@@ -59,9 +59,9 @@ website:
     
     - section: Conditions
       contents:
-      - topics/07_statements/01_if_statements/01_if_statements.qmd
-      - topics/07_statements/02_if_else_statements/02_if_else_statements.qmd
-      - topics/07_statements/exercises/conditional/conditional.qmd
+      - topics/07_conditionals/01_if_statements/01_if_statements.qmd
+      - topics/07_conditionals/02_if_else_statements/02_if_else_statements.qmd
+      - topics/07_conditionals/exercises/conditional/conditional.qmd
 
     - section: Loops
       contents:
