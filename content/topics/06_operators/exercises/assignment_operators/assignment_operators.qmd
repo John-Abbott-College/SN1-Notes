@@ -92,9 +92,9 @@ b = b % 4
 s += "1"
 a = b / a
 
-print(a, type(a))
-print(b, type(b))
-print(s, type(s))
+print(a)
+print(b)
+print(s)
 ```
 :::{.callout-tip collapse="true" title="Solution"}
 ```

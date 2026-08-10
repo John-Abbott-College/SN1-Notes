@@ -50,14 +50,15 @@ This is warning related to a required installation or configuration. Altough it 
 Additional information that is not part of the core content. It's collapsed for you to optionally look at. 
 :::
 
-## Practice exercises 
-🎯 **Test Myself**: These are short questions found inside each topic notes to help you **grasp the concept**. 
+## Practice exercises
 
-✍️ **Practice**: These practice problems are found at the end of each module, they are meant to **consolidate** your understanding of a topic by repetiion. Do as many as you need to feel comfortable with the topic. 
+🎯 **Test Myself**: Short questions found throughout each topic's notes to help you **grasp and check your understanding of the concept**. 
 
-🧩 **Problem Solving**: These questions are meant to **integrate** the topics to your previous knowledge and push you to think a little bit further. These are excellent preparation for Quizzes and Tests. 
+✍️ **Practice**: These practice problems are found at the end of each module, they are meant to **reinforce and consolidate** your understanding of a topic. Do as many as you need until you feel comfortable with the topic. 
 
-🚀 **Challenge** : Harder optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam. 
+🧩 **Problem Solving**: These questions are meant to **connect** the topics with what you've learned previously and push you to think a little further. These are excellent preparation for Quizzes and Tests. 
+
+🚀 **Challenge** : Harder, optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam. 
 
 :::{.callout-tip title="Solution for an exercise" collapse="true"}
 This is a solution for an exercise and is collapsed for you to optionally look at.

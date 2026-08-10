@@ -73,7 +73,6 @@ number = "234"
 ```python
 value = "2"
 value2 = int(value)
-print(type(value2))
 ```
 
 :::{.callout-tip title="Solution" collapse="true"}
@@ -90,9 +89,12 @@ ratio = grade / total
 ```
 
 :::{.callout-tip title="Solution" collapse="true"}
-`grade` → `int`
+`grade` → `int` 
+
 `total` → `int`
+
 `ratio` → `float`
+
 :::
 
 **g.**
@@ -117,9 +119,13 @@ var4 = var1 + var2 + var3
 
 :::{.callout-tip title="Solution" collapse="true"}
 var1 → `int`
+
 var2 → `int`
+
 var3 → `str`
+
 var4 → Error, cannot use + on numeric data types with str.
+
 :::
 
 **i.**
@@ -142,6 +148,7 @@ is_legal_age = (age >= 18)
 :::{.callout-tip title="Solution" collapse="true"}
 
 `int`
+
 'bool'
 :::
 
@@ -154,6 +161,7 @@ has_cars = bool(cars_count)
 
 :::{.callout-tip title="Solution" collapse="true"}
 `int`
+
 `bool`
 :::
 
@@ -248,7 +256,7 @@ print(average)
 :::
 
 
-# 3. Gravitational potential energy
+## 3. Gravitational potential energy
 Calculate the gravitational potential energy of an object using the following formula, where $m$ is the mass of the object, $g$ is the acceleration of gravity which is 9.81 $m/s^2$, $h$ is the height at which the object is located. Assume that the object has a mass of 18Kg and is held at a height of 200 m. Ensure that you are following the naming convention mentioned earlier.
 
 $$
@@ -273,7 +281,7 @@ energy = GRAVITATION_ACC * mass * height
 ```
 :::
 
-# 4. Renovations
+## 4. Renovations
 
 Jac Reno needs your assistance in estimating the area of Brittain Hall with a `python` script. We can approximate the shape of BH with a trapezoid with bases $b_1$ and $b2$ and a triangle with base $b3$. We can then estimate the area with the following equation using the width of the hallway $w$ and multiply by **N = 4** (the number of floors). The script must print the estimated area of Brittain hall. 
 
