@@ -4,7 +4,9 @@ project:
 website:
   title: "420-SN1 Notes"
   site-url: https://john-abbott-college.github.io/SN1-Notes/
+  favicon: favicons/favicon.ico
   navbar:
+    logo : assets/favicons/favicon.svg
     left:
       - href: index.qmd
         text: Syllabus
