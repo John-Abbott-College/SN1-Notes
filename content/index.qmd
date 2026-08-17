@@ -7,7 +7,7 @@ _Welcome to 420-SN1 Programming in Science_
 
 In this course, you will learn everything about the basics of programming to solve scientific problems, read data from files, clean up the data, apply mathematical formulas, and _so much more_.
 
-<img src="assets/gencraft_SN1_icon.png" width=80%/>
+<img src="assets/gencraft_SN1_image.png" width=80%/>
 
 This image was AI generated.
 
