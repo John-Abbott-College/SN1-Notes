@@ -14,9 +14,9 @@ editor:
 
 # **Variables**
 
-A variable is a temporary holding place for a value. Think of   it as a box that can store **a single** item.
+A variable is a temporary holding place for a value. Think of it as a box that can store **a single** item.
 
-The value inside a variable can be of different types, for example:
+The value inside a variable can be of different type, for example:
 
 - a number, such as the user's hourly pay, or the number of students in a course;
 

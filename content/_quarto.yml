@@ -6,6 +6,7 @@ website:
   site-url: https://john-abbott-college.github.io/SN1-Notes/
   page-navigation: true
   navbar:
+    logo : assets/favicons/favicon.svg
     left:
       - text: Syllabus
         menu:
