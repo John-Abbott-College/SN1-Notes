@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>f-string Formatting – 420-SN1 Notes</title>
+<title>Using The Thonny Python Editor – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -71,8 +36,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" rel="next">
-<link href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" rel="prev">
+<link href="../../../topics/04_variables/02_variables/02_variables.html" rel="next">
+<link href="../../../topics/02_getting_started/03_lea/03_lea.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -329,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html">f-string Formatting</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Editor</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -395,13 +360,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY" class="sidebar-item-text sidebar-link">
@@ -422,7 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Using The Thonny Python Editor</span></a>
   </div>
 </li>
@@ -471,13 +436,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">String Handling</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
@@ -486,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">f-string Formatting</span></a>
   </div>
 </li>
@@ -823,19 +788,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#length-or-padding" id="toc-length-or-padding" class="nav-link active" data-scroll-target="#length-or-padding">Length (or padding)</a></li>
-  <li><a href="#floating-point-numbers" id="toc-floating-point-numbers" class="nav-link" data-scroll-target="#floating-point-numbers">Floating Point Numbers</a></li>
-  <li><a href="#scientific-notation" id="toc-scientific-notation" class="nav-link" data-scroll-target="#scientific-notation">Scientific Notation</a></li>
-  <li><a href="#generic-precision" id="toc-generic-precision" class="nav-link" data-scroll-target="#generic-precision">Generic Precision</a>
-  <ul class="collapse">
-  <li><a href="#thousands-separator" id="toc-thousands-separator" class="nav-link" data-scroll-target="#thousands-separator">Thousands Separator:</a></li>
-  </ul></li>
-  <li><a href="#alignment" id="toc-alignment" class="nav-link" data-scroll-target="#alignment">Alignment</a></li>
-  <li><a href="#percentage" id="toc-percentage" class="nav-link" data-scroll-target="#percentage">Percentage</a>
-  <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  </ul></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  <li><a href="#what-is-thonny" id="toc-what-is-thonny" class="nav-link active" data-scroll-target="#what-is-thonny">What is Thonny?</a></li>
+  <li><a href="#installing-thonny-on-your-personal-machine.-optional" id="toc-installing-thonny-on-your-personal-machine.-optional" class="nav-link" data-scroll-target="#installing-thonny-on-your-personal-machine.-optional">Installing Thonny on Your Personal Machine. (Optional)</a></li>
+  <li><a href="#important-thonny-settings-both-lab-and-personal-machines" id="toc-important-thonny-settings-both-lab-and-personal-machines" class="nav-link" data-scroll-target="#important-thonny-settings-both-lab-and-personal-machines">Important Thonny Settings (Both lab and personal machines)</a></li>
+  <li><a href="#further-info" id="toc-further-info" class="nav-link" data-scroll-target="#further-info">Further info</a></li>
   </ul>
 </nav>
     </div>
@@ -843,9 +799,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html">f-string Formatting</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Editor</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">f-string Formatting</h1>
+<h1 class="title">Using The Thonny Python Editor</h1>
 </div>
 
 
@@ -862,413 +818,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="objectives callout callout-style-default callout-warning no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>☆ Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Select</strong> the appropriate f-string formatting (not memorize) to achieve the expected output.</li>
-</ul>
-</div>
-</div>
-<p>This topic is not part of the final assessment, but might be useful for some assignments.</p>
-<p>This section is about how to format numbers within an f-string.</p>
-<p>Within the <code>{...}</code> part of the <em>f-string</em>, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>variable: format string</code></em><code>}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>notice that the variable name is followed by a colon <code>:</code> and then a format string which is used to define how to format your output.</li>
-</ul>
-</div>
-</div>
-<section id="length-or-padding" class="level1">
-<h1>Length (or padding)</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m</code></em><code>}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
-<li><code>int</code> and <code>float</code> will be padded so that the number is right aligned</li>
-<li><code>str</code> will be padded so that the string will be left aligned</li>
-</ul>
-</div>
-</div>
-<p><img src="./assets/format_length.png" class="img-fluid" style="width:60.0%"></p>
+<section id="what-is-thonny" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-thonny">What is Thonny?</h3>
+<p>Thonny is a computer application used to develop and run Python programs. It is especially suited for people who are just learning how to program because it is easy to learn and simple to use.</p>
+<p>You can find more info about Thonny <a href="https://thonny.org/">HERE</a></p>
 </section>
-<section id="floating-point-numbers" class="level1">
-<h1>Floating Point Numbers</h1>
-<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>f}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="installing-thonny-on-your-personal-machine.-optional" class="level3">
+<h3 class="anchored" data-anchor-id="installing-thonny-on-your-personal-machine.-optional">Installing Thonny on Your Personal Machine. (Optional)</h3>
+<p>You will primarily be using Thonny on the lab computers (which have it installed by default) but if you want to install it on your personal machine it is free for all to download and use. To do this you need to:</p>
 <ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.
+<li><p>Navigate to the <a href="https://thonny.org/">Thonny</a> website</p></li>
+<li><p>Click the big button that says ‘Download’ (It may specify a different version than 5.0.0)<br>
+<img src="./assets/thonny_download.png" alt="Thonny Installation" width="auto" height="40"></p></li>
+<li><p>Click on it to go to the download page. Scroll to the bottom of this new page. You should see something like this:<br>
+<img src="./assets/downloads_page.png" alt="Thonny Installation" width="100%" height="auto"></p></li>
+</ul>
+<section id="windows" class="level4">
+<h4 class="anchored" data-anchor-id="windows">Windows</h4>
 <ul>
-<li>if <code>m</code> is not specified, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-</ul></li>
-<li><em><code>.n</code></em> is the required precision (number of digits after the decimal point).
+<li>For most Windows computers you will want to download the version ending with “x64.exe” such as “thonny-5.0.0-x64.exe” shown above. Click on it, save it, and then run it.</li>
+</ul>
+</section>
+<section id="mac-users-check-your-chip" class="level4">
+<h4 class="anchored" data-anchor-id="mac-users-check-your-chip">Mac Users: Check Your Chip!</h4>
 <ul>
-<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string</li>
+<li>Click the Apple logo 🍎 at the top left of your screen</li>
+<li>Select <strong>About This Mac</strong>
+<ul>
+<li><strong>On Newer Macs:</strong> Next to “Chip,” you’ll see either <strong>Apple</strong> or <strong>Intel</strong><br>
+</li>
+<li><strong>On Older Macs:</strong> Next to “Processor,” you’ll see <strong>Intel Core</strong></li>
 </ul></li>
 </ul>
-</div>
-</div>
-<p><img src="./assets/format_float.png" class="img-fluid" style="width:60.0%"></p>
-<p><strong>Examples</strong></p>
-<div id="92c28f7b" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">375.2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: .3f}</span><span class="ss">"</span> )     <span class="co"># 'm' is not specified, so only worry about number of digits after decimal point</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 6.3f}</span><span class="ss">"</span> )    <span class="co"># the printed number will be greater than 6 digits, so the '6' is ignored</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10.3f}</span><span class="ss">"</span> )   <span class="co"># use at least 10 characters for this string, right aligned</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 10}</span><span class="ss"> "</span>)              <span class="co"># use default number of digits after the decimal point</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> 375.200
- 375.200
-   375.200
-     375.2 </code></pre>
-</div>
-</div>
-<!-- Output:
-
-```text
-375.200
-375.200
-  375.200
-    375.2
-``` -->
-<p>For example, here are a few lines that print the value of pi at different precisions:</p>
-<div id="1ca86d67" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The value of pi without formatting: "</span>, pi)  </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with two decimal places: </span><span class="sc">{</span>pi<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with three decimal places: </span><span class="sc">{</span>pi<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with four decimal places: </span><span class="sc">{</span>pi<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The value of pi with four decimal places: </span><span class="sc">{</span>pi<span class="sc">:,.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The value of pi without formatting:  3.141592653589793
-The value of pi with two decimal places: 3.14
-The value of pi with three decimal places: 3.142
-The value of pi with four decimal places: 3.1416
-The value of pi with four decimal places: 3.1416</code></pre>
-</div>
-</div>
-</section>
-<section id="scientific-notation" class="level1">
-<h1>Scientific Notation</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>e}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary. Note that one space is <em>always</em> reserved for the <code>+</code> symbol, even if it is not displayed.</li>
-<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-<li><em><code>n</code></em> is the required precision (number of digits after the decimal point).</li>
-<li>if not specified, then zeros will be used to pad the number to accommodate the width of the string (+2) <em>WEIRD!</em></li>
-</ul>
-</div>
-</div>
-<p><img src="./assets/format_exponential.png" class="img-fluid" style="width:60.0%"></p>
-</section>
-<section id="generic-precision" class="level1">
-<h1>Generic Precision</h1>
-<p>Values that represent a given measurement in your program might need to be rounded to keep the <a href="https://www.youtube.com/watch?v=eCJ76hz7jPM&amp;t=228s&amp;ab_channel=KhanAcademy"><strong>significant figures/digits</strong></a>, regardless of the output format (scientific notation, or not).</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: m.n</code></em><code>}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
-<li>if <code>m</code> is not defined, then the length of the string will be dependent on the size of the number (i.e.&nbsp;no extra padding)</li>
-<li><em><code>n</code></em> is the number of significant digits (<strong><em>not</em></strong> the number of digits after the decimal point)</li>
-<li><em><code>.n</code></em> is the required precision (number of digits after the decimal point).</li>
-</ul>
-<p><em>WEIRD</em>: if <code>expression</code> is a string, then there can be no space between the <code>:</code> and the <em><code>m.n</code></em></p>
-</div>
-</div>
-<p>Python will determine which is the most appropriate representation</p>
-<p><img src="./assets/format_precision.png" class="img-fluid" style="width:50.0%"></p>
-<p><strong>Examples</strong></p>
-<p>For example, let’s take the length of an object measured with a ruler graduated to 1 mm:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>length  <span class="op">=</span> <span class="fl">153.256</span> <span class="co"># in mm</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Only 4 digits are said to significant.</p>
-<ul>
-<li>To control the just number of significant digits, you may use <code>:.</code> without an “f” (as opposed to floating precision).</li>
-</ul>
-<div id="467ab7aa" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>length  <span class="op">=</span> <span class="fl">153.256</span> <span class="co"># in mm</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The length of the object is </span><span class="sc">{</span>length<span class="sc">:.4}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The length of the object is 153.3</code></pre>
-</div>
-</div>
-<section id="thousands-separator" class="level2">
-<h2 class="anchored" data-anchor-id="thousands-separator">Thousands Separator:</h2>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>float_or_integer_variable: ,</code></em><code>}</code> or <code>{</code><em><code>float_or_integer_variable: _</code></em><code>}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>This is useful to format large numbers such as 10,000,000 or 10_000_000</li>
-</ul>
-</div>
-</div>
-<p>For instance, here’s the population of the United States:</p>
-<div id="3789e2a9" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>population_usa <span class="op">=</span> <span class="dv">340_110_088</span>  </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa without formatting </span><span class="sc">{</span>population_usa<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa in scientific notation </span><span class="sc">{</span>population_usa<span class="sc">:_}</span><span class="ss">'</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa with commas </span><span class="sc">{</span>population_usa<span class="sc">:,}</span><span class="ss">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The population of the usa without formatting 340110088
-The population of the usa in scientific notation 340_110_088
-The population of the usa with commas 340,110,088</code></pre>
-</div>
-</div>
+<p>For <strong>Intel</strong> based machines you should select and download the installer with a name ending in x64.pkg. For example in the picture above you would select “thonny-5.0.0-x64.pkg”</p>
+<p>For machines returning <strong>Apple</strong> processors you should select the installer ending in “amd64.pkg”. Looking at the picture above you would select “thonny-5.0.0-amd64.pkg”</p>
 </section>
 </section>
-<section id="alignment" class="level1">
-<h1>Alignment</h1>
-<p>When the minimum width of the string is specified (using the <em>m</em> argument), the resulting string will be padded with spaces.</p>
-<p>We can control whether the spaces are padded to the right or left or evenly on both sides of the value.</p>
-<p>To control the decimal places of a float, use the <code>:</code><em><code>m.n</code></em><code>f</code> format.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code>*<code>expression: [&gt;&lt;^]m ...}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="important-thonny-settings-both-lab-and-personal-machines" class="level3">
+<h3 class="anchored" data-anchor-id="important-thonny-settings-both-lab-and-personal-machines">Important Thonny Settings (Both lab and personal machines)</h3>
+<p>Once Thonny is installed on your local machine you will need to change some settings to make it work better for this course. You need to complete the following steps to do this:</p>
 <ul>
-<li>*<code>[&lt;&gt;^]</code> means either <code>&gt;</code>, or <code>&lt;</code>, or <code>^</code>
+<li>Start Thonny<br>
+</li>
+<li>Click on the Tools menu in the menu bar and select <strong>Options…</strong><br>
+</li>
+<li>In the Thonny Options Dialog select the <strong>Editor</strong> tab<br>
+</li>
+<li>Enable the following checkboxes
 <ul>
-<li><code>&gt;</code> aligns the value to the right (default for <code>float</code>s and <code>int</code>s)</li>
-<li><code>&lt;</code> aligns the value to the left (defulat for <code>str</code>s)</li>
+<li>Highlight local variables<br>
+</li>
+<li>Automatically show parameter info after typing ‘(’ <img src="./assets/thonny_editor_options_highlight.png" alt="Thonny Config" width="60%" height="auto"></li>
 </ul></li>
-<li><em><code>expression</code></em> (variable or python expression) must have type <code>int</code> or <code>float</code> or <code>str</code></li>
-<li><em><code>m</code></em> is the minimum numbers of characters of the resulting string. It will be padded with spaces if necessary.</li>
-<li><code>...</code> refers to any other specific formatting instructions, such as <em><code>.n</code></em><code>f</code> for floating point, etc.</li>
 </ul>
-</div>
-</div>
-<p><img src="./assets/format_alignment.png" class="img-fluid" style="width:60.0%"></p>
-<p><strong>Example</strong></p>
-<div id="3e74ba7e" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">35.2</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"not formatted: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 right aligned:              '</span><span class="sc">{</span>x<span class="sc">:10}</span><span class="ss">' "</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - right aligned: '</span><span class="sc">{</span>x<span class="sc">:&gt;10.2f}</span><span class="ss">' "</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 left aligned:               '</span><span class="sc">{</span>x<span class="sc">:&lt;10}</span><span class="ss">' "</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - left aligned:  '</span><span class="sc">{</span>x<span class="sc">:&lt;10.2f}</span><span class="ss">' "</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10 centered:                   '</span><span class="sc">{</span>x<span class="sc">:^10}</span><span class="ss">' "</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"minimum size of 10, 2 decimal - centered:      '</span><span class="sc">{</span>x<span class="sc">:^10.2f}</span><span class="ss">' "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>not formatted: 35.2
-minimum size of 10 right aligned:              '      35.2' 
-minimum size of 10, 2 decimal - right aligned: '     35.20' 
-minimum size of 10 left aligned:               '35.2      ' 
-minimum size of 10, 2 decimal - left aligned:  '35.20     ' 
-minimum size of 10 centered:                   '   35.2   ' 
-minimum size of 10, 2 decimal - centered:      '  35.20   ' </code></pre>
-</div>
-</div>
-<p>🎯 <strong>Test Myself</strong>: Print the receipt of the following transaction: price of item1, item2, item3, the subtotal, the tax amount and the total.</p>
-<p>We wish to have all the numbers of the receipt aligned to the right.</p>
-<div>
-<div id="pyodide-1" class="exercise-cell">
-
-</div>
-<script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaXRlbTEgPSAxNS4wMFxuaXRlbTIgPSAyMy41MFxuaXRlbTMgPSAyNi41MFxudGF4X3JhdGUgPSAwLjE1XG5cbnN1Yl90b3RhbCA9IGl0ZW0xICsgaXRlbTIgKyBpdGVtM1xudGF4X2Ftb3VudCA9IDAuMTUgKiBzdWJfdG90YWxcbnRvdGFsID0gc3ViX3RvdGFsICsgdGF4X2Ftb3VudFxuXG4jIENvbXBsZXRlIHRoZSBjb2RlIFxuXG4ifQ==
-</script>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>item1 <span class="op">=</span> <span class="fl">15.00</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>item2 <span class="op">=</span> <span class="fl">23.50</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>item3 <span class="op">=</span> <span class="fl">26.50</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.15</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>sub_total <span class="op">=</span> item1 <span class="op">+</span> item2 <span class="op">+</span> item3</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>tax_amount <span class="op">=</span> <span class="fl">0.15</span> <span class="op">*</span> sub_total</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> sub_total <span class="op">+</span> tax_amount</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item1 ..........</span><span class="sc">{</span>item1<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item2 ..........</span><span class="sc">{</span>item2<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item3 ..........</span><span class="sc">{</span>item3<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item3 ..........</span><span class="sc">{</span>item3<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--------------------------"</span>)</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sub total..........</span><span class="sc">{</span>sub_total<span class="sc">:&gt;7.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Taxes ..........</span><span class="sc">{</span>tax_amount<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total ..........</span><span class="sc">{</span>total<span class="sc">:&gt;10.2f}</span><span class="ss">$"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
 </section>
-<section id="percentage" class="level1">
-<h1>Percentage</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>{</code><em><code>expression: %</code></em><code>}</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Percent values can be automatically formatted using <code>:%</code></li>
-</ul>
-</div>
-</div>
-<p>For instance:</p>
-<div id="f45206cf" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>To reduce the number of decimals displayed, you can combine it with an floating point precision formatting:</p>
-<div id="26af9e43" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>percentage<span class="sc">:.0%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>58%</code></pre>
-</div>
-</div>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Formatting</th>
-<th>f string symbol example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Floating Precision</td>
-<td><code>{x:f}</code>, <code>{x:10.2f}</code>, <code>{x:.2f}</code>, <code>{x:10f}</code></td>
-</tr>
-<tr class="even">
-<td>Scientific notation</td>
-<td><code>{x:e</code>}, <code>{x:10.2e}</code>, <code>{x:.2e}</code>, <code>{</code><em><code>var</code></em><code>:10e}</code></td>
-</tr>
-<tr class="odd">
-<td>Comma separated thousands</td>
-<td><code>{x:,}</code>, <code>{x:_}</code></td>
-</tr>
-<tr class="even">
-<td>Significant figures</td>
-<td><code>{x:10.5}</code>, <code>{x:.5}</code></td>
-</tr>
-<tr class="odd">
-<td>Minimum length</td>
-<td><code>{x:10}</code></td>
-</tr>
-<tr class="even">
-<td>Alignment</td>
-<td><code>{x:&lt;10}</code>, <code>{x:&gt;10}</code>, <code>{x:^10}</code>, <code>{x:&lt;10.2}</code>, <code>{x:&lt;10.2}</code>, <code>{x:^10.2}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:&lt;10.2f}</code>, <code>{x:^10.2f}</code>, etc</td>
-</tr>
-<tr class="odd">
-<td>Sign of number</td>
-<td><code>{x:+}</code></td>
-</tr>
-<tr class="even">
-<td>Percent</td>
-<td><code>{x:10.2%}</code>, <code>{x:.2%}</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="additional-resources" class="level1">
-<h1>Additional resources</h1>
-<ol type="1">
-<li><a href="https://www.youtube.com/watch?v=EoNOWVYKyo0&amp;ab_channel=Indently">Video on f-strings</a></li>
-<li><a href="https://cissandbox.bentley.edu/sandbox/wp-content/uploads/2022-02-10-Documentation-on-f-strings-Updated.pdf">Complete Guide with examples</a></li>
-<li><a href="https://docs.python.org/3/tutorial/inputoutput.html">Official documentation</a></li>
-</ol>
+<section id="further-info" class="level3">
+<h3 class="anchored" data-anchor-id="further-info">Further info</h3>
+<p>TBD - Will be filled in as the semester progresses.</p>
 
 
-<script type="pyodide-data">
-eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
-</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -1289,7 +899,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/05_string_formatting/02_f_strings_formatting";
+window._ojs.paths.runtimeToDoc = "../../topics/02_getting_started/07_thonny";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../..";
 window._ojs.selfContained = false;
@@ -1710,13 +1320,13 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="pagination-link" aria-label="f-strings">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">f-strings</span>
+      <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="pagination-link" aria-label="Using Lea">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using Lea</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" class="pagination-link" aria-label="String Operations">
-        <span class="nav-page-text">String Operations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../topics/04_variables/02_variables/02_variables.html" class="pagination-link" aria-label="Variables and Constants">
+        <span class="nav-page-text">Variables and Constants</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

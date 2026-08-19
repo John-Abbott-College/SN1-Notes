@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
 <link href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html" rel="next">
-<link href="../../../topics/02_getting_started/03_lea/03_lea.html" rel="prev">
+<link href="../../../topics/02_getting_started/07_thonny/thonny.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -447,6 +447,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using The Thonny Python Editor</span></a>
   </div>
 </li>
       </ul>
@@ -1077,7 +1083,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <section id="eliminating-magic-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="eliminating-magic-numbers">Eliminating magic numbers</h3>
 <p><strong>Magic</strong> numbers are unexplained values used in the code which make the code hard to read and understand:</p>
-<div id="cd6c3b03" class="cell" data-execution_count="1">
+<div id="943ef869" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">*</span> <span class="fl">1.05</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1089,7 +1095,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <li>Here, the value <code>1.05</code> is not explained and is considered a magic number.</li>
 </ul>
 <p>Now consider this improved version using more variables:</p>
-<div id="ae42abce" class="cell" data-execution_count="2">
+<div id="beaf7da0" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.05</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">+</span> price<span class="op">*</span>tax_rate</span>
@@ -1127,7 +1133,7 @@ a^2 + b^2 = c^2
 <p>Consider the two program below implementing the same equation. What’s the maing difference?</p>
 <section id="program-1" class="level4">
 <h4 class="anchored" data-anchor-id="program-1">Program 1</h4>
-<div id="a635e5c8" class="cell" data-execution_count="3">
+<div id="c8659578" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> <span class="dv">3</span><span class="op">*</span><span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span><span class="op">*</span><span class="dv">4</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1137,7 +1143,7 @@ a^2 + b^2 = c^2
 </section>
 <section id="program-2" class="level4">
 <h4 class="anchored" data-anchor-id="program-2">Program 2</h4>
-<div id="8b0fe99d" class="cell" data-execution_count="4">
+<div id="22dc3add" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> a<span class="op">*</span>a <span class="op">+</span> b<span class="op">*</span>b</span>
@@ -1149,7 +1155,7 @@ a^2 + b^2 = c^2
 <p>One possible answer is: it’s much easier to read, and update the second program because the values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are well isolated in seperate variables.</p>
 <hr>
 <p>🎯 <strong>Test Myself</strong>: Improve the program below by creating variables for each item price and the total:</p>
-<div id="4998a4a8" class="cell" data-execution_count="5">
+<div id="75c5819e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 1 is: $ 10"</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 2 is: $ 22"</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The total cost is $ 32"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1840,8 +1846,8 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="pagination-link" aria-label="Using Lea">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using Lea</span>
+      <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="pagination-link" aria-label="Using The Thonny Python Editor">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using The Thonny Python Editor</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
