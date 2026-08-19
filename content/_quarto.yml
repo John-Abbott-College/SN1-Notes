@@ -11,7 +11,7 @@ website:
       - text: Syllabus
         menu:
         - text: "Youmna"
-        - href: syllabus/Youmna/Youmna.qmd
+          href: syllabus/Youmna/Youmna.qmd
   sidebar:
     style: "docked"
     background: light
@@ -35,6 +35,7 @@ website:
         text: "Install Thonny"
       - href: https://www.youtube.com/watch?v=TFbMwhkVpGM
         text: "Explore Thonny"
+      - topics/02_getting_started/03_lea/03_lea.qmd 
     - section: Variables & Data Types
       contents:
       # - topics/04_variables/01_intro_literals/01_intro_literals.qmd
