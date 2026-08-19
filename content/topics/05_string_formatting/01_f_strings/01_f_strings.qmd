@@ -9,7 +9,7 @@ editor:
 :::
 
 # __f-strings__
-Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It's following the synthax below: 
+Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It's following the syntax below: 
 
 :::{.callout-note icon="false"}
 # **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`

@@ -27,7 +27,7 @@ The value inside a variable can be of different type, for example:
 ## Defining Variables
 
 :::{.callout-note icon="false"}
-# **BASIC SYNTHAX**: `variable_name = value`
+# **BASIC SYNTAX**: `variable_name = value`
 
 - Variables are composed of a **name** and a **value**.
 - To which you can directly assign a **value**
@@ -46,7 +46,7 @@ greeting = "Hello there!"
 Alternatively, you may also store the result of a Python expression: 
 
 :::{.callout-note icon="false"}
-# **BASIC SYNTHAX**: `variable_name = python_expression`
+# **BASIC SYNTAX**: `variable_name = python_expression`
 
 - The expression is **always** to the right hand side of the `=`
 - The expression can be using other variables **defined before**.

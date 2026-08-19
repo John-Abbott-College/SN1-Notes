@@ -48,7 +48,7 @@ Useful reminder before starting the section
 
 Conditionally execute a set of instrcutions if a given condition is true.
 
-:::{.callout-note title="BASIC SYNTHAX `if`"}
+:::{.callout-note title="BASIC SYNTAX `if`"}
 
 A conditional `if` statement in Python includes the following elements in this specific order.
 
