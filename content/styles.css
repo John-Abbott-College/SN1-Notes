@@ -1,29 +1,12 @@
-/* css styles */
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem; /* Use rem for better accessibility and scaling */
-  line-height: 1.7;
-}
-
-/* Change header fonts and sizes */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-
 /* Make the navbar title (top left corner) more prominent */
 .navbar-title {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary, #39729E);
 }
 
 /* Make top-level sidebar section headings more prominent */
 .sidebar-item-section > .sidebar-item-container > .sidebar-item-text,
 .sidebar-item-section > .sidebar-item-text {
   font-size: 1.2rem;
-  font-weight: 650;
-  color: var(--sidebar-section-color, var(--bs-body-color));
   padding: 0.5rem 0;
   
 }
@@ -43,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--sidebar-accent-background);
   border-radius: 0.25rem;
 }
+
 
 /* Making callout blocks more prominent */
 .callout-header {

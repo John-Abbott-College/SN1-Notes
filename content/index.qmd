@@ -27,7 +27,7 @@ You can download a copy of the course outline from Léa.
 These are the core objecives to be covered in the course and could be part of the final evaluation. 
 :::
 
-::: {.callout-warning .objectives icon="false" title="☆ Optional Objectives "}
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
 These are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher.
 :::
 

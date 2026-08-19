@@ -66,56 +66,56 @@ website:
     - section: Conditions
       contents:
       - topics/07_conditionals/01_if_statements/01_if_statements.qmd
-      - topics/07_conditionals/02_if_else_statements/02_if_else_statements.qmd
-      - topics/07_conditionals/exercises/conditional/conditional.qmd
+    #   - topics/07_conditionals/02_if_else_statements/02_if_else_statements.qmd
+    #   - topics/07_conditionals/exercises/conditional/conditional.qmd
 
-    - section: Loops
-      contents:
-      - topics/08_loops/01_for_loop/01_for_loop.qmd
-      - topics/08_loops/02_while_loop/02_while_loop.qmd
+    # - section: Loops
+    #   contents:
+    #   - topics/08_loops/01_for_loop/01_for_loop.qmd
+    #   - topics/08_loops/02_while_loop/02_while_loop.qmd
 
-    - section: Functions
-      contents:
-      - topics/09_functions/01_what_are_functions/01_what_are_functions.qmd
-      - topics/09_functions/02_math_functions/02_math_functions.qmd
-      - topics/09_functions/03_io/03_io.qmd
-      - topics/09_functions/04_custom_functions/04_custom_functions.qmd
-      - topics/09_functions/05_scope/05_scope.qmd
-      - topics/09_functions/06_type_hinting/06_type_hinting.qmd
-      - topics/09_functions/exercises/custom_functions/custom_functions.qmd
-      - topics/09_functions/exercises/input_output/input_output.qmd
+    # - section: Functions
+    #   contents:
+    #   - topics/09_functions/01_what_are_functions/01_what_are_functions.qmd
+    #   - topics/09_functions/02_math_functions/02_math_functions.qmd
+    #   - topics/09_functions/03_io/03_io.qmd
+    #   - topics/09_functions/04_custom_functions/04_custom_functions.qmd
+    #   - topics/09_functions/05_scope/05_scope.qmd
+    #   - topics/09_functions/06_type_hinting/06_type_hinting.qmd
+    #   - topics/09_functions/exercises/custom_functions/custom_functions.qmd
+    #   - topics/09_functions/exercises/input_output/input_output.qmd
     
-    - section: Turtle graphics
-      contents:
-      - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
-      - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
+    # - section: Turtle graphics
+    #   contents:
+    #   - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
+    #   - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
     
-    - section: Lists
-      contents:
-      - topics/11_lists/01_into_to_lists/01_into_to_lists.qmd
-      - topics/11_lists/02_looping_over_lists/02_looping_over_lists.qmd
-      - topics/11_lists/03_list_inclusion/03_list_inclusion.qmd
-      - topics/11_lists/exercises/lists/lists.qmd
+    # - section: Lists
+    #   contents:
+    #   - topics/11_lists/01_into_to_lists/01_into_to_lists.qmd
+    #   - topics/11_lists/02_looping_over_lists/02_looping_over_lists.qmd
+    #   - topics/11_lists/03_list_inclusion/03_list_inclusion.qmd
+    #   - topics/11_lists/exercises/lists/lists.qmd
 
-    - section: Data Processing
-      contents:
-      - topics/12_data_processing/01_reading_files/01_reading_files.qmd
-      - topics/12_data_processing/02_installing_modules/02_installing_modules.qmd
-      - topics/12_data_processing/03_numpy/03_numpy.qmd
-      - topics/12_data_processing/04_matplotlib/04_matplotlib.qmd
+    # - section: Data Processing
+    #   contents:
+    #   - topics/12_data_processing/01_reading_files/01_reading_files.qmd
+    #   - topics/12_data_processing/02_installing_modules/02_installing_modules.qmd
+    #   - topics/12_data_processing/03_numpy/03_numpy.qmd
+    #   - topics/12_data_processing/04_matplotlib/04_matplotlib.qmd
     
-    - section: Tooling
-      contents:
-      - topics/13_tooling/13_01_debugger/01_debugger.qmd
+    # - section: Tooling
+    #   contents:
+    #   - topics/13_tooling/13_01_debugger/01_debugger.qmd
 
-    - section: Final Exam Prep
-      contents:
-      - topics/14_final_exam_prep/01_study_guide/01_study_guide.qmd
-      - topics/14_final_exam_prep/exercises/final_exam_f24/final_exam_f24.qmd
-      - topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.qmd
-      - topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.qmd
-      - topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.qmd
-      - topics/14_final_exam_prep/reference_sheet/reference_sheet.qmd
+    # - section: Final Exam Prep
+    #   contents:
+    #   - topics/14_final_exam_prep/01_study_guide/01_study_guide.qmd
+    #   - topics/14_final_exam_prep/exercises/final_exam_f24/final_exam_f24.qmd
+    #   - topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.qmd
+    #   - topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.qmd
+    #   - topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.qmd
+    #   - topics/14_final_exam_prep/reference_sheet/reference_sheet.qmd
 
       
 format:
@@ -126,8 +126,8 @@ format:
       margin-width: 250px   # Increase this to push the right margin/TOC further right
       gutter-width: 4rem
     theme:
-      light: [cosmo, theme.scss]
-      dark: [cosmo, theme-dark.scss]
+      light: [flatly, theme.scss]
+      dark: [darkly, theme-dark.scss]
     css: styles.css
     syntax-highlighting:
       light: atom-one

@@ -20,7 +20,7 @@ $code-block-bg: #eff2f5;
 :root {
   --sidebar-section-color: #2f3752;
   --sidebar-subsection-color: #5f6787;
-  --sidebar-accent-border-color: rgba(69, 81, 112, 0.25);
+  --sidebar-accent-border-color: #39729e;
   --sidebar-accent-background: $gray-500;
   --sidebar-active-background: rgba(57, 114, 158, 0.12);
   --sidebar-active-color: #1f4c6b;
@@ -123,3 +123,7 @@ $code-block-bg: #eff2f5;
   content: "ERROR";
   color: #d9534f;
 }
+
+
+/*-- scss:defaults --*/
+$callout-color-note: #1380ec; /* Changes the border and icon to a deep navy */
