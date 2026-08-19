@@ -4,10 +4,13 @@ project:
 website:
   title: "420-SN1 Notes"
   site-url: https://john-abbott-college.github.io/SN1-Notes/
+  page-navigation: true
   navbar:
     left:
-      - href: index.qmd
-        text: Syllabus
+      - text: Syllabus
+        menu:
+        - text: "Youmna"
+        - href: syllabus/Youmna/Youmna.qmd
   sidebar:
     style: "docked"
     background: light
@@ -27,10 +30,10 @@ website:
 
     - section: Getting Started
       contents:
-      - topics/02_getting_started/01_personal_computer_installation/01_personal_computer_installation.qmd
-      - topics/02_getting_started/02_create_project/02_create_project.qmd
-      - topics/02_getting_started/03_lea/03_lea.qmd
-
+      - href: https://www.youtube.com/watch?v=rI2Zl0ZJCzY
+        text: "Install Thonny"
+      - href: https://www.youtube.com/watch?v=TFbMwhkVpGM
+        text: "Explore Thonny"
     - section: Variables & Data Types
       contents:
       # - topics/04_variables/01_intro_literals/01_intro_literals.qmd
@@ -55,7 +58,7 @@ website:
       - topics/06_operators/04_logical_operators/04_logical_operators.qmd
       - topics/06_operators/05_order_operations/05_order_operations.qmd
       - topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.qmd
-      - topics/06_operators/exercises/assignment_operators_and_variables/assignment_operators_and_variables.qmd
+      - topics/06_operators/exercises/assignment_operators/assignment_operators.qmd
     
     - section: Conditions
       contents:
@@ -100,7 +103,7 @@ website:
     
     - section: Tooling
       contents:
-      - topics/13_tooling/12_01_debugger/01_debugger.qmd
+      - topics/13_tooling/13_01_debugger/01_debugger.qmd
 
     - section: Final Exam Prep
       contents:
