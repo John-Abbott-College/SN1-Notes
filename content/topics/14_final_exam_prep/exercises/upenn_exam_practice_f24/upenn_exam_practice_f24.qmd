@@ -1,5 +1,6 @@
 ---
-title: "University of Pennsylvania - Fall 2024"
+title: "U of Pennsylvania"
+subtitle: "Fall 2024"
 editor:
   render-on-save: true
 ---

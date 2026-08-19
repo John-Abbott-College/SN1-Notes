@@ -1,0 +1,113 @@
+---
+title: "Youmna"
+---
+This syllabus applies only to Youmna's sections. 
+
+[Download](door_schedule.pdf){target="_blank"} my door schedule
+
+# Every week
+
+:::{.callout-note icon="false" collapse="true" title="📚 Before class - Preparation ~ 1 hour"}
+
+**Goal: Arrive prepared to learn and practice.**
+
+* Read the notes of this week's topic and go over the examples
+* Complete the **Test Myself** questions.
+* Try the practice problems on your own.
+* Prepare as if you will have a **short paper quiz** on a weekly basis. 
+
+:::
+
+
+
+:::{.callout-tip icon="false" collapse="true"  title="💻 In class - 3 hours"}
+
+**Goal: Practice, apply, and deepen your understanding.**
+
+* Ask questions and clarification on the content
+  * Sometimes a recap or demo will be done by the teacher 
+* ✏️ Complete a short **paper quiz/check** on the preparation material.
+* Work through guided programming exercises or evaluated labs at your own pace or in groups of 2.
+* Finish with a recap to check your understanding.
+
+:::
+
+
+
+
+::: {.callout-important icon="false" collapse="true"  title= "🚀 After class - Homework ~2 hours"}
+
+**Goal: Consolidate your learning and stay on pace.**	
+
+* You must complete the Lab/Assignment started in class
+* Review anything from today's class that you found difficult.
+* Then, prepare for the upcoming week.
+
+:::
+---
+
+# Week 1
+
+## 📚 Prep 
+
+* Nothing to prepare for just be there on time.
+
+## 💻 In class
+
+* Introductions 
+* Syllabus
+* Files and folders
+    * Python files
+* Logging into One Drive to synchronize your files
+* Lab 0 (0%)
+
+## 🚀 After class
+
+* Go over the notes for this week: [Files and folders](../topics/03_introduction/01_file_manipulation/01_file_manipulation.qmd){target="_blank"}
+* Setup your home computer:
+  * [Install Thonny](https://www.youtube.com/watch?v=rI2Zl0ZJCzY){target="_blank"}
+  * [Explore Thonny](https://www.youtube.com/watch?v=TFbMwhkVpGM){target="_blank"}
+
+# Week 2
+
+## 📚 Prep 
+
+* Go over the notes and examples:
+  * [Variables & Constants](../topics/04_variables/02_variables/02_variables/qmd){target="_blank"}
+  * [Integers & Floats](../topics/04_variables/03_integers_floats/03_integers_floats.qmd){target="_blank"}
+  * [Booleans](../topics/04_variables/04_booleans/04_booleans.qmd){target="_blank"}
+  * [Strings](../topics/04_variables/05_strings/05_strings.qmd){target="_blank"}
+
+## 💻 In class
+
+- ✏️ **Quiz 1 (1%)**:  Short paper quiz on Variables and Data Types
+- Quiz recap
+- In-class Demo on Thonny
+- Lab on variables and data types 
+
+## 🚀 After class
+
+- Complete the practice exercises for that section
+
+# Week 3
+
+## 📚 Prep 
+
+* Go over the notes:
+  * [f-strings](../topics/05_string_formatting/01_f_strings/01_f_strings.qmd){target="_blank"}
+  * [Arithmetic operators](../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.qmd){target="_blank"}
+
+## 💻 In class
+
+- Short demo on f-strings and arithmetic operators
+- Clarifications on the modulo operator
+- Practice Problems
+
+## 🚀 After class
+
+- Complete the practice problems on assignment operators.
+
+
+
+
+
