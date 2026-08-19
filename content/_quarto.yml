@@ -36,6 +36,7 @@ website:
       - href: https://www.youtube.com/watch?v=TFbMwhkVpGM
         text: "Explore Thonny"
       - topics/02_getting_started/03_lea/03_lea.qmd 
+      - topics/02_getting_started/07_thonny/thonny.qmd
     - section: Variables & Data Types
       contents:
       # - topics/04_variables/01_intro_literals/01_intro_literals.qmd

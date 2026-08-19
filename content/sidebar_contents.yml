@@ -11,6 +11,7 @@
   - topics/02_getting_started/04_gradescope/index.qmd
   - topics/02_getting_started/05_troubleshooting/index.qmd
   - topics/02_getting_started/06_debugging.qmd
+  - topics/02_getting_started/07_thonny/thonny.qmd
   - topics/02_getting_started/README.qmd
 - section: Topic 03_introduction
   contents:
