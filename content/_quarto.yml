@@ -31,10 +31,6 @@ website:
 
     - section: Getting Started
       contents:
-      - href: https://www.youtube.com/watch?v=rI2Zl0ZJCzY
-        text: "Install Thonny"
-      - href: https://www.youtube.com/watch?v=TFbMwhkVpGM
-        text: "Explore Thonny"
       - topics/02_getting_started/03_lea/03_lea.qmd 
       - topics/02_getting_started/07_thonny/thonny.qmd
     - section: Variables & Data Types

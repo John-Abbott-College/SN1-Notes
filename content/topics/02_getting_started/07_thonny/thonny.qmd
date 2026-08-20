@@ -1,5 +1,5 @@
 ---
-title: "Using The Thonny Python Editor"
+title: "Using The Thonny Python Environment"
 editor:
   render-on-save: true
 ---
@@ -15,25 +15,13 @@ You can find more info about Thonny [HERE](https://thonny.org/)
 You will primarily be using Thonny on the lab computers (which have it installed by default) but if you want to install it on your personal machine it is free for all to download and use. To do this you need to:  
 
 - Navigate to the [Thonny](https://thonny.org/) website 
-- Click the big button that says 'Download' (It may specify a different version than 5.0.0)  
+- Look for the 'Download' option as shown below. (It may specify a different version than 5.0.0)  
 <img src="./assets/thonny_download.png" alt="Thonny Installation" width="auto" height="40">
+  
+- If you are using a Windows machine then hover over the __Windows__ link. It will then offer you links to the Thonny installer.  For most Windows machines you should choose the version for Intel or AMD computers. Once it is downloaded then you should go to your downloads folder and double click it to install the program. 
 
-- Click on it to go to the download page.  Scroll to the bottom of this new page. You should see something like this:  
-<img src="./assets/downloads_page.png" alt="Thonny Installation" width="100%" height="auto">
-
-#### Windows
-- For most Windows computers you will want to download the version ending with "x64.exe" such as "thonny-5.0.0-x64.exe" shown above. Click on it, save it, and then run it. 
-
-#### Mac Users: Check Your Chip!
-- Click the Apple logo 🍎 at the top left of your screen
-- Select **About This Mac**
-  - **On Newer Macs:** Next to “Chip,” you’ll see either **Apple** or **Intel**  
-  - **On Older Macs:** Next to "Processor," you'll see **Intel Core**  
-
-For **Intel** based machines you should select and download the installer with a name ending in x64.pkg. For example in the picture above you would select "thonny-5.0.0-x64.pkg"  
-
-For machines returning **Apple** processors you should select the installer ending in "amd64.pkg". Looking at the picture above you would select "thonny-5.0.0-amd64.pkg"  
-
+- If you are using a Mac then hover on the __Mac__ link. You will be offered two choices: a package for Intel-based Mac computers and another for Apple Silicon machines. If your laptop is less than 5 years old you will need to select the one for Apple Silicon machines otherwise you may need to choose the Intel package.  Click on it to download it. Once finished, go to your downloads folder and run the file by double clicking it. 
+(If you try to install the wrong version your will give you a harmless error. All you need to do to fix it is to go back to your browser and download the other version )
 
 
 ### Important Thonny Settings (Both lab and personal machines)
@@ -48,8 +36,29 @@ Once Thonny is installed on your local machine you will need to change some sett
   <img src="./assets/thonny_editor_options_highlight.png" alt="Thonny Config" width="60%" height="auto">
 
 
+### Installing matplotlib and numpy support 
+**NOTE**  
+These libraries are only needed later in the course.  
 
-### Further info
+[Matplotlib](https://matplotlib.org/){target="_blank"} and [Numpy](https://numpy.org/){target="_blank"} are powerful libraries used by Python programs to display complex graphs and to analyze complex data.  These libraries are not part of a standard Python installation and are usually installed using a tool called "**pip**".  
 
-TBD - Will be filled in as the semester progresses. 
+ Unfortunately, this can sometime cause permission errors on shared computers such as the lab machines so it is not a great solution for this course.  
+ 
+  Fortunately, Thonny has a way of installing these libraries that is both easy to do and avoids these potential issues. To install these libraries in Thonny you need to perform the following steps. 
+  
+1. Click on the "**Tools**" menu and select "**Manage Packages**". You will see a window like the one shown below:  
+<img src="./assets/package_install.png" alt="Thonny Config" width="60%" height="auto">
+
+2. Find and select the library you need in the list on the left-hand side of the window. 
+3. Choose install. It may take a few moments to complete. 
+4. Repeat steps 2 and 3 with any other libraries you may need. 
+
+### Useful videos
+#### Installation
+
+{{< video https://www.youtube.com/watch?v=rI2Zl0ZJCzY >}}
+
+#### Guide for new users
+{{< video https://www.youtube.com/watch?v=TFbMwhkVpGM >}}
+
 
