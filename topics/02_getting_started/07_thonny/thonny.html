@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Using The Thonny Python Editor – 420-SN1 Notes</title>
+<title>Using The Thonny Python Environment – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -294,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Editor</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/03_lea/03_lea.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Environment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -369,18 +369,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Install Thonny</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://www.youtube.com/watch?v=TFbMwhkVpGM" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Explore Thonny</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
   </div>
@@ -388,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Using The Thonny Python Editor</span></a>
+ <span class="menu-text">Using The Thonny Python Environment</span></a>
   </div>
 </li>
       </ul>
@@ -546,7 +534,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-is-thonny" id="toc-what-is-thonny" class="nav-link active" data-scroll-target="#what-is-thonny">What is Thonny?</a></li>
   <li><a href="#installing-thonny-on-your-personal-machine.-optional" id="toc-installing-thonny-on-your-personal-machine.-optional" class="nav-link" data-scroll-target="#installing-thonny-on-your-personal-machine.-optional">Installing Thonny on Your Personal Machine. (Optional)</a></li>
   <li><a href="#important-thonny-settings-both-lab-and-personal-machines" id="toc-important-thonny-settings-both-lab-and-personal-machines" class="nav-link" data-scroll-target="#important-thonny-settings-both-lab-and-personal-machines">Important Thonny Settings (Both lab and personal machines)</a></li>
-  <li><a href="#further-info" id="toc-further-info" class="nav-link" data-scroll-target="#further-info">Further info</a></li>
+  <li><a href="#installing-matplotlib-and-numpy-support" id="toc-installing-matplotlib-and-numpy-support" class="nav-link" data-scroll-target="#installing-matplotlib-and-numpy-support">Installing matplotlib and numpy support</a></li>
+  <li><a href="#useful-videos" id="toc-useful-videos" class="nav-link" data-scroll-target="#useful-videos">Useful videos</a></li>
   </ul>
 </nav>
     </div>
@@ -554,9 +543,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="https://www.youtube.com/watch?v=rI2Zl0ZJCzY">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Editor</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/03_lea/03_lea.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../../../topics/02_getting_started/07_thonny/thonny.html">Using The Thonny Python Environment</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Using The Thonny Python Editor</h1>
+<h1 class="title">Using The Thonny Python Environment</h1>
 </div>
 
 
@@ -583,31 +572,11 @@ ul.task-list li input[type="checkbox"] {
 <p>You will primarily be using Thonny on the lab computers (which have it installed by default) but if you want to install it on your personal machine it is free for all to download and use. To do this you need to:</p>
 <ul>
 <li><p>Navigate to the <a href="https://thonny.org/">Thonny</a> website</p></li>
-<li><p>Click the big button that says ‘Download’ (It may specify a different version than 5.0.0)<br>
+<li><p>Look for the ‘Download’ option as shown below. (It may specify a different version than 5.0.0)<br>
 <img src="./assets/thonny_download.png" alt="Thonny Installation" width="auto" height="40"></p></li>
-<li><p>Click on it to go to the download page. Scroll to the bottom of this new page. You should see something like this:<br>
-<img src="./assets/downloads_page.png" alt="Thonny Installation" width="100%" height="auto"></p></li>
+<li><p>If you are using a Windows machine then hover over the <strong>Windows</strong> link. It will then offer you links to the Thonny installer. For most Windows machines you should choose the version for Intel or AMD computers. Once it is downloaded then you should go to your downloads folder and double click it to install the program.</p></li>
+<li><p>If you are using a Mac then hover on the <strong>Mac</strong> link. You will be offered two choices: a package for Intel-based Mac computers and another for Apple Silicon machines. If your laptop is less than 5 years old you will need to select the one for Apple Silicon machines otherwise you may need to choose the Intel package. Click on it to download it. Once finished, go to your downloads folder and run the file by double clicking it. (If you try to install the wrong version your will give you a harmless error. All you need to do to fix it is to go back to your browser and download the other version )</p></li>
 </ul>
-<section id="windows" class="level4">
-<h4 class="anchored" data-anchor-id="windows">Windows</h4>
-<ul>
-<li>For most Windows computers you will want to download the version ending with “x64.exe” such as “thonny-5.0.0-x64.exe” shown above. Click on it, save it, and then run it.</li>
-</ul>
-</section>
-<section id="mac-users-check-your-chip" class="level4">
-<h4 class="anchored" data-anchor-id="mac-users-check-your-chip">Mac Users: Check Your Chip!</h4>
-<ul>
-<li>Click the Apple logo 🍎 at the top left of your screen</li>
-<li>Select <strong>About This Mac</strong>
-<ul>
-<li><strong>On Newer Macs:</strong> Next to “Chip,” you’ll see either <strong>Apple</strong> or <strong>Intel</strong><br>
-</li>
-<li><strong>On Older Macs:</strong> Next to “Processor,” you’ll see <strong>Intel Core</strong></li>
-</ul></li>
-</ul>
-<p>For <strong>Intel</strong> based machines you should select and download the installer with a name ending in x64.pkg. For example in the picture above you would select “thonny-5.0.0-x64.pkg”</p>
-<p>For machines returning <strong>Apple</strong> processors you should select the installer ending in “amd64.pkg”. Looking at the picture above you would select “thonny-5.0.0-amd64.pkg”</p>
-</section>
 </section>
 <section id="important-thonny-settings-both-lab-and-personal-machines" class="level3">
 <h3 class="anchored" data-anchor-id="important-thonny-settings-both-lab-and-personal-machines">Important Thonny Settings (Both lab and personal machines)</h3>
@@ -627,9 +596,30 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="further-info" class="level3">
-<h3 class="anchored" data-anchor-id="further-info">Further info</h3>
-<p>TBD - Will be filled in as the semester progresses.</p>
+<section id="installing-matplotlib-and-numpy-support" class="level3">
+<h3 class="anchored" data-anchor-id="installing-matplotlib-and-numpy-support">Installing matplotlib and numpy support</h3>
+<p><strong>NOTE</strong><br>
+These libraries are only needed later in the course.</p>
+<p><a href="https://matplotlib.org/" target="_blank">Matplotlib</a> and <a href="https://numpy.org/" target="_blank">Numpy</a> are powerful libraries used by Python programs to display complex graphs and to analyze complex data. These libraries are not part of a standard Python installation and are usually installed using a tool called “<strong>pip</strong>”.</p>
+<p>Unfortunately, this can sometime cause permission errors on shared computers such as the lab machines so it is not a great solution for this course.</p>
+<p>Fortunately, Thonny has a way of installing these libraries that is both easy to do and avoids these potential issues. To install these libraries in Thonny you need to perform the following steps.</p>
+<ol type="1">
+<li><p>Click on the “<strong>Tools</strong>” menu and select “<strong>Manage Packages</strong>”. You will see a window like the one shown below:<br>
+<img src="./assets/package_install.png" alt="Thonny Config" width="60%" height="auto"></p></li>
+<li><p>Find and select the library you need in the list on the left-hand side of the window.</p></li>
+<li><p>Choose install. It may take a few moments to complete.</p></li>
+<li><p>Repeat steps 2 and 3 with any other libraries you may need.</p></li>
+</ol>
+</section>
+<section id="useful-videos" class="level3">
+<h3 class="anchored" data-anchor-id="useful-videos">Useful videos</h3>
+<section id="installation" class="level4">
+<h4 class="anchored" data-anchor-id="installation">Installation</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/rI2Zl0ZJCzY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="guide-for-new-users" class="level4">
+<h4 class="anchored" data-anchor-id="guide-for-new-users">Guide for new users</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/TFbMwhkVpGM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 <script type="ojs-module-contents">
@@ -646,6 +636,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
