@@ -106,6 +106,7 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
   * [f-strings](https://john-abbott-college.github.io/SN1-Notes/topics/05_string_formatting/01_f_strings/01_f_strings.html){target="_blank"}
   * [Arithmetic operators](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html){target="_blank"}
   * Try the [Practice](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html){target="_blank"} problems
+
 ## 💻 In class
 
 - Short demo on f-strings and arithmetic operators
