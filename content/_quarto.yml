@@ -118,8 +118,8 @@ format:
   live-html:
     grid:
       sidebar-width: 300px
-      body-width: 900px
-      margin-width: 250px   # Increase this to push the right margin/TOC further right
+      body-width: 1200px
+      margin-width: 200px   # Increase this to push the right margin/TOC further right
       gutter-width: 4rem
     theme:
       light: [flatly, theme.scss]

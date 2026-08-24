@@ -3,7 +3,17 @@ title: "Youmna"
 ---
 This syllabus applies only to Youmna's sections. 
 
-[Download](door_schedule.pdf){target="_blank"} my door schedule
+# Office Hours
+I am free Mondays from 1:00-2:30pm and Tuesdays 10:00 am - 12:30 pm. For other availabilities, [download](door_schedule.pdf){target="_blank"} my door schedule
+
+You can send me a MIO if you need help or pass by my office (P-311).
+
+# Work Submission
+
+My assignments and labs are always posted on Omnivox but submiited via [Gradescope.ca](https://www.gradescope.ca/courses/39225)
+
+- Login with your student id email: `123456@johnabbott.qc.ca`
+- You might need to set the password if logging-in for the first time. 
 
 # Every week
 
@@ -63,27 +73,26 @@ This syllabus applies only to Youmna's sections.
 
 ## 🚀 After class
 
-* Go over the notes for this week: [Files and folders](../topics/03_introduction/01_file_manipulation/01_file_manipulation.qmd){target="_blank"}
+* Go over the notes for this week: [Files and folders](https://john-abbott-college.github.io/SN1-Notes/topics/03_introduction/01_file_manipulation/01_file_manipulation.html){target="_blank"}
 * Setup your home computer:
-  * [Install Thonny](https://www.youtube.com/watch?v=rI2Zl0ZJCzY){target="_blank"}
-  * [Explore Thonny](https://www.youtube.com/watch?v=TFbMwhkVpGM){target="_blank"}
+  * [Setup Thonny](https://john-abbott-college.github.io/SN1-Notes/topics/02_getting_started/07_thonny/thonny.html) 
 
 # Week 2
 
 ## 📚 Prep 
 
 * Go over the notes and examples:
-  * [Variables & Constants](../topics/04_variables/02_variables/02_variables/qmd){target="_blank"}
-  * [Integers & Floats](../topics/04_variables/03_integers_floats/03_integers_floats.qmd){target="_blank"}
-  * [Booleans](../topics/04_variables/04_booleans/04_booleans.qmd){target="_blank"}
-  * [Strings](../topics/04_variables/05_strings/05_strings.qmd){target="_blank"}
+  * [Variables & Constants](https://john-abbott-college.github.io/SN1-Notes/topics/04_variables/02_variables/02_variables.html){target="_blank"}
+  * [Integers & Floats](https://john-abbott-college.github.io/SN1-Notes/topics/04_variables/03_integers_floats/03_integers_floats.html){target="_blank"}
+  * [Booleans](https://john-abbott-college.github.io/SN1-Notes/topics/04_variables/04_booleans/04_booleans.html){target="_blank"}
+  * [Strings](https://john-abbott-college.github.io/SN1-Notes/topics/04_variables/05_strings/05_strings.html){target="_blank"}
 
 ## 💻 In class
-
-- ✏️ **Quiz 1 (1%)**:  Short paper quiz on Variables and Data Types
-- Quiz recap
+- What is programming? Code your teacher activity.
 - In-class Demo on Thonny
-- Lab on variables and data types 
+- ✏️ **Quiz 1 (1%)**:  Short paper quiz on Variables & Data Types
+- Quiz recap
+- Lab 1
 
 ## 🚀 After class
 
@@ -94,9 +103,9 @@ This syllabus applies only to Youmna's sections.
 ## 📚 Prep 
 
 * Go over the notes:
-  * [f-strings](../topics/05_string_formatting/01_f_strings/01_f_strings.qmd){target="_blank"}
-  * [Arithmetic operators](../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.qmd){target="_blank"}
-
+  * [f-strings](https://john-abbott-college.github.io/SN1-Notes/topics/05_string_formatting/01_f_strings/01_f_strings.html){target="_blank"}
+  * [Arithmetic operators](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html){target="_blank"}
+  * Try the [Practice](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html){target="_blank"} problems
 ## 💻 In class
 
 - Short demo on f-strings and arithmetic operators
@@ -106,7 +115,7 @@ This syllabus applies only to Youmna's sections.
 ## 🚀 After class
 
 - Complete the practice problems on assignment operators.
-
+- Prepare for next class.
 
 
 
