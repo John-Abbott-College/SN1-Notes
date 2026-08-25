@@ -23,6 +23,8 @@ You can download a copy of the course outline from Léa.
 
 
 ## Learning Objectives
+All credits go to Vikram Singh for the original idea for adding learning objectives to every topic.
+
 ::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
 These are the core objecives to be covered in the course and could be part of the final evaluation. 
 :::
