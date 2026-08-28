@@ -4,7 +4,7 @@ We have introduced f-strings earlier when learning about string concatenation. F
 
 ## Variables and Other Code (review)
 
-> **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`
+> **BASIC SYNTAX**: `f"anything {`_`variable`_`} anything"`
 >
 > - _`variable`_ is any python variable that is currently defined. It can be of any type (`int`, `float`, `bool`, `str`, _etc_)
 > - You do _not_ have to convert the `variable` to a string, that is done automatically
@@ -12,7 +12,7 @@ We have introduced f-strings earlier when learning about string concatenation. F
 
 or
 
-> **BASIC SYNTAX**: `f" anything {`_`python code`_`} anything"`
+> **BASIC SYNTAX**: `f"anything {`_`python code`_`} anything"`
 >
 > - _`python code`_ that when evaluated, returns a value.
 > - Notice that there is _no_ space between the `f` and the first quote
