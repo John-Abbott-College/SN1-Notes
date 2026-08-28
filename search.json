@@ -918,7 +918,7 @@
     "href": "topics/04_variables/05_strings/05_strings.html#convert-str-to-intfloat",
     "title": "Strings",
     "section": "Convert str to int/float",
-    "text": "Convert str to int/float\nThis conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the int() or float() functions introduced earlier as such:\ndata_str = \"23.5\"\ndata_float = float(data_str)\n\nsome_calculation = data_float*3 +4\nOr,\ndata_str = \"23\"\ndata_int = int(data_int)\nsome_calculation = data_int*3 +4\n\n\n\n\n\n\nImportantConverting a number from a string might crash!!\n\n\n\nBe careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:\ndata_fr = \"23,5\"\ndata_float = float(data_fr) #&lt;--Error ❌",
+    "text": "Convert str to int/float\nThis conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the int() or float() functions introduced earlier as such:\n\ndata_str = \"23.5\"\ndata_float = float(data_str)\n\nsome_calculation = data_float*3 +4\n\nOr,\n\ndata_str = \"23\"\ndata_int = int(data_str)\nsome_calculation = data_int*3 +4\n\n\n\n\n\n\n\nImportantConverting a number from a string might crash!!\n\n\n\nBe careful! If the string has any characters that can’t be turned into a number (like letters or symbols), this operation will fail and cause your program to crash:\ndata_fr = \"23,5\"\ndata_float = float(data_fr) #&lt;--Error ❌",
     "crumbs": [
       "Variables & Data Types",
       "Strings"
@@ -1477,7 +1477,7 @@
     "href": "topics/04_variables/04_booleans/04_booleans.html#using-comparison-operators",
     "title": "Booleans",
     "section": "Using comparison operators",
-    "text": "Using comparison operators\nAnother way of creating booleans is by using comparison operators &gt;, &gt;=, &lt;, &lt;=, etc, which will be covered in more depth later in the notes. In a nutshell, comparison operators such as &gt; can determine if a variable is larger than another variable and the result is always a boolean (True or False).\nFor example, I want to the boolean variable is_cold to be True if the variable temperature is above 15:\ntemperature = 20\n\nis_cold = temperature &lt; 15 \n\nprint(is_cold)\nOutput: True\n\n\n\n\n\n\nNoteExpand for more explanation\n\n\n\n\n\nThis expression is evaluated from right to left in the following order: 1. Is temperature greater than 15 (yes \\(\\rightarrow\\) True) 2. Assign the result to is_cold (which now becomes True)",
+    "text": "Using comparison operators\nAnother way of creating booleans is by using comparison operators &gt;, &gt;=, &lt;, &lt;=, etc, which will be covered in more depth later in the notes. In a nutshell, comparison operators such as &gt; can determine if a variable is larger than another variable and the result is always a boolean (True or False).\nFor example, I want to the boolean variable is_cold to be True if the variable temperature is above 15:\n\ntemperature = 20\n\nis_cold = temperature &lt; 15 \n\nprint(is_cold)\n\nFalse\n\n\n\n\n\n\n\n\nNoteExpand for more explanation\n\n\n\n\n\nThis expression is evaluated from right to left in the following order: 1. Is temperature greater than 15 (yes \\(\\rightarrow\\) True) 2. Assign the result to is_cold (which now becomes True)",
     "crumbs": [
       "Variables & Data Types",
       "Booleans"

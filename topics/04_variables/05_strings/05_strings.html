@@ -694,14 +694,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="convert-str-to-intfloat" class="level2">
 <h2 class="anchored" data-anchor-id="convert-str-to-intfloat">Convert <code>str</code> to <code>int</code>/<code>float</code></h2>
 <p>This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the <code>int()</code> or <code>float()</code> functions introduced earlier as such:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
+<div id="d4b66c0a" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23.5"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_float <span class="op">=</span> <span class="bu">float</span>(data_str)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_float<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Or,</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_int)</span>
+<div id="cb0c0acc" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_str <span class="op">=</span> <span class="st">"23"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_int <span class="op">=</span> <span class="bu">int</span>(data_str)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>some_calculation <span class="op">=</span> data_int<span class="op">*</span><span class="dv">3</span> <span class="op">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled" title="Converting a number from a string might crash!!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
