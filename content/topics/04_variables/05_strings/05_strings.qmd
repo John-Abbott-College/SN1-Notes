@@ -86,7 +86,7 @@ value_str = str(value)
 
 This conversion might occur if handling data stored as text but we need it as a number to perform calculations or other analysis with it. You can use the `int()` or `float()` functions introduced earlier as such:
 
-```python
+```{python}
 data_str = "23.5"
 data_float = float(data_str)
 
@@ -95,9 +95,9 @@ some_calculation = data_float*3 +4
 
 Or, 
 
-```python
+```{python}
 data_str = "23"
-data_int = int(data_int)
+data_int = int(data_str)
 some_calculation = data_int*3 +4
 ```
 
