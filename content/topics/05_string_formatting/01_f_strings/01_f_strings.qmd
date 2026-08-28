@@ -65,7 +65,7 @@ semester = 1
 number_credits = 15
 
 print(f"I am a {school} student in the {program} program." )
-print(f"I am currently in semsteer {semester}. ")
+print(f"I am currently in semester {semester}. ")
 print(f"I am taking {number_credits} credits")
 ```
 :::
@@ -73,7 +73,7 @@ print(f"I am taking {number_credits} credits")
 You can also create an f-string using a python expression: 
 
 :::{.callout-note icon="false"}
-# **BASIC SYNTAX**: `f" anything {`_`python code`_`} anything"`
+# **BASIC SYNTAX**: `f"anything {`_`python code`_`} anything"`
 
 - _`python code`_ that when evaluated, returns a value.
 - Notice that there is _no_ space between the `f` and the first quote
