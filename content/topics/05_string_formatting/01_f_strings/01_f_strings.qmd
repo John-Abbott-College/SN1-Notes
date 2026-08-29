@@ -12,7 +12,7 @@ editor:
 Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It's following the syntax below: 
 
 :::{.callout-note icon="false"}
-# **BASIC SYNTAX**: `f" anything {`_`variable`_`} anything"`
+# **BASIC SYNTAX**: `f"anything {`_`variable`_`} anything"`
 
 - _`variable`_ is any python variable that is currently defined. It can be of any type (`int`, `float`, `bool`, `str`, _etc_)
 - You do _not_ have to convert the `variable` to a string, that is done automatically 
