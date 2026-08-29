@@ -84,7 +84,7 @@ What goes between the `{}` can also be a python expression such as an arithmetic
 ```{python}
 x = 3
 z = f"the value of x is {x + 2}"   # OK!, prints 5
-z = f"Is x equal to 5? {x == 5}"	 # OK!, prints False
+z = f"Is x equal to 5? {x == 5}"   # OK!, prints False because == is how we check for equality
 
 ```
 
@@ -98,8 +98,9 @@ z = f"Setting x to 2 {x = 2}"      # NOT OK!, x=2 does not return a value
 ```
 :::
 
-🎯 **Test Myself**:  Given the price of an item and the tax rate, use f-strings to print the price with taxes, **without** creating an additional variable:
-*Total: $22.4825*
+🎯 **Test Myself**:  Given the price of an item and the tax rate, use f-strings to print the price with taxes, **without** creating an additional variable:  
+*Total: $22.4825*  
+Don't worry about the number of digits shown after the decimal part (yet!)  
 
 ```{pyodide}
 price = 19.55
