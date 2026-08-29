@@ -659,7 +659,7 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<p>Consider the following message: <em>Good morning John! You’re networth is <span class="math inline">\(23,500\)</span></em></p>
+<p>Consider the following message: <em>Good morning John! Your net worth is <span class="math inline">\(23,500\)</span></em></p>
 <p>Let’s imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total.</p>
 <p>An f-string can help us create those generic messages by inserting variables as shown below. Try changing the <code>first_name</code> or any of the accounts values. The message should change but follow the same template:</p>
 <div>
@@ -667,7 +667,7 @@ window.Quarto = {
 
 </div>
 <script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZmlyc3RfbmFtZSA9IFwiSm9oblwiXG5hY2NvdW50MSA9IDEyXzAwMFxuYWNjb3VudDIgPSAxMV81MDBcbnRvdGFsID0gYWNjb3VudDEgKyBhY2NvdW50MiBcbmdyZWV0aW5nID0gZlwiR29vZCBtb3JuaW5nIHtmaXJzdF9uYW1lfSEgWW91J3JlIG5ldHdvcnRoIGlzIHt0b3RhbH1cIlxuXG5wcmludChncmVldGluZykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZmlyc3RfbmFtZSA9IFwiSm9oblwiXG5hY2NvdW50MSA9IDEyXzAwMFxuYWNjb3VudDIgPSAxMV81MDBcbnRvdGFsID0gYWNjb3VudDEgKyBhY2NvdW50MiBcbmdyZWV0aW5nID0gZlwiR29vZCBtb3JuaW5nIHtmaXJzdF9uYW1lfSEgWW91ciBuZXQgd29ydGggaXMge3RvdGFsfVwiXG5cbnByaW50KGdyZWV0aW5nKSJ9
 </script>
 </div>
 <p>Now notice that the account value doesn’t use a comma <code>,</code> to seperate the thousands. We’ll learn about formatting in the next section.</p>
@@ -701,7 +701,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2Nob29sID0gXCJKb2huIEFi
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am a </span><span class="sc">{</span>school<span class="sc">}</span><span class="ss"> student in the </span><span class="sc">{</span>program<span class="sc">}</span><span class="ss"> program."</span> )</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am currently in semester </span><span class="sc">{</span>semester<span class="sc">}</span><span class="ss">. "</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am taking </span><span class="sc">{</span>number_credits<span class="sc">}</span><span class="ss"> credits"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am taking </span><span class="sc">{</span>number_credits<span class="sc">}</span><span class="ss"> credits."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -723,7 +723,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2Nob29sID0gXCJKb2huIEFi
 </div>
 </div>
 <p>What goes between the <code>{}</code> can also be a python expression such as an arithmetic operation or a comparison:</p>
-<div id="47160151" class="cell" data-execution_count="1">
+<div id="67b9c770" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"the value of x is </span><span class="sc">{</span>x <span class="op">+</span> <span class="dv">2</span><span class="sc">}</span><span class="ss">"</span>   <span class="co"># OK!, prints 5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"Is x equal to 5? </span><span class="sc">{</span>x <span class="op">==</span> <span class="dv">5</span><span class="sc">}</span><span class="ss">"</span>     <span class="co"># OK!, prints False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
