@@ -20,7 +20,7 @@ Formatted Strings is a powerful way of creating a templated string and inserting
 :::
 
 Consider the following message:
-_Good morning John! You're networth is $23,500$_
+_Good morning John! Your net worth is $23,500$_
 
 Let's imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total. 
 
@@ -31,7 +31,7 @@ first_name = "John"
 account1 = 12_000
 account2 = 11_500
 total = account1 + account2 
-greeting = f"Good morning {first_name}! You're networth is {total}"
+greeting = f"Good morning {first_name}! Your net worth is {total}"
 
 print(greeting)
 ```
@@ -66,7 +66,7 @@ number_credits = 15
 
 print(f"I am a {school} student in the {program} program." )
 print(f"I am currently in semester {semester}. ")
-print(f"I am taking {number_credits} credits")
+print(f"I am taking {number_credits} credits.")
 ```
 :::
 
