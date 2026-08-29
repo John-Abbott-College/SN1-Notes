@@ -49,7 +49,7 @@ Another way of creating booleans is by using comparison operators `>`, `>=`, `<`
 
 For example, I want to the boolean variable `is_cold` to be `True` if the variable `temperature` is above `15`: 
 
-```python
+```{python}
 temperature = 20
 
 is_cold = temperature < 15 
@@ -57,7 +57,6 @@ is_cold = temperature < 15
 print(is_cold)
 ```
 
-Output: True 
 
 
 :::{.callout-note collapse="true" title="Expand for more explanation"}
