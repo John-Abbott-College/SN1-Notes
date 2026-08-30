@@ -1090,14 +1090,14 @@
     "href": "index.html#learning-objectives",
     "title": "Programming in Science",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nAll credits go to Vikram Singh for the original idea for adding learning objectives to every topic.\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are the core objecives to be covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Additional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher."
+    "text": "Learning Objectives\nAll credits go to Vikram Singh for the original idea for adding learning objectives to every topic.\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are core objectives covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Additional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher."
   },
   {
     "objectID": "index.html#content-bubbles",
     "href": "index.html#content-bubbles",
     "title": "Programming in Science",
     "section": "Content bubbles",
-    "text": "Content bubbles\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning often related to code that might lead to errors or crash in your program. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is warning related to a required installation or configuration. Altough it doesn’t affect your understanding of the concepts it might hinder you while coding."
+    "text": "Content bubbles\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning related to code errors that can lead to incorrect answers or make your program crash. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is a warning related to a required installation or configuration."
   },
   {
     "objectID": "index.html#hidden-content",
@@ -1111,7 +1111,7 @@
     "href": "index.html#practice-exercises",
     "title": "Programming in Science",
     "section": "Practice exercises",
-    "text": "Practice exercises\n🎯 Test Myself: Short questions found throughout each topic’s notes to help you grasp and check your understanding of the concept.\n✍️ Practice: These practice problems are found at the end of each module, they are meant to reinforce and consolidate your understanding of a topic. Do as many as you need until you feel comfortable with the topic.\n🧩 Problem Solving: These questions are meant to connect the topics with what you’ve learned previously and push you to think a little further. These are excellent preparation for Quizzes and Tests.\n🚀 Challenge : Harder, optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam.\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
+    "text": "Practice exercises\n🎯 Test Myself: Short questions found throughout each topic’s notes to help you grasp and check your understanding of the concept.\n✍️ Practice: These practice problems are found at the end of each module, they are meant to reinforce and consolidate your understanding of a topic. Do as many as you need until you feel comfortable with the concepts.\n🧩 Problem Solving: These questions are meant to connect the module with what you previously learnt and challenge you. These are excellent preparation for Quizzes and Tests.\n🚀 Challenge : Harder, optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam.\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
   },
   {
     "objectID": "topics/14_final_exam_prep/01_study_guide/01_study_guide.html",
