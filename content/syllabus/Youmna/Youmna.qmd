@@ -92,7 +92,7 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 - In-class Demo on Thonny
 - ✏️ **Quiz 1 (1%)**:  Short paper quiz on Variables & Data Types
 - Quiz recap
-- Lab 1
+- Assignment 1 - Part 1 
 
 ## 🚀 After class
 
@@ -109,9 +109,12 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 ## 💻 In class
 
+- Clarifications on Assignment 1 - Part 1 (why some gradescope tests failed)
 - Short demo on f-strings and arithmetic operators
+- The `math` module
 - Clarifications on the modulo operator
-- Practice Problems
+- Practice Problems on the Modulo and Floor division
+- Assignment 1 - Part 2 (**submitted in class**)
 
 ## 🚀 After class
 
@@ -120,4 +123,113 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 
 
+# Week 4
 
+## 📚 Prep 
+
+* Go over the notes:
+  * [Assignment operators](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/02_assignment_operator/02_assignment_operator.html){target="_blank"}
+  * Try the [Practice](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/exercises/assignment_operators/assignment_operators.html){target="_blank"} problems
+  * [Conditional Statements](https://john-abbott-college.github.io/SN1-Notes/topics/07_conditionals/01_if_statements/01_if_statements.html){target="_blank"} 
+  * [Comparison operators](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/03_comparison_operators/03_comparison_operators.html){target="_blank"}
+  * Try the Practice problems (coming soon)
+
+
+
+## 💻 In class
+
+- Short demo on assignment operators
+- Practice exercise on conditional statements 
+
+- ✏️ **Quiz 2 (1%)**: Assignments operators and `if` statements
+- Quiz recap
+- Using other math functions from the `math` module.
+- Assignment 1 - Part 3 (final part)
+
+
+
+## 🚀 After class
+
+- Complete the assignement at home 
+- Prepare for next class
+
+
+
+# Week 5
+
+## 📚 Prep 
+
+- Go over the notes:
+  - Turtle Graphics (notes coming soon)
+  - Custom Functions (notes coming soon)
+  - For loops - introduction (notes coming soon)
+
+
+
+## 💻 In class
+
+- Drawing shapes with turtle graphics
+- Introduction to **function parameters**
+- Exercise on identifying parameters of a shape and re-draw it in multiple variations.
+- Assignment 2 - Part 1 (submitted in class)
+
+
+
+## 🚀 After class
+
+- Prepare for next class
+
+ 
+
+# Week 6
+
+## 📚 Prep 
+
+- Go over the notes:
+  - Conditional `if/else` (notes coming soon)
+  - Custom Functions (notes coming soon)
+  - Function scopes (notes coming soon)
+  - Try the practice questions (coming soon)
+
+
+
+## 💻 In class
+
+- Recap on functions :
+  - Parameters
+  - Return
+  - Scope
+- **Quiz 3** (1%): Functions 
+- Functions with conditonals statements
+- Assignment 2 - Part 2 (completing the functions in class - this is auto-graded)
+
+## 🚀 After class
+
+- Prepare for next class
+
+
+
+# Week 6
+
+## 📚 Prep 
+
+Go over:
+
+- The instructions of **Assignment 2 - Part 3** 
+
+## 💻 In class
+
+- Short Demo on drawing complex shapes with loops
+
+- **Quiz 4** (1%): Functions (again- but harder)
+- **In teams of 2:** Complete the Assignment 2 - Part 3 (demo in class)
+
+## 🚀 After class
+
+- Prepare for next class
+
+
+
+# Week 7
+
+Coming soon...
