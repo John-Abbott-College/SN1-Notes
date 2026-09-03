@@ -3,9 +3,11 @@ title: "✍️ Assignment operators"
 editor:
   render-on-save: true
 ---
-::: {.callout-note .objectives icon="false" title=" Learning Objectives Checklist"}
+::: {.callout-note .objectives icon="false" title="Learning Objectives Checklist"}
+
 - [ ] **Apply** assignment operations (`=`, `+=`, `-=`, `*=`, `/=`, etc.) correctly.
 - [ ] **Trace** how the value of variables changes during program execution.
+
 :::
 
 # ✍️ **Practice**
