@@ -46,14 +46,14 @@
   - topics/07_statements/04_scope/04_scope.qmd
   - topics/07_statements/exercises/conditional/conditional.qmd
   - topics/07_statements/exercises/for_loops/for_loops.qmd
-- section: Topic 08_functions
+- section: Topic 09_functions
   contents:
-  - topics/08_functions/01_what_are_functions/01_what_are_functions.qmd
-  - topics/08_functions/02_math_functions/02_math_functions.qmd
+  - topics/09_functions/01_what_are_functions/01_what_are_functions.qmd
+  - topics/09_functions/02_math_functions/02_math_functions.qmd
   - topics/08_functions/03_io/03_io.qmd
-  - topics/08_functions/04_custom_functions/04_custom_functions.qmd
+  - topics/09_functions/04_custom_functions/04_custom_functions.qmd
   - topics/08_functions/05_type_hinting/05_type_hinting.qmd
-  - topics/08_functions/exercises/custom_functions/custom_functions.qmd
+  - topics/09_functions/exercises/custom_functions/custom_functions.qmd
   - topics/08_functions/exercises/input_output/input_output.qmd
 - section: Topic 09_turtle
   contents:
