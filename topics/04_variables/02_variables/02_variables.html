@@ -855,7 +855,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <section id="eliminating-magic-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="eliminating-magic-numbers">Eliminating magic numbers</h3>
 <p><strong>Magic</strong> numbers are unexplained values used in the code which make the code hard to read and understand:</p>
-<div id="0bc2dad9" class="cell" data-execution_count="1">
+<div id="ae6437f2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">*</span> <span class="fl">1.05</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -867,7 +867,7 @@ Let's animate the execution of this code block (click the Play-Pause ⏯️ butt
 <li>Here, the value <code>1.05</code> is not explained and is considered a magic number.</li>
 </ul>
 <p>Now consider this improved version using more variables:</p>
-<div id="1f6c42dd" class="cell" data-execution_count="2">
+<div id="35defc38" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">16.80</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.05</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> price <span class="op">+</span> price<span class="op">*</span>tax_rate</span>
@@ -905,7 +905,7 @@ a^2 + b^2 = c^2
 <p>Consider the two program below implementing the same equation. What’s the maing difference?</p>
 <section id="program-1" class="level4">
 <h4 class="anchored" data-anchor-id="program-1">Program 1</h4>
-<div id="8d022670" class="cell" data-execution_count="3">
+<div id="2fc7f175" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> <span class="dv">3</span><span class="op">*</span><span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span><span class="op">*</span><span class="dv">4</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -915,7 +915,7 @@ a^2 + b^2 = c^2
 </section>
 <section id="program-2" class="level4">
 <h4 class="anchored" data-anchor-id="program-2">Program 2</h4>
-<div id="e758c6c1" class="cell" data-execution_count="4">
+<div id="6bc5c50c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>c_2 <span class="op">=</span> a<span class="op">*</span>a <span class="op">+</span> b<span class="op">*</span>b</span>
@@ -927,7 +927,7 @@ a^2 + b^2 = c^2
 <p>One possible answer is: it’s much easier to read, and update the second program because the values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are well isolated in seperate variables.</p>
 <hr>
 <p>🎯 <strong>Test Myself</strong>: Improve the program below by creating variables for each item price and the total:</p>
-<div id="706a1a0f" class="cell" data-execution_count="5">
+<div id="5cb51291" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 1 is: $ 10"</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The cost of item 2 is: $ 22"</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The total cost is $ 32"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

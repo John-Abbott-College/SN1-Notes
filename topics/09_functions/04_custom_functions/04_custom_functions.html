@@ -595,10 +595,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#parameterized-functions" id="toc-parameterized-functions" class="nav-link active" data-scroll-target="#parameterized-functions">Parameterized functions</a></li>
+  <li><a href="#defining-functions" id="toc-defining-functions" class="nav-link active" data-scroll-target="#defining-functions">Defining functions</a>
+  <ul class="collapse">
+  <li><a href="#parameterized-functions" id="toc-parameterized-functions" class="nav-link" data-scroll-target="#parameterized-functions">Parameterized functions</a></li>
   <li><a href="#functions-that-return-values" id="toc-functions-that-return-values" class="nav-link" data-scroll-target="#functions-that-return-values">Functions that return values</a></li>
   <li><a href="#how-functions-work" id="toc-how-functions-work" class="nav-link" data-scroll-target="#how-functions-work"><strong>How functions work:</strong></a></li>
   <li><a href="#pros-of-using-functions" id="toc-pros-of-using-functions" class="nav-link" data-scroll-target="#pros-of-using-functions"><strong>Pros of using functions:</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -660,6 +663,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+<section id="defining-functions" class="level2">
+<h2 class="anchored" data-anchor-id="defining-functions">Defining functions</h2>
+<p>The first step in using custom functions is to <strong>define</strong> them. Think of this as teaching Python how to perform some task that your program needs to do. Only after you have defined a function can you <strong>use</strong> it in your program.</p>
+<div class="callout callout-style-default callout-note no-icon callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>def function_name():</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 <p>This is what the simplest function definition looks like:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># One or more lines of code</span></span>
@@ -669,16 +688,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># We call these lines of code the "body" of the function</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To define your own functions you must:</p>
 <ul>
-<li>Use the keyword <code>def</code> followed by the name of your function</li>
-<li>Add parenthesis <code>()</code></li>
-<li>Use a semi-colon: <code>:</code></li>
-<li>Use an indentation character (TAB) for every line of code within the function.</li>
+<li>Use the keyword <code>def</code> followed by the name of your function<br>
+</li>
+<li>Add parenthesis <code>()</code><br>
+</li>
+<li>A colon <code>:</code> followed by a newline<br>
+</li>
+<li>An indented instruction or set of instructions (the <em>body</em>)</li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_message():</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Greetings!"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>show_message()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>show_message()  <span class="co"># &lt;-- This is how you *use* the function that you defined</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>output:</strong></p>
 <pre class="text"><code>Greetings!</code></pre>
 <section id="parameterized-functions" class="level3">
@@ -734,7 +756,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>output:</strong></p>
 <pre class="text"><code>The sum of 10 and 8 is: 18</code></pre>
 <div class="callout callout-style-default callout-note callout-titled" title="Printing vs returning values">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -743,7 +765,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>It is important to understand the difference between printing and returning values. <code>print()</code> simply draws something on the screen whereas <code>return</code> gives something back to the part of the program that called the function.</p>
 <p>You can think of this like if you ask a friend to draw a picture of you, do you just want them to show you what they drew, or do you want them to hand you the paper/canvas with the drawing so that you can keep it? If they give you the drawing, then that is like a function that is <em>returning</em> something to you (and you can do whatever you want with it because it is yours now).</p>
@@ -849,6 +871,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2RO
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
