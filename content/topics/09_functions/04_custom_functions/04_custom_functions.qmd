@@ -17,6 +17,14 @@ editor:
 - **Use** invoke functions with default parameters
 :::
 
+
+## Defining functions
+The first step in using custom functions is to **define** them. Think of this as teaching Python how to perform some task that your program needs to do. Only after you have defined a function can you **use** it in your program.
+
+:::{.callout-note icon="false"}
+# **BASIC SYNTAX**: `def function_name():`
+:::
+
 This is what the simplest function definition looks like:
 
 ```python
@@ -30,10 +38,10 @@ def function_name():
 
 To define your own functions you must:
 
-- Use the keyword `def` followed by the name of your function
-- Add parenthesis `()`
-- Use a semi-colon: `:`
-- Use an indentation character (TAB) for every line of code within the function.
+- Use the keyword `def` followed by the name of your function  
+- Add parenthesis `()`  
+- A colon `:` followed by a newline  
+- An indented instruction or set of instructions (the *body*)  
 
 **Example:**
 
@@ -41,7 +49,7 @@ To define your own functions you must:
 def show_message():
     print("Greetings!")
 
-show_message()
+show_message()  # <-- This is how you *use* the function that you defined
 ```
 
 **output:**

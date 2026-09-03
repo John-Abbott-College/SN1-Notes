@@ -17,16 +17,20 @@ For example, one might ask:
 
 _Is the password correct?_
 
-The answer could be `True` or `False`. Based on that, the program must behave differently:
-- If `True`, display **Access Granted!**
-- If `False`, display **Access Denied**
+The answer could be `True` or `False`. Based on that, the program must behave differently:  
+- If `True`, display **Access Granted!**  
+- If `False`, display **Access Denied**  
 
-Python use comparison operators and logical operators to ask YES/NO questions. Then, based on the answer it uses **conditional statements** to change the behvaiour of the program.
+Python uses comparison operators and logical operators to ask YES/NO questions. Then, based on the answer it uses **conditional statements** to change the behaviour of the program.
 
 
 
-:::{.callout-note title="Reminder" collapse="true"}
-Useful reminder before starting the section
+:::{.callout-note title="Note" collapse="false"}
+If you haven't read the pages:  
+- [Comparison Operators](../comparison_operators/comparison_operators.qmd)  
+- [Logical Operators](../logical_operators/logical_operators.qmd) 
+
+Then a short version is provided below. As you start using `if` statements, you'll want to go back and read those pages (these topics go hand-in-hand).
 
 **Comparison operators**
 
@@ -73,12 +77,12 @@ The statement works as follows:
 
 
 :::{.callout-important title="Not indenting error"}
-A common mistake beginners make it to forget the indentation of the lines of code within the `if` statment
+A common mistake beginners make is to forget the indentation of the lines of code within the `if` statement
 
 ```python
 x = 10
-if x == 10:    #  <--- Error ❌
-print("It's equal to 10!"). #This line must be indented with the TAB 
+if x == 10:
+print("It's equal to 10!"). # Error ❌ This line must be indented with a TAB 
 ```
 - Most IDEs will automatically indent lines of code after an if
 - **Be careful!** An indententation is not the same as a space. Hit the TAB button to indent not the SPACE button.
@@ -120,14 +124,13 @@ Set the value of `age` to 18 (or greater).
 
 ## Boolean variables 
 
-Boolean variables and conditional statements are designed to be used together. Since a `condition` is a boolean, you can simply use the boolean **as is** in an `if` statement. For instance, consider the boolean `is_raining`. We would like to display a message if this boolean is `True`. One might be tempted to write:
+Boolean variables and conditional statements are designed to be used together. Since a `condition` is a boolean, you can simply use any boolean value or variable **as is** in an `if` statement. For instance, consider the boolean `is_raining`. We would like to display a message if this boolean is `True`. One might be tempted to write:
 
 ```python
 is_raining = True
 
 if is_raining == True:
     print("It's raining!")
-
 ```
 
 This isn't wrong, but it's redundant! 
@@ -221,11 +224,11 @@ if large_pizza == 8 and ( ( cokes == 15 and rootbeers == 15) or cokes == 30):
     print("OK")
 ```
 
-🎯 **Test Myself**: Complete the following program to print __Team C qualifies!__ if they won at least one game. **Or**, if they lost none, but scored **at least** 3 goals **while** conceding **not more** than 1 goal.
+🎯 **Test Myself**: Complete the following program to print __Team C qualifies!__ if they won at least one game, **Or**, if they lost none, but scored **at least** 3 goals **while** conceding **not more** than 1 goal.
 
 ```{pyodide}
 games_won = 0
-ganes_lost = 0
+games_lost = 0
 goals_scored = 4
 goals_against = 2
 
@@ -236,7 +239,7 @@ print("Program is done!")
 ```
 
 :::{.callout-tip title="Solution" collapse="true"}
-```python
+```{pyodide}
 games_won = 0
 games_lost = 0
 goals_scored = 4
@@ -244,9 +247,8 @@ goals_against = 2
 
 print("Will Team C qualify?")
 
-if (games_won >= 1) or (games_lost ==0 and goals_scored > 3 and goals_against <= 1):
+if (games_won >= 1) or (games_lost == 0 and goals_scored >= 3 and goals_against <= 1):
     print("Team C qualifies!")
-
 
 print("Program is done!")
 ```
@@ -288,7 +290,7 @@ Since `has_succeeded` is `True`:
 🎯 **Test Myself**: What would be the output of this program if the assignment changes to`has_succeeded = False`? 
 
 :::{.callout-tip title="Solution" collapse="true"}
-The score stays at 0.
+0
 :::
 
 :::{.callout-note collapse="true" title="Nesting `if` statements"}
