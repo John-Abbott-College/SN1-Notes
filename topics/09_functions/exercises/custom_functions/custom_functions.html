@@ -625,6 +625,8 @@ window.Quarto = {
   <ul>
   <li><a href="#level-1" id="toc-level-1" class="nav-link active" data-scroll-target="#level-1">Level 1</a>
   <ul class="collapse">
+  <li><a href="#daily-practice" id="toc-daily-practice" class="nav-link" data-scroll-target="#daily-practice">Daily Practice</a></li>
+  <li><a href="#daily-practice-2" id="toc-daily-practice-2" class="nav-link" data-scroll-target="#daily-practice-2">Daily Practice 2</a></li>
   <li><a href="#sumthings-up" id="toc-sumthings-up" class="nav-link" data-scroll-target="#sumthings-up">Sumthings up</a></li>
   <li><a href="#summing-squares" id="toc-summing-squares" class="nav-link" data-scroll-target="#summing-squares">Summing squares</a></li>
   <li><a href="#f-of-x" id="toc-f-of-x" class="nav-link" data-scroll-target="#f-of-x">f of x</a></li>
@@ -666,25 +668,22 @@ window.Quarto = {
 
 <section id="level-1" class="level2">
 <h2 class="anchored" data-anchor-id="level-1">Level 1</h2>
-<section id="sumthings-up" class="level3">
-<h3 class="anchored" data-anchor-id="sumthings-up">Sumthings up</h3>
-<p>Write a simple function called <code>calculate_sum()</code> which takes two numbers as input and returns the sum. Call (<em>invoke</em>) the function <code>calculate_sum()</code> with values 3, 4 and print the returned value.</p>
+<section id="daily-practice" class="level3">
+<h3 class="anchored" data-anchor-id="daily-practice">Daily Practice</h3>
+<p><strong>Step 1:</strong><br>
+Write one function for each day of the week that simply prints the name of the day. Name your function the same as the day of the week while following our naming conventions (i.e.&nbsp;<em>snake_case</em>).</p>
+<p><strong>Step 2:</strong><br>
+Write one more function called <code>print_week()</code> that calls all of the functions you wrote in Step 1, in the correct order.</p>
+<p><strong>Step 3:</strong><br>
+Call (invoke) your function <code>print_week()</code> to print the names of the days of the week.</p>
 <div>
 <div id="pyodide-1" class="exercise-cell">
 
 </div>
 <script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBzdGFydCB3aXRoIHRoZSBmdW5jdGlvbiBkZWZpbml0aW9uOlxuXG4jIGFuZCB0aGVuIGNhbGwgdGhlIGZ1bmN0aW9uOiJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </script>
 </div>
-<details>
-<summary>
-👀 Hint
-</summary>
-<p>
-What would you expect this function to “return”
-</p>
-</details>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -702,24 +701,32 @@ What would you expect this function to “return”
 
 </div>
 <script type="pyodide-2-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGNhbGN1bGF0ZV9zdW0obnVtMSwgbnVtMik6XG4gICAgc3VtID0gbnVtMSArIG51bTJcbiAgICByZXR1cm4gc3VtXG5cbnRvdGFsID0gY2FsY3VsYXRlX3N1bSgzLCA0KVxucHJpbnQodG90YWwpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIG1vbmRheSgpOlxuICBwcmludChcIk1vbmRheVwiKVxuXG5kZWYgdHVlc2RheSgpOlxuICBwcmludChcIlR1ZXNkYXlcIilcbiAgXG5kZWYgd2VkbmVzZGF5KCk6XG4gIHByaW50KFwiV2VkbmVzZGF5XCIpXG4gIFxuZGVmIHRodXJzZGF5KCk6XG4gIHByaW50KFwiVGh1cnNkYXlcIilcbiAgXG5kZWYgZnJpZGF5KCk6XG4gIHByaW50KFwiRnJpZGF5XCIpXG4gIFxuZGVmIHNhdHVyZGF5KCk6XG4gIHByaW50KFwiU2F0dXJkYXlcIilcbiAgXG5kZWYgc3VuZGF5KCk6XG4gIHByaW50KFwiU3VuZGF5XCIpXG5cbmRlZiBwcmludF93ZWVrKCk6XG4gIG1vbmRheSgpXG4gIHR1ZXNkYXkoKVxuICB3ZWRuZXNkYXkoKVxuICB0aHVyc2RheSgpXG4gIGZyaWRheSgpXG4gIHNhdHVyZGF5KClcbiAgc3VuZGF5KClcblxuIyBGaW5hbGx5LCB0ZWxsIFB5dGhvbiB0byBydW4gdGhlIHByaW50X3dlZWsgZnVuY3Rpb25cbiMgdGhhdCB3aWxsIGluIHR1cm4gY2FsbCBhbGwgb2YgdGhlIG90aGVyIGZ1bmN0aW9uLlxucHJpbnRfd2VlaygpIn0=
 </script>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="summing-squares" class="level3">
-<h3 class="anchored" data-anchor-id="summing-squares">Summing squares</h3>
-<p>Consider the following function which implements this formula:</p>
-<p><span class="math display">\[
-n_1^2 + n_2^2
-\]</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> num1<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> num2<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>What will be the output of this line of code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_squares(<span class="dv">3</span>, <span class="dv">4</span>) <span class="op">+</span> sum_squares(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="daily-practice-2" class="level3">
+<h3 class="anchored" data-anchor-id="daily-practice-2">Daily Practice 2</h3>
+<p>Do something similar to the previous exercise, but do not print anything inside the 7 weekday functions. Only use a <code>print()</code> statement in the <code>print_week()</code> function. The output should be the same as the previous exercise.</p>
+<details>
+<summary>
+👀 Hint
+</summary>
+<p>
+If a function is not printing values, how can the code that called that function get something back for its own use?
+</p>
+</details>
+<div>
+<div id="pyodide-3" class="exercise-cell">
+
+</div>
+<script type="pyodide-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
+</script>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -732,47 +739,26 @@ n_1^2 + n_2^2
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The first call to <code>sum_squares()</code> passed in the values 3 &amp; 4 so inside sum_squares it will do the math:</p>
-<div id="cc819df4" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">3</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span><span class="op">**</span><span class="dv">2</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result <span class="co"># 25</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div>
+<div id="pyodide-4" class="exercise-cell">
+
 </div>
-<p>The second call to <code>sum_squares()</code> passed in the values 1 &amp; 2 so inside sum_squares it will do the math:</p>
-<div id="0dd70a04" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">1</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result <span class="co"># 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>After calling sum_squares twice, we effectively have this line of code:</p>
-<div id="b3832f9a" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">25</span> <span class="op">+</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>30</code></pre>
-</div>
+<script type="pyodide-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIG1vbmRheSgpOlxuICByZXR1cm4gXCJNb25kYXlcIlxuXG5kZWYgdHVlc2RheSgpOlxuICByZXR1cm4gXCJUdWVzZGF5XCJcbiAgXG5kZWYgd2VkbmVzZGF5KCk6XG4gIHJldHVybiBcIldlZG5lc2RheVwiXG4gIFxuZGVmIHRodXJzZGF5KCk6XG4gIHJldHVybiBcIlRodXJzZGF5XCJcbiAgXG5kZWYgZnJpZGF5KCk6XG4gIHJldHVybiBcIkZyaWRheVwiXG4gIFxuZGVmIHNhdHVyZGF5KCk6XG4gIHJldHVybiBcIlNhdHVyZGF5XCJcbiAgXG5kZWYgc3VuZGF5KCk6XG4gIHJldHVybiBcIlN1bmRheVwiXG5cbmRlZiBwcmludF93ZWVrKCk6XG4gICMgU2F2ZSB0aGUgdmFsdWUgcmV0dXJuZWQgZnJvbSB0aGUgbW9uZGF5KCkgZnVuY3Rpb24gaW50byBhIHZhcmlhYmxlXG4gICMgYW5kIHRoZW4gcHJpbnQgdGhhdCB2YXJpYWJsZTpcbiAgbW9uZGF5X25hbWUgPSBtb25kYXkoKVxuICBwcmludChtb25kYXlfbmFtZSlcblxuICAjIFNhbWUgaWRlYSBhcyBmb3IgbW9uZGF5LCB3ZSBidXQgY291bGQgcmUtdXNlIHRoZSBzYW1lIHZhcmlhYmxlIGZvciBcbiAgIyBvdGhlciBkYXlzIG9mIHRoZSB3ZWVrIGlmIHdlIHdhbnQgdG86ICBcbiAgZGF5ID0gdHVlc2RheSgpXG4gIHByaW50KGRheSlcblxuICBkYXkgPSB3ZWRuZXNkYXkoKVxuICBwcmludChkYXkpXG5cbiAgIyBXZSBkb24ndCBhYnNvbHV0ZWx5IGhhdmUgdG8gc2F2ZSB0aGUgcmV0dXJuIHZhbHVlIGludG8gYSB2YXJpYWJsZSxcbiAgIyB3ZSBjb3VsZCBqdXN0IHByaW50IHRoZSByZXR1cm5lZCB2YWx1ZSBkaXJlY3RseTpcbiAgcHJpbnQodGh1cnNkYXkoKSlcbiAgcHJpbnQoZnJpZGF5KCkpXG5cbiAgIyBBbmQgbGFzdGx5LCB3ZSBjb3VsZCBhbHNvIGNhbGwgdGhlIGZ1bmN0aW9ucyBmcm9tIGluc2lkZSB7IH0gaW4gYW5cbiAgIyBmLXN0cmluZyBhbmQgcHJpbnQgdGhlc2Ugd2Vla2RheXMgb24gc2VwYXJhdGUgbGluZXMgdXNpbmcgYVxuICAjIG11bHRpLWxpbmUgZi1zdHJpbmc6XG4gIHByaW50KGZcIlwiXCJ7c2F0dXJkYXkoKX1cbntzdW5kYXkoKX1cIlwiXCIpXG5cbiMgRmluYWxseSwgdGVsbCBQeXRob24gdG8gcnVuIHRoZSBwcmludF93ZWVrIGZ1bmN0aW9uXG4jIHRoYXQgd2lsbCBpbiB0dXJuIGNhbGwgYWxsIG9mIHRoZSBvdGhlciBmdW5jdGlvbi5cbnByaW50X3dlZWsoKSJ9
+</script>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="f-of-x" class="level3">
-<h3 class="anchored" data-anchor-id="f-of-x">f of x</h3>
-<p>Write a function which helps apply this formula:</p>
-<p><span class="math display">\[
-f(x) = (x-4)(x+7)
-\]</span></p>
-<p>Then, use it to evaluate <span class="math inline">\(f(x)\)</span> for the values of <span class="math inline">\(x\)</span>:</p>
-<ul>
-<li><span class="math inline">\(x = 4\)</span></li>
-<li><span class="math inline">\(x=-7\)</span></li>
-<li><span class="math inline">\(x=2\)</span></li>
-<li><span class="math inline">\(x=-6\)</span></li>
-</ul>
+<section id="sumthings-up" class="level3">
+<h3 class="anchored" data-anchor-id="sumthings-up">Sumthings up</h3>
+<p>Write a simple function called <code>calculate_sum()</code> which takes two numbers as input and returns the sum. Call (<em>invoke</em>) the function <code>calculate_sum()</code> with values 3, 4 and print the returned value.</p>
 <div>
-<div id="pyodide-3" class="exercise-cell">
+<div id="pyodide-5" class="exercise-cell">
 
 </div>
-<script type="pyodide-3-contents">
+<script type="pyodide-5-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBzdGFydCB3aXRoIHRoZSBmdW5jdGlvbiBkZWZpbml0aW9uOlxuXG4jIGFuZCB0aGVuIGNhbGwgdGhlIGZ1bmN0aW9uOiJ9
 </script>
 </div>
@@ -797,10 +783,109 @@ What would you expect this function to “return”
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
-<div id="pyodide-4" class="exercise-cell">
+<div id="pyodide-6" class="exercise-cell">
 
 </div>
-<script type="pyodide-4-contents">
+<script type="pyodide-6-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGNhbGN1bGF0ZV9zdW0obnVtMSwgbnVtMik6XG4gICAgc3VtID0gbnVtMSArIG51bTJcbiAgICByZXR1cm4gc3VtXG5cbnRvdGFsID0gY2FsY3VsYXRlX3N1bSgzLCA0KVxucHJpbnQodG90YWwpIn0=
+</script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="summing-squares" class="level3">
+<h3 class="anchored" data-anchor-id="summing-squares">Summing squares</h3>
+<p>Consider the following function which implements this formula:</p>
+<p><span class="math display">\[
+n_1^2 + n_2^2
+\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> num1<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> num2<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>What will be the output of this line of code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_squares(<span class="dv">3</span>, <span class="dv">4</span>) <span class="op">+</span> sum_squares(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The first call to <code>sum_squares()</code> passed in the values 3 &amp; 4 so inside sum_squares it will do the math:</p>
+<div id="52b82470" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">3</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span><span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result <span class="co"># 25</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The second call to <code>sum_squares()</code> passed in the values 1 &amp; 2 so inside sum_squares it will do the math:</p>
+<div id="cfd3e12a" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_squares(num1, num2):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">1</span><span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result <span class="co"># 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>After calling sum_squares twice, we effectively have this line of code:</p>
+<div id="49f73864" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">25</span> <span class="op">+</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>30</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="f-of-x" class="level3">
+<h3 class="anchored" data-anchor-id="f-of-x">f of x</h3>
+<p>Write a function which helps apply this formula:</p>
+<p><span class="math display">\[
+f(x) = (x-4)(x+7)
+\]</span></p>
+<p>Then, use it to evaluate <span class="math inline">\(f(x)\)</span> for the values of <span class="math inline">\(x\)</span>:</p>
+<ul>
+<li><span class="math inline">\(x = 4\)</span></li>
+<li><span class="math inline">\(x=-7\)</span></li>
+<li><span class="math inline">\(x=2\)</span></li>
+<li><span class="math inline">\(x=-6\)</span></li>
+</ul>
+<div>
+<div id="pyodide-7" class="exercise-cell">
+
+</div>
+<script type="pyodide-7-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBzdGFydCB3aXRoIHRoZSBmdW5jdGlvbiBkZWZpbml0aW9uOlxuXG4jIGFuZCB0aGVuIGNhbGwgdGhlIGZ1bmN0aW9uOiJ9
+</script>
+</div>
+<details>
+<summary>
+👀 Hint
+</summary>
+<p>
+What would you expect this function to “return”
+</p>
+</details>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div>
+<div id="pyodide-8" class="exercise-cell">
+
+</div>
+<script type="pyodide-8-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGZfcXVhZHJhdGljKHgpOlxuICAgIHRlcm0xID0gKHggLSA0KVxuICAgIHRlcm0yID0gKHggKyA3KVxuICAgIHJldHVybiB0ZXJtMSAqIHRlcm0yXG5cbnByaW50KGZfcXVhZHJhdGljKDQpKSAgI3ByaW50cyAwXG5wcmludChmX3F1YWRyYXRpYygtNykpICNwcmludHMgMFxucHJpbnQoZl9xdWFkcmF0aWMoMikpICAjcHJpbnRzIC0xOFxucHJpbnQoZl9xdWFkcmF0aWMoLTYpKSAjcHJpbnRzIC0xMCJ9
 </script>
 </div>
@@ -817,15 +902,15 @@ f(x,y) = 3(x+y)
 <p>Then, use it to evaluate <span class="math inline">\(f(x,y)\)</span> for the following values:<br>
 - <span class="math inline">\(x = 3\)</span> , <span class="math inline">\(y=4\)</span> - <span class="math inline">\(x = 5\)</span> , <span class="math inline">\(y=6\)</span> - <span class="math inline">\(x = 2\)</span> , <span class="math inline">\(y=8\)</span></p>
 <div>
-<div id="pyodide-5" class="exercise-cell">
+<div id="pyodide-9" class="exercise-cell">
 
 </div>
-<script type="pyodide-5-contents">
+<script type="pyodide-9-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBzdGFydCB3aXRoIHRoZSBmdW5jdGlvbiBkZWZpbml0aW9uOlxuXG4jIGFuZCB0aGVuIGNhbGwgdGhlIGZ1bmN0aW9uOiJ9
 </script>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -834,13 +919,13 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBzdGFydCB3aXRoIHRoZSBm
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
-<div id="pyodide-6" class="exercise-cell">
+<div id="pyodide-10" class="exercise-cell">
 
 </div>
-<script type="pyodide-6-contents">
+<script type="pyodide-10-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGZfcGxhbmUoeCwgeSk6XG4gICAgcmV0dXJuIDMgKiAoeCArIHkpXG5cbnByaW50KGZfcGxhbmUoMywgNCkpICAjMjEgXG5wcmludChmX3BsYW5lKDUsIDYpKSAgIzMzXG5wcmludChmX3BsYW5lKDIsIDgpKSAgIzMwIn0=
 </script>
 </div>
@@ -867,7 +952,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGZfcGxhbmUoeCwgeSk6
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>function1() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -876,7 +961,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGZfcGxhbmUoeCwgeSk6
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <pre class="{text}"><code>Hi
 How are you?
@@ -891,7 +976,7 @@ Bye</code></pre>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>function3()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -900,7 +985,7 @@ Bye</code></pre>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <pre class="{text}"><code>Hi
 How are you?
@@ -923,7 +1008,7 @@ Bye</code></pre>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -932,7 +1017,7 @@ Bye</code></pre>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>None</p>
 </div>
@@ -940,7 +1025,7 @@ Bye</code></pre>
 </div>
 <p><em>Part 2:</em> Explain the reason for this outcome and propose an improvement.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -949,15 +1034,15 @@ Bye</code></pre>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The function didn’t <code>return</code> the average. The calculation was done and the average was saved into a variable called <code>result</code> but nothing was <em>returned</em>. When you try to <em>use</em> the result of a function that didn’t actually return anything, Python gives you a special value called <code>None</code> which means <em>nothing</em>.</p>
 <p>To fix this we should add a <code>return</code> statement:</p>
 <div>
-<div id="pyodide-7" class="exercise-cell">
+<div id="pyodide-11" class="exercise-cell">
 
 </div>
-<script type="pyodide-7-contents">
+<script type="pyodide-11-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGNhbGN1bGF0ZV9hdmVyYWdlKG51bTEsIG51bTIpOlxuICByZXN1bHQgPSAobnVtMSArIG51bTIpIC8gMlxuICByZXR1cm4gcmVzdWx0XG5cbmF2ZXJhZ2UgPSBjYWxjdWxhdGVfYXZlcmFnZSgzLCA0KVxucHJpbnQoYXZlcmFnZSkifQ==
 </script>
 </div>
@@ -985,7 +1070,7 @@ What do you need to import for this to work?
 </p>
 </details>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -994,13 +1079,13 @@ What do you need to import for this to work?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
-<div id="pyodide-8" class="exercise-cell">
+<div id="pyodide-12" class="exercise-cell">
 
 </div>
-<script type="pyodide-8-contents">
+<script type="pyodide-12-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG1hdGhcblxuZGVmIGFyZWFfY2lyY2xlKHJhZGl1cyk6XG4gICAgYXJlYSA9IG1hdGgucGkgKiAocmFkaXVzICoqIDIpXG4gICAgcmV0dXJuIGFyZWFcblxuYXJlYTEgPSBjYWxjdWxhdGVfYXJlYV9jaXJjbGUoMilcbmFyZWEyID0gYXJlYV9jaXJjbGUoOSlcbmFyZWFfcmluZyA9IGFyZWFfY2lyY2xlKDYpIC0gYXJlYV9jaXJjbGUoNCkifQ==
 </script>
 </div>
@@ -1016,10 +1101,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG1hdGhcblxuZGVm
 A_{rect} = w * h
 \]</span></p>
 <div>
-<div id="pyodide-9" class="exercise-cell">
+<div id="pyodide-13" class="exercise-cell">
 
 </div>
-<script type="pyodide-9-contents">
+<script type="pyodide-13-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </script>
 </div></li>
@@ -1027,10 +1112,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 A_{square}= s^2
 \]</span></p>
 <div>
-<div id="pyodide-10" class="exercise-cell">
+<div id="pyodide-14" class="exercise-cell">
 
 </div>
-<script type="pyodide-10-contents">
+<script type="pyodide-14-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </script>
 </div></li>
@@ -1038,15 +1123,15 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </ol>
 <p><img src="./assets/composite_area.png" class="img-fluid"></p>
 <div>
-<div id="pyodide-11" class="exercise-cell">
+<div id="pyodide-15" class="exercise-cell">
 
 </div>
-<script type="pyodide-11-contents">
+<script type="pyodide-15-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </script>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1055,13 +1140,13 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
-<div id="pyodide-12" class="exercise-cell">
+<div id="pyodide-16" class="exercise-cell">
 
 </div>
-<script type="pyodide-12-contents">
+<script type="pyodide-16-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG1hdGhcblxuZGVmIGFyZWFfY2lyY2xlKHJhZGl1cyk6XG4gICAgYXJlYSA9IG1hdGgucGkgKiAocmFkaXVzICoqIDIpXG4gICAgcmV0dXJuIGFyZWFcblxuZGVmIGFyZWFfc3F1YXJlKHNpZGVfbGVuZ3RoKTpcbiAgYXJlYSA9IHNpZGVfbGVuZ3RoKioyXG4gIHJldHVybiBhcmVhXG5cbmRlZiBhcmVhX3JlY3QoaGVpZ2h0LCB3aWR0aCk6XG4gIGFyZWEgPSBoZWlnaHQgKiB3aWR0aFxuICByZXR1cm4gYXJlYVxuXG5hcmVhX3JpbmcgPSBhcmVhX2NpcmNsZSgyNSkgLSBhcmVhX2NpcmNsZSgxNSlcbmFyZWFfYm9yZGVycyA9ICgyICogYXJlYV9yZWN0KDQ1LDUpICsgMiAqIGFyZWFfcmVjdCgzNSw1KSlcbmFyZWFfc3F1YXJlcyA9IDQgKiBhcmVhX3NxdWFyZSg1KVxuXG50b3RhbF9hcmVhID0gYXJlYV9yaW5nICsgYXJlYV9ib3JkZXJzICsgYXJlYV9zcXVhcmVzXG5cbnByaW50KGZcIlRoZSB0b3RhbCBhcmVhIGlzIHt0b3RhbF9hcmVhfVwiKSJ9
 </script>
 </div>
@@ -1096,7 +1181,7 @@ Your function must return a string. An f-string would be really useful here!
 </p>
 </details>
 <div class="callout callout-style-default callout-tip callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1105,13 +1190,13 @@ Your function must return a string. An f-string would be really useful here!
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
-<div id="pyodide-13" class="exercise-cell">
+<div id="pyodide-17" class="exercise-cell">
 
 </div>
-<script type="pyodide-13-contents">
+<script type="pyodide-17-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHBvd2VyX3J1bGUoZXhwb25lbnQpOlxuICAgIGRlcml2YXRpdmUgPSBmXCJ7ZXhwb25lbnR9eCoqe2V4cG9uZW50IC0gMX1cIlxuICAgIHJldHVybiBkZXJpdmF0aXZlXG5cbmZfcHJpbWUgPSBwb3dlcl9ydWxlKDMpXG5wcmludChmX3ByaW1lKVxuXG5mX3ByaW1lID0gcG93ZXJfcnVsZSgyNSlcbnByaW50KGZfcHJpbWUpIn0=
 </script>
 </div>
@@ -1124,7 +1209,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHBvd2VyX3J1bGUoZXhw
 eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEzIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTMgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEzLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTMtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMyA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEyIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTIgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEyLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTItY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMiA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTExIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTEgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTExLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTEtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMSA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEwIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTAgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEwLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTAtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMCA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTAsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTkiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl85ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS05LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtOS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzkgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzksIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTgiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl84ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS04LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtOC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzggPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzgsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTciLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl83ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS03LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzcgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzcsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl82ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzYgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzUgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS00LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzQgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTE3IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTcgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTE3LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTctY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xNyA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTcsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTE2IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTYgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTE2LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTYtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xNiA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTE1IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTUgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTE1LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTUtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xNSA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTE0IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTQgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTE0LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTQtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xNCA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEzIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTMgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEzLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTMtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMyA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEyIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTIgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEyLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTItY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMiA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTExIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTEgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTExLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTEtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMSA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEwIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfcHlvZGlkZV9lZGl0b3JfMTAgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLTEwLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMTAtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgUHlvZGlkZUV4ZXJjaXNlRWRpdG9yKFxuICAgIHB5b2RpZGVPanMucHlvZGlkZVByb21pc2UsXG4gICAgYmxvY2suY29kZSxcbiAgICBvcHRpb25zXG4gICk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fcHlvZGlkZV92YWx1ZV8xMCA9IHB5b2RpZGVPanMucHJvY2VzcyhfcHlvZGlkZV9lZGl0b3JfMTAsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTkiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl85ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS05LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtOS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzkgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzksIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTgiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl84ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS04LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtOC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzggPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzgsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTciLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl83ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS03LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzcgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzcsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl82ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzYgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzUgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS00LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzQgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
