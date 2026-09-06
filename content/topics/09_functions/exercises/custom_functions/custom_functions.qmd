@@ -6,11 +6,132 @@ editor:
 
 ## Level 1
 
+### Daily Practice
+**Step 1:**  
+Write one function for each day of the week that simply prints the name of the day. Name your function the same as the day of the week while following our naming conventions (i.e. *snake_case*). 
+
+**Step 2:**  
+Write one more function called `print_week()` that calls all of the functions you wrote in Step 1, in the correct order.
+
+**Step 3:**  
+Call (invoke) your function `print_week()` to print the names of the days of the week.  
+
+```{pyodide}
+
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def monday():
+  print("Monday")
+
+def tuesday():
+  print("Tuesday")
+  
+def wednesday():
+  print("Wednesday")
+  
+def thursday():
+  print("Thursday")
+  
+def friday():
+  print("Friday")
+  
+def saturday():
+  print("Saturday")
+  
+def sunday():
+  print("Sunday")
+
+def print_week():
+  monday()
+  tuesday()
+  wednesday()
+  thursday()
+  friday()
+  saturday()
+  sunday()
+
+# Finally, tell Python to run the print_week function
+# that will in turn call all of the other function.
+print_week()
+```
+:::
+
+### Daily Practice 2
+Do something similar to the previous exercise, but do not print anything inside the 7 weekday functions. Only use a `print()` statement in the `print_week()` function. The output should be the same as the previous exercise.
+
+<details>
+  <summary>👀 Hint</summary>
+  <p>If a function is not printing values, how can the code that called that function get something back for its own use?</p>
+</details>
+
+```{pyodide}
+
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def monday():
+  return "Monday"
+
+def tuesday():
+  return "Tuesday"
+  
+def wednesday():
+  return "Wednesday"
+  
+def thursday():
+  return "Thursday"
+  
+def friday():
+  return "Friday"
+  
+def saturday():
+  return "Saturday"
+  
+def sunday():
+  return "Sunday"
+
+def print_week():
+  # Save the value returned from the monday() function into a variable
+  # and then print that variable:
+  monday_name = monday()
+  print(monday_name)
+
+  # Same idea as for monday, we but could re-use the same variable for 
+  # other days of the week if we want to:  
+  day = tuesday()
+  print(day)
+
+  day = wednesday()
+  print(day)
+
+  # We don't absolutely have to save the return value into a variable,
+  # we could just print the returned value directly:
+  print(thursday())
+  print(friday())
+
+  # And lastly, we could also call the functions from inside { } in an
+  # f-string and print these weekdays on separate lines using a
+  # multi-line f-string:
+  print(f"""{saturday()}
+{sunday()}""")
+
+# Finally, tell Python to run the print_week function
+# that will in turn call all of the other function.
+print_week()
+```
+:::
+
+
 ### Sumthings up
 
 Write a simple function called `calculate_sum()` which takes two numbers as input and returns the sum. Call (*invoke*) the function `calculate_sum()` with values 3, 4 and print the returned value.
 
-```{pyodide}
+```pyodide
 # start with the function definition:
 
 # and then call the function:
