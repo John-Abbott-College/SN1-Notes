@@ -63,7 +63,11 @@ else:
 print("The larger number is:", larger_number)
 ```
 
-✍️**Challenge**: Write a Python program that asks the user to input a number and then checks if the number is even or odd.
+✍️**Challenge**: assign a number to a variable and then check if the number is even or odd.
+
+```pyodide
+
+```
 
 ## The elif statement
 
