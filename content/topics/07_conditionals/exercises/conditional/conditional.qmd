@@ -159,7 +159,7 @@ if 0 <= temperature < 16:
     <p>Take care to be precise about whether something is strictly less/greater than, or less/greater than or equal to (it's different!)</p>
   </details>
 :::{.callout-tip title="Solution" collapse="true"}
-If the temperature is greater than or equal to 0, or if the temperature is less than 16, a message saying "It is chilly outside." is displayed.
+If the temperature is greater than or equal to 0 and if the temperature is less than 16, a message saying "It is chilly outside." is displayed.
 :::
 
 
