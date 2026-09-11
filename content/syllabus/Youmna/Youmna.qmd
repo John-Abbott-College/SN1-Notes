@@ -138,14 +138,12 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 ## 💻 In class
 
+- ✏️ **Quiz 2 (1%)**: Assignments operators 
 - Short demo on assignment operators
 - Practice exercise on conditional statements 
-
-- ✏️ **Quiz 2 (1%)**: Assignments operators and `if` statements
 - Quiz recap
 - Using other math functions from the `math` module.
 - Assignment 1 - Part 3 (final part)
-
 
 
 ## 🚀 After class
@@ -160,14 +158,14 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 ## 📚 Prep 
 
 - Go over the notes:
-  - Turtle Graphics (notes coming soon)
-  - Custom Functions (notes coming soon)
-  - For loops - introduction (notes coming soon)
+  - Conditional [`if/else`](https://john-abbott-college.github.io/SN1-Notes/topics/07_conditionals/02_if_else_statements/02_if_else_statements.html){target="_blank"}
+  - [What are functions?](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/01_what_are_functions/01_what_are_functions.html){target="_blank"}
+
 
 
 
 ## 💻 In class
-
+-- ✏️ **Quiz 3 (1%)**: Conditional statements
 - Drawing shapes with turtle graphics
 - Introduction to **function parameters**
 - Exercise on identifying parameters of a shape and re-draw it in multiple variations.
@@ -180,17 +178,17 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 - Prepare for next class
 
  
+<!-- 
 
 # Week 6
 
 ## 📚 Prep 
 
 - Go over the notes:
-  - Conditional `if/else` (notes coming soon)
-  - Custom Functions (notes coming soon)
-  - Function scopes (notes coming soon)
-  - Try the practice questions (coming soon)
 
+  - [Custom Functions](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/04_custom_functions/04_custom_functions.html){target="_blank"}
+  - Try the [practice questions](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/exercises/custom_functions/many_mini_functions.html#rectangle_area){target="_blank"}
+  - For loops (coming soon...)
 
 
 ## 💻 In class
@@ -199,9 +197,9 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
   - Parameters
   - Return
   - Scope
-- **Quiz 3** (1%): Functions 
+- **Quiz 4** (1%): Functions 
 - Functions with conditonals statements
-- Assignment 2 - Part 2 (completing the functions in class - this is auto-graded)
+- Assignment 2 - Part 2 (submitted in class)
 
 ## 🚀 After class
 
@@ -209,7 +207,7 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 
 
-# Week 6
+# Week 7
 
 ## 📚 Prep 
 
@@ -220,8 +218,6 @@ Go over:
 ## 💻 In class
 
 - Short Demo on drawing complex shapes with loops
-
-- **Quiz 4** (1%): Functions (again- but harder)
 - **In teams of 2:** Complete the Assignment 2 - Part 3 (demo in class)
 
 ## 🚀 After class
@@ -230,6 +226,8 @@ Go over:
 
 
 
-# Week 7
+# Week 8
 
-Coming soon...
+Coming soon... 
+
+-->
