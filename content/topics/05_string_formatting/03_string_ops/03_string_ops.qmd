@@ -3,7 +3,7 @@ title: "String Operations"
 editor:
   render-on-save: true
 ---
-::: {.callout-warning .objectives icon="false" title="☆ Learning Objectives "}
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
 - **Perform** string concatenations using `+`
 - **Perform** a string multiplication with the `*`
 - **Perform** string splitting

@@ -4,7 +4,7 @@ editor:
   render-on-save: true
 ---
 
-::: {.callout-warning .objectives icon="false" title="☆ Learning Objectives "}
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
 - **Select** the appropriate f-string formatting (not memorize) to achieve the expected output.
 :::
 
