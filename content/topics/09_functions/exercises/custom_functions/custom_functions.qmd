@@ -364,6 +364,10 @@ $$
 A_{circle} = \pi r^2
 $$
 
+```{pyodide}
+
+```
+
 - Calculate the area of a circle with `radius = 2` by using the function defined above.
 - Calculate the area of a circle with `radius = 9` by using the function defined above.
 - Calculate the area of a ring which has an inner circle of radius 4 and an outer circle of radius 6.
