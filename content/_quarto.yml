@@ -79,6 +79,7 @@ website:
     #   - topics/09_functions/05_scope/05_scope.qmd
     #   - topics/09_functions/06_type_hinting/06_type_hinting.qmd
       - topics/09_functions/exercises/custom_functions/custom_functions.qmd
+      - topics/09_functions/exercises/custom_functions/many_mini_functions.qmd
     #   - topics/09_functions/exercises/input_output/input_output.qmd
     
     # - section: Turtle graphics
