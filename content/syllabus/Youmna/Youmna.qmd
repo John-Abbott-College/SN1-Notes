@@ -165,7 +165,8 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 
 ## 💻 In class
--- ✏️ **Quiz 3 (1%)**: Conditional statements
+
+- ✏️ **Quiz 3 (1%)**: Conditional statements
 - Drawing shapes with turtle graphics
 - Introduction to **function parameters**
 - Exercise on identifying parameters of a shape and re-draw it in multiple variations.
