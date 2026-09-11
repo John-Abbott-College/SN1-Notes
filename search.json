@@ -102,7 +102,7 @@
     "href": "syllabus/Youmna/Youmna.html#in-class-4",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n– ✏️ Quiz 3 (1%): Conditional statements - Drawing shapes with turtle graphics - Introduction to function parameters - Exercise on identifying parameters of a shape and re-draw it in multiple variations. - Assignment 2 - Part 1 (submitted in class)"
+    "text": "💻 In class\n\n✏️ Quiz 3 (1%): Conditional statements\nDrawing shapes with turtle graphics\nIntroduction to function parameters\nExercise on identifying parameters of a shape and re-draw it in multiple variations.\nAssignment 2 - Part 1 (submitted in class)"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-4",
@@ -830,7 +830,7 @@
     "href": "topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html",
     "title": "f-string Formatting",
     "section": "",
-    "text": "Warning☆ Learning Objectives\n\n\n\n\nSelect the appropriate f-string formatting (not memorize) to achieve the expected output.\nThis topic is not part of the final assessment, but might be useful for some assignments.\nThis section is about how to format numbers within an f-string.\nWithin the {...} part of the f-string, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nSelect the appropriate f-string formatting (not memorize) to achieve the expected output.\nThis topic is not part of the final assessment, but might be useful for some assignments.\nThis section is about how to format numbers within an f-string.\nWithin the {...} part of the f-string, we can specify how we want our numbers or strings to be formatted (example: left or right aligned, number of characters printed, precision (how many digits) etc.)",
     "crumbs": [
       "String Handling",
       "f-string Formatting"
@@ -1472,7 +1472,7 @@
     "href": "topics/05_string_formatting/03_string_ops/03_string_ops.html",
     "title": "String Operations",
     "section": "",
-    "text": "Warning☆ Learning Objectives\n\n\n\n\nPerform string concatenations using +\nPerform a string multiplication with the *\nPerform string splitting\nPerform string slicing",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nPerform string concatenations using +\nPerform a string multiplication with the *\nPerform string splitting\nPerform string slicing",
     "crumbs": [
       "String Handling",
       "String Operations"
