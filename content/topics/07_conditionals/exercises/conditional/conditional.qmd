@@ -11,6 +11,7 @@ editor:
 :::
 
 
+
 ## 1. Temperature
 Complete the following sample of code given the statement below and print a message when the condition is met:
 

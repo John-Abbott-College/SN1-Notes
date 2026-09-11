@@ -6,7 +6,11 @@ editor:
 ::: {.callout-note .objectives icon="false" title="Learning Objectives Checklist"}
 - [ ] **Combine** multiple conditions using comparison and logical operators.
 - [ ] **Evaluate** complex conditions using operator precedence and parentheses.
-- [ ] **Predict** the output and variable values of a program containing conditional statements.
+- [ ] **Use** `if/else` statements to control program behaviour based on conditions and their opposites.
+- [ ] **Predict** the output and variable values of a program containing `if/else` statements
+- [ ] **Construct** a cascade with multiple conditions in the correct order.
+
+- [ ] **Write** functions requiring conditional logic.
 :::
 
 # ✍️ **Practice**
