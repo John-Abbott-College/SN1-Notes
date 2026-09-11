@@ -1,0 +1,265 @@
+---
+title: "✍️ Complex Conditions"
+editor:
+  render-on-save: true
+---
+::: {.callout-note .objectives icon="false" title="Learning Objectives Checklist"}
+- [ ] **Combine** multiple conditions using comparison and logical operators.
+- [ ] **Evaluate** complex conditions using operator precedence and parentheses.
+- [ ] **Predict** the output and variable values of a program containing conditional statements.
+:::
+
+# ✍️ **Practice**
+
+## 1. Password 2.0
+Complete the following sample of code given the statement below and print a message when the condition is met and another message if it's not met:
+
+   *Display "Successful login" if the password is "L0ngP@33w0rd34512", and "Unsuccessful login" if the password is incorrect* 
+
+```pyodide
+password = "easypassword123"
+
+# Your answer goes here
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Use <code>if</code> and <code>else</code>!</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+password = "easypassword123"
+if password == "L0ngP@33w0rd34512":
+    print("Successful login")
+else:
+    print("Unsuccessful login")
+```
+:::
+
+## 2. Opening Hours
+Complete the following sample of code given the statement below and print a message when the condition is met and another message if it's not met: 
+
+   *Display "The store is open" if the current hour is between 8 and 17, otherwise display the store is closed*:
+
+```pyodide
+current_hour = 21
+
+# Your answer goes here
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Use <code>if</code> and <code>else</code>!</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+if 8 <= current_hour <= 17:
+    print("The store is open")
+else:
+    print("The store is not open")
+  ```
+:::
+
+## 3. Ascending order
+Write a function which takes two numbers as input parameters and prints the two numbers in ascending order (no return):
+
+```pyodide
+def order_ascend(num1:int, num2:int):
+    # Your answer goes here
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>You should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def order_ascending(num1: int, num2: int):
+    if num1 < num2:
+        print(num1, num2)
+    else:
+        print(num2, num1)
+
+order_ascending(10, 8)        
+```
+:::
+
+## 4. Code to English 
+Translate the following python code to English:
+
+```python
+def print_salary(salary, paygrade, level):
+    if paygrade == 7:
+        if 0 <= level <= 8:
+            salary *= 1.05
+        else:
+            salary *= 1.04
+    else:
+        salary *= 1.06
+    print("Your salary is", salary)
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Your answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+If the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.
+:::
+
+## 5. Temperature ranges
+Write a program which asks the user for the temperature. The program prints a different message for each of the following condition:
+
+   *If the temperature is:*
+
+   - above 25:  *it's hot outside*
+   - below 25 but above 15: *it's pretty warm outside*
+   - below 15 but above 0: *it's pretty chill outside*.
+   - below zero:  *it's freezing outside*
+
+```pyodide
+# To be completed...
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+temperature = float(input("Please enter the temperature: "))
+
+if temperature >= 25.0:
+    print("It's hot outside")
+elif temperature >= 15.0:
+    print("It's pretty warm outside")
+elif temperature >= 0.0:
+    print("It's chill outside")
+else: 
+    print("It's freezing outside")
+```
+:::
+
+
+# 🧩 **Problem Solving**
+
+## 1. Car oil
+Write a function which displays "Change your car oil" if a car's mileage either exceeds 5000 km or its been more than 3 months since the last oil change. Additionally, there must at least 80.00$ of savings. 
+
+
+```pyodide
+def print_change_oil(savings: float, mileage: int, months: int):
+    # to be completed
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>You can chain multiple conditions in one if statement using <code>and</code>/<code>or</code>. You can use brackets to control the order of logical operations in a sequence of operations.</p>
+  </details>
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def print_change_oil(savings: float, mileage: int, months: int):
+    if (savings > 80.0) and ((mileage >= 5000) or (months >= 3)):
+        print("Change your car oil")
+```
+:::
+
+
+## 2. Voting eligibility 
+Write a function which displays "You are eligible to vote." if the user is a citizen and if their age at least 18. Otherwise display "You can't vote."
+
+```pyodide
+def print_vote_eligibility(age: int, is_citizen: bool):   	
+    # To be completed...
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>You can use boolean variables directly in an if statement, and can combine them with logical operations using <code>and</code>/<code>or</code>.</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def print_vote_eligibility(age: int, is_citizen: bool): 
+    if age >= 18 and is_citizen:
+        print("You are eligible to vote")
+    else:
+        print("You can't vote")
+```
+:::
+
+## 3. Camping or no?
+Write a function which displays "You can go camping this weekend" if the camping site is available, if it's not raining and they have access to a car. The function must return a boolean if all conditions are met.
+
+```pyodide
+def can_go_camping(is_site_available: bool,is_raining:bool, has_car: bool) -> bool:
+    # To be completed...
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Use the <code>return</code> statement to control what a function returns.</p>
+  </details>
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def can_go_camping(is_site_available: bool, is_raining:bool, has_car: bool) -> bool:
+    if camping_available and not is_raining and has_car: 
+        print("You can go camping this weekend")
+        return True
+    else:
+        return False
+```
+:::
+
+
+## 4. Ascending order
+Write a functions which takes three numbers as input parameters and prints them in ascending order. No return:
+
+```pyodide
+def order_ascending(num1: int, num2: int, num3: int):
+    # Your answer goes here
+```
+
+  <details>
+    <summary>👀 Hint</summary>
+    <p>Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.</p>
+  </details>
+:::{.callout-tip title="One Solution" collapse="true"}
+
+```pyodide
+def order_ascending(num1: int, num2: int, num3: int):
+    if num1 < num2:
+        if num2 < num3:
+            print(num1, num2, num3)
+        elif num1 < num3:
+            print(num1, num3, num2)
+        else:
+            print(num3, num1, num2)
+    elif num1 < num3:
+        print(num2, num1, num3)
+    elif num2 < num3:
+        print(num2, num3, num1)
+    else:
+        print(num3, num2, num1)
+```
+:::
+
+:::{.callout-tip title="Another Solution" collapse="true"}
+```pyodide
+def order_ascending(num1: int, num2: int, num3: int):
+    if num1 < num2 and num2 < num3:
+        print(num1, num2, num3)
+    elif num1 < num2 and num3 < num2:
+        print(num1, num3, num2)
+    elif num2 < num1 and num1 < num3:
+        print(num2, num1, num3)
+    elif num2 < num1 and num3 < num1:
+        print(num2, num3, num1)
+    elif num3 < num2 and num2 < num1:
+        print(num3, num2, num1)
+    else:
+        print(num3,num1,num2)
+```
+:::
+
+
