@@ -85,10 +85,10 @@ website:
       - topics/09_functions/exercises/custom_functions/many_mini_functions.qmd
     #   - topics/09_functions/exercises/input_output/input_output.qmd
     
-    # - section: Turtle graphics
-    #   contents:
-    #   - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
-    #   - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
+    - section: Turtle graphics
+       contents:
+       - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
+       - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
     
     # - section: Lists
     #   contents:
