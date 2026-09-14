@@ -1,5 +1,5 @@
 ---
-title: "Final Exam Study Guide"
+title: "📖 Final Exam Study Guide"
 editor:
   render-on-save: true
 ---
