@@ -1,5 +1,5 @@
 ---
-title: "Basic I/O"
+title: "Print & Input"
 editor:
   render-on-save: true
 ---
@@ -32,6 +32,8 @@ print(a)
 ```
 
 - To print multiple objects, you may use the comma separator`,` between the objects. The various printed objects will be separated by a space ' ':
+
+> **Note**: Some teachers may prefer that you always use an f-string instead of combining values with a comma in this style.
 
 ```python
 a = 10
@@ -71,13 +73,13 @@ name = input()
 - The question asked to the user can be specified in between parenthesis:
 
 ```python
-name = input("What is your name?")
+name = input("What is your name? ")
 ```
 
 - The returned value of the `input()` function is always a string `str`:
 
 ```python
-age = input("What is your age?")
+age = input("What is your age? ")
 age + 3           # <--- error
 print(type(age))  # This will return `<class str>`
 ```
@@ -92,7 +94,7 @@ age + 3
 - You must be careful to use the correct data type for conversion because if the user inputs a value of a wider type, this will cause an error:
 
 ```python
-height = int(input("What is your height?"))
+height = int(input("What is your height? "))
 print(height)
 ```
 
@@ -103,7 +105,7 @@ print(height)
 - In this case, the correct conversion function is `float()`:
 
 ```python
-height = float(input("What is your height?"))
+height = float(input("What is your height? "))
 print(height)
 ```
 
@@ -134,13 +136,21 @@ print("hi")  name age height # <--- ERROR
 
 **Possible answer 1**
 
+Use `f-strings`
+
+```python
+print(f"hi {name} your age is: {age} and your height is: {height}")
+```
+
+**Possible answer 2**
+
 Combining strings using the `+` operator.
 
 ```
 print("hi " + name + " your age is: " + str(age) + " and your height is: " + str(height))
 ```
 
-**Possible answer 2**
+**Possible answer 3**
 
 Use comma `,` to separate multiple objects within the `print()` call
 
@@ -148,13 +158,7 @@ Use comma `,` to separate multiple objects within the `print()` call
 print("hi ", name, "your age is :", age, " and your height is: ", height)
 ```
 
-**Possible answer 3**
 
-Use `f-strings`
-
-```python
-print(f"hi {name}  your age is: {age} and your height is: {height}")
-```
 
 **Answer instead of a question**
 
@@ -163,7 +167,7 @@ name = input("Robert")  # <--- Error: putting the answer instead of question
 ```
 
 ```python
-name = input("What is your name?")
+name = input("What is your name? ")
 ```
 
 **Using `input` everywhere**

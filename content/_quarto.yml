@@ -76,14 +76,14 @@ website:
     - section: Functions
       contents:
       - topics/09_functions/01_what_are_functions/01_what_are_functions.qmd
-    #   - topics/09_functions/02_math_functions/02_math_functions.qmd
-    #   - topics/09_functions/03_io/03_io.qmd
+      - topics/09_functions/02_math_functions/02_math_functions.qmd
+      - topics/09_functions/03_io/03_io.qmd
       - topics/09_functions/04_custom_functions/04_custom_functions.qmd
-    #   - topics/09_functions/05_scope/05_scope.qmd
+      - topics/09_functions/05_scope/05_scope.qmd
     #   - topics/09_functions/06_type_hinting/06_type_hinting.qmd
       - topics/09_functions/exercises/custom_functions/custom_functions.qmd
       - topics/09_functions/exercises/custom_functions/many_mini_functions.qmd
-    #   - topics/09_functions/exercises/input_output/input_output.qmd
+      - topics/09_functions/exercises/input_output/input_output.qmd
     
     - section: Turtle graphics
       contents:
