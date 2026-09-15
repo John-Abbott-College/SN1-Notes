@@ -26,10 +26,12 @@ password = "easypassword123"
 # Your answer goes here
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Use <code>if</code> and <code>else</code>!</p>
-  </details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use `if` and `else`!
+:::
+:::
+
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 password = "easypassword123"
@@ -51,10 +53,12 @@ current_hour = 21
 # Your answer goes here
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Use <code>if</code> and <code>else</code>!</p>
-  </details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use `if` and `else`!
+:::
+:::
+
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 if 8 <= current_hour <= 17:
@@ -71,11 +75,12 @@ Write a function which takes two numbers as input parameters and prints the two 
 def order_ascend(num1:int, num2:int):
     # Your answer goes here
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>You should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.</p>
-  </details>
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 def order_ascending(num1: int, num2: int):
@@ -102,11 +107,12 @@ def print_salary(salary, paygrade, level):
         salary *= 1.06
     print("Your salary is", salary)
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Your answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Your answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.</p>
-  </details>
 :::{.callout-tip title="Solution" collapse="true"}
 If the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.
 :::
@@ -124,11 +130,12 @@ Write a program which asks the user for the temperature. The program prints a di
 ```pyodide
 # To be completed...
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.</p>
-  </details>
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 temperature = float(input("Please enter the temperature: "))
@@ -155,11 +162,11 @@ Write a function which displays "Change your car oil" if a car's mileage either 
 def print_change_oil(savings: float, mileage: int, months: int):
     # to be completed
 ```
-
-  <details>
-    <summary>👀 Hint</summary>
-    <p>You can chain multiple conditions in one if statement using <code>and</code>/<code>or</code>. You can use brackets to control the order of logical operations in a sequence of operations.</p>
-  </details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You can chain multiple conditions in one if statement using <code>and</code>/<code>or</code>. You can use brackets to control the order of logical operations in a sequence of operations.
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
@@ -177,11 +184,12 @@ Write a function which displays "You are eligible to vote." if the user is a cit
 def print_vote_eligibility(age: int, is_citizen: bool):   	
     # To be completed...
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You can use boolean variables directly in an if statement, and can combine them with logical operations using <code>and</code>/<code>or</code>.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>You can use boolean variables directly in an if statement, and can combine them with logical operations using <code>and</code>/<code>or</code>.</p>
-  </details>
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 def print_vote_eligibility(age: int, is_citizen: bool): 
@@ -199,11 +207,12 @@ Write a function which displays "You can go camping this weekend" if the camping
 def can_go_camping(is_site_available: bool,is_raining:bool, has_car: bool) -> bool:
     # To be completed...
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use the <code>return</code> statement to control what a function returns.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Use the <code>return</code> statement to control what a function returns.</p>
-  </details>
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 def can_go_camping(is_site_available: bool, is_raining:bool, has_car: bool) -> bool:
@@ -223,11 +232,12 @@ Write a functions which takes three numbers as input parameters and prints them 
 def order_ascending(num1: int, num2: int, num3: int):
     # Your answer goes here
 ```
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.
+:::
+:::
 
-  <details>
-    <summary>👀 Hint</summary>
-    <p>Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.</p>
-  </details>
 :::{.callout-tip title="One Solution" collapse="true"}
 
 ```pyodide
