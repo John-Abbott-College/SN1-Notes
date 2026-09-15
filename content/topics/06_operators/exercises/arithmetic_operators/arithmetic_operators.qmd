@@ -26,10 +26,11 @@ print(x ** y)
 print(x // y)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>What does the <code>**</code> operator do? What does the <code>//</code> operator do?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```
@@ -44,10 +45,11 @@ print(x // y)
 print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>The <code>print</code> function will insert a space between each comma-separated argument.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```
@@ -62,10 +64,11 @@ Wha't the output and resulting data type of the following program?
 print(1/1)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Does the <code>/</code> operator return an <code>int</code> or <code>float</code>?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```
@@ -82,10 +85,11 @@ x = 1 / 2 + 3 // 3 + 4 ** 2
 print(x)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Remember the PEDMAS (bracket/exponent/division/multiplication/addition/subtraction) rules!</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```
@@ -104,10 +108,11 @@ y = y % x
 print(y)
 ```
 
-<details>
-<summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
 <p>Make sure you pay attention to the changes in <code>x</code> and <code>y</code> from line to line.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```
@@ -190,15 +195,18 @@ Given a required number of eggs (`num_eggs`), where eggs can only be purchased i
 For example, if I need 24 eggs, I should purchase 2 containers of 12 rather than 1 container of 30.
 
 Complete the following code:
-<details>
-  <summary>👀 Hint 1</summary>
-  <p>Start by figuring out how many of the largest containers you can buy without exceeding the number of eggs you need.</p>
-</details>
 
-<details>
-  <summary>👀 Hint 2</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint 1" collapse="true"}
+  <p>Start by figuring out how many of the largest containers you can buy without exceeding the number of eggs you need.</p>
+:::
+:::
+
+:::{.callout-hint}
+:::{.callout-note title="Hint 2" collapse="true"}
   <p>Calculate how many eggs are still needed after buying the largest containers, then repeat the process with the next container size.</p>
-</details>
+:::
+:::
 
 
 ```{pyodide}
