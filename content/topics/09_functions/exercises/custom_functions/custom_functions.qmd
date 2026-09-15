@@ -62,10 +62,11 @@ print_week()
 ### Daily Practice 2
 Do something similar to the previous exercise, but do not print anything inside the 7 weekday functions. Only use a `print()` statement in the `print_week()` function. The output should be the same as the previous exercise.
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>If a function is not printing values, how can the code that called that function get something back for its own use?</p>
-</details>
+:::
+:::
 
 ```{pyodide}
 
@@ -138,10 +139,11 @@ Write a simple function called `calculate_sum()` which takes two numbers as inpu
 
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>What would you expect this function to "return"</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -218,10 +220,11 @@ Then, use it to evaluate $f(x)$ for the values of $x$:
 
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>What would you expect this function to "return"</p>
-</details>
+:::
+:::
 
 
 :::{.callout-tip title="Solution" collapse="true"}
@@ -372,10 +375,11 @@ $$
 - Calculate the area of a circle with `radius = 9` by using the function defined above.
 - Calculate the area of a ring which has an inner circle of radius 4 and an outer circle of radius 6.
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>What do you need to import for this to work?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -482,10 +486,11 @@ derivative1 = power_rule(3)
 print(derivative1)
 ```
 
-<details>
-  <summary>👀 Hint </summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Your function must return a string. An f-string would be really useful here!</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}

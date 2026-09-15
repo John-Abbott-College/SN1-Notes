@@ -12,10 +12,11 @@ y = input()
 print(x + y)
 ```
 
-<details>
-<summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
 <p>What is the type of data returned by the <code>input()</code> function, and how does the type affect the behavior of the <code>+</code> operator?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```text
@@ -33,10 +34,11 @@ y = int(input())
 print(x + y)
 ```
 
-<details>
-<summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
 <p>How does the <code>int()</code> function change the data, and how does that affect the <code>+</code> operator?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```text
@@ -53,10 +55,11 @@ y = int(input())
 print(x * y)
 ```
 
-<details>
-<summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
 <p>Pay attention to the operator being used, and the data types on each side of the operator.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```text
@@ -82,10 +85,11 @@ Please enter another number: 3.5
 6.0
 ```
 
-<details>
-<summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
 <p>There is more than one issue to fix in the code above. Pay attention to the <em>prompt</em> parameter provided to the <code>input</code> function -- what should it be on each line? Also, pay attention to the type of data required in the example output.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```python
@@ -103,10 +107,11 @@ print(num1+ num2)
   print(num1 + num2)
   ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>If you're struggling, this problem is simpler than you think.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -126,10 +131,11 @@ grade3 = input(20)
 average = input((grade1 + grade2 + grade3)/3)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>If you're struggling, this problem is simpler than you think.</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -153,10 +159,11 @@ print The number is num
 The number is 123
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>This is a syntax problem -- how do you tell the print function what statements it should print?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -184,10 +191,11 @@ print("The numbers are " + num1 + num2 + num3)
 The numbers are 123 456 789.0
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>How do you put the values of variables directly into a print statement?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -210,10 +218,11 @@ num2 = 2
 average = print((num1+num2)/2)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Remember that the <code>print</code> function doesn't return any values!</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
@@ -235,10 +244,11 @@ print("The salary after bonus: ") + print(bonus) + print(salary)
 
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Remember that the <code>print</code> function does not return any values, and so you cannot add the result of calling the <code>print</code> function</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
