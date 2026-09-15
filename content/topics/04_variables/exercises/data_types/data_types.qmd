@@ -182,10 +182,11 @@ Make a string to store the following text:
 _The quick brown fox jumps over the lazy dog.Pack my box with five dozen liquor jugs.
 Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack._
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>It's a multi-line string</p>
-</details>
+:::
+:::
 
 :::{.callout-tip collapse="true" title="Solution"}
 ```python
@@ -208,10 +209,11 @@ sum_val = num1 + num2
 print(sum_val)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Double check the data types of the inputs!</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{python}
@@ -241,10 +243,11 @@ average = int((grade1+grade2)/2)
 print(average)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>There is more than one issue in the code above. How are averages calculated? And what type of data should they be?</p>
-</details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```{python}
@@ -263,10 +266,11 @@ $$
 E_p = m \times g \times h
 $$
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Python variable names should be meaningful!</p>
-</details>
+:::
+:::
 
 :::{.callout-tip icon="false" title="Solution" collapse="true"}
 
@@ -292,10 +296,11 @@ Area_{BH} =N \left( \frac{b_1 + b_2}{2}  w + \frac{b_3  w}{2}\right)
 $$
 <img src="assets/BH.png" height=200 width=40%/>
 
-<details>
-  <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
   <p>Use variables and break down the equations in as many terms to make it more readable. </p>
-</details>
+:::
+:::
 
 ```{pyodide}
 
