@@ -23,10 +23,11 @@ temperature = 3.0
 # Your answer goes here
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>What logical operator is needed to express "less than"?</p>
-  </details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
@@ -48,10 +49,11 @@ age = 19
 ```
 
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>What logical operators are needed to express "less than or equal to" and "greater than or equal to"?</p>
-  </details>
+:::
+:::
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 age = 19
@@ -77,10 +79,11 @@ password = "easypassword123"
 # Your answer goes here
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>What logical operator is needed to express "equal to"?</p>
-  </details>
+:::
+:::
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 password = "easypassword123"
@@ -103,10 +106,11 @@ Complete the following sample of code given the statement below and print a mess
   # Your answer goes here
   ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>How can you use a boolean variable in an if statement?</p>
-  </details>
+:::
+:::
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 if bus_arrived:
@@ -128,10 +132,11 @@ increase_amount = 0
 
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>Here you have to test a condition and calculate a percentage, but only if the condition is true.</p>
-  </details>
+:::
+:::
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
       increase_amount = 0
@@ -150,10 +155,11 @@ if r_score >= 30:
     print("You are eligible for the scholarship.")
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>Your answer should be in the form: If (some condition is met), then (some event takes place).</p>
-  </details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 If the r-score is above 30, a message saying "You are eligible for a scholarship" is displayed.
@@ -169,10 +175,11 @@ if 0 <= temperature < 16:
     print("It is chilly outside.")
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>Take care to be precise about whether something is strictly less/greater than, or less/greater than or equal to (it's different!)</p>
-  </details>
+:::
+:::
 :::{.callout-tip title="Solution" collapse="true"}
 If the temperature is greater than or equal to 0 and if the temperature is less than 16, a message saying "It is chilly outside." is displayed.
 :::
@@ -213,10 +220,11 @@ print(f"The humidity is {humidity}")
 print(f"Is it raining outside? {raining_outside}")
 ```
 
-  <details>
-    <summary>👀 Hint</summary>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
     <p>Make sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.</p>
-  </details>
+:::
+:::
 
 :::{.callout-tip title="Solution" collapse="true"}
 The temperature is 9.5  
