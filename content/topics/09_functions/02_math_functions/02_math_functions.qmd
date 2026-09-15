@@ -27,7 +27,14 @@ import math
 
 # note: when you finish a { } in an f-string with the equal sign
 # it will show what comes before the = plus the actual value that
-# was calculated
+# was calculated. This is useful while learning but we won't ask
+# you to write this on a test/exam.
+#
+# For example:
+#     print(f"{my_age=}")
+# would print:
+#     my_age=17
+#
 
 # Rounding up/down:  
 print(f"{math.ceil(5.5)=}")
