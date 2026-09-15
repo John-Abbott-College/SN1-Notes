@@ -1043,7 +1043,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#password-2.0",
     "title": "✍️ Complex Conditions",
     "section": "1. Password 2.0",
-    "text": "1. Password 2.0\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”, and “Unsuccessful login” if the password is incorrect\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "1. Password 2.0\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “Successful login” if the password is “L0ngP@33w0rd34512”, and “Unsuccessful login” if the password is incorrect\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse if and else!\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1054,7 +1054,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#opening-hours",
     "title": "✍️ Complex Conditions",
     "section": "2. Opening Hours",
-    "text": "2. Opening Hours\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “The store is open” if the current hour is between 8 and 17, otherwise display the store is closed:\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nUse if and else!\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "2. Opening Hours\nComplete the following sample of code given the statement below and print a message when the condition is met and another message if it’s not met:\nDisplay “The store is open” if the current hour is between 8 and 17, otherwise display the store is closed:\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse if and else!\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1065,7 +1065,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#ascending-order",
     "title": "✍️ Complex Conditions",
     "section": "3. Ascending order",
-    "text": "3. Ascending order\nWrite a function which takes two numbers as input parameters and prints the two numbers in ascending order (no return):\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nYou should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "3. Ascending order\nWrite a function which takes two numbers as input parameters and prints the two numbers in ascending order (no return):\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou should write a conditional statement that can print the two numbers in a different order, depending on which number is bigger of the two.\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1076,7 +1076,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#code-to-english",
     "title": "✍️ Complex Conditions",
     "section": "4. Code to English",
-    "text": "4. Code to English\nTranslate the following python code to English:\ndef print_salary(salary, paygrade, level):\n    if paygrade == 7:\n        if 0 &lt;= level &lt;= 8:\n            salary *= 1.05\n        else:\n            salary *= 1.04\n    else:\n        salary *= 1.06\n    print(\"Your salary is\", salary)\n\n\n👀 Hint\n\n\nYour answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIf the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.",
+    "text": "4. Code to English\nTranslate the following python code to English:\ndef print_salary(salary, paygrade, level):\n    if paygrade == 7:\n        if 0 &lt;= level &lt;= 8:\n            salary *= 1.05\n        else:\n            salary *= 1.04\n    else:\n        salary *= 1.06\n    print(\"Your salary is\", salary)\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYour answer should be in the form: If (condition) then (some event occurs), otherwise (other event occurs), etc.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIf the paygrade is 7, the salary is determined by the level. If the level is between 0 and 8, then the salary gets a 5% bonus, otherwise the salary gets a 4% bonus. If the paygrade is not 7, the salary gets a 6% bonus.",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1087,7 +1087,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#temperature-ranges",
     "title": "✍️ Complex Conditions",
     "section": "5. Temperature ranges",
-    "text": "5. Temperature ranges\nWrite a program which asks the user for the temperature. The program prints a different message for each of the following condition:\nIf the temperature is:\n\nabove 25: it’s hot outside\nbelow 25 but above 15: it’s pretty warm outside\nbelow 15 but above 0: it’s pretty chill outside.\nbelow zero: it’s freezing outside\n\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "5. Temperature ranges\nWrite a program which asks the user for the temperature. The program prints a different message for each of the following condition:\nIf the temperature is:\n\nabove 25: it’s hot outside\nbelow 25 but above 15: it’s pretty warm outside\nbelow 15 but above 0: it’s pretty chill outside.\nbelow zero: it’s freezing outside\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1098,7 +1098,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#car-oil",
     "title": "✍️ Complex Conditions",
     "section": "1. Car oil",
-    "text": "1. Car oil\nWrite a function which displays “Change your car oil” if a car’s mileage either exceeds 5000 km or its been more than 3 months since the last oil change. Additionally, there must at least 80.00$ of savings.\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nYou can chain multiple conditions in one if statement using and/or. You can use brackets to control the order of logical operations in a sequence of operations.\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "1. Car oil\nWrite a function which displays “Change your car oil” if a car’s mileage either exceeds 5000 km or its been more than 3 months since the last oil change. Additionally, there must at least 80.00$ of savings.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can chain multiple conditions in one if statement using and/or. You can use brackets to control the order of logical operations in a sequence of operations.\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1109,7 +1109,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#voting-eligibility",
     "title": "✍️ Complex Conditions",
     "section": "2. Voting eligibility",
-    "text": "2. Voting eligibility\nWrite a function which displays “You are eligible to vote.” if the user is a citizen and if their age at least 18. Otherwise display “You can’t vote.”\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nYou can use boolean variables directly in an if statement, and can combine them with logical operations using and/or.\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "2. Voting eligibility\nWrite a function which displays “You are eligible to vote.” if the user is a citizen and if their age at least 18. Otherwise display “You can’t vote.”\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can use boolean variables directly in an if statement, and can combine them with logical operations using and/or.\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1120,7 +1120,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#camping-or-no",
     "title": "✍️ Complex Conditions",
     "section": "3. Camping or no?",
-    "text": "3. Camping or no?\nWrite a function which displays “You can go camping this weekend” if the camping site is available, if it’s not raining and they have access to a car. The function must return a boolean if all conditions are met.\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nUse the return statement to control what a function returns.\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "3. Camping or no?\nWrite a function which displays “You can go camping this weekend” if the camping site is available, if it’s not raining and they have access to a car. The function must return a boolean if all conditions are met.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse the return statement to control what a function returns.\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
@@ -1131,7 +1131,7 @@
     "href": "topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#ascending-order-1",
     "title": "✍️ Complex Conditions",
     "section": "4. Ascending order",
-    "text": "4. Ascending order\nWrite a functions which takes three numbers as input parameters and prints them in ascending order. No return:\n\n\n\n\n\n\n\n\n👀 Hint\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n\n\n\n\nTipOne Solution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipAnother Solution",
+    "text": "4. Ascending order\nWrite a functions which takes three numbers as input parameters and prints them in ascending order. No return:\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nMake sure you start from the top and update the values of the variables as each assignment/arithmetic operator is applied, in order to get the correct answer at the end.\n\n\n\n\n\n\n\n\n\n\nTipOne Solution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipAnother Solution",
     "crumbs": [
       "Conditions",
       "✍️ Complex Conditions"
