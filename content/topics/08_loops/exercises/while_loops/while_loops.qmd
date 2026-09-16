@@ -1,0 +1,85 @@
+---
+title: "✍️ While Loops"
+draft: true
+editor:
+  render-on-save: true
+---
+
+## Level 1
+
+### Counter
+Print the numbers 1 through 5 using a `while` loop.
+
+```pyodide
+
+```
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use a variable to keep track of how many times you've printed so far.
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+num = 0
+while num < 5:
+  num += 1          # this is the same as num = num + 1
+  print(num)
+```
+:::
+
+
+### Powers of 2
+Use a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.  
+
+i.e. add 1 + 2 + 3 + 4 + ... until the sum is 30 or larger
+
+> **Bonus**: at the end of the code, print the actual equation and result like:
+`1 + 2 + 3 = 6`
+
+```pyodide
+
+```
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You'll need more than 1 variable for this one.
+:::
+:::
+
+:::{.callout-hint}
+:::{.callout-note title="Hint for bonus" collapse="true"}
+You can keep adding things to a string like:
+```python
+my_name = my_name + " Bond"
+```
+or, using an f-string:
+```python
+my_name = f"{my_name} Bond"
+```
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+number = 1              # the first number we'll add is 1
+sum = 0                 # the sum starts out at zero
+equation = ""           # start with an 'empty' string, and then add onto it
+
+while sum < 30:
+  sum = sum + number    # update our sum
+
+  # Bonus: add "+ number" onto our string version of the equation. To avoid
+  # starting with a +, we handle the first time differently:
+  if equation == "":    # this will be True the very 1st time we go through this loop
+    equation = f"{number}"
+  else:
+    equation = f"{equation} + {number}"
+
+  number = number + 1
+
+print(f"{equation} = {sum}")
+```
+:::
+
