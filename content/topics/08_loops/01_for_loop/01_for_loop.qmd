@@ -98,9 +98,9 @@ This will continue until there are no _things_ left in the sequence.
 **Example: for-loop over a number range**
 
 ```python
-for i in range(3):
-  print("I am at index ", i)
-print ("all done")
+1    for i in range(3):
+2        print(f"I am at index {i}")
+3    print("all done")
 ```
 
 Code trace:
