@@ -159,6 +159,8 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 - Go over the notes:
   - Conditional [`if/else`](https://john-abbott-college.github.io/SN1-Notes/topics/07_conditionals/02_if_else_statements/02_if_else_statements.html){target="_blank"}
+  - [Logical Operators](https://john-abbott-college.github.io/SN1-Notes/topics/06_operators/04_logical_operators/04_logical_operators.html){target="_blank"}
+  - [Try the ✍️ Practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html#practice){target="_blank"}
   - [What are functions?](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/01_what_are_functions/01_what_are_functions.html){target="_blank"}
 
 
@@ -166,11 +168,13 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
 ## 💻 In class
 
+- Going over the **Quiz 2** 
+- Recap of concepts and more whiteboard problem solving
 - ✏️ **Quiz 3 (1%)**: Conditional statements
 - Drawing shapes with turtle graphics
 - Introduction to **function parameters**
 - Exercise on identifying parameters of a shape and re-draw it in multiple variations.
-- Assignment 2 - Part 1 (submitted in class)
+- Practical exercise (submitted in class)
 
 
 
@@ -179,7 +183,7 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 - Prepare for next class
 
  
-<!-- 
+
 
 # Week 6
 
@@ -189,7 +193,7 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 
   - [Custom Functions](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/04_custom_functions/04_custom_functions.html){target="_blank"}
   - Try the [practice questions](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/exercises/custom_functions/many_mini_functions.html#rectangle_area){target="_blank"}
-  - For loops (coming soon...)
+
 
 
 ## 💻 In class
@@ -200,14 +204,15 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
   - Scope
 - **Quiz 4** (1%): Functions 
 - Functions with conditonals statements
-- Assignment 2 - Part 2 (submitted in class)
+- Assignment 2 - Part 1 (submitted in class)
+
 
 ## 🚀 After class
 
 - Prepare for next class
 
 
-
+<!-- 
 # Week 7
 
 ## 📚 Prep 
@@ -219,7 +224,7 @@ Go over:
 ## 💻 In class
 
 - Short Demo on drawing complex shapes with loops
-- **In teams of 2:** Complete the Assignment 2 - Part 3 (demo in class)
+- **In teams of 2:** Complete the Assignment 2 - Part 2 (demo in class)
 
 ## 🚀 After class
 
