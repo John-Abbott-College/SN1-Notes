@@ -8,7 +8,7 @@ editor:
 - **Explain** the purpose of the `for` statement
 - **Write** `for` loops statements using correct syntax
 - **Identify** when a for loop is better than typing the same lines of code many times
-- **Construct** a for loop using different forms of the `range` function, `break` and `continue` statements
+- **Construct** a for loop using different forms of the `range` function
 :::
 
 A `for-loop` allows you to repeat lines of code `n` amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A `for` loop repeats the statement while **counting the "turns"** .
