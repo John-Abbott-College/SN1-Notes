@@ -68,9 +68,10 @@ website:
       - topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.qmd
 
 
-    # - section: Loops
-    #   contents:
-    #   - topics/08_loops/01_for_loop/01_for_loop.qmd
+    - section: Loops
+      contents:
+      - topics/08_loops/01_for_loop/01_for_loop.qmd
+      - topics/08_loops/exercises/for_loops/for_loops.qmd
     #   - topics/08_loops/02_while_loop/02_while_loop.qmd
 
     - section: Functions

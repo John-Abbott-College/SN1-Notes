@@ -4,7 +4,14 @@ editor:
   render-on-save: true
 ---
 
-A `for-loop` allows you to repeat lines of code `n` amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A `for` loop repeats the statement whiling **counting the "turns"** .
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Explain** the purpose of the `for` statement
+- **Write** `for` loops statements using correct syntax
+- **Identify** when a for loop is better than typing the same lines of code many times
+- **Construct** a for loop using different forms of the `range` function, `break` and `continue` statements
+:::
+
+A `for-loop` allows you to repeat lines of code `n` amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A `for` loop repeats the statement while **counting the "turns"** .
 
 The _for_ loop is actually capable of handling more complex tasks, such as **iterating through large collections of data, item by item**. We’ll explore that in more detail soon, but for now, we'll focus on a simpler use of the _for_ loop.
 
@@ -12,16 +19,15 @@ The _for_ loop is actually capable of handling more complex tasks, such as **ite
 
 ```python
 for item in sequence:
-    # do_something()
-
+    # loop body
 ```
 
 Here are some key elements to understand:
 
 - The _for_ keyword starts the loop, and no condition is needed as the loop manages this internally.
-- The variable following the _for_ keyword, known as the **control variable**, automatically tracks the loop’s iterations.
+- The variable following the _for_ keyword, known under the names **control variable**, **loop variable** or **iteration variable** automatically tracks the loop’s iterations.
 - The _in_ keyword defines the sequence of values the control variable will iterate over.
-- The loop body can contain instructions like _do_something()_, but if no action is needed, you can use the _pass_ keyword as a placeholder.
+- The loop body can contain almost any Python code you know. i.e. you can have variables, print(), if-else statements...even more `for` loops!  
 - In the example `for item in sequence:`, the loop will go through each item in the sequence and perform the specified action.
 
 ## Generic `for` loop
@@ -59,6 +65,19 @@ When within a `for` loop,
 
   $$\text{start}, \text{start}+\text{step}, \text{start} + 2*\text{step} ,... \text{end}-1$$
 
+#### `string`
+
+When within a `for` loop,
+
+- `string_variable` will provide the individual characters of the string, one character at a time
+
+```python
+for letter in my_name:
+    print(letter)
+```
+::: {.callout-note .objectives icon="false" title="Advanced Uses" collapse="true"}
+**Lists** and **Files** are topics taught later in the course, so you may want to skip these for now and come back later.
+
 #### `list`
 
 When within a `for` loop,
@@ -70,12 +89,7 @@ When within a `for` loop,
 When within a `for` loop,
 
 - `file` will provide the contents of the file, one line at a time
-
-#### `string`
-
-When within a `for` loop,
-
-- `string_variable` will provide the individual characters of the string, one character at a time
+:::
 
 ## How does a for-loop work?
 
@@ -95,7 +109,21 @@ When the code has finished executing everything in the code block (indicated by 
 
 This will continue until there are no _things_ left in the sequence.
 
-**Example: for-loop over a number range**
+
+## The range() function
+
+In Python, the `range()`function returns a sequence of numbers.
+
+**Example:**
+
+```
+values = range(4)
+```
+
+Here, `range(4)` returns a sequence of **0**, **1**, **2** ,and **3**.
+
+Since the `range()` function returns a sequence of numbers, we can iterate over it using a `for` loop.
+
 
 ```python
 1    for i in range(3):
@@ -113,82 +141,16 @@ Code trace:
 | 2           |     | I am at index 1           |                                                                                           |
 | 1           | 2   |                           | `i` is set to 3rd number in the range sequence (<font color="#939393">0, 1,</font> **2**) |
 | 2           |     | I am at index 2           |                                                                                           |
-| 1           |     |                           | There are no numbers in the range sequence, so for loop quits                             |
+| 1           |     |                           | There are no more numbers in the range sequence, so for loop quits                             |
 | 3           |     | all done                  | No longer in the for loop                                                                 |
 
-**Example: for-loop over a list**
-
-```python
-fib_list = [1, 1, 2, 3, 5 ]
-for number in fib_list:
-  print("The next fibanocci number is ", i)
-print ("all done")
-```
-
-Code trace:
-
-| code line # | number | output printed to console      | comment                                                                                          |
-| ----------- | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------ |
-| 1           | 1      |                                | `number` is set to 1st number in the fib_list [**1**, 1, 2, 3, 5 ]                               |
-| 2           |        | The next fibanocci number is 1 |                                                                                                  |
-| 1           | 1      |                                | `number` is set to 2nd number in the fib_list [<font color="#939393">1</font>, **1**, 2, 3, 5 ]  |
-| 2           |        | The next fibanocci number is 1 |                                                                                                  |
-| 1           | 2      |                                | `number` is set to 3rd number in the fib_list [<font color="#939393">1, 1,</font> **2**, 3, 5 ]  |
-| 2           |        | The next fibanocci number is 2 |                                                                                                  |
-| 1           | 3      |                                | `number` is set to 4th number in the fib_list. [<font color="#939393">1, 1, 2,</font> **3**, 5 ] |
-| 2           |        | The next fibanocci number is 3 |                                                                                                  |
-| 1           | 5      |                                | `number` is set to 5th number in the fib_list. [<font color="#939393">1, 1, 2, 3,</font> **5** ] |
-| 2           |        | The next fibanocci number is 5 |                                                                                                  |
-| 1           |        |                                | There are no numbers left in the fib_list, so quit for-loop                                      |
-| 3           |        | all done                       | No longer in the for loop                                                                        |
-
-**Example: for-loop over a string**
-
-```python
-name = "sandy"
-for character in name:
-  print("Character:",)
-print ("all done")
-```
-
-Code trace:
-
-| code line # | Character | output printed to console | comment                                                                              |
-| ----------- | --------- | ------------------------- | ------------------------------------------------------------------------------------ |
-| 1           | s         |                           | `character` is set to 1st character in name "**s**andy"                              |
-| 2           |           | Character: s              |                                                                                      |
-| 1           | a         |                           | `character` is set to 2nd character in name "<font color="#939393">s</font>**a**ndy" |
-| 2           |           | Character: s              |                                                                                      |
-| 1           | n         |                           | `character` is set to 3rd character in name <font color="#939393">sa</font>**n**dy"  |
-| 2           |           | Character: s              |                                                                                      |
-| 1           | d         |                           | `character` is set to 4th character in name <font color="#939393">san</font>**d**y"  |
-| 2           |           | Character: s              |                                                                                      |
-| 1           | y         |                           | `character` is set to 5th character in name <font color="#939393">sand</font>**y**"  |
-| 2           |           | Character: s              |                                                                                      |
-| 1           |           |                           | There are no more characters in name, so quit for-loop                               |
-| 3           |           | all done                  | No longer in the for loop                                                            |
-
-## The range() function
-
-In Python, the `range()`function returns a sequence of numbers.
 
 **Example:**
 
-```
-values = range(4)
-```
-
-Here, `range(4)` returns a sequence of **0**, **1**, **2** ,and **3**.
-
-Since the `range()` function returns a sequence of numbers, we can iterate over it using a `for` loop.
-
-**Example:**
-
-```python
+```pyodide
 # iterate from i = 0 to i = 4
 for i in range(5):
     print("The value of i is currently", i)
-
 ```
 
 output:
@@ -205,16 +167,16 @@ The loop has been executed 5 times (it's the range() function's argument), the l
 
 ### Two arguments range() function
 
-The range() function invocation may be equipped with two arguments, not just one:
+The range() function invocation may be equipped with two arguments, not just one:  
+`range(start, end)`
 
 ⚠️ **Note:** the range() function **accepts only integers as its arguments**, and generates sequences of integers.
 
 **Example:**
 
-```python
+```pyodide
 for i in range(2, 8):
     print("The value of i is currently", i)
-
 ```
 
 In this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.
@@ -234,17 +196,17 @@ The first value shown is 2 (taken from the range()'s first argument.), and the l
 
 ### Three arguments range() function
 
-The range() function may also accept **three arguments**
+The range() function may also accept **three arguments**:  
+`range(start, end, step)`
 
 **Example:**
 
-```python
+```pyodide
 for i in range(2, 8, 3):
     print("The value of i is currently", i)
-
 ```
 
-The third argument is an **increment** – it's a value added to control the variable at every loop turn (as you may suspect, the **default value of the increment is 1**).
+The third argument is an **increment** or **step**. Its value will be added to the control variable at every loop turn (as you may suspect, the **default value of the increment is 1**).
 
 output:
 
@@ -253,7 +215,64 @@ The value of i is currently 2
 The value of i is currently 5
 ```
 
-## **Examples of Loops Inside Functions**
+## Looping through the characters of a string
+
+```pyodide
+name = "Sandy"
+for character in name:
+  print("Character:", character)
+print("all done")
+```
+
+Code trace:
+
+| code line # | Character | output printed to console | comment                                                                              |
+| ----------- | --------- | ------------------------- | ------------------------------------------------------------------------------------ |
+| 1           | s         |                           | `character` is set to 1st character in name "**S**andy"                              |
+| 2           |           | Character: S              |                                                                                      |
+| 1           | a         |                           | `character` is set to 2nd character in name "<font color="#939393">s</font>**a**ndy" |
+| 2           |           | Character: a              |                                                                                      |
+| 1           | n         |                           | `character` is set to 3rd character in name <font color="#939393">sa</font>**n**dy"  |
+| 2           |           | Character: n              |                                                                                      |
+| 1           | d         |                           | `character` is set to 4th character in name <font color="#939393">san</font>**d**y"  |
+| 2           |           | Character: d              |                                                                                      |
+| 1           | y         |                           | `character` is set to 5th character in name <font color="#939393">sand</font>**y**"  |
+| 2           |           | Character: y              |                                                                                      |
+| 1           |           |                           | There are no more characters in name, so quit for-loop                               |
+| 3           |           | all done                  | No longer in the for loop                                                            |
+
+
+## Looping through the items in a list
+
+```pyodide
+fib_list = [1, 1, 2, 3, 5 ]
+for number in fib_list:
+  print("The next fibonacci number is ", number)
+print("all done")
+```
+
+Code trace:
+
+| code line # | number | output printed to console      | comment                                                                                          |
+| ----------- | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------ |
+| 1           | 1      |                                | `number` is set to 1st number in the fib_list [**1**, 1, 2, 3, 5 ]                               |
+| 2           |        | The next fibonacci number is 1 |                                                                                                  |
+| 1           | 1      |                                | `number` is set to 2nd number in the fib_list [<font color="#939393">1</font>, **1**, 2, 3, 5 ]  |
+| 2           |        | The next fibonacci number is 1 |                                                                                                  |
+| 1           | 2      |                                | `number` is set to 3rd number in the fib_list [<font color="#939393">1, 1,</font> **2**, 3, 5 ]  |
+| 2           |        | The next fibonacci number is 2 |                                                                                                  |
+| 1           | 3      |                                | `number` is set to 4th number in the fib_list. [<font color="#939393">1, 1, 2,</font> **3**, 5 ] |
+| 2           |        | The next fibonacci number is 3 |                                                                                                  |
+| 1           | 5      |                                | `number` is set to 5th number in the fib_list. [<font color="#939393">1, 1, 2, 3,</font> **5** ] |
+| 2           |        | The next fibonacci number is 5 |                                                                                                  |
+| 1           |        |                                | There are no numbers left in the fib_list, so quit for-loop                                      |
+| 3           |        | all done                       | No longer in the for loop                                                                        |
+
+
+## Examples of Loops Inside Functions
+::: {.callout-note .objectives icon="false" title="Note"}
+If you haven't learned **custom functions** yet, then you may want to skip this section and come back later.  
+:::
 
 A `for` loop is often used inside functions to automate repetitive tasks. Here's a breakdown of how loops work with functions in Python.
 
@@ -261,7 +280,7 @@ A `for` loop is often used inside functions to automate repetitive tasks. Here's
 
 This function prints the numbers from 1 to 5 using a `for` loop:
 
-```python
+```pyodide
 def print_numbers():
     for i in range(1, 6):
         print(i)
@@ -273,14 +292,14 @@ print_numbers()
 **Explanation**:
 The `for i in range(1, 6)` loop iterates over the numbers from 1 to 5, printing each value.
 
-#### **Example 2: Sum of All Integers from 1 to `n`**
+#### **Example 2: Sum of All Integers from 1 to `limit`**
 
-This function calculates the sum of all integers from 1 to a given number `n`.
+This function calculates the sum of all integers from 1 to a given number `limit`.
 
-```python
-def sum_numbers(n):
+```pyodide
+def sum_numbers(limit):
     total = 0
-    for i in range(1, n+1):
+    for i in range(1, limit + 1):
         total += i
     return total
 
@@ -288,15 +307,17 @@ def sum_numbers(n):
 print(sum_numbers(5))  # Output: 15 (1+2+3+4+5)
 ```
 
+See how we did limit+1 as the *end* of the sequence because we wanted *limit* to be *included*.
+
 **Explanation**:
-The function uses a loop to sum up all the integers from 1 to `n`. When called with `n = 5`, it returns 15.
+The function uses a loop to sum up all the integers from 1 to `limit`. When called with `limit = 5`, it returns 15.
 
 #### Example 3: Sum of Squares
 
-```python
-def sum_of_squares(n):
+```pyodide
+def sum_of_squares(limit):
     total = 0
-    for i in range(1, n + 1):
+    for i in range(1, limit + 1):
         total += i ** 2
     return total
 
@@ -305,4 +326,4 @@ print(sum_of_squares(4))  # Output: 30 (1^2 + 2^2 + 3^2 + 4^2)
 ```
 
 **Explanation**:
-The function loops through numbers from 1 to `n` and adds the square of each number to the total. For `n = 4`, the result is 30.
+The function loops through numbers from 1 to `limit` and adds the square of each number to the total. For `limit = 4`, the result is 30.

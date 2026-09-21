@@ -8,58 +8,91 @@ editor:
 
 ### Ranges
 
-Print 5 times "hello" using a `for-loop`
+#### Print "hello" 5 times using a `for-loop`
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>how do you create ranges?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+how do you create ranges?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
     for i in range(5):
         print("hello")
-  </code></pre>
-</details>
+```
+:::
 
-### (Fancier) Ranges
+#### Print the values from 1 to 10.
 
-Print the values from 1 to 10.
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+How can you define the start and end of a range?
+:::
+:::
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>How can you define the start and end of a range?</p>
-</details>
-
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
     for i in range(1, 11):
         print(i)
-  </code></pre>
-</details>
+```
+:::
+
+#### Print every 3rd number from 1 to 10.
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+How can you define the start and end of a range?
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+    for i in range(1, 11, 3):
+        print(i)
+```
+:::
+
+#### Print every number from 10 down to 1 (inclusive).
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Did anyone say that you can't use a negative number for the step/increment?
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+    for i in range(10, 0, -1):  # start at 10, stop before 0, change by -1 each turn
+        print(i)
+```
+:::
 
 ### Tracing Loops
 
 What will be the output of this program?
 
 ```python
-grade = 1
+grade = 78
 for _ in range(10):
-	grade+=1
+	grade += 1
+
 print(grade)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>What happens when I add 1 to a grade 10 times?</p>
-</details>
+> Note: it's actually legal to name a variable as just an underscore _ like this and the convention is that we do this when we have to create a variable but we have no intention of actually *using* the variable.
 
-<details>
-  <summary>✅ Solution</summary>
-  <p>11</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+What happens when I add 1 to a grade 10 times?
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```text
+88
+```
+:::
 
 ### Tracing MORE Loops
 
@@ -70,18 +103,21 @@ number = 3
 value = 0
 for i in range(4):
     value += number
+
 print(value)
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>What happens when I add 3 to a value 4 times?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+What happens when I add 3 to a value 4 times?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <p>12</p>
-</details>
+:::{.callout-tip title="Solution" collapse="true"}
+```text
+12
+```
+:::
 
 ## Level 2
 
@@ -96,133 +132,135 @@ Write a program that **prints** the powers of 2 from 2^0 to 2^15. Each line shou
 2 to the power of 15 is 32768
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Think about starting with the smallest power, 2^0, and repeatedly multiplying by 2. The base case is the first power, 2^0 = 1.</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Think about starting with the smallest power, 2^0, and repeatedly multiplying by 2. The base case is the first power, 2^0 = 1.
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
     power = 1
     for expo in range(16):
         print(f"2 to the power of {expo} is {power}")
         power *= 2
-  </code></pre>
-</details>
+```
+:::
 
 ### That's odd
 
 Print only odd numbers up to 100
 
-<details>
-  <summary>👀 Hint</summary>
-  <p><b>A number is even if is divisible by 2</b> and to check divisibility, you can use an operator that gives the remainder of a division. Which operator in Python tells you the remainder when dividing by 2?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+<b>A number is even if is divisible by 2</b> and to check divisibility, you can use an operator that gives the remainder of a division. Which operator in Python tells you the remainder when dividing by 2?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
     for i in range(1, 101):
     if i % 2 != 0:
         print(i)
-  </code></pre>
-</details>
+```
+:::
 
 ### Don't Panic
 
 Print only even numbers up to 100. ONLY if the number is divisible by 42 should you print "DON'T PANIC"
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>How do you check if a number is even? Apply the same idea to test divisibility by 42 👀 </p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+How do you check if a number is even? Apply the same idea to test divisibility by 42 👀
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
     for i in range(100):
         if i % 42 == 0 and i != 0:
             print("DON’T PANIC")
         if i % 42 != 0 and i % 2 == 0:
             print(f"{i} is even")
-  </code></pre>
-</details>
+```
+:::
 
 ### Break-out!
 
 Print numbers between 7 and 100 but stop as soon as you find a number that is divisble by 6.
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Take a break with your rarely used operator modulus (%)</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Take a break with your rarely used operator modulus (%)
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
 for num in range(7, 100):
     if num % 6 == 0:
         print(f"{num} is divisible by 6. Stopping.")
         break
-&nbsp;
+
 print(num)
-  </code></pre>
-</details>
+```
+:::
 
 ### Factorial
 
 Calculate the factorial of a number. Start with:
-<pre><code class="language-python">
+```python
 number: int = int(input("Enter a number: "))
-  </code></pre>
+```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>The factorial of 3 is: 1 x 2 x 3</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+The factorial of 3 is: 1 x 2 x 3
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
 number: int = int(input("Enter a number: "))
 factorial: int = 1
-&nbsp;
+
 for i in range(1, number + 1):
     factorial = factorial * i
+
 print(f"The factorial of {number} is: {factorial}")
-  </code></pre>
-</details>
+```
+:::
 
 
 ### sdrawkcaB
 
 Ask the user to enter some text, then print it backwards (using a loop). Start with:
-<pre><code class="language-python">
+```python
 something: str = input("Type something here: ")
-  </code></pre>
+```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Adding isn't just for numbers!</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Adding isn't just for numbers!
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-something: str = input("Type something here: ")
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+something: str = "eybdoog"
 backwards: str = ""
-&nbsp;
+
 for letter in something:
     backwards = letter + backwards
+
 print(f"You say '{something}', I say '{backwards}'")
-  </code></pre>
-</details>
+```
+:::
 
 ### 46?
 
 Ask yourself what the 2 outputs of this program should be and then try it out and make sure you understand what the code is doing!
-<pre><code class="language-python">
+```{pyodide}
 x: int = 0
 
 for i in "four":
@@ -235,21 +273,22 @@ x = 0
 for i in "six":
     x = x + 1
 print(x)
-</code></pre>
+```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>What value(s) will the loop variable i be assigned as the loops repeat?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+What value(s) will the loop variable i be assigned as the loops repeat?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```text
 4
 3
-  </code></pre>
+
 Each of these loops is iterating across the sequence of characters (e.g. letters) in a string, so a string of length 4 (meaning 4 characters long like "abcd" or "desk" or "four"...) will loop 4 times. This code is essentially counting how many characters are in a string and then printing the result.
-</details>
+```
+:::
 
 ### Clock
 
@@ -261,16 +300,16 @@ Display every minute of every hour in a day like:
 23:58  
 23:59  
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Save yourself a lot of typing by using 2 loops!</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Save yourself a lot of typing by using 2 loops!
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
 for hour in range(0, 24):
     for minute in range(0, 60):
-        print(f"{hour}:{minute}")
-  </code></pre>
-</details>
+        print(f"{hour:02}:{minute:02}") # the :02 formatting option will print the number using 2 digits and will add a zero on the left if needed.
+```
+:::
