@@ -71,6 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../topics/08_loops/exercises/for_loops/for_loops.html" rel="next">
+<link href="../../../topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -356,7 +358,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">For Loop</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/08_loops/01_for_loop/01_for_loop.html">Loops</a></li><li class="breadcrumb-item"><a href="../../../topics/08_loops/01_for_loop/01_for_loop.html">For Loop</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -609,13 +611,36 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Loops</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/08_loops/01_for_loop/01_for_loop.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">For Loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/08_loops/exercises/for_loops/for_loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ For Loops</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/09_functions/01_what_are_functions/01_what_are_functions.html" class="sidebar-item-text sidebar-link">
@@ -668,13 +693,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">Turtle graphics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html" class="sidebar-item-text sidebar-link">
@@ -709,7 +734,9 @@ window.Quarto = {
   <li><a href="#two-arguments-range-function" id="toc-two-arguments-range-function" class="nav-link" data-scroll-target="#two-arguments-range-function">Two arguments range() function</a></li>
   <li><a href="#three-arguments-range-function" id="toc-three-arguments-range-function" class="nav-link" data-scroll-target="#three-arguments-range-function">Three arguments range() function</a></li>
   </ul></li>
-  <li><a href="#examples-of-loops-inside-functions" id="toc-examples-of-loops-inside-functions" class="nav-link" data-scroll-target="#examples-of-loops-inside-functions"><strong>Examples of Loops Inside Functions</strong></a></li>
+  <li><a href="#looping-through-the-characters-of-a-string" id="toc-looping-through-the-characters-of-a-string" class="nav-link" data-scroll-target="#looping-through-the-characters-of-a-string">Looping through the characters of a string</a></li>
+  <li><a href="#looping-through-the-items-in-a-list" id="toc-looping-through-the-items-in-a-list" class="nav-link" data-scroll-target="#looping-through-the-items-in-a-list">Looping through the items in a list</a></li>
+  <li><a href="#examples-of-loops-inside-functions" id="toc-examples-of-loops-inside-functions" class="nav-link" data-scroll-target="#examples-of-loops-inside-functions">Examples of Loops Inside Functions</a></li>
   </ul>
 </nav>
     </div>
@@ -717,7 +744,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/08_loops/01_for_loop/01_for_loop.html">Loops</a></li><li class="breadcrumb-item"><a href="../../../topics/08_loops/01_for_loop/01_for_loop.html">For Loop</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">For Loop</h1>
 </div>
@@ -736,17 +763,36 @@ window.Quarto = {
 </header>
 
 
-<p>A <code>for-loop</code> allows you to repeat lines of code <code>n</code> amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A <code>for</code> loop repeats the statement whiling <strong>counting the “turns”</strong> .</p>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>☆ Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Explain</strong> the purpose of the <code>for</code> statement</li>
+<li><strong>Write</strong> <code>for</code> loops statements using correct syntax</li>
+<li><strong>Identify</strong> when a for loop is better than typing the same lines of code many times</li>
+<li><strong>Construct</strong> a for loop using different forms of the <code>range</code> function, <code>break</code> and <code>continue</code> statements</li>
+</ul>
+</div>
+</div>
+<p>A <code>for-loop</code> allows you to repeat lines of code <code>n</code> amount of times. Imagine a guessing game coded in python which lets the player guess a number. What if the game would like to let the player have 10 tries. A <code>for</code> loop repeats the statement while <strong>counting the “turns”</strong> .</p>
 <p>The <em>for</em> loop is actually capable of handling more complex tasks, such as <strong>iterating through large collections of data, item by item</strong>. We’ll explore that in more detail soon, but for now, we’ll focus on a simpler use of the <em>for</em> loop.</p>
 <p><strong>Example:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> sequence:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do_something()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># loop body</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here are some key elements to understand:</p>
 <ul>
 <li>The <em>for</em> keyword starts the loop, and no condition is needed as the loop manages this internally.</li>
-<li>The variable following the <em>for</em> keyword, known as the <strong>control variable</strong>, automatically tracks the loop’s iterations.</li>
+<li>The variable following the <em>for</em> keyword, known under the names <strong>control variable</strong>, <strong>loop variable</strong> or <strong>iteration variable</strong> automatically tracks the loop’s iterations.</li>
 <li>The <em>in</em> keyword defines the sequence of values the control variable will iterate over.</li>
-<li>The loop body can contain instructions like <em>do_something()</em>, but if no action is needed, you can use the <em>pass</em> keyword as a placeholder.</li>
+<li>The loop body can contain almost any Python code you know. i.e.&nbsp;you can have variables, print(), if-else statements…even more <code>for</code> loops!<br>
+</li>
 <li>In the example <code>for item in sequence:</code>, the loop will go through each item in the sequence and perform the specified action.</li>
 </ul>
 <section id="generic-for-loop" class="level2">
@@ -777,6 +823,27 @@ window.Quarto = {
 <p><span class="math display">\[\text{start}, \text{start}+\text{step}, \text{start} + 2*\text{step} ,... \text{end}-1\]</span></p></li>
 </ul>
 </section>
+<section id="string" class="level4">
+<h4 class="anchored" data-anchor-id="string"><code>string</code></h4>
+<p>When within a <code>for</code> loop,</p>
+<ul>
+<li><code>string_variable</code> will provide the individual characters of the string, one character at a time</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> my_name:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(letter)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="Advanced Uses">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Advanced Uses
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lists</strong> and <strong>Files</strong> are topics taught later in the course, so you may want to skip these for now and come back later.</p>
 <section id="list" class="level4">
 <h4 class="anchored" data-anchor-id="list"><code>list</code></h4>
 <p>When within a <code>for</code> loop,</p>
@@ -791,20 +858,17 @@ window.Quarto = {
 <li><code>file</code> will provide the contents of the file, one line at a time</li>
 </ul>
 </section>
-<section id="string" class="level4">
-<h4 class="anchored" data-anchor-id="string"><code>string</code></h4>
-<p>When within a <code>for</code> loop,</p>
-<ul>
-<li><code>string_variable</code> will provide the individual characters of the string, one character at a time</li>
-</ul>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
 <section id="how-does-a-for-loop-work" class="level2">
 <h2 class="anchored" data-anchor-id="how-does-a-for-loop-work">How does a for-loop work?</h2>
 <p>Given the following code</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable <span class="kw">in</span> sequence:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(variable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable <span class="kw">in</span> sequence:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(variable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>As the code starts, the variable will be set to the very 1st <em>thing</em> in the sequence (whatever that thing is)</p>
 <p>When the code has finished executing everything in the code block (indicated by indentations), then</p>
 <ul>
@@ -812,10 +876,17 @@ window.Quarto = {
 <li><em>variable</em> will be set the the <em>next</em> thing in the sequence</li>
 </ul>
 <p>This will continue until there are no <em>things</em> left in the sequence.</p>
-<p><strong>Example: for-loop over a number range</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>        <span class="bu">print</span>(<span class="ss">f"I am at index </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>    <span class="bu">print</span>(<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-range-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-range-function">The range() function</h2>
+<p>In Python, the <code>range()</code>function returns a sequence of numbers.</p>
+<p><strong>Example:</strong></p>
+<pre><code>values = range(4)</code></pre>
+<p>Here, <code>range(4)</code> returns a sequence of <strong>0</strong>, <strong>1</strong>, <strong>2</strong> ,and <strong>3</strong>.</p>
+<p>Since the <code>range()</code> function returns a sequence of numbers, we can iterate over it using a <code>for</code> loop.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>        <span class="bu">print</span>(<span class="ss">f"I am at index </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>    <span class="bu">print</span>(<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Code trace:</p>
 <table class="caption-top table">
 <colgroup>
@@ -873,7 +944,7 @@ window.Quarto = {
 <td>1</td>
 <td></td>
 <td></td>
-<td>There are no numbers in the range sequence, so for loop quits</td>
+<td>There are no more numbers in the range sequence, so for loop quits</td>
 </tr>
 <tr class="even">
 <td>3</td>
@@ -883,11 +954,177 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>Example: for-loop over a list</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fib_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span> ]</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> fib_list:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"The next fibanocci number is "</span>, i)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Example:</strong></p>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBpdGVyYXRlIGZyb20gaSA9IDAgdG8gaSA9IDRcbmZvciBpIGluIHJhbmdlKDUpOlxuICAgIHByaW50KFwiVGhlIHZhbHVlIG9mIGkgaXMgY3VycmVudGx5XCIsIGkpIn0=
+</script>
+</div>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">0</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">1</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The loop has been executed 5 times (it’s the range() function’s argument), the last control variable’s value is 4 (not 5, as <strong>it starts from 0</strong>, not from 1)</p>
+<section id="two-arguments-range-function" class="level3">
+<h3 class="anchored" data-anchor-id="two-arguments-range-function">Two arguments range() function</h3>
+<p>The range() function invocation may be equipped with two arguments, not just one:<br>
+<code>range(start, end)</code></p>
+<p>⚠️ <strong>Note:</strong> the range() function <strong>accepts only integers as its arguments</strong>, and generates sequences of integers.</p>
+<p><strong>Example:</strong></p>
+<div>
+<div id="pyodide-2" class="exercise-cell">
+
+</div>
+<script type="pyodide-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZm9yIGkgaW4gcmFuZ2UoMiwgOCk6XG4gICAgcHJpbnQoXCJUaGUgdmFsdWUgb2YgaSBpcyBjdXJyZW50bHlcIiwgaSkifQ==
+</script>
+</div>
+<p>In this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.</p>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">6</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">7</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first value shown is 2 (taken from the range()’s first argument.), and the last is 7 (although the range()’s second argument is 8).</p>
+</section>
+<section id="three-arguments-range-function" class="level3">
+<h3 class="anchored" data-anchor-id="three-arguments-range-function">Three arguments range() function</h3>
+<p>The range() function may also accept <strong>three arguments</strong>:<br>
+<code>range(start, end, step)</code></p>
+<p><strong>Example:</strong></p>
+<div>
+<div id="pyodide-3" class="exercise-cell">
+
+</div>
+<script type="pyodide-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZm9yIGkgaW4gcmFuZ2UoMiwgOCwgMyk6XG4gICAgcHJpbnQoXCJUaGUgdmFsdWUgb2YgaSBpcyBjdXJyZW50bHlcIiwgaSkifQ==
+</script>
+</div>
+<p>The third argument is an <strong>increment</strong> or <strong>step</strong>. Its value will be added to the control variable at every loop turn (as you may suspect, the <strong>default value of the increment is 1</strong>).</p>
+<p>output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="looping-through-the-characters-of-a-string" class="level2">
+<h2 class="anchored" data-anchor-id="looping-through-the-characters-of-a-string">Looping through the characters of a string</h2>
+<div>
+<div id="pyodide-4" class="exercise-cell">
+
+</div>
+<script type="pyodide-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibmFtZSA9IFwiU2FuZHlcIlxuZm9yIGNoYXJhY3RlciBpbiBuYW1lOlxuICBwcmludChcIkNoYXJhY3RlcjpcIiwgY2hhcmFjdGVyKVxucHJpbnQoXCJhbGwgZG9uZVwiKSJ9
+</script>
+</div>
+<p>Code trace:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 19%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>code line #</th>
+<th>Character</th>
+<th>output printed to console</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>s</td>
+<td></td>
+<td><code>character</code> is set to 1st character in name “<strong>S</strong>andy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: S</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>a</td>
+<td></td>
+<td><code>character</code> is set to 2nd character in name “<font color="#939393">s</font><strong>a</strong>ndy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: a</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>n</td>
+<td></td>
+<td><code>character</code> is set to 3rd character in name <font color="#939393">sa</font><strong>n</strong>dy”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: n</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>d</td>
+<td></td>
+<td><code>character</code> is set to 4th character in name <font color="#939393">san</font><strong>d</strong>y”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: d</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>y</td>
+<td></td>
+<td><code>character</code> is set to 5th character in name <font color="#939393">sand</font><strong>y</strong>”</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td>Character: y</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td></td>
+<td></td>
+<td>There are no more characters in name, so quit for-loop</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>all done</td>
+<td>No longer in the for loop</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="looping-through-the-items-in-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="looping-through-the-items-in-a-list">Looping through the items in a list</h2>
+<div>
+<div id="pyodide-5" class="exercise-cell">
+
+</div>
+<script type="pyodide-5-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZmliX2xpc3QgPSBbMSwgMSwgMiwgMywgNSBdXG5mb3IgbnVtYmVyIGluIGZpYl9saXN0OlxuICBwcmludChcIlRoZSBuZXh0IGZpYm9uYWNjaSBudW1iZXIgaXMgXCIsIG51bWJlcilcbnByaW50KFwiYWxsIGRvbmVcIikifQ==
+</script>
+</div>
 <p>Code trace:</p>
 <table class="caption-top table">
 <colgroup>
@@ -914,7 +1151,7 @@ window.Quarto = {
 <tr class="even">
 <td>2</td>
 <td></td>
-<td>The next fibanocci number is 1</td>
+<td>The next fibonacci number is 1</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -926,7 +1163,7 @@ window.Quarto = {
 <tr class="even">
 <td>2</td>
 <td></td>
-<td>The next fibanocci number is 1</td>
+<td>The next fibonacci number is 1</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -938,7 +1175,7 @@ window.Quarto = {
 <tr class="even">
 <td>2</td>
 <td></td>
-<td>The next fibanocci number is 2</td>
+<td>The next fibonacci number is 2</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -950,7 +1187,7 @@ window.Quarto = {
 <tr class="even">
 <td>2</td>
 <td></td>
-<td>The next fibanocci number is 3</td>
+<td>The next fibonacci number is 3</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -962,7 +1199,7 @@ window.Quarto = {
 <tr class="even">
 <td>2</td>
 <td></td>
-<td>The next fibanocci number is 5</td>
+<td>The next fibonacci number is 5</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -979,192 +1216,68 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>Example: for-loop over a string</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"sandy"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> character <span class="kw">in</span> name:</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Character:"</span>,)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"all done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Code trace:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 6%">
-<col style="width: 19%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>code line #</th>
-<th>Character</th>
-<th>output printed to console</th>
-<th>comment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>s</td>
-<td></td>
-<td><code>character</code> is set to 1st character in name “<strong>s</strong>andy”</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td></td>
-<td>Character: s</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>a</td>
-<td></td>
-<td><code>character</code> is set to 2nd character in name “<font color="#939393">s</font><strong>a</strong>ndy”</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td></td>
-<td>Character: s</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>n</td>
-<td></td>
-<td><code>character</code> is set to 3rd character in name <font color="#939393">sa</font><strong>n</strong>dy”</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td></td>
-<td>Character: s</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>d</td>
-<td></td>
-<td><code>character</code> is set to 4th character in name <font color="#939393">san</font><strong>d</strong>y”</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td></td>
-<td>Character: s</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>y</td>
-<td></td>
-<td><code>character</code> is set to 5th character in name <font color="#939393">sand</font><strong>y</strong>”</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td></td>
-<td>Character: s</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td></td>
-<td></td>
-<td>There are no more characters in name, so quit for-loop</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td></td>
-<td>all done</td>
-<td>No longer in the for loop</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="the-range-function" class="level2">
-<h2 class="anchored" data-anchor-id="the-range-function">The range() function</h2>
-<p>In Python, the <code>range()</code>function returns a sequence of numbers.</p>
-<p><strong>Example:</strong></p>
-<pre><code>values = range(4)</code></pre>
-<p>Here, <code>range(4)</code> returns a sequence of <strong>0</strong>, <strong>1</strong>, <strong>2</strong> ,and <strong>3</strong>.</p>
-<p>Since the <code>range()</code> function returns a sequence of numbers, we can iterate over it using a <code>for</code> loop.</p>
-<p><strong>Example:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate from i = 0 to i = 4</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>output:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">0</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">1</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The loop has been executed 5 times (it’s the range() function’s argument), the last control variable’s value is 4 (not 5, as <strong>it starts from 0</strong>, not from 1)</p>
-<section id="two-arguments-range-function" class="level3">
-<h3 class="anchored" data-anchor-id="two-arguments-range-function">Two arguments range() function</h3>
-<p>The range() function invocation may be equipped with two arguments, not just one:</p>
-<p>⚠️ <strong>Note:</strong> the range() function <strong>accepts only integers as its arguments</strong>, and generates sequences of integers.</p>
-<p><strong>Example:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">8</span>):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In this case, the first argument determines the initial (first) value of the control variable. The last argument shows the first value the control variable will not be assigned.</p>
-<p>output:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">3</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">4</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">6</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">7</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The first value shown is 2 (taken from the range()’s first argument.), and the last is 7 (although the range()’s second argument is 8).</p>
-</section>
-<section id="three-arguments-range-function" class="level3">
-<h3 class="anchored" data-anchor-id="three-arguments-range-function">Three arguments range() function</h3>
-<p>The range() function may also accept <strong>three arguments</strong></p>
-<p><strong>Example:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">3</span>):</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The value of i is currently"</span>, i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The third argument is an <strong>increment</strong> – it’s a value added to control the variable at every loop turn (as you may suspect, the <strong>default value of the increment is 1</strong>).</p>
-<p>output:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">2</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>The value of i <span class="kw">is</span> currently <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 </section>
 <section id="examples-of-loops-inside-functions" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-loops-inside-functions"><strong>Examples of Loops Inside Functions</strong></h2>
+<h2 class="anchored" data-anchor-id="examples-of-loops-inside-functions">Examples of Loops Inside Functions</h2>
+<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="Note">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you haven’t learned <strong>custom functions</strong> yet, then you may want to skip this section and come back later.</p>
+</div>
+</div>
 <p>A <code>for</code> loop is often used inside functions to automate repetitive tasks. Here’s a breakdown of how loops work with functions in Python.</p>
 <section id="example-1-simple-function-with-a-for-loop" class="level4">
 <h4 class="anchored" data-anchor-id="example-1-simple-function-with-a-for-loop"><strong>Example 1: Simple Function with a For Loop</strong></h4>
 <p>This function prints the numbers from 1 to 5 using a <code>for</code> loop:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_numbers():</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>print_numbers()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div>
+<div id="pyodide-6" class="exercise-cell">
+
+</div>
+<script type="pyodide-6-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHByaW50X251bWJlcnMoKTpcbiAgICBmb3IgaSBpbiByYW5nZSgxLCA2KTpcbiAgICAgICAgcHJpbnQoaSlcblxuIyBDYWxsIHRoZSBmdW5jdGlvblxucHJpbnRfbnVtYmVycygpIn0=
+</script>
+</div>
 <p><strong>Explanation</strong>: The <code>for i in range(1, 6)</code> loop iterates over the numbers from 1 to 5, printing each value.</p>
 </section>
-<section id="example-2-sum-of-all-integers-from-1-to-n" class="level4">
-<h4 class="anchored" data-anchor-id="example-2-sum-of-all-integers-from-1-to-n"><strong>Example 2: Sum of All Integers from 1 to <code>n</code></strong></h4>
-<p>This function calculates the sum of all integers from 1 to a given number <code>n</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_numbers(n):</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> i</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage:</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_numbers(<span class="dv">5</span>))  <span class="co"># Output: 15 (1+2+3+4+5)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explanation</strong>: The function uses a loop to sum up all the integers from 1 to <code>n</code>. When called with <code>n = 5</code>, it returns 15.</p>
+<section id="example-2-sum-of-all-integers-from-1-to-limit" class="level4">
+<h4 class="anchored" data-anchor-id="example-2-sum-of-all-integers-from-1-to-limit"><strong>Example 2: Sum of All Integers from 1 to <code>limit</code></strong></h4>
+<p>This function calculates the sum of all integers from 1 to a given number <code>limit</code>.</p>
+<div>
+<div id="pyodide-7" class="exercise-cell">
+
+</div>
+<script type="pyodide-7-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHN1bV9udW1iZXJzKGxpbWl0KTpcbiAgICB0b3RhbCA9IDBcbiAgICBmb3IgaSBpbiByYW5nZSgxLCBsaW1pdCArIDEpOlxuICAgICAgICB0b3RhbCArPSBpXG4gICAgcmV0dXJuIHRvdGFsXG5cbiMgRXhhbXBsZSB1c2FnZTpcbnByaW50KHN1bV9udW1iZXJzKDUpKSAgIyBPdXRwdXQ6IDE1ICgxKzIrMys0KzUpIn0=
+</script>
+</div>
+<p>See how we did limit+1 as the <em>end</em> of the sequence because we wanted <em>limit</em> to be <em>included</em>.</p>
+<p><strong>Explanation</strong>: The function uses a loop to sum up all the integers from 1 to <code>limit</code>. When called with <code>limit = 5</code>, it returns 15.</p>
 </section>
 <section id="example-3-sum-of-squares" class="level4">
 <h4 class="anchored" data-anchor-id="example-3-sum-of-squares">Example 3: Sum of Squares</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_of_squares(n):</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> i <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test the function</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum_of_squares(<span class="dv">4</span>))  <span class="co"># Output: 30 (1^2 + 2^2 + 3^2 + 4^2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explanation</strong>: The function loops through numbers from 1 to <code>n</code> and adds the square of each number to the total. For <code>n = 4</code>, the result is 30.</p>
+<div>
+<div id="pyodide-8" class="exercise-cell">
+
+</div>
+<script type="pyodide-8-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHN1bV9vZl9zcXVhcmVzKGxpbWl0KTpcbiAgICB0b3RhbCA9IDBcbiAgICBmb3IgaSBpbiByYW5nZSgxLCBsaW1pdCArIDEpOlxuICAgICAgICB0b3RhbCArPSBpICoqIDJcbiAgICByZXR1cm4gdG90YWxcblxuIyBUZXN0IHRoZSBmdW5jdGlvblxucHJpbnQoc3VtX29mX3NxdWFyZXMoNCkpICAjIE91dHB1dDogMzAgKDFeMiArIDJeMiArIDNeMiArIDReMikifQ==
+</script>
+</div>
+<p><strong>Explanation</strong>: The function loops through numbers from 1 to <code>limit</code> and adds the square of each number to the total. For <code>limit = 4</code>, the result is 30.</p>
 
 
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTgiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl84ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS04LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtOC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzggPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzgsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTciLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl83ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS03LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzcgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzcsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl82ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzYgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzUgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS00LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzQgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -1605,6 +1718,18 @@ window._ojs.runtime.interpretFromScriptTags();
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html" class="pagination-link" aria-label="✍️ Complex Conditions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">✍️ Complex Conditions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../topics/08_loops/exercises/for_loops/for_loops.html" class="pagination-link" aria-label="✍️ For Loops">
+        <span class="nav-page-text">✍️ For Loops</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
