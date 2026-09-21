@@ -4,7 +4,7 @@ editor:
   render-on-save: true
 ---
 
-::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
 - **Explain** the purpose of the `elif` statement
 - **Write** `if/elif/else` statements using correct syntax, indentation and conditions.
 - **Identify** when an if/elif/else structure is more appropriate than a simple if/else structure.
