@@ -171,8 +171,10 @@ You can chain multiple conditions in one if statement using <code>and</code>/<co
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 def print_change_oil(savings: float, mileage: int, months: int):
-    if (savings > 80.0) and ((mileage >= 5000) or (months >= 3)):
+    if (savings >= 80.0) and ((mileage > 5000) or (months > 3)):
         print("Change your car oil")
+
+print_change_oil(84.00, 6030, 2)
 ```
 :::
 
