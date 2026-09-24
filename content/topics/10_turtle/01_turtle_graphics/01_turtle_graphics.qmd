@@ -3,6 +3,12 @@ title: "Python Turtle Graphics"
 editor:
   render-on-save: true
 ---
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+- **Use** repetition to create complex shapes and patterns efficiently.
+- **Use** functions to re-draw shapes of different sizes and colours.
+- **Develop** interactive programs by incorporating user input and multiple objects.
+- **Have** fun!
+:::
 
 The `turtle` module in Python is an excellent tool for introducing programming through graphics. It allows you to control a "turtle" that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!
 
@@ -16,9 +22,9 @@ See the [official documentation](https://docs.python.org/3/library/turtle.html) 
 
 Imagine you have a turtle with a pen attached to its tail. This turtle is sitting on a piece of paper.
 
-<img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
+<img src=".assets/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;" /> If the pen is down, and the turtle moves, a line is drawn.
 
-<img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
+<img src="./assets/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;" /> If the pen is up, and the turtle moves, no line is drawn.
 
 - You can tell the turtle to put its pen up or down
 - You can modify the direction that the turtle is facing (turn right or left)
@@ -85,7 +91,7 @@ To draw, tell the turtle to put the pen down. If you want to move the turtle wit
 
 **Example:**
 
-<img src="Notes/turtle/01_turtle_graphics/assets/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;" /> Note that the "arrow" in the image is actually just the default image of the turtle.
+<img src="./assets/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;" /> Note that the "arrow" in the image is actually just the default image of the turtle.
 
 ```python
 # Draw a dashed line
@@ -153,7 +159,7 @@ turtle.setheading(270)  # Turns the turtle to face south
 
 **Example:**
 
-<img src="Notes/turtle/01_turtle_graphics/assets/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;" />
+<img src="./assets/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;" />
 
 ```python
 import turtle
@@ -275,7 +281,7 @@ screen.bgpic("some-image.png") # Sets the background to be an image
 
 ---
 
-<img src="Notes/turtle/01_turtle_graphics/assets/turtle_star_with_colour.png" style="zoom:25%;" />
+<img src="./assets/turtle_star_with_colour.png" style="zoom:25%;" />
 
 ```python
 import turtle
