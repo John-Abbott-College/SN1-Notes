@@ -1,6 +1,6 @@
 ---
 title: "📝 U of Pennsylvania"
-subtitle: "Fall 2024"
+subtitle: "Additional practice exam inspired by the university of Pennsylvania Intro to Python"
 editor:
   render-on-save: true
 ---

@@ -12,6 +12,12 @@ website:
         menu:
         - text: "Youmna"
           href: syllabus/Youmna/Youmna.qmd
+      - text: Final Exam
+        menu:
+        - text: "Previous Years Exams"
+          href: final_exam_prep/final_exam_index.qmd
+        - text: "Reference sheet"
+          href: final_exam_prep/reference_sheet/reference_sheet.qmd
   sidebar:
     style: "docked"
     background: light
@@ -109,14 +115,6 @@ website:
     #   contents:
     #   - topics/13_tooling/13_01_debugger/01_debugger.qmd
 
-    # - section: Final Exam Prep
-    #   contents:
-    #   - topics/14_final_exam_prep/01_study_guide/01_study_guide.qmd
-    #   - topics/14_final_exam_prep/exercises/final_exam_f24/final_exam_f24.qmd
-    #   - topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.qmd
-    #   - topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.qmd
-    #   - topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.qmd
-    #   - topics/14_final_exam_prep/reference_sheet/reference_sheet.qmd
 
       
 format:
