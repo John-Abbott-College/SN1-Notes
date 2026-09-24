@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "final_exam_prep/final_exam_f24/final_exam_f24.html",
+    "href": "final_exam_prep/final_exam_f24/final_exam_f24.html",
+    "title": "📝 Fall 2024",
+    "section": "",
+    "text": "The document below shows questions asked in the Fall 2024 edition of this class.\nThe answers for each question are intended to be written in a separate answer booklet. You can download and print an example answer booklet by clicking this link.\nSolutions will not be provided – you are encouraged to create your own solutions using your access to Thonny/Pycharm to double check your answers.\n\n\nDownload the PDF containing this exam."
+  },
+  {
+    "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html",
+    "href": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html",
+    "title": "📝 U of Pennsylvania",
+    "section": "",
+    "text": "Inspired by the The University of Pennsylvania’s Intro to Python practice exam, I added the questions relevant to our course :)"
+  },
+  {
+    "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-1---list-math",
+    "href": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-1---list-math",
+    "title": "📝 U of Pennsylvania",
+    "section": "Question 1 - List Math 🧮",
+    "text": "Question 1 - List Math 🧮\nWhat will print?\nx = [1, 2, 3]\nx[len(x) - 1] = x[len(x) - x[0]] - x[1]\nprint(x[2])\n\n\n👀 Hint\n\n\nTry drawing out what happens @ each index\n\n\n\n\n✅ Solution\n\n\n1"
+  },
+  {
+    "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-2---lists-loops",
+    "href": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-2---lists-loops",
+    "title": "📝 U of Pennsylvania",
+    "section": "Question 2 - Lists & Loops 🔁",
+    "text": "Question 2 - Lists & Loops 🔁\nWhat will print?\nnumbers = [4, 2, -1]\nx = 1\nfor num in numbers:\n    x = x * numbers\nprint(x)\n\n\n👀 Hint\n\n\nNotice any syntax problems?\n\n\n\n\n✅ Solution\n\n\nnothing shall print cause there’s a problem! U can’t multiple a number by a list"
+  },
+  {
+    "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-3---tracing-functions",
+    "href": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-3---tracing-functions",
+    "title": "📝 U of Pennsylvania",
+    "section": "Question 3 - Tracing Functions 🔍",
+    "text": "Question 3 - Tracing Functions 🔍\nHere’s a python file that features a few cool functions.\ndef func_three(x, y):\n    print(f\"func_three arguments: x={x}, y={y}\")\n    result1 = x * 3\n    result2 = y * 2\n    final_result = result1 + result2\n    print(f\"func_three returning: {final_result}\")\n    return final_result\n\ndef func_two(num):\n    print(\"func_two argument: num=\" + str(num))\n    result = num * 2\n    print(\"funct_two returning: \" + str(result))\n    return result\n\ndef func_one(a, b):\n    print(f\"func_one arguments: a={a}, b={b}\")\n    result1 = a + b\n    result2 = func_two(result1)\n    result3 = func_three(a, b)\n    final_result = result2 - result3\n    print(f\"func_one returning: {final_result}\")\n    return final_result\n\nprint(\"Starting main program\")\nx = 10\ny = 5\nz = func_one(y, x)\nprint(\"The final result is: \" + str(z))\nWhen the program is run, eight lines are printed. For each of the following lines, fill in the blanks to show what values the variables have when they are printed out. Also, mark the order in which they are printed in the “Order” column starting at 1. The order for the first line is marked for you.\n\n\n\nPrinted Line\nOrder\n\n\n\n\nStarting main program\n1\n\n\nThe final result is: ____\n\n\n\nfunc_one arguments: a=____ , b=____\n\n\n\nfunc_one returning: ____\n\n\n\nfunc_two argument: num=____\n\n\n\nfunc_two returning: ____\n\n\n\nfunc_three argument: x=____ , y=____\n\n\n\nfunc_three returning: ____\n\n\n\n\n\n\n👀 Hint\n\n\nAdd arrows to link from where the function is being called to the function definition. This will make it easier to follow the order of execution :^)\n\n\n\n\n✅ Solution\n\n\n    Starting main program\n    func_one arguments: a=5, b=10\n    func_two argument: num=15\n    funct_two returning: 30\n    func_three arguments: x=5, y=10\n    func_three returning: 35\n    func_one returning: -5\n    The final result is: -5"
+  },
+  {
+    "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-4---time-is-ticking",
+    "href": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-4---time-is-ticking",
+    "title": "📝 U of Pennsylvania",
+    "section": "Question 4 - Time is Ticking ⏰",
+    "text": "Question 4 - Time is Ticking ⏰\nThe following program is supposed to print out a time readout every fifteen minutes over the course of one day, starting with 12:00 AM, then 12:15 AM, then 12:30 AM and so on. Times in the second half of the day should be printed using the 12-hour clock, meaning that the full set of printed times should include 96 timestamps and should match the format & pattern shown in the following example:\n12:00 AM\n12:15 AM\n12:30 AM\n12:45 AM\n1:00 AM\n... // ellipses are not printed literally lol\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n...\n11:45 AM\nHelp write this clock program by filling in the blanks\nfor hour in range(24):\n    for minute in range(0, 60, _BLANK_0_):\n        if _BLANK_2_ or hour == 12:\n            hour_to_print = \"12\"\n        else:\n            hour_to_print = str(hour % _BLANK_3_)\n        if minute == 0:\n            minute_to_print = \":00\"\n        else:\n            minute_to_print = \":\" + str(minute)\n        if _BLANK_4_:\n            suffix = \"AM\"\n        else:\n            suffix = \"PM\"\n        print(hour_to_print + minute_to_print + \" \" + suffix)\n\n\n👀 Hint\n\n\nYou can control how a loop increments by using a step. For example, range(0, 60) starts at 0, goes up to but does not include 60, and increases by 1 each time, while range(0, 60, 30) starts at 0, goes up to but does not include 60, and increases by 30 each time. If time is going up by 15 minutes, whats our “step”?\n\n\n\n\n✅ Solution\n\n\n    for hour in range(24):\n        for minute in range(0, 60, 15):\n            if hour % 12 == 0 or hour == 12:\n                hour_to_print = \"12\"\n            else:\n                hour_to_print = str(hour % 12)\n            if minute == 0:\n                minute_to_print = \":00\"\n            else:\n                minute_to_print = \":\" + str(minute)\n            if hour &lt; 12:\n                suffix = \"AM\"\n            else:\n                suffix = \"PM\"\n            print(hour_to_print + minute_to_print + \" \" + suffix)"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_index.html",
+    "href": "final_exam_prep/final_exam_index.html",
+    "title": "Previous Years Exams and Additional Practice",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n📝 Fall 2024\n\n\n \n\n\n\n\n\n\n📝 Final Winter 2025\n\n\n \n\n\n\n\n\n\n📝 U of Pennsylvania\n\n\nAdditional practice exam inspired by the university of Pennsylvania Intro to Python\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "syllabus/Youmna/Youmna.html",
     "href": "syllabus/Youmna/Youmna.html",
     "title": "Youmna",
@@ -675,146 +724,6 @@
     "title": "Installing Python Modules",
     "section": "Importing and installing a module",
     "text": "Importing and installing a module\n\nEnsure that the PyCharm project is using the System’s interpreter\nAdd a python file to write your code.\nThe import statement followed by the module name, allows you to import a module into your script. For example:\nimport math   #comes built-in with python\n\nNote: You can use an alias to “nickname” a package and shorten your lines of code by using the as keyword For example:\nimport math as m\n\nprint(m.pi)\nNote: You can also import a function or a sub-module within a given module\nfrom math import sin\n\nprint(sin(0))\n\nIf you are importing a module that wasn’t installed, it will be underlined in red:\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n\n\n\nwow\n\n\n\nIf you see an error saying “Unresolved reference”, that means the module is not installed on the computer.\n\n\nInstalling via PyCharm\n\nClick File &gt; Settings to open the Settings menu:\n\n\n\n\nwow\n\n\n\nSelect Project &gt; Project interpreter from the left hand side menu\nThis is all the list of modules that are installed in my project, yours might not contain much for now.\nTo add a package/module, click the + button at the top of the list\nSearch for the package you want installed: “matlplotlib” then click Install Package\n\n\n\n\nwow\n\n\n\nWhile you are here, install numpy as well:\n\n\n\n\nwow\n\n\n\nNow that the packages are installed, try typing those lines in your python file:\nimport numpy as np\nfrom matlplotlib import pyplot\n\n\n\nInstalling via command line on Windows (like a pro 😎)\n\nType cmd in the Windows search bar and click the “Command Prompt” icon.\nType the following command in the command prompt:\n\npip install --upgrade pip\n\nInstall your packages:\n\npip install matplotlib\npip install numpy\n\n\nInstalling via Terminal on Mac (like a pro 😎)\n\nFrom Launch page, search for an app called Terminal\nType the following command in Terminal:\n\npip3 install --upgrade pip\n\nInstall your packages with the following commands:\n\npip3 install matplotlib\npip3 install numpy"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/reference_sheet/reference_sheet.html",
-    "href": "topics/14_final_exam_prep/reference_sheet/reference_sheet.html",
-    "title": "🕵️‍♂️ Exam Reference Sheet",
-    "section": "",
-    "text": "The following reference sheet will be available for you to use during your examination:\n\n\nDownload the PDF containing this reference sheet."
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html",
-    "title": "📝 Final Winter 2025",
-    "section": "",
-    "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "",
-    "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 2: Tracing 👣 (6 marks)",
-    "text": "Question 2: Tracing 👣 (6 marks)\na) What is the output when this code is run:\nfor number in [9, 7, 4, 3, 18]:\n    if number % 3 == 0:\n        print(f\"{number} is divisible by 3\")\n    else:\n        if number % 2 == 0:\n            print(f\"{number} is divisible by 2\")\nb) What is the output when this code is run:\nfor number in [7, 9, 4, 3, 18]:\n  print(number)\n  if number &gt; 8:\n    break"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 3: Length of a list (4 marks)",
-    "text": "Question 3: Length of a list (4 marks)\nWithout using the len method, or enumerate, find the length of a list\ndef length(values):\n    # write your code here\n\nc = [6, 4, 2, 0, ... , 9, 9]\ny = length(c)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 4: Coding piece-wise functions (6 marks)",
-    "text": "Question 4: Coding piece-wise functions (6 marks)\n\n\n\ndemo\n\n\nConsider the following piecewise function\n\\[\nf(x) =\\begin{cases}  -x-1  & \\text{if}\\quad   x &lt; -1\\\\\n3x^{3}-5x^{2}-3x+5 & \\text{if}\\quad -1 \\leq x \\leq 2\\\\\n6-\\frac{3}{2}x & \\text{if}\\quad    2 &lt; x &lt; 4 \\\\\nx-4 & \\text{if}\\quad x \\geq 4\n\\end{cases}\n\\]\n\nWrite a Python function namedf that\n\ntakes x as input parameter and\nreturns \\(f(x)\\) according to the above definition."
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 5: Target value (6 marks)",
-    "text": "Question 5: Target value (6 marks)\nWrite a function filter_list that\n\ntakes as input parameters:\n\nvalues - a list of integers\ntarget_value - an integer\n\nreturns\n\na new list of numbers from values that are within $$3 units from the target_value (inclusive).\n\n\nExample (this is an example only, your code must work for any values and target_value):\nc =  [6, 4, 9, 2, 1]\nfiltered = filter_list(c, 5)\nprint(filtered)  #output : [6,4,2]"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 6 - Fridays (5 marks)",
-    "text": "Question 6 - Fridays (5 marks)\nYou are given two lists. Each one has one item for every day of the year.\n\nThe months list shows the month of each day.\nThe days list shows the day number of each day.\nThe first date is January 1st which is a Wednesday\n\nmonths = ['Jan', 'Jan', ..., 'Jan','Feb', 'Feb', ... 'Feb', 'Mar', \"Mar\", ...]\ndays =  [    1,     2, ...,   31,    1,      2, ...    28,     1,     2, ...]\nExample: To print the 53rd day of the year, use:\nprint(f\"{months[52]} {days[52]}\")\nWrite Python code that:\n\nPrints every Friday of the year as Month Day\nIf the day is Friday the 13th, print a special message\n\nSample output:\n...\nMay 23\nMay 30\nJun 6\nJun 13 WOoOo, Friday the 13th\nJun 20\nJun 27\n..."
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 7 - Mind Game (7 marks)",
-    "text": "Question 7 - Mind Game (7 marks)\nMind Game is an old game where you have to guess the colour arrangement of 4 hidden pegs. But we live in the digital age, so lets create a computer game along the same concept.\n\nWrite a function called process_guess that:\n\nTakes in two lists as parameters:\n\nsecret: a list of 4 hidden integers\nguess: a list of 4 integers the user tries to guess.\n\nReturns a list called clues, also with 4 integers.\n\nFor each number in the guess:\n\nIf it’s correct and in the right spot, the clue is 1\nIf it’s in the secret but in the wrong spot, the clue is 2\nIf it’s not in the secret at all, the clue is 4\n\n\nExample\nASSUME THERE ARE NO DUPLICATES NUMBERS IN THE SECRET AND GUESS\nIf the secret is: [4, 6, 1, 8]\nand the guess is [1, 5, 7, 8]\nthe clue will be [2, 4, 4, 1]\n\n2 because the 1st guessed number 1 is in the secret list\n4 because the 2nd guessed number 5 is not in the secret list\n4 because the 3rd guessed number 7 is not in the secret list\n1 because the 4th guessed number8 is in the secret list, and in the correct spot"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 8: Solar Panels ☀️🔋(6 marks)",
-    "text": "Question 8: Solar Panels ☀️🔋(6 marks)\nSarah is considering installing solar panels on her home to save on electricity bills. She would like to use a program to help her predict how many years it will take to recover the cost of the installation.\nWrite a python program that:\n\nper year (Note when printing, year counting should start at 1)\n\ncalculate and print:\n\nthe savings on electricity\n\nthe amount of electricity produced by the solar panel (output) multiplied by the price of electricity (electricity)\n\nthe cumulative savings\nadjust the price of electricity due to inflation\n\nstop printing this info once the cumulative savings exceed the price of the initial cost of the solar panels (installation)\n\nprint the total number of years it took to recoup the installation price.\n\nExample:\nAssuming we start with these values (which may not be the correct numbers)\noutput = 800          # the amount of electricity produced by the solar panels in KWh\ninstallation = 12000  # the cost of installing the solar panels (install_cost) in $\nelectricity = 0.80    # the estimated cost of electricity $/kWh\ninflation = 5         # the percentage increase in electricity prices per year in %\nThe output would be:\nYear: 1, Savings: 640.00, Cumulative: 640.00\nYear: 2, Savings: 672.00, Cumulative: 1312.00\nYear: 3, Savings: 705.60, Cumulative: 2017.60\n...\nYear: 14, Savings: 1206.82, Cumulative: 12543.12\n\nIn year 14 you have recouped your losses"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 9: Scuba Diving (6 marks)",
-    "text": "Question 9: Scuba Diving (6 marks)\nYou are on the bottom of the sea. See below:\n\n\n\ndemo\n\n\nYou need to escape quickly, but if you ascend too fast you will get the bends (a bad thing).\nYour friend has sent down instructions on where you should be at every minute of your ascent.\nThis is a good plan only if the following conditions are met:\n\nthe depth is decreasing (going towards the surface) at every step\nthe difference in depth between every step of your journey to safety is less than or equal to 30 feet\n\nWrite a python function is_good that\n\ntakes in as parameter:\n\na sequence of depths (list of numbers)\n\nsets your initial depth is 100 feet\nreturns True if it’s safe, False otherwise.\n\nExamples\n\n[50, 30, 20, 0]: Bad in the first minute you have gone from 100 feet to 50 feet, which is too fast (a difference of 50 feet in one minute).\n[80, 90, 70, 30, 0]: Bad you go up to 80 feet, but then go back down to 90 feet. You cannot go back down.\n[80, 60, 30, 20, 10, 0]: Good you keep going up, you never go more than 30 feet in one minute."
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 10: Time is running out ⏰ (5 marks)",
-    "text": "Question 10: Time is running out ⏰ (5 marks)\nWrite a function that simulates a countdown timer.\nWhen the function is called, it displays every second starting from 01:0:0 (1 hour, 0 minutes, 0 seconds) to 0:0:0 and then stops. There is no input required from the user.\nExample:\n1:0:0\n0:59:59\n0:59:58\n. . .\n0:1:0\n0:0:59\n0:0:58\n. . .\n0:0:2\n0:0:1\n0:0:0\n💥 BOOM 💥"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
-    "title": "📝 Final Winter 2025",
-    "section": "Question 11 - Pascal’s Triangle (6 marks)",
-    "text": "Question 11 - Pascal’s Triangle (6 marks)\nPascal’s triangle is a simple method to determine the coefficients of the expanded math formula (a+b)**n\n\n\n\ndemo\n\n\nEach row of Pascal’s triangle is determined by using the previous row in the following manner…\n\nthe new row starts with 1\neach preceding element of the row is the sum of the previous row’s diagonal elements.\nthe new row’s last element is a 1\n\nCode a function next_pascal(row: list) -&gt; list that\n\ntakes a row of Pascal’s triangle as a parameter and\nreturns the next row in the triangle in a list.\n\nExample:\nrow = [1,4,6,4,1]\nnew_row = next_pascal(row)\nprint(new_row)      # [1,5,10,10,5,1]\nWrite a python program that\n\ntakes n as input (ask the user) the height of the pascal triangle (row number) and\nprints the pascal triangle.\nNOTE: Use your function next_pascal\n\nExample output for n = 5\n[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]\n[1, 5, 10, 10, 5, 1]"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html",
-    "title": "📝 Midterm Fall 2025",
-    "section": "",
-    "text": "Find and correct the mistakes.\n42isACoolNumber = 42\na cool book = \"Hitchhiker's Guide to the Galaxy\";\nfavorite#color = \"green\"\n\n\n👀 Hint\n\n\nWhat can variables not contain?\n\n\n\n\n✅ Solution\n\n\n    a_cool_number = 42\n    a_cool_book = \"Hitchhiker's Guide to the Galaxy\"\n    favorite_color = \"green\""
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-1---fix-the-code",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-1---fix-the-code",
-    "title": "📝 Midterm Fall 2025",
-    "section": "",
-    "text": "Find and correct the mistakes.\n42isACoolNumber = 42\na cool book = \"Hitchhiker's Guide to the Galaxy\";\nfavorite#color = \"green\"\n\n\n👀 Hint\n\n\nWhat can variables not contain?\n\n\n\n\n✅ Solution\n\n\n    a_cool_number = 42\n    a_cool_book = \"Hitchhiker's Guide to the Galaxy\"\n    favorite_color = \"green\""
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-2---tracing",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-2---tracing",
-    "title": "📝 Midterm Fall 2025",
-    "section": "Question 2 - Tracing",
-    "text": "Question 2 - Tracing\nGiven the Python code below, if a user inputs 12, fill in all the blanks. If the math feels spooky, feel free to grab a (non-programmable) calculator!!\n# initialize defaults\ntotal = 4\n\n# user inputs 12\nnum = int(input(\"What's a cool number?\"))\n\n# do math\nnum += 2 # the num's value is now _______\nnum += 4 # the num's value is now _______\nnum += 6 # the num's value is now _______\ntotal += num % 6\n\n# output result\nprint(total) # the printed total is ________\n\n\n👀 Hint\n\n\nnum is being updated step-by-step. For num % 6, what is the remainder when dividing by 6?\n\n\n\n\n✅ Solution\n\n\n    # initialize defaults\n    total = 4\n\n    # user inputs 12\n    num = int(input(\"What's a cool number?\"))\n\n    # do math\n    num += 2 # the num's value is now 14\n    num += 4 # the num's value is now 18\n    num += 6 # the num's value is now 24\n    total += num % 6\n\n    # output result\n    print(total) # the printed total is 4"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-3---evens",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-3---evens",
-    "title": "📝 Midterm Fall 2025",
-    "section": "Question 3 - Evens 🧮",
-    "text": "Question 3 - Evens 🧮\nWrite a Python function that prints all the even numbers from 1 to 10 (inclusive). Full marks are awarded for the most logically sound program that adheres to best-practices.\n\n\n👀 Hint\n\n\nWhat operators come to mind when trying to figure out when trying to see if a number is divisible by 2?\n\n\n\n\n✅ Solution\n\n\n    def print_even_numbers():\n        for num in range(1, 11):\n            if num % 2 == 0:\n                print(num)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-4---study-tracker",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-4---study-tracker",
-    "title": "📝 Midterm Fall 2025",
-    "section": "Question 4 - Study Tracker ⏰",
-    "text": "Question 4 - Study Tracker ⏰\nYour parents are on your case because they think that you are not spending enough time studying. You of course deny this. Since your parents don’t believe you, you make an agreement with them where they can track the number of hours that you are home studying at your desk over the course of a week.\nCreate a Python program that:\n\nCalculates the total hours studied over a period of 1 week, using this sample data: 2.1, 1.0, 0.74, 3.2, 2.2, 4.0, 0.15\nDisplays the total amount studied, formatted to two decimal places\nFull marks are awarded for the most logically sound program that adheres to best practices 🧑‍🎓✨\n\n\n\n👀 Hint\n\n\nA loop is easier to maintain than seven separate variables 👀\n\n\n\n\n✅ Solution\n\n\nYou might have been tempted to store everything in a variable for this problem. If your gut tells you, “Hmm, something feels off, maybe this is inefficient,” trust that instinct!!\n\n \n    total_hours = 0\n    for hour in [2.1, 1.0, 0.74, 3.2, 2.2, 4.0, 0.15]:\n        total_hours += hour\n    print(f\"{total_hours} hours have been studied\")"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-5---padding-the-bill",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-5---padding-the-bill",
-    "title": "📝 Midterm Fall 2025",
-    "section": "Question 5 - Padding the Bill ﹩",
-    "text": "Question 5 - Padding the Bill ﹩\nWe want to find out the farmer’s raw cost before markups.\nDefinitions:\n\nx: the raw cost for creating the product\nG: grocery cost after grower markup\nT: transportation cost (flat rate)\nS: final selling price (what you pay)\n\nEquations:\nGrocery Cost with grower markup:\n\\[\nG = \\tfrac{5}{4}x\n\\]\nFinal selling price with store markup and transportation:\n\\[\nS = 1.20G + T\n\\]\nIf your grocery bill is $400 and transportation is $12.99, write a Python function that takes your grocery bill as input and returns the farmer’s raw cost (x).\n\n\n👀 Hint\n\n\nTry working thru the problem backwards 👀\n\n\n\n\n✅ Solution\n\n\n  \n    # something like this\n    def farmer_raw_cost(selling_price: float):\n        grower_markup_rate = 5 / 4\n        store_markup_rate = 1.20\n        transportation_rate = 12.99\n        before_store_cost = (selling_price - transportation) / store_markup_rate\n        before_grower_cost = before_store_cost / grower_markup_rate\n        return before_grower_cost"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-6---los-pollos-hermanos",
-    "href": "topics/14_final_exam_prep/exercises/practice_midterm_f25/practice_midterm_f25.html#question-6---los-pollos-hermanos",
-    "title": "📝 Midterm Fall 2025",
-    "section": "Question 6 - Los Pollos Hermanos 🐓👒",
-    "text": "Question 6 - Los Pollos Hermanos 🐓👒\nYour distant relative makes delicious burritos, and you believe they should start selling them. They’ve come up with the following pricing model:\n\nThe first two burritos are $12 each\nAny additional burritos are $6 each\n\nCreate a Python program that:\n\nStores the number of burritos in a variable (this value may change)\nCalculates the total cost for this order, formatted to two decimal places\nFull marks are awarded for the most logically sound program that adheres to best-practices\n\n\n\n👀 Hint\n\n\nUse conditionals 👀\n\n\n\n\n✅ Solution\n\n\n    desired_burritos = 42 # many burritos\n    standard_price = 12\n    bulk_price = 6\n    total_burrito_cost = 0\n\n    if desired_burritos &lt;= 0:\n        total_burrito_cost = 0 # can't charge negative money lol\n    if 0 &lt; desired_burritos &lt;= 2:\n        total_burrito_cost = desired_burritos * standard_price\n    if 0 &lt; desired_burritos &gt; 2:\n        first_two_cost = 2 * standard_price\n        additional_cost = (desired_burritos - 2) * bulk_price\n        total_burrito_cost = first_two_cost + additional_cost\n\n    print(f\"That will be ${total_burrito_cost:.2f} for your 100% legal burritos\")"
   },
   {
     "objectID": "topics/01_objectives/02_probelm_solving/02_probelm_solving.html",
@@ -1881,55 +1790,6 @@
     ]
   },
   {
-    "objectID": "topics/14_final_exam_prep/01_study_guide/01_study_guide.html",
-    "href": "topics/14_final_exam_prep/01_study_guide/01_study_guide.html",
-    "title": "📖 Final Exam Study Guide",
-    "section": "",
-    "text": "TBD for the winter semester"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html",
-    "href": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html",
-    "title": "📝 U of Pennsylvania",
-    "section": "",
-    "text": "Inspired by the The University of Pennsylvania’s Intro to Python practice exam, I added the questions relevant to our course :)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-1---list-math",
-    "href": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-1---list-math",
-    "title": "📝 U of Pennsylvania",
-    "section": "Question 1 - List Math 🧮",
-    "text": "Question 1 - List Math 🧮\nWhat will print?\nx = [1, 2, 3]\nx[len(x) - 1] = x[len(x) - x[0]] - x[1]\nprint(x[2])\n\n\n👀 Hint\n\n\nTry drawing out what happens @ each index\n\n\n\n\n✅ Solution\n\n\n1"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-2---lists-loops",
-    "href": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-2---lists-loops",
-    "title": "📝 U of Pennsylvania",
-    "section": "Question 2 - Lists & Loops 🔁",
-    "text": "Question 2 - Lists & Loops 🔁\nWhat will print?\nnumbers = [4, 2, -1]\nx = 1\nfor num in numbers:\n    x = x * numbers\nprint(x)\n\n\n👀 Hint\n\n\nNotice any syntax problems?\n\n\n\n\n✅ Solution\n\n\nnothing shall print cause there’s a problem! U can’t multiple a number by a list"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-3---tracing-functions",
-    "href": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-3---tracing-functions",
-    "title": "📝 U of Pennsylvania",
-    "section": "Question 3 - Tracing Functions 🔍",
-    "text": "Question 3 - Tracing Functions 🔍\nHere’s a python file that features a few cool functions.\ndef func_three(x, y):\n    print(f\"func_three arguments: x={x}, y={y}\")\n    result1 = x * 3\n    result2 = y * 2\n    final_result = result1 + result2\n    print(f\"func_three returning: {final_result}\")\n    return final_result\n\ndef func_two(num):\n    print(\"func_two argument: num=\" + str(num))\n    result = num * 2\n    print(\"funct_two returning: \" + str(result))\n    return result\n\ndef func_one(a, b):\n    print(f\"func_one arguments: a={a}, b={b}\")\n    result1 = a + b\n    result2 = func_two(result1)\n    result3 = func_three(a, b)\n    final_result = result2 - result3\n    print(f\"func_one returning: {final_result}\")\n    return final_result\n\nprint(\"Starting main program\")\nx = 10\ny = 5\nz = func_one(y, x)\nprint(\"The final result is: \" + str(z))\nWhen the program is run, eight lines are printed. For each of the following lines, fill in the blanks to show what values the variables have when they are printed out. Also, mark the order in which they are printed in the “Order” column starting at 1. The order for the first line is marked for you.\n\n\n\nPrinted Line\nOrder\n\n\n\n\nStarting main program\n1\n\n\nThe final result is: ____\n\n\n\nfunc_one arguments: a=____ , b=____\n\n\n\nfunc_one returning: ____\n\n\n\nfunc_two argument: num=____\n\n\n\nfunc_two returning: ____\n\n\n\nfunc_three argument: x=____ , y=____\n\n\n\nfunc_three returning: ____\n\n\n\n\n\n\n👀 Hint\n\n\nAdd arrows to link from where the function is being called to the function definition. This will make it easier to follow the order of execution :^)\n\n\n\n\n✅ Solution\n\n\n    Starting main program\n    func_one arguments: a=5, b=10\n    func_two argument: num=15\n    funct_two returning: 30\n    func_three arguments: x=5, y=10\n    func_three returning: 35\n    func_one returning: -5\n    The final result is: -5"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-4---time-is-ticking",
-    "href": "topics/14_final_exam_prep/exercises/upenn_exam_practice_f24/upenn_exam_practice_f24.html#question-4---time-is-ticking",
-    "title": "📝 U of Pennsylvania",
-    "section": "Question 4 - Time is Ticking ⏰",
-    "text": "Question 4 - Time is Ticking ⏰\nThe following program is supposed to print out a time readout every fifteen minutes over the course of one day, starting with 12:00 AM, then 12:15 AM, then 12:30 AM and so on. Times in the second half of the day should be printed using the 12-hour clock, meaning that the full set of printed times should include 96 timestamps and should match the format & pattern shown in the following example:\n12:00 AM\n12:15 AM\n12:30 AM\n12:45 AM\n1:00 AM\n... // ellipses are not printed literally lol\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n...\n11:45 AM\nHelp write this clock program by filling in the blanks\nfor hour in range(24):\n    for minute in range(0, 60, _BLANK_0_):\n        if _BLANK_2_ or hour == 12:\n            hour_to_print = \"12\"\n        else:\n            hour_to_print = str(hour % _BLANK_3_)\n        if minute == 0:\n            minute_to_print = \":00\"\n        else:\n            minute_to_print = \":\" + str(minute)\n        if _BLANK_4_:\n            suffix = \"AM\"\n        else:\n            suffix = \"PM\"\n        print(hour_to_print + minute_to_print + \" \" + suffix)\n\n\n👀 Hint\n\n\nYou can control how a loop increments by using a step. For example, range(0, 60) starts at 0, goes up to but does not include 60, and increases by 1 each time, while range(0, 60, 30) starts at 0, goes up to but does not include 60, and increases by 30 each time. If time is going up by 15 minutes, whats our “step”?\n\n\n\n\n✅ Solution\n\n\n    for hour in range(24):\n        for minute in range(0, 60, 15):\n            if hour % 12 == 0 or hour == 12:\n                hour_to_print = \"12\"\n            else:\n                hour_to_print = str(hour % 12)\n            if minute == 0:\n                minute_to_print = \":00\"\n            else:\n                minute_to_print = \":\" + str(minute)\n            if hour &lt; 12:\n                suffix = \"AM\"\n            else:\n                suffix = \"PM\"\n            print(hour_to_print + minute_to_print + \" \" + suffix)"
-  },
-  {
-    "objectID": "topics/14_final_exam_prep/exercises/final_exam_f24/final_exam_f24.html",
-    "href": "topics/14_final_exam_prep/exercises/final_exam_f24/final_exam_f24.html",
-    "title": "📝 Final Fall 2024",
-    "section": "",
-    "text": "The document below shows questions asked in the Fall 2024 edition of this class.\nThe answers for each question are intended to be written in a separate answer booklet. You can download and print an example answer booklet by clicking this link.\nSolutions will not be provided – you are encouraged to create your own solutions using your access to Pycharm to double check your answers.\n\n\nDownload the PDF containing this exam."
-  },
-  {
     "objectID": "topics/13_tooling/13_01_debugger/01_debugger.html",
     "href": "topics/13_tooling/13_01_debugger/01_debugger.html",
     "title": "Debugging Python Code",
@@ -2219,7 +2079,7 @@
     "href": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html",
     "title": "Python Turtle Graphics",
     "section": "",
-    "text": "The turtle module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!\nIn this tutorial, you’ll learn the basics of using turtle in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.\nSee the official documentation for more information.",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nUse repetition to create complex shapes and patterns efficiently.\nUse functions to re-draw shapes of different sizes and colours.\nDevelop interactive programs by incorporating user input and multiple objects.\nHave fun!\nThe turtle module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!\nIn this tutorial, you’ll learn the basics of using turtle in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.\nSee the official documentation for more information.",
     "crumbs": [
       "Turtle graphics",
       "Python Turtle Graphics"
@@ -2429,5 +2289,145 @@
       "Variables & Data Types",
       "Strings"
     ]
+  },
+  {
+    "objectID": "final_exam_prep/reference_sheet/reference_sheet.html",
+    "href": "final_exam_prep/reference_sheet/reference_sheet.html",
+    "title": "🕵️‍♂️ Exam Reference Sheet",
+    "section": "",
+    "text": "The following reference sheet will be available for you to use during your examination:\n\n\nDownload the PDF containing this reference sheet."
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html",
+    "title": "📝 Midterm Fall 2025",
+    "section": "",
+    "text": "Find and correct the mistakes.\n42isACoolNumber = 42\na cool book = \"Hitchhiker's Guide to the Galaxy\";\nfavorite#color = \"green\"\n\n\n👀 Hint\n\n\nWhat can variables not contain?\n\n\n\n\n✅ Solution\n\n\n    a_cool_number = 42\n    a_cool_book = \"Hitchhiker's Guide to the Galaxy\"\n    favorite_color = \"green\""
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-1---fix-the-code",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-1---fix-the-code",
+    "title": "📝 Midterm Fall 2025",
+    "section": "",
+    "text": "Find and correct the mistakes.\n42isACoolNumber = 42\na cool book = \"Hitchhiker's Guide to the Galaxy\";\nfavorite#color = \"green\"\n\n\n👀 Hint\n\n\nWhat can variables not contain?\n\n\n\n\n✅ Solution\n\n\n    a_cool_number = 42\n    a_cool_book = \"Hitchhiker's Guide to the Galaxy\"\n    favorite_color = \"green\""
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-2---tracing",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-2---tracing",
+    "title": "📝 Midterm Fall 2025",
+    "section": "Question 2 - Tracing",
+    "text": "Question 2 - Tracing\nGiven the Python code below, if a user inputs 12, fill in all the blanks. If the math feels spooky, feel free to grab a (non-programmable) calculator!!\n# initialize defaults\ntotal = 4\n\n# user inputs 12\nnum = int(input(\"What's a cool number?\"))\n\n# do math\nnum += 2 # the num's value is now _______\nnum += 4 # the num's value is now _______\nnum += 6 # the num's value is now _______\ntotal += num % 6\n\n# output result\nprint(total) # the printed total is ________\n\n\n👀 Hint\n\n\nnum is being updated step-by-step. For num % 6, what is the remainder when dividing by 6?\n\n\n\n\n✅ Solution\n\n\n    # initialize defaults\n    total = 4\n\n    # user inputs 12\n    num = int(input(\"What's a cool number?\"))\n\n    # do math\n    num += 2 # the num's value is now 14\n    num += 4 # the num's value is now 18\n    num += 6 # the num's value is now 24\n    total += num % 6\n\n    # output result\n    print(total) # the printed total is 4"
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-3---evens",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-3---evens",
+    "title": "📝 Midterm Fall 2025",
+    "section": "Question 3 - Evens 🧮",
+    "text": "Question 3 - Evens 🧮\nWrite a Python function that prints all the even numbers from 1 to 10 (inclusive). Full marks are awarded for the most logically sound program that adheres to best-practices.\n\n\n👀 Hint\n\n\nWhat operators come to mind when trying to figure out when trying to see if a number is divisible by 2?\n\n\n\n\n✅ Solution\n\n\n    def print_even_numbers():\n        for num in range(1, 11):\n            if num % 2 == 0:\n                print(num)"
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-4---study-tracker",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-4---study-tracker",
+    "title": "📝 Midterm Fall 2025",
+    "section": "Question 4 - Study Tracker ⏰",
+    "text": "Question 4 - Study Tracker ⏰\nYour parents are on your case because they think that you are not spending enough time studying. You of course deny this. Since your parents don’t believe you, you make an agreement with them where they can track the number of hours that you are home studying at your desk over the course of a week.\nCreate a Python program that:\n\nCalculates the total hours studied over a period of 1 week, using this sample data: 2.1, 1.0, 0.74, 3.2, 2.2, 4.0, 0.15\nDisplays the total amount studied, formatted to two decimal places\nFull marks are awarded for the most logically sound program that adheres to best practices 🧑‍🎓✨\n\n\n\n👀 Hint\n\n\nA loop is easier to maintain than seven separate variables 👀\n\n\n\n\n✅ Solution\n\n\nYou might have been tempted to store everything in a variable for this problem. If your gut tells you, “Hmm, something feels off, maybe this is inefficient,” trust that instinct!!\n\n \n    total_hours = 0\n    for hour in [2.1, 1.0, 0.74, 3.2, 2.2, 4.0, 0.15]:\n        total_hours += hour\n    print(f\"{total_hours} hours have been studied\")"
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-5---padding-the-bill",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-5---padding-the-bill",
+    "title": "📝 Midterm Fall 2025",
+    "section": "Question 5 - Padding the Bill ﹩",
+    "text": "Question 5 - Padding the Bill ﹩\nWe want to find out the farmer’s raw cost before markups.\nDefinitions:\n\nx: the raw cost for creating the product\nG: grocery cost after grower markup\nT: transportation cost (flat rate)\nS: final selling price (what you pay)\n\nEquations:\nGrocery Cost with grower markup:\n\\[\nG = \\tfrac{5}{4}x\n\\]\nFinal selling price with store markup and transportation:\n\\[\nS = 1.20G + T\n\\]\nIf your grocery bill is $400 and transportation is $12.99, write a Python function that takes your grocery bill as input and returns the farmer’s raw cost (x).\n\n\n👀 Hint\n\n\nTry working thru the problem backwards 👀\n\n\n\n\n✅ Solution\n\n\n  \n    # something like this\n    def farmer_raw_cost(selling_price: float):\n        grower_markup_rate = 5 / 4\n        store_markup_rate = 1.20\n        transportation_rate = 12.99\n        before_store_cost = (selling_price - transportation) / store_markup_rate\n        before_grower_cost = before_store_cost / grower_markup_rate\n        return before_grower_cost"
+  },
+  {
+    "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-6---los-pollos-hermanos",
+    "href": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html#question-6---los-pollos-hermanos",
+    "title": "📝 Midterm Fall 2025",
+    "section": "Question 6 - Los Pollos Hermanos 🐓👒",
+    "text": "Question 6 - Los Pollos Hermanos 🐓👒\nYour distant relative makes delicious burritos, and you believe they should start selling them. They’ve come up with the following pricing model:\n\nThe first two burritos are $12 each\nAny additional burritos are $6 each\n\nCreate a Python program that:\n\nStores the number of burritos in a variable (this value may change)\nCalculates the total cost for this order, formatted to two decimal places\nFull marks are awarded for the most logically sound program that adheres to best-practices\n\n\n\n👀 Hint\n\n\nUse conditionals 👀\n\n\n\n\n✅ Solution\n\n\n    desired_burritos = 42 # many burritos\n    standard_price = 12\n    bulk_price = 6\n    total_burrito_cost = 0\n\n    if desired_burritos &lt;= 0:\n        total_burrito_cost = 0 # can't charge negative money lol\n    if 0 &lt; desired_burritos &lt;= 2:\n        total_burrito_cost = desired_burritos * standard_price\n    if 0 &lt; desired_burritos &gt; 2:\n        first_two_cost = 2 * standard_price\n        additional_cost = (desired_burritos - 2) * bulk_price\n        total_burrito_cost = first_two_cost + additional_cost\n\n    print(f\"That will be ${total_burrito_cost:.2f} for your 100% legal burritos\")"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html",
+    "title": "📝 Final Winter 2025",
+    "section": "",
+    "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "",
+    "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 2: Tracing 👣 (6 marks)",
+    "text": "Question 2: Tracing 👣 (6 marks)\na) What is the output when this code is run:\nfor number in [9, 7, 4, 3, 18]:\n    if number % 3 == 0:\n        print(f\"{number} is divisible by 3\")\n    else:\n        if number % 2 == 0:\n            print(f\"{number} is divisible by 2\")\nb) What is the output when this code is run:\nfor number in [7, 9, 4, 3, 18]:\n  print(number)\n  if number &gt; 8:\n    break"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 3: Length of a list (4 marks)",
+    "text": "Question 3: Length of a list (4 marks)\nWithout using the len method, or enumerate, find the length of a list\ndef length(values):\n    # write your code here\n\nc = [6, 4, 2, 0, ... , 9, 9]\ny = length(c)"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 4: Coding piece-wise functions (6 marks)",
+    "text": "Question 4: Coding piece-wise functions (6 marks)\n\n\n\ndemo\n\n\nConsider the following piecewise function\n\\[\nf(x) =\\begin{cases}  -x-1  & \\text{if}\\quad   x &lt; -1\\\\\n3x^{3}-5x^{2}-3x+5 & \\text{if}\\quad -1 \\leq x \\leq 2\\\\\n6-\\frac{3}{2}x & \\text{if}\\quad    2 &lt; x &lt; 4 \\\\\nx-4 & \\text{if}\\quad x \\geq 4\n\\end{cases}\n\\]\n\nWrite a Python function namedf that\n\ntakes x as input parameter and\nreturns \\(f(x)\\) according to the above definition."
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 5: Target value (6 marks)",
+    "text": "Question 5: Target value (6 marks)\nWrite a function filter_list that\n\ntakes as input parameters:\n\nvalues - a list of integers\ntarget_value - an integer\n\nreturns\n\na new list of numbers from values that are within $$3 units from the target_value (inclusive).\n\n\nExample (this is an example only, your code must work for any values and target_value):\nc =  [6, 4, 9, 2, 1]\nfiltered = filter_list(c, 5)\nprint(filtered)  #output : [6,4,2]"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 6 - Fridays (5 marks)",
+    "text": "Question 6 - Fridays (5 marks)\nYou are given two lists. Each one has one item for every day of the year.\n\nThe months list shows the month of each day.\nThe days list shows the day number of each day.\nThe first date is January 1st which is a Wednesday\n\nmonths = ['Jan', 'Jan', ..., 'Jan','Feb', 'Feb', ... 'Feb', 'Mar', \"Mar\", ...]\ndays =  [    1,     2, ...,   31,    1,      2, ...    28,     1,     2, ...]\nExample: To print the 53rd day of the year, use:\nprint(f\"{months[52]} {days[52]}\")\nWrite Python code that:\n\nPrints every Friday of the year as Month Day\nIf the day is Friday the 13th, print a special message\n\nSample output:\n...\nMay 23\nMay 30\nJun 6\nJun 13 WOoOo, Friday the 13th\nJun 20\nJun 27\n..."
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 7 - Mind Game (7 marks)",
+    "text": "Question 7 - Mind Game (7 marks)\nMind Game is an old game where you have to guess the colour arrangement of 4 hidden pegs. But we live in the digital age, so lets create a computer game along the same concept.\n\nWrite a function called process_guess that:\n\nTakes in two lists as parameters:\n\nsecret: a list of 4 hidden integers\nguess: a list of 4 integers the user tries to guess.\n\nReturns a list called clues, also with 4 integers.\n\nFor each number in the guess:\n\nIf it’s correct and in the right spot, the clue is 1\nIf it’s in the secret but in the wrong spot, the clue is 2\nIf it’s not in the secret at all, the clue is 4\n\n\nExample\nASSUME THERE ARE NO DUPLICATES NUMBERS IN THE SECRET AND GUESS\nIf the secret is: [4, 6, 1, 8]\nand the guess is [1, 5, 7, 8]\nthe clue will be [2, 4, 4, 1]\n\n2 because the 1st guessed number 1 is in the secret list\n4 because the 2nd guessed number 5 is not in the secret list\n4 because the 3rd guessed number 7 is not in the secret list\n1 because the 4th guessed number8 is in the secret list, and in the correct spot"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 8: Solar Panels ☀️🔋(6 marks)",
+    "text": "Question 8: Solar Panels ☀️🔋(6 marks)\nSarah is considering installing solar panels on her home to save on electricity bills. She would like to use a program to help her predict how many years it will take to recover the cost of the installation.\nWrite a python program that:\n\nper year (Note when printing, year counting should start at 1)\n\ncalculate and print:\n\nthe savings on electricity\n\nthe amount of electricity produced by the solar panel (output) multiplied by the price of electricity (electricity)\n\nthe cumulative savings\nadjust the price of electricity due to inflation\n\nstop printing this info once the cumulative savings exceed the price of the initial cost of the solar panels (installation)\n\nprint the total number of years it took to recoup the installation price.\n\nExample:\nAssuming we start with these values (which may not be the correct numbers)\noutput = 800          # the amount of electricity produced by the solar panels in KWh\ninstallation = 12000  # the cost of installing the solar panels (install_cost) in $\nelectricity = 0.80    # the estimated cost of electricity $/kWh\ninflation = 5         # the percentage increase in electricity prices per year in %\nThe output would be:\nYear: 1, Savings: 640.00, Cumulative: 640.00\nYear: 2, Savings: 672.00, Cumulative: 1312.00\nYear: 3, Savings: 705.60, Cumulative: 2017.60\n...\nYear: 14, Savings: 1206.82, Cumulative: 12543.12\n\nIn year 14 you have recouped your losses"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 9: Scuba Diving (6 marks)",
+    "text": "Question 9: Scuba Diving (6 marks)\nYou are on the bottom of the sea. See below:\n\n\n\ndemo\n\n\nYou need to escape quickly, but if you ascend too fast you will get the bends (a bad thing).\nYour friend has sent down instructions on where you should be at every minute of your ascent.\nThis is a good plan only if the following conditions are met:\n\nthe depth is decreasing (going towards the surface) at every step\nthe difference in depth between every step of your journey to safety is less than or equal to 30 feet\n\nWrite a python function is_good that\n\ntakes in as parameter:\n\na sequence of depths (list of numbers)\n\nsets your initial depth is 100 feet\nreturns True if it’s safe, False otherwise.\n\nExamples\n\n[50, 30, 20, 0]: Bad in the first minute you have gone from 100 feet to 50 feet, which is too fast (a difference of 50 feet in one minute).\n[80, 90, 70, 30, 0]: Bad you go up to 80 feet, but then go back down to 90 feet. You cannot go back down.\n[80, 60, 30, 20, 10, 0]: Good you keep going up, you never go more than 30 feet in one minute."
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 10: Time is running out ⏰ (5 marks)",
+    "text": "Question 10: Time is running out ⏰ (5 marks)\nWrite a function that simulates a countdown timer.\nWhen the function is called, it displays every second starting from 01:0:0 (1 hour, 0 minutes, 0 seconds) to 0:0:0 and then stops. There is no input required from the user.\nExample:\n1:0:0\n0:59:59\n0:59:58\n. . .\n0:1:0\n0:0:59\n0:0:58\n. . .\n0:0:2\n0:0:1\n0:0:0\n💥 BOOM 💥"
+  },
+  {
+    "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
+    "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
+    "title": "📝 Final Winter 2025",
+    "section": "Question 11 - Pascal’s Triangle (6 marks)",
+    "text": "Question 11 - Pascal’s Triangle (6 marks)\nPascal’s triangle is a simple method to determine the coefficients of the expanded math formula (a+b)**n\n\n\n\ndemo\n\n\nEach row of Pascal’s triangle is determined by using the previous row in the following manner…\n\nthe new row starts with 1\neach preceding element of the row is the sum of the previous row’s diagonal elements.\nthe new row’s last element is a 1\n\nCode a function next_pascal(row: list) -&gt; list that\n\ntakes a row of Pascal’s triangle as a parameter and\nreturns the next row in the triangle in a list.\n\nExample:\nrow = [1,4,6,4,1]\nnew_row = next_pascal(row)\nprint(new_row)      # [1,5,10,10,5,1]\nWrite a python program that\n\ntakes n as input (ask the user) the height of the pascal triangle (row number) and\nprints the pascal triangle.\nNOTE: Use your function next_pascal\n\nExample output for n = 5\n[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]\n[1, 5, 10, 10, 5, 1]"
   }
 ]

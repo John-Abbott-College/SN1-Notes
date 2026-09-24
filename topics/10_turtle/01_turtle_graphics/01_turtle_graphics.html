@@ -317,6 +317,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-final-exam" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Final Exam</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-final-exam">    
+        <li>
+    <a class="dropdown-item" href="../../../final_exam_prep/final_exam_index.html">
+ <span class="dropdown-text">Previous Years Exams</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../final_exam_prep/reference_sheet/reference_sheet.html">
+ <span class="dropdown-text">Reference sheet</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -735,6 +750,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="objectives callout callout-style-default callout-warning no-icon callout-titled" title="☆ Additional Objectives ">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>☆ Additional Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Use</strong> repetition to create complex shapes and patterns efficiently.</li>
+<li><strong>Use</strong> functions to re-draw shapes of different sizes and colours.</li>
+<li><strong>Develop</strong> interactive programs by incorporating user input and multiple objects.</li>
+<li><strong>Have</strong> fun!</li>
+</ul>
+</div>
+</div>
 <p>The <code>turtle</code> module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!</p>
 <p>In this tutorial, you’ll learn the basics of using <code>turtle</code> in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.</p>
 <p>See the <a href="https://docs.python.org/3/library/turtle.html">official documentation</a> for more information.</p>
@@ -742,8 +775,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="overview" class="level3">
 <h3 class="anchored" data-anchor-id="overview">Overview</h3>
 <p>Imagine you have a turtle with a pen attached to its tail. This turtle is sitting on a piece of paper.</p>
-<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;"> If the pen is down, and the turtle moves, a line is drawn.</p>
-<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;"> If the pen is up, and the turtle moves, no line is drawn.</p>
+<p><img src=".assets/turtle_pen_down.png" alt="turtle pen down" style="zoom:25%;"> If the pen is down, and the turtle moves, a line is drawn.</p>
+<p><img src="./assets/turtle_pen_up.png" alt="turtle pen up" style="zoom:25%;"> If the pen is up, and the turtle moves, no line is drawn.</p>
 <ul>
 <li>You can tell the turtle to put its pen up or down</li>
 <li>You can modify the direction that the turtle is facing (turn right or left)</li>
@@ -791,7 +824,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong><code>up()</code></strong>: Pull the pen up – no drawing when moving.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;"> Note that the “arrow” in the image is actually just the default image of the turtle.</p>
+<p><img src="./assets/turtle_dotted_line.png" alt="dotted line drawn by turtle program" style="zoom:50%;"> Note that the “arrow” in the image is actually just the default image of the turtle.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a dashed line</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>turtle.forward(<span class="dv">10</span>)</span>
@@ -843,7 +876,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong><code>goto(x,y)</code></strong>: Go to the specific location on the screen.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;"></p>
+<p><img src="./assets/turtle_x.png" alt="Drawing an x with turtle" style="zoom:25%;"></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>turtle.up()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>turtle.goto(<span class="op">-</span><span class="dv">50</span>,<span class="dv">50</span>)</span>
@@ -933,7 +966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>NOTE: any images you use in <code>screen.bgpic()</code> MUST be stored in the same directory as the python code you are running.</p>
 </blockquote>
 <hr>
-<p><img src="Notes/turtle/01_turtle_graphics/assets/turtle_star_with_colour.png" style="zoom:25%;"></p>
+<p><img src="./assets/turtle_star_with_colour.png" style="zoom:25%;"></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>turtle.fillcolor(<span class="st">"blue"</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>turtle.begin_fill()</span>
