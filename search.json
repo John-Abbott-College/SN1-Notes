@@ -46,7 +46,7 @@
     "href": "final_exam_prep/final_exam_index.html",
     "title": "Previous Years Exams and Additional Practice",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n📝 Fall 2024\n\n\n \n\n\n\n\n\n\n📝 Final Winter 2025\n\n\n \n\n\n\n\n\n\n📝 U of Pennsylvania\n\n\nAdditional practice exam inspired by the university of Pennsylvania Intro to Python\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n📝 Fall 2024\n\n\n \n\n\n\n\n\n\n📝 Winter 2025\n\n\n \n\n\n\n\n\n\n📝 U of Pennsylvania\n\n\nAdditional practice exam inspired by the university of Pennsylvania Intro to Python\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html",
@@ -180,6 +180,48 @@
     "title": "Youmna",
     "section": "🚀 After class",
     "text": "🚀 After class\n\nPrepare for next class"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-6",
+    "href": "syllabus/Youmna/Youmna.html#prep-6",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\nGo over:\n\nContinue the Assignment 2- Part 1\nPractice conditionals and functions"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-6",
+    "href": "syllabus/Youmna/Youmna.html#in-class-6",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nImpersonate code card game\nComplete the Assignment 2- Part 1\nWork the Assignment Part 2\n\n\nSome hints will be provided for this part"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-6",
+    "href": "syllabus/Youmna/Youmna.html#after-class-6",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 2"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-7",
+    "href": "syllabus/Youmna/Youmna.html#prep-7",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\nGo over: - For Loops - Try the level 1 Practice Problems"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-7",
+    "href": "syllabus/Youmna/Youmna.html#in-class-7",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nShort Recap on for-loops\nQuiz 5: For-loops and functions (1%)\nWork on the Assignment’s Part 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-7",
+    "href": "syllabus/Youmna/Youmna.html#after-class-7",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 3"
   },
   {
     "objectID": "topics/04_variables/03_integers_floats/03_integers_floats.html",
@@ -2394,7 +2436,7 @@
     "href": "final_exam_prep/reference_sheet/reference_sheet.html",
     "title": "🕵️‍♂️ Exam Reference Sheet",
     "section": "",
-    "text": "The following reference sheet will be available for you to use during your examination:\n\n\nDownload the PDF containing this reference sheet."
+    "text": "The following reference sheet will be available for you to use during your examination:\nDownload the PDF containing the reference sheet."
   },
   {
     "objectID": "final_exam_prep/practice_midterm_f25/practice_midterm_f25.html",
@@ -2448,84 +2490,84 @@
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "",
     "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-1-errors-3-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "",
     "text": "Fix the errors.\nPart a)\n# should print 4, fix code so that it does what it is supposed to.\na = \"2\"\nb = a*2\nprint(b)\nPart b)\n# should print all the numbers in the list\n\na = [1, 9, 3, 7, 8, 2, 1]\nfor number in range(a):\n  print(number)\nPart c)\ndef three():\n  return 3\n\n# without replacing the word `three` with `3`, fix this so that it prints 18\nb = three * 6\nprint(b)"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-2-tracing-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 2: Tracing 👣 (6 marks)",
     "text": "Question 2: Tracing 👣 (6 marks)\na) What is the output when this code is run:\nfor number in [9, 7, 4, 3, 18]:\n    if number % 3 == 0:\n        print(f\"{number} is divisible by 3\")\n    else:\n        if number % 2 == 0:\n            print(f\"{number} is divisible by 2\")\nb) What is the output when this code is run:\nfor number in [7, 9, 4, 3, 18]:\n  print(number)\n  if number &gt; 8:\n    break"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-3-length-of-a-list-4-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 3: Length of a list (4 marks)",
     "text": "Question 3: Length of a list (4 marks)\nWithout using the len method, or enumerate, find the length of a list\ndef length(values):\n    # write your code here\n\nc = [6, 4, 2, 0, ... , 9, 9]\ny = length(c)"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-4-coding-piece-wise-functions-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 4: Coding piece-wise functions (6 marks)",
     "text": "Question 4: Coding piece-wise functions (6 marks)\n\n\n\ndemo\n\n\nConsider the following piecewise function\n\\[\nf(x) =\\begin{cases}  -x-1  & \\text{if}\\quad   x &lt; -1\\\\\n3x^{3}-5x^{2}-3x+5 & \\text{if}\\quad -1 \\leq x \\leq 2\\\\\n6-\\frac{3}{2}x & \\text{if}\\quad    2 &lt; x &lt; 4 \\\\\nx-4 & \\text{if}\\quad x \\geq 4\n\\end{cases}\n\\]\n\nWrite a Python function namedf that\n\ntakes x as input parameter and\nreturns \\(f(x)\\) according to the above definition."
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-5-target-value-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 5: Target value (6 marks)",
     "text": "Question 5: Target value (6 marks)\nWrite a function filter_list that\n\ntakes as input parameters:\n\nvalues - a list of integers\ntarget_value - an integer\n\nreturns\n\na new list of numbers from values that are within $$3 units from the target_value (inclusive).\n\n\nExample (this is an example only, your code must work for any values and target_value):\nc =  [6, 4, 9, 2, 1]\nfiltered = filter_list(c, 5)\nprint(filtered)  #output : [6,4,2]"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-6---fridays-5-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 6 - Fridays (5 marks)",
     "text": "Question 6 - Fridays (5 marks)\nYou are given two lists. Each one has one item for every day of the year.\n\nThe months list shows the month of each day.\nThe days list shows the day number of each day.\nThe first date is January 1st which is a Wednesday\n\nmonths = ['Jan', 'Jan', ..., 'Jan','Feb', 'Feb', ... 'Feb', 'Mar', \"Mar\", ...]\ndays =  [    1,     2, ...,   31,    1,      2, ...    28,     1,     2, ...]\nExample: To print the 53rd day of the year, use:\nprint(f\"{months[52]} {days[52]}\")\nWrite Python code that:\n\nPrints every Friday of the year as Month Day\nIf the day is Friday the 13th, print a special message\n\nSample output:\n...\nMay 23\nMay 30\nJun 6\nJun 13 WOoOo, Friday the 13th\nJun 20\nJun 27\n..."
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-7---mind-game-7-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 7 - Mind Game (7 marks)",
     "text": "Question 7 - Mind Game (7 marks)\nMind Game is an old game where you have to guess the colour arrangement of 4 hidden pegs. But we live in the digital age, so lets create a computer game along the same concept.\n\nWrite a function called process_guess that:\n\nTakes in two lists as parameters:\n\nsecret: a list of 4 hidden integers\nguess: a list of 4 integers the user tries to guess.\n\nReturns a list called clues, also with 4 integers.\n\nFor each number in the guess:\n\nIf it’s correct and in the right spot, the clue is 1\nIf it’s in the secret but in the wrong spot, the clue is 2\nIf it’s not in the secret at all, the clue is 4\n\n\nExample\nASSUME THERE ARE NO DUPLICATES NUMBERS IN THE SECRET AND GUESS\nIf the secret is: [4, 6, 1, 8]\nand the guess is [1, 5, 7, 8]\nthe clue will be [2, 4, 4, 1]\n\n2 because the 1st guessed number 1 is in the secret list\n4 because the 2nd guessed number 5 is not in the secret list\n4 because the 3rd guessed number 7 is not in the secret list\n1 because the 4th guessed number8 is in the secret list, and in the correct spot"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-8-solar-panels-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 8: Solar Panels ☀️🔋(6 marks)",
     "text": "Question 8: Solar Panels ☀️🔋(6 marks)\nSarah is considering installing solar panels on her home to save on electricity bills. She would like to use a program to help her predict how many years it will take to recover the cost of the installation.\nWrite a python program that:\n\nper year (Note when printing, year counting should start at 1)\n\ncalculate and print:\n\nthe savings on electricity\n\nthe amount of electricity produced by the solar panel (output) multiplied by the price of electricity (electricity)\n\nthe cumulative savings\nadjust the price of electricity due to inflation\n\nstop printing this info once the cumulative savings exceed the price of the initial cost of the solar panels (installation)\n\nprint the total number of years it took to recoup the installation price.\n\nExample:\nAssuming we start with these values (which may not be the correct numbers)\noutput = 800          # the amount of electricity produced by the solar panels in KWh\ninstallation = 12000  # the cost of installing the solar panels (install_cost) in $\nelectricity = 0.80    # the estimated cost of electricity $/kWh\ninflation = 5         # the percentage increase in electricity prices per year in %\nThe output would be:\nYear: 1, Savings: 640.00, Cumulative: 640.00\nYear: 2, Savings: 672.00, Cumulative: 1312.00\nYear: 3, Savings: 705.60, Cumulative: 2017.60\n...\nYear: 14, Savings: 1206.82, Cumulative: 12543.12\n\nIn year 14 you have recouped your losses"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 9: Scuba Diving (6 marks)",
     "text": "Question 9: Scuba Diving (6 marks)\nYou are on the bottom of the sea. See below:\n\n\n\ndemo\n\n\nYou need to escape quickly, but if you ascend too fast you will get the bends (a bad thing).\nYour friend has sent down instructions on where you should be at every minute of your ascent.\nThis is a good plan only if the following conditions are met:\n\nthe depth is decreasing (going towards the surface) at every step\nthe difference in depth between every step of your journey to safety is less than or equal to 30 feet\n\nWrite a python function is_good that\n\ntakes in as parameter:\n\na sequence of depths (list of numbers)\n\nsets your initial depth is 100 feet\nreturns True if it’s safe, False otherwise.\n\nExamples\n\n[50, 30, 20, 0]: Bad in the first minute you have gone from 100 feet to 50 feet, which is too fast (a difference of 50 feet in one minute).\n[80, 90, 70, 30, 0]: Bad you go up to 80 feet, but then go back down to 90 feet. You cannot go back down.\n[80, 60, 30, 20, 10, 0]: Good you keep going up, you never go more than 30 feet in one minute."
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-10-time-is-running-out-5-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 10: Time is running out ⏰ (5 marks)",
     "text": "Question 10: Time is running out ⏰ (5 marks)\nWrite a function that simulates a countdown timer.\nWhen the function is called, it displays every second starting from 01:0:0 (1 hour, 0 minutes, 0 seconds) to 0:0:0 and then stops. There is no input required from the user.\nExample:\n1:0:0\n0:59:59\n0:59:58\n. . .\n0:1:0\n0:0:59\n0:0:58\n. . .\n0:0:2\n0:0:1\n0:0:0\n💥 BOOM 💥"
   },
   {
     "objectID": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
     "href": "final_exam_prep/final_exam_w25/final_exam_w25.html#question-11---pascals-triangle-6-marks",
-    "title": "📝 Final Winter 2025",
+    "title": "📝 Winter 2025",
     "section": "Question 11 - Pascal’s Triangle (6 marks)",
     "text": "Question 11 - Pascal’s Triangle (6 marks)\nPascal’s triangle is a simple method to determine the coefficients of the expanded math formula (a+b)**n\n\n\n\ndemo\n\n\nEach row of Pascal’s triangle is determined by using the previous row in the following manner…\n\nthe new row starts with 1\neach preceding element of the row is the sum of the previous row’s diagonal elements.\nthe new row’s last element is a 1\n\nCode a function next_pascal(row: list) -&gt; list that\n\ntakes a row of Pascal’s triangle as a parameter and\nreturns the next row in the triangle in a list.\n\nExample:\nrow = [1,4,6,4,1]\nnew_row = next_pascal(row)\nprint(new_row)      # [1,5,10,10,5,1]\nWrite a python program that\n\ntakes n as input (ask the user) the height of the pascal triangle (row number) and\nprints the pascal triangle.\nNOTE: Use your function next_pascal\n\nExample output for n = 5\n[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]\n[1, 5, 10, 10, 5, 1]"
   }
