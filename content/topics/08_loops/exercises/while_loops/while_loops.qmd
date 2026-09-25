@@ -30,7 +30,7 @@ while num < 5:
 :::
 
 
-### Powers of 2
+### Growing up
 Use a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.  
 
 i.e. add 1 + 2 + 3 + 4 + ... until the sum is 30 or larger
@@ -61,7 +61,22 @@ my_name = f"{my_name} Bond"
 :::
 :::
 
-:::{.callout-tip title="Solution" collapse="true"}
+:::{.callout-tip title="Solution without bonus" collapse="true"}
+```{pyodide}
+number = 1              # the first number we'll add is 1
+sum = 0                 # the sum starts out at zero
+
+while sum < 30:
+  sum = sum + number    # update our sum
+
+  number = number + 1
+
+print(sum)
+```
+:::
+
+
+:::{.callout-tip title="Solution with bonus" collapse="true"}
 ```{pyodide}
 number = 1              # the first number we'll add is 1
 sum = 0                 # the sum starts out at zero
@@ -82,4 +97,3 @@ while sum < 30:
 print(f"{equation} = {sum}")
 ```
 :::
-
