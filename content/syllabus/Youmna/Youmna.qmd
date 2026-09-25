@@ -212,28 +212,67 @@ My assignments and labs are always posted on Omnivox but submiited via [Gradesco
 - Prepare for next class
 
 
-<!-- 
+
 # Week 7
 
 ## 📚 Prep 
 
 Go over:
 
-- The instructions of **Assignment 2 - Part 3** 
+- Continue the Assignment 2- Part 1
+- [Practice conditionals and functions](https://john-abbott-college.github.io/SN1-Notes/topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html){target="_blank"}
+
 
 ## 💻 In class
 
-- Short Demo on drawing complex shapes with loops
-- **In teams of 2:** Complete the Assignment 2 - Part 2 (demo in class)
+- Impersonate code card game
+- Complete the Assignment 2- Part 1
+- Work the Assignment Part 2
+
+> Some hints will be provided for this part
 
 ## 🚀 After class
 
-- Prepare for next class
-
+- Complete the Assignment 2 - Part 2
 
 
 # Week 8
 
-Coming soon... 
+## 📚 Prep 
+Go over:
+- [For Loops](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/01_for_loop/01_for_loop.html){target="_blank"}
+- Try the level 1 [Practice Problems](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/exercises/for_loops/for_loops.html#level-1){target="_blank"}
 
+## 💻 In class
+
+- Short Recap on for-loops
+- **Quiz 5**: For-loops and functions (1%) 
+- Work on the Assignment's Part 3
+
+## 🚀 After class
+
+- Complete the Assignment 2 - Part 3
+
+<!-- 
+# Week 9
+
+## 📚 Prep 
+- Try the level 2 [Practice Problems](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/exercises/for_loops/for_loops.html#level-1){target="_blank"}
+
+
+## 💻 In class
+
+- Harder problems to solve 
+- **Quiz 6**: Recap (longer quiz worth 2%)
+- Review before the test
+
+## 🚀 After class
+
+- Study for test 
+
+# Test week
 -->
+
+
+
+
