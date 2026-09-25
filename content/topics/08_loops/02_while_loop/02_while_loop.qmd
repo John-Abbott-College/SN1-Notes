@@ -19,11 +19,24 @@ A `while` loop allows you to repeat lines of code over and over as long as a giv
 
 The structure of a `while` loop is very similar to a simple `if` statement:
 
-```python
-while <condition>:
-  <body>
-```
+
+:::{.callout-note title="BASIC SYNTAX `while`"}
+
 As long as \<condition\> is `True`, the code inside the body will be executed again and again.
+
+```python
+while condition:
+    loop_body
+```
+
+1. The `while` keyword followed by a space
+2. A `condition` that evaluates to `True`/`False`.
+3. A colon `:` followed by a newline.
+4. An indented instruction (`loop_body`) or set of instructions executed as long as the `condition` is `True`.
+
+:::
+
+<img src="assets/while.png" alt="Source: Programiz Python While Loops"/>
 
 You'll recognize this pattern that shows up a lot in Python, where the *body* must be indented. As soon as Python sees a line that is **not** indented then it understands that you've ended the *body*.  
 
@@ -34,7 +47,9 @@ What code can you put inside the *body* of a loop? Well, almost anything:
 - use if-else... statements  
 - even put *more* loops  
 
-## (Good) Examples
+## 🔁 Usage examples
+
+When would we use a `while` loop over a `for` loop? Here are "good" examples where it's more convinient to repeat code based on a condition over counting a number of iterations. 
 
 ### Playing a game
 Keep calling the function `play_turn()` until it returns False, indicating that the game has finished:
@@ -61,12 +76,29 @@ while total < LIMIT:
 print(f"The final total was {total}")
 ```
 
+### Robotics and Microcontrollers
+Another use of while loops is in robotics. 
+
+_Until an obstable is detected, keep calling the `forward()` function to move the robot forward and call the `read_obstacle_sensor()` to read the obstacle detection sensor._
+
+```python
+obstacle = False
+
+while obstacle:
+  print("Go forward")
+  forward()
+
+  obstacle = read_obstacle_sensor()
+
+```
 
 ## ⚠️ Infinite Loops
 
-Looping is a powerful ability to give your code, but it comes with a new kind of risk: **your code might loop *forever* which isn't good**. 
+Looping is a powerful ability to give your code, but it comes with a new kind of "risk": **your code might loop *forever* which isn't good**. 
 
 Why/how could this happen? The while loop will keep repeating until the given condition becomes False. *If your program never causes the condition to become false then it will loop forever.*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20151024034921"/>
 
 One of the most common mistakes you'll make with while loops is forgetting to update a variable which is used in the condition:
 

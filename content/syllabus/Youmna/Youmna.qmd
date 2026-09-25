@@ -226,6 +226,7 @@ Go over:
 ## 💻 In class
 
 - Impersonate code card game
+- Functions calling other functions tracing exercise.
 - Complete the Assignment 2- Part 1
 - Work the Assignment Part 2
 
@@ -240,7 +241,9 @@ Go over:
 
 ## 📚 Prep 
 Go over:
+
 - [For Loops](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/01_for_loop/01_for_loop.html){target="_blank"}
+
 - Try the level 1 [Practice Problems](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/exercises/for_loops/for_loops.html#level-1){target="_blank"}
 
 ## 💻 In class
