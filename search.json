@@ -2075,6 +2075,105 @@
     ]
   },
   {
+    "objectID": "topics/08_loops/exercises/while_loops/while_loops.html",
+    "href": "topics/08_loops/exercises/while_loops/while_loops.html",
+    "title": "✍️ While Loops",
+    "section": "",
+    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution",
+    "crumbs": [
+      "Loops",
+      "✍️ While Loops"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/exercises/while_loops/while_loops.html#level-1",
+    "href": "topics/08_loops/exercises/while_loops/while_loops.html#level-1",
+    "title": "✍️ While Loops",
+    "section": "",
+    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution",
+    "crumbs": [
+      "Loops",
+      "✍️ While Loops"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html",
+    "title": "While Loop",
+    "section": "",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nCreate while loops to repeat code\nCombine use while loops with conditions and other constructs\nEvaluate when while loops should be used\nPredict the output and effects of using while loops in a program.\nA while loop allows you to repeat lines of code over and over as long as a given condition is True. This is useful for tasks like:\n- keep playing a game until the last level is completed\n- keep rolling dice until a 1 is rolled\n- keep refining a calculation until it settles on a final answer\nThe structure of a while loop is very similar to a simple if statement:\nAs long as &lt;condition&gt; is True, the code inside the body will be executed again and again.\nYou’ll recognize this pattern that shows up a lot in Python, where the body must be indented. As soon as Python sees a line that is not indented then it understands that you’ve ended the body.\nWhat code can you put inside the body of a loop? Well, almost anything:\n- do math & assign to variables\n- print things\n- call functions\n- use if-else… statements\n- even put more loops",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#good-examples",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#good-examples",
+    "title": "While Loop",
+    "section": "(Good) Examples",
+    "text": "(Good) Examples\n\nPlaying a game\nKeep calling the function play_turn() until it returns False, indicating that the game has finished:\nkeep_playing = True\n\nwhile keep_playing:\n  keep_playing = play_turn()\nWe will assume that the function play_turn() has been defined earlier and that the function returns True to indicate the game can continue, and it will return False when the game has finished.\n\n\nAdding until a limit is reached\nThe total variable starts at one and keeps doubling until the total has reached or exceeded the limit:",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#infinite-loops",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#infinite-loops",
+    "title": "While Loop",
+    "section": "⚠️ Infinite Loops",
+    "text": "⚠️ Infinite Loops\nLooping is a powerful ability to give your code, but it comes with a new kind of risk: your code might loop forever which isn’t good.\nWhy/how could this happen? The while loop will keep repeating until the given condition becomes False. If your program never causes the condition to become false then it will loop forever.\nOne of the most common mistakes you’ll make with while loops is forgetting to update a variable which is used in the condition:\n\nBad example 1\nFor example, if we forget to update our total variable:\nLIMIT = 5\ntotal = 1\n\nwhile total &lt; LIMIT:\n  print(f\"Total is now {total}\")\n  # ...missing the code here...\n\nprint(f\"The final total was {total}\")\nIn this code total never changes therefore it will always be &lt; LIMIT therefore the while loop will repeat forever.\n\n\nBad example 2\nThis code will also keep looping forever. Why is that?\nkeep_playing = True\n\nwhile keep_playing:\n  play_turn()\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhat is the condition that the while loop checks each time?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe variable keep_playing never gets changed so it will always be True, therefore the while loop will repeat forever. This code was ignoring the bool value returned from the play_turn() function.\n\n\n\nWhen you’re writing code with while loops and it seems like your program is stuck, then you’ll have to stop your program and check your while loop to make sure that you didn’t forget to update your variables.",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#tracing",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#tracing",
+    "title": "While Loop",
+    "section": "Tracing",
+    "text": "Tracing\nBeing able to methodically follow exactly what Python is doing becomes even more important when we introduce looping. Let’s trace through what happens when we run this example:\n\n\n1    LIMIT = 5\n2    total = 1\n3  \n4    while total &lt; LIMIT:\n5        total = total * 2                \n6        print(f\"Total is now {total}\")   \n7 \n8    print(f\"The final total was {total}\")\n\n\n\n\n\n\n\n\n\nStep\nAction\n\n\n\n\n1\nAssign the value 5 to LIMIT\n\n\n2\nAssign the value 1 to total\n\n\n3\nCheck whether total &lt; LIMIT. This checks if 1 &lt; 5 & sets the condition to True\n\n\n4\nDouble the value of total, so now total is 2\n\n\n5\nPrint the message which shows that total is 2\n\n\n6\nGo back to line 4 and check whether total &lt; LIMIT. This checks if 2 &lt; 5 & sets the condition to True\n\n\n7\nDouble the value of total, so now total is 4\n\n\n8\nPrint the message which shows that total is 4\n\n\n9\nGo back to line 4 and check whether total &lt; LIMIT. This checks if 4 &lt; 5 & sets the condition to True\n\n\n10\nDouble the value of total, so now total is 8\n\n\n11\nPrint the message which shows that total is 8\n\n\n12\nGo back to line 4 and check whether total &lt; LIMIT. This checks if 8 &lt; 5 & sets the condition to False\n\n\n13\nDo NOT go into the while loop body - jump to line 8\n\n\n14\nPrint the final value of total which is 8",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#cancelling-the-repeats",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#cancelling-the-repeats",
+    "title": "While Loop",
+    "section": "Cancelling the repeats",
+    "text": "Cancelling the repeats\nSometimes you may want to stop repeating the loop even when the condition is still True. Using the break statement will skip any remaining lines in the loop body and will continue running code that follows the loop:",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#skipping-part-of-the-body",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#skipping-part-of-the-body",
+    "title": "While Loop",
+    "section": "Skipping part of the body",
+    "text": "Skipping part of the body\nIt’s less common to need to do this, but you can also skip the rest of the body statements (just like break) but still continue the loop. This uses the continue statement:\n\n\n\n\n\n\nBe careful: if continue causes you to skip code that updates the variables used in the condition, your loop may never end.",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#test-yourself",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#test-yourself",
+    "title": "While Loop",
+    "section": "Test Yourself",
+    "text": "Test Yourself\n\nTest 1\nHow many times will this code print Hello ?\ncount = 1\n\nwhile count &lt; 3:\n  print(\"Hello\")\n  count = count + 1\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis code will print Hello twice because count starts at 1, then becomes 2, then becomes 3 and the condition is no longer true.\n\n\n\n\n\n\n\n\n\n\n\nTest 2\nHow many times will this code print Hello ?\ncount = 3\n\nwhile count &lt; 3:\n  print(\"Hello\")\n  count = count + 1\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis won’t print Hello at all because the condition count &lt; 3 is False from the very beginning so the code inside the while loop is not executed even once.",
+    "crumbs": [
+      "Loops",
+      "While Loop"
+    ]
+  },
+  {
     "objectID": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html",
     "href": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html",
     "title": "Python Turtle Graphics",
