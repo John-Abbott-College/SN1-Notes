@@ -1,6 +1,6 @@
 ---
 title: "✍️ While Loops"
-draft: true
+draft: false
 editor:
   render-on-save: true
 ---
@@ -11,7 +11,7 @@ editor:
 Print the numbers 1 through 5 using a `while` loop.
 
 ```pyodide
-
+# write your solution here
 ```
 
 :::{.callout-hint}
@@ -30,8 +30,8 @@ while num < 5:
 :::
 
 
-### Powers of 2
-Use a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.  
+### Growing up
+Use a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30. Start with number 1.
 
 i.e. add 1 + 2 + 3 + 4 + ... until the sum is 30 or larger
 
@@ -39,7 +39,7 @@ i.e. add 1 + 2 + 3 + 4 + ... until the sum is 30 or larger
 `1 + 2 + 3 = 6`
 
 ```pyodide
-
+# write your solution here
 ```
 
 :::{.callout-hint}
@@ -61,7 +61,22 @@ my_name = f"{my_name} Bond"
 :::
 :::
 
-:::{.callout-tip title="Solution" collapse="true"}
+:::{.callout-tip title="Solution without bonus" collapse="true"}
+```{pyodide}
+number = 1              # the first number we'll add is 1
+sum = 0                 # the sum starts out at zero
+
+while sum < 30:
+  sum = sum + number    # update our sum
+
+  number = number + 1
+
+print(sum)
+```
+:::
+
+
+:::{.callout-tip title="Solution with bonus" collapse="true"}
 ```{pyodide}
 number = 1              # the first number we'll add is 1
 sum = 0                 # the sum starts out at zero
@@ -82,4 +97,3 @@ while sum < 30:
 print(f"{equation} = {sum}")
 ```
 :::
-

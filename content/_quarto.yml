@@ -78,7 +78,8 @@ website:
       contents:
       - topics/08_loops/01_for_loop/01_for_loop.qmd
       - topics/08_loops/exercises/for_loops/for_loops.qmd
-    #   - topics/08_loops/02_while_loop/02_while_loop.qmd
+      - topics/08_loops/02_while_loop/02_while_loop.qmd
+      - topics/08_loops/exercises/while_loops/while_loops.qmd
 
     - section: Functions
       contents:

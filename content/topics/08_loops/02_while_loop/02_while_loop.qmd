@@ -1,6 +1,6 @@
 ---
 title: "While Loop"
-draft: true
+draft: false
 editor:
   render-on-save: true
 ---
@@ -55,8 +55,8 @@ LIMIT = 5
 total = 1
 
 while total < LIMIT:
-  print(f"Total is now {total}")
   total = total * 2
+  print(f"Total is now {total}")
 
 print(f"The final total was {total}")
 ```
@@ -150,7 +150,7 @@ Being able to methodically follow exactly what Python is doing becomes even more
 
 ## Cancelling the repeats
 
-Sometimes you may want to stop repeating the loop even when the condition is still True. Using the `break` statement will skip any remaining lines in the loop body and will continue running code that follows the loop:
+Sometimes you may want to stop repeating the loop even when the condition is still True. Using the `break` statement will skip any remaining lines in the loop body and will run the code that comes after the loop body:
 
 ```pyodide
 count = 0
@@ -167,7 +167,7 @@ print("The loop has finished.")
 
 
 ## Skipping part of the body
-It's less common to need to do this, but you can also skip the rest of the body statements (just like `break`) but still continue the loop. This uses the `continue` statement:
+It's less common to need to do this, but you can also skip the rest of the body statements (just like `break`) but keep running the loop. This is done using the `continue` statement:
 
 ```pyodide
 count = 0
