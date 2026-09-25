@@ -3,6 +3,7 @@ title: "Previous Years Exams and Additional Practice"
 listing:
     type: table
     fields: [title, subtitle]
+    sort: false
     contents:
     - final_exam_f24/final_exam_f24.qmd
     - final_exam_w25/final_exam_w25.qmd

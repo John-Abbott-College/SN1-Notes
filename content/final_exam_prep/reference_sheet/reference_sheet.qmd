@@ -6,6 +6,4 @@ editor:
 
 The following reference sheet will be available for you to use during your examination:
 
-<object data="../../../files/reference_sheet_w26.pdf" type="application/pdf" width="100%" height="1000px">
-  <p><a href="../../../files/reference_sheet_w26.pdf">Download the PDF</a> containing this reference sheet.</p>
-</object>
+[Download the PDF](reference_sheet_w26.pdf){target="_blank"}  containing the reference sheet.
