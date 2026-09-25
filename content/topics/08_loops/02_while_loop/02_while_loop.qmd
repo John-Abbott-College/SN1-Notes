@@ -1,6 +1,6 @@
 ---
 title: "While Loop"
-draft: true
+draft: false
 editor:
   render-on-save: true
 ---
