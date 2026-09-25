@@ -193,7 +193,7 @@
     "href": "syllabus/Youmna/Youmna.html#in-class-6",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nImpersonate code card game\nComplete the Assignment 2- Part 1\nWork the Assignment Part 2\n\n\nSome hints will be provided for this part"
+    "text": "💻 In class\n\nImpersonate code card game\nFunctions calling other functions tracing exercise.\nComplete the Assignment 2- Part 1\nWork the Assignment Part 2\n\n\nSome hints will be provided for this part"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-6",
@@ -207,7 +207,7 @@
     "href": "syllabus/Youmna/Youmna.html#prep-7",
     "title": "Youmna",
     "section": "📚 Prep",
-    "text": "📚 Prep\nGo over: - For Loops - Try the level 1 Practice Problems"
+    "text": "📚 Prep\nGo over:\n\nFor Loops\nTry the level 1 Practice Problems"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#in-class-7",
@@ -2143,18 +2143,18 @@
     "href": "topics/08_loops/02_while_loop/02_while_loop.html",
     "title": "While Loop",
     "section": "",
-    "text": "Warning☆ Additional Objectives\n\n\n\n\nCreate while loops to repeat code\nCombine use while loops with conditions and other constructs\nEvaluate when while loops should be used\nPredict the output and effects of using while loops in a program.\nA while loop allows you to repeat lines of code over and over as long as a given condition is True. This is useful for tasks like:\n- keep playing a game until the last level is completed\n- keep rolling dice until a 1 is rolled\n- keep refining a calculation until it settles on a final answer\nThe structure of a while loop is very similar to a simple if statement:\nAs long as &lt;condition&gt; is True, the code inside the body will be executed again and again.\nYou’ll recognize this pattern that shows up a lot in Python, where the body must be indented. As soon as Python sees a line that is not indented then it understands that you’ve ended the body.\nWhat code can you put inside the body of a loop? Well, almost anything:\n- do math & assign to variables\n- print things\n- call functions\n- use if-else… statements\n- even put more loops",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nCreate while loops to repeat code\nCombine use while loops with conditions and other constructs\nEvaluate when while loops should be used\nPredict the output and effects of using while loops in a program.\nA while loop allows you to repeat lines of code over and over as long as a given condition is True. This is useful for tasks like:\n- keep playing a game until the last level is completed\n- keep rolling dice until a 1 is rolled\n- keep refining a calculation until it settles on a final answer\nThe structure of a while loop is very similar to a simple if statement:\nYou’ll recognize this pattern that shows up a lot in Python, where the body must be indented. As soon as Python sees a line that is not indented then it understands that you’ve ended the body.\nWhat code can you put inside the body of a loop? Well, almost anything:\n- do math & assign to variables\n- print things\n- call functions\n- use if-else… statements\n- even put more loops",
     "crumbs": [
       "Loops",
       "While Loop"
     ]
   },
   {
-    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#good-examples",
-    "href": "topics/08_loops/02_while_loop/02_while_loop.html#good-examples",
+    "objectID": "topics/08_loops/02_while_loop/02_while_loop.html#usage-examples",
+    "href": "topics/08_loops/02_while_loop/02_while_loop.html#usage-examples",
     "title": "While Loop",
-    "section": "(Good) Examples",
-    "text": "(Good) Examples\n\nPlaying a game\nKeep calling the function play_turn() until it returns False, indicating that the game has finished:\nkeep_playing = True\n\nwhile keep_playing:\n  keep_playing = play_turn()\nWe will assume that the function play_turn() has been defined earlier and that the function returns True to indicate the game can continue, and it will return False when the game has finished.\n\n\nAdding until a limit is reached\nThe total variable starts at one and keeps doubling until the total has reached or exceeded the limit:",
+    "section": "🔁 Usage examples",
+    "text": "🔁 Usage examples\nWhen would we use a while loop over a for loop? Here are “good” examples where it’s more convinient to repeat code based on a condition over counting a number of iterations.\n\nPlaying a game\nKeep calling the function play_turn() until it returns False, indicating that the game has finished:\nkeep_playing = True\n\nwhile keep_playing:\n  keep_playing = play_turn()\nWe will assume that the function play_turn() has been defined earlier and that the function returns True to indicate the game can continue, and it will return False when the game has finished.\n\n\nAdding until a limit is reached\nThe total variable starts at one and keeps doubling until the total has reached or exceeded the limit:\n\n\n\n\n\n\n\n\nRobotics and Microcontrollers\nAnother use of while loops is in robotics.\nUntil an obstable is detected, keep calling the forward() function to move the robot forward and call the read_obstacle_sensor() to read the obstacle detection sensor.\nobstacle = False\n\nwhile obstacle:\n  print(\"Go forward\")\n  forward()\n\n  obstacle = read_obstacle_sensor()",
     "crumbs": [
       "Loops",
       "While Loop"
@@ -2165,7 +2165,7 @@
     "href": "topics/08_loops/02_while_loop/02_while_loop.html#infinite-loops",
     "title": "While Loop",
     "section": "⚠️ Infinite Loops",
-    "text": "⚠️ Infinite Loops\nLooping is a powerful ability to give your code, but it comes with a new kind of risk: your code might loop forever which isn’t good.\nWhy/how could this happen? The while loop will keep repeating until the given condition becomes False. If your program never causes the condition to become false then it will loop forever.\nOne of the most common mistakes you’ll make with while loops is forgetting to update a variable which is used in the condition:\n\nBad example 1\nFor example, if we forget to update our total variable:\nLIMIT = 5\ntotal = 1\n\nwhile total &lt; LIMIT:\n  print(f\"Total is now {total}\")\n  # ...missing the code here...\n\nprint(f\"The final total was {total}\")\nIn this code total never changes therefore it will always be &lt; LIMIT therefore the while loop will repeat forever.\n\n\nBad example 2\nThis code will also keep looping forever. Why is that?\nkeep_playing = True\n\nwhile keep_playing:\n  play_turn()\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhat is the condition that the while loop checks each time?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe variable keep_playing never gets changed so it will always be True, therefore the while loop will repeat forever. This code was ignoring the bool value returned from the play_turn() function.\n\n\n\nWhen you’re writing code with while loops and it seems like your program is stuck, then you’ll have to stop your program and check your while loop to make sure that you didn’t forget to update your variables.",
+    "text": "⚠️ Infinite Loops\nLooping is a powerful ability to give your code, but it comes with a new kind of “risk”: your code might loop forever which isn’t good.\nWhy/how could this happen? The while loop will keep repeating until the given condition becomes False. If your program never causes the condition to become false then it will loop forever.\n\nOne of the most common mistakes you’ll make with while loops is forgetting to update a variable which is used in the condition:\n\nBad example 1\nFor example, if we forget to update our total variable:\nLIMIT = 5\ntotal = 1\n\nwhile total &lt; LIMIT:\n  print(f\"Total is now {total}\")\n  # ...missing the code here...\n\nprint(f\"The final total was {total}\")\nIn this code total never changes therefore it will always be &lt; LIMIT therefore the while loop will repeat forever.\n\n\nBad example 2\nThis code will also keep looping forever. Why is that?\nkeep_playing = True\n\nwhile keep_playing:\n  play_turn()\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhat is the condition that the while loop checks each time?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe variable keep_playing never gets changed so it will always be True, therefore the while loop will repeat forever. This code was ignoring the bool value returned from the play_turn() function.\n\n\n\nWhen you’re writing code with while loops and it seems like your program is stuck, then you’ll have to stop your program and check your while loop to make sure that you didn’t forget to update your variables.",
     "crumbs": [
       "Loops",
       "While Loop"
