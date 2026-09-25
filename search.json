@@ -2079,7 +2079,7 @@
     "href": "topics/08_loops/exercises/while_loops/while_loops.html",
     "title": "✍️ While Loops",
     "section": "",
-    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution without bonus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution with bonus",
     "crumbs": [
       "Loops",
       "✍️ While Loops"
@@ -2090,7 +2090,7 @@
     "href": "topics/08_loops/exercises/while_loops/while_loops.html#level-1",
     "title": "✍️ While Loops",
     "section": "",
-    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "Print the numbers 1 through 5 using a while loop.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUse a variable to keep track of how many times you’ve printed so far.\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse a while loop to add progressively bigger numbers together until the sum reaches or exceeds 30.\ni.e. add 1 + 2 + 3 + 4 + … until the sum is 30 or larger\n\nBonus: at the end of the code, print the actual equation and result like: 1 + 2 + 3 = 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou’ll need more than 1 variable for this one.\n\n\n\n\n\n\n\n\n\n\n\nNoteHint for bonus\n\n\n\n\n\nYou can keep adding things to a string like:\nmy_name = my_name + \" Bond\"\nor, using an f-string:\nmy_name = f\"{my_name} Bond\"\n\n\n\n\n\n\n\n\n\n\nTipSolution without bonus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution with bonus",
     "crumbs": [
       "Loops",
       "✍️ While Loops"
@@ -2145,7 +2145,7 @@
     "href": "topics/08_loops/02_while_loop/02_while_loop.html#cancelling-the-repeats",
     "title": "While Loop",
     "section": "Cancelling the repeats",
-    "text": "Cancelling the repeats\nSometimes you may want to stop repeating the loop even when the condition is still True. Using the break statement will skip any remaining lines in the loop body and will continue running code that follows the loop:",
+    "text": "Cancelling the repeats\nSometimes you may want to stop repeating the loop even when the condition is still True. Using the break statement will skip any remaining lines in the loop body and will run the code that comes after the loop body:",
     "crumbs": [
       "Loops",
       "While Loop"
@@ -2156,7 +2156,7 @@
     "href": "topics/08_loops/02_while_loop/02_while_loop.html#skipping-part-of-the-body",
     "title": "While Loop",
     "section": "Skipping part of the body",
-    "text": "Skipping part of the body\nIt’s less common to need to do this, but you can also skip the rest of the body statements (just like break) but still continue the loop. This uses the continue statement:\n\n\n\n\n\n\nBe careful: if continue causes you to skip code that updates the variables used in the condition, your loop may never end.",
+    "text": "Skipping part of the body\nIt’s less common to need to do this, but you can also skip the rest of the body statements (just like break) but keep running the loop. This is done using the continue statement:\n\n\n\n\n\n\nBe careful: if continue causes you to skip code that updates the variables used in the condition, your loop may never end.",
     "crumbs": [
       "Loops",
       "While Loop"
