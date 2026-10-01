@@ -244,7 +244,7 @@ for num in range(7, 100):
         print(f"{num} is divisible by 6. Stopping.")
         break
 
-print(num)
+    print(num)
 ```
 :::
 

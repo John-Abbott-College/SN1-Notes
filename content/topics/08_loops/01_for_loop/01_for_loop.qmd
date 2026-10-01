@@ -284,6 +284,9 @@ Code trace:
 
 
 ## Looping through the items in a list
+::: {.callout-warning .objectives icon="false" title="Note"}
+If you haven't learned **Lists** yet, then you should skip this section and come back later.  
+:::
 
 ```pyodide
 fib_list = [1, 1, 2, 3, 5 ]
@@ -311,7 +314,7 @@ Code trace:
 
 
 ## Examples of Loops Inside Functions
-::: {.callout-note .objectives icon="false" title="Note"}
+::: {.callout-warning .objectives icon="false" title="Note"}
 If you haven't learned **custom functions** yet, then you may want to skip this section and come back later.  
 :::
 
