@@ -1,5 +1,124 @@
 [
   {
+    "objectID": "teacher/keith/review/functions.html",
+    "href": "teacher/keith/review/functions.html",
+    "title": "Functions Review",
+    "section": "",
+    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#ignoring-parameters",
+    "href": "teacher/keith/review/functions.html#ignoring-parameters",
+    "title": "Functions Review",
+    "section": "",
+    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#functions-vs-variables",
+    "href": "teacher/keith/review/functions.html#functions-vs-variables",
+    "title": "Functions Review",
+    "section": "Functions vs Variables",
+    "text": "Functions vs Variables\nWhy does the 2nd call to the function not work?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because on line 4 it make a variable with the same name as a function. From that point on, python will forget about the function called triple and will only use the variable called triple. Line 7 will fail because it tries to use a number (75 in this case) as if it was a function.\nDo not make variables inside or outside of functions that have the same name as a function."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#did-you-call",
+    "href": "teacher/keith/review/functions.html#did-you-call",
+    "title": "Functions Review",
+    "section": "Did you call?",
+    "text": "Did you call?\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it never actually called the function. The function was defined properly, but the code on line 4 is not properly telling Python to use the function. Instead, it is basically making a copy of the function itself.\nTo call a function, you must have round brackets ( ) after the name of the function, even if the function does not use parameters.\nIn the case above, the function needs to be told what the width and height are of the rectangle whose area we need and line 4 is clearly not giving any such information to the function so how could it possibly know that we want the area of a rectangle 5 x 10 ?\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#cant-answer",
+    "href": "teacher/keith/review/functions.html#cant-answer",
+    "title": "Functions Review",
+    "section": "Can’t answer",
+    "text": "Can’t answer\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the function calculated the correct result but never returned the result. The function did some work but didn’t give us the answer.\nIf you see None get printed, you probably forgot a return statement inside your function!\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#your-order-please",
+    "href": "teacher/keith/review/functions.html#your-order-please",
+    "title": "Functions Review",
+    "section": "Your order please",
+    "text": "Your order please\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the values used in the function call are not in the correct order to match what the function is expecting.\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#any-name-you-like",
+    "href": "teacher/keith/review/functions.html#any-name-you-like",
+    "title": "Functions Review",
+    "section": "Any name you like",
+    "text": "Any name you like\nThe following code does work. There is a function called circle_area that has a parameter to represent the radius of a circle and it will return the area.\nLook carefully at the three places in the code that call this function. Notice how it doesn’t matter at all what the name of the parameter on the function was vs. the name of the variable whose value you pass to the function.\nThe name radius is what the circle_area function uses to refer to the radius, but you can send any value you have to the function and the function doesn’t care where the value came from."
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "",
+    "text": "The main topics we have covered and that may be on your midterm test:\n- Data Types\n- Variables\n- Math formulas/calculations\n- f-strings - Custom functions\n- if-elif-else statements\n- for loops\nYou should review this page as well as:\n- things to look out for with functions\n- things to look out for with indentation\n- long questions"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#data-types",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#data-types",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Data Types",
+    "text": "Data Types\nIn this course we use 4 main kinds of information:\n\n\n\n\n\n\n\n\nData Type\nRepresents\nExamples\n\n\n\n\nstring (str)\nText, symbols. Cannot be used for calculations\n“John Abbott”, “Monday”, “ten”\n\n\ninteger (int)\nWhole numbers. Positive or negative. No decimal part.\n1, 10, 98655, 0, -89\n\n\nfloat\nDecimal number.\n9.81, 3.14159, 10.0, 3.7, 0.0, -89.34\n\n\nBoolean (bool)\nA binary choice of one thing or another, like yes/no, on/off, tall/short, young/old\nTrue, False\n\n\n\nWhen you set a value for a string, you must surround the value with quotes. You can use either single quotes ’ (like an apostrophe) or double quotes ” Generally, double quotes work better.\nbool values may represent On/Off etc. but you can only use the actual values True and False. Despite these looking like words, they are not text and must not be surrounded by quotes.\n“ten”, 10, and 10.0 may all look the same to a human but they mean different things to a computer. Adding the .0 forces Python to consider that number as a float."
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#variables",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#variables",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Variables",
+    "text": "Variables\nVariables are how your program will remember things. After a calculation is done, you should save the result into a variable so that you can use it later.\nvariable_name = value\n\nExamples\nmy_name = \"Keith\"\nmy_address = \"Keith's House\"\n\nbobs_age = 50\nmy_age = bobs_age - 10\n\nlotto_prize = 1000000.00\n\nis_tall = False\nis_short = not is_tall\nVariables can be changed by assigning a new value any time you want. The new value may or may not be based on the old value.\n# set the initial value of total to zero\ntotal = 0\n\n...do some stuff...\n# increase total by 8\ntotal = total + 8\n\n...do stuff...\n# set total to 9\ntotal = 9"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#arithmetic",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#arithmetic",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Arithmetic",
+    "text": "Arithmetic\nBasic math is done using symbols for each mathematical operation:\n\n\n\n\n\n\n\n\n\n\nOperation\nSymbol\n\nOperation\nSymbol\n\n\n\n\nAddition\n+\n\nSubtraction\n-\n\n\nMultiplication\n*\n\nDivision (gives you a float result)\n/\n\n\nExponent\n**\n\nFloor division (gives a whole number, but may include .0 if 1 or both of the arguments was a float)\n//\n\n\nModulus (remainder)\n%\n\n\n\n\n\n\n\nExamples\nnum_vehicles = num_cars + num_trucks\n\nprice = unit_cost * num_units\n\nawkward_people_on_a_date = num_people % 2\n\narea = side_length ** 2\nvolume = side_length ** 3 \n\nanswer = (10 + length) * speed"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#arithmetic-shorthands",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#arithmetic-shorthands",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Arithmetic Shorthands",
+    "text": "Arithmetic Shorthands\nNot on midterm but you may see these in other notes\n\n\n\nOperation\nSame as\n\n\n\n\nnum += 1\nnum = num + 1\n\n\nmonths += 12\nmonths = months + 12\n\n\nbalance -= 2\nbalance = balance - 2\n\n\ncost *= 1.15\ncost = cost * 1.15\n\n\nsize /= shrinkflation\nsize = size / shrinkflation"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#math-library",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#math-library",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Math library",
+    "text": "Math library\nimport math\n...\n\nExamples\n\nRounding UP\nimport math\nbus_capacity = 60\nnum_students = 137\n\nnum_buses = math.ceil(num_students / bus_capacity)\n\n\nRounding DOWN\nimport math\ncash_available = 20.00\nmeal_price = 6.85\n\nnum_meals = math.floor(cash_available / meal_price)\n\n\nSquare Root\nimport math\na = 3\nb = 5\nc = math.sqrt(a ** 2 + b ** 2)\n\n\nAbsolute value\n(not actually part of math library, so no import needed)\nexpected_value = 9.8\nmeasured_value = 10.1\n\ndifference = abs(expected_value - measured_value)"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#formatted-strings-f-strings",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#formatted-strings-f-strings",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Formatted strings (f-strings)",
+    "text": "Formatted strings (f-strings)\nf-strings allow you to insert values from variables or calculations into a string. When you put an f right before the quotes that start a string, Python will look for placeholders inside the string which are surrounded by { }. Whatever is within the { } will be calculated/looked up and the result will be put into the string instead.\n\nExamples\nmy_name = \"Keith\"\nprint(f\"Hello my name is {my_name}\")\nmy_name = \"Keith\"\nmy_age = 29\nprint(f\"Hello my name is {my_name} and I am {my_age} years old.\")\nname = input(\"What is your name? \")\nprint(f\"Hello {name}!\")\nloaves = 5\ncontainers = 12\nbutter_sticks = 1\nprint(f\"\"\"Shopping list:\n- {loaves} loaf/loaves of bread\n- {containers} container(s) of milk\n- {butter_sticks} stick(s) of butter\n\"\"\")"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#functions",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#functions",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Functions",
+    "text": "Functions\nThe simplest functions do something (which could be just printing to the screen) but do not return any result:\ndef simple():\n    print(\"All this function does is print this to the screen!\")\nHowever, functions often need to be given some data which we call parameters and they go between the round brackets ( ), and may also return something back to us:\ndef add(num1, num2):\n    result = num1 * 1.7623 + num2 / 87\n\n    return result\n# This function will make a string that has the month name followed by the day of \n# month.\n# e.g. day_month(\"March\", 23) will give back a string \"March 23\"\ndef day_month(month, day):\n    result = f\"{month} {day}\"\n\n    return result\nDefining a function just tells Python about it. Your code needs to Call i.e. use the function to be useful.\n# define the function:\ndef my_function():\n    print(\"Hello\")\n\n# call the function:\nmy_function() # you'll only see Hello printed if you have this line\nNow go back and redo the Many Mini Functions, and the functions review."
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#ifelifelse",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#ifelifelse",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "If/elif/else",
+    "text": "If/elif/else\n\n\n\nCondition\nOperator\n\nCondition\nOperator\n\n\n\n\nequal\n==\n\nnot equal\n!=\n\n\ngreater than\n&gt;\n\ngreater than or equal to\n&gt;=\n\n\nless than\n&lt;\n\nless than or equal to\n&lt;=\n\n\n\n\nif condition:\n     code to run when condition is True \n\n\nYou can have an else: if you want:\n\nif condition:\n     code to run when condition is True\nelse:    \n     code to run when condition is False\n\n\nYou can have zero, one or as many elif’s as you want (with an else: also if you want):\n\nif condition:\n     code to run when condition is True\nelif other condition:\n     code to run when 1st condition is False, but 2nd condition is True\nelif yet other condition:\n     code to run when 1st condition is False, 2nd condition is False, but 3rd condition is True\nelse:    \n     code to run when all previous conditions are False\n\n\n\nExamples\nif cost &lt;= 10.0:\n    print(\"That's too cheap! I'm going to increase the price.\")\n    cost = cost + 5.00\nif cost &lt;= 10.0:\n    print(\"That's too cheap! I'm going to increase the price.\")\n    cost = cost + 5.00\nelse:\n    print(\"Thank-you for your business.\")\nif day == \"Thursday\":\n    print(\"Enjoy your Thursday special!\")\n    cost = cost - 5\nelif day == \"Saturday\" or day == \"Sunday\":\n    print(\"Enjoy a discount for shopping on the weekend!\")\n    cost = cost * 0.85\nelse:    \n    print(f\"Regular price is ${cost}\")\nis_taxed = True\n\nif product == \"apple\":\n    price = 0.65\n    is_taxed = False\nelif product == \"chocolate bar\":\n    price = 1.10\nelif product == \"Ferrari\":\n    price = 300000.00\n\nif is_taxed:\n    price = price * 1.15\nif age &gt;= 18 and age &lt; 65:\n    print(\"Society expects you to have a job.\")\nCan also be written as:\nif 18 &lt;= age &lt; 65:\n    print(\"Society expects you to have a job.\")"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/midterm-review-keith.html#for-loops",
+    "href": "teacher/keith/prep/midterm/midterm-review-keith.html#for-loops",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "For loops",
+    "text": "For loops\nFor loops let you repeat code a number of times based on a set of values. Python will automatically make a variable for you and will first set that variable to the 1st value, then run your code, then change the variable to the 2nd value and re-run your code etc. until it reaches the last value.\nWe can tell it which values to use by defining an interval using the range() function. range() can be used 3 different ways as shown here:\n\nThe loop variable will use the interval [0..stop)\n\nfor variable in range(stop):\n     code to repeat for each value\n\n\nvariable will first be zero, then will increase by 1 at a time but will never reach stop.\n\n\nThe loop variable will use the interval [start..stop)\n\nfor variable in range(start, stop):\n     code to repeat for each value\n\n\nvariable will first be start, then will increase by 1 at a time but will never reach stop.\n\n\nThe loop variable will use the interval [start..stop) and will increase by ‘step’ each time\n\nfor variable in range(start, stop, step):\n     code to repeat for each value\n\n\nvariable will first be start, then will increase by step at a time but will never reach stop.\n\n\nExamples\n\nAdd all numbers from 1 to 10 (inclusive)\ntotal = 0\n\nfor i in range(1, 11):\n    total = total + i\n\n\nPrint each hour of the day (0:00, 1:00, 2:00…)\nfor hour in range(0, 24):\n    print(f\"{hour}:00\")\n\n\nPrint odd numbers from 1 to 10 (inclusive):\nfor num in range(1, 11, 2):\n    print(num)\n\n\nPrint odd numbers from 1 to 100 (inclusive):\nfor num in range(1, 101):\n    if num % 2 == 1:\n        print(num)\n\n\nPrint numbers between (and including) 7 and 100 but stop as soon as you find a number that is divisible by 6\nfor num in range(7, 101):\n    if num % 6 == 0:\n        print(f\"{num} is divisible by 6. Stopping.\")\n        break\n    print(num)\n\n\nCalculate the sum of the areas of 3 rectangles where each one is larger than the previous by 1 unit on each dimension:\nwidth = 10\nheight = 5\ntotal_area = 0\n\nfor rect_num in range(3):\n    rect_area = (width + rect_num) * (height + rect_num)\n    total_area = total_area + rect_area"
+  },
+  {
     "objectID": "final_exam_prep/final_exam_f24/final_exam_f24.html",
     "href": "final_exam_prep/final_exam_f24/final_exam_f24.html",
     "title": "📝 Fall 2024",
@@ -1550,7 +1669,7 @@
     "href": "topics/09_functions/exercises/custom_functions/many_mini_functions.html",
     "title": "✍️ Many Mini Functions",
     "section": "",
-    "text": "The exercises on this page are small and many. Try as many as you can to get used to writing functions.\nPay close attention to whether your function should do a print(), or if it should do a return.\n\n  AI: These examples were generated by AI and then reviewed and corrected by a human.\n \n\n\n\n\n\n\n\nTipGenerate More Exercises\n\n\n\n\n\nUse a prompt like this with your favourite AI companion to get more exercises if you need:\nI'm a student learning to program in Python. Make exercises for me to practice writing simple functions.  \n\nCriteria:\n- use only simple types: int, bool, float, str\n- do not require the use of conditional statements or any control flow beyond the return keyword\n- do not require the use of string manipulation\n- each function body should be 1-3 lines\n- make exercises for 0, 1, 2 params\n- require some functions to display (i.e. print) something, but most functions (say 75%) should be required to return values instead\n- can require basic arithmetic, but no external libraries such as the math library\n\n\n\n\ngreet\nWrite a function greet that takes no parameters and prints \"Hello, World!\".\n\n\n\n\n\n\nThe code below calls your function:\ngreet()\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nadd\nWrite a function add that takes two numbers a and b and returns their sum. Include code that calls add with two numbers of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsquare\nWrite a function square that takes one number n and returns n squared. Write code that calls square with a number of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_line\nWrite a function print_line that takes no parameters and prints a line of 20 dashes (\"-\" * 20).\n\nHINT: if you multiply a string times a number, it will repeat the string that many times.\n\n\n\n\n\n\n\nThe code below calls your function:\nprint_line()\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncelsius_to_fahrenheit\nWrite a function celsius_to_fahrenheit that takes one number c (degrees Celsius) and returns the equivalent in Fahrenheit (c * 9 / 5 + 32).\nInclude code that calls celsius_to_fahrenheit with a temperature of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshout\nWrite a function shout that takes one string s and returns the string in uppercase followed by an exclamation mark.\nYou’ll want to use the Python string function “upper” like this:\nmy_name = \"bobby\"\nmy_name_caps = my_name.upper()  # this returns \"BOBBY\"\n\n\n\n\n\n\nThe code below calls your function:\nresult = shout(\"hello\")\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_stars\nWrite a function print_stars that takes one integer n and prints a line of n asterisks. Call the function with a number of your choice.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\naverage\nWrite a function average that takes two numbers a and b and returns their average.\n\n\n\n\n\n\nThe code below calls your function:\nresult = average(4, 8)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfull_name\nWrite a function full_name that takes two strings first and last and returns them combined as \"first last\".\n\n\n\n\n\n\nThe code below calls your function:\nresult = full_name(\"Ada\", \"Lovelace\")\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrectangle_area\nWrite a function rectangle_area that takes two numbers w and h and returns the area of a rectangle with those dimensions.\n\n\n\n\n\n\nThe code below calls your function:\nresult = rectangle_area(3, 5)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndouble\nWrite a function double that takes one number n and returns twice its value.\n\n\n\n\n\n\nThe code below calls your function:\nresult = double(21)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_divider\nWrite a function print_divider that takes one string char and prints that character repeated 10 times. Add code to call print_divider with a character (e.g. a letter or symbol) of your choice.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbmi\nWrite a function bmi that takes weight (kg) and height (m) and returns the body mass index (weight / (height * height)).\n\n\n\n\n\n\nThe code below calls your function:\nresult = bmi(70, 1.75)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nget_pi_approx\nWrite a function get_pi_approx that takes no parameters and returns the value 3.14159. Add a call to your function.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution",
+    "text": "The exercises on this page are small and many. Try as many as you can to get used to writing functions.\nPay close attention to whether your function should do a print(), or if it should do a return.\n\n  AI: These examples were generated by AI and then reviewed and corrected by a human.\n \n\n\n\n\n\n\n\nTipGenerate More Exercises\n\n\n\n\n\nUse a prompt like this with your favourite AI companion to get more exercises if you need:\nI'm a student learning to program in Python. Make exercises for me to practice writing simple functions.  \n\nCriteria:\n- use only simple types: int, bool, float, str\n- do not require the use of conditional statements or any control flow beyond the return keyword\n- do not require the use of string manipulation\n- each function body should be 1-3 lines\n- make exercises for 0, 1, 2 params\n- require some functions to display (i.e. print) something, but most functions (say 75%) should be required to return values instead\n- can require basic arithmetic, but no external libraries such as the math library\n\n\n\n\ngreet\nWrite a function greet that takes no parameters and prints \"Hello, World!\".\n\n\n\n\n\n\nThe code below calls your function:\ngreet()\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nadd\nWrite a function add that takes two parameters a and b and returns their sum. Include code that calls add with two numbers of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsquare\nWrite a function square that is given one number n (i.e. a parameter) and returns n squared. Write code that calls your function with a number of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_line\nWrite a function print_line that takes no parameters and prints a line of 20 dashes (\"-\" * 20).\n\nHINT: if you multiply a string times a number, it will repeat the string that many times.\n\n\n\n\n\n\n\nThe code below calls your function:\nprint_line()\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_line (configurable)\nWrite a function print_line that will print a line of dashes, but has a parameter saying how many dashes to print.\n\nHINT: if you multiply a string times a number, it will repeat the string that many times.\n\n\n\n\n\n\n\nThe code below calls your function:\nprint_line(27)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint_message\nWrite a function print_message that will print a given message msg as many times as requested via the parameter num\n\nHINT: if you multiply a string times a number, it will repeat the string that many times.\n\n\n\n\n\n\n\nThe code below calls your function:\nprint_message(\"-\", 27)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncelsius_to_fahrenheit\nWrite a function celsius_to_fahrenheit that takes one number c (degrees Celsius) and returns the equivalent in Fahrenheit (c * 9 / 5 + 32).\nInclude code that calls celsius_to_fahrenheit with a temperature of your choice and prints the result.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshout\nWrite a function shout that takes one string s and returns the string in uppercase followed by an exclamation mark.\nYou’ll want to use the Python string function “upper” like this:\nmy_name = \"bobby\"\nmy_name_caps = my_name.upper()  # this returns \"BOBBY\"\n\n\n\n\n\n\nThe code below calls your function:\nresult = shout(\"hello\")\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\naverage\nWrite a function average that takes two numbers a and b and returns their average.\n\n\n\n\n\n\nThe code below calls your function:\nresult = average(4, 8)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfull_name\nWrite a function full_name that takes two strings first and last and returns them combined as \"first last\".\n\n\n\n\n\n\nThe code below calls your function:\nresult = full_name(\"Ada\", \"Lovelace\")\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrectangle_area\nWrite a function rectangle_area that takes two numbers w and h and returns the area of a rectangle with those dimensions.\n\n\n\n\n\n\nThe code below calls your function:\nresult = rectangle_area(3, 5)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndouble\nWrite a function double that takes one number n and returns twice its value.\n\n\n\n\n\n\nThe code below calls your function:\nresult = double(21)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbmi\nWrite a function bmi that takes weight (kg) and height (m) and returns the body mass index (weight / (height * height)).\n\n\n\n\n\n\nThe code below calls your function:\nresult = bmi(70, 1.75)\nprint(result)\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nget_pi_approx\nWrite a function get_pi_approx that takes no parameters and returns the value 3.14159. Add a call to your function.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution",
     "crumbs": [
       "Functions",
       "✍️ Many Mini Functions"
@@ -2570,5 +2689,75 @@
     "title": "📝 Winter 2025",
     "section": "Question 11 - Pascal’s Triangle (6 marks)",
     "text": "Question 11 - Pascal’s Triangle (6 marks)\nPascal’s triangle is a simple method to determine the coefficients of the expanded math formula (a+b)**n\n\n\n\ndemo\n\n\nEach row of Pascal’s triangle is determined by using the previous row in the following manner…\n\nthe new row starts with 1\neach preceding element of the row is the sum of the previous row’s diagonal elements.\nthe new row’s last element is a 1\n\nCode a function next_pascal(row: list) -&gt; list that\n\ntakes a row of Pascal’s triangle as a parameter and\nreturns the next row in the triangle in a list.\n\nExample:\nrow = [1,4,6,4,1]\nnew_row = next_pascal(row)\nprint(new_row)      # [1,5,10,10,5,1]\nWrite a python program that\n\ntakes n as input (ask the user) the height of the pascal triangle (row number) and\nprints the pascal triangle.\nNOTE: Use your function next_pascal\n\nExample output for n = 5\n[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]\n[1, 5, 10, 10, 5, 1]"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html",
+    "href": "teacher/keith/prep/midterm/practice-problems.html",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "",
+    "text": "Try solving these in Thonny. These are similar style & level to the “long” questions on a midterm test."
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#tracing",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#tracing",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Tracing",
+    "text": "Tracing\nGiven the Python code below, fill in all the blanks assuming the user typed 12 for the input. Feel free to use a (non-programmable) calculator!\n# initialize defaults\ntotal = 4\n\n# user types 12\nnum = int(input(\"What's a cool number? \")) # num's value is now: _______\n\n# do math\nnum = num + 2 # num's value is now: _______\nnum = num + 4 # num's value is now: _______\nnum = num + 6 # num's value is now: _______\nif num &gt; 25:\n    num = num + 3\nelse:\n    num = num / 2\n# num's value is now: _____    \ntotal = total + (num % 5)\n\n# output result\nprint(total) # the printed total is: ______\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#approximation-of-ln1x",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#approximation-of-ln1x",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Approximation of ln(1+x)",
+    "text": "Approximation of ln(1+x)\nFall semester students can skip this one unless they already understand series or want to learn a bit of future-math.\n\n \nIf you’re not familiar with Summation Notation / Sigma / Series, then check out this video\nYou’ll need this in future math courses if you haven’t learned it yet!  \n \n\nWe can approximate the natural logarithm of 1+x using the Taylor series:\n\\[\n\\ln(1 + x) = \\sum_{n=1}^{N} (-1)^{n+1} \\frac{x^n}{n}, \\quad |x| &lt; 1\n\\]\nThe larger the value N is, the more precise the approximation will be. Using N=200, write Python code to print the approximate value of ln(1 + 0.873).\nHint: Use a for loop and a variable to hold the sum of all the calculations.\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#delivery-driver",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#delivery-driver",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Delivery Driver",
+    "text": "Delivery Driver\nYou have a full-time job in the summer delivering packages for a small local company called Nozama.\nYou are paid based on how far you drive each day making the deliveries. For every whole kilometer (km) you drive, you’ll be paid $1.60.\nHowever, if you drive more than 100km in one day then Nozama deducts a $15.00 maintenance fee for that day from your pay. (Try to find some more efficient routes next time!)\nOn your first day of work you only drove 50km (it’s ok, you’re new at this job). Each day after that you got a bit faster and drove 10km more than the previous day.\nWrite a Python function to calculate and print how much you will get paid for your first 7 days of work. There are no parameters needed for this function and it will not return any value.\nFor each day that you worked print a message like this with the day number, kilometers driven, and the pay you earned. For both of these dollar amounts do not do anything to round them or control the number of decimal places.\n\nDay 1: 50km = $80.0\n\nAt the end, print a message with your total pay like this:\n\nTotal pay = $123.45\n\nYou must use a for loop in your solution.\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#parking-cost",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#parking-cost",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Parking Cost",
+    "text": "Parking Cost\nThe city of Montréal charges for street parking by the hour. The first 2 hours cost $3.50/hour. Hours 3 and 4 cost $5.00/hour (peak pricing). Any hour beyond 4 hours costs $7.25/hour (you really shouldn’t be parked that long!). Parking is capped at a maximum of 8 hours.\nWrite a function called parking_cost that accepts a whole number of hours parked (between 1 and 8 inclusive). You can assume the input is always valid.\nFor each hour a car is parked, print the cost for that hour and the running total (i.e. the total cost up to and including that hour) like the following (this example is for 3 hours):\nHour 1: $3.50 - Total: $3.50\nHour 2: $3.50 - Total: $7.00\nHour 3: $5.00 - Total: $12.00\nYou must use a for loop in your solution. :::{.callout-tip title=“Solution” collapse=“true”}\n\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#workout-calories",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#workout-calories",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Workout Calories",
+    "text": "Workout Calories\nYour friend just joined a gym and wants to track how many calories they burn over a 6-day workout week (they rest on day 7).\nOn day 1 they burn a certain number of calories. Each subsequent day they push a little harder and burn 15% more calories than the previous day (round up to a whole number). However, if on any day they would burn more than 300 calories, they stop it at exactly 300 (doctor’s orders!).\nWrite a function called calories_calculator that: - Accepts the number of calories burned on day 1 as a parameter. - Uses a for loop over the 6 workout days. - For each day, prints whether the cap was applied or not, the calories burned, and the running weekly total:\nDay 1: 200 cal burned — Weekly total: 200 cal\nDay 2: 230 cal burned — Weekly total: 430 cal\nDay 3: 265 cal burned — Weekly total: 695 cal \n...\nDay 6: 300 cal burned (capped) - Weekly total: ...\n\nWeek complete! Total calories burned: ...\nAverage per day: ... cal\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/prep/midterm/practice-problems.html#baggage-fees-at-flyhigh-airlines",
+    "href": "teacher/keith/prep/midterm/practice-problems.html#baggage-fees-at-flyhigh-airlines",
+    "title": "Midterm Review (Keith’s sections only!)",
+    "section": "Baggage Fees at FlyHigh Airlines",
+    "text": "Baggage Fees at FlyHigh Airlines\nFlyHigh Airlines charges baggage fees based on how much a checked bag weighs over the free allowance of 23kg.\nThe fee applies to the entire weight over the limit.\n\n\n\nExcess weight\nRate\n\n\n\n\n0 or under\n$0\n\n\n1-5kg over\n$10.00/kg\n\n\n6-15kg over\n$14.00/kg\n\n\n16kg or more over\n$20.00/kg\n\n\n\nIf the flight is an international flight then all fees are multiplied by 1.5\nFor example, a bag weighing 30kg on a domestic flight would cost:\n7 × $14.00 = $98.00\nbecause 30kg − 23kg = 7kg over, and 7 is in the range of 6–15 in the table above.\nWrite a function called baggage_fee that has parameters for: - the weight of the bag (in kg)\n- whether the flight is international or not\nand returns the fee.\nThis is an example of how your function would be called:\nweight: float = 30.0  \nfee: float = baggage_fee(weight, False)  \n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/review/indentation.html",
+    "href": "teacher/keith/review/indentation.html",
+    "title": "Indentation Review",
+    "section": "",
+    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
+  },
+  {
+    "objectID": "teacher/keith/review/indentation.html#pattern",
+    "href": "teacher/keith/review/indentation.html#pattern",
+    "title": "Indentation Review",
+    "section": "",
+    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
+  },
+  {
+    "objectID": "teacher/keith/review/indentation.html#comparison",
+    "href": "teacher/keith/review/indentation.html#comparison",
+    "title": "Indentation Review",
+    "section": "Comparison",
+    "text": "Comparison\nThe following 4 programs are identical except for the indentation. The first program is logical and works properly, each of the others has some change in the indentation which causes Python to do something different.\nCompare each one with the correct version and try to understand why the program is behaving as it is.\n\nCorrect version\n\n\n\n\n\n\n\n\nWrong version 1\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the my_nightmare function. Because of that mistake, those lines of code starting with print(num) will be run before I actually called the function on line 17.\nNote that this doesn’t completely fail because I just happened to have a variable in my program called num which had the same name as the parameter of the function. That’s a good reason to generally avoid using the same for your variables vs the names of parameters. Python would have caught this mistake and told me something was wrong if I had named one of them differently. Change num to number on the first line and on the 2nd to last line and see what happens.\n\n\n\n\n\nWrong version 2\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the for-loop. Because of that mistake, those lines of code starting with if n &lt; 5 will be run after the for-loop has finished.\nInstead of checking each value of n inside the loop, it will only check the final value of n.\n\n\n\n\n\nWrong version 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhen is it printing “equal to 5” ?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent the else: line. This causes something pretty weird to happen because Python actually allows you to put an else: after a for-loop (same for a while-loop). An else: after a loop will be executed when the loop finishes as long as you did not end the loop early using break.\nYou’re not expected to learn this, please do not do it, but you can see that this error in doing your indentation can have very unexpected consequences"
   }
 ]

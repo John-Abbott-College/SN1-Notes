@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>f-strings – 420-SN1 Notes</title>
+<title>Midterm Review (Keith’s sections only!) – 420-SN1 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -64,31 +64,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" rel="next">
-<link href="../../../topics/04_variables/exercises/data_types/data_types.html" rel="prev">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-ca47d376612bb4f083d9328cd6e2c3fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
-<link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eec68b17241c1efd3eae2de50d816e3e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-ca47d376612bb4f083d9328cd6e2c3fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,8 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="module" src="../../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -149,7 +147,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -321,11 +319,11 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/favicons/favicon.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../assets/favicons/favicon.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../assets/favicons/favicon.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../assets/favicons/favicon.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">420-SN1 Notes</span>
     </a>
   </div>
@@ -341,7 +339,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
         <li>
-    <a class="dropdown-item" href="../../../syllabus/Youmna/Youmna.html">
+    <a class="dropdown-item" href="../../../../syllabus/Youmna/Youmna.html">
  <span class="dropdown-text">Youmna</span></a>
   </li>  
     </ul>
@@ -352,11 +350,11 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-final-exam">    
         <li>
-    <a class="dropdown-item" href="../../../final_exam_prep/final_exam_index.html">
+    <a class="dropdown-item" href="../../../../final_exam_prep/final_exam_index.html">
  <span class="dropdown-text">Previous Years Exams</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../final_exam_prep/reference_sheet/reference_sheet.html">
+    <a class="dropdown-item" href="../../../../final_exam_prep/reference_sheet/reference_sheet.html">
  <span class="dropdown-text">Reference sheet</span></a>
   </li>  
     </ul>
@@ -373,7 +371,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">f-strings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Midterm Review (Keith’s sections only!)</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -396,13 +394,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/01_objectives/01_course_goals/01_course_goals.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/01_objectives/01_course_goals/01_course_goals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Goals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/01_objectives/02_probelm_solving/02_probelm_solving.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/01_objectives/02_probelm_solving/02_probelm_solving.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Approaching Problems</span></a>
   </div>
 </li>
@@ -419,19 +417,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Files &amp; Folders</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful Definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python Programing Language</span></a>
   </div>
 </li>
@@ -448,13 +446,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Lea</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using The Thonny Python Environment</span></a>
   </div>
 </li>
@@ -471,31 +469,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables and Constants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/03_integers_floats/03_integers_floats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/04_variables/03_integers_floats/03_integers_floats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integers &amp; Floats</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Booleans</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/04_variables/exercises/data_types/data_types.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/04_variables/exercises/data_types/data_types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Variables &amp; Data Types</span></a>
   </div>
 </li>
@@ -503,28 +501,28 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">String Handling</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../../topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">f-strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">f-string Formatting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/05_string_formatting/03_string_ops/03_string_ops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">String Operations</span></a>
   </div>
 </li>
@@ -541,43 +539,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Arithmetic operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/02_assignment_operator/02_assignment_operator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/02_assignment_operator/02_assignment_operator.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment operator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparison operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/04_logical_operators/04_logical_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/04_logical_operators/04_logical_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Logical operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/05_order_operations/05_order_operations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/05_order_operations/05_order_operations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Order of Operations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Arithmetic operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/06_operators/exercises/assignment_operators/assignment_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/06_operators/exercises/assignment_operators/assignment_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Assignment operators</span></a>
   </div>
 </li>
@@ -594,31 +592,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conditional Statements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The if-else statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_conditionals/03_if_elif_statements/03_if_elif_statements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/07_conditionals/03_if_elif_statements/03_if_elif_statements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The if-elif statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Practice Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Complex Conditions</span></a>
   </div>
 </li>
@@ -635,25 +633,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/08_loops/01_for_loop/01_for_loop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/08_loops/01_for_loop/01_for_loop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">For Loop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/08_loops/exercises/for_loops/for_loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/08_loops/exercises/for_loops/for_loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ For Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/08_loops/02_while_loop/02_while_loop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/08_loops/02_while_loop/02_while_loop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">While Loop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/08_loops/exercises/while_loops/while_loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/08_loops/exercises/while_loops/while_loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ While Loops</span></a>
   </div>
 </li>
@@ -670,49 +668,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/01_what_are_functions/01_what_are_functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/01_what_are_functions/01_what_are_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What are functions?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/02_math_functions/02_math_functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/02_math_functions/02_math_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Math Module</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/03_io/03_io.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/03_io/03_io.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Print &amp; Input</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/04_custom_functions/04_custom_functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/04_custom_functions/04_custom_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/05_scope/05_scope.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/05_scope/05_scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scope &amp; Statements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/exercises/custom_functions/custom_functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/exercises/custom_functions/custom_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Custom Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/exercises/custom_functions/many_mini_functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/exercises/custom_functions/many_mini_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Many Mini Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/09_functions/exercises/input_output/input_output.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/09_functions/exercises/input_output/input_output.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Print &amp; Input functions</span></a>
   </div>
 </li>
@@ -729,13 +727,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python Turtle Graphics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Draw a simple house</span></a>
   </div>
 </li>
@@ -751,8 +749,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#f-strings" id="toc-f-strings" class="nav-link active" data-scroll-target="#f-strings"><strong>f-strings</strong></a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  <li><a href="#tracing" id="toc-tracing" class="nav-link active" data-scroll-target="#tracing">Tracing</a></li>
+  <li><a href="#approximation-of-ln1x" id="toc-approximation-of-ln1x" class="nav-link" data-scroll-target="#approximation-of-ln1x">Approximation of ln(1+x)</a></li>
+  <li><a href="#delivery-driver" id="toc-delivery-driver" class="nav-link" data-scroll-target="#delivery-driver">Delivery Driver</a></li>
+  <li><a href="#parking-cost" id="toc-parking-cost" class="nav-link" data-scroll-target="#parking-cost">Parking Cost</a></li>
+  <li><a href="#workout-calories" id="toc-workout-calories" class="nav-link" data-scroll-target="#workout-calories">Workout Calories</a></li>
+  <li><a href="#baggage-fees-at-flyhigh-airlines" id="toc-baggage-fees-at-flyhigh-airlines" class="nav-link" data-scroll-target="#baggage-fees-at-flyhigh-airlines">Baggage Fees at FlyHigh Airlines</a></li>
   </ul>
 </nav>
     </div>
@@ -760,9 +762,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">String Handling</a></li><li class="breadcrumb-item"><a href="../../../topics/05_string_formatting/01_f_strings/01_f_strings.html">f-strings</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">f-strings</h1>
+<h1 class="title">Midterm Review (Keith’s sections only!)</h1>
 </div>
 
 
@@ -779,69 +781,118 @@ window.Quarto = {
 </header>
 
 
-<div class="objectives callout callout-style-default callout-note no-icon callout-titled" title="☆ Learning Objectives ">
-<div class="callout-header d-flex align-content-center">
+<p>Try solving these in Thonny. These are similar style &amp; level to the “long” questions on a midterm test.</p>
+<section id="tracing" class="level2">
+<h2 class="anchored" data-anchor-id="tracing">Tracing</h2>
+<p>Given the Python code below, fill in all the blanks assuming the user typed 12 for the input. Feel free to use a (non-programmable) calculator!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize defaults</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># user types 12</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"What's a cool number? "</span>)) <span class="co"># num's value is now: _______</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># do math</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> num <span class="op">+</span> <span class="dv">2</span> <span class="co"># num's value is now: _______</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> num <span class="op">+</span> <span class="dv">4</span> <span class="co"># num's value is now: _______</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> num <span class="op">+</span> <span class="dv">6</span> <span class="co"># num's value is now: _______</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">25</span>:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    num <span class="op">=</span> num <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    num <span class="op">=</span> num <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># num's value is now: _____    </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> total <span class="op">+</span> (num <span class="op">%</span> <span class="dv">5</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># output result</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total) <span class="co"># the printed total is: ______</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>☆ Learning Objectives
+<span class="screen-reader-only">Tip</span>Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ul>
-<li><strong>Construct</strong> f-strings to combine strings and other variables.</li>
-<li><strong>Format</strong> numbers in f-strings to control how many decimal places are shown.</li>
-</ul>
-</div>
-</div>
-<section id="f-strings" class="level1">
-<h1><strong>f-strings</strong></h1>
-<p>Formatted Strings is a powerful way of creating a templated string and inserting variables into specific positions with the created string. It’s following the syntax below:</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>f"anything {</code><em><code>variable</code></em><code>} anything"</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em><code>variable</code></em> is any python variable that is currently defined. It can be of any type (<code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code>, <em>etc</em>)</li>
-<li>You do <em>not</em> have to convert the <code>variable</code> to a string, that is done automatically</li>
-<li>Notice that there is <em>no</em> space between the <code>f</code> and the first quote</li>
-</ul>
-</div>
-</div>
-<p>Consider the following message: <em>Good morning John! Your net worth is <span class="math inline">\(23,500\)</span></em></p>
-<p>Let’s imagine that this is a generic message displayed in a program to any customer using their first name and their accounts total.</p>
-<p>An f-string can help us create those generic messages by inserting variables as shown below. Try changing the <code>first_name</code> or any of the accounts values. The message should change but follow the same template:</p>
 <div>
 <div id="pyodide-1" class="exercise-cell">
 
 </div>
 <script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZmlyc3RfbmFtZSA9IFwiSm9oblwiXG5hY2NvdW50MSA9IDEyXzAwMFxuYWNjb3VudDIgPSAxMV81MDBcbnRvdGFsID0gYWNjb3VudDEgKyBhY2NvdW50MiBcbmdyZWV0aW5nID0gZlwiR29vZCBtb3JuaW5nIHtmaXJzdF9uYW1lfSEgWW91ciBuZXQgd29ydGggaXMge3RvdGFsfVwiXG5cbnByaW50KGdyZWV0aW5nKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBpbml0aWFsaXplIGRlZmF1bHRzXG50b3RhbCA9IDRcblxuIyB1c2VyIGlucHV0cyAxMlxubnVtID0gaW50KGlucHV0KFwiV2hhdCdzIGEgY29vbCBudW1iZXI/IFwiKSkgIyBudW0ncyB2YWx1ZSBpcyBub3c6IF9fXzEyX19cblxuIyBkbyBtYXRoXG5udW0gPSBudW0gKyAyICMgbnVtJ3MgdmFsdWUgaXMgbm93OiBfXzE0X19cbm51bSA9IG51bSArIDQgIyBudW0ncyB2YWx1ZSBpcyBub3c6IF9fMThfX1xubnVtID0gbnVtICsgNiAjIG51bSdzIHZhbHVlIGlzIG5vdzogX18yNF9fXG5pZiBudW0gPiAyNTpcbiAgICBudW0gPSBudW0gKyAzICAgIyB3b24ndCBkbyB0aGlzIGJlY2F1c2UgMjQgaXMgbm90ID4gMjVcbmVsc2U6XG4gICAgbnVtID0gbnVtIC8gMiAgICMgd2lsbCBjaGFuZ2UgbnVtIGZyb20gMjQgdG8gMTIuMFxuICAgICAgICAgICAgICAgICAgICAjIG5vdGljZSB0aGUgLjAgYmVjYXVzZSBkaXZpc2lvbiByZXN1bHRzIGluIGEgZmxvYXRcbiMgbnVtJ3MgdmFsdWUgaXMgbm93OiBfXzEyLjBfXyAgICBcbnRvdGFsID0gdG90YWwgKyAobnVtICUgNSkgICAjIHRvdGFsID0gNi4wICAoYmVjYXVzZSA0ICsgMi4wKVxuXG4jIG91dHB1dCByZXN1bHRcbnByaW50KHRvdGFsKSAjIHRoZSBwcmludGVkIHRvdGFsIGlzOiBfXzYuMF9fIn0=
 </script>
 </div>
-<p>Now notice that the account value doesn’t use a comma <code>,</code> to seperate the thousands. We’ll learn about formatting in the next section.</p>
-<p>🎯 <strong>Test Myself</strong>: Use f-strings to print the following message:</p>
-<p><em>I am a John Abbott student in the Science program. I am currently in semester 1. I am taking 15 credits.</em></p>
-<p>You may use multiple <code>print()</code> statements to break it in to various lines.</p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;">
+
+</div>
+</section>
+<section id="approximation-of-ln1x" class="level2">
+<h2 class="anchored" data-anchor-id="approximation-of-ln1x">Approximation of ln(1+x)</h2>
+<p>Fall semester students can skip this one unless they already understand series or want to learn a bit of future-math.</p>
+<blockquote class="blockquote">
+<p>&nbsp;<br>
+If you’re not familiar with Summation Notation / Sigma / Series, then check out <a href="https://www.youtube.com/watch?v=5jwXThH6fg4">this video</a><br>
+You’ll need this in future math courses if you haven’t learned it yet! &nbsp;<br>
+&nbsp;</p>
+</blockquote>
+<p>We can approximate the natural logarithm of 1+x using the Taylor series:<br>
+<span class="math display">\[
+\ln(1 + x) = \sum_{n=1}^{N} (-1)^{n+1} \frac{x^n}{n}, \quad |x| &lt; 1
+\]</span></p>
+<p>The larger the value N is, the more precise the approximation will be. Using N=200, write Python code to print the approximate value of ln(1 + 0.873).</p>
+<p><em>Hint: Use a for loop and a variable to hold the sum of all the calculations.</em></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div>
 <div id="pyodide-2" class="exercise-cell">
 
 </div>
 <script type="pyodide-2-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2Nob29sID0gXCJKb2huIEFiYm90dFwiXG5wcm9ncmFtID0gXCJTY2llbmNlXCJcbnNlbWVzdGVyID0gMVxubnVtYmVyX2NyZWRpdHMgPSAxNVxuXG4jIENvbXBsZXRlIHRoZSBjb2RlIGhlcmUuLi5cblxuIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiSVRFUkFUSU9OUyA9IDIwMCAgICAjIHdlIHdlcmUgdG9sZCB0byB1c2UgTiBvZiAyMDBcbm51bWJlciA9IDAuODczICAgICAgIyB3ZSB3ZXJlIHRvbGQgdG8gdXNlIHggb2YgMC44NzNcblxubG4gPSAwICAgICAgICMgVGhlIGZvcm11bGEgaXMgYSBzZXJpZXMgd2hpY2ggbWVhbnMgd2UncmUgZ29pbmcgdG9cbiAgICAgICAgICAgICAjIGJlIEFERElORyByZXN1bHRzIHJlcGVhdGVkbHksIHNvIGl0IG1ha2VzIHNlbnNlIHRvXG4gICAgICAgICAgICAgIyBzdGFydCB3aXRoIGEgdmFsdWUgb2YgemVybyBcblxuIyBJZiB3ZSB1c2VkIGEgZm9yIGxvb3AgdGhhdCBzdGFydHMgYXQgemVybyB0aGVuIHdlJ2xsIGhhdmUgYSBwcm9ibGVtXG4jIGJlY2F1c2Ugd2UnbGwgZW5kIHVwIHRyeWluZyB0byBkaXZpZGUgYnkgemVybywgc28gdGhpcyBmb3IgbG9vcFxuIyBzaG91bGQgc3RhcnQgYXQgb25lIGFuZCBmaW5pc2ggYmVmb3JlIE4gKyAxIChiZWNhdXNlIHRoZSBlbmQgb2YgdGhlXG4jIHJhbmdlIGlzIG5vdCBpbmNsdWRlZCB3ZSBoYXZlIHRvICsgMSlcbmZvciBuIGluIHJhbmdlKDEsIElURVJBVElPTlMgKyAxKTpcbiAgICBsbiA9IGxuICsgKC0xKSAqKiAobiArIDEpICogKG51bWJlciAqKiBuKSAvIG5cblxucHJpbnQobG4pIn0=
 </script>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
+</div>
+</div>
+</div>
+<div style="page-break-after: always;">
+
+</div>
+</section>
+<section id="delivery-driver" class="level2">
+<h2 class="anchored" data-anchor-id="delivery-driver">Delivery Driver</h2>
+<p>You have a full-time job in the summer delivering packages for a small local company called Nozama.</p>
+<p>You are paid based on how far you drive each day making the deliveries. For every whole kilometer (km) you drive, you’ll be paid $1.60.</p>
+<p>However, if you drive more than 100km in one day then Nozama deducts a $15.00 maintenance fee for that day from your pay. (Try to find some more efficient routes next time!)</p>
+<p>On your first day of work you only drove 50km (it’s ok, you’re new at this job). Each day after that you got a bit faster and drove 10km more than the previous day.</p>
+<p>Write a Python function to calculate and print how much you will get paid for your first 7 days of work. There are no parameters needed for this function and it will not return any value.</p>
+<p>For each day that you worked print a message like this with the day number, kilometers driven, and the pay you earned. <em>For both of these dollar amounts do not do anything to round them or control the number of decimal places.</em></p>
+<blockquote class="blockquote">
+<p>Day 1: 50km = $80.0</p>
+</blockquote>
+<p>At the end, print a message with your total pay like this:</p>
+<blockquote class="blockquote">
+<p>Total pay = $123.45</p>
+</blockquote>
+<p><strong>You must use a for loop in your solution.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Tip</span>Solution
@@ -850,98 +901,153 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2Nob29sID0gXCJKb2huIEFi
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>school <span class="op">=</span> <span class="st">"John Abbott"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>program <span class="op">=</span> <span class="st">"Science"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>semester <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>number_credits <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am a </span><span class="sc">{</span>school<span class="sc">}</span><span class="ss"> student in the </span><span class="sc">{</span>program<span class="sc">}</span><span class="ss"> program."</span> )</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am currently in semester </span><span class="sc">{</span>semester<span class="sc">}</span><span class="ss">. "</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I am taking </span><span class="sc">{</span>number_credits<span class="sc">}</span><span class="ss"> credits."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<p>You can also create an f-string using a python expression:</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>BASIC SYNTAX</strong>: <code>f"anything {</code><em><code>python code</code></em><code>} anything"</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em><code>python code</code></em> that when evaluated, returns a value.</li>
-<li>Notice that there is <em>no</em> space between the <code>f</code> and the first quote</li>
-</ul>
-</div>
-</div>
-<p>What goes between the <code>{}</code> can also be a python expression such as an arithmetic operation or a comparison:</p>
-<div id="31b4bf88" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"the value of x is </span><span class="sc">{</span>x <span class="op">+</span> <span class="dv">2</span><span class="sc">}</span><span class="ss">"</span>   <span class="co"># OK!, prints 5</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"Is x equal to 5? </span><span class="sc">{</span>x <span class="op">==</span> <span class="dv">5</span><span class="sc">}</span><span class="ss">"</span>   <span class="co"># OK!, prints False because == is how we check for equality</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled" title="An assignment is not going to work!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>An assignment is not going to work!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>On the other hand, assignning a variable in an f-string will cause an error. Because this isn’t an expression, it’s an assignment which doesn’t return a value.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="ss">f"Setting x to 2 </span><span class="sc">{</span>x <span class="op">=</span> <span class="dv">2</span><span class="sc">}</span><span class="ss">"</span>      <span class="co"># NOT OK!, x=2 does not return a value</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<p>🎯 <strong>Test Myself</strong>: Given the price of an item and the tax rate, use f-strings to print the price with taxes, <strong>without</strong> creating an additional variable:<br>
-<em>Total: $22.4825</em><br>
-Don’t worry about the number of digits shown after the decimal part (yet!)</p>
 <div>
 <div id="pyodide-3" class="exercise-cell">
 
 </div>
 <script type="pyodide-3-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpY2UgPSAxOS41NVxudGF4X3JhdGUgPSAwLjE1XG5cbiMgQ29tcGxldGUgdGhpcyBcblxuXG4ifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG1hdGhcblxuZGVmIHdlZWtseV9wYXkoKTpcbiAgICAjIGNvbnN0YW50cyB0aGF0IHdlJ3JlIGdpdmVuOlxuICAgIFBBWV9QRVJfS00gPSAxLjZcbiAgICBNQUlOVEVOQU5DRV9GRUUgPSAxNS4wXG5cbiAgICAjIHN0YXJ0IHdpdGggdGhlIGRpc3RhbmNlIGZvciBkYXkgMTpcbiAgICBkYWlseV9kaXN0YW5jZSA9IDUwLjBcblxuICAgICMgc3RhcnQgd2l0aCBhIHRvdGFsIHBheSBvZiB6ZXJvOlxuICAgIHRvdGFsX3BheSA9IDAuMFxuXG4gICAgIyByZXBlYXQgdGhlIGZvbGxvd2luZyBjb2RlIG9uY2UgZm9yIGVhY2ggb2YgdGhlIDcgZGF5c1xuICAgICMgV2UgY291bGQgdXNlIHJhbmdlKDYpIG9yIHJhbmdlKDAsIDYpIGJ1dCB3ZSB3YW50IHRvIHByaW50XG4gICAgIyBEYXkgMSAobm90IERheSAwKSB0byBzdGFydCBzbyB3ZSdsbCB1c2UgYSByYW5nZSB0aGF0IHN0YXJ0cyBhdCAxXG4gICAgZm9yIGQgaW4gcmFuZ2UoMSwgNyArIDEpOlxuICAgICAgICAjIHVzaW5nIG1hdGguZmxvb3IoKSBoZXJlIGJlY2F1c2UgaXQgc2F5cyB3ZSdyZSBvbmx5IHBhaWQgZm9yIFwid2hvbGVcIiBrbXNcbiAgICAgICAgZGFpbHlfcGF5ID0gUEFZX1BFUl9LTSAqIG1hdGguZmxvb3IoZGFpbHlfZGlzdGFuY2UpXG4gICAgICAgIGlmIGRhaWx5X2Rpc3RhbmNlID4gMTAwOlxuICAgICAgICAgICAgZGFpbHlfcGF5ID0gZGFpbHlfcGF5IC0gTUFJTlRFTkFOQ0VfRkVFXG5cbiAgICAgICAgcHJpbnQoZlwiRGF5IHtkfToge2RhaWx5X2Rpc3RhbmNlfWttID0gJHtkYWlseV9wYXl9XCIpXG4gICAgICAgIHRvdGFsX3BheSA9IHRvdGFsX3BheSArIGRhaWx5X3BheVxuXG4gICAgICAgICMgbm93IGZpZ3VyZSBvdXQgdGhlIGRpc3RhbmNlIGZvciB0aGUgbmV4dCBkYXlcbiAgICAgICAgZGFpbHlfZGlzdGFuY2UgPSBtYXRoLmZsb29yKGRhaWx5X2Rpc3RhbmNlICsgMTApXG5cbiAgICAjIHRoaXMgbmV4dCBsaW5lIGluIGluZGVudGVkIG9uY2UgKGJlY2F1c2UgaXQgaXMgcGFydCBvZiB0aGUgZnVuY3Rpb24pXG4gICAgIyBidXQgaXMgbm90IHBhcnQgb2YgdGhlIGxvb3AgYmVjYXVzZSB3ZSBvbmx5IHdhbnQgdG8gcHJpbnQgaXQgXG4gICAgIyBvbmNlICphZnRlciogdGhlIGxvb3AgaGFzIGZpbmlzaGVkLlxuICAgIHByaW50KGZcIlRvdGFsIHBheSA9ICR7dG90YWxfcGF5fVwiKVxuXG53ZWVrbHlfcGF5KCkifQ==
 </script>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Solution">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+</div>
+</div>
+</div>
+<div style="page-break-after: always;">
+
+</div>
+</section>
+<section id="parking-cost" class="level2">
+<h2 class="anchored" data-anchor-id="parking-cost">Parking Cost</h2>
+<p>The city of Montréal charges for street parking by the hour. The first 2 hours cost $3.50/hour. Hours 3 and 4 cost $5.00/hour (peak pricing). Any hour beyond 4 hours costs $7.25/hour (you really shouldn’t be parked that long!). Parking is capped at a maximum of 8 hours.</p>
+<p>Write a function called parking_cost that accepts a whole number of hours parked (between 1 and 8 inclusive). You can assume the input is always valid.</p>
+<p>For each hour a car is parked, print the cost for that hour and the running total (i.e.&nbsp;the total cost up to and including that hour) like the following (this example is for 3 hours):</p>
+<pre class="text"><code>Hour 1: $3.50 - Total: $3.50
+Hour 2: $3.50 - Total: $7.00
+Hour 3: $5.00 - Total: $12.00</code></pre>
+<p><strong>You must use a for loop in your solution.</strong> :::{.callout-tip title=“Solution” collapse=“true”}</p>
+<div>
+<div id="pyodide-4" class="exercise-cell">
+
+</div>
+<script type="pyodide-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIHBhcmtpbmdfY29zdChudW1faG91cnMpOlxuICAgICMgd2UgbmVlZCB0byBrZWVwIGEgcnVubmluZyB0b3RhbCBvZiB0aGUgY29zdCwgd2hpY2ggc2hvdWxkIHN0YXJ0XG4gICAgIyBhdCB6ZXJvOlxuICAgIHRvdGFsX2Nvc3QgPSAwLjBcblxuICAgICMgdXNlIGEgZm9yLWxvb3AgdG8gcmVwZWF0IHNvbWUgY29kZSBmb3IgZXZlcnkgaG91ciB0aGF0IHRoZSBjYXJcbiAgICAjIGlzIHBhcmtlZDpcbiAgICBmb3IgaG91ciBpbiByYW5nZSgxLCBudW1faG91cnMgKyAxKTpcbiAgICAgICAgaG91cmx5X2Nvc3QgPSA3LjI1ICMgdGhpcyBhcHBsaWVzIHRvIGFueSBob3VyIGJleW9uZCA0IHNvIGl0J3MgZWFzaWVyIHRvIGFzc3VtZSB0aGlzIHdpbGwgYmUgdGhlIGNvc3RcblxuICAgICAgICAjIHNlZSB3aGV0aGVyIG91ciBhc3N1bXB0aW9uIGFib3V0IHRoZSBob3VybHlfY29zdCBuZWVkcyB0byBiZSBjb3JyZWN0ZWRcbiAgICAgICAgIyBiYXNlZCBvbiB0aGUgbG9naWMgd2Ugd2VyZSBnaXZlblxuICAgICAgICBpZiBob3VyID09IDEgb3IgaG91ciA9PSAyOlxuICAgICAgICAgICAgaG91cmx5X2Nvc3QgPSAzLjVcbiAgICAgICAgZWxpZiBob3VyID09IDMgb3IgaG91ciA9PSA0OlxuICAgICAgICAgICAgaG91cmx5X2Nvc3QgPSA1LjBcbiAgICAgICAgIyBkb24ndCBuZWVkIGFuICdlbHNlJyBoZXJlIGJlY2F1c2Ugd2UgYWxyZWFkeSBhc3N1bWVkIHdoYXQgaG91cmx5X2Nvc3Qgd2lsbCBiZSBmb3IgYW55dGhpbmcgZ3JlYXRlciB0aGFuIDQgXG4gICAgICAgXG4gICAgICAgICMgYWRkIHRoaXMgaG91cidzIGNvc3QgdG8gdGhlIHRvdGFsOlxuICAgICAgICB0b3RhbF9jb3N0ID0gdG90YWxfY29zdCArIGhvdXJseV9jb3N0XG5cbiAgICAgICAgcHJpbnQoZlwiSG91ciB7aG91cn06ICR7aG91cmx5X2Nvc3Q6LjJmfSAtIFRvdGFsOiAke3RvdGFsX2Nvc3Q6LjJmfVwiKVxuXG4jIGV4YW1wbGVzIG9mIHVzaW5nIHRoZSBmdW5jdGlvbjpcbnBhcmtpbmdfY29zdCgxKVxucGFya2luZ19jb3N0KDIpXG5wYXJraW5nX2Nvc3QoOCkifQ==
+</script>
+</div>
+<p>:::</p>
+<div style="page-break-after: always;">
+
+</div>
+</section>
+<section id="workout-calories" class="level2">
+<h2 class="anchored" data-anchor-id="workout-calories">Workout Calories</h2>
+<p>Your friend just joined a gym and wants to track how many calories they burn over a 6-day workout week (they rest on day 7).</p>
+<p>On day 1 they burn a certain number of calories. Each subsequent day they push a little harder and burn 15% more calories than the previous day (round up to a whole number). However, if on any day they would burn more than 300 calories, they stop it at exactly 300 (doctor’s orders!).</p>
+<p>Write a function called calories_calculator that: - Accepts the number of calories burned on day 1 as a parameter. - Uses a for loop over the 6 workout days. - For each day, prints whether the cap was applied or not, the calories burned, and the running weekly total:</p>
+<pre class="text"><code>Day 1: 200 cal burned — Weekly total: 200 cal
+Day 2: 230 cal burned — Weekly total: 430 cal
+Day 3: 265 cal burned — Weekly total: 695 cal 
+...
+Day 6: 300 cal burned (capped) - Weekly total: ...
+
+Week complete! Total calories burned: ...
+Average per day: ... cal</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Tip</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">19.55</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.15</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total: $</span><span class="sc">{</span>price<span class="op">*</span>tax_rate <span class="op">+</span> price<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div>
+<div id="pyodide-5" class="exercise-cell">
+
+</div>
+<script type="pyodide-5-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG1hdGhcblxuZGVmIGNhbG9yaWVzX2NhbGN1bGF0b3IoZGF5MV9jYWxvcmllcyk6XG4gICAgTUFYX0NBTE9SSUVTID0gMzAwXG4gICAgdG90YWxfY2Fsb3JpZXMgPSAwXG4gICAgZGFpbHlfY2Fsb3JpZXMgPSBkYXkxX2NhbG9yaWVzXG5cbiAgICBmb3IgZGF5IGluIHJhbmdlKDEsIDYgKyAxKTpcbiAgICAgICAgIyBhc3N1bWUgdGhhdCBpdCBpcyBOT1QgY2FwcGVkIGZvciB0aGlzIGRheVxuICAgICAgICBtZXNzYWdlID0gXCJcIlxuXG4gICAgICAgIGlmIGRhaWx5X2NhbG9yaWVzID4gTUFYX0NBTE9SSUVTOlxuICAgICAgICAgICAgIyBhc3N1bXB0aW9uIHdhcyB3cm9uZywgc28gY2FwIGl0IGFuZCBzZXQgYSBtZXNzYWdlXG4gICAgICAgICAgICBkYWlseV9jYWxvcmllcyA9IE1BWF9DQUxPUklFU1xuICAgICAgICAgICAgbWVzc2FnZSA9IFwiIChjYXBwZWQpXCJcblxuICAgICAgICAjIHVwZGF0ZSB0aGUgdG90YWwgIyBvZiBjYWxvcmllc1xuICAgICAgICB0b3RhbF9jYWxvcmllcyA9IHRvdGFsX2NhbG9yaWVzICsgZGFpbHlfY2Fsb3JpZXNcblxuICAgICAgICAjIHByaW50IHRoZSBkYWlseSBtZXNzYWdlLiBJZiBpdCB3YXMgY2FwcGVkLCB0aGVuIHRoZSBtZXNzYWdlXG4gICAgICAgICMgd2lsbCBhZGQgdGhlIHRleHQgKGNhcHBlZCksIGlmIGl0IHdhc24ndCB0aGVuIHRoZSBtZXNzYWdlIGlzXG4gICAgICAgICMgZW1wdHkgYW5kIG5vdGhpbmcgYWRkaXRpb25hbCB3aWxsIGdldCBwcmludGVkXG4gICAgICAgIHByaW50KGZcIkRheSB7ZGF5fToge2RhaWx5X2NhbG9yaWVzfSBjYWwgYnVybmVke21lc3NhZ2V9IC0gV2Vla2x5IHRvdGFsOiB7dG90YWxfY2Fsb3JpZXN9IGNhbFwiKVxuXG4gICAgICAgICMgY2FsY3VsYXRlIHRoZSBjYWxvcmllcyBmb3IgdGhlIG5leHQgZGF5IHVzaW5nIG1hdGguY2VpbCB0byByb3VuZCBVUFxuICAgICAgICBkYWlseV9jYWxvcmllcyA9IG1hdGguY2VpbChkYWlseV9jYWxvcmllcyAqIDEuMTUpXG4gICAgXG4gICAgcHJpbnQoZlwiV2VlayBjb21wbGV0ZSEgVG90YWwgY2Fsb3JpZXMgYnVybmVkOiB7dG90YWxfY2Fsb3JpZXN9XCIpXG4gICAgcHJpbnQoZlwiQXZlcmFnZSBwZXIgZGF5OiB7dG90YWxfY2Fsb3JpZXMgLyA2Oi4xZn0gY2FsXCIpXG5cbiMgY2FsbCB0aGUgZnVuY3Rpb24gcGFzc2luZyBpbiAyMDAgYXMgdGhlICMgY2Fsb3JpZXMgZm9yIHRoZSBmaXJzdCBkYXlcbmNhbG9yaWVzX2NhbGN1bGF0b3IoMjAwKSJ9
+</script>
 </div>
 </div>
+</div>
+</div>
+<div style="page-break-after: always;">
+
 </div>
 </section>
-<section id="additional-resources" class="level1">
-<h1>Additional resources</h1>
-<ol type="1">
-<li><a href="https://www.youtube.com/watch?v=EoNOWVYKyo0&amp;ab_channel=Indently">Video on f-strings</a></li>
-</ol>
+<section id="baggage-fees-at-flyhigh-airlines" class="level2">
+<h2 class="anchored" data-anchor-id="baggage-fees-at-flyhigh-airlines">Baggage Fees at FlyHigh Airlines</h2>
+<p>FlyHigh Airlines charges baggage fees based on how much a checked bag weighs over the free allowance of 23kg.</p>
+<p>The fee applies to the <em>entire</em> weight over the limit.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Excess weight</th>
+<th>Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 or under</td>
+<td>$0</td>
+</tr>
+<tr class="even">
+<td>1-5kg over</td>
+<td>$10.00/kg</td>
+</tr>
+<tr class="odd">
+<td>6-15kg over</td>
+<td>$14.00/kg</td>
+</tr>
+<tr class="even">
+<td>16kg or more over</td>
+<td>$20.00/kg</td>
+</tr>
+</tbody>
+</table>
+<p>If the flight is an international flight then all fees are multiplied by 1.5</p>
+<p>For example, a bag weighing 30kg on a domestic flight would cost:<br>
+7 × $14.00 = $98.00<br>
+because 30kg − 23kg = 7kg over, and 7 is in the range of 6–15 in the table above.</p>
+<p>Write a function called baggage_fee that has parameters for: - the weight of the bag (in kg)<br>
+- whether the flight is international or not<br>
+and returns the fee.</p>
+<p>This is an example of how your function would be called:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>weight: <span class="bu">float</span> <span class="op">=</span> <span class="fl">30.0</span>  </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fee: <span class="bu">float</span> <span class="op">=</span> baggage_fee(weight, <span class="va">False</span>)  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div>
+<div id="pyodide-6" class="exercise-cell">
+
+</div>
+<script type="pyodide-6-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVmIGJhZ2dhZ2VfZmVlKHdlaWdodCwgaW50ZXJuYXRpb25hbCk6XG4gICAgRlJFRV9XRUlHSFRfTElNSVQgPSAyM1xuXG4gICAgZXhjZXNzX3dlaWdodCA9IHdlaWdodCAtIEZSRUVfV0VJR0hUX0xJTUlUXG4gICAgcmF0ZSA9IDIwLjBcblxuICAgIGlmIGV4Y2Vzc193ZWlnaHQgPD0gMDpcbiAgICAgICAgcmF0ZSA9IDAuMFxuICAgIGVsaWYgZXhjZXNzX3dlaWdodCA8PSA1OlxuICAgICAgICByYXRlID0gMTAuMFxuICAgIGVsaWYgZXhjZXNzX3dlaWdodCA8PSAxNTpcbiAgICAgICAgcmF0ZSA9IDE0LjBcbiAgICBlbHNlOiAgICAjIFRoaXMgZWxzZSBwYXJ0IGlzIG5vdCByZWFsbHkgbmVlZGVkIHNpbmNlIEkgc2V0IHJhdGUgdG8gMjAgYWxyZWFkeVxuICAgICAgICByYXRlID0gMjAuMFxuXG4gICAgZmVlID0gZXhjZXNzX3dlaWdodCAqIHJhdGVcblxuICAgIGlmIGludGVybmF0aW9uYWw6ICAgIyB0aGlzIGlzIHNhbWUgYXMgaWYgaW50ZXJuYXRpb25hbCA9PSBUcnVlOlxuICAgICAgICBmZWUgPSBmZWUgKiAxLjVcblxuICAgIHJldHVybiBmZWVcblxuXG5teV9iYWdfd2VpZ2h0ID0gMzVcbmZlZSA9IGJhZ2dhZ2VfZmVlKG15X2JhZ193ZWlnaHQsIEZhbHNlKVxuXG4jIHRoZSA6LjJmIGhlcmUgaXMgbm90IHJlcXVpcmVkLCBidXQgaXMgbmljZSB0byB1c2Ugd2hlbiB5b3UncmUgcHJpbnRpbmcgY3VycmVuY3lcbnByaW50KGZcIkJhZ2dhZ2Ugd2VpZ2hpbmcge215X2JhZ193ZWlnaHR9IHdpbGwgY29zdCAke2ZlZTouMmZ9XCIpICAgICJ9
+</script>
+</div>
+</div>
+</div>
+</div>
 
 
 <script type="pyodide-data">
 eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl82ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzYgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzUgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS00LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzQgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzMgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -962,9 +1068,9 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../topics/05_string_formatting/01_f_strings";
+window._ojs.paths.runtimeToDoc = "../../teacher/keith/prep/midterm";
 window._ojs.paths.runtimeToRoot = "../..";
-window._ojs.paths.docToRoot = "../../..";
+window._ojs.paths.docToRoot = "../../../..";
 window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
@@ -1381,18 +1487,6 @@ window._ojs.runtime.interpretFromScriptTags();
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../../topics/04_variables/exercises/data_types/data_types.html" class="pagination-link" aria-label="✍️ Variables &amp; Data Types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">✍️ Variables &amp; Data Types</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../../topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="pagination-link" aria-label="f-string Formatting">
-        <span class="nav-page-text">f-string Formatting</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
