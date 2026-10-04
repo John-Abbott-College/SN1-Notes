@@ -51,7 +51,7 @@ greet()
 :::
 
 ### add
-Write a function `add` that takes two numbers `a` and `b` and **returns** their sum.  Include code that calls `add` with two numbers of your choice and prints the result.
+Write a function `add` that takes two parameters `a` and `b` and **returns** their sum.  Include code that calls `add` with two numbers of your choice and prints the result.
 
 ```{pyodide}
 
@@ -68,7 +68,7 @@ print(result)
 :::
 
 ### square
-Write a function `square` that takes one number `n` and **returns** `n` squared. Write code that calls `square` with a number of your choice and prints the result.
+Write a function `square` that is given one number `n` (i.e. a *parameter*) and **returns** `n` squared. Write code that calls your function with a number of your choice and prints the result.
 
 ```{pyodide}
 
@@ -105,6 +105,54 @@ def print_line():
     print("-" * 20)
 
 print_line()    
+```
+:::
+
+### print_line (configurable)
+Write a function `print_line` that will print a line of dashes, but has a parameter saying how many dashes to print.
+
+> **HINT**: if you *multiply* a string times a number, it will repeat the string that many times.
+
+```{pyodide}
+
+```
+
+The code below calls your function:
+
+```python
+print_line(27)
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def print_line(num_dashes):
+    print("-" * num_dashes)
+
+print_line(27)    
+```
+:::
+
+### print_message
+Write a function `print_message` that will print a given message *msg* as many times as requested via the parameter *num*
+
+> **HINT**: if you *multiply* a string times a number, it will repeat the string that many times.
+
+```{pyodide}
+
+```
+
+The code below calls your function:
+
+```python
+print_message("-", 27)
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def print_message(msg, num):
+    print(msg * num)
+
+print_message(":-) ", 10)    
 ```
 :::
 
@@ -154,22 +202,6 @@ def shout(s):
 
 result = shout("hello")
 print(result)    
-```
-:::
-
-### print_stars
-Write a function `print_stars` that takes one integer `n` and **prints** a line of `n` asterisks. Call the function with a number of your choice.
-
-```{pyodide}
-
-```
-
-:::{.callout-tip title="Solution" collapse="true"}
-```pyodide
-def print_stars(n):
-    print("*" * n)
-
-print_stars(5)
 ```
 :::
 
@@ -267,22 +299,6 @@ def double(n):
 
 result = double(21)
 print(result)
-```
-:::
-
-### print_divider
-Write a function `print_divider` that takes one string `char` and **prints** that character repeated 10 times.  Add code to call `print_divider` with a character (e.g. a letter or symbol) of your choice.
-
-```{pyodide}
-
-```
-
-:::{.callout-tip title="Solution" collapse="true"}
-```pyodide
-def print_divider(char):
-    print(char * 10)
-
-print_divider("=")
 ```
 :::
 

@@ -1,0 +1,376 @@
+---
+title: Midterm Review (Keith's sections only!)
+editor:
+  render-on-save: true
+---
+
+The main topics we have covered and that may be on your midterm test:  
+- Data Types  
+- Variables  
+- Math formulas/calculations  
+- f-strings
+- Custom functions  
+- `if-elif-else` statements  
+- `for` loops  
+  
+You should review this page as well as:  
+- [things to look out for with functions](../../review/functions.qmd)  
+- [things to look out for with indentation](../../review/indentation.qmd)  
+- [long questions](../../prep/midterm/practice-problems.qmd)
+
+
+## Data Types
+In this course we use 4 main kinds of information:
+
+| Data Type | Represents | Examples |
+|-----------|------------|----------|
+| string (str) | Text, symbols. Cannot be used for calculations | "John Abbott", "Monday", "ten"
+| integer (int) | Whole numbers. Positive or negative. No decimal part. | 1, 10, 98655, 0, -89 |
+| float | Decimal number. | 9.81, 3.14159, 10.0, 3.7, 0.0, -89.34 | 
+| Boolean (bool) | A binary choice of one thing or another, like yes/no, on/off, tall/short, young/old | True, False |
+
+When you set a value for a string, you **must** surround the value with quotes. You can use either single quotes ' (like an apostrophe) or double quotes "  Generally, double quotes work better.
+
+bool values may represent On/Off etc. but you can only use the actual values **True** and **False**. Despite these looking like words, they are not text and must **not** be surrounded by quotes.
+
+"ten", 10, and 10.0 may all look the same to a human but they mean different things to a computer. Adding the .0 forces Python to consider that number as a float.
+
+## Variables
+Variables are how your program will remember things. After a calculation is done, you should save the result into a variable so that you can use it later.
+
+*variable_name* **=** *value*
+
+### Examples
+```python
+my_name = "Keith"
+my_address = "Keith's House"
+
+bobs_age = 50
+my_age = bobs_age - 10
+
+lotto_prize = 1000000.00
+
+is_tall = False
+is_short = not is_tall
+```
+
+Variables can be changed by assigning a new value any time you want. The new value may or may not be based on the old value.
+```python
+# set the initial value of total to zero
+total = 0
+
+...do some stuff...
+# increase total by 8
+total = total + 8
+
+...do stuff...
+# set total to 9
+total = 9
+```
+
+## Arithmetic
+Basic math is done using symbols for each mathematical operation:
+
+| Operation | Symbol |   | Operation | Symbol |
+| --------- | ------ | - | --------- | ------ |
+| Addition  | +      |   | Subtraction | - |
+| Multiplication | * | | Division (gives you a float result) | / |
+| Exponent | ** | | Floor division (gives a whole number, but may include .0 if 1 or both of the arguments was a float) | // |
+| Modulus (remainder) | % | | |
+### Examples
+```python
+num_vehicles = num_cars + num_trucks
+
+price = unit_cost * num_units
+
+awkward_people_on_a_date = num_people % 2
+
+area = side_length ** 2
+volume = side_length ** 3 
+
+answer = (10 + length) * speed
+```
+## Arithmetic Shorthands
+***Not on midterm but you may see these in other notes***
+
+| Operation | Same as | 
+| --------- | ------- |
+| num += 1  | num = num + 1 |
+| months += 12 | months = months + 12 |
+| balance -= 2 | balance = balance - 2 |
+| cost *= 1.15 | cost = cost * 1.15 |
+| size /= shrinkflation | size = size / shrinkflation |
+
+## Math library
+```python
+import math
+...
+```
+### Examples
+#### Rounding UP
+```python
+import math
+bus_capacity = 60
+num_students = 137
+
+num_buses = math.ceil(num_students / bus_capacity)
+```
+#### Rounding DOWN
+```python
+import math
+cash_available = 20.00
+meal_price = 6.85
+
+num_meals = math.floor(cash_available / meal_price)
+```
+#### Square Root
+```python
+import math
+a = 3
+b = 5
+c = math.sqrt(a ** 2 + b ** 2)
+```
+#### Absolute value
+(not actually part of math library, so _no import needed_)
+```python
+expected_value = 9.8
+measured_value = 10.1
+
+difference = abs(expected_value - measured_value)
+```
+
+## Formatted strings (f-strings)
+f-strings allow you to insert values from variables or calculations into a string. When you put an f right before the quotes that start a string, Python will look for placeholders inside the string which are surrounded by { }. Whatever is within the { } will be calculated/looked up and the result will be put into the string instead.
+
+### Examples
+```python
+my_name = "Keith"
+print(f"Hello my name is {my_name}")
+```
+
+```python
+my_name = "Keith"
+my_age = 29
+print(f"Hello my name is {my_name} and I am {my_age} years old.")
+```
+
+```python
+name = input("What is your name? ")
+print(f"Hello {name}!")
+```
+
+```python
+loaves = 5
+containers = 12
+butter_sticks = 1
+print(f"""Shopping list:
+- {loaves} loaf/loaves of bread
+- {containers} container(s) of milk
+- {butter_sticks} stick(s) of butter
+""")
+```
+
+## Functions
+The simplest functions *do* something (which could be just printing to the screen) but do not return any result:
+```python
+def simple():
+    print("All this function does is print this to the screen!")
+```
+However, functions often need to be *given* some data which we call *parameters* and they go between the round brackets ( ), and may also *return* something back to us:
+```python
+def add(num1, num2):
+    result = num1 * 1.7623 + num2 / 87
+
+    return result
+```
+```python
+# This function will make a string that has the month name followed by the day of 
+# month.
+# e.g. day_month("March", 23) will give back a string "March 23"
+def day_month(month, day):
+    result = f"{month} {day}"
+
+    return result
+```
+
+**Defining** a function just tells Python about it. Your code needs to **Call** i.e. *use* the function to be useful.
+```python
+# define the function:
+def my_function():
+    print("Hello")
+
+# call the function:
+my_function() # you'll only see Hello printed if you have this line
+```
+
+Now go back and redo the [Many Mini Functions](/topics/09_functions/exercises/custom_functions/many_mini_functions.qmd), and the [functions review](./functions.qmd).
+
+
+## If/elif/else
+| Condition | Operator |   | Condition | Operator |
+| --------- | ------ | - | --------- | ------ |
+| equal  | ==      |   | not equal | != |
+| greater than | > | | greater than or equal to | >= |
+| less than | < | | less than or equal to | <= |
+
+<pre class="sourceCode python">
+<code>
+<span class="kw">if</span> <em>condition</em>:
+    <em> code to run when condition is True </em>
+</code>
+</pre>
+
+
+You can have an **else:** if you want:
+
+<pre class="sourceCode python">
+<code>
+<span class="kw">if</span> <em>condition</em>:
+    <em> code to run when condition is True</em>
+<span class="kw">else:</span>    
+    <em> code to run when condition is False</em>
+</code>
+</pre>
+
+You can have zero, one or as many **elif**'s as you want (with an **else:** also if you want):
+<pre class="sourceCode python">
+<code>
+<span class="kw">if</span> <em>condition</em>:
+    <em> code to run when condition is True</em>
+<span class="kw">elif</span> <em>other condition</em>:
+    <em> code to run when 1st condition is False, but 2nd condition is True</em>
+<span class="kw">elif</span> <em>yet other condition</em>:
+    <em> code to run when 1st condition is False, 2nd condition is False, but 3rd condition is True</em>
+<span class="kw">else:</span>    
+    <em> code to run when all previous conditions are False</em>
+</code>
+</pre>
+
+
+#### Examples
+```python
+if cost <= 10.0:
+    print("That's too cheap! I'm going to increase the price.")
+    cost = cost + 5.00
+```
+```python
+if cost <= 10.0:
+    print("That's too cheap! I'm going to increase the price.")
+    cost = cost + 5.00
+else:
+    print("Thank-you for your business.")
+```
+
+```python
+if day == "Thursday":
+    print("Enjoy your Thursday special!")
+    cost = cost - 5
+elif day == "Saturday" or day == "Sunday":
+    print("Enjoy a discount for shopping on the weekend!")
+    cost = cost * 0.85
+else:    
+    print(f"Regular price is ${cost}")
+```
+
+```python
+is_taxed = True
+
+if product == "apple":
+    price = 0.65
+    is_taxed = False
+elif product == "chocolate bar":
+    price = 1.10
+elif product == "Ferrari":
+    price = 300000.00
+
+if is_taxed:
+    price = price * 1.15
+```
+```python
+if age >= 18 and age < 65:
+    print("Society expects you to have a job.")
+```
+Can also be written as:
+```python
+if 18 <= age < 65:
+    print("Society expects you to have a job.")
+```
+
+## For loops
+For loops let you repeat code a number of times based on a set of values. Python will automatically make a variable for you and will first set that variable to the 1st value, then run your code, then change the variable to the 2nd value and re-run your code etc. until it reaches the last value.
+
+We can tell it which values to use by defining an interval using the **range()** function. range() can be used 3 different ways as shown here:  
+
+### The loop variable will use the interval [0..stop)
+<pre class="sourceCode python">
+<code>
+<span class="kw">for</span> <em>variable</em> <span class="kw">in range</span>(stop):
+    <em> code to repeat for each value</em>
+</code>
+</pre>
+
+*variable* will first be zero, then will increase by 1 at a time but will never reach *stop*.
+
+### The loop variable will use the interval [start..stop)
+<pre class="sourceCode python">
+<code>
+<span class="kw">for</span> <em>variable</em> <span class="kw">in range</span>(start, stop):
+    <em> code to repeat for each value</em>
+</code>
+</pre>
+
+*variable* will first be *start*, then will increase by 1 at a time but will never reach *stop*.
+
+### The loop variable will use the interval [start..stop) and will increase by 'step' each time
+<pre class="sourceCode python">
+<code>
+<span class="kw">for</span> <em>variable</em> <span class="kw">in range</span>(start, stop, step):
+    <em> code to repeat for each value</em>
+</code>
+</pre>
+
+*variable* will first be *start*, then will increase by *step* at a time but will never reach *stop*.
+
+### Examples
+#### Add all numbers from 1 to 10 (inclusive)
+```python
+total = 0
+
+for i in range(1, 11):
+    total = total + i
+```
+#### Print each hour of the day (0:00, 1:00, 2:00...)
+```python
+for hour in range(0, 24):
+    print(f"{hour}:00")
+```
+#### Print odd numbers from 1 to 10 (inclusive):
+```python
+for num in range(1, 11, 2):
+    print(num)
+```
+#### Print odd numbers from 1 to 100 (inclusive):
+```python
+for num in range(1, 101):
+    if num % 2 == 1:
+        print(num)
+```
+#### Print numbers between (and including) 7 and 100 but stop as soon as you find a number that is divisible by 6
+```python
+for num in range(7, 101):
+    if num % 6 == 0:
+        print(f"{num} is divisible by 6. Stopping.")
+        break
+    print(num)
+```
+#### Calculate the sum of the areas of 3 rectangles where each one is larger than the previous by 1 unit on each dimension:
+```python
+width = 10
+height = 5
+total_area = 0
+
+for rect_num in range(3):
+    rect_area = (width + rect_num) * (height + rect_num)
+    total_area = total_area + rect_area
+```
+

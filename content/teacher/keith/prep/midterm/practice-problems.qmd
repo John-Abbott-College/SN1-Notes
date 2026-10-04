@@ -1,0 +1,335 @@
+---
+title: Midterm Review (Keith's sections only!)
+editor:
+  render-on-save: true
+---
+
+Try solving these in Thonny. These are similar style & level to the "long" questions on a midterm test.
+
+
+## Tracing
+
+Given the Python code below, fill in all the blanks assuming the user typed 12 for the input. Feel free to use a (non-programmable) calculator!
+
+```python
+# initialize defaults
+total = 4
+
+# user types 12
+num = int(input("What's a cool number? ")) # num's value is now: _______
+
+# do math
+num = num + 2 # num's value is now: _______
+num = num + 4 # num's value is now: _______
+num = num + 6 # num's value is now: _______
+if num > 25:
+    num = num + 3
+else:
+    num = num / 2
+# num's value is now: _____    
+total = total + (num % 5)
+
+# output result
+print(total) # the printed total is: ______
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+# initialize defaults
+total = 4
+
+# user inputs 12
+num = int(input("What's a cool number? ")) # num's value is now: ___12__
+
+# do math
+num = num + 2 # num's value is now: __14__
+num = num + 4 # num's value is now: __18__
+num = num + 6 # num's value is now: __24__
+if num > 25:
+    num = num + 3   # won't do this because 24 is not > 25
+else:
+    num = num / 2   # will change num from 24 to 12.0
+                    # notice the .0 because division results in a float
+# num's value is now: __12.0__    
+total = total + (num % 5)   # total = 6.0  (because 4 + 2.0)
+
+# output result
+print(total) # the printed total is: __6.0__
+```
+:::
+
+<div style="page-break-after: always;"></div>
+
+## Approximation of ln(1+x)
+Fall semester students can skip this one unless they already understand series or want to learn a bit of future-math.
+
+> &nbsp;  
+> If you're not familiar with Summation Notation / Sigma / Series, then check out [this video](https://www.youtube.com/watch?v=5jwXThH6fg4)    
+> You'll need this in future math courses if you haven't learned it yet!
+> &nbsp;  
+> &nbsp; 
+
+We can approximate the natural logarithm of 1+x using the Taylor series:  
+$$
+\ln(1 + x) = \sum_{n=1}^{N} (-1)^{n+1} \frac{x^n}{n}, \quad |x| < 1
+$$
+
+The larger the value N is, the more precise the approximation will be. Using N=200, write Python code to print the approximate value of ln(1 + 0.873).
+
+*Hint: Use a for loop and a variable to hold the sum of all the calculations.*
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+ITERATIONS = 200    # we were told to use N of 200
+number = 0.873      # we were told to use x of 0.873
+
+ln = 0       # The formula is a series which means we're going to
+             # be ADDING results repeatedly, so it makes sense to
+             # start with a value of zero 
+
+# If we used a for loop that starts at zero then we'll have a problem
+# because we'll end up trying to divide by zero, so this for loop
+# should start at one and finish before N + 1 (because the end of the
+# range is not included we have to + 1)
+for n in range(1, ITERATIONS + 1):
+    ln = ln + (-1) ** (n + 1) * (number ** n) / n
+
+print(ln)
+```
+:::
+
+<div style="page-break-after: always;"></div>
+
+## Delivery Driver
+You have a full-time job in the summer delivering packages for a small local company called Nozama.
+
+You are paid based on how far you drive each day making the deliveries. For every whole kilometer (km) you drive, you'll be paid $1.60.
+
+However, if you drive more than 100km in one day then Nozama deducts a $15.00 maintenance fee for that day from your pay. (Try to find some more efficient routes next time!)
+
+On your first day of work you only drove 50km (it's ok, you're new at this job). Each day after that you got a bit faster and drove 10km more than the previous day.
+
+Write a Python function to calculate and print how much you will get paid for your first 7 days of work. There are no parameters needed for this function and it will not return any value.
+
+For each day that you worked print a message like this with the day number, kilometers driven, and the pay you earned. *For both of these dollar amounts do not do anything to round them or control the number of decimal places.*
+
+> Day 1: 50km = $80.0 
+
+At the end, print a message with your total pay like this:
+
+> Total pay = $123.45
+
+**You must use a for loop in your solution.**
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+import math
+
+def weekly_pay():
+    # constants that we're given:
+    PAY_PER_KM = 1.6
+    MAINTENANCE_FEE = 15.0
+
+    # start with the distance for day 1:
+    daily_distance = 50.0
+
+    # start with a total pay of zero:
+    total_pay = 0.0
+
+    # repeat the following code once for each of the 7 days
+    # We could use range(6) or range(0, 6) but we want to print
+    # Day 1 (not Day 0) to start so we'll use a range that starts at 1
+    for d in range(1, 7 + 1):
+        # using math.floor() here because it says we're only paid for "whole" kms
+        daily_pay = PAY_PER_KM * math.floor(daily_distance)
+        if daily_distance > 100:
+            daily_pay = daily_pay - MAINTENANCE_FEE
+
+        print(f"Day {d}: {daily_distance}km = ${daily_pay}")
+        total_pay = total_pay + daily_pay
+
+        # now figure out the distance for the next day
+        daily_distance = math.floor(daily_distance + 10)
+
+    # this next line in indented once (because it is part of the function)
+    # but is not part of the loop because we only want to print it 
+    # once *after* the loop has finished.
+    print(f"Total pay = ${total_pay}")
+
+weekly_pay()
+```
+:::
+
+<div style="page-break-after: always;"></div>
+
+## Parking Cost
+The city of Montréal charges for street parking by the hour. The first 2 hours cost $3.50/hour. Hours 3 and 4 cost $5.00/hour (peak pricing). Any hour beyond 4 hours costs $7.25/hour (you really shouldn't be parked that long!). Parking is capped at a maximum of 8 hours.
+
+Write a function called parking_cost that accepts a whole number of hours parked (between 1 and 8 inclusive). You can assume the input is always valid.
+
+For each hour a car is parked, print the cost for that hour and the running total (i.e. the total cost up to and including that hour) like the following (this example is for 3 hours):
+
+```text
+Hour 1: $3.50 - Total: $3.50
+Hour 2: $3.50 - Total: $7.00
+Hour 3: $5.00 - Total: $12.00
+```
+
+**You must use a for loop in your solution.**
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def parking_cost(num_hours):
+    # we need to keep a running total of the cost, which should start
+    # at zero:
+    total_cost = 0.0
+
+    # use a for-loop to repeat some code for every hour that the car
+    # is parked:
+    for hour in range(1, num_hours + 1):
+        hourly_cost = 7.25 # this applies to any hour beyond 4 so it's easier to assume this will be the cost
+
+        # see whether our assumption about the hourly_cost needs to be corrected
+        # based on the logic we were given
+        if hour == 1 or hour == 2:
+            hourly_cost = 3.5
+        elif hour == 3 or hour == 4:
+            hourly_cost = 5.0
+        # don't need an 'else' here because we already assumed what hourly_cost will be for anything greater than 4 
+       
+        # add this hour's cost to the total:
+        total_cost = total_cost + hourly_cost
+
+        print(f"Hour {hour}: ${hourly_cost:.2f} - Total: ${total_cost:.2f}")
+
+# examples of using the function:
+parking_cost(1)
+parking_cost(2)
+parking_cost(8)
+```
+:::
+
+<div style="page-break-after: always;"></div>
+
+## Workout Calories
+Your friend just joined a gym and wants to track how many calories they burn over a 6-day workout week (they rest on day 7).
+
+On day 1 they burn a certain number of calories. Each subsequent day they push a little harder and burn 15% more calories than the previous day (round up to a whole number). However, if on any day they would burn more than 300 calories, they stop it at exactly 300 (doctor's orders!).
+
+Write a function called calories_calculator that:
+- Accepts the number of calories burned on day 1 as a parameter.
+- Uses a for loop over the 6 workout days.
+- For each day, prints whether the cap was applied or not, the calories burned, and the running weekly total:
+
+```text
+Day 1: 200 cal burned — Weekly total: 200 cal
+Day 2: 230 cal burned — Weekly total: 430 cal
+Day 3: 265 cal burned — Weekly total: 695 cal 
+...
+Day 6: 300 cal burned (capped) - Weekly total: ...
+
+Week complete! Total calories burned: ...
+Average per day: ... cal
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+import math
+
+def calories_calculator(day1_calories):
+    MAX_CALORIES = 300
+    total_calories = 0
+    daily_calories = day1_calories
+
+    for day in range(1, 6 + 1):
+        # assume that it is NOT capped for this day
+        message = ""
+
+        if daily_calories > MAX_CALORIES:
+            # assumption was wrong, so cap it and set a message
+            daily_calories = MAX_CALORIES
+            message = " (capped)"
+
+        # update the total # of calories
+        total_calories = total_calories + daily_calories
+
+        # print the daily message. If it was capped, then the message
+        # will add the text (capped), if it wasn't then the message is
+        # empty and nothing additional will get printed
+        print(f"Day {day}: {daily_calories} cal burned{message} - Weekly total: {total_calories} cal")
+
+        # calculate the calories for the next day using math.ceil to round UP
+        daily_calories = math.ceil(daily_calories * 1.15)
+    
+    print(f"Week complete! Total calories burned: {total_calories}")
+    print(f"Average per day: {total_calories / 6:.1f} cal")
+
+# call the function passing in 200 as the # calories for the first day
+calories_calculator(200)
+```
+:::
+
+<div style="page-break-after: always;"></div>
+
+## Baggage Fees at FlyHigh Airlines
+
+FlyHigh Airlines charges baggage fees based on how much a checked bag weighs over the free allowance of 23kg.
+
+The fee applies to the *entire* weight over the limit.
+
+| Excess weight     | Rate      |
+| ----------------- | --------- |
+| 0 or under        | $0        |
+| 1-5kg over        | $10.00/kg |
+| 6-15kg over       | $14.00/kg |
+| 16kg or more over | $20.00/kg |
+
+
+If the flight is an international flight then all fees are multiplied by 1.5
+
+For example, a bag weighing 30kg on a domestic flight would cost:  
+7 × $14.00 = $98.00  
+because 30kg − 23kg = 7kg over, and 7 is in the range of 6–15 in the table above.
+
+Write a function called baggage_fee that has parameters for:
+- the weight of the bag (in kg)  
+- whether the flight is international or not  
+and returns the fee.
+
+This is an example of how your function would be called:  
+```python
+weight: float = 30.0  
+fee: float = baggage_fee(weight, False)  
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```pyodide
+def baggage_fee(weight, international):
+    FREE_WEIGHT_LIMIT = 23
+
+    excess_weight = weight - FREE_WEIGHT_LIMIT
+    rate = 20.0
+
+    if excess_weight <= 0:
+        rate = 0.0
+    elif excess_weight <= 5:
+        rate = 10.0
+    elif excess_weight <= 15:
+        rate = 14.0
+    else:    # This else part is not really needed since I set rate to 20 already
+        rate = 20.0
+
+    fee = excess_weight * rate
+
+    if international:   # this is same as if international == True:
+        fee = fee * 1.5
+
+    return fee
+
+
+my_bag_weight = 35
+fee = baggage_fee(my_bag_weight, False)
+
+# the :.2f here is not required, but is nice to use when you're printing currency
+print(f"Baggage weighing {my_bag_weight} will cost ${fee:.2f}")    
+```
+:::

@@ -1,0 +1,146 @@
+---
+title: Functions Review
+editor:
+  render-on-save: true
+---
+
+## Ignoring parameters
+Does this program work properly? What would be a more accurate name for this function?
+
+```pyodide
+def triple(num):
+    num = 10
+
+    return num * 3
+
+result = triple(25)
+print(f"triple of 25 is {result}")
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+This function does **not** work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.
+
+A more accurate name for this function would be *triple_ten* because that is what it always does.
+
+Delete line 2 to fix it.
+:::
+
+## Functions vs Variables
+Why does the 2nd call to the function not work?
+
+```pyodide
+def triple(num):
+    return num * 3
+
+triple = triple(25)
+print(f"triple of 25 is {triple}")
+
+triple = triple(3)
+print(f"triple of 3 is {triple}")
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+This function does **not** work properly because on line 4 it make a variable with the same name as a function. From that point on, python will forget about the *function called triple* and will only use the *variable called triple*. Line 7 will fail because it tries to use a number (75 in this case) as if it was a function.
+
+Do not make variables inside or outside of functions that have the same name as a function.
+:::
+
+## Did you call?
+
+Does this code work properly? What is wrong with it?
+```pyodide
+def get_area(width, length):
+    return width * length
+
+area = get_area
+print(f"Area of 5 by 10 is: {area}")
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+This function does **not** work properly because it never actually *called* the function. The function was defined properly, but the code on line 4 is not properly telling Python to *use* the function. Instead, it is basically making a copy of the function itself.
+
+To *call* a function, you **must** have round brackets ( ) after the name of the function, even if the function does not use parameters.
+
+In the case above, the function needs to be told what the width and height are of the rectangle whose area we need and line 4 is clearly not giving any such information to the function so how could it possibly know that we want the area of a rectangle 5 x 10 ?
+
+Corrected version:
+```pyodide
+def get_area(width, length):
+    return width * length
+
+area = get_area(5, 10)
+print(f"Area of 5 by 10 is: {area}")
+```
+:::
+
+
+## Can't answer
+Does this code work properly? What is wrong with it?
+```pyodide
+def add(num1, num2):
+    result = num1 + num2
+
+answer = add(5, 10)
+print(f"Sum of 5 & 10 is: {answer}")
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+This function does **not** work properly because the function calculated the correct result but never **returned** the result. The function did some work but didn't give us the answer.
+
+**If you see None get printed, you probably forgot a `return` statement inside your function!**
+
+Corrected version:
+```pyodide
+def add(num1, num2):
+    result = num1 + num2
+    return result
+
+answer = add(5, 10)
+print(f"Sum of 5 & 10 is: {answer}")
+```
+:::
+
+## Your order please
+Does this code work properly? What is wrong with it?
+```pyodide
+def purchase(product, price, quantity):
+    print(f"You are buying {quantity} {product}(s) for ${price} each.")
+
+purchase(3, "waffle", 7.99)
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+This function does **not** work properly because the values used in the *function call* are not in the correct order to match what the function is expecting.
+
+Corrected version:
+```pyodide
+def purchase(product, price, quantity):
+    print(f"You are buying {quantity} {product}(s) for ${price} each.")
+
+purchase("waffle", 7.99, 3)
+```
+:::
+
+## Any name you like
+The following code **does** work. There is a function called circle_area that has a parameter to represent the radius of a circle and it will return the area.
+
+Look carefully at the three places in the code that call this function. Notice how it doesn't matter at all what the **name** of the parameter on the function was vs. the **name** of the variable whose value you pass to the function.
+
+The name *radius* is what the `circle_area` function uses to refer to the radius, but you can send any value you have to the function and the function doesn't care where the value came from.
+
+```pyodide
+def circle_area(radius):
+    return 3.14159 * radius ** 2
+
+rad = 10
+area1 = circle_area(rad)
+print(f"A circle of radius {rad} has an area of {area1}")
+
+diameter = 20
+area2 = circle_area(diameter / 2)
+print(f"A circle of diamater {diameter} has an area of {area2}")
+
+area3 = circle_area(10)
+print(f"A circle of radius 10 has an area of {area3}")
+
+```
