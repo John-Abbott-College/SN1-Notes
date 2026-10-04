@@ -176,6 +176,7 @@ Hour 3: $5.00 - Total: $12.00
 ```
 
 **You must use a for loop in your solution.**  
+
 :::{.callout-tip title="Solution" collapse="true"}
 ```pyodide
 def parking_cost(num_hours):
