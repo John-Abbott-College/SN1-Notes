@@ -1407,77 +1407,121 @@
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html",
     "title": "Why do we need lists?",
     "section": "",
-    "text": "When you need to read, store, process, and print large amounts of numbers, creating a separate variable for each one is impractical. For instance, reading five numbers individually would be cumbersome and time-consuming.\nInstead, you can use a list to handle multiple values within a single variable. For example:\nThis creates a list named numbers containing five values. List is a special variable, which can hold more than one value at a time.\nThe elements inside a list may have different types. Some of them may be integers, others floats, and yet others may be lists.\nIn Python, list elements are indexed starting from zero, meaning the first element has an index of 0 and the last element’s index is the total number of elements minus one.\nUsing lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability."
+    "text": "When you need to read, store, process, and print large amounts of numbers, creating a separate variable for each one is impractical. For instance, reading five numbers individually would be cumbersome and time-consuming.\nInstead, you can use a list to handle multiple values within a single variable. For example:\nThis creates a list named numbers containing five values. List is a special variable, which can hold more than one value at a time.\nThe elements inside a list may have different types. Some of them may be integers, others floats, and yet others may be lists.\nIn Python, list elements are indexed starting from zero, meaning the first element has an index of 0 and the last element’s index is the total number of elements minus one.\nUsing lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#indexing-lists",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#indexing-lists",
     "title": "Why do we need lists?",
     "section": "Indexing lists",
-    "text": "Indexing lists\nHow do you change the value of a chosen element in the list?\nLet’s assign a new value of 111 to the first element in the list. We do it this way:\nnumbers = [10, 5, 7, 2, 1]\nprint(\"Original list contents:\", numbers)  # Printing original list contents.\n\nnumbers[0] = 111\nprint(\"New list contents: \", numbers)  # Current list contents.\nAnd now we want the value of the fifth element to be copied to the second element:\nnumbers = [10, 5, 7, 2, 1]\nprint(\"Original list contents:\", numbers)  # Original list contents:[10, 5, 7, 2, 1]\n\nnumbers[1] = numbers[4]  # Copying value of the fifth element to the second.\nprint(\"New list contents:\", numbers)  #New list contents: [10, 1, 7, 2, 1]\nThe value inside the brackets which selects one element of the list is called an index, while the operation of selecting an element from the list is known as indexing."
+    "text": "Indexing lists\nHow do you change the value of a chosen element in the list?\nLet’s assign a new value of 111 to the first element in the list. We do it this way:\nnumbers = [10, 5, 7, 2, 1]\nprint(\"Original list contents:\", numbers)  # Printing original list contents.\n\nnumbers[0] = 111\nprint(\"New list contents: \", numbers)  # Current list contents.\nAnd now we want the value of the fifth element to be copied to the second element:\nnumbers = [10, 5, 7, 2, 1]\nprint(\"Original list contents:\", numbers)  # Original list contents:[10, 5, 7, 2, 1]\n\nnumbers[1] = numbers[4]  # Copying value of the fifth element to the second.\nprint(\"New list contents:\", numbers)  #New list contents: [10, 1, 7, 2, 1]\nThe value inside the brackets which selects one element of the list is called an index, while the operation of selecting an element from the list is known as indexing.",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#accessing-list-content",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#accessing-list-content",
     "title": "Why do we need lists?",
     "section": "Accessing list content",
-    "text": "Accessing list content\nEach of the list’s elements may be accessed separately. For example, it can be printed:\nprint(numbers[0]) # Accessing the list's first element.\nTo print the whole list\nprint(numbers) # Printing the whole list."
+    "text": "Accessing list content\nEach of the list’s elements may be accessed separately. For example, it can be printed:\nprint(numbers[0]) # Accessing the list's first element.\nTo print the whole list\nprint(numbers) # Printing the whole list.",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#negative-indices-are-legal",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#negative-indices-are-legal",
     "title": "Why do we need lists?",
     "section": "Negative indices are legal",
-    "text": "Negative indices are legal\nIt may look strange, but negative indices are legal, and can be very useful.\nAn element with an index equal to -1 is the last one in the list.\nExample:\nnumbers = [10, 5, 7, 2, 1]\nprint(numbers[-1]) # the output is: 1\nprint(numbers[-2]) # the output is: 2\nSo, the last accessible element in our list is numbers[-4] (the first one) ‒ don’t try to go any further!"
+    "text": "Negative indices are legal\nIt may look strange, but negative indices are legal, and can be very useful.\nAn element with an index equal to -1 is the last one in the list.\nExample:\nnumbers = [10, 5, 7, 2, 1]\nprint(numbers[-1]) # the output is: 1\nprint(numbers[-2]) # the output is: 2\nSo, the last accessible element in our list is numbers[-4] (the first one) ‒ don’t try to go any further!",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#the-length-of-a-list",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#the-length-of-a-list",
     "title": "Why do we need lists?",
     "section": "The Length of a list",
-    "text": "The Length of a list\nThe length of a list can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.\nTo check the current length of a list, you can use the len() function, which takes the list’s name as an argument and returns the number of elements currently in the list.\nExample:\nnumbers = [10, 5, 7, 2, 1]\nprint(len(numbers))  # the output is 5"
+    "text": "The Length of a list\nThe length of a list can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.\nTo check the current length of a list, you can use the len() function, which takes the list’s name as an argument and returns the number of elements currently in the list.\nExample:\nnumbers = [10, 5, 7, 2, 1]\nprint(len(numbers))  # the output is 5",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#adding-elements-to-a-list-append-and-insert",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#adding-elements-to-a-list-append-and-insert",
     "title": "Why do we need lists?",
     "section": "Adding elements to a list: append() and insert()",
-    "text": "Adding elements to a list: append() and insert()\n\nappend()\nA new element may be added to the end of the existing list:\nmy_list.append(value)\n\nSuch an operation is performed by a method named append(). It takes its argument’s value and puts it at the end of the list which owns the method.\nThe list’s length then increases by one.\n\n\n\ninsert()\nThe insert() method is a bit smarter ‒ it can add a new element at any place in the list, not only at the end.\nmy_list.insert(location, value)\nTo insert an element into a list, the insert() method takes two arguments:\n\nThe position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.\nThe new element to be inserted.\n\nExample:\nnumbers = [10, 7, 5, 2, 1]\nprint(len(numbers))   # 5\nprint(numbers)        # [10, 7, 5, 2, 1]\n###\nnumbers.append(4)\nprint(len(numbers))  #6\nprint(numbers)       #[10, 7, 5, 2, 1, 4]\n###\nnumbers.insert(0, 20)\nprint(len(numbers))    #7\nprint(numbers)         #[20, 10, 7, 5, 2, 1, 4]\nThe append() method in Python adds an element to the end of a list, while the insert() method inserts an element at a specified position, shifting subsequent elements to the right. The len() function returns the number of elements in the list.\nPay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.\n\n\npop()\nAn element may be removed from the list at a specific position using the pop() method:\nmy_list.pop(index)\n\nThe pop() method removes the element at the specified position (given by index) and returns its value.\nIf no index is provided, pop() removes and returns the last element in the list.\n\nHow It Works:\n\nThe list’s length decreases by one after the operation.\nAttempting to pop() an index that doesn’t exist raises an IndexError.\n\nExample:\nmy_list = [10, 20, 30, 40]\nremoved_value = my_list.pop(2)  # Removes index 2\nprint(my_list)  # Output: [10, 20, 40]\nprint(removed_value)  # Output: 30"
+    "text": "Adding elements to a list: append() and insert()\n\nappend()\nA new element may be added to the end of the existing list:\nmy_list.append(value)\n\nSuch an operation is performed by a method named append(). It takes its argument’s value and puts it at the end of the list which owns the method.\nThe list’s length then increases by one.\n\n\n\ninsert()\nThe insert() method is a bit smarter ‒ it can add a new element at any place in the list, not only at the end.\nmy_list.insert(location, value)\nTo insert an element into a list, the insert() method takes two arguments:\n\nThe position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.\nThe new element to be inserted.\n\nExample:\nnumbers = [10, 7, 5, 2, 1]\nprint(len(numbers))   # 5\nprint(numbers)        # [10, 7, 5, 2, 1]\n###\nnumbers.append(4)\nprint(len(numbers))  #6\nprint(numbers)       #[10, 7, 5, 2, 1, 4]\n###\nnumbers.insert(0, 20)\nprint(len(numbers))    #7\nprint(numbers)         #[20, 10, 7, 5, 2, 1, 4]\nThe append() method in Python adds an element to the end of a list, while the insert() method inserts an element at a specified position, shifting subsequent elements to the right. The len() function returns the number of elements in the list.\nPay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.\n\n\npop()\nAn element may be removed from the list at a specific position using the pop() method:\nmy_list.pop(index)\n\nThe pop() method removes the element at the specified position (given by index) and returns its value.\nIf no index is provided, pop() removes and returns the last element in the list.\n\nHow It Works:\n\nThe list’s length decreases by one after the operation.\nAttempting to pop() an index that doesn’t exist raises an IndexError.\n\nExample:\nmy_list = [10, 20, 30, 40]\nremoved_value = my_list.pop(2)  # Removes index 2\nprint(my_list)  # Output: [10, 20, 40]\nprint(removed_value)  # Output: 30",
+    "crumbs": [
+      "Lists",
+      "Why do we need lists?"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html",
     "href": "topics/11_lists/exercises/lists/lists.html",
     "title": "🎯 Lists",
     "section": "",
-    "text": "Define a list of 10 integers from 1 to 10 and display the size of the list.\n\n\n✅ Solution\n\n\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(len(numbers))\n  \n\n\n\n\nDefine a list of 5 first names and print the list.\n\n\n✅ Solution\n\n\n    first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']\n  \n\n\n\n\n\nPrompt the user how many grades they want to enter\nPrompt the user for the grades, one at a time\nStore all the grades in a single list\n\n\n\n👀 Hint\n\n\nhow do you prompt the user with python?\n\n\n\n\n✅ Solution\n\n\n    grades = []\n    n: int = int( input(\"How many grades do you want to enter? \"))\n\n\n\n    for i in range(n):\n        grade: float = float( input(f\"Enter grade for student {i+1}: \"))\n        grades.append(grade)\n\n\n\n\n\n\nUsing the list below, calculate the total sum of each number squared\nnums = [1, 7, 2, -3, 5, 9]\n\n\n👀 Hint\n\n\ntotal = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²\n\n\n\n\n✅ Solution\n\n\n    total = 0\n    for num in nums:\n        total += num**2"
+    "text": "Define a list of 10 integers from 1 to 10 and display the size of the list.\n\n\n✅ Solution\n\n\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(len(numbers))\n  \n\n\n\n\nDefine a list of 5 first names and print the list.\n\n\n✅ Solution\n\n\n    first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']\n  \n\n\n\n\n\nPrompt the user how many grades they want to enter\nPrompt the user for the grades, one at a time\nStore all the grades in a single list\n\n\n\n👀 Hint\n\n\nhow do you prompt the user with python?\n\n\n\n\n✅ Solution\n\n\n    grades = []\n    n: int = int( input(\"How many grades do you want to enter? \"))\n\n\n\n    for i in range(n):\n        grade: float = float( input(f\"Enter grade for student {i+1}: \"))\n        grades.append(grade)\n\n\n\n\n\n\nUsing the list below, calculate the total sum of each number squared\nnums = [1, 7, 2, -3, 5, 9]\n\n\n👀 Hint\n\n\ntotal = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²\n\n\n\n\n✅ Solution\n\n\n    total = 0\n    for num in nums:\n        total += num**2",
+    "crumbs": [
+      "Lists",
+      "🎯 Lists"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html#level-1",
     "href": "topics/11_lists/exercises/lists/lists.html#level-1",
     "title": "🎯 Lists",
     "section": "",
-    "text": "Define a list of 10 integers from 1 to 10 and display the size of the list.\n\n\n✅ Solution\n\n\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(len(numbers))\n  \n\n\n\n\nDefine a list of 5 first names and print the list.\n\n\n✅ Solution\n\n\n    first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']\n  \n\n\n\n\n\nPrompt the user how many grades they want to enter\nPrompt the user for the grades, one at a time\nStore all the grades in a single list\n\n\n\n👀 Hint\n\n\nhow do you prompt the user with python?\n\n\n\n\n✅ Solution\n\n\n    grades = []\n    n: int = int( input(\"How many grades do you want to enter? \"))\n\n\n\n    for i in range(n):\n        grade: float = float( input(f\"Enter grade for student {i+1}: \"))\n        grades.append(grade)\n\n\n\n\n\n\nUsing the list below, calculate the total sum of each number squared\nnums = [1, 7, 2, -3, 5, 9]\n\n\n👀 Hint\n\n\ntotal = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²\n\n\n\n\n✅ Solution\n\n\n    total = 0\n    for num in nums:\n        total += num**2"
+    "text": "Define a list of 10 integers from 1 to 10 and display the size of the list.\n\n\n✅ Solution\n\n\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(len(numbers))\n  \n\n\n\n\nDefine a list of 5 first names and print the list.\n\n\n✅ Solution\n\n\n    first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']\n  \n\n\n\n\n\nPrompt the user how many grades they want to enter\nPrompt the user for the grades, one at a time\nStore all the grades in a single list\n\n\n\n👀 Hint\n\n\nhow do you prompt the user with python?\n\n\n\n\n✅ Solution\n\n\n    grades = []\n    n: int = int( input(\"How many grades do you want to enter? \"))\n\n\n\n    for i in range(n):\n        grade: float = float( input(f\"Enter grade for student {i+1}: \"))\n        grades.append(grade)\n\n\n\n\n\n\nUsing the list below, calculate the total sum of each number squared\nnums = [1, 7, 2, -3, 5, 9]\n\n\n👀 Hint\n\n\ntotal = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²\n\n\n\n\n✅ Solution\n\n\n    total = 0\n    for num in nums:\n        total += num**2",
+    "crumbs": [
+      "Lists",
+      "🎯 Lists"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html#level-2",
     "href": "topics/11_lists/exercises/lists/lists.html#level-2",
     "title": "🎯 Lists",
     "section": "Level 2",
-    "text": "Level 2\n\nStudying is for Squares\nYou’re given a list of numbers:\nnums = [1, 2, 3, 4, 5, 6, 7]\nWrite a program that creates a new list where each number is replaced by its square, then prints the result:\n[1, 4, 9, 16, 25, 36, 49]\n\n\n👀 Hint\n\n\nUse a l🔁🔁p\n\n\n\n\nReverse a List\nReverse a list without using reverse(). You’re given the following cool list\ncool_list = [100, 200, 300, 400, 500]\nYour goal is to print the reversed version:\n[500, 400, 300, 200, 100]\n\n\n👀 Hint\n\n\nThere are like 5 valid ways to do it, all of which use a l🔄🔄p\n\n\n\n\n✅ Solution 1\n\n\n    cool_list = [100, 200, 300, 400, 500]\n\n    start = len(cool_list) - 1\n    stop = -1\n    step = -1\n    \n    reversed_list = []\n    for i in range(start, stop, step):\n        item = cool_list[i]\n        reversed_list.append(item)\n    \n    print(reversed_list)\n\n\n\n\n\n✅ Solution 2\n\n\n    cool_list = [100, 200, 300, 400, 500]\n\n    reversed_list = []\n    for item in cool_list:\n        reversed_list = [item] + reversed_list\n    \n    print(reversed_list)\n\n\n\n\n\nMin / Max\nGiven the list:\nlisto = [8, 2, 15, 1, 9]\nWrite a program that finds and prints the largest and smallest numbers without using min() or max(). The expected output is:\nLargest number: 15\nSmallest number: 1\n\n\n👀 Hint\n\n\nHow can you keep track of something over the course of a loop?\n\n\n\n\n✅ Solution\n\n\n    listo = [8, 2, 15, 1, 9]\n\n    largest = listo[0] # make a guess\n    smallest = listo[0] # make a guess\n    \n    for n in listo:\n        if n &gt; largest:\n            largest = n\n        if n &lt; smallest:\n            smallest = n\n    \n    print(f\"Largest number: {largest}\")\n    print(f\"Smallest number: {smallest}\")\n\n\n\n\nAverage\nGivent the list of an unknown length:\nnumbers = [1,6,3,8,9,....]\nWrite a program that finds the average value without using sum(), len() nor other functions.\n\n\n👀 Hint\n\n\nCan you visit all the items and find the sum and the length?\n\n\n\n\n✅ Solution\n\n\n    numbers = [1,6,3,8,9,18,27,30,12]\n    count = 0\n    total = 0\n    for num in numbers:\n        total += num\n        count += 1\n    print(f\"The average is:: {total/count}\")"
+    "text": "Level 2\n\nStudying is for Squares\nYou’re given a list of numbers:\nnums = [1, 2, 3, 4, 5, 6, 7]\nWrite a program that creates a new list where each number is replaced by its square, then prints the result:\n[1, 4, 9, 16, 25, 36, 49]\n\n\n👀 Hint\n\n\nUse a l🔁🔁p\n\n\n\n\nReverse a List\nReverse a list without using reverse(). You’re given the following cool list\ncool_list = [100, 200, 300, 400, 500]\nYour goal is to print the reversed version:\n[500, 400, 300, 200, 100]\n\n\n👀 Hint\n\n\nThere are like 5 valid ways to do it, all of which use a l🔄🔄p\n\n\n\n\n✅ Solution 1\n\n\n    cool_list = [100, 200, 300, 400, 500]\n\n    start = len(cool_list) - 1\n    stop = -1\n    step = -1\n    \n    reversed_list = []\n    for i in range(start, stop, step):\n        item = cool_list[i]\n        reversed_list.append(item)\n    \n    print(reversed_list)\n\n\n\n\n\n✅ Solution 2\n\n\n    cool_list = [100, 200, 300, 400, 500]\n\n    reversed_list = []\n    for item in cool_list:\n        reversed_list = [item] + reversed_list\n    \n    print(reversed_list)\n\n\n\n\n\nMin / Max\nGiven the list:\nlisto = [8, 2, 15, 1, 9]\nWrite a program that finds and prints the largest and smallest numbers without using min() or max(). The expected output is:\nLargest number: 15\nSmallest number: 1\n\n\n👀 Hint\n\n\nHow can you keep track of something over the course of a loop?\n\n\n\n\n✅ Solution\n\n\n    listo = [8, 2, 15, 1, 9]\n\n    largest = listo[0] # make a guess\n    smallest = listo[0] # make a guess\n    \n    for n in listo:\n        if n &gt; largest:\n            largest = n\n        if n &lt; smallest:\n            smallest = n\n    \n    print(f\"Largest number: {largest}\")\n    print(f\"Smallest number: {smallest}\")\n\n\n\n\nAverage\nGivent the list of an unknown length:\nnumbers = [1,6,3,8,9,....]\nWrite a program that finds the average value without using sum(), len() nor other functions.\n\n\n👀 Hint\n\n\nCan you visit all the items and find the sum and the length?\n\n\n\n\n✅ Solution\n\n\n    numbers = [1,6,3,8,9,18,27,30,12]\n    count = 0\n    total = 0\n    for num in numbers:\n        total += num\n        count += 1\n    print(f\"The average is:: {total/count}\")",
+    "crumbs": [
+      "Lists",
+      "🎯 Lists"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html#level-3",
     "href": "topics/11_lists/exercises/lists/lists.html#level-3",
     "title": "🎯 Lists",
     "section": "Level 3",
-    "text": "Level 3\n\nSearching\nGiven the paired lists below:\ndestinations= [\"Cancun\", \"New York\", \"Rio\", \"Madrid\", \"Paris\", \"Vancouver\"]\ntickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]\nWrite a program which asks the user for a target destination. If it finds the destination in the list, it should print the ticket price, otherwise it should print “Destination not found”. The program cannot use the method.index()\nExample output 1\nWhere would you like to travel? Cancun\nFound it! The price to go to Cancun is 480.00$\nExample output 2\nWhere would you like to travel? Cairo\nDestination not found\n\n\n👀 Hint\n\n\nYou can return when a function is ready to exit\n\n\n\n\n✅ Solution\n\n\n    destinations= [\"Cancun\", \"New York\", \"Rio\", \"Madrid\", \"Paris\", \"Vancouver\"]\n    tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]\n    \n    target_destination = input(\"Where would you like to travel? \")\n\n    if target_destination not in destinations:\n      print(\"Destination not found\")\n      return  #No need to keep looking\n\n  # search for the destination\n  for dest, price in zip(destinations, tickets):\n    if dest == target_destination:\n      print(f\"Found it! The ticket price for {dest} is {price:.2f}$ \")\n      break \n    \n\n\n\nNumeric Calculus\nYou are given a list of x_values and y_values without knowing the explicit formula that relates them.\nx_values = [0, 0.1, 0.2, 0.3, 0.4, 0.5]\ny_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.8607335975351307, 0.9269427310806756, 1.0982126783257407]\n\nWrite a function called get_positives() which takes as input a list of xs and a list of ys and returns a list of x values where y is greater or equal to 0.\n\n\n\n✅ Solution\n\n  \n    def get_positives(xs:list, ys:list)-&gt;list:\n      positive_xs = [] \n      for x,y in zip(xs, ys):\n          if y &gt;= 0:\n              positive_xs.append(x)\n      return positive_xs\n  \n  \n\n\nWrite a function called local_minima() which takes as input a list of xs and a list of ys and returns a list of values where y is a local minima (larger than the previous y and larger than the next y): $ y_{i-1} &gt; y_i &lt; y_{i+1}$\n\n\n\n👀 Hint\n\n\nUse for i in range() to loop over the list and compare each point to the previous one and the next. Be careful of the index out of range!\n\n\n\n\n✅ Solution\n\n\n  def local_minima(xs:list, ys:list)-&gt;list:\n    minima = []\n    for i in range(1,len(xs)-1): # to avoid index out of range\n        previous = ys[i-1]\n        current = ys[i]\n        next_y = ys[i+1]\n        # making sure current is larger than its neighbours\n        if previous &gt; current &lt; next_y:\n            minima.append(xs[i]) #save the x value\n    return minima\n  \n\n\nWrite a function called derive() which takes as input a list of xs and a list of ys and finds an estimate of the derivative by calculating the slope \\(\\frac{\\Delta{y}}{\\Delta{x}}\\) at every point where \\(\\Delta{x} = x_i - x_{i-1}\\) and \\(\\Delta{y} = y_i - y_{i-1}\\). It should return a list of slope values for each value of x.\n\n\n\n👀 Hint\n\n\nUse for i in range() to loop over the list and compare each point to the previous one. Be careful of the index out of range!\n\n\n\n\n✅ Solution\n\n\n  def derive(xs:list, ys:list)-&gt;list:\n    slopes = []\n    for i in range(1, len(xs)):\n        delta_x = xs[i]-xs[i-1]\n        delta_y =  ys[i] - ys[i-1]\n        slope =delta_y  /delta_x\n        slopes.append(slope)\n    return slopes\n  \n\n\nWrite a function is_increasing() which takes a list of values and returns True if the values are always increasing, otherwise return False.\n\n\n\n👀 Hint\n\n\nCheck if a value isn’t increasing compared to the previous one.\n\n\n\n\n✅ Solution\n\n\n    def is_increasing(values:list) -&gt; bool:\n      for i in range(1, len(values)):\n          if values[i] &lt;= values[i-1]: #not increasing\n              return False\n      return False"
+    "text": "Level 3\n\nSearching\nGiven the paired lists below:\ndestinations= [\"Cancun\", \"New York\", \"Rio\", \"Madrid\", \"Paris\", \"Vancouver\"]\ntickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]\nWrite a program which asks the user for a target destination. If it finds the destination in the list, it should print the ticket price, otherwise it should print “Destination not found”. The program cannot use the method.index()\nExample output 1\nWhere would you like to travel? Cancun\nFound it! The price to go to Cancun is 480.00$\nExample output 2\nWhere would you like to travel? Cairo\nDestination not found\n\n\n👀 Hint\n\n\nYou can return when a function is ready to exit\n\n\n\n\n✅ Solution\n\n\n    destinations= [\"Cancun\", \"New York\", \"Rio\", \"Madrid\", \"Paris\", \"Vancouver\"]\n    tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]\n    \n    target_destination = input(\"Where would you like to travel? \")\n\n    if target_destination not in destinations:\n      print(\"Destination not found\")\n      return  #No need to keep looking\n\n  # search for the destination\n  for dest, price in zip(destinations, tickets):\n    if dest == target_destination:\n      print(f\"Found it! The ticket price for {dest} is {price:.2f}$ \")\n      break \n    \n\n\n\nNumeric Calculus\nYou are given a list of x_values and y_values without knowing the explicit formula that relates them.\nx_values = [0, 0.1, 0.2, 0.3, 0.4, 0.5]\ny_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.8607335975351307, 0.9269427310806756, 1.0982126783257407]\n\nWrite a function called get_positives() which takes as input a list of xs and a list of ys and returns a list of x values where y is greater or equal to 0.\n\n\n\n✅ Solution\n\n  \n    def get_positives(xs:list, ys:list)-&gt;list:\n      positive_xs = [] \n      for x,y in zip(xs, ys):\n          if y &gt;= 0:\n              positive_xs.append(x)\n      return positive_xs\n  \n  \n\n\nWrite a function called local_minima() which takes as input a list of xs and a list of ys and returns a list of values where y is a local minima (larger than the previous y and larger than the next y): $ y_{i-1} &gt; y_i &lt; y_{i+1}$\n\n\n\n👀 Hint\n\n\nUse for i in range() to loop over the list and compare each point to the previous one and the next. Be careful of the index out of range!\n\n\n\n\n✅ Solution\n\n\n  def local_minima(xs:list, ys:list)-&gt;list:\n    minima = []\n    for i in range(1,len(xs)-1): # to avoid index out of range\n        previous = ys[i-1]\n        current = ys[i]\n        next_y = ys[i+1]\n        # making sure current is larger than its neighbours\n        if previous &gt; current &lt; next_y:\n            minima.append(xs[i]) #save the x value\n    return minima\n  \n\n\nWrite a function called derive() which takes as input a list of xs and a list of ys and finds an estimate of the derivative by calculating the slope \\(\\frac{\\Delta{y}}{\\Delta{x}}\\) at every point where \\(\\Delta{x} = x_i - x_{i-1}\\) and \\(\\Delta{y} = y_i - y_{i-1}\\). It should return a list of slope values for each value of x.\n\n\n\n👀 Hint\n\n\nUse for i in range() to loop over the list and compare each point to the previous one. Be careful of the index out of range!\n\n\n\n\n✅ Solution\n\n\n  def derive(xs:list, ys:list)-&gt;list:\n    slopes = []\n    for i in range(1, len(xs)):\n        delta_x = xs[i]-xs[i-1]\n        delta_y =  ys[i] - ys[i-1]\n        slope =delta_y  /delta_x\n        slopes.append(slope)\n    return slopes\n  \n\n\nWrite a function is_increasing() which takes a list of values and returns True if the values are always increasing, otherwise return False.\n\n\n\n👀 Hint\n\n\nCheck if a value isn’t increasing compared to the previous one.\n\n\n\n\n✅ Solution\n\n\n    def is_increasing(values:list) -&gt; bool:\n      for i in range(1, len(values)):\n          if values[i] &lt;= values[i-1]: #not increasing\n              return False\n      return False",
+    "crumbs": [
+      "Lists",
+      "🎯 Lists"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html#level-4",
     "href": "topics/11_lists/exercises/lists/lists.html#level-4",
     "title": "🎯 Lists",
     "section": "Level 4",
-    "text": "Level 4\n\nChaos Mode\nYou are giving the following chaotic list\nchaos = [42, 67, 'beans', True, 'butter', 64, [], False]\nCreate a new list that contains only the True / False and print it.\n\n\n👀 Hint\n\n\nWhat must our list item be for it to be worthy of being in our new list?\n\n\n\n\n✅ Solution\n\n\n    chaos = [42, 67, \"beans\", True, \"butter\", 64, []]\n\n    not_chaos = []\n    \n    for item in chaos:\n        if item == True or item == False:\n            not_chaos.append(item)\n    \n    print(not_chaos)\n\n\n\n\nFlat Stanley\nYou’re given a list of lists:\nlist_of_lists = [[1, 2], [3, 4], [5, 6, 7]]\nWrite a program that flattens this nested list into a single list, then prints it:\n[1, 2, 3, 4, 5, 6, 7]\n\n\n👀 Hint\n\n\nl🔁🔁p && .append()\n\n\n\n\n✅ Solution\n\n\n    list_of_lists = [[1, 2], [3, 4], [5, 6, 7]]\n\n    flat_stanley = []\n    \n    for sublist in nested_list:\n      for item in sublist:\n        flat_stanley.append(item)\n    \n    print(flat_stanley)"
+    "text": "Level 4\n\nChaos Mode\nYou are giving the following chaotic list\nchaos = [42, 67, 'beans', True, 'butter', 64, [], False]\nCreate a new list that contains only the True / False and print it.\n\n\n👀 Hint\n\n\nWhat must our list item be for it to be worthy of being in our new list?\n\n\n\n\n✅ Solution\n\n\n    chaos = [42, 67, \"beans\", True, \"butter\", 64, []]\n\n    not_chaos = []\n    \n    for item in chaos:\n        if item == True or item == False:\n            not_chaos.append(item)\n    \n    print(not_chaos)\n\n\n\n\nFlat Stanley\nYou’re given a list of lists:\nlist_of_lists = [[1, 2], [3, 4], [5, 6, 7]]\nWrite a program that flattens this nested list into a single list, then prints it:\n[1, 2, 3, 4, 5, 6, 7]\n\n\n👀 Hint\n\n\nl🔁🔁p && .append()\n\n\n\n\n✅ Solution\n\n\n    list_of_lists = [[1, 2], [3, 4], [5, 6, 7]]\n\n    flat_stanley = []\n    \n    for sublist in nested_list:\n      for item in sublist:\n        flat_stanley.append(item)\n    \n    print(flat_stanley)",
+    "crumbs": [
+      "Lists",
+      "🎯 Lists"
+    ]
   },
   {
     "objectID": "index.html",
@@ -1519,42 +1563,66 @@
     "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html",
     "title": "Finding Elements in a List",
     "section": "",
-    "text": "When you work with lists, a very common task is checking whether a specific value is inside the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition."
+    "text": "When you work with lists, a very common task is checking whether a specific value is inside the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition.",
+    "crumbs": [
+      "Lists",
+      "Finding Elements in a List"
+    ]
   },
   {
     "objectID": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#using-the-in-operator",
     "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#using-the-in-operator",
     "title": "Finding Elements in a List",
     "section": "Using the in Operator",
-    "text": "Using the in Operator\nThe in operator is the simplest way to check if an element is present in a list.\n\nExample\nLet’s say we have this delightful list\ntest = [1,2,3,4,5,6]\nIf you want to check whether the value 3 is in the list, you can write:\nif 3 in test:\n    print (\"Found value 3\")\nelse:\n    print(\"3 not found\")\nSimilarly, we can also check if 9 us in test!!\nif 9 in test: # wow\n    print (\"Found value 9\")\nelse:\n    print(\"9 not found\")"
+    "text": "Using the in Operator\nThe in operator is the simplest way to check if an element is present in a list.\n\nExample\nLet’s say we have this delightful list\ntest = [1,2,3,4,5,6]\nIf you want to check whether the value 3 is in the list, you can write:\nif 3 in test:\n    print (\"Found value 3\")\nelse:\n    print(\"3 not found\")\nSimilarly, we can also check if 9 us in test!!\nif 9 in test: # wow\n    print (\"Found value 9\")\nelse:\n    print(\"9 not found\")",
+    "crumbs": [
+      "Lists",
+      "Finding Elements in a List"
+    ]
   },
   {
     "objectID": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#resources",
     "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#resources",
     "title": "Finding Elements in a List",
     "section": "Resources",
-    "text": "Resources\n\nSwapnoneel Saha’s 2024 article"
+    "text": "Resources\n\nSwapnoneel Saha’s 2024 article",
+    "crumbs": [
+      "Lists",
+      "Finding Elements in a List"
+    ]
   },
   {
     "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html",
     "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html",
     "title": "Looping through a list",
     "section": "",
-    "text": "Looping through a list involves visiting each item in the list one by one to perform an operation on it. Thefor loop is the ideal tool to repeat a statement while iterating over whatever is in the list.\nExample\nThe following way traverses each letter one by one.\nIf there is a need to keep track of the iteration numberi of each element, Python offers the built-in function enumerate() to return both the index and the item without having to use range() and len()."
+    "text": "Looping through a list involves visiting each item in the list one by one to perform an operation on it. Thefor loop is the ideal tool to repeat a statement while iterating over whatever is in the list.\nExample\nThe following way traverses each letter one by one.\nIf there is a need to keep track of the iteration numberi of each element, Python offers the built-in function enumerate() to return both the index and the item without having to use range() and len().",
+    "crumbs": [
+      "Lists",
+      "Looping through a list"
+    ]
   },
   {
     "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#paired-lists---using-zip",
     "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#paired-lists---using-zip",
     "title": "Looping through a list",
     "section": "Paired lists - using Zip",
-    "text": "Paired lists - using Zip\nConsider the following two lists that represent various travel destinations and their associated ticket prices.\ndestinations = [\"Tokyo\",\"Muscat\", \"Cancun\", \"Paris\"]\nticket_prices = [2769.00, 2680.00, 478.00, 1347.00]\nWhat if we would like to display each destination and its ticket price as such:\nTokyo  2769.00$\nMuscat 2680.00$\nCancun  478.00$\nParis  1347.00$\nAn initial strategy would be to iterate over both lists using a for loop iterating enumerate(), assuming that both lists will always have the same length, such as :\nfor i,destination in enumerate(destinations):\n    price = ticket_prices[i]\n    print(destination, f\"{price}$\")"
+    "text": "Paired lists - using Zip\nConsider the following two lists that represent various travel destinations and their associated ticket prices.\ndestinations = [\"Tokyo\",\"Muscat\", \"Cancun\", \"Paris\"]\nticket_prices = [2769.00, 2680.00, 478.00, 1347.00]\nWhat if we would like to display each destination and its ticket price as such:\nTokyo  2769.00$\nMuscat 2680.00$\nCancun  478.00$\nParis  1347.00$\nAn initial strategy would be to iterate over both lists using a for loop iterating enumerate(), assuming that both lists will always have the same length, such as :\nfor i,destination in enumerate(destinations):\n    price = ticket_prices[i]\n    print(destination, f\"{price}$\")",
+    "crumbs": [
+      "Lists",
+      "Looping through a list"
+    ]
   },
   {
     "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#zip",
     "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#zip",
     "title": "Looping through a list",
     "section": "Zip()",
-    "text": "Zip()\nThe zip() function returns a single combined “sequence” returning the pair of destination and itsprice :\nfor price, destination in zip(ticket_prices,destinations):\n    print(destination, f\"{price}$\")\n\nSidenote: You can actually “see” the resulting of zipping is by converting it into a list and printing it:\nzip_result = zip(ticket_prices,destinations)\nprint(list(zip_result))\nOutput: It’s a list of pairs of values :\n[(2769.0, ‘Tokyo’), (2680.0, ‘Muscat’), (478.0, ‘Cancun’), (1347.0, ‘Paris’)]\n\nYou can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:\ndurations = [7,8,3,5]\nfor price, destination, duration in zip(ticket_prices, destinations, durations):\n    print(destination, f\"{price}$\", f\"{duration} days\")\nExample\n# Lists of data\nstudents = [\"Alice\", \"Bob\", \"Charlie\"]\ngrades = [85, 90, 78]\nsubjects = [\"Math\", \"Science\", \"English\"]\n\nfor student, grade, subject in zip(students, grades, subjects):\n    print(f\"{student} scored {grade} in {subject}.\")\n\noutput:\nAlice scored 85 in Math. Bob scored 90 in Science. Charlie scored 78 in English."
+    "text": "Zip()\nThe zip() function returns a single combined “sequence” returning the pair of destination and itsprice :\nfor price, destination in zip(ticket_prices,destinations):\n    print(destination, f\"{price}$\")\n\nSidenote: You can actually “see” the resulting of zipping is by converting it into a list and printing it:\nzip_result = zip(ticket_prices,destinations)\nprint(list(zip_result))\nOutput: It’s a list of pairs of values :\n[(2769.0, ‘Tokyo’), (2680.0, ‘Muscat’), (478.0, ‘Cancun’), (1347.0, ‘Paris’)]\n\nYou can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:\ndurations = [7,8,3,5]\nfor price, destination, duration in zip(ticket_prices, destinations, durations):\n    print(destination, f\"{price}$\", f\"{duration} days\")\nExample\n# Lists of data\nstudents = [\"Alice\", \"Bob\", \"Charlie\"]\ngrades = [85, 90, 78]\nsubjects = [\"Math\", \"Science\", \"English\"]\n\nfor student, grade, subject in zip(students, grades, subjects):\n    print(f\"{student} scored {grade} in {subject}.\")\n\noutput:\nAlice scored 85 in Math. Bob scored 90 in Science. Charlie scored 78 in English.",
+    "crumbs": [
+      "Lists",
+      "Looping through a list"
+    ]
   },
   {
     "objectID": "topics/02_getting_started/06_debugging.html",
