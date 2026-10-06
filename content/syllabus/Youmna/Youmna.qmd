@@ -256,11 +256,26 @@ Go over:
 
 - Complete the Assignment 2 - Part 3
 
-<!-- 
 # Week 9
+## Dates: 
+- Section 7: 13 Octobers 2026
+
+- Section 1 : 16 October 2026
 
 ## 📚 Prep 
-- Try the level 2 [Practice Problems](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/exercises/for_loops/for_loops.html#level-1){target="_blank"}
+- [ ] [Practice Problems for-loop](https://john-abbott-college.github.io/SN1-Notes/topics/08_loops/exercises/for_loops/for_loops.html#level-1){target="_blank"}
+- [ ] [Practice Problems functions](https://john-abbott-college.github.io/SN1-Notes/topics/09_functions/exercises/custom_functions/custom_functions.html){target="_blank"}
+- [ ] Study for test 
+- [ ] Topics to review for the test:
+
+- [ ] Variables and Data Types
+- [ ] f-strings (and floating point formatting)
+- [ ] Operators 
+- [ ] Writing math expressions in Python
+- [ ] The `math` module (`import math`, `math.sqrt()`, `math.sin()`, `math.cos()`, `math.pi`)
+- [ ] Conditional Statements (`if`, `if/else`)
+- [ ] Functions (parameters, return, scope, functions calling other functions)
+- [ ] For Loops (synthax, `range()`, `break`, `continue`)
 
 
 ## 💻 In class
@@ -271,7 +286,37 @@ Go over:
 
 ## 🚀 After class
 
-- Study for test 
+- [ ] Keep Studying for test 
+- [ ] Topics to review for the test:
+- [ ] Revist the assignments 
+- [ ] Variables and Data Types
+- [ ] f-strings (and floating point formatting)
+- [ ] Operators 
+- [ ] Writing math expressions in Python
+- [ ] The `math` module (`import math`, `math.sqrt()`, `math.sin()`, `math.cos()`, `math.pi`)
+- [ ] Conditional Statements (`if`, `if/else`)
+- [ ] Functions (parameters, return, scope, functions calling other functions)
+- [ ] For Loops (synthax, `range()`, `break`, `continue`)
+
+**NOT** in the Midterm :
+- `if/elif/else` statements
+- `input()` function
+- While loops
+- Lists
+
+# Test Week
+## Dates: 
+- Section 7: 20 Octobers 2026
+
+- Section 1 : 23 October 2026
+
+## 📚 Prep 
+- Go over the notes and examples for all topics covered in the course.
+- Do the practice problems for each topic.
+- Do the practice test.
+
+<!-- 
+
 
 # Test week
 -->
