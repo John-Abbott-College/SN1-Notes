@@ -98,12 +98,12 @@ website:
        - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
        - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
     
-    # - section: Lists
-    #   contents:
-    #   - topics/11_lists/01_into_to_lists/01_into_to_lists.qmd
-    #   - topics/11_lists/02_looping_over_lists/02_looping_over_lists.qmd
-    #   - topics/11_lists/03_list_inclusion/03_list_inclusion.qmd
-    #   - topics/11_lists/exercises/lists/lists.qmd
+    - section: Lists
+      contents:
+       - topics/11_lists/01_into_to_lists/01_into_to_lists.qmd
+       - topics/11_lists/02_looping_over_lists/02_looping_over_lists.qmd
+       - topics/11_lists/03_list_inclusion/03_list_inclusion.qmd
+       - topics/11_lists/exercises/lists/lists.qmd
 
     # - section: Data Processing
     #   contents:
