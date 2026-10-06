@@ -343,6 +343,48 @@
     "text": "🚀 After class\n\nComplete the Assignment 2 - Part 3"
   },
   {
+    "objectID": "syllabus/Youmna/Youmna.html#dates",
+    "href": "syllabus/Youmna/Youmna.html#dates",
+    "title": "Youmna",
+    "section": "Dates:",
+    "text": "Dates:\n\nSection 7: 13 Octobers 2026\nSection 1 : 16 October 2026"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-8",
+    "href": "syllabus/Youmna/Youmna.html#prep-8",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nPractice Problems for-loop\nPractice Problems functions\nStudy for test\nTopics to review for the test:\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-8",
+    "href": "syllabus/Youmna/Youmna.html#in-class-8",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nHarder problems to solve\nQuiz 6: Recap (longer quiz worth 2%)\nReview before the test"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-8",
+    "href": "syllabus/Youmna/Youmna.html#after-class-8",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nKeep Studying for test\nTopics to review for the test:\nRevist the assignments\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)\n\nNOT in the Midterm : - if/elif/else statements - input() function - While loops - Lists"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#dates-1",
+    "href": "syllabus/Youmna/Youmna.html#dates-1",
+    "title": "Youmna",
+    "section": "Dates:",
+    "text": "Dates:\n\nSection 7: 20 Octobers 2026\nSection 1 : 23 October 2026"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-9",
+    "href": "syllabus/Youmna/Youmna.html#prep-9",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes and examples for all topics covered in the course.\nDo the practice problems for each topic.\nDo the practice test."
+  },
+  {
     "objectID": "topics/04_variables/03_integers_floats/03_integers_floats.html",
     "href": "topics/04_variables/03_integers_floats/03_integers_floats.html",
     "title": "Integers & Floats",
