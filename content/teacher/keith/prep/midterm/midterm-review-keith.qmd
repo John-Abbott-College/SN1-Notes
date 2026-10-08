@@ -8,7 +8,7 @@ The main topics we have covered and that may be on your midterm test:
 - Data Types  
 - Variables  
 - Math formulas/calculations  
-- f-strings
+- f-strings  
 - Custom functions  
 - `if-elif-else` statements  
 - `for` loops  
