@@ -1,5 +1,5 @@
 ---
-title: "🎯 Lists"
+title: "✍️  Lists"
 editor:
   render-on-save: true
 ---
@@ -10,75 +10,91 @@ editor:
 
 Define a list of 10 integers from 1 to 10 and display the size of the list.
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    print(len(numbers))
-  </code></pre>
-</details>
+```pyodide
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(len(numbers))
+```
+:::
+
 
 ### Some Cool Names
 
 Define a list of 5 first names and print the list.
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']
-  </code></pre>
-</details>
+```pyodide
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+first_names = ['Sandy', 'Ian', 'Alex', 'Youmna']
+print(first_names)
+```
+:::
+
 
 ### Some Cool Grades
 
 - Prompt the user how many grades they want to enter
 - Prompt the user for the grades, one at a time
 - Store all the grades in a single list
+- print the list
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>how do you prompt the user with python?</p>
-</details>
+> **Note**: we cannot use "input" in the web browser so you must do this in Thonny
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    grades = []
-    n: int = int( input("How many grades do you want to enter? "))
 
-</code>
-<code class="language-python">
-    for i in range(n):
-        grade: float = float( input(f"Enter grade for student {i+1}: "))
-        grades.append(grade)
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+How do you prompt the user with python?
+:::
+:::
 
-</code></pre>
+:::{.callout-tip title="Solution" collapse="true"}
+We can't run code that uses input in the web browser, so run this in Thonny:
+```python
+grades = []
+num = int(input("How many grades do you want to enter? "))
 
-</details>
+for i in range(num):
+    grade = float(input(f"Enter grade for student {i + 1}: "))
+    grades.append(grade)
+
+print(grades)    
+```
+:::
+
+
 
 ### Sumthings going on here
 
 Using the list below, calculate the total sum of each number squared
 
-```py
+```pyodide
 nums = [1, 7, 2, -3, 5, 9]
+
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>total = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+total = nums₀² + nums₁² + nums₂² + nums₃² + nums₄² + nums₅²
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    total = 0
-    for num in nums:
-        total += num**2
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+nums = [1, 7, 2, -3, 5, 9]
+total = 0
 
-</code></pre>
+for num in nums:
+    total += num**2
+```
+:::
 
-</details>
 
 ## Level 2
 
@@ -86,26 +102,44 @@ nums = [1, 7, 2, -3, 5, 9]
 
 You're given a list of numbers:
 
-```py
+```python
 nums = [1, 2, 3, 4, 5, 6, 7]
 ```
 
 Write a program that creates a new list where each number is replaced by its square, then prints the result:
 
-```py
+```text
 [1, 4, 9, 16, 25, 36, 49]
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Use a l🔁🔁p</p>
-</details>
+```pyodide
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+```
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use a l🔁🔁p
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+nums = [1, 2, 3, 4, 5, 6, 7]
+squares = []
+
+for num in nums:
+    squares.append(num ** 2)
+
+print(squares)
+```
+:::
 
 ### Reverse a List
 
 Reverse a list without using `reverse()`. You're given the following cool list
 
-```py
+```python
 cool_list = [100, 200, 300, 400, 500]
 ```
 
@@ -115,49 +149,46 @@ Your goal is to print the reversed version:
 [500, 400, 300, 200, 100]
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>There are like 5 valid ways to do it, all of which use a l🔄🔄p</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+There are like 5 valid ways to do it, all of which use a l🔄🔄p
+:::
+:::
 
-<details>
-  <summary>✅ Solution 1</summary>
-  <pre><code class="language-python">
-    cool_list = [100, 200, 300, 400, 500]
+:::{.callout-tip title="Solution 1" collapse="true"}
+```{pyodide}
+cool_list = [100, 200, 300, 400, 500]
 
-    start = len(cool_list) - 1
-    stop = -1
-    step = -1
-    
-    reversed_list = []
-    for i in range(start, stop, step):
-        item = cool_list[i]
-        reversed_list.append(item)
-    
-    print(reversed_list)
+start = len(cool_list) - 1
+stop = -1
+step = -1
 
-</code></pre>
-</details>
+reversed_list = []
+for i in range(start, stop, step):
+    item = cool_list[i]
+    reversed_list.append(item)
 
-<details>
-  <summary>✅ Solution 2</summary>
-  <pre><code class="language-python">
-    cool_list = [100, 200, 300, 400, 500]
+print(reversed_list)
+```
+:::
 
-    reversed_list = []
-    for item in cool_list:
-        reversed_list = [item] + reversed_list
-    
-    print(reversed_list)
+:::{.callout-tip title="Solution 2" collapse="true"}
+```{pyodide}
+cool_list = [100, 200, 300, 400, 500]
 
-</code></pre>
-</details>
+reversed_list = []
+for item in cool_list:
+    reversed_list = [item] + reversed_list
+
+print(reversed_list)
+```
+:::
 
 ### Min / Max
 
 Given the list: 
 
-```py
+```python
 listo = [8, 2, 15, 1, 9]
 ```
 Write a program that finds and prints the largest and smallest numbers without using `min()` or `max()`. The expected output is:
@@ -167,33 +198,33 @@ Largest number: 15
 Smallest number: 1
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>How can you keep track of something over the course of a loop?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+How can you keep track of something over the course of a loop?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    listo = [8, 2, 15, 1, 9]
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+listo = [8, 2, 15, 1, 9]
 
-    largest = listo[0] # make a guess
-    smallest = listo[0] # make a guess
-    
-    for n in listo:
-        if n > largest:
-            largest = n
-        if n < smallest:
-            smallest = n
-    
-    print(f"Largest number: {largest}")
-    print(f"Smallest number: {smallest}")
-</code></pre>
-</details>
+largest = listo[0] # make a guess
+smallest = listo[0] # make a guess
+
+for n in listo:
+    if n > largest:
+        largest = n
+    if n < smallest:
+        smallest = n
+
+print(f"Largest number: {largest}")
+print(f"Smallest number: {smallest}")
+```
+:::
 
 ### Average
 
-Givent the list of an unknown length:
+Given a list of an unknown length:
 
 ```
 numbers = [1,6,3,8,9,....]
@@ -201,23 +232,25 @@ numbers = [1,6,3,8,9,....]
 
 Write a program that finds the average value without using `sum()`, `len()` nor other functions. 
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Can you visit all the items and find the sum and the length?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Can you visit all the items and find the sum and the length?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    numbers = [1,6,3,8,9,18,27,30,12]
-    count = 0
-    total = 0
-    for num in numbers:
-        total += num
-        count += 1
-    print(f"The average is:: {total/count}")
-</code></pre>
-</details>
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+numbers = [1,6,3,8,9,18,27,30,12]
+count = 0
+total = 0
+for num in numbers:
+    total += num
+    count += 1
+
+avg = total / count    
+print(f"The average is: {avg}")
+```
+:::
 
 ## Level 3
 
@@ -243,30 +276,30 @@ Found it! The price to go to Cancun is 480.00$
 Where would you like to travel? Cairo
 Destination not found
 ```
-<details>
-  <summary>👀 Hint</summary>
-  <p>You can `return` when a function is ready to exit</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You can `return` when a function is ready to exit
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    destinations= ["Cancun", "New York", "Rio", "Madrid", "Paris", "Vancouver"]
-    tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]
-    
-    target_destination = input("Where would you like to travel? ")
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+destinations= ["Cancun", "New York", "Rio", "Madrid", "Paris", "Vancouver"]
+tickets = [480.0, 834.0, 954.0, 690.0, 574.0, 322.0]
 
-    if target_destination not in destinations:
-      print("Destination not found")
-      return  #No need to keep looking
+target_destination = input("Where would you like to travel? ")
+
+if target_destination not in destinations:
+    print("Destination not found")
+    return  #No need to keep looking
 
   # search for the destination
-  for dest, price in zip(destinations, tickets):
+for dest, price in zip(destinations, tickets):
     if dest == target_destination:
-      print(f"Found it! The ticket price for {dest} is {price:.2f}$ ")
-      break 
-	</code></pre>
-</details>
+        print(f"Found it! The ticket price for {dest} is {price:.2f}$ ")
+        break 
+```
+:::
 
 ### Numeric Calculus 
 
@@ -279,55 +312,55 @@ y_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.86073
 
 1. Write a function called `get_positives()` which takes as input a list of `xs` and a list of `ys`  and returns a list of x values where y is greater or equal to 0. 
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre>
-  <code class="language-python">
-    def get_positives(xs:list, ys:list)->list:
-      positive_xs = [] 
-      for x,y in zip(xs, ys):
-          if y >= 0:
-              positive_xs.append(x)
-      return positive_xs
-  </code>
-  </pre>
-</details>
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+def get_positives(xs:list, ys:list)->list:
+    positive_xs = [] 
+    
+    for x,y in zip(xs, ys):
+        if y >= 0:
+            positive_xs.append(x)
 
-2. Write a function called `local_minima()` which takes as input a list of `xs` and a list of `ys` and returns a list of values where y is a local minima (larger than the previous y and larger than the next y): $ y_{i-1} > y_i < y_{i+1}$ 
+    return positive_xs
+```
+:::
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Use `for i in range()` to loop over the list and compare each point to the previous one and the next. Be careful of the index out of range!
-</p>
-</details>
+2. Write a function called `local_minima()` which takes as input a list of `xs` and a list of `ys` and returns a list of values where y is a local minima (larger than the previous y and larger than the next y): $$ y_{i-1} > y_i < y_{i+1}$$
 
-<details>
-<summary>✅ Solution</summary>
-  <pre><code class="language-python">
-  def local_minima(xs:list, ys:list)->list:
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use `for i in range()` to loop over the list and compare each point to the previous one and the next. Be careful of the index out of range!
+:::
+:::
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+def local_minima(xs:list, ys:list)->list:
     minima = []
     for i in range(1,len(xs)-1): # to avoid index out of range
         previous = ys[i-1]
         current = ys[i]
         next_y = ys[i+1]
+
         # making sure current is larger than its neighbours
         if previous > current < next_y:
             minima.append(xs[i]) #save the x value
     return minima
-  </code></pre>
-</details>   
+```
+:::
 
-3. Write a function called `derive()` which takes as input a list of `xs` and a list of `ys` and finds an estimate of the derivative by calculating the slope $\frac{\Delta{y}}{\Delta{x}}$ at every point where $\Delta{x} = x_i - x_{i-1}$ and $\Delta{y} = y_i - y_{i-1}$. It should return a list of slope values for each value of x. 
+3. Write a function called `derive()` which takes as input a list of `xs` and a list of `ys` and finds an estimate of the derivative by calculating the slope 
+$$\frac{\Delta{y}}{\Delta{x}}$$ at every point where $\Delta{x} = x_i - x_{i-1}$ and $\Delta{y} = y_i - y_{i-1}$. It should return a list of slope values for each value of x. 
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>Use `for i in range()` to loop over the list and compare each point to the previous one. Be careful of the index out of range!</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Use `for i in range()` to loop over the list and compare each point to the previous one. Be careful of the index out of range!
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-  def derive(xs:list, ys:list)->list:
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+def derive(xs, ys):
     slopes = []
     for i in range(1, len(xs)):
         delta_x = xs[i]-xs[i-1]
@@ -335,26 +368,27 @@ y_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.86073
         slope =delta_y  /delta_x
         slopes.append(slope)
     return slopes
-  </code></pre>
-</details>
+```
+:::
 
-4. Write a function `is_increasing()` which takes a list of `values` and returns `True` if the values are always increasing, otherwise return `False`.
+1. Write a function `is_increasing()` which takes a list of `values` and returns `True` if the values are always increasing, otherwise return `False`.
 
-<details>
-  <summary>👀 Hint</summary>
-<p>Check if a value isn't increasing compared to the previous one.</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Check if a value isn't increasing compared to the previous one.
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    def is_increasing(values:list) -> bool:
-      for i in range(1, len(values)):
-          if values[i] <= values[i-1]: #not increasing
-              return False
-      return False
-  </code></pre>
-</details>
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+def is_increasing(values):
+    for i in range(1, len(values)):
+        if values[i] <= values[i-1]: #not increasing
+            return False
+    
+    return True
+```
+:::
 
 ## Level 4
 
@@ -362,37 +396,37 @@ y_values = [-0.6384318904120898, 0.4680346286487408, 0.4521364981725247, 0.86073
 
 You are giving the following chaotic list
 
-```py
+```python
 chaos = [42, 67, 'beans', True, 'butter', 64, [], False]
 ```
 
 Create a new list that contains only the `True` / `False` and print it.
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>What must our list item be for it to be worthy of being in our new list?</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+What must our list item be for it to be worthy of being in our new list?
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    chaos = [42, 67, "beans", True, "butter", 64, []]
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+chaos = [42, 67, "beans", True, "butter", 64, []]
 
-    not_chaos = []
-    
-    for item in chaos:
-        if item == True or item == False:
-            not_chaos.append(item)
-    
-    print(not_chaos)
-</code></pre>
-</details>
+not_chaos = []
+
+for item in chaos:
+    if item == True or item == False:
+        not_chaos.append(item)
+
+print(not_chaos)
+```
+:::
 
 ### Flat Stanley
 
 You're given a list of lists:
 
-```py
+```python
 list_of_lists = [[1, 2], [3, 4], [5, 6, 7]]
 ```
 
@@ -401,22 +435,22 @@ Write a program that flattens this nested list into a single list, then prints i
 [1, 2, 3, 4, 5, 6, 7]
 ```
 
-<details>
-  <summary>👀 Hint</summary>
-  <p>l🔁🔁p && .append()</p>
-</details>
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+l🔁🔁p && .append()
+:::
+:::
 
-<details>
-  <summary>✅ Solution</summary>
-  <pre><code class="language-python">
-    list_of_lists = [[1, 2], [3, 4], [5, 6, 7]]
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+list_of_lists = [[1, 2], [3, 4], [5, 6, 7]]
 
-    flat_stanley = []
-    
-    for sublist in nested_list:
-      for item in sublist:
+flat_stanley = []
+
+for sublist in nested_list:
+    for item in sublist:
         flat_stanley.append(item)
-    
-    print(flat_stanley)
-</code></pre>
-</details>
+
+print(flat_stanley)
+```
+:::

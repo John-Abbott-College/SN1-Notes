@@ -34,7 +34,7 @@ How do you change the value of a chosen element in the list?
 
 Let's **assign a new value of 111 to the first element** in the list. We do it this way:
 
-```python
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print("Original list contents:", numbers)  # Printing original list contents.
 
@@ -44,7 +44,7 @@ print("New list contents: ", numbers)  # Current list contents.
 
 And now we want **the value of the fifth element to be copied to the second element**:
 
-```python
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print("Original list contents:", numbers)  # Original list contents:[10, 5, 7, 2, 1]
 
@@ -77,7 +77,7 @@ An element with an index equal to -1 is **the last one in the list**.
 
 **Example:**
 
-```python
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print(numbers[-1]) # the output is: 1
 print(numbers[-2]) # the output is: 2
@@ -94,7 +94,7 @@ To check the current length of a list, you can use the `len()` function, which t
 
 **Example:**
 
-```python
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print(len(numbers))  # the output is 5
 ```
@@ -129,7 +129,7 @@ To insert an element into a list, the insert() method takes two arguments:
 
 **Example:**
 
-```python
+```pyodide
 numbers = [10, 7, 5, 2, 1]
 print(len(numbers))   # 5
 print(numbers)        # [10, 7, 5, 2, 1]
@@ -166,7 +166,7 @@ my_list.pop(index)
 
 **Example**:
 
-```python
+```pyodide
 my_list = [10, 20, 30, 40]
 removed_value = my_list.pop(2)  # Removes index 2
 print(my_list)  # Output: [10, 20, 40]

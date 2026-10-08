@@ -14,26 +14,38 @@ The `in` operator is the simplest way to check if an element is present in a lis
 
 Let's say we have this delightful list
 
-```py
+```python
 test = [1,2,3,4,5,6]
 ```
 
 If you want to check whether the value 3 is `in` the list, you can write:
 
-```py
+```pyodide
+test = [1,2,3,4,5,6]
 if 3 in test:
     print ("Found value 3")
 else:
     print("3 not found")
 ```
 
-Similarly, we can also check if 9 us `in test`!!
+Similarly, we can also check if 9 is `in test`:
 
-```py
+```pyodide
+test = [1,2,3,4,5,6]
 if 9 in test: # wow
     print ("Found value 9")
 else:
     print("9 not found")
+```
+
+Similarly, we can also check if 11 is **not** `in test`:
+
+```pyodide
+test = [1,2,3,4,5,6]
+if 11 not in test:
+    print ("11 isn't in the list")
+else:
+    print("11 is in the list")
 ```
 
 ## Resources
