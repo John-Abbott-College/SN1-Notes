@@ -203,7 +203,7 @@ def my_function():
 my_function() # you'll only see Hello printed if you have this line
 ```
 
-Now go back and redo the [Many Mini Functions](/topics/09_functions/exercises/custom_functions/many_mini_functions.qmd), and the [functions review](../review/functions.qmd).
+Now go back and redo the [Many Mini Functions](/topics/09_functions/exercises/custom_functions/many_mini_functions.qmd), and the [functions review](../../review/functions.qmd).
 
 
 ## If/elif/else
