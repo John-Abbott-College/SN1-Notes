@@ -84,9 +84,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-9bbf5fa004a0676d7f26111dc3fdfdb2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-ca47d376612bb4f083d9328cd6e2c3fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-ea94f16c2f2133a15e23f65aa34ae025.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-58595b0c98357bc10aa87014237e58fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-08b14341af7fd376cb2e56711f37c564.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-58595b0c98357bc10aa87014237e58fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -772,6 +772,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#program-6" id="toc-program-6" class="nav-link" data-scroll-target="#program-6">Program 6</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#problem-solving" id="toc-problem-solving" class="nav-link" data-scroll-target="#problem-solving">🧩 <strong>Problem Solving</strong></a>
+  <ul class="collapse">
+  <li><a href="#food-truck-delivery" id="toc-food-truck-delivery" class="nav-link" data-scroll-target="#food-truck-delivery">1. Food Truck Delivery 🚚</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -971,6 +975,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
+<section id="problem-solving" class="level1">
+<h1>🧩 <strong>Problem Solving</strong></h1>
+<section id="food-truck-delivery" class="level2">
+<h2 class="anchored" data-anchor-id="food-truck-delivery">1. Food Truck Delivery 🚚</h2>
+<p>Imagine you’re running a busy food truck that starts its day with 20 pending orders and 0 km traveled. As you make deliveries along your route, you’ll stop twice to distribute orders and cover additional distance. Your Task:</p>
+<ol type="1">
+<li>Initialize Your Variables: orders = 24 distance = 0 (in kilometres)</li>
+<li>Perform the Following Updates (without using loops):</li>
+</ol>
+<ul>
+<li><strong>Stop 1:</strong>
+<ul>
+<li>Decrease the number of orders by 8</li>
+<li>Increase the distance by a fixed amount ( add 10 km).</li>
+</ul></li>
+<li><strong>Stop 2:</strong>
+<ul>
+<li>Decrease the number of orders by 16</li>
+<li>Increase the distance by another fixed amount ( add 15 km).</li>
+</ul></li>
+</ul>
+<p><strong>Write a Python Script:</strong> Update the variables sequentially and then print the final total distance travelled and the remaining number of orders.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="ec689f7a" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>orders <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># stop 1</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>orders <span class="op">-=</span> <span class="dv">8</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>distance <span class="op">+=</span> <span class="dv">10</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># stop 2</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>orders <span class="op">-=</span> <span class="dv">16</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>distance <span class="op">+=</span> <span class="dv">15</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Remaining orders: </span><span class="sc">{</span>orders<span class="sc">}</span><span class="ss">, Distance: </span><span class="sc">{</span>distance<span class="sc">}</span><span class="ss"> Km"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Remaining orders: 0, Distance: 25 Km</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">
@@ -987,7 +1049,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 </section>
 
