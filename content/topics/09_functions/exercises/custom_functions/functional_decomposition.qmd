@@ -7,7 +7,7 @@ editor:
 ::: {.callout-warning .objectives icon="false" title="☆ Learning Objectives "}
 - **Read** a word problem and translating it into solvable steps
 - **Divide** down complicated code into re-usable functions
-- **Identify** whena problem requires a loop.
+- **Identify** when a problem requires a loop.
 :::
 
 In this course, teachers will throw at you very wordy problems that can seem scary. But they always have "patterns" that can be translated to code. In this series of problems, we'll explore how to use functions effectively to breakdown a problem into smaller solvable steps. 
