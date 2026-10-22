@@ -787,7 +787,7 @@ window.Quarto = {
   <li><a href="#problem-1-snowman" id="toc-problem-1-snowman" class="nav-link active" data-scroll-target="#problem-1-snowman">Problem 1: Snowman ☃️</a></li>
   <li><a href="#problem-2-bacteria" id="toc-problem-2-bacteria" class="nav-link" data-scroll-target="#problem-2-bacteria">Problem 2: Bacteria 🧫</a></li>
   <li><a href="#problem-3-targets" id="toc-problem-3-targets" class="nav-link" data-scroll-target="#problem-3-targets">Problem 3: Targets 🎯</a></li>
-  <li><a href="#problem-2-the-taxi-driver" id="toc-problem-2-the-taxi-driver" class="nav-link" data-scroll-target="#problem-2-the-taxi-driver">Problem 2: The Taxi Driver 🚕</a>
+  <li><a href="#problem-4-the-taxi-driver" id="toc-problem-4-the-taxi-driver" class="nav-link" data-scroll-target="#problem-4-the-taxi-driver">Problem 4: The Taxi Driver 🚕</a>
   <ul class="collapse">
   <li><a href="#expected-output" id="toc-expected-output" class="nav-link" data-scroll-target="#expected-output">Expected output:</a></li>
   </ul></li>
@@ -880,7 +880,7 @@ w =  \frac{4}{3} \rho \pi r^3
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="320fa100" class="cell" data-execution_count="1">
+<div id="6c4ef0d3" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> snow_weight(density, radius):</span>
@@ -930,7 +930,7 @@ w =  \frac{4}{3} \rho \pi r^3
 <li><p>One calculation that’s important is finding out how many new bacteria are created each year.</p></li>
 <li><p>For that we can use a function! Let’s call it <code>get_increase()</code>!</p></li>
 </ul>
-<div id="ce64bc8c" class="cell" data-execution_count="2">
+<div id="f06b1999" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_increase(population, increase_percent):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> population <span class="op">*</span> increase_percent</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1081,7 +1081,7 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <li>This function will also handle the even/odd numbers of rings to make for sure we visit an exact count of red rings</li>
 <li>The pattern identified is that between every consecutive red ring, there’s a distance of exactly <code>2*thickness</code></li>
 </ul>
-<div id="fc40676f" class="cell" data-execution_count="3">
+<div id="69f175b6" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> area_circle(radius:<span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (radius<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>math.pi</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1131,7 +1131,7 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <li>otherwise, if it’s a white circle: <strong>subtract (-) area</strong></li>
 </ul></li>
 </ul>
-<div id="bebb50de" class="cell" data-execution_count="4">
+<div id="83792906" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> area_circle(radius:<span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (radius<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>math.pi</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1155,23 +1155,23 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 </div>
 </div>
 </section>
-<section id="problem-2-the-taxi-driver" class="level1">
-<h1>Problem 2: The Taxi Driver 🚕</h1>
+<section id="problem-4-the-taxi-driver" class="level1">
+<h1>Problem 4: The Taxi Driver 🚕</h1>
 <p>Bob has just started driving a taxi in the city and wants a small program to help keep track of a day on the road. Bob has noticed that the same few calculations come up again and again and he’d like to automate them.</p>
 <p>Here is what Bob knows about the job:</p>
 <ul>
 <li>Passengers are charged a base fare of <strong>$3.00 for every kilometer</strong> they travel.</li>
-<li>His car can travel <strong>10 km on one litre</strong> of fuel.</li>
+<li>His car can travel <strong>10 L per 100 Kmr</strong> of fuel (0.1 L/Km)</li>
 <li>The fuel tank holds <strong>50.0 L</strong>, and he starts the day with a <strong>full tank</strong>.</li>
 <li>He starts the day with <strong>$0.00</strong> in earnings and has driven <strong>0 km</strong>.</li>
 <li>Fuel costs <strong>$2.00 per litre</strong>, and the cost of fuel is taken out of his earnings.</li>
 </ul>
-<p>Bob is a careful driver and never wants the tank to get too low. Whenever the fuel level drops <strong>below 10%</strong> of his tank, he stops at a gas station <strong>between trips</strong> and wants to see a message <code>Refuelling car</code>, he then proceeds to fill the tank back up to 50.0 L.</p>
+<p>Bob is a careful driver and never wants the tank to get too low. Whenever the fuel level drops <strong>below 85%</strong> of his tank, he stops at a gas station <strong>between trips</strong> and wants to see a message <code>Refuelling car</code>, he then proceeds to fill the tank back up to 50.0 L.</p>
 <p>Here are the trips planned for today:</p>
 <ul>
 <li>100 Km at the base fare</li>
 <li>50 Km at the airport with a $2.00 extra + base fare</li>
-<li>120 Km outside the city so his car can go up to 16 Km/L (consums less gas)</li>
+<li>120 Km outside the city so his car can go up to 7L/100Km (0.07 L/Km)</li>
 </ul>
 <section id="expected-output" class="level3">
 <h3 class="anchored" data-anchor-id="expected-output">Expected output:</h3>
@@ -1242,180 +1242,212 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>This problem solution is really subjective.</p></li>
-<li><p>The way I broke it down:</p></li>
-<li><p>identified all the <strong>constants</strong> in the problem (values that are never changing, at least from how the problem was described)</p></li>
-<li><p>identified values that need to be kept track of and might change, these become <strong>variables</strong></p></li>
-<li><p>identified the calculations that come back every trip, these will become functions</p>
+<li><strong>How I broke the problem down:</strong>
 <ul>
-<li>calculate earnings based on distance, the fare and the bonus</li>
-<li>calculate fuel usage for every trip based on distance and fuel consumption per Km</li>
-<li>calculate the cost of fuel provided the fuel amount</li>
+<li>First, I listed the <strong>constants</strong>: values that never change during the day (at least as the problem describes them).</li>
+<li>Next, I listed the values that change from trip to trip and need tracking. These became <strong>variables</strong>.</li>
+<li>Then I looked for calculations that happen on every trip. These became <strong>functions</strong>:
+<ul>
+<li>earnings, from the distance, the fare and any bonus</li>
+<li>fuel used, from the distance and the car’s fuel consumption</li>
+<li>fuel cost, from the amount of fuel used</li>
 </ul></li>
-<li><p>then as I wrote the main program, I also realized that some lines were repeating</p></li>
-<li><p>so I created functions for them <code>get_refill()</code> , <code>go_trip()</code></p></li>
-<li><p>these functions are a little strange because they return and print and might not have a crystal clear task, but they are there simply to avoid code repetition</p></li>
-<li><p>the main program will now have the values that are specific to each trip</p></li>
-<li><p>I am “happy” with how the main() looks now, despite it still having some code repetition, I think hiding more lines into functions might make it less easy to read.</p></li>
-<li><p>The next improvement is using lists that contain all the trips. But that’s a topic for later</p></li>
+</ul></li>
+<li><strong>Spotting more repetition:</strong>
+<ul>
+<li>While writing the main program, I noticed whole groups of lines were repeated for each trip, so I moved them into two more functions: <code>get_refill()</code> and <code>go_trip()</code>.</li>
+<li>These two are a bit unusual: they both print <em>and</em> return values, so they don’t have one crystal-clear job. They exist mainly to avoid copy-pasting the same code.</li>
+</ul></li>
+<li><strong>The main program:</strong>
+<ul>
+<li><code>main()</code> now only holds what’s specific to each trip (distance, bonus, fuel consumption).</li>
+<li>There’s still some repetition, but I chose to keep it in the main. Hiding more lines inside functions would make <code>main()</code> harder to follow, and is not necessarily the correct design for this problem.</li>
+<li>Instead, the program could be improved with lists of trips with a main loop handling those repeated steps.</li>
+</ul></li>
+<li><strong>Next step:</strong>
+<ul>
+<li>Store all the trips in a list and loop over it. That’s a topic for later!</li>
+<li>This program is a work in progres…</li>
+</ul></li>
 </ul>
-<div id="10d2e875" class="cell" data-execution_count="5">
+<div id="5bbfee66" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Constants </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>TANK_CAPACITY:<span class="bu">float</span> <span class="op">=</span> <span class="fl">50.0</span>     <span class="co"># in L</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>REFUEL_LIMIT:<span class="bu">float</span> <span class="op">=</span> <span class="fl">0.1</span>       <span class="co"># in %</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>FUEL_COST:<span class="bu">float</span> <span class="op">=</span> <span class="fl">2.00</span>         <span class="co"># in $/L</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>FARE_PER_KM: <span class="bu">float</span> <span class="op">=</span> <span class="fl">2.00</span>      <span class="co"># in $/Km</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>TANK_CAPACITY:<span class="bu">float</span> <span class="op">=</span> <span class="fl">50.0</span>        <span class="co"># in L</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>REFUEL_LIMIT:<span class="bu">float</span> <span class="op">=</span> <span class="fl">0.85</span>          <span class="co"># in %</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>FUEL_COST:<span class="bu">float</span> <span class="op">=</span> <span class="fl">2.00</span>            <span class="co"># in $/L</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>BASE_PRICE: <span class="bu">float</span> <span class="op">=</span> <span class="fl">3.00</span>          <span class="co"># in $/Km</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>NORMAL_CONSUMPTION: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.1</span>   <span class="co"># in L/Km</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> trip_earnings(distance: <span class="bu">float</span>, fare:<span class="bu">float</span>, bonus:<span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span> :</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> trip_earnings(distance: <span class="bu">float</span>, fare:<span class="bu">float</span><span class="op">=</span>BASE_PRICE, bonus:<span class="bu">float</span><span class="op">=</span><span class="fl">0.0</span>) <span class="op">-&gt;</span> <span class="bu">float</span> :</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the earnings of a trip given the travelled distance</span></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">    for that trip, the fare in $/Km and the bonus in $ for every km. </span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> distance <span class="op">*</span> (fare <span class="op">+</span> bonus)</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuel_usage(distance:<span class="bu">float</span>, consumption:<span class="bu">float</span> <span class="op">=</span> <span class="dv">10</span>) <span class="op">-&gt;</span> <span class="bu">float</span> :</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuel_usage(distance:<span class="bu">float</span>, consumption:<span class="bu">float</span> <span class="op">=</span> NORMAL_CONSUMPTION) <span class="op">-&gt;</span> <span class="bu">float</span> :</span>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the fuel consumption in L for a trip.</span></span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">     - distance: Trip travel distance in Km</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">     - consumption: Fuel consumption in Km/L </span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> distance <span class="op">*</span> consumption</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">     - consumption: Fuel consumption in L/Km</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">     - used lit</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuel_cost(liters:<span class="bu">float</span>, gas_price:<span class="bu">float</span>):</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the fuel cost</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">        - liters : The total leters of fuel</span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">        - gas_price: The cost of fuel in $/L</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gas_price <span class="op">*</span> liters</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_refill(current_tank:<span class="bu">float</span>):</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="co">    Checks if the fuel tank is below a limit, if it's the case</span></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="co">    returns the refill amount required. Otherwise the tank doesn't need refill</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="co">    it'll return 0. </span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co">    Args: </span></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co">     - current_tank: current level of fuel in the tank</span></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co">    Return:</span></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co">    - fuel refill amount if refilling required </span></span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    refill <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> current_tank  <span class="op">&lt;=</span> REFUEL_LIMIT<span class="op">*</span>TANK_CAPACITY:</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Refuelling car"</span>)</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        refill <span class="op">=</span> TANK_CAPACITY <span class="op">-</span> current_tank</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> refill</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> go_trip(trip_distance:<span class="bu">float</span>, bonus_fare:<span class="bu">float</span>, consumption:<span class="bu">float</span>):</span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="co">    Function performing all operations done in a single trip to get earning, costs and fuel usage.</span></span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_distance: distance in Km for the given trip</span></span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="co">     - bonus_fare: bonus amount in $/Km for the given trip</span></span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="co">     - consumption: fuel consumption rate in Km/L for that trip </span></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_earning </span></span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="co">     - fuel_used</span></span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_cost</span></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    trip_earning <span class="op">=</span> trip_earnings(trip_distance,FARE_PER_KM, bonus_fare)</span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    fuel_used <span class="op">=</span> fuel_usage(trip_distance, consumption)</span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>    trip_cost <span class="op">=</span> fuel_cost(fuel_used, FUEL_COST)</span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="co"># output for 1st trip</span></span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Distance travelled: </span><span class="sc">{</span>trip_distance<span class="sc">}</span><span class="ss"> Km"</span>)</span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Earnings: $ </span><span class="sc">{</span>trip_earning<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Fuel Used : </span><span class="sc">{</span>fuel_used<span class="sc">}</span><span class="ss"> L"</span>)</span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Cost: $ </span><span class="sc">{</span>trip_cost<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Net profit: $</span><span class="sc">{</span>trip_earning <span class="op">-</span>trip_cost <span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> trip_earning, trip_cost, fuel_used</span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Variables </span></span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>    earnings:<span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>           <span class="co"># in $</span></span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>    costs: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>             <span class="co"># in $</span></span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>    fuel_level:<span class="bu">float</span> <span class="op">=</span> <span class="fl">50.0</span>        <span class="co"># in L</span></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First trip info</span></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 1"</span>)</span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">100</span>, bonus_fare<span class="op">=</span><span class="dv">0</span>, consumption<span class="op">=</span><span class="fl">0.1</span>)    </span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>    refill <span class="op">=</span> get_refill(fuel_level)</span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings and costs</span></span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> fuel_cost(refill, FUEL_COST) <span class="co">#not necessarily incurred because of this trip.</span></span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Second trip info</span></span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 2"</span>)</span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">50</span>, bonus_fare<span class="op">=</span><span class="fl">2.00</span>, consumption<span class="op">=</span><span class="fl">0.16</span>)</span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">-=</span> used </span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>    refill <span class="op">=</span> get_refill(fuel_level)</span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings and costs</span></span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> fuel_cost(refill, FUEL_COST) <span class="co">#not necessarily incurred because of this trip.</span></span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> distance <span class="op">*</span> consumption</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuel_cost(liters:<span class="bu">float</span>, gas_price:<span class="bu">float</span><span class="op">=</span>FUEL_COST) <span class="op">-&gt;</span><span class="bu">float</span>:</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the fuel cost</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">        - liters : The total liters of fuel</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co">        - gas_price: The cost of fuel in $/L</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: total cost of fuel in $</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gas_price <span class="op">*</span> liters</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_refill(current_tank:<span class="bu">float</span>, max_capacity:<span class="bu">float</span><span class="op">=</span>TANK_CAPACITY, limit_percent:<span class="bu">float</span> <span class="op">=</span> REFUEL_LIMIT) <span class="op">-&gt;</span><span class="bu">float</span>:</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co">    Checks if the fuel tank is below a limit, if it's the case</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co">    returns the refill amount required. Otherwise the tank doesn't need refill</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co">    it'll return 0. </span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="co">    Args: </span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="co">     - current_tank: current level of fuel in the tank</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="co">     - max_capacity: tank maximum capacity </span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="co">     - limit_percent: percentage of the tank underwhich the car is refuelled. </span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="co">    Return:</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="co">    - fuel refill amount if refilling required </span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    refill <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> current_tank  <span class="op">&lt;=</span> limit_percent<span class="op">*</span>max_capacity:</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Refuelling car..."</span>)</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>        refill <span class="op">=</span> max_capacity <span class="op">-</span> current_tank</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> refill</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> go_trip(trip_distance:<span class="bu">float</span>, bonus_fare:<span class="bu">float</span><span class="op">=</span><span class="fl">0.0</span>, consumption:<span class="bu">float</span><span class="op">=</span>NORMAL_CONSUMPTION)<span class="op">-&gt;</span>(<span class="bu">float</span>,<span class="bu">float</span>,<span class="bu">float</span>):</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co">    Function performing all calculations done in a single trip to get earning, costs and fuel usage and displays them. </span></span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_distance: distance in Km for the given trip</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="co">     - bonus_fare: bonus amount in $/Km for the given trip</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co">     - consumption: fuel consumption rate in Km/L for that trip </span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_earning </span></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a><span class="co">     - fuel_used</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a><span class="co">     - trip_cost</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    trip_earning <span class="op">=</span> trip_earnings(distance<span class="op">=</span>trip_distance,bonus<span class="op">=</span> bonus_fare)</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    fuel_used <span class="op">=</span> fuel_usage(trip_distance, consumption)</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    trip_cost <span class="op">=</span> fuel_cost(liters<span class="op">=</span>fuel_used)</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>    <span class="co"># output for 1st trip</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Distance travelled: </span><span class="sc">{</span>trip_distance<span class="sc">}</span><span class="ss"> Km"</span>)</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Earnings: $ </span><span class="sc">{</span>trip_earning<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Fuel Used : </span><span class="sc">{</span>fuel_used<span class="sc">}</span><span class="ss"> L"</span>)</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Cost: $ </span><span class="sc">{</span>trip_cost<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Trip Net profit: $</span><span class="sc">{</span>(trip_earning <span class="op">-</span>trip_cost)<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> trip_earning, trip_cost, fuel_used</span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Variables </span></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>    earnings:<span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>           <span class="co"># in $</span></span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>    costs: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>             <span class="co"># in $</span></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>    fuel_level:<span class="bu">float</span> <span class="op">=</span> <span class="fl">50.0</span>        <span class="co"># in L</span></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First trip info</span></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 1"</span>)</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">100</span>)    </span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings, costs and fuel level</span></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> trip_cost</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">-=</span> used </span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">+=</span>  get_refill(fuel_level)</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Second trip info</span></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 2"</span>)</span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">50</span>, bonus_fare<span class="op">=</span><span class="fl">2.00</span>)</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Third trip info</span></span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 3"</span>)</span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">120</span>, bonus_fare<span class="op">=</span><span class="fl">0.00</span>, consumption<span class="op">=</span><span class="fl">0.16</span>)</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings, costs and fuel level</span></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> trip_cost</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">-=</span> used </span>
 <span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">-=</span> used </span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>    refill <span class="op">=</span> get_refill(fuel_level)</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">+=</span>  get_refill(fuel_level)</span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings and costs</span></span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> fuel_cost(refill, FUEL_COST) <span class="co">#not necessarily incurred because of this trip.</span></span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Third trip info</span></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Trip 3"</span>)</span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>    trip_earning, trip_cost, used <span class="op">=</span> go_trip(trip_distance<span class="op">=</span><span class="dv">120</span>, consumption<span class="op">=</span><span class="fl">0.07</span>)</span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>    <span class="co"># updating global earnings, costs and fuel level</span></span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>    earnings <span class="op">+=</span> trip_earning</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">+=</span> trip_cost</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">-=</span> used </span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a>    <span class="co">#checking if refuelling needed</span></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>    fuel_level <span class="op">+=</span>  get_refill(fuel_level)</span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Day summary"</span>)</span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Total earnings: $ </span><span class="sc">{</span>earnings<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Total costs: $ </span><span class="sc">{</span>costs<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Tank level: </span><span class="sc">{</span>fuel_level<span class="sc">}</span><span class="ss"> L"</span>)</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Trip 1
 Distance travelled: 100 Km
-Trip Earnings: $ 200.0
+Trip Earnings: $ 300.00
 Fuel Used : 10.0 L
-Trip Cost: $ 20.0
-Trip Net profit: $180.0
+Trip Cost: $ 20.00
+Trip Net profit: $280.00
+Refuelling car...
 
 Trip 2
 Distance travelled: 50 Km
-Trip Earnings: $ 200.0
-Fuel Used : 8.0 L
-Trip Cost: $ 16.0
-Trip Net profit: $184.0
+Trip Earnings: $ 250.00
+Fuel Used : 5.0 L
+Trip Cost: $ 10.00
+Trip Net profit: $240.00
 
 Trip 3
 Distance travelled: 120 Km
-Trip Earnings: $ 240.0
-Fuel Used : 19.2 L
-Trip Cost: $ 38.4
-Trip Net profit: $201.6</code></pre>
+Trip Earnings: $ 360.00
+Fuel Used : 8.4 L
+Trip Cost: $ 16.80
+Trip Net profit: $343.20
+Refuelling car...
+Day summary
+Total earnings: $ 910.00
+Total costs: $ 46.80
+Tank level: 50.0 L</code></pre>
 </div>
 </div>
 </div>
