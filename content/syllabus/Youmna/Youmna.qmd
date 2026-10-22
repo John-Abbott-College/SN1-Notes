@@ -301,19 +301,23 @@ Go over:
 
 **NOT** in the Midterm :
 - `input()` function
+- `not`
 - While loops
 - Lists
 
+
 # Test Week
 ## Dates: 
-- Section 7: 20 Octobers 2026
 
-- Section 1 : 23 October 2026
+- Section 1 : 23 October 2026 at 1:30 pm **Room H-318**
+
+- Section 7: 27 Octobers 2026 at 1:30 pm **Room AME-602**
 
 ## 📚 Prep 
 - Go over the notes and examples for all topics covered in the course.
 - Do the practice problems for each topic.
 - Do the practice test.
+- Here's a complete [checklist of topics](../../teacher/youmna/prep/midterm/midterm-checklist.qmd)
 
 <!-- 
 

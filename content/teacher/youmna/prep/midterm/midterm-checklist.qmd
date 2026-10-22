@@ -1,0 +1,329 @@
+---
+title: "Test 1 - Checklist for Youmna's sections"
+---
+# Test 1 - Checklist
+
+# Variables & Data Types
+
+- Use variables when a value in the problem tends to change!
+
+- You should know the difference between:
+
+  - `1` vs `1.0`
+  - `1` vs `"1"`
+  - `1.0` vs `"1.0"`
+  - `False` vs `"False"`
+
+- You should know what these conversions will return:
+  - `int("67")` → `67`
+  - `float(67)` → `67.0`
+  - `str(90)` → `"90"`
+  - `int("67.0")` → Error!
+
+#### f-string
+
+- Do you know how to display a number with a certain precision?
+
+  ```python
+  number = 23.4546
+  print(f"The number is {number:.2f} units")
+  ```
+
+# Operators
+
+Do you know all these operators? What will be the data type of each of these variables?
+
+### Arithmetic
+
+```python
+x = 10
+y = x + 2*x - 4*x**2
+z = x / y
+
+h = x // y
+g = y % x
+```
+
+### Assignment
+
+```python
+x = 0
+y = 0
+
+x += 2
+x -= 1
+x *= 3
+x /= 4
+x %= 2
+x //= 4
+```
+
+### Comparison + conditional statements
+
+Do you know how to compare numbers with each other?
+
+```python
+x = 5
+y = 10
+
+if y > x:
+  print("wow")
+
+if x < y <= 100:
+  print("ha")
+
+if x == 1:
+  print("nope")
+
+if y != 5:
+  print("yep")
+```
+
+> I won't really test you on logical expressions such as the one below, but you should still be able to figure them out:
+>
+> ```python
+> z = y > x  # -> z is True because y is larger than x
+> ```
+
+### Logical operators + conditional statements
+
+Do you know how to combine conditions and/or boolean values with `and` and `or`?
+
+```python
+is_raining = True
+temperature = 20
+
+if is_raining or temperature < 15:
+  print("It's raining or the temperature is chilly outside")
+
+if is_raining and temperature > 18:
+  print("Warm but raining outside")
+
+if not is_raining and temperature > 18:
+  print("It's not raining! And the temperature is warm! Let's go outside!")
+```
+
+> Note: We haven't used `not` so far, so I'll most likely not test you on it. You should still know what it does.
+
+# Conditional statements
+
+- Do you know how to write an `if` and `if/else` statement?
+
+  **Example**
+
+  ```python
+  if num_slices > 8:
+    print("I have a large pizza")
+  else:
+    print("I don't have a large pizza")
+  ```
+
+- You can optionally use `if/elif/else` if it makes a problem easier.
+
+  **Example**
+
+  ```python
+  number = 6
+  
+  if number % 2 == 0 and number % 3 == 0:
+    print("Ping Pong")
+  elif number % 3 == 0:
+    print("Ping")
+  elif number % 2 == 0:
+    print("Pong")
+  else:
+    print("Neither ping nor pong")
+  ```
+
+# Functions
+
+## Math functions
+
+```python
+import math
+
+print(math.pi)        # the constant pi
+
+x_sq = math.sqrt(16)  # square root
+
+y = math.sin(0)       # sin(x) function where x is in radians
+y = math.cos(0)       # cos(x) function where x is in radians
+
+x = math.asin(1)      # sin⁻¹() function where the returned value is in radians
+x = math.acos(1)      # cos⁻¹() function where the returned value is in radians
+```
+
+## Creating and using functions
+
+### Returning functions
+
+**Example**
+
+```python
+def my_function(a, b):
+  return a + b
+```
+
+#### How to call a returning function
+
+```python
+variable = my_function(3, 4)
+print(variable)
+```
+
+Or,
+
+```python
+print(my_function(3, 4))
+```
+
+### Printing functions
+
+**Example**
+
+```python
+def my_function2(a, b):
+  print(a + b)
+```
+
+#### How to call a printing function
+
+```python
+my_function2(3, 4)
+```
+
+## Functions calling other functions
+
+**Example**
+
+```python
+def called(number):
+  return number * 2
+
+def caller(num1, num2, num3):
+  result = called(num1) + called(num2) + called(num3)
+  print(result)  # or return, depending on the goal
+```
+
+## Functions exist in their own isolated bubble (scope)
+
+```python
+def add(a, b):
+  total = a + b   # <-- not the same total as below
+  return total
+
+def multiply(a, b):
+  total = a * b   # <-- not the same total as above
+  return total
+
+total = 0         # <-- not the same total as those above
+```
+
+### Type hinting (optional)
+
+```python
+def my_function3(a: int, b: int) -> int:
+  return a + b
+```
+
+- This function works exactly like the first example. The hints only document that `a` and `b` are meant to be `int` and that it returns an `int`; Python does not enforce them.
+
+## Functions returning strings
+
+**Example**
+
+```python
+def greet(language):
+  if language == "French":
+    return "Bonjour!"
+  else:  # defaults to English for all other languages
+    return "Hello!"
+```
+
+## Functions returning booleans
+
+**Example**
+
+```python
+def is_big(number):
+  if number > 10_000:
+    return True
+  else:
+    return False
+```
+
+Note: this can also be written as such:
+
+```python
+def is_big(number):
+  return number > 10_000
+```
+
+## Functions with multiple return values
+
+**Example**
+
+```python
+def square(x1, x2):
+  y1 = x1**2
+  y2 = x2**2
+
+  return y1, y2
+```
+
+# Loops
+
+- Can you run some lines of code `n` times?
+
+  **Example**
+
+  ```python
+  n = 10
+  for i in range(n):
+    print("Hello")
+  ```
+
+- Can you visit all numbers from a `start` to an `end` value?
+
+  **Example**
+
+  ```python
+  start = 1
+  end = 10
+  
+  for i in range(start, end + 1):
+    print(i)
+  ```
+
+- Can you skip every other number?
+
+  **Example**
+
+  ```python
+  n = 10
+  
+  for i in range(1, n + 1, 2):
+    print(i)  # only prints odd numbers
+  ```
+
+- Do you know how to stop a loop?
+
+  **Example**
+
+  ```python
+  n = 10
+  for i in range(n):
+    print("Hello")
+  
+    if i == 8:
+      print("Bye")
+      break  # <-- interrupts the loop
+  ```
+
+# Not in Test 1
+- `input()`
+- `not`
+- `if/elif/else` (but could be helpful)
+- `while` loops
+- Lists
+- Turtle Graphics
