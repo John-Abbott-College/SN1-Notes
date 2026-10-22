@@ -295,11 +295,11 @@ Go over:
 - [ ] Writing math expressions in Python
 - [ ] The `math` module (`import math`, `math.sqrt()`, `math.sin()`, `math.cos()`, `math.pi`)
 - [ ] Conditional Statements (`if`, `if/else`)
+- [ ] **Added**: `if/elif/else` statements
 - [ ] Functions (parameters, return, scope, functions calling other functions)
 - [ ] For Loops (synthax, `range()`, `break`, `continue`)
 
 **NOT** in the Midterm :
-- `if/elif/else` statements
 - `input()` function
 - While loops
 - Lists

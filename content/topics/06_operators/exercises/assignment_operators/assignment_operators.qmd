@@ -109,3 +109,45 @@ print(s)
 `str`
 :::
 
+
+# 🧩 **Problem Solving**
+
+## 1. Food Truck Delivery 🚚
+
+
+Imagine you're running a busy food truck that starts its day with 20 pending orders and 0 km traveled. As you make deliveries along
+your route, you'll stop twice to distribute orders and cover additional distance.
+Your Task:
+
+1. Initialize Your Variables:
+   orders = 24
+   distance = 0 (in kilometres)
+2. Perform the Following Updates (without using loops):
+
+- **Stop 1:**
+  - Decrease the number of orders by 8
+  - Increase the distance by a fixed amount ( add 10 km).
+- **Stop 2:**
+  - Decrease the number of orders by 16
+  - Increase the distance by another fixed amount ( add 15 km).
+
+**Write a Python Script:** Update the variables sequentially and then print the final total distance travelled and the remaining number of orders.
+
+:::{.callout-tip collapse="true" title="Solution"}
+```{python}
+orders = 24
+distance = 0
+
+# stop 1
+orders -= 8
+distance += 10
+
+
+# stop 2
+orders -= 16
+distance += 15
+
+print(f"Remaining orders: {orders}, Distance: {distance} Km")
+
+```
+:::

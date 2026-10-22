@@ -334,3 +334,66 @@ Note: There are other valid solutions, but there are better implementations than
 - Breaking down an equation into multiple terms helps making it more readable
 - Using comments (`#`) with the units of measurements helps understand the context.
 :::
+
+## 5. Tariffs 🤡
+
+Let's estimate how tariffs will affect your monthly grocery bill. Let’s start by defining the following parameters:
+
+- x: The price the farmer charges for their products
+- Tariff: A tax of 25% applied to the farmer's price
+- Grocery Cost: The cost after adding the tariff.
+- Selling Price: The final amount the consumer pays, including a 20% markup by the store.
+
+If your current grocery bill is $400, write a Python Program that estimates how much your grocery expenses will be, formatted to two decimal places.
+
+:::{.callout-tip collapse="true" title="Solution"}
+
+```{python}
+current_bill = 400
+markup_rate = 0.20
+tariff_rate = 0.25
+
+x_farmer_price = current_bill/(1+markup_rate)
+tariff = x_farmer_price* tariff_rate
+grocery_cost= x_farmer_price + tariff
+selling_price = grocery_cost + grocery_cost * markup_rate
+
+print(f"Current price {current_bill:.2f}$, Price after tariff {selling_price:.2f}%")
+
+```
+:::
+
+## 6. Los Pollos Hermanos 🐓👒
+
+Your distant relative makes delicious burritos, and you believe they should start selling them. They've come up with the following pricing model:
+
+- The first two burritos are $12 each
+- Any additional burritos are $6 each
+
+Create a Python program that:
+
+- Stores the number of burritos in a variable (this value may change)
+- Calculates the total cost for this order, formatted to two decimal places
+- Full marks are awarded for the most logically sound program that adheres to best- practices
+
+:::{.callout-tip collapse="true" title="Solution"}
+```{python}
+num_burritos = 3            # in burrito :)
+base_burrito_price  = 12    #in dollars
+count_before_discount = 2   # in burrito :)
+extra_burrito_price = 6     #in dollars
+
+total_cost = 0
+
+if 1 < num_burritos <= count_before_discount:
+    total_cost = num_burritos * base_burrito_price
+
+if num_burritos > count_before_discount:
+    total_cost = count_before_discount * base_burrito_price
+    additional = num_burritos - count_before_discount
+    total_cost  += additional * extra_burrito_price
+
+print(f"Total for {num_burritos} is {total_cost:.2f}$")
+
+```
+:::
