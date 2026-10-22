@@ -20,7 +20,7 @@ You are building a snowman, your landlord (being a bit grumpy) is complaining th
 So, to calculate the weight of the snowman, you must first calculate the weight of snow for a given size of individual ball of snow, then add up all the snow balls weights together. The density of snow is  $\rho = 0.30$.
 
 
-<img src="snowman.png" height=300/>
+<img src="assets/snowman.png" height=300/>
 
 Write a python program which calculates the snowball weight while avoiding repeated calculations. The weight of each ball can be calculated using the following fomula:
 
@@ -38,6 +38,7 @@ $$
 :::
 :::
 
+:::{.callout-tip title="Possible Solution" collapse="true"}
 ```{python}
 import math
 
@@ -60,6 +61,7 @@ def main(): #This is completely up to you, but I prefer putting the main program
     print(total_weight)
 
 ```
+:::
 
 # Problem 2: Bacteria 🧫
 
@@ -78,7 +80,7 @@ A scientist is studying the growth rate of a bacteria colony. The colony starts 
 
  - For that we can use a function! Let's call it `get_increase()`! 
 
-- 
+
 ```{python}
 def get_increase(population, increase_percent):
     return population * increase_percent
