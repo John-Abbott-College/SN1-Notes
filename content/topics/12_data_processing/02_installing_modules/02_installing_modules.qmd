@@ -3,6 +3,10 @@ title: "Installing Python Modules"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Install** `matplotlib` to create python plots
+- **Install** `numpy` for scientific computing
+:::
 
 In this course, we have used a variety of _built-in_ modules like `math`, `turtle`, `datetime`.
 
@@ -48,15 +52,37 @@ For these modules, extra steps are needed: they are not _built-in_ to Python, so
    from matplotlib import pyplot as plt
    ```
 
-![wow](./assets/img_4.png)
+![wow](./assets/img_4.png){width=50%}
 
 1. If you see an error saying "Unresolved reference", that means the module **is not installed** on the computer.
+
+### **Installing vis Thonny**
+1. In thonny, type the following command in the shell:
+
+```cmd
+!pip install matplotlib
+```
+
+![wow](./assets/img_10.png){width=50%}
+2. Wait until a success message appears in the shell:
+```
+Successfully installed ...(a bunch of module names)
+```
+
+3. You should be able to use the module!
+**Example**
+```{python}
+from matplotlib import pyplot as plt 
+
+plt.plot([1,2,3], [1,2,3])
+plt.show()
+```
 
 ### **Installing via PyCharm**
 
 1. Click File > Settings to open the Settings menu:
 
-![wow](./assets/img_3.png)
+![wow](./assets/img_3.png){width=50%}
 
 2. Select Project > Project interpreter from the left hand side menu
 
@@ -66,11 +92,11 @@ For these modules, extra steps are needed: they are not _built-in_ to Python, so
 
 5. Search for the package you want installed: "_matlplotlib_" then click _Install Package_
 
-![wow](./assets/img_5.png)
+![wow](./assets/img_5.png){width=50%}
 
 6. While you are here, install _numpy_ as well:
 
-![wow](./assets/img_6.png)
+![wow](./assets/img_6.png){width=50%}
 
 7. Now that the packages are installed, try typing those lines in your python file:
 
