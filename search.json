@@ -517,11 +517,7 @@
     "href": "topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html",
     "title": "Draw a simple house",
     "section": "",
-    "text": "import turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw a square\nfor _ in range(4):\n    t.forward(100)   # Move forward by 100 units\n    t.right(90)      # Turn right by 90 degrees\n\nt.right(-60)\n\nfor _ in range(2):\n    t.forward(100)   # Move forward by 100 units\n    t.right(120)\n# Close the turtle graphics window on click\nscreen.exitonclick()\n\nDraw a dount:\nimport turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw the outer circle (the body of the donut)\nt.pencolor(\"brown\")\nt.fillcolor(\"pink\")   # Fill color for the donut\nt.begin_fill()\nt.circle(100)         # Outer circle with radius 100\nt.end_fill()\n\n# Move to the position to draw the inner circle (the hole of the donut)\nt.penup()\nt.goto(0, +60)        # Move to the center bottom of the outer circle\nt.pendown()\n\n# Draw the inner circle (the hole of the donut)\nt.fillcolor(\"white\")  # Fill color for the hole\nt.begin_fill()\nt.circle(40)          # Inner circle with radius 40\nt.end_fill()\n\n# Close the turtle graphics window on click\nscreen.exitonclick()\n\n\nRun this and enjoy the output\nimport turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw the body of the house (a square)\nt.pencolor(\"black\")\nt.fillcolor(\"lightblue\")  # Fill color for the house\nt.begin_fill()\nfor _ in range(4):\n    t.forward(150)   # Move forward 150 units\n    t.right(90)       # Turn left 90 degrees\nt.end_fill()\n\n# Move the turtle to the top-left corner to draw the roof\nt.left(60)\nt.forward(150)\nt.right(90)\n\n# Draw the roof (a triangle)\nt.fillcolor(\"brown\")  # Fill color for the roof\nt.begin_fill()\nt.right(30)\nfor _ in range(2):\n    t.forward(150)\n    t.right(120)\nt.end_fill()\n\n\n# Move to draw the door (a rectangle)\nt.penup()\nt.right(150)            # Face down towards the house base\nt.forward(150)\nt.left(90)\nt.forward(95)        # Move to the bottom-left corner of the door\nt.pendown()\n#\n# Draw the door\nt.fillcolor(\"darkblue\")  # Fill color for the door\nt.begin_fill()\nt.left(90)\nt.forward(60)            # Door height\nt.left(90)\nt.forward(40)            # Door width\nt.left(90)\nt.forward(60)\nt.left(90)\nt.forward(40)\nt.end_fill()\n# Close the turtle graphics window on click\nscreen.exitonclick()",
-    "crumbs": [
-      "Turtle graphics",
-      "Draw a simple house"
-    ]
+    "text": "import turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw a square\nfor _ in range(4):\n    t.forward(100)   # Move forward by 100 units\n    t.right(90)      # Turn right by 90 degrees\n\nt.right(-60)\n\nfor _ in range(2):\n    t.forward(100)   # Move forward by 100 units\n    t.right(120)\n# Close the turtle graphics window on click\nscreen.exitonclick()\n\nDraw a dount:\nimport turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw the outer circle (the body of the donut)\nt.pencolor(\"brown\")\nt.fillcolor(\"pink\")   # Fill color for the donut\nt.begin_fill()\nt.circle(100)         # Outer circle with radius 100\nt.end_fill()\n\n# Move to the position to draw the inner circle (the hole of the donut)\nt.penup()\nt.goto(0, +60)        # Move to the center bottom of the outer circle\nt.pendown()\n\n# Draw the inner circle (the hole of the donut)\nt.fillcolor(\"white\")  # Fill color for the hole\nt.begin_fill()\nt.circle(40)          # Inner circle with radius 40\nt.end_fill()\n\n# Close the turtle graphics window on click\nscreen.exitonclick()\n\n\nRun this and enjoy the output\nimport turtle\n\n# Set up the screen\nscreen = turtle.Screen()\n\n# Create a turtle object\nt = turtle.Turtle()\n\n# Set the speed of the turtle (optional)\nt.speed(2)\n\n# Draw the body of the house (a square)\nt.pencolor(\"black\")\nt.fillcolor(\"lightblue\")  # Fill color for the house\nt.begin_fill()\nfor _ in range(4):\n    t.forward(150)   # Move forward 150 units\n    t.right(90)       # Turn left 90 degrees\nt.end_fill()\n\n# Move the turtle to the top-left corner to draw the roof\nt.left(60)\nt.forward(150)\nt.right(90)\n\n# Draw the roof (a triangle)\nt.fillcolor(\"brown\")  # Fill color for the roof\nt.begin_fill()\nt.right(30)\nfor _ in range(2):\n    t.forward(150)\n    t.right(120)\nt.end_fill()\n\n\n# Move to draw the door (a rectangle)\nt.penup()\nt.right(150)            # Face down towards the house base\nt.forward(150)\nt.left(90)\nt.forward(95)        # Move to the bottom-left corner of the door\nt.pendown()\n#\n# Draw the door\nt.fillcolor(\"darkblue\")  # Fill color for the door\nt.begin_fill()\nt.left(90)\nt.forward(60)            # Door height\nt.left(90)\nt.forward(40)            # Door width\nt.left(90)\nt.forward(60)\nt.left(90)\nt.forward(40)\nt.end_fill()\n# Close the turtle graphics window on click\nscreen.exitonclick()"
   },
   {
     "objectID": "topics/08_loops/01_for_loop/01_for_loop.html",
@@ -882,14 +878,22 @@
     "href": "topics/12_data_processing/02_installing_modules/02_installing_modules.html",
     "title": "Installing Python Modules",
     "section": "",
-    "text": "In this course, we have used a variety of built-in modules like math, turtle, datetime.\nWe are not limited to these built-in modules: developers from all over the world can create new modules that serve particular needs.\nIn the final chapter of our course, we will make extensive use of the following external libraries, popular for scientific research:\nFor these modules, extra steps are needed: they are not built-in to Python, so we have to install them separately."
+    "text": "Note☆ Learning Objectives\n\n\n\n\nInstall matplotlib to create python plots\nInstall numpy for scientific computing\nIn this course, we have used a variety of built-in modules like math, turtle, datetime.\nWe are not limited to these built-in modules: developers from all over the world can create new modules that serve particular needs.\nIn the final chapter of our course, we will make extensive use of the following external libraries, popular for scientific research:\nFor these modules, extra steps are needed: they are not built-in to Python, so we have to install them separately.",
+    "crumbs": [
+      "Scientific Modules",
+      "Installing Python Modules"
+    ]
   },
   {
     "objectID": "topics/12_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
     "href": "topics/12_data_processing/02_installing_modules/02_installing_modules.html#importing-and-installing-a-module",
     "title": "Installing Python Modules",
     "section": "Importing and installing a module",
-    "text": "Importing and installing a module\n\nEnsure that the PyCharm project is using the System’s interpreter\nAdd a python file to write your code.\nThe import statement followed by the module name, allows you to import a module into your script. For example:\nimport math   #comes built-in with python\n\nNote: You can use an alias to “nickname” a package and shorten your lines of code by using the as keyword For example:\nimport math as m\n\nprint(m.pi)\nNote: You can also import a function or a sub-module within a given module\nfrom math import sin\n\nprint(sin(0))\n\nIf you are importing a module that wasn’t installed, it will be underlined in red:\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n\n\n\nwow\n\n\n\nIf you see an error saying “Unresolved reference”, that means the module is not installed on the computer.\n\n\nInstalling via PyCharm\n\nClick File &gt; Settings to open the Settings menu:\n\n\n\n\nwow\n\n\n\nSelect Project &gt; Project interpreter from the left hand side menu\nThis is all the list of modules that are installed in my project, yours might not contain much for now.\nTo add a package/module, click the + button at the top of the list\nSearch for the package you want installed: “matlplotlib” then click Install Package\n\n\n\n\nwow\n\n\n\nWhile you are here, install numpy as well:\n\n\n\n\nwow\n\n\n\nNow that the packages are installed, try typing those lines in your python file:\nimport numpy as np\nfrom matlplotlib import pyplot\n\n\n\nInstalling via command line on Windows (like a pro 😎)\n\nType cmd in the Windows search bar and click the “Command Prompt” icon.\nType the following command in the command prompt:\n\npip install --upgrade pip\n\nInstall your packages:\n\npip install matplotlib\npip install numpy\n\n\nInstalling via Terminal on Mac (like a pro 😎)\n\nFrom Launch page, search for an app called Terminal\nType the following command in Terminal:\n\npip3 install --upgrade pip\n\nInstall your packages with the following commands:\n\npip3 install matplotlib\npip3 install numpy"
+    "text": "Importing and installing a module\n\nEnsure that the PyCharm project is using the System’s interpreter\nAdd a python file to write your code.\nThe import statement followed by the module name, allows you to import a module into your script. For example:\nimport math   #comes built-in with python\n\nNote: You can use an alias to “nickname” a package and shorten your lines of code by using the as keyword For example:\nimport math as m\n\nprint(m.pi)\nNote: You can also import a function or a sub-module within a given module\nfrom math import sin\n\nprint(sin(0))\n\nIf you are importing a module that wasn’t installed, it will be underlined in red:\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n\n\n\nwow\n\n\n\nIf you see an error saying “Unresolved reference”, that means the module is not installed on the computer.\n\n\nInstalling vis Thonny\n\nIn thonny, type the following command in the shell:\n\n!pip install matplotlib\n 2. Wait until a success message appears in the shell:\nSuccessfully installed ...(a bunch of module names)\n\nYou should be able to use the module! Example\n\n\nfrom matplotlib import pyplot as plt \n\nplt.plot([1,2,3], [1,2,3])\nplt.show()\n\n\n\n\n\n\n\n\n\n\nInstalling via PyCharm\n\nClick File &gt; Settings to open the Settings menu:\n\n\n\n\nwow\n\n\n\nSelect Project &gt; Project interpreter from the left hand side menu\nThis is all the list of modules that are installed in my project, yours might not contain much for now.\nTo add a package/module, click the + button at the top of the list\nSearch for the package you want installed: “matlplotlib” then click Install Package\n\n\n\n\nwow\n\n\n\nWhile you are here, install numpy as well:\n\n\n\n\nwow\n\n\n\nNow that the packages are installed, try typing those lines in your python file:\nimport numpy as np\nfrom matlplotlib import pyplot\n\n\n\nInstalling via command line on Windows (like a pro 😎)\n\nType cmd in the Windows search bar and click the “Command Prompt” icon.\nType the following command in the command prompt:\n\npip install --upgrade pip\n\nInstall your packages:\n\npip install matplotlib\npip install numpy\n\n\nInstalling via Terminal on Mac (like a pro 😎)\n\nFrom Launch page, search for an app called Terminal\nType the following command in Terminal:\n\npip3 install --upgrade pip\n\nInstall your packages with the following commands:\n\npip3 install matplotlib\npip3 install numpy",
+    "crumbs": [
+      "Scientific Modules",
+      "Installing Python Modules"
+    ]
   },
   {
     "objectID": "topics/01_objectives/02_probelm_solving/02_probelm_solving.html",
@@ -1293,105 +1297,114 @@
     "text": "Advanced Tutorial\nHere a few words we will be using a lot when programming….\nBugs\nA software bug is a mistake in code that is causing unexpected behavior. For example a calculation error, or an error in the logic of a program. Think of the peanut butter sandwich making exercise. Imprecise or incorrect instructions lead to errors and unexpected behavior!\nDebugging\nDebugging is the process or running your code step by step in order to find and fix bugs. It’s this frustrating part of coding when you are first starting but it gets better as you practice solving your own mistakes.\nDebugger\nIs a software tool that allows pausing of the execution of code, inspecting variables, stepping through the lines of code in order to fix bugs.\nBreakpoints:\nBreakpoints are red markers added on the left margin to tell the Python Debugger to suspend the execution of the program at that very specific line of code.\nPyCharm debug mode\nPyCharm is an amazing Python IDE as it allows us to write code, run it and debug it all in the same interface. Add a breakpoint by clicking on the left margin of a line of code and then by clicking the debug button (looks like a green bug):\n\nFunny memes (not in the exam)\n\n\n\n\nDemo in class\nYou can only learn this part by practicing.\n\nHow to run the debug mode\nAdding breakpoints\nDebug tools: Stepping over, Resume and Stop\nInspecting variables.\nLive debugging\nFinding a syntax error and fixing it."
   },
   {
-    "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html",
-    "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html",
-    "title": "Looping through a list",
+    "objectID": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html",
+    "href": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html",
+    "title": "Reordering Lists",
     "section": "",
-    "text": "Looping through a list involves visiting each item in the list one by one to perform an operation on it. The for loop is the ideal tool to repeat a statement while iterating over whatever is in the list.\nExample\nThe following way traverses each letter one by one.\nIf there is a need to keep track of the iteration number i of each element, Python offers the built-in function enumerate() to return both the index and the item without having to use range() and len().",
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nSort a list in ascending order using sort()\nSort a list in descending order using reverse()\nExtract a sublist from a list using slicing",
     "crumbs": [
       "Lists",
-      "Looping through a list"
+      "Reordering Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#paired-lists---using-zip",
-    "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#paired-lists---using-zip",
-    "title": "Looping through a list",
-    "section": "Paired lists - using Zip",
-    "text": "Paired lists - using Zip\nConsider the following two lists that represent various travel destinations and their associated ticket prices.\ndestinations = [\"Tokyo\",\"Muscat\", \"Cancun\", \"Paris\"]\nticket_prices = [2769.00, 2680.00, 478.00, 1347.00]\nWhat if we would like to display each destination and its ticket price as such:\nTokyo  2769.00$\nMuscat 2680.00$\nCancun  478.00$\nParis  1347.00$\nAn initial strategy would be to iterate over both lists using a for loop iterating enumerate(), assuming that both lists will always have the same length, such as :",
+    "objectID": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#basic-slicing",
+    "href": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#basic-slicing",
+    "title": "Reordering Lists",
+    "section": "Basic Slicing:",
+    "text": "Basic Slicing:\n\nlist_1 = [0, 1, 2, 3, 4, 5]\nlist_2 = list_1[1:4]\nprint(list_2)  # Outputs: [1, 2, 3]\n\n[1, 2, 3]\n\n\nThis creates a new list, list_2, containing elements from index 1 to 3 of list_1.",
     "crumbs": [
       "Lists",
-      "Looping through a list"
+      "Reordering Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#zip",
-    "href": "topics/11_lists/02_looping_over_lists/02_looping_over_lists.html#zip",
-    "title": "Looping through a list",
-    "section": "Zip()",
-    "text": "Zip()\nThe zip() function returns a single combined “sequence” returning the pair of destination and its corresponding price :\n\n\n\n\n\n\n\nSidenote: You can actually “see” what the resulting of zipping is by converting it into a list and printing it:\nzip_result = zip(ticket_prices, destinations)\nprint(list(zip_result))\nOutput: It’s a list of pairs of values :\n[(2769.0, ‘Tokyo’), (2680.0, ‘Muscat’), (478.0, ‘Cancun’), (1347.0, ‘Paris’)]\n\nYou can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:\n\n\n\n\n\n\nExample",
+    "objectID": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#omitting-start-and-stop",
+    "href": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#omitting-start-and-stop",
+    "title": "Reordering Lists",
+    "section": "Omitting start and stop:",
+    "text": "Omitting start and stop:\n\nlist_1 = [0, 1, 2, 3, 4, 5]\nlist_2 = list_1[:3]\nprint(list_2)  # Outputs: [0, 1, 2]\n\n[0, 1, 2]\n\n\n\nlist_3 = list_1[3:]\nprint(list_3)  # Outputs: [3, 4, 5]\n\n[3, 4, 5]\n\n\nIf start is omitted, the slice starts from the beginning of the list. If stop is omitted, the slice goes up to the end of the list.",
     "crumbs": [
       "Lists",
-      "Looping through a list"
+      "Reordering Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/03_list_inclusion/03_list_inclusion.html",
-    "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html",
-    "title": "Finding Elements in a List",
+    "objectID": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#copying-a-list",
+    "href": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#copying-a-list",
+    "title": "Reordering Lists",
+    "section": "Copying a List:",
+    "text": "Copying a List:\nA slice in Python allows you to create a new copy of a list or parts of it. It copies the list’s contents, not its name.\n\nlist_1 = [1, 2, 3, 4, 5]\nlist_2 = list_1[:]\nlist_1[0] = 2\nprint(list_2)  \nprint(list_1)  \n\n[1, 2, 3, 4, 5]\n[2, 2, 3, 4, 5]",
+    "crumbs": [
+      "Lists",
+      "Reordering Lists"
+    ]
+  },
+  {
+    "objectID": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#slices-negative-indices",
+    "href": "topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html#slices-negative-indices",
+    "title": "Reordering Lists",
+    "section": "Slices – negative indices",
+    "text": "Slices – negative indices\n\nlist_1 = [0, 1, 2, 3, 4, 5]\nlist_2 = list_1[-4:-1]\nprint(list_2)  \n\n[2, 3, 4]\n\n\nNegative indices count from the end of the list. Here, -4 is the fourth last element, and -1 is the last element (exclusive).\n\nlist_1 = [0, 1, 2, 3, 4, 5]\nlist_2 = list_1[1:-1]\nprint(list_2) \n\n[1, 2, 3, 4]\n\n\nIf the start specifies an element lying further than the one described by the end (from the list’s beginning), the slice will be empty:\n\nlist_1 = [0, 1, 2, 3, 4, 5]\nlist_2 = list_1[-1:1]\nprint(list_2) \n\n[]",
+    "crumbs": [
+      "Lists",
+      "Reordering Lists"
+    ]
+  },
+  {
+    "objectID": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html",
+    "href": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html",
+    "title": "Looping over elements",
     "section": "",
-    "text": "When you work with lists, a very common task is checking whether a specific value is inside the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition.",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nVisit the elements of a list using a loop\nVisit the elements of paired lists\nLooping through a list involves visiting each item in the list one by one to perform an operation on it. The for loop is the ideal tool to repeat a statement while iterating over whatever is in the list. There are multiple ways of doing the same thing!",
     "crumbs": [
       "Lists",
-      "Finding Elements in a List"
+      "Looping over elements"
     ]
   },
   {
-    "objectID": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#using-the-in-operator",
-    "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#using-the-in-operator",
-    "title": "Finding Elements in a List",
-    "section": "Using the in Operator",
-    "text": "Using the in Operator\nThe in operator is the simplest way to check if an element is present in a list.\n\nExample\nLet’s say we have this delightful list\ntest = [1,2,3,4,5,6]\nIf you want to check whether the value 3 is in the list, you can write:\n\n\n\n\n\n\nSimilarly, we can also check if 9 is in test:\n\n\n\n\n\n\nSimilarly, we can also check if 11 is not in test:",
+    "objectID": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-by-element",
+    "href": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-by-element",
+    "title": "Looping over elements",
+    "section": "Loop by element",
+    "text": "Loop by element\n\n\n\n\n\n\nNoteBASIC SYNTHAX\n\n\n\n\nfor item in my_list:\n    print(item)\n\nThis visits each item in the list and prints it.\n\n\n\nExample\nThe following way traverses each letter one by one.\n\nmy_list = ['a','b','c','d','e','f']\nfor item in my_list:\n    print(item)\n\na\nb\nc\nd\ne\nf",
     "crumbs": [
       "Lists",
-      "Finding Elements in a List"
+      "Looping over elements"
     ]
   },
   {
-    "objectID": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#resources",
-    "href": "topics/11_lists/03_list_inclusion/03_list_inclusion.html#resources",
-    "title": "Finding Elements in a List",
-    "section": "Resources",
-    "text": "Resources\n\nSwapnoneel Saha’s 2024 article",
+    "objectID": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-using-range",
+    "href": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-using-range",
+    "title": "Looping over elements",
+    "section": "Loop using range()",
+    "text": "Loop using range()\nIf accessing the elements by index is important in a problem you’re solving. You can iterate over all the indices of the list and using the [] accessors. Although not the “pythonic” way, this looping strategy can be very useful to compare an element to its neighbours.\n\n\n\n\n\n\nNoteBASIC SYNTHAX\n\n\n\nfor i in range(len(my_list)):\n\n    print(i, my_list[i])\n\n\nExample\n\nmeasurements = [0.1, 0.5, 0.3, 0.5, 0.3]\n\nfor i in range(len(measurements)):\n\n    print(i, measurements[i])\n\n0 0.1\n1 0.5\n2 0.3\n3 0.5\n4 0.3",
     "crumbs": [
       "Lists",
-      "Finding Elements in a List"
+      "Looping over elements"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programming in Science",
-    "section": "",
-    "text": "Welcome to 420-SN1 Programming in Science\nIn this course, you will learn everything about the basics of programming to solve scientific problems, read data from files, clean up the data, apply mathematical formulas, and so much more.\nThis image was AI generated.\nThis website provides you with additional notes and practice exercises that can help you better understand and master the concepts seen in class."
+    "objectID": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-using-enumerate",
+    "href": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#loop-using-enumerate",
+    "title": "Looping over elements",
+    "section": "Loop using enumerate()",
+    "text": "Loop using enumerate()\nIf there is a need to keep track of the iteration number i of each element, Python offers the built-in function enumerate() to loop over both the index and the item without having to use range() and len().\n\n\n\n\n\n\nNoteBASIC SYNTHAX\n\n\n\nfor i, item in enumerate(my_list):\n    print(i, item)\n\n\nExample\n\nstudent_list = [\"Sara\", \"Lucia\", \"Devin\", \"Henri\",\"Luca\", \"Maria\"]\n\nfor i, student in enumerate(student_list):\n    print(i, student)\n\n0 Sara\n1 Lucia\n2 Devin\n3 Henri\n4 Luca\n5 Maria",
+    "crumbs": [
+      "Lists",
+      "Looping over elements"
+    ]
   },
   {
-    "objectID": "index.html#learning-objectives",
-    "href": "index.html#learning-objectives",
-    "title": "Programming in Science",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nAll credits go to Vikram Singh for the original idea for adding learning objectives to every topic.\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are core objectives covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Additional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher."
-  },
-  {
-    "objectID": "index.html#content-bubbles",
-    "href": "index.html#content-bubbles",
-    "title": "Programming in Science",
-    "section": "Content bubbles",
-    "text": "Content bubbles\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning related to code errors that can lead to incorrect answers or make your program crash. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is a warning related to a required installation or configuration."
-  },
-  {
-    "objectID": "index.html#hidden-content",
-    "href": "index.html#hidden-content",
-    "title": "Programming in Science",
-    "section": "Hidden content",
-    "text": "Hidden content\n\n\n\n\n\n\nNoteExpand to understand\n\n\n\n\n\nAdditional information that is not part of the core content. It’s collapsed for you to optionally look at."
-  },
-  {
-    "objectID": "index.html#practice-exercises",
-    "href": "index.html#practice-exercises",
-    "title": "Programming in Science",
-    "section": "Practice exercises",
-    "text": "Practice exercises\n🎯 Test Myself: Short questions found throughout each topic’s notes to help you grasp and check your understanding of the concept.\n✍️ Practice: These practice problems are found at the end of each module, they are meant to reinforce and consolidate your understanding of a topic. Do as many as you need until you feel comfortable with the concepts.\n🧩 Problem Solving: These questions are meant to connect the module with what you previously learnt and challenge you. These are excellent preparation for Quizzes and Tests.\n🚀 Challenge : Harder, optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam.\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
+    "objectID": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#looping-with-zip",
+    "href": "topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#looping-with-zip",
+    "title": "Looping over elements",
+    "section": "Looping with zip()",
+    "text": "Looping with zip()\nThe zip() function returns a single combined “sequence” returning the pair of destination and its corresponding price :\n\ndestinations = [\"Tokyo\",\"Muscat\", \"Cancun\", \"Paris\"]\nticket_prices = [2769.00, 2680.00, 478.00, 1347.00]\n\nfor price, destination in zip(ticket_prices, destinations):\n    print(f\"{destination} {price}$\")\n\nTokyo 2769.0$\nMuscat 2680.0$\nCancun 478.0$\nParis 1347.0$\n\n\n\n\n\n\n\n\nNoteSidenote\n\n\n\n\n\nSidenote: You can actually “see” what the resulting of zipping is by converting it into a list and printing it:\n\nzip_result = zip(ticket_prices, destinations)\nprint(list(zip_result))\n\n[(2769.0, 'Tokyo'), (2680.0, 'Muscat'), (478.0, 'Cancun'), (1347.0, 'Paris')]\n\n\nIt’s a list of pairs of values!\n\n\n\nYou can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:\n\ndestinations = [\"Tokyo\",\"Muscat\", \"Cancun\", \"Paris\"]\nticket_prices = [2769.00, 2680.00, 478.00, 1347.00]\ndurations = [7, 8, 3, 5]\n\nfor price, destination, duration in zip(ticket_prices, destinations, durations):\n    print(f\"{destination} {price}$ {duration} days\")\n\nTokyo 2769.0$ 7 days\nMuscat 2680.0$ 8 days\nCancun 478.0$ 3 days\nParis 1347.0$ 5 days\n\n\nExample",
+    "crumbs": [
+      "Lists",
+      "Looping over elements"
+    ]
   },
   {
     "objectID": "topics/11_lists/exercises/lists/lists.html",
@@ -1449,69 +1462,115 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming in Science",
+    "section": "",
+    "text": "Welcome to 420-SN1 Programming in Science\nIn this course, you will learn everything about the basics of programming to solve scientific problems, read data from files, clean up the data, apply mathematical formulas, and so much more.\nThis image was AI generated.\nThis website provides you with additional notes and practice exercises that can help you better understand and master the concepts seen in class."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "Programming in Science",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nAll credits go to Vikram Singh for the original idea for adding learning objectives to every topic.\n\n\n\n\n\n\nNote☆ Learning Objectives\n\n\n\nThese are core objectives covered in the course and could be part of the final evaluation.\n\n\n\n\n\n\n\n\nWarning☆ Additional Objectives\n\n\n\nThese are not core objectives of the course and will typically not be part of the final evaluation (except if teachers decide otherwise). But they are useful for labs/assignments and may or may not be covered by your teacher."
+  },
+  {
+    "objectID": "index.html#content-bubbles",
+    "href": "index.html#content-bubbles",
+    "title": "Programming in Science",
+    "section": "Content bubbles",
+    "text": "Content bubbles\n\n\n\n\n\n\nNoteHightlighted content\n\n\n\nThis is part of the core content and should be studied.\n\n\n\n\n\n\n\n\nImportantCommon mistakes/ code crashes\n\n\n\nThis is a warning related to code errors that can lead to incorrect answers or make your program crash. They are meant to teach you about common mistakes.\n\n\n\n\n\n\n\n\nWarningWarning related to a Python configuration\n\n\n\nThis is a warning related to a required installation or configuration."
+  },
+  {
+    "objectID": "index.html#hidden-content",
+    "href": "index.html#hidden-content",
+    "title": "Programming in Science",
+    "section": "Hidden content",
+    "text": "Hidden content\n\n\n\n\n\n\nNoteExpand to understand\n\n\n\n\n\nAdditional information that is not part of the core content. It’s collapsed for you to optionally look at."
+  },
+  {
+    "objectID": "index.html#practice-exercises",
+    "href": "index.html#practice-exercises",
+    "title": "Programming in Science",
+    "section": "Practice exercises",
+    "text": "Practice exercises\n🎯 Test Myself: Short questions found throughout each topic’s notes to help you grasp and check your understanding of the concept.\n✍️ Practice: These practice problems are found at the end of each module, they are meant to reinforce and consolidate your understanding of a topic. Do as many as you need until you feel comfortable with the concepts.\n🧩 Problem Solving: These questions are meant to connect the module with what you previously learnt and challenge you. These are excellent preparation for Quizzes and Tests.\n🚀 Challenge : Harder, optional problems to challenge yourself further. Some of these could be useful to prepare for the Final Exam.\n\n\n\n\n\n\nTipSolution for an exercise\n\n\n\n\n\nThis is a solution for an exercise and is collapsed for you to optionally look at."
+  },
+  {
+    "objectID": "topics/11_lists/04_list_inclusion/04_list_inclusion.html",
+    "href": "topics/11_lists/04_list_inclusion/04_list_inclusion.html",
+    "title": "Finding Elements",
+    "section": "",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nVerify if an element is inside a list.\nFind the index of an element inside a list.\n\n\n\nWhen you work with lists, a very common task is checking whether a specific value is inside the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition.\n\nUsing the in Operator\nThe in operator is the simplest way to check if an element is present in a list.\n\nExample\nLet’s say we have this delightful list\n\ntest = [1,2,3,4,5,6]\n\nIf you want to check whether the value 3 is in the list, you can write:\n\ntest = [1,2,3,4,5,6]\nif 3 in test:\n    print (\"Found value 3\")\nelse:\n    print(\"3 not found\")\n\nFound value 3\n\n\nSimilarly, we can also check if 9 is in test:\n\ntest = [1,2,3,4,5,6]\nif 9 in test: # wow\n    print (\"Found value 9\")\nelse:\n    print(\"9 not found\")\n\n9 not found\n\n\nSimilarly, we can also check if 11 is not in test:\n\ntest = [1,2,3,4,5,6]\nif 11 not in test:\n    print (\"11 isn't in the list\")\nelse:\n    print(\"11 is in the list\")\n\n11 isn't in the list\n\n\n\n\n\nFinding the index of an element\nIf finding the specific position of an element in the list, you may use the index() method as such:\n\ntest = [1,2,3,4,5,6]\n\nidx_of_3 = test.index(3)\n\nprint(f\"Here's the index of 3: \", idx_of_3)\n\nHere's the index of 3:  2\n\n\n\n\nResources\n\nSwapnoneel Saha’s 2024 article",
+    "crumbs": [
+      "Lists",
+      "Finding Elements"
+    ]
+  },
+  {
+    "objectID": "topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html",
+    "href": "topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html",
+    "title": "Accessing elements",
+    "section": "",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nAccess an element of a list using its position (index).\nUse negative indexing to access elements from the end of a list.",
+    "crumbs": [
+      "Lists",
+      "Accessing elements"
+    ]
+  },
+  {
+    "objectID": "topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html#negative-indices-are-legal",
+    "href": "topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html#negative-indices-are-legal",
+    "title": "Accessing elements",
+    "section": "Negative indices are legal",
+    "text": "Negative indices are legal\nIt may look strange, but negative indices are legal, and can be very useful.\nAn element with an index equal to -1 is the last one in the list.\nExample:\n\nnumbers = [10, 5, 7, 2, 1]\nprint(numbers[-1]) # the output is: 1\nprint(numbers[-2]) # the output is: 2\n\n1\n2\n\n\nSo, the last accessible element in our list is numbers[-4] (the first one) ‒ don’t try to go any further!",
+    "crumbs": [
+      "Lists",
+      "Accessing elements"
+    ]
+  },
+  {
     "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html",
     "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html",
-    "title": "Why do we need lists?",
+    "title": "Intro on Lists",
     "section": "",
-    "text": "When you need to read, store, process, and print large amounts of numbers, creating a separate variable for each one is impractical. For instance, reading five numbers individually would be cumbersome and time-consuming.\nInstead, you can use a list to handle multiple values within a single variable. For example:\nThis creates a list named numbers containing five values. List is a special variable, which can hold more than one value at a time.\nThe elements inside a list may have different types. Some of them may be integers, others floats, and yet others may be lists.\nIn Python, list elements are indexed starting from zero, meaning the first element has an index of 0 and the last element’s index is the total number of elements minus one.\nUsing lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.",
+    "text": "Note☆ Learning Objectives\n\n\n\n\nCreate lists with multiple values.\nCreate an empty list.\nUse the built-in functions len(), sum(), min(), max() to find the length, total value and extrema of a list.\nUse the append() method to add an element at the end of an existing list.",
     "crumbs": [
       "Lists",
-      "Why do we need lists?"
+      "Intro on Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#indexing-lists",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#indexing-lists",
-    "title": "Why do we need lists?",
-    "section": "Indexing lists",
-    "text": "Indexing lists\nHow do you change the value of a chosen element in the list?\nLet’s assign a new value of 111 to the first element in the list. We do it this way:\n\n\n\n\n\n\nAnd now we want the value of the fifth element to be copied to the second element:\n\n\n\n\n\n\nThe value inside the brackets which selects one element of the list is called an index, while the operation of selecting an element from the list is known as indexing.",
+    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#heterogenous-lists",
+    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#heterogenous-lists",
+    "title": "Intro on Lists",
+    "section": "Heterogenous lists",
+    "text": "Heterogenous lists\nThe elements inside a list may have different types. Some of them may be integers, others floats, and yet others may be lists.\nExample\n\nmagic_bag = [True, 1, 5, \"orange\", 55.89]\n\nprint(f\"Here's a bag of stuff: {magic_bag}\")\n\nHere's a bag of stuff: [True, 1, 5, 'orange', 55.89]\n\n\n\n\n\n\n\n\nImportantAvoid heterogenous lists\n\n\n\nAltough possible, using a heterogenouse list (mixing elements of different data types) is not recommended. As you’ll discover later, lists can be used to calculate statistics or rearranged in specific order. These functionalities will fail if the values aren’t of the same type!",
     "crumbs": [
       "Lists",
-      "Why do we need lists?"
+      "Intro on Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#accessing-list-content",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#accessing-list-content",
-    "title": "Why do we need lists?",
-    "section": "Accessing list content",
-    "text": "Accessing list content\nEach of the list’s elements may be accessed separately. For example, it can be printed:\nprint(numbers[0]) # Accessing the list's first element.\nTo print the whole list\nprint(numbers) # Printing the whole list.",
+    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#empty-list",
+    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#empty-list",
+    "title": "Intro on Lists",
+    "section": "Empty List",
+    "text": "Empty List\nYou may also create a list without any values. This can be useful if the values are added later during the program execution. You can add element using append() as described later in this lesson.\n\nmy_list = []",
     "crumbs": [
       "Lists",
-      "Why do we need lists?"
+      "Intro on Lists"
     ]
   },
   {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#negative-indices-are-legal",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#negative-indices-are-legal",
-    "title": "Why do we need lists?",
-    "section": "Negative indices are legal",
-    "text": "Negative indices are legal\nIt may look strange, but negative indices are legal, and can be very useful.\nAn element with an index equal to -1 is the last one in the list.\nExample:\n\n\n\n\n\n\nSo, the last accessible element in our list is numbers[-4] (the first one) ‒ don’t try to go any further!",
+    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#other-list-methods",
+    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#other-list-methods",
+    "title": "Intro on Lists",
+    "section": "Other list methods",
+    "text": "Other list methods\n\ninsert()\nThe insert() method is also for adding elements but is a bit smarter ‒ it can add a new element at any place in the list, not only at the end.\n\n\n\n\n\n\nNoteBASIC SYNTHAX\n\n\n\nmy_list.insert(location, value)\nTo insert an element into a list, the insert() method takes two arguments:\n\nThe position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.\nThe new element to be inserted.\n\n\n\nExample:\n\nnumbers = [10, 7, 5, 2, 1]\nprint(len(numbers))   \nprint(numbers)        \n###\nprint(\"Append\")\nnumbers.append(4)\nprint(len(numbers))  \nprint(numbers)       \n###\nprint(\"Insert\")\nnumbers.insert(0, 20)\nprint(len(numbers))    \nprint(numbers)        \n\n5\n[10, 7, 5, 2, 1]\nAppend\n6\n[10, 7, 5, 2, 1, 4]\nInsert\n7\n[20, 10, 7, 5, 2, 1, 4]\n\n\nThe append() method in Python adds an element to the end of a list, while the insert() method inserts an element at a specified position, shifting subsequent elements to the right. The len() function returns the number of elements in the list.\nPay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.\n\n\npop()\nAn element may be removed from the list at a specific position using the pop() method:\n\n\n\n\n\n\nNoteBASIC SYNTHAX\n\n\n\nmy_list.pop(index)\n\nThe pop() method removes the element at the specified position (given by index) and returns its value.\nIf no index is provided, pop() removes and returns the last element in the list.\n\n\n\nHow It Works:\n\nThe list’s length decreases by one after the operation.\nAttempting to pop() an index that doesn’t exist raises an IndexError.\n\nExample:\n\nmy_list = [10, 20, 30, 40]\nremoved_value = my_list.pop(2)  # Removes index 2\nprint(my_list)  \nprint(removed_value) \n\n[10, 20, 40]\n30",
     "crumbs": [
       "Lists",
-      "Why do we need lists?"
-    ]
-  },
-  {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#the-length-of-a-list",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#the-length-of-a-list",
-    "title": "Why do we need lists?",
-    "section": "The Length of a list",
-    "text": "The Length of a list\nThe length of a list can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.\nTo check the current length of a list, you can use the len() function, which takes the list’s name as an argument and returns the number of elements currently in the list.\nExample:",
-    "crumbs": [
-      "Lists",
-      "Why do we need lists?"
-    ]
-  },
-  {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#adding-elements-to-a-list-append-and-insert",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#adding-elements-to-a-list-append-and-insert",
-    "title": "Why do we need lists?",
-    "section": "Adding elements to a list: append() and insert()",
-    "text": "Adding elements to a list: append() and insert()\n\nappend()\nA new element may be added to the end of the existing list:\nmy_list.append(value)\n\nSuch an operation is performed by a method named append(). It takes its argument’s value and puts it at the end of the list which owns the method.\nThe list’s length then increases by one.\n\n\n\ninsert()\nThe insert() method is a bit smarter ‒ it can add a new element at any place in the list, not only at the end.\nmy_list.insert(location, value)\nTo insert an element into a list, the insert() method takes two arguments:\n\nThe position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.\nThe new element to be inserted.\n\nExample:\n\n\n\n\n\n\nThe append() method in Python adds an element to the end of a list, while the insert() method inserts an element at a specified position, shifting subsequent elements to the right. The len() function returns the number of elements in the list.\nPay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.\n\n\npop()\nAn element may be removed from the list at a specific position using the pop() method:\nmy_list.pop(index)\n\nThe pop() method removes the element at the specified position (given by index) and returns its value.\nIf no index is provided, pop() removes and returns the last element in the list.\n\nHow It Works:\n\nThe list’s length decreases by one after the operation.\nAttempting to pop() an index that doesn’t exist raises an IndexError.\n\nExample:",
-    "crumbs": [
-      "Lists",
-      "Why do we need lists?"
+      "Intro on Lists"
     ]
   },
   {
@@ -2419,22 +2478,14 @@
     "href": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html",
     "title": "Python Turtle Graphics",
     "section": "",
-    "text": "Warning☆ Additional Objectives\n\n\n\n\nUse repetition to create complex shapes and patterns efficiently.\nUse functions to re-draw shapes of different sizes and colours.\nDevelop interactive programs by incorporating user input and multiple objects.\nHave fun!\nThe turtle module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!\nIn this tutorial, you’ll learn the basics of using turtle in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.\nSee the official documentation for more information.",
-    "crumbs": [
-      "Turtle graphics",
-      "Python Turtle Graphics"
-    ]
+    "text": "Warning☆ Additional Objectives\n\n\n\n\nUse repetition to create complex shapes and patterns efficiently.\nUse functions to re-draw shapes of different sizes and colours.\nDevelop interactive programs by incorporating user input and multiple objects.\nHave fun!\nThe turtle module in Python is an excellent tool for introducing programming through graphics. It allows you to control a “turtle” that moves around the screen, drawing as it moves. With simple commands, you can create shapes, patterns, and even games!\nIn this tutorial, you’ll learn the basics of using turtle in Python, how to control the turtle’s movement, and how to create shapes and customize your drawings.\nSee the official documentation for more information."
   },
   {
     "objectID": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html#using-turtle-in-a-python-program",
     "href": "topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html#using-turtle-in-a-python-program",
     "title": "Python Turtle Graphics",
     "section": "Using Turtle in a Python Program",
-    "text": "Using Turtle in a Python Program\n\nImport the Turtle Module\nFirst, ensure that you have Python installed. The turtle module comes with Python, so you don’t need to install anything extra.\nStart by importing the turtle module. This module provides all the functions you need to draw shapes on the screen.\nimport turtle\nThis line imports the turtle module so you can use its functions in your code.\n\n\n\nTo draw or not to draw?\nTo draw, tell the turtle to put the pen down. If you want to move the turtle without drawing, tell the turtle to put its tail up.\n\ndown(): Pull the pen down – drawing when moving.\nup(): Pull the pen up – no drawing when moving.\n\nExample:\n Note that the “arrow” in the image is actually just the default image of the turtle.\n# Draw a dashed line\nimport turtle\nturtle.forward(10)\nturtle.up()\nturtle.forward(10)\nturtle.down()\nturtle.forward(10)\n# ... repeat as necessary\nturtle.mainloop()\n\n\n\nMove the Turtle\nYou can move the turtle forward and backward, go to a specific location, and turn it to the left or right. Here are the basic movement commands:\nThese commands let you control how the turtle moves around the screen.\n\nMove Forward and Backward\n\nforward(distance): Moves the turtle forward by the specified distance.\nbackward(distance): Moves the turtle backward by the specified distance.\n\nExample:\nturtle.forward(100)  # Moves turtle forward by 100 units\nturtle.backward(50)  # Moves turtle backward by 50 units\n\n\nTurn the Turtle\nYou can turn the turtle, relative to the direction it is currently facing, using:\n\nright(angle): Turns the turtle clockwise by the specified angle (in degrees!).\nleft(angle): Turns the turtle counterclockwise by the specified angle (in degrees!).\n\nExample:\nturtle.right(90)  # Turns the turtle 90 degrees to the right\nturtle.left(45)   # Turns the turtle 45 degrees to the left\nYou can also turn the turtle without regarding the direction it is currently facing, using:\n\nsetheading(angle): Turn the turtle to a specific direction (in degrees!)\n\nExample:\nturtle.setheading(0)  # Turns the turtle to face east\nturtle.setheading(90)  # Turns the turtle to face north\nturtle.setheading(180)  # Turns the turtle to face west\nturtle.setheading(270)  # Turns the turtle to face south\n\n\nGo to a specific x,y coordinate\n\ngoto(x,y): Go to the specific location on the screen.\n\nExample:\n\nimport turtle\nturtle.up()\nturtle.goto(-50,50)\nturtle.down()\nturtle.goto(50,-50)\nturtle.up()\nturtle.goto(50,50)\nturtle.down()\nturtle.goto(-50,-50)\nturtle.mainloop()\n\nteleport(x,y): Go quickly to the specific location on the screen, without drawing.\n\nimport turtle\nturtle.teleport(x,y)\n\n\n\nTurtle Speed\nYou can control how fast the turtle moves using the speed() function. This step is optional, but it helps you see how the turtle is drawing.\nturtle.speed(1)\n\n“fastest”: 0\n“fast”: 10\n“normal”: 6\n“slow”: 3\n“slowest”: 1\n\n\n\n\nCustomizing the Turtle\nYou can make your turtle more fun by changing its shape and color.\n\nChange Turtle Shape\nThe turtle’s appearance can be changed using the shape() function. Available shapes include \"turtle\", \"arrow\", \"circle\", and more.\nturtle.shape(\"turtle\")  # Sets the turtle to look like a turtle\n\n\nAdding new turtle shapes\nYou can use a custom image for the turtle, instead of the available shapes.\nYou can do this using the screen.addshape() function. For example, if treasure.gif is an image located in the same directory as your python file, then:\nscreen = turtle.Screen() # You only need to create the screen once\nscreen.addshape(\"treasure.gif\")  # adds treasure.gif to the available shapes\nturtle.shape(\"treasure.gif\") # sets the turtle to look like the image stored in treasure.gif\n\nNote: the size of the .gif matters, it cannot be resized in python. Recommended: less than 64x64 pixels.\n\n\n\nChange Turtle Color\nturtle.color(\"orange\", \"green\")\n\n\nChange Turtle Size\nturtle.resizemode('user')\nturtle.shapesize(2,2,3)\n\n\n\nColours and Backgrounds\n\nChange Pen Color and Width\nThe turtle draws lines as it moves, and you can customize the line’s color and thickness.\nturtle.pencolor(\"red\")    # Sets the pen color to red\nturtle.pensize(3)         # Sets the pen width to 3 pixels\n\n\nFill Shapes with Color\nTo fill a shape with color, use begin_fill() before drawing the shape and end_fill() after.\nturtle.fillcolor(\"yellow\")  # Sets the fill color to yellow\nturtle.begin_fill()\nfor _ in range(4):\n    turtle.forward(100)\n    turtle.right(90)\nturtle.end_fill()\nThis draws a yellow-filled square.\n\n\nScreen colours\nTurtle graphics are drawn on a screen (or window), which is set up using the Screen() function:\nscreen = turtle.Screen()\nThis command creates the canvas where your turtle will draw. You can customize the background color of the screen with:\nscreen.bgcolor(\"lightblue\")  # Sets background color to light blue\nscreen.bgpic(\"some-image.png\") # Sets the background to be an image\n\nNOTE: any images you use in screen.bgpic() MUST be stored in the same directory as the python code you are running.\n\n\n\nimport turtle\nturtle.fillcolor(\"blue\")\nturtle.begin_fill()\nradius = 100\nfor _ in range(50):\n    turtle.forward(radius)\n    turtle.right(170)\n    radius = radius + 10\nturtle.end_fill()\nturtle.mainloop()\n\n\n\nWorking with User Input\nTo get information from the user:\nnumber_input = turtle.numinput(\"Title\", \"Prompt\") # Forces the input to be a number\ntext_input = turtle.text_input(\"Title\", \"Prompt\") # Will accept any characters\nNote that the turtle.numinput() and turtle.textinput() functions are similar to the Python input() function, in that they both return a str value . See the course notes on input with input() for more information.\nTo print output onto the turtle window:\nfont = ('Arial', 20, 'bold')\ntext_turtle.write(\"Message\", font=font)\n\n\nUsing Multiple Turtles\nBy default, there is a single turtle we can use to draw shapes, write text, etc.\nThis is troublesome if we want to write messages and draw shapes in different spots without making the same turtle repeat steps.\nWe can create multiple turtles by using variables, and the turtle.Turtle() function:\ntext_turtle = turtle.Turtle()\ndrawings_turtle = turtle.Turtle()\n\ntext_turtle.teleport(100, 100) # this motion does not affect drawings_turtle\ndrawings_turtle.teleport(-100, -100) # this motion does not affect text_turtle\nUsing turtle.Turtle() creates new turtles that are copies of the default turtle, i.e. in the default location (0, 0) and with all the default settings for pensize, color, shape, etc.\n\nCloning existing turtles\nAnother way to create new turtles is to clone an existing turtle – this makes a new turtle that has the same position and properties as an existing turtle. For example:\nsome_turtle.teleport(100, 100)\ncloned_turtle = new_turtle.clone()\ncloned_turtle.pos() # returns (100, 100)\n\n\n\nKeeping the Window Open\nBy default, a turtle session will end without keeping the window open, which makes appreciating your beautiful Turtle drawings difficult.\nTo pause the turtle session at the end of the turtle program, use one of the following three commands:\nturtle.mainloop() # Last statement in Turtle program, keeps the window open until closed by user.\nturtle.done() # exact same behavior as turtle.mainloop()\nturtle.exitonclick() # exact same behavior as above, except lets you exit by clicking on the screen directly.\nAfter any of these three commands is run, the turtle program pauses with the window open. NOTE: no code after these lines will run, make sure they are the last line in your turtle program.",
-    "crumbs": [
-      "Turtle graphics",
-      "Python Turtle Graphics"
-    ]
+    "text": "Using Turtle in a Python Program\n\nImport the Turtle Module\nFirst, ensure that you have Python installed. The turtle module comes with Python, so you don’t need to install anything extra.\nStart by importing the turtle module. This module provides all the functions you need to draw shapes on the screen.\nimport turtle\nThis line imports the turtle module so you can use its functions in your code.\n\n\n\nTo draw or not to draw?\nTo draw, tell the turtle to put the pen down. If you want to move the turtle without drawing, tell the turtle to put its tail up.\n\ndown(): Pull the pen down – drawing when moving.\nup(): Pull the pen up – no drawing when moving.\n\nExample:\n Note that the “arrow” in the image is actually just the default image of the turtle.\n# Draw a dashed line\nimport turtle\nturtle.forward(10)\nturtle.up()\nturtle.forward(10)\nturtle.down()\nturtle.forward(10)\n# ... repeat as necessary\nturtle.mainloop()\n\n\n\nMove the Turtle\nYou can move the turtle forward and backward, go to a specific location, and turn it to the left or right. Here are the basic movement commands:\nThese commands let you control how the turtle moves around the screen.\n\nMove Forward and Backward\n\nforward(distance): Moves the turtle forward by the specified distance.\nbackward(distance): Moves the turtle backward by the specified distance.\n\nExample:\nturtle.forward(100)  # Moves turtle forward by 100 units\nturtle.backward(50)  # Moves turtle backward by 50 units\n\n\nTurn the Turtle\nYou can turn the turtle, relative to the direction it is currently facing, using:\n\nright(angle): Turns the turtle clockwise by the specified angle (in degrees!).\nleft(angle): Turns the turtle counterclockwise by the specified angle (in degrees!).\n\nExample:\nturtle.right(90)  # Turns the turtle 90 degrees to the right\nturtle.left(45)   # Turns the turtle 45 degrees to the left\nYou can also turn the turtle without regarding the direction it is currently facing, using:\n\nsetheading(angle): Turn the turtle to a specific direction (in degrees!)\n\nExample:\nturtle.setheading(0)  # Turns the turtle to face east\nturtle.setheading(90)  # Turns the turtle to face north\nturtle.setheading(180)  # Turns the turtle to face west\nturtle.setheading(270)  # Turns the turtle to face south\n\n\nGo to a specific x,y coordinate\n\ngoto(x,y): Go to the specific location on the screen.\n\nExample:\n\nimport turtle\nturtle.up()\nturtle.goto(-50,50)\nturtle.down()\nturtle.goto(50,-50)\nturtle.up()\nturtle.goto(50,50)\nturtle.down()\nturtle.goto(-50,-50)\nturtle.mainloop()\n\nteleport(x,y): Go quickly to the specific location on the screen, without drawing.\n\nimport turtle\nturtle.teleport(x,y)\n\n\n\nTurtle Speed\nYou can control how fast the turtle moves using the speed() function. This step is optional, but it helps you see how the turtle is drawing.\nturtle.speed(1)\n\n“fastest”: 0\n“fast”: 10\n“normal”: 6\n“slow”: 3\n“slowest”: 1\n\n\n\n\nCustomizing the Turtle\nYou can make your turtle more fun by changing its shape and color.\n\nChange Turtle Shape\nThe turtle’s appearance can be changed using the shape() function. Available shapes include \"turtle\", \"arrow\", \"circle\", and more.\nturtle.shape(\"turtle\")  # Sets the turtle to look like a turtle\n\n\nAdding new turtle shapes\nYou can use a custom image for the turtle, instead of the available shapes.\nYou can do this using the screen.addshape() function. For example, if treasure.gif is an image located in the same directory as your python file, then:\nscreen = turtle.Screen() # You only need to create the screen once\nscreen.addshape(\"treasure.gif\")  # adds treasure.gif to the available shapes\nturtle.shape(\"treasure.gif\") # sets the turtle to look like the image stored in treasure.gif\n\nNote: the size of the .gif matters, it cannot be resized in python. Recommended: less than 64x64 pixels.\n\n\n\nChange Turtle Color\nturtle.color(\"orange\", \"green\")\n\n\nChange Turtle Size\nturtle.resizemode('user')\nturtle.shapesize(2,2,3)\n\n\n\nColours and Backgrounds\n\nChange Pen Color and Width\nThe turtle draws lines as it moves, and you can customize the line’s color and thickness.\nturtle.pencolor(\"red\")    # Sets the pen color to red\nturtle.pensize(3)         # Sets the pen width to 3 pixels\n\n\nFill Shapes with Color\nTo fill a shape with color, use begin_fill() before drawing the shape and end_fill() after.\nturtle.fillcolor(\"yellow\")  # Sets the fill color to yellow\nturtle.begin_fill()\nfor _ in range(4):\n    turtle.forward(100)\n    turtle.right(90)\nturtle.end_fill()\nThis draws a yellow-filled square.\n\n\nScreen colours\nTurtle graphics are drawn on a screen (or window), which is set up using the Screen() function:\nscreen = turtle.Screen()\nThis command creates the canvas where your turtle will draw. You can customize the background color of the screen with:\nscreen.bgcolor(\"lightblue\")  # Sets background color to light blue\nscreen.bgpic(\"some-image.png\") # Sets the background to be an image\n\nNOTE: any images you use in screen.bgpic() MUST be stored in the same directory as the python code you are running.\n\n\n\nimport turtle\nturtle.fillcolor(\"blue\")\nturtle.begin_fill()\nradius = 100\nfor _ in range(50):\n    turtle.forward(radius)\n    turtle.right(170)\n    radius = radius + 10\nturtle.end_fill()\nturtle.mainloop()\n\n\n\nWorking with User Input\nTo get information from the user:\nnumber_input = turtle.numinput(\"Title\", \"Prompt\") # Forces the input to be a number\ntext_input = turtle.text_input(\"Title\", \"Prompt\") # Will accept any characters\nNote that the turtle.numinput() and turtle.textinput() functions are similar to the Python input() function, in that they both return a str value . See the course notes on input with input() for more information.\nTo print output onto the turtle window:\nfont = ('Arial', 20, 'bold')\ntext_turtle.write(\"Message\", font=font)\n\n\nUsing Multiple Turtles\nBy default, there is a single turtle we can use to draw shapes, write text, etc.\nThis is troublesome if we want to write messages and draw shapes in different spots without making the same turtle repeat steps.\nWe can create multiple turtles by using variables, and the turtle.Turtle() function:\ntext_turtle = turtle.Turtle()\ndrawings_turtle = turtle.Turtle()\n\ntext_turtle.teleport(100, 100) # this motion does not affect drawings_turtle\ndrawings_turtle.teleport(-100, -100) # this motion does not affect text_turtle\nUsing turtle.Turtle() creates new turtles that are copies of the default turtle, i.e. in the default location (0, 0) and with all the default settings for pensize, color, shape, etc.\n\nCloning existing turtles\nAnother way to create new turtles is to clone an existing turtle – this makes a new turtle that has the same position and properties as an existing turtle. For example:\nsome_turtle.teleport(100, 100)\ncloned_turtle = new_turtle.clone()\ncloned_turtle.pos() # returns (100, 100)\n\n\n\nKeeping the Window Open\nBy default, a turtle session will end without keeping the window open, which makes appreciating your beautiful Turtle drawings difficult.\nTo pause the turtle session at the end of the turtle program, use one of the following three commands:\nturtle.mainloop() # Last statement in Turtle program, keeps the window open until closed by user.\nturtle.done() # exact same behavior as turtle.mainloop()\nturtle.exitonclick() # exact same behavior as above, except lets you exit by clicking on the screen directly.\nAfter any of these three commands is run, the turtle program pauses with the window open. NOTE: no code after these lines will run, make sure they are the last line in your turtle program."
   },
   {
     "objectID": "topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html",
