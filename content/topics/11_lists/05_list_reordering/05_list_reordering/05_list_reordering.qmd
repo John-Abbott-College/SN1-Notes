@@ -1,0 +1,118 @@
+---
+title: "Reordering Lists"
+editor:
+  render-on-save: true
+---
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+- **Sort** a list in ascending order using `sort()`
+- **Sort** a list in descending order using `reverse()`
+- **Extract** a sublist from a list using slicing
+:::
+
+
+# sort()
+The sort() method in Python is used to arrange the elements of a list in a specific order, typically in ascending order. When you call sort() on a list, it modifies the original list to be sorted.
+
+**Example:**
+
+numbers = [5, 3, 1, 2, 4]
+numbers.sort()
+
+print(numbers)  # Output: [1, 2, 3, 4, 5]
+In this example, the numbers list is sorted in ascending order. After calling sort(), the elements are arranged from the smallest to the largest.
+
+# reverse()
+There is also a list method called The reverse() which is used to reverse the order of elements in a list. Unlike the sort() method, which arranges the list elements in a specified order, reverse() simply reverses the current order of the elements in place.
+
+**Example:**
+
+```{python}
+numbers = [5, 3, 1, 2, 4]
+numbers.reverse()
+
+print(numbers)  # outputs: [4, 2, 1, 3, 5]
+```
+
+🎯 **Test Myself**: What are the outputs of the following snippets?
+
+```python
+a = 3
+b = 1
+c = 2
+ 
+lst = [a, c, b]
+lst.sort()
+ 
+print(lst)
+a = "A"
+b = "B"
+c = "C"
+d = " "
+ 
+lst = [a, b, c, d]
+lst.reverse()
+ 
+print(lst)
+```
+
+# Slice a list
+A slice in Python is a way to extract a portion of a list (or any sequence type) to create a new list. The syntax for slicing is list[start:stop], where:
+
+start is the index at which the slice starts (inclusive).
+stop is the index at which the slice ends (exclusive).
+Here are more details and examples to illustrate:
+
+## Basic Slicing:
+```{python}
+list_1 = [0, 1, 2, 3, 4, 5]
+list_2 = list_1[1:4]
+print(list_2)  # Outputs: [1, 2, 3]
+```
+This creates a new list, list_2, containing elements from index 1 to 3 of list_1.
+
+## Omitting start and stop:
+```{python}
+list_1 = [0, 1, 2, 3, 4, 5]
+list_2 = list_1[:3]
+print(list_2)  # Outputs: [0, 1, 2]
+```
+```{python}
+list_3 = list_1[3:]
+print(list_3)  # Outputs: [3, 4, 5]
+```
+
+If start is omitted, the slice starts from the beginning of the list. If stop is omitted, the slice goes up to the end of the list.
+
+## Copying a List:
+A slice in Python allows you to create a new copy of a list or parts of it. It copies the list's contents, not its name.
+
+```{python}
+list_1 = [1, 2, 3, 4, 5]
+list_2 = list_1[:]
+list_1[0] = 2
+print(list_2)  
+print(list_1)  
+```
+
+## Slices – negative indices
+```{python}
+list_1 = [0, 1, 2, 3, 4, 5]
+list_2 = list_1[-4:-1]
+print(list_2)  
+```
+
+Negative indices count from the end of the list. Here, -4 is the fourth last element, and -1 is the last element (exclusive).
+
+```{python}
+list_1 = [0, 1, 2, 3, 4, 5]
+list_2 = list_1[1:-1]
+print(list_2) 
+```
+
+If the start specifies an element lying further than the one described by the end (from the list's beginning), the slice will be empty:
+
+```{python}
+list_1 = [0, 1, 2, 3, 4, 5]
+list_2 = list_1[-1:1]
+print(list_2) 
+```

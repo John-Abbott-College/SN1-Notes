@@ -1,12 +1,16 @@
 ---
-title: "Finding Elements in a List"
+title: "Finding Elements"
 editor:
   render-on-save: true
 ---
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Verify** if an element is inside a list.
+- **Find** the index of an element inside a list.
+:::
 
 When you work with lists, a very common task is checking whether a specific value is _inside_ the list. You might want to locate a single value, confirm that something exists, or find items that match a certain condition.
 
-## Using the in Operator
+# Using the `in` Operator
 
 The `in` operator is the simplest way to check if an element is present in a list.
 
@@ -14,13 +18,13 @@ The `in` operator is the simplest way to check if an element is present in a lis
 
 Let's say we have this delightful list
 
-```python
+```{python}
 test = [1,2,3,4,5,6]
 ```
 
 If you want to check whether the value 3 is `in` the list, you can write:
 
-```pyodide
+```{python}
 test = [1,2,3,4,5,6]
 if 3 in test:
     print ("Found value 3")
@@ -30,7 +34,7 @@ else:
 
 Similarly, we can also check if 9 is `in test`:
 
-```pyodide
+```{python}
 test = [1,2,3,4,5,6]
 if 9 in test: # wow
     print ("Found value 9")
@@ -40,7 +44,7 @@ else:
 
 Similarly, we can also check if 11 is **not** `in test`:
 
-```pyodide
+```{python}
 test = [1,2,3,4,5,6]
 if 11 not in test:
     print ("11 isn't in the list")
@@ -48,6 +52,22 @@ else:
     print("11 is in the list")
 ```
 
-## Resources
+
+
+# Finding the index of an element
+
+If finding the specific position of an element in the list, you may use the `index()` method as such:
+
+```{python}
+test = [1,2,3,4,5,6]
+
+idx_of_3 = test.index(3)
+
+print(f"Here's the index of 3: ", idx_of_3)
+
+```
+
+# Resources
 
 - [Swapnoneel Saha's 2024 article](https://keploy.io/blog/community/guide-finding-elements-in-a-list-using-python#example)
+

@@ -1,8 +1,24 @@
 ---
-title: "Why do we need lists?"
+title: "Intro on Lists"
 editor:
   render-on-save: true
 ---
+
+
+::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+- **Create** lists with multiple values.
+- **Create** an empty list.
+- **Use** the built-in functions `len()`, `sum()`, `min()`, `max()` to find the length, total value and extrema of a list.
+- **Use** the `append()` method to add an element at the end of an existing list.
+:::
+
+
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+- **Use** the `insert()` method to add an element at a specific position.
+- **Use** the `pop()` method to remove an element at a given position. 
+:::
+
+# Why use lists?
 
 When you need to read, store, process, and print large amounts of numbers, creating a separate variable for each one is impractical. For instance, reading five numbers individually would be cumbersome and time-consuming.
 
@@ -14,109 +30,137 @@ var4 = 2
 var5 = 1
 ```
 
-Instead, you can use a list to handle multiple values within a single variable. For example:
+# Creating a list
 
+A list is a table of values, allowing a program to store **multiple values** inside a single variable.
+
+:::{.callout-note icon="false" title="BASIC SYNTHAX"}
 ```python
+list_name = [value1, value2, value3]
+```
+- Create a list using `[ ]`
+- List out the values seperated by commas `,`
+- The various values may be of different data types (altough not recommended)
+- Assign it to a variable.
+- This creates a list with `list_name` containing all the listed values. 
+
+:::
+
+**Example**
+
+```{python}
 numbers = [10, 5, 7, 2, 1]
 ```
 
 This creates a list named `numbers` containing five values. List is a special variable, which can hold more than one value at a time.
+Using lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.
+
+## Heterogenous lists
 
 The elements inside a list **may have different types**. Some of them may be integers, others floats, and yet others may be lists.
 
-In Python, list elements are indexed starting from zero, meaning the first element has an index of 0 and the last element's index is the total number of elements minus one.
+**Example**
 
-Using lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.
+```{python}
 
-## Indexing lists
+magic_bag = [True, 1, 5, "orange", 55.89]
 
-How do you change the value of a chosen element in the list?
-
-Let's **assign a new value of 111 to the first element** in the list. We do it this way:
-
-```pyodide
-numbers = [10, 5, 7, 2, 1]
-print("Original list contents:", numbers)  # Printing original list contents.
-
-numbers[0] = 111
-print("New list contents: ", numbers)  # Current list contents.
+print(f"Here's a bag of stuff: {magic_bag}")
 ```
 
-And now we want **the value of the fifth element to be copied to the second element**:
+:::{.callout-important title="Avoid heterogenous lists"}
+Altough possible, using a heterogenouse list (mixing elements of different data types) is not recommended. As you'll discover later, lists can be used to calculate statistics or rearranged in specific order. These functionalities will fail if the values aren't of the same type!
+:::
 
-```pyodide
-numbers = [10, 5, 7, 2, 1]
-print("Original list contents:", numbers)  # Original list contents:[10, 5, 7, 2, 1]
 
-numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
-print("New list contents:", numbers)  #New list contents: [10, 1, 7, 2, 1]
+
+## Empty List
+
+You may also create a list without any values. This can be useful if the values are added later during the program execution. You can add element using `append()` as described later in this lesson.
+
+```{python}
+my_list = []
 
 ```
 
-The value inside the brackets which selects one element of the list is called an **index**, while the operation of selecting an element from the list is known as **indexing**.
 
-## Accessing list content
-
-Each of the list's elements may be accessed separately. For example, it can be printed:
-
-```python
-print(numbers[0]) # Accessing the list's first element.
-```
-
-To print the whole list
-
-```python
-print(numbers) # Printing the whole list.
-```
-
-## Negative indices are legal
-
-It may look strange, but negative indices are legal, and can be very useful.
-
-An element with an index equal to -1 is **the last one in the list**.
-
-**Example:**
-
-```pyodide
-numbers = [10, 5, 7, 2, 1]
-print(numbers[-1]) # the output is: 1
-print(numbers[-2]) # the output is: 2
-
-```
-
-So, the last accessible element in our list is numbers[-4] (the first one) ‒ don't try to go any further!
-
-## The Length of a list
-
-The length of a list can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.
+# The length of list
+The length of a list, i.e the number of elements it contains, can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.
 
 To check the current length of a list, you can use the `len()` function, which takes the list's name as an argument and returns the number of elements currently in the list.
 
 **Example:**
 
-```pyodide
+```{python}
 numbers = [10, 5, 7, 2, 1]
-print(len(numbers))  # the output is 5
+print(len(numbers)) 
 ```
 
-## Adding elements to a list: append() and insert()
+# The sum of elements
+
+The sum of all elements in a list might be very useful for computing averages or accumulated totals. 
+
+To get the sum simply call the function `sum()` and pass the list as argument.
+
+**Example**
+
+```{python}
+numbers = [10, 5, 7, 2, 1]
+print(sum(numbers)) 
+```
+
+**Example** 
+
+To calculate the average value, you can use both `sum()` and `len()` as such:
+
+```{python}
+numbers = [10, 5, 7, 2, 1]
+total = sum(numbers)
+count = len(numbers)
+
+average = total/count
+print(average)
+```
+
+# The extrema (min/max)
+
+The smallest and largest value in a list can be obtained with `min()` and `max()` which are also built-in python functions. 
+
+**Example: Min/Max**
+
+```{python}
+temperatures = [15, 17.5, 2.0,5.6]
+
+min_temperature = min(temperatures)
+print("The min: ", min_temperature)
+max_temperature = max(temperatures)
+print("The max: ", max_temperature)
+```
+
+# Adding elements to a list: append()
 
 #### **append()**
 
 A new element may be _added_ to the end of the existing list:
 
+:::{.callout-note icon="false" title="BASIC SYNTHAX"} 
 ```python
 my_list.append(value)
 ```
-
 - Such an operation is performed by a method named append(). It takes its argument's value and puts it **at the end of the list** which owns the method.
 
 - The list's length then increases by one.
+:::
+
+
+
+## Other list methods 
 
 #### **insert()**
 
-The insert() method is a bit smarter ‒ it can add a new element **at any place in the list**, not only at the end.
+The insert() method is also for adding elements but is a bit smarter ‒ it can add a new element **at any place in the list**, not only at the end.
 
+:::{.callout-note icon="false" title="BASIC SYNTHAX"} 
 ```python
 my_list.insert(location, value)
 
@@ -126,23 +170,31 @@ To insert an element into a list, the insert() method takes two arguments:
 
 - The position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.
 - The new element to be inserted.
+:::
+
+
+
 
 **Example:**
 
-```pyodide
+```{python}
 numbers = [10, 7, 5, 2, 1]
-print(len(numbers))   # 5
-print(numbers)        # [10, 7, 5, 2, 1]
+print(len(numbers))   
+print(numbers)        
 ###
+print("Append")
 numbers.append(4)
-print(len(numbers))  #6
-print(numbers)       #[10, 7, 5, 2, 1, 4]
+print(len(numbers))  
+print(numbers)       
 ###
+print("Insert")
 numbers.insert(0, 20)
-print(len(numbers))    #7
-print(numbers)         #[20, 10, 7, 5, 2, 1, 4]
+print(len(numbers))    
+print(numbers)        
 
 ```
+
+
 
 The `append()` method in Python adds an element to the end of a list, while the `insert()` method inserts an element at a specified position, shifting subsequent elements to the right. The `len()` function returns the number of elements in the list.
 
@@ -152,12 +204,17 @@ Pay attention to what happens after using insert(): the former first element is 
 
 An element may be **removed** from the list at a specific position using the `pop()` method:
 
+
+:::{.callout-note icon="false" title="BASIC SYNTHAX"}
 ```python
 my_list.pop(index)
 ```
-
 - The `pop()` method **removes the element** at the specified position (given by `index`) and **returns its value**.
 - If no index is provided, `pop()` removes and returns the **last element** in the list.
+
+:::
+
+
 
 **How It Works**:
 
@@ -166,9 +223,9 @@ my_list.pop(index)
 
 **Example**:
 
-```pyodide
+```{python}
 my_list = [10, 20, 30, 40]
 removed_value = my_list.pop(2)  # Removes index 2
-print(my_list)  # Output: [10, 20, 40]
-print(removed_value)  # Output: 30
+print(my_list)  
+print(removed_value) 
 ```
