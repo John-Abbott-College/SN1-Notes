@@ -37,7 +37,7 @@ fruits = ["banana", "apple", "cherry", "grapes"]
 
 Each of the list's elements may be accessed separately using `[]` and the **index**. 
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"}
+:::{.callout-note icon="false" title="BASIC SYNTAX"}
 ```
 element = my_list[index]
 ```

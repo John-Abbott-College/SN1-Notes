@@ -34,7 +34,7 @@ var5 = 1
 
 A list is a table of values, allowing a program to store **multiple values** inside a single variable.
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"}
+:::{.callout-note icon="false" title="BASIC SYNTAX"}
 ```python
 list_name = [value1, value2, value3]
 ```
@@ -143,7 +143,7 @@ print("The max: ", max_temperature)
 
 A new element may be _added_ to the end of the existing list:
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"} 
+:::{.callout-note icon="false" title="BASIC SYNTAX"} 
 ```python
 my_list.append(value)
 ```
@@ -160,7 +160,7 @@ my_list.append(value)
 
 The insert() method is also for adding elements but is a bit smarter ‒ it can add a new element **at any place in the list**, not only at the end.
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"} 
+:::{.callout-note icon="false" title="BASIC SYNTAX"} 
 ```python
 my_list.insert(location, value)
 
@@ -205,7 +205,7 @@ Pay attention to what happens after using insert(): the former first element is 
 An element may be **removed** from the list at a specific position using the `pop()` method:
 
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"}
+:::{.callout-note icon="false" title="BASIC SYNTAX"}
 ```python
 my_list.pop(index)
 ```
