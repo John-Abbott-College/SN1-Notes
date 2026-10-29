@@ -841,13 +841,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="accessing-element-by-index" class="level1">
 <h1>Accessing element by index</h1>
 <p>Each of the list’s elements may be accessed separately using <code>[]</code> and the <strong>index</strong>.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="BASIC SYNTHAX">
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="BASIC SYNTAX">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>BASIC SYNTHAX
+<span class="screen-reader-only">Note</span>BASIC SYNTAX
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -860,7 +860,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>For example, it can be printed:</p>
-<div id="470d0a83" class="cell" data-execution_count="1">
+<div id="28db6dfa" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">2</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="dv">0</span>]) <span class="co"># Accessing the list's first element.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -868,14 +868,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To print the whole list</p>
-<div id="1596fba8" class="cell" data-execution_count="2">
+<div id="be4bb466" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">2</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="dv">1</span>]) <span class="co"># Accessing the list's second element.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>6</code></pre>
 </div>
 </div>
-<div id="5e2bd86e" class="cell" data-execution_count="3">
+<div id="f69a0e4a" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">2</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="dv">2</span>]) <span class="co"># Accessing the list's third element.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -908,7 +908,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFs0LDYsMl1c
 <p>It may look strange, but negative indices are legal, and can be very useful.</p>
 <p>An element with an index equal to -1 is <strong>the last one in the list</strong>.</p>
 <p><strong>Example:</strong></p>
-<div id="c22ece0c" class="cell" data-execution_count="4">
+<div id="bf2e185d" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># the output is: 1</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="op">-</span><span class="dv">2</span>]) <span class="co"># the output is: 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -924,7 +924,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFs0LDYsMl1c
 <h1>Modifying elements</h1>
 <p>How do you change the value of a chosen element in the list?</p>
 <p>Let’s <strong>assign a new value of 111 to the first element</strong> in the list:</p>
-<div id="9df606d8" class="cell" data-execution_count="5">
+<div id="e5b61f50" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original list contents:"</span>, numbers)  <span class="co"># Printing original list contents.</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -936,7 +936,7 @@ New list contents:  [111, 5, 7, 2, 1]</code></pre>
 </div>
 </div>
 <p>And now we want <strong>the value of the fifth element to be copied to the second element</strong>:</p>
-<div id="5bf15197" class="cell" data-execution_count="6">
+<div id="1cf7aa7e" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original list contents:"</span>, numbers)  <span class="co"># Original list contents:[10, 5, 7, 2, 1]</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>

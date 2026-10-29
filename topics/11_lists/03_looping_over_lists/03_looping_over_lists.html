@@ -835,13 +835,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Single Lists</h1>
 <section id="loop-by-element" class="level2">
 <h2 class="anchored" data-anchor-id="loop-by-element">Loop by element</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTHAX">
+<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTAX">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>BASIC SYNTHAX
+<span class="screen-reader-only">Note</span>BASIC SYNTAX
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -855,7 +855,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Example</strong></p>
 <p>The following way traverses each letter one by one.</p>
-<div id="2c1d7642" class="cell" data-execution_count="1">
+<div id="a74f1bb4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> my_list:</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(item)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -872,13 +872,13 @@ f</code></pre>
 <section id="loop-using-range" class="level2">
 <h2 class="anchored" data-anchor-id="loop-using-range">Loop using <code>range()</code></h2>
 <p>If accessing the elements by index is important in a problem you’re solving. You can iterate over all the indices of the list and using the <code>[]</code> accessors. Although not the “pythonic” way, this looping strategy can be very useful to compare an element to its neighbours.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTHAX">
+<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTAX">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>BASIC SYNTHAX
+<span class="screen-reader-only">Note</span>BASIC SYNTAX
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -888,7 +888,7 @@ f</code></pre>
 </div>
 </div>
 <p><strong>Example</strong></p>
-<div id="91392c92" class="cell" data-execution_count="2">
+<div id="a551c226" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>measurements <span class="op">=</span> [<span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(measurements)):</span>
@@ -906,13 +906,13 @@ f</code></pre>
 <section id="loop-using-enumerate" class="level2">
 <h2 class="anchored" data-anchor-id="loop-using-enumerate">Loop using <code>enumerate()</code></h2>
 <p>If there is a need to keep track of the iteration number <code>i</code> of each element, Python offers the built-in function <a href="https://www.geeksforgeeks.org/enumerate-in-python/"><code>enumerate()</code></a> to loop over both the <code>index</code> and the <code>item</code> without having to use <code>range()</code> and <code>len()</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTHAX">
+<div class="callout callout-style-default callout-note callout-titled" title="BASIC SYNTAX">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>BASIC SYNTHAX
+<span class="screen-reader-only">Note</span>BASIC SYNTAX
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -921,7 +921,7 @@ f</code></pre>
 </div>
 </div>
 <p><strong>Example</strong></p>
-<div id="872c91c5" class="cell" data-execution_count="3">
+<div id="13aec4b5" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>student_list <span class="op">=</span> [<span class="st">"Sara"</span>, <span class="st">"Lucia"</span>, <span class="st">"Devin"</span>, <span class="st">"Henri"</span>,<span class="st">"Luca"</span>, <span class="st">"Maria"</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, student <span class="kw">in</span> <span class="bu">enumerate</span>(student_list):</span>
@@ -948,7 +948,7 @@ Muscat 2680.00$
 Cancun  478.00$
 Paris  1347.00$</code></pre>
 <p>An initial strategy would be to iterate over both lists using a <code>for</code> loop iterating <code>enumerate()</code>, assuming that both lists will always have the same length, such as :</p>
-<div id="f6dd6d05" class="cell" data-execution_count="4">
+<div id="947404cc" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>destinations <span class="op">=</span> [<span class="st">"Tokyo"</span>,<span class="st">"Muscat"</span>, <span class="st">"Cancun"</span>, <span class="st">"Paris"</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ticket_prices <span class="op">=</span> [<span class="fl">2769.00</span>, <span class="fl">2680.00</span>, <span class="fl">478.00</span>, <span class="fl">1347.00</span>]</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -965,7 +965,7 @@ Paris 1347.0$</code></pre>
 <section id="looping-with-zip" class="level2">
 <h2 class="anchored" data-anchor-id="looping-with-zip">Looping with <code>zip()</code></h2>
 <p>The <code>zip()</code> function returns a single combined “sequence” returning the pair of <code>destination</code> and its corresponding <code>price</code> :</p>
-<div id="616fe6f4" class="cell" data-execution_count="5">
+<div id="ea0499f9" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>destinations <span class="op">=</span> [<span class="st">"Tokyo"</span>,<span class="st">"Muscat"</span>, <span class="st">"Cancun"</span>, <span class="st">"Paris"</span>]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ticket_prices <span class="op">=</span> [<span class="fl">2769.00</span>, <span class="fl">2680.00</span>, <span class="fl">478.00</span>, <span class="fl">1347.00</span>]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -991,7 +991,7 @@ Paris 1347.0$</code></pre>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sidenote: You can actually “see” what the resulting of zipping is by converting it into a list and printing it:</p>
-<div id="b0c6dd6f" class="cell" data-execution_count="6">
+<div id="2401fc50" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>zip_result <span class="op">=</span> <span class="bu">zip</span>(ticket_prices, destinations)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(zip_result))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1003,7 +1003,7 @@ Paris 1347.0$</code></pre>
 </div>
 </div>
 <p>You can also combine multiple lists using zip, but be careful to respect the order of the unpacked items:</p>
-<div id="e490e3ef" class="cell" data-execution_count="7">
+<div id="161df773" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>destinations <span class="op">=</span> [<span class="st">"Tokyo"</span>,<span class="st">"Muscat"</span>, <span class="st">"Cancun"</span>, <span class="st">"Paris"</span>]</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>ticket_prices <span class="op">=</span> [<span class="fl">2769.00</span>, <span class="fl">2680.00</span>, <span class="fl">478.00</span>, <span class="fl">1347.00</span>]</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>durations <span class="op">=</span> [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>]</span>
