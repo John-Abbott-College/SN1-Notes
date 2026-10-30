@@ -861,7 +861,8 @@ window.Quarto = {
 </section>
 <section id="how-the-starter-code-works" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-starter-code-works">How the starter code works</h2>
-<p>Right now <code>main()</code> reads the radars once, calls <code>move()</code> once and checks for a collision once. The robot makes a step up by 1 pixel and stops moving on the screen. When you finish, <code>main()</code> should repeat these steps until the robot <strong>leaves the screen or crashes</strong>:</p>
+<p>Right now <code>main()</code> reads the radars once, calls <code>move()</code> once and checks for a collision once. The robot makes a step up by 1 pixel and stops moving on the screen.</p>
+<p>When you finish, <code>main()</code> should repeat these steps until the robot <strong>leaves the screen or crashes</strong>:</p>
 <ol type="1">
 <li>Read the three radars with <code>read_radar(robot, obstacles, direction)</code>.</li>
 <li>Call <code>move(x, y, front_radar, left_radar, right_radar)</code> to get the <strong>next position.</strong></li>
@@ -897,13 +898,13 @@ window.Quarto = {
 <section id="todo-2-stop-on-crash" class="level4">
 <h4 class="anchored" data-anchor-id="todo-2-stop-on-crash">TODO 2: Stop on crash</h4>
 <p>Inside the collision <code>if</code>, interrupt the loop.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expand to see flowchart">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Main flowchart">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Expand to see flowchart
+<span class="screen-reader-only">Tip</span>Main flowchart
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -946,13 +947,13 @@ window.Quarto = {
 <p>Here’s a representation of what happens if the robot is “boxed in”:</p>
 <p><img src="assets/robot_boxed.png" height="200/"></p>
 </blockquote>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expand to see flowchart">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Move flowchart">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Expand to see flowchart
+<span class="screen-reader-only">Tip</span>Move flowchart
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
