@@ -43,7 +43,9 @@ Run the program with `python collision_avoidance.py`. A window opens with brown 
 
 ## How the starter code works
 
-Right now `main()` reads the radars once, calls `move()` once and checks for a collision once. The robot makes a step up by 1 pixel and stops moving on the screen. When you finish, `main()` should repeat these steps until the robot **leaves the screen or crashes**:
+Right now `main()` reads the radars once, calls `move()` once and checks for a collision once. The robot makes a step up by 1 pixel and stops moving on the screen. 
+
+When you finish, `main()` should repeat these steps until the robot **leaves the screen or crashes**:
 
 1. Read the three radars with `read_radar(robot, obstacles, direction)`.
 2. Call `move(x, y, front_radar, left_radar, right_radar)` to get the **next position.**
@@ -88,7 +90,7 @@ Repeat the following steps while the robot's position meets this condition $X_{M
 
 Inside the collision `if`, interrupt the loop.
 
-:::{.callout-tip icon="false" title="Expand to see flowchart" collapse="true"}
+:::{.callout-tip icon="false" title="Main flowchart" collapse="true"}
 ![](assets/main_chart.png)
 :::
 
@@ -123,7 +125,7 @@ The robot should take a step back (`-1` along y) and while turning left ( `-1` a
 >
 >  <img src="assets/robot_boxed.png" height=200/>
 
-:::{.callout-tip icon="false" title="Expand to see flowchart" collapse="true"}
+:::{.callout-tip icon="false" title="Move flowchart" collapse="true"}
 ![](assets/move_chart.png)
 
 :::
@@ -145,5 +147,3 @@ You will demo your program in class. Before your demo, check:
 During the demo, be ready to:
 
 - Run your program at least once and explain what the robot does
-
-  

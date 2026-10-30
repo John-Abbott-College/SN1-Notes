@@ -1,0 +1,38 @@
+---
+config:
+  layout: fixed
+  fontFamily: '''Open Sans Variable'', sans-serif'
+  themeVariables:
+    fontFamily: '''Open Sans Variable'', sans-serif'
+---
+flowchart TB
+    C["Read front, left, right radars"] --> D["Get next position:<br>x, y = move(x, y, front_radar, right_radar, left_radar)"]
+    D --> E["Move the robot<br>robot.goto(x, y)"]
+    E --> F{"collision_detected(robot, obstacles) ?"}
+    F -- Yes --> G@{ label: "print('Collision detected!')<br>animate_robot_coliision(robot)" }
+    n1["Is the robot (x,y) is on the screen?"] -- yes --> C
+    A(["Start: robot in the centre"]) --> n1
+    F L_F_n1_0@-- No --> n1
+    n1 -- No --> n2["STOP THE LOOP"]
+    G --> n2
+    n2 --> n3["Did the robot reach the edge of the screen?"]
+    n3 -- YES --> n5["Print a success message"]
+    n3 -- NO --> n4(["Exit Program"])
+    n5 --> n4
+    n6["LOOP"]
+
+    G@{ shape: rect}
+    n1@{ shape: hex}
+    n2@{ shape: hex}
+    n3@{ shape: decision}
+    n5@{ shape: lean-r}
+    n6@{ icon: "aws:res-recover", pos: "b", h: 107}
+     F:::Aqua
+     n1:::Sky
+     n2:::Rose
+     n3:::Aqua
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+
+    L_F_n1_0@{ curve: linear } 
