@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,9 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-9bbf5fa004a0676d7f26111dc3fdfdb2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c70ae112d27b0643d94f3d9fd17c8844.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-9bbf5fa004a0676d7f26111dc3fdfdb2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-f7376f6761d92b5ee6f0ac2ff05c530e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0f0a8b16379d91c323ecdea24b8d3ffc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-f7376f6761d92b5ee6f0ac2ff05c530e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../site_libs/bootstrap/bootstrap-9008849ca3f0619e6c0617b0ff2df174.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -336,6 +336,10 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="../../../../topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html">
  <span class="dropdown-text">Draw a simple house</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../topics/10_turtle/exercise/robot_lab/instructions.html">
+ <span class="dropdown-text">Lab: Robot Collision Avoidance</span></a>
   </li>  
     </ul>
   </li>
@@ -893,10 +897,26 @@ window.Quarto = {
 <section id="todo-2-stop-on-crash" class="level4">
 <h4 class="anchored" data-anchor-id="todo-2-stop-on-crash">TODO 2: Stop on crash</h4>
 <p>Inside the collision <code>if</code>, interrupt the loop.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expand to see flowchart">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Expand to see flowchart
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="assets/main_chart.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="result" class="level4">
 <h4 class="anchored" data-anchor-id="result">RESULT:</h4>
-<p>The robot drives straight up and keeps printing “Collision detected!” as it passes through the obstacle above it.</p>
+<p>The robot drives straight up, collides into an obstacle and prints “Collision detected”!</p>
 </section>
 </section>
 <section id="part-b-improve-move" class="level3">
@@ -912,7 +932,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="todo-2-obstacle-in-front">TODO 2: Obstacle in front</h4>
 <p>The robot should check its left/right radars and move sideways and away from the obstacle (take a step <code>+1</code> or <code>-1</code> along the x and not move along y)</p>
 <ul>
-<li>It should prioritize a movement left in case there are no obstacles to either sides.</li>
+<li>It should prioritize a movement <strong>right</strong> in case there are no obstacles to either sides.</li>
 </ul>
 <blockquote class="blockquote">
 <p>Here’s a representation of three possibilities to go left/right:</p>
@@ -926,6 +946,22 @@ window.Quarto = {
 <p>Here’s a representation of what happens if the robot is “boxed in”:</p>
 <p><img src="assets/robot_boxed.png" height="200/"></p>
 </blockquote>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expand to see flowchart">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Expand to see flowchart
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="assets/move_chart.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="result-1" class="level4">
 <h4 class="anchored" data-anchor-id="result-1">RESULT:</h4>
@@ -971,7 +1007,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../teacher/youmna/labs/robot_lab";
+window._ojs.paths.runtimeToDoc = "../../topics/10_turtle/exercise/robot_lab";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../../../..";
 window._ojs.selfContained = false;
