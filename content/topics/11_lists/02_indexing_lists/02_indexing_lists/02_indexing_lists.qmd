@@ -37,7 +37,7 @@ fruits = ["banana", "apple", "cherry", "grapes"]
 
 Each of the list's elements may be accessed separately using `[]` and the **index**. 
 
-:::{.callout-note icon="false" title="BASIC SYNTHAX"}
+:::{.callout-note icon="false" title="BASIC SYNTAX"}
 ```
 element = my_list[index]
 ```
@@ -47,16 +47,14 @@ element = my_list[index]
 
 :::
 
-For example, it can be printed:
+For example, we can print the first item in the list:
 
 ```{python}
 numbers = [4,6,2]
 print(numbers[0]) # Accessing the list's first element.
 ```
 
-To print the whole list
-
-
+or get the 2nd item and print it:
 ```{python}
 numbers = [4,6,2]
 print(numbers[1]) # Accessing the list's second element.

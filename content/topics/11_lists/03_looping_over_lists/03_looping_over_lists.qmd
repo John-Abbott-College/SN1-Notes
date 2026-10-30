@@ -14,7 +14,7 @@ Looping through a list involves visiting each item in the list one by one to per
 
 ## Loop by element 
 
-:::{.callout-note title="BASIC SYNTHAX"}
+:::{.callout-note title="BASIC SYNTAX"}
 ```python
 
 for item in my_list:
@@ -40,7 +40,7 @@ for item in my_list:
 If accessing the elements by index is important in a problem you're solving. You can iterate over all the indices of the list and using the `[]` accessors. Although not the "pythonic" way, this looping strategy can be very useful to compare an element to its neighbours.
 
 
-:::{.callout-note title="BASIC SYNTHAX"}
+:::{.callout-note title="BASIC SYNTAX"}
 ```python
 for i in range(len(my_list)):
 
@@ -64,7 +64,7 @@ for i in range(len(measurements)):
 
 If there is a need to keep track of the iteration number `i` of each element, Python offers the built-in function [`enumerate()`](https://www.geeksforgeeks.org/enumerate-in-python/) to loop over both the `index` and the `item` without having to use `range()` and `len()`.
 
-:::{.callout-note title="BASIC SYNTHAX"}
+:::{.callout-note title="BASIC SYNTAX"}
 ```python
 for i, item in enumerate(my_list):
 	print(i, item)
