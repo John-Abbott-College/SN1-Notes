@@ -22,6 +22,7 @@ website:
         menu:
           - topics/10_turtle/01_turtle_graphics/01_turtle_graphics.qmd
           - topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.qmd
+          - topics/10_turtle/exercise/robot_lab/instructions.qmd
 
   sidebar:
     style: "docked"

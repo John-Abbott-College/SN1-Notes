@@ -50,6 +50,7 @@ Right now `main()` reads the radars once, calls `move()` once and checks for a c
 3. Move the robot there with `robot.goto(x, y)`.
 4. Stop if `collision_detected(robot, obstacles)` is `True`.
 
+
 **What the radar tells you:**
 
 - Each reading is the **distance** (in pixels) to the nearest obstacle in that direction.
@@ -81,13 +82,20 @@ Repeat the following steps while the robot's position meets this condition $X_{M
 - moving the robot with  `robot.goto()` 
 - checking for collisions  
 
+
+
 #### TODO 2: Stop on crash
 
 Inside the collision `if`, interrupt the loop.
 
+:::{.callout-tip icon="false" title="Expand to see flowchart" collapse="true"}
+![](assets/main_chart.png)
+:::
+
+
 #### RESULT:
 
-The robot drives straight up and keeps printing "Collision detected!" as it passes through the obstacle above it.
+The robot drives straight up, collides into an obstacle and prints "Collision detected"!
 
 ### Part B: improve move()
 
@@ -101,7 +109,7 @@ The robot goes forward (`+1` along y, no change along x)
 
 The robot should check its left/right radars and move sideways and away from the obstacle (take a step `+1` or `-1` along the x and not move along y)
 
-- It should prioritize a movement left in case there are no obstacles to either sides. 
+- It should prioritize a movement **right** in case there are no obstacles to either sides. 
 
 > Here's a representation of three possibilities to go left/right:
 >
@@ -114,6 +122,11 @@ The robot should take a step back (`-1` along y) and while turning left ( `-1` a
 >  Here's a representation of what happens if the robot is "boxed in":
 >
 >  <img src="assets/robot_boxed.png" height=200/>
+
+:::{.callout-tip icon="false" title="Expand to see flowchart" collapse="true"}
+![](assets/move_chart.png)
+
+:::
 
 #### RESULT:
 

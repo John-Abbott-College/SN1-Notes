@@ -334,8 +334,7 @@ Go over:
 - Introduction to lists 
 
 ## 🚀 After class
-- Go over [notes on lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/01_into_to_lists/01_into_to_lists.html){target="_blank"}
-- Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
+- Redo the test to make sure you understood your mistakes
 
 # Tuesday section : November 2
 ## 📚 Prep 
@@ -344,19 +343,61 @@ Go over:
 ## 💻 In class
 - Exam solution and feedback 
 - **Turtle Lab (1%):** Robot Collision Avoidance
-- After break:
-- Introduction to lists 
+
 
 ## 🚀 After class
-- Go over [notes on lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/01_into_to_lists/01_into_to_lists.html){target="_blank"}
-- Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
+- Redo the test to make sure you understood your mistakes.
+
 :::
 
+
+# Week 11 
+
+::: {.panel-tabset}
+# Friday Section: November 6
+
+## 📚 Prep 
+- Go over [notes on lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/01_into_to_lists/01_into_to_lists.html){target="_blank"}
+- Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
+
+## 💻 In class
+- **Quiz 7 (1%)** : Simple Lists
+- Quiz recap 
+- BREAK
+- Installing Matplotlib 
+- Plotting a list 
+- Assignment 3 - Part 1 (due in class)
+
+## 🚀 After class
+- Prep for next class!
+- Read the Assignment 3 - Part 2
+
+# Tuesday Section: 10 Nov
+
+
+## 📚 Prep 
+- Go over [notes on lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/01_into_to_lists/01_into_to_lists.html){target="_blank"}
+- Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
+
+## 💻 In class
+- **Quiz 7 (1%)** : Simple Lists
+- Quiz recap 
+- BREAK
+- Installing Matplotlib 
+- Plotting a list 
+- Assignment 3 - Part 1 (due in class)
+
+## 🚀 After class
+- Prep for next class!
+- Read the Assignment 3 - Part 2
+
+:::
 
 <!-- 
 # Week 11
 
 ## 📚 Prep 
+
 - [Accessing elements in a list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html)
 - [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html)
 - Try [level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2){target="_blank"} questions 
@@ -366,7 +407,6 @@ Go over:
 - **Quiz 7 (1%)** : Simple Lists
 - Quiz recap 
 - Assignment 3 - Part 1 (due in class)
-
 
 
 
