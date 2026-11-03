@@ -84,7 +84,7 @@ _Until an obstable is detected, keep calling the `forward()` function to move th
 ```python
 obstacle = False
 
-while obstacle:
+while not obstacle:
   print("Go forward")
   forward()
 
