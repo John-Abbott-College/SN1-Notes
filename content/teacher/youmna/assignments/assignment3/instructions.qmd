@@ -1,0 +1,163 @@
+---
+title : "Assignment3"
+---
+📝 **Worth:** 7 % 
+
+
+
+## 🎯 Learning Objectives
+
+- Create a list to store multiple values
+
+- Plot lists using `matplotlib`
+
+- Read data from a *Comma Separated Values* (.csv) file 
+
+- Develop an algorithm to detect peaks
+
+  
+
+## Context: Heart Beats ❤️
+
+As the heart pumps blood through the body, it emits an electric signal which can be measured, amplified  and displayed. This is what we call an *electrocardiogram*, each heart beat is characterized by a the cardiac cycle made up of different waves named *P wave, QRS complex* and the *T wave* as shown below. They offer various medical insights on the patient's health. 
+
+<img src="assets/SinusRhythmLabels.png" height=300/>
+
+
+
+This assignment will be done in three parts:
+
+- [**Part 1:**](#part-1-plotting-the-ecg) Plotting a provided ECG with the correct time axis
+
+- **Part 2: ** Reading an entire ECG from a file and plotting the entire signal
+- **Part 3: ** Build an algorithm to develop R peaks and calculating the heart rate.
+
+
+
+# Part 1: Plotting the ECG
+
+**🗓️ Due:** At the end of class
+
+📥 **Submission: ** 
+
+- [ ] ECG graph **demoed to teacher in class.**
+- [ ] Code submitted on  [Gradescope](https://www.gradescope.ca/courses/39225) 
+  - [ ] `my_functions.py`
+  - [ ] `part1.py`
+  - [ ] `part1_ecg.png`
+
+
+
+## **📝  Specific Instructions** 
+
+The structure of this assignment will be different than the Assignment2: 
+
+- [Download](part1.zip){target="_blank"} and extract the starter code.
+
+- You will be working within **two python files**:
+
+  - `my_functions.py` : Where all the functions should be defined 
+
+  - `part1.py`: This is where the `main()` function is calling the other functions 
+
+- Keep both files in the **same folder**
+
+- I added an `import` statement in `part1.py`, **please DO NOT remove this line**
+
+  ```python
+  from my_functions import *
+  ```
+
+  - the `*` means import all the functions defined in this file.
+
+- As usual, **do not rename the files, respect each function name and its parameter list**
+
+## Task
+
+In `part1.py`, you are given a sample `ecg_values` containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure. 
+
+#### Write a function `create_time_axis()`
+
+**Input parameters: **
+
+`ecg_values`:  A list of floats representing the ecg values (in mV)
+
+`sampling_rate`: A float representing the rate at which the samples were measured (in Hz)
+
+**Return: ** 
+
+A list of time values in seconds 
+
+- It should have the same length as the `ecg_values` list. 
+- It should start at `0`seconds. 
+
+- Increase by a constant time interval of `1 / sampling_rate` seconds between consecutive values.
+- Maintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.
+
+>  **For example**,  suppose  `sampling_rate = 360` and `ecg_values` contains 500 measurements.
+>
+>  Since 360 samples are recorded every second, the time interval between consecutive samples is:
+>
+>  $\Delta t = \frac{1}{360} \approx 0.00278 \text{ seconds}$
+>
+>  The resulting time values should be : $[0, \frac{1}{360}, \frac{2}{360}, \frac{3}{360}, ..., \frac{i}{360}, ... , \frac{499}{360}]$
+
+
+
+**Test**
+
+Call the function in `main()` in the `part1.py`:
+
+```python
+def main():
+  ecg = [-0.955, -0.91, -0.895,...]
+  time_values = create_time_values(ecg_values=ecg, sampling_rate=SAMPLING_RATE)
+  print(time_values)
+  print(len(time_values))
+```
+
+**Expected output**:
+
+```cmd
+[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]
+500
+```
+
+
+
+#### Write a function `plot_ecg()`
+
+**Input parameters:**
+
+- `ecg_values` : list of floats of ecg readings 
+- `time_values`: list of floats of the seconds 
+- `output_filename`: the filename under which the graph image will be saved.
+- `show_graph`: A boolean, when set to `True` the figure should be shown on the screen, otherwise, it should not be shown.
+
+**Return:** No return
+
+**Task:**
+
+- Plot the `ecg_values` versus the `time_values` 
+
+- Apply appropriate styling using Matplotlib:
+
+  - Add a title using `plt.title()`
+  - Add an x axis title using `plt.xlabel()`
+  - Add a y axis title using `plt.ylabel()`
+  - Add a grid using `plt.grid(True)`
+
+- Save the graph under `filename `using `plt.savefig()`
+
+- If the boolean `show_fig` is `True`, display the figure with `plt.show()`
+
+- Close the figure with `plt.close()`
+
+- Show your graph to your teacher.
+
+# Part 2 
+Coming soon...
+
+
+# Part 3
+Coming soon...
