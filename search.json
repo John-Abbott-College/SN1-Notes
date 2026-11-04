@@ -494,11 +494,11 @@
     ]
   },
   {
-    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#other-list-methods",
-    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#other-list-methods",
+    "objectID": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#summary",
+    "href": "topics/11_lists/01_into_to_lists/01_into_to_lists.html#summary",
     "title": "Intro on Lists",
-    "section": "Other list methods",
-    "text": "Other list methods\n\ninsert()\nThe insert() method is also for adding elements but is a bit smarter ‒ it can add a new element at any place in the list, not only at the end.\n\n\n\n\n\n\nNoteBASIC SYNTAX\n\n\n\nmy_list.insert(location, value)\nTo insert an element into a list, the insert() method takes two arguments:\n\nThe position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.\nThe new element to be inserted.\n\n\n\nExample:\n\nnumbers = [10, 7, 5, 2, 1]\nprint(len(numbers))   \nprint(numbers)        \n###\nprint(\"Append\")\nnumbers.append(4)\nprint(len(numbers))  \nprint(numbers)       \n###\nprint(\"Insert\")\nnumbers.insert(0, 20)\nprint(len(numbers))    \nprint(numbers)        \n\n5\n[10, 7, 5, 2, 1]\nAppend\n6\n[10, 7, 5, 2, 1, 4]\nInsert\n7\n[20, 10, 7, 5, 2, 1, 4]\n\n\nThe append() method in Python adds an element to the end of a list, while the insert() method inserts an element at a specified position, shifting subsequent elements to the right. The len() function returns the number of elements in the list.\nPay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.\n\n\npop()\nAn element may be removed from the list at a specific position using the pop() method:\n\n\n\n\n\n\nNoteBASIC SYNTAX\n\n\n\nmy_list.pop(index)\n\nThe pop() method removes the element at the specified position (given by index) and returns its value.\nIf no index is provided, pop() removes and returns the last element in the list.\n\n\n\nHow It Works:\n\nThe list’s length decreases by one after the operation.\nAttempting to pop() an index that doesn’t exist raises an IndexError.\n\nExample:\n\nmy_list = [10, 20, 30, 40]\nremoved_value = my_list.pop(2)  # Removes index 2\nprint(my_list)  \nprint(removed_value) \n\n[10, 20, 40]\n30",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nOperation\nExample\nResult\n\n\n\n\nCreate a list\na = [1,2,3,3]\na is [1,2,3,3]\n\n\nAccess item\na[0]\n1\n\n\nChange item\na[1] = 10\na is [1,10,3,3]\n\n\nAdd item\na.append(5)\na is [1,10,3,3,5]\n\n\nAdd Item\na.insert(2,88)\na is [1,10,88,3,3,5]\n\n\nRemove first occurrence\na.remove(3)\na is [1,10,88,3,5]\n\n\nRemove last item\na.pop()\na is [1,10,88,3], returns 5\n\n\nRemove item by index\na.pop(0)\na is [10,88,3], returns 1\n\n\nCount items\nlen(a)\n3",
     "crumbs": [
       "Lists",
       "Intro on Lists"
