@@ -91,7 +91,7 @@ To check the current length of a list, you can use the `len()` function, which t
 
 **Example:**
 
-```{python}
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print(len(numbers)) 
 ```
@@ -104,7 +104,7 @@ To get the sum simply call the function `sum()` and pass the list as argument.
 
 **Example**
 
-```{python}
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 print(sum(numbers)) 
 ```
@@ -113,7 +113,7 @@ print(sum(numbers))
 
 To calculate the average value, you can use both `sum()` and `len()` as such:
 
-```{python}
+```pyodide
 numbers = [10, 5, 7, 2, 1]
 total = sum(numbers)
 count = len(numbers)
@@ -128,7 +128,7 @@ The smallest and largest value in a list can be obtained with `min()` and `max()
 
 **Example: Min/Max**
 
-```{python}
+```pyodide
 temperatures = [15, 17.5, 2.0,5.6]
 
 min_temperature = min(temperatures)
@@ -175,7 +175,7 @@ print(numbers)
 
 
 
-## Other list methods 
+# List methods 
 
 #### **insert()**
 
@@ -189,7 +189,7 @@ my_list.insert(location, value)
 
 To insert an element into a list, the insert() method takes two arguments:
 
-- The position where the new element should be inserted. All existing elements from this position onward are shifted to the right to make room.
+- The position where the new element should be inserted. All existing elements starting with this position onward are shifted to the right to make room.
 - The new element to be inserted.
 :::
 
@@ -198,7 +198,7 @@ To insert an element into a list, the insert() method takes two arguments:
 
 **Example:**
 
-```{python}
+```pyodide
 numbers = [10, 7, 5, 2, 1]
 print(len(numbers))   
 print(numbers)        
@@ -209,10 +209,14 @@ print(len(numbers))
 print(numbers)       
 ###
 print("Insert")
-numbers.insert(0, 20)
+numbers.insert(2, 20)
 print(len(numbers))    
 print(numbers)        
-
+###
+print("Insert")
+numbers.insert(-1, 99)
+print(len(numbers))    
+print(numbers)        
 ```
 
 
@@ -229,10 +233,12 @@ An element may be **removed** from the list at a specific position using the `po
 :::{.callout-note icon="false" title="BASIC SYNTAX"}
 ```python
 my_list.pop(index)
+
+removed_item = my_list.pop()
+print(f"We have removed {removed_item} from the list.")
 ```
 - The `pop()` method **removes the element** at the specified position (given by `index`) and **returns its value**.
 - If no index is provided, `pop()` removes and returns the **last element** in the list.
-
 :::
 
 
@@ -244,9 +250,24 @@ my_list.pop(index)
 
 **Example**:
 
-```{python}
+```pyodide
 my_list = [10, 20, 30, 40]
 removed_value = my_list.pop(2)  # Removes index 2
 print(my_list)  
 print(removed_value) 
 ```
+
+
+## Summary
+
+|Operation|Example|Result|
+|---|---|---|
+|Create a list|a = [1,2,3,3]|a is [1,2,3,3]|
+|Access item|a[0]|1|
+|Change item|a[1] = 10|a is [1,10,3,3]|
+|Add item|a.append(5)|a is [1,10,3,3,5]|
+|Add Item|a.insert(2,88)|a is [1,10,88,3,3,5]|
+|Remove first occurrence|a.remove(3)|a is [1,10,88,3,5]|
+|Remove last item|a.pop()|a is [1,10,88,3], returns 5|
+|Remove item by index|a.pop(0)|a is [10,88,3], returns 1|
+|Count items|len(a)|3|
