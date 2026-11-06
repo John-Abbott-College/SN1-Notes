@@ -110,7 +110,7 @@ website:
 
     - section: Scientific Modules
       contents:
-      # - topics/12_data_processing/01_reading_files/01_reading_files.qmd
+      - topics/12_data_processing/01_reading_files/01_reading_files.qmd
       - topics/12_data_processing/02_installing_modules/02_installing_modules.qmd
       # - topics/12_data_processing/03_numpy/03_numpy.qmd
       # - topics/12_data_processing/04_matplotlib/04_matplotlib.qmd

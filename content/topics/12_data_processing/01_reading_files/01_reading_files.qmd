@@ -3,6 +3,10 @@ title: "Reading/Writing Files"
 editor:
   render-on-save: true
 ---
+:::{.callout-note .o}
+- **Read** data from a txt file into a simple python list
+- **Read** data from Comma seperate valeus into paired lists.
+:::
 
 ## Opening Files
 

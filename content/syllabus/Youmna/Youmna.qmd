@@ -361,58 +361,122 @@ Go over:
 - Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
 
 ## 💻 In class
+- Creating simple lists
+- Appending elements to a list using loops
+- BREAK
 - **Quiz 7 (1%)** : Simple Lists
 - Quiz recap 
-- BREAK
 - Installing Matplotlib 
 - Plotting a list 
-- Assignment 3 - Part 1 (due in class)
+- Assignment 3 - Part 1 (due at **midnight**)
 
 ## 🚀 After class
+- Practice with [level 2 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2){target="_blank"} using loops with lists.
 - Prep for next class!
-- Read the Assignment 3 - Part 2
 
 # Tuesday Section: 10 Nov
 
 
 ## 📚 Prep 
 - Go over [notes on lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/01_into_to_lists/01_into_to_lists.html){target="_blank"}
+- - `insert()` and `pop()` will not be on the quiz.
+- [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
 - Practice with [level 1 questions](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-1){target="_blank"} on lists 
 
+
 ## 💻 In class
-- **Quiz 7 (1%)** : Simple Lists
+- Using append in a loop
+- **Quiz 7 (1%)** : Intro Lists
 - Quiz recap 
 - BREAK
-- Installing Matplotlib 
-- Plotting a list 
 - Assignment 3 - Part 1 (due in class)
+- Demo on reading data from files 
+
+
 
 ## 🚀 After class
 - Prep for next class!
-- Read the Assignment 3 - Part 2
+- Read Assignment [Part 2](https://john-abbott-college.github.io/SN1-Notes/teacher/youmna/assignments/assignment3/instructions.html#part-2){target="_blank"}
 
 :::
 
+
+# Week 12
+::: {.panel-tabset}
+# Friday Section: November 13
+## 📚 Prep 
+- [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
+- [CSV files](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/01_reading_files/01_reading_files.html#csv-file-format){target="_blank"} 
+- [Looping over a single list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#single-lists){target="_blank"}
+- Read the instructions of the Assingmnet 3 Part 2, to be ready!
+
+## 💻 In class
+- List access with `[]`
+- `for i in range(len(my_list))` vs `for item in my_list:`
+- BREAK
+- Demo reading data from a file
+- Assignment 3 - Part 2 (due in class)
+- Assignment 3 - Part 3 (started, finished at home)
+
+## 🚀 After class
+- Assignment 3 - Part 3 (finish at home, before next class)
+
+# Tuesday Section: November 17
+## 📚 Prep 
+- [CSV files](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/01_reading_files/01_reading_files.html#csv-file-format){target="_blank"} 
+- [Looping over a single list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#single-lists){target="_blank"}
+- Read the instructions of the Assingmnet 3 Part 2, to be ready!
+
+## 💻 In class
+Coming soon...
+
+## 🚀 After class
+Coming soon ...
+:::
+
+
+
 <!-- 
-# Week 11
+# Week 13
+::: {.panel-tabset}
+# Friday Section: November 20
+
+## 📚 Prep 
+- Zip and enumerate - loop over paired lists 
+- Finding elements
+- Reordering lists
+
+## 💻 In class
+- Quiz 8 (1%): Paired lists and filtering 
+
+## 🚀 After class
+
+# Tuesday Section: November 24
+## 📚 Prep 
+
+## 💻 In class
+
+## 🚀 After class
+:::
+
+
+# Week x
+::: {.panel-tabset}
+# Friday Section: Date
 
 ## 📚 Prep 
 
-- [Accessing elements in a list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html)
-- [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html)
-- Try [level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2){target="_blank"} questions 
+## 💻 In class
 
+## 🚀 After class
+
+# Tuesday Section:
+## 📚 Prep 
 
 ## 💻 In class
-- **Quiz 7 (1%)** : Simple Lists
-- Quiz recap 
-- Assignment 3 - Part 1 (due in class)
 
-
-
-
-
-
+## 🚀 After class
+:::
 
 -->
 

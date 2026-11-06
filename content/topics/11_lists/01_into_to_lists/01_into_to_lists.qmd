@@ -152,6 +152,27 @@ my_list.append(value)
 - The list's length then increases by one.
 :::
 
+#### Example 
+```{python}
+numbers = [1,2,3]
+numbers.append(4) # Will add 4 at the end of the list
+
+print(numbers)
+```
+
+
+#### Example with loops
+
+The `.append()` method can also be called within a loop:
+
+```{python}
+numbers = [1,2,3]
+for i in range(10):
+  numbers.append(4) # Will add 4 at the end of the list 10 times
+
+print(numbers)
+```
+
 
 
 ## Other list methods 

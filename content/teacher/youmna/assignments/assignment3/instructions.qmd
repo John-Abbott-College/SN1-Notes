@@ -72,6 +72,9 @@ The structure of this assignment will be different than the Assignment2:
 
 - As usual, **do not rename the files, respect each function name and its parameter list**
 
+- Make sure **Matplotlib** is installed, if not follow [these instructions](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/02_installing_modules/02_installing_modules.html){target="_blank"}
+
+
 ## Task
 
 In `part1.py`, you are given a sample `ecg_values` containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure. 
@@ -149,7 +152,7 @@ def main():
 
 - Save the graph under `filename `using `plt.savefig()`
 
-- If the boolean `show_fig` is `True`, display the figure with `plt.show()`
+- If the boolean `show_graph` is `True`, display the figure with `plt.show()`
 
 - Close the figure with `plt.close()`
 
