@@ -769,6 +769,12 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../../topics/12_data_processing/01_reading_files/01_reading_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading/Writing Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../../topics/12_data_processing/02_installing_modules/02_installing_modules.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing Python Modules</span></a>
   </div>
@@ -881,7 +887,7 @@ w =  \frac{4}{3} \rho \pi r^3
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="d33b4fd6" class="cell" data-execution_count="1">
+<div id="633e94b0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> snow_weight(density, radius):</span>
@@ -931,7 +937,7 @@ w =  \frac{4}{3} \rho \pi r^3
 <li><p>One calculation that’s important is finding out how many new bacteria are created each year.</p></li>
 <li><p>For that we can use a function! Let’s call it <code>get_increase()</code>!</p></li>
 </ul>
-<div id="eb6c1d4e" class="cell" data-execution_count="2">
+<div id="f41d119b" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_increase(population, increase_percent):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> population <span class="op">*</span> increase_percent</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1082,7 +1088,7 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <li>This function will also handle the even/odd numbers of rings to make for sure we visit an exact count of red rings</li>
 <li>The pattern identified is that between every consecutive red ring, there’s a distance of exactly <code>2*thickness</code></li>
 </ul>
-<div id="cdc41145" class="cell" data-execution_count="3">
+<div id="5336dc34" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> area_circle(radius:<span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (radius<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>math.pi</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1132,7 +1138,7 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <li>otherwise, if it’s a white circle: <strong>subtract (-) area</strong></li>
 </ul></li>
 </ul>
-<div id="cf2d0a32" class="cell" data-execution_count="4">
+<div id="035ecc3c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> area_circle(radius:<span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (radius<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>math.pi</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1271,7 +1277,7 @@ Year: 10 Population: 256000 Increase: 128000</code></pre>
 <li>This program is a work in progres…</li>
 </ul></li>
 </ul>
-<div id="1d2026b9" class="cell" data-execution_count="5">
+<div id="d79b9614" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Constants </span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>TANK_CAPACITY:<span class="bu">float</span> <span class="op">=</span> <span class="fl">50.0</span>        <span class="co"># in L</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>REFUEL_LIMIT:<span class="bu">float</span> <span class="op">=</span> <span class="fl">0.85</span>          <span class="co"># in %</span></span>
