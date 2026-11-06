@@ -759,27 +759,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-use-lists" id="toc-why-use-lists" class="nav-link active" data-scroll-target="#why-use-lists">Why use lists?</a></li>
-  <li><a href="#creating-a-list" id="toc-creating-a-list" class="nav-link" data-scroll-target="#creating-a-list">Creating a list</a>
-  <ul class="collapse">
-  <li><a href="#heterogenous-lists" id="toc-heterogenous-lists" class="nav-link" data-scroll-target="#heterogenous-lists">Heterogenous lists</a></li>
-  <li><a href="#empty-list" id="toc-empty-list" class="nav-link" data-scroll-target="#empty-list">Empty List</a></li>
-  </ul></li>
-  <li><a href="#the-length-of-list" id="toc-the-length-of-list" class="nav-link" data-scroll-target="#the-length-of-list">The length of list</a></li>
-  <li><a href="#the-sum-of-elements" id="toc-the-sum-of-elements" class="nav-link" data-scroll-target="#the-sum-of-elements">The sum of elements</a></li>
-  <li><a href="#the-extrema-minmax" id="toc-the-extrema-minmax" class="nav-link" data-scroll-target="#the-extrema-minmax">The extrema (min/max)</a></li>
-  <li><a href="#adding-elements-to-a-list-append" id="toc-adding-elements-to-a-list-append" class="nav-link" data-scroll-target="#adding-elements-to-a-list-append">Adding elements to a list: append()</a></li>
-  <li><a href="#list-methods" id="toc-list-methods" class="nav-link" data-scroll-target="#list-methods">List methods</a>
-  <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
@@ -815,13 +796,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Create</strong> lists with multiple values.</li>
-<li><strong>Create</strong> an empty list.</li>
-<li><strong>Use</strong> the built-in functions <code>len()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code> to find the length, total value and extrema of a list.</li>
-<li><strong>Use</strong> the <code>append()</code> method to add an element at the end of an existing list.</li>
+<li><p><strong>Create</strong> lists with multiple values.</p></li>
+<li><p><strong>Create</strong> an empty list.</p></li>
+<li><p><strong>Use</strong> the built-in functions <code>len()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code> to find the length, total value and extrema of a list.</p></li>
+<li><p><strong>Use</strong> the <code>append()</code> method to add an element at the end of an existing list.</p>
+<p>:::</p></li>
 </ul>
-</div>
-</div>
 <div class="objectives callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -833,11 +813,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Use</strong> the <code>insert()</code> method to add an element at a specific position.</li>
-<li><strong>Use</strong> the <code>pop()</code> method to remove an element at a given position.</li>
+<li><p><strong>Use</strong> the <code>insert()</code> method to add an element at a specific position.</p></li>
+<li><p><strong>Use</strong> the <code>pop()</code> method to remove an element at a given position.</p>
+<p>:::</p></li>
 </ul>
-</div>
-</div>
 <section id="why-use-lists" class="level1">
 <h1>Why use lists?</h1>
 <p>When you need to read, store, process, and print large amounts of numbers, creating a separate variable for each one is impractical. For instance, reading five numbers individually would be cumbersome and time-consuming.</p>
@@ -871,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Example</strong></p>
-<div id="f46f9d4d" class="cell" data-execution_count="1">
+<div id="b6ee2f97" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This creates a list named <code>numbers</code> containing five values. List is a special variable, which can hold more than one value at a time. Using lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.</p>
@@ -879,7 +858,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="heterogenous-lists">Heterogenous lists</h2>
 <p>The elements inside a list <strong>may have different types</strong>. Some of them may be integers, others floats, and yet others may be lists.</p>
 <p><strong>Example</strong></p>
-<div id="4e72632a" class="cell" data-execution_count="2">
+<div id="df7815d4" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>magic_bag <span class="op">=</span> [<span class="va">True</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="st">"orange"</span>, <span class="fl">55.89</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Here's a bag of stuff: </span><span class="sc">{</span>magic_bag<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -904,7 +883,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="empty-list" class="level2">
 <h2 class="anchored" data-anchor-id="empty-list">Empty List</h2>
 <p>You may also create a list without any values. This can be useful if the values are added later during the program execution. You can add element using <code>append()</code> as described later in this lesson.</p>
-<div id="222fb4a2" class="cell" data-execution_count="3">
+<div id="84115e40" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -963,7 +942,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 <section id="adding-elements-to-a-list-append" class="level1">
 <h1>Adding elements to a list: append()</h1>
 <section id="append" class="level4">
-<h4 class="anchored" data-anchor-id="append"><strong>append()</strong></h4>
+<h4 class="anchored"><strong>append()</strong></h4>
 <p>A new element may be <em>added</em> to the end of the existing list:</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -978,14 +957,12 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_list.append(value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><p>Such an operation is performed by a method named append(). It takes its argument’s value and puts it <strong>at the end of the list</strong> which owns the method.</p></li>
-<li><p>The list’s length then increases by one.</p></li>
+<li><p>The list’s length then increases by one.</p>
+<p>:::</p></li>
 </ul>
-</div>
-</div>
-</section>
 <section id="example" class="level4">
 <h4 class="anchored" data-anchor-id="example">Example</h4>
-<div id="6f054dfc" class="cell" data-execution_count="4">
+<div id="46b77cfd" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">4</span>) <span class="co"># Will add 4 at the end of the list</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -998,7 +975,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 <section id="example-with-loops" class="level4">
 <h4 class="anchored" data-anchor-id="example-with-loops">Example with loops</h4>
 <p>The <code>.append()</code> method can also be called within a loop:</p>
-<div id="b8435edd" class="cell" data-execution_count="5">
+<div id="692f1ced" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  numbers.append(<span class="dv">4</span>) <span class="co"># Will add 4 at the end of the list 10 times</span></span>
@@ -1009,11 +986,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 </div>
 </div>
 </section>
-</section>
 <section id="list-methods" class="level1">
 <h1>List methods</h1>
 <section id="insert" class="level4">
-<h4 class="anchored" data-anchor-id="insert"><strong>insert()</strong></h4>
+<h4 class="anchored"><strong>insert()</strong></h4>
 <p>The insert() method is also for adding elements but is a bit smarter ‒ it can add a new element <strong>at any place in the list</strong>, not only at the end.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1028,11 +1004,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_list.insert(location, value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To insert an element into a list, the insert() method takes two arguments:</p>
 <ul>
-<li>The position where the new element should be inserted. All existing elements starting with this position onward are shifted to the right to make room.</li>
-<li>The new element to be inserted.</li>
+<li><p>The position where the new element should be inserted. All existing elements starting with this position onward are shifted to the right to make room.</p></li>
+<li><p>The new element to be inserted.</p>
+<p>:::</p></li>
 </ul>
-</div>
-</div>
 <p><strong>Example:</strong></p>
 <div>
 <div id="pyodide-5" class="exercise-cell">
@@ -1044,9 +1019,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFsxMCwgNywg
 </div>
 <p>The <code>append()</code> method in Python adds an element to the end of a list, while the <code>insert()</code> method inserts an element at a specified position, shifting subsequent elements to the right. The <code>len()</code> function returns the number of elements in the list.</p>
 <p>Pay attention to what happens after using insert(): the former first element is now the second, the second the third, and so on.</p>
-</section>
 <section id="pop" class="level4">
-<h4 class="anchored" data-anchor-id="pop"><strong>pop()</strong></h4>
+<h4 class="anchored"><strong>pop()</strong></h4>
 <p>An element may be <strong>removed</strong> from the list at a specific position using the <code>pop()</code> method:</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1063,11 +1037,10 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFsxMCwgNywg
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>removed_item <span class="op">=</span> my_list.pop()</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"We have removed </span><span class="sc">{</span>removed_item<span class="sc">}</span><span class="ss"> from the list."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The <code>pop()</code> method <strong>removes the element</strong> at the specified position (given by <code>index</code>) and <strong>returns its value</strong>.</li>
-<li>If no index is provided, <code>pop()</code> removes and returns the <strong>last element</strong> in the list.</li>
+<li><p>The <code>pop()</code> method <strong>removes the element</strong> at the specified position (given by <code>index</code>) and <strong>returns its value</strong>.</p></li>
+<li><p>If no index is provided, <code>pop()</code> removes and returns the <strong>last element</strong> in the list.</p>
+<p>:::</p></li>
 </ul>
-</div>
-</div>
 <p><strong>How It Works</strong>:</p>
 <ol type="1">
 <li>The list’s <strong>length decreases by one</strong> after the operation.</li>
@@ -1082,10 +1055,14 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFsxMCwgNywg
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfbGlzdCA9IFsxMCwgMjAsIDMwLCA0MF1cbnJlbW92ZWRfdmFsdWUgPSBteV9saXN0LnBvcCgyKSAgIyBSZW1vdmVzIGluZGV4IDJcbnByaW50KG15X2xpc3QpICBcbnByaW50KHJlbW92ZWRfdmFsdWUpICJ9
 </script>
 </div>
-</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 42%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Operation</th>
@@ -1143,6 +1120,22 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfbGlzdCA9IFsxMCwgMjAs
 </table>
 
 
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</section>
+</div>
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+</div>
 <script type="pyodide-data">
 eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
 </script>
@@ -1160,8 +1153,6 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2RO
 <script type="vfs-file">
 W10=
 </script>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
