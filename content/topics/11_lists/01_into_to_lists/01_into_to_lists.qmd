@@ -2,21 +2,24 @@
 title: "Intro on Lists"
 editor:
   render-on-save: true
+
 ---
 
 
 ::: {.callout-note .objectives icon="false" title="☆ Learning Objectives "}
+
 - **Create** lists with multiple values.
 - **Create** an empty list.
 - **Use** the built-in functions `len()`, `sum()`, `min()`, `max()` to find the length, total value and extrema of a list.
 - **Use** the `append()` method to add an element at the end of an existing list.
-:::
+  :::
 
 
 ::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+
 - **Use** the `insert()` method to add an element at a specific position.
 - **Use** the `pop()` method to remove an element at a given position. 
-:::
+  :::
 
 # Why use lists?
 
@@ -35,9 +38,11 @@ var5 = 1
 A list is a table of values, allowing a program to store **multiple values** inside a single variable.
 
 :::{.callout-note icon="false" title="BASIC SYNTAX"}
+
 ```python
 list_name = [value1, value2, value3]
 ```
+
 - Create a list using `[ ]`
 - List out the values seperated by commas `,`
 - The various values may be of different data types (altough not recommended)
@@ -62,7 +67,6 @@ The elements inside a list **may have different types**. Some of them may be int
 **Example**
 
 ```{python}
-
 magic_bag = [True, 1, 5, "orange", 55.89]
 
 print(f"Here's a bag of stuff: {magic_bag}")
@@ -85,6 +89,7 @@ my_list = []
 
 
 # The length of list
+
 The length of a list, i.e the number of elements it contains, can change during program execution as new elements are added or existing elements are removed. This makes lists very dynamic.
 
 To check the current length of a list, you can use the `len()` function, which takes the list's name as an argument and returns the number of elements currently in the list.
@@ -144,15 +149,18 @@ print("The max: ", max_temperature)
 A new element may be _added_ to the end of the existing list:
 
 :::{.callout-note icon="false" title="BASIC SYNTAX"} 
+
 ```python
 my_list.append(value)
 ```
+
 - Such an operation is performed by a method named append(). It takes its argument's value and puts it **at the end of the list** which owns the method.
 
 - The list's length then increases by one.
-:::
+  :::
 
 #### Example 
+
 ```{python}
 numbers = [1,2,3]
 numbers.append(4) # Will add 4 at the end of the list
@@ -170,10 +178,8 @@ numbers = [1,2,3]
 for i in range(10):
   numbers.append(4) # Will add 4 at the end of the list 10 times
 
-print(numbers)
+print(n
 ```
-
-
 
 # List methods 
 
@@ -182,6 +188,7 @@ print(numbers)
 The insert() method is also for adding elements but is a bit smarter ‒ it can add a new element **at any place in the list**, not only at the end.
 
 :::{.callout-note icon="false" title="BASIC SYNTAX"} 
+
 ```python
 my_list.insert(location, value)
 
@@ -191,7 +198,7 @@ To insert an element into a list, the insert() method takes two arguments:
 
 - The position where the new element should be inserted. All existing elements starting with this position onward are shifted to the right to make room.
 - The new element to be inserted.
-:::
+  :::
 
 
 
@@ -231,15 +238,17 @@ An element may be **removed** from the list at a specific position using the `po
 
 
 :::{.callout-note icon="false" title="BASIC SYNTAX"}
+
 ```python
 my_list.pop(index)
 
 removed_item = my_list.pop()
 print(f"We have removed {removed_item} from the list.")
 ```
+
 - The `pop()` method **removes the element** at the specified position (given by `index`) and **returns its value**.
 - If no index is provided, `pop()` removes and returns the **last element** in the list.
-:::
+  :::
 
 
 
@@ -260,14 +269,14 @@ print(removed_value)
 
 ## Summary
 
-|Operation|Example|Result|
-|---|---|---|
-|Create a list|a = [1,2,3,3]|a is [1,2,3,3]|
-|Access item|a[0]|1|
-|Change item|a[1] = 10|a is [1,10,3,3]|
-|Add item|a.append(5)|a is [1,10,3,3,5]|
-|Add Item|a.insert(2,88)|a is [1,10,88,3,3,5]|
-|Remove first occurrence|a.remove(3)|a is [1,10,88,3,5]|
-|Remove last item|a.pop()|a is [1,10,88,3], returns 5|
-|Remove item by index|a.pop(0)|a is [10,88,3], returns 1|
-|Count items|len(a)|3|
+| Operation               | Example        | Result                      |
+| ----------------------- | -------------- | --------------------------- |
+| Create a list           | a = [1,2,3,3]  | a is [1,2,3,3]              |
+| Access item             | a[0]           | 1                           |
+| Change item             | a[1] = 10      | a is [1,10,3,3]             |
+| Add item                | a.append(5)    | a is [1,10,3,3,5]           |
+| Add Item                | a.insert(2,88) | a is [1,10,88,3,3,5]        |
+| Remove first occurrence | a.remove(3)    | a is [1,10,88,3,5]          |
+| Remove last item        | a.pop()        | a is [1,10,88,3], returns 5 |
+| Remove item by index    | a.pop(0)       | a is [10,88,3], returns 1   |
+| Count items             | len(a)         | 3                           |
