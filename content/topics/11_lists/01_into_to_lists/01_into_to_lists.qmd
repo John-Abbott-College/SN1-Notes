@@ -178,7 +178,7 @@ numbers = [1,2,3]
 for i in range(10):
   numbers.append(4) # Will add 4 at the end of the list 10 times
 
-print(n
+print(numbers)
 ```
 
 # List methods 
