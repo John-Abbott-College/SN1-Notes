@@ -3081,7 +3081,7 @@
     "href": "teacher/keith/exercises/lists.html",
     "title": "Lists Exercises",
     "section": "",
-    "text": "Loading Pyodide..."
+    "text": "Loading NumPy..."
   },
   {
     "objectID": "teacher/keith/exercises/lists.html#list-of-ints",
@@ -3095,14 +3095,14 @@
     "href": "teacher/keith/exercises/lists.html#list-of-floats",
     "title": "Lists Exercises",
     "section": "1.2 List of floats",
-    "text": "1.2 List of floats\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using a for-loop, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUnfortunately you cannot use a float value for the step on a for loop :-P, so think of other ways to generate numbers that increase by a specfic amount.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+    "text": "1.2 List of floats\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using a for-loop, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUnfortunately you cannot use a float value for the step on a for loop :-P, so think of other ways to generate numbers that increase by a specfic amount.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nNote, some of the values that are generated will look weird - this is just what happens with float values on computers which are not exactly precise. You can basically ignore this, but keep in mind that if you try checking if 2 float values are “equal” to each other, then sometimes they may not be exactly equal.\nTry enabling the line that rounds the number to see how it can be corrected."
   },
   {
     "objectID": "teacher/keith/exercises/lists.html#list-of-floats-using-numpy",
     "href": "teacher/keith/exercises/lists.html#list-of-floats-using-numpy",
     "title": "Lists Exercises",
     "section": "1.3 List of floats using numpy",
-    "text": "1.3 List of floats using numpy\n\n\n\n\n\n\nWarningThonny\n\n\n\nIf you have trouble using the numpy library in Thonny then you may need to add the package using Tool &gt; Manage packages… like we did for matplotlib, pygame\n\n\nThe NumPy library is used for more advanced math and it provides a function which can be used to generate an “array” which for your purposes is like a list, and it can automatically fill it according to an increment like the previous question.\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using numpy’s linspace function, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+    "text": "1.3 List of floats using numpy\n\n\n\n\n\n\nWarningThonny\n\n\n\nIf you have trouble using the numpy library in Thonny then you may need to add the package using Tool &gt; Manage packages… like we did for matplotlib, pygame\n\n\nThe NumPy library is used for more advanced math and one of the many things it provides is a function “linspace” can be used to generate a set of numbers evenly (linearly) spread across an interval.\nNumPy uses what it calls arrays which are very similar to lists, and you can convert an array back to a list using a .tolist() function.\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using numpy’s linspace function, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
   },
   {
     "objectID": "teacher/keith/exercises/lists.html#duplicate-a-list-manually",
@@ -3200,7 +3200,7 @@
     "href": "teacher/keith/exercises/lists.html#create-a-gridmatrix",
     "title": "Lists Exercises",
     "section": "4.1 Create a grid/matrix",
-    "text": "4.1 Create a grid/matrix\nMake a grid of 10 lists. Fill each of the 10 lists with 10 zeros. You can visualize this as a “list of columns” where for each X value, you’ll have a list of Y values.\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can actually do multiplication on a list like this:\nfive_zeros = [0] * 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nInstead of indices, save the previous item in a variable to compare against"
+    "text": "4.1 Create a grid/matrix\nMake a grid of 10 lists. Fill each of the 10 lists with 10 zeros. You can visualize this as a “list of columns” where for each X value, you’ll have a list of Y values.\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can actually do multiplication on a list like this:\nfive_zeros = [0] * 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
   },
   {
     "objectID": "teacher/keith/prep/midterm/practice-problems.html",

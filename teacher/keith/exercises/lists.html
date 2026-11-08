@@ -823,7 +823,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="[https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js](https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js)"></script>
 
-<div id="pyodide-status">Loading Pyodide...</div>
+<div id="pyodide-status">Loading NumPy...</div>
 <script type="text/javascript">
     async function main() {
         let pyodide = await loadPyodide();
@@ -935,12 +935,14 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIn0=
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Note, some of the values that are generated will look weird - this is just what happens with <em>float</em> values on computers which are not exactly precise. You can basically ignore this, but keep in mind that if you try checking if 2 float values are “equal” to each other, then sometimes they may not be exactly equal.</p>
+<p>Try enabling the line that rounds the number to see how it can be corrected.</p>
 <div>
 <div id="pyodide-4" class="exercise-cell">
 
 </div>
 <script type="pyodide-4-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFtdXG5mb3IgbnVtIGluIHJhbmdlKDAsIDEwMCk6XG4gICAgbnVtYmVycy5hcHBlbmQoMSArIG51bSAqIDAuMSlcblxucHJpbnQobnVtYmVycykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFtdXG5udW0gPSAxLjBcbmZvciBpIGluIHJhbmdlKDAsIDEwMCk6XG4gICAgbnVtYmVycy5hcHBlbmQobnVtKVxuICAgIG51bSA9IG51bSArIDAuMVxuICAgICMgbnVtID0gcm91bmQobnVtLCAyKVxuXG5wcmludChudW1iZXJzKSJ9
 </script>
 </div>
 </div>
@@ -962,7 +964,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibnVtYmVycyA9IFtdXG5mb3Ig
 <p>If you have trouble using the numpy library in Thonny then you may need to add the package using Tool &gt; Manage packages… like we did for matplotlib, pygame</p>
 </div>
 </div>
-<p>The NumPy library is used for more advanced math and it provides a function which can be used to generate an “array” which for your purposes is like a list, and it can automatically fill it according to an increment like the previous question.</p>
+<p>The NumPy library is used for more advanced math and one of the many things it provides is a function “linspace” can be used to generate a set of numbers evenly (<strong>lin</strong>early) spread across an interval.</p>
+<p>NumPy uses what it calls <strong>arrays</strong> which are very similar to lists, and you can convert an array back to a list using a .tolist() function.</p>
 <p>Make a list holding numbers 1.0 to 10.0 <strong>in increments of 0.1</strong> using <a href="https://www.geeksforgeeks.org/python/numpy-linspace/">numpy’s linspace function</a>, then print the contents of the list using a single print() statement.</p>
 <div>
 <div id="pyodide-5" class="exercise-cell">
@@ -989,7 +992,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 
 </div>
 <script type="pyodide-6-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5wXG5cbm51bWJlcnMgPSBucC5saW5zcGFjZSgxLjAsIDEwLjAsIG51bT05OSlcblxucHJpbnQobnVtYmVycykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5wXG5cbm51bWJlcnMgPSBucC5saW5zcGFjZSgxLjAsIDEwLjAsIG51bT05MSlcblxucHJpbnQobnVtYmVycy50b2xpc3QoKSkifQ==
 </script>
 </div>
 </div>
@@ -1591,13 +1594,12 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGlzdF9hID0gWzUsIDYsIDU2
 </div>
 <div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Instead of indices, save the previous item in a variable to compare against</p>
 <div>
 <div id="pyodide-37" class="exercise-cell">
 
 </div>
 <script type="pyodide-37-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfZ3JpZCA9IFtdICAgICMgc3RhcnQgd2l0aCBhbiBlbXB0eSBsaXN0XG5cbmZvciBpIGluIHJhbmdlKDEwKTpcbiAgICBteV9ncmlkW2ldID0gW10gIyBtYWtlIGEgbGlzdCBcblxuaWYgbGVuKGxpc3RfYSkgPiAwOlxuICAgIHByZXZpb3VzID0gbGlzdF9hWzBdXG5cbiAgICBmb3IgbnVtIGluIGxpc3RfYTpcbiAgICAgICAgcHJpbnQoZlwiQ29tcGFyaW5nIHtudW09fSB3aXRoIHtwcmV2aW91cz19XCIpXG4gICAgICAgIGlmIG51bSA+IHByZXZpb3VzOlxuICAgICAgICAgICAgY291bnQgPSBjb3VudCArIDFcbiAgICAgICAgcHJldmlvdXMgPSBudW1cblxucHJpbnQoY291bnQpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfZ3JpZCA9IFtdICAgICAgICAgICAgIyBzdGFydCB3aXRoIGFuIGVtcHR5IGxpc3RcblxuZm9yIGkgaW4gcmFuZ2UoMTApOlxuICAgIG15X2dyaWQuYXBwZW5kKFtdKSAgIyBhZGQgYW4gZW1wdHkgbGlzdCB3aGljaCB3aWxsIGhvbGQgdGhlIGNvbHVtblxuXG5uZXh0X3ZhbHVlID0gMFxuZm9yIHkgaW4gcmFuZ2UoMTApOiAgICAgICAgICAgICAgICAgICAgICMgXCJmb3IgZWFjaCByb3dcIlxuICAgIGZvciB4IGluIHJhbmdlKGxlbihteV9ncmlkKSk6ICAgICAgICMgXCJmb3IgZWFjaCBjb2x1bW5cIlxuICAgICAgICBuZXh0X3ZhbHVlID0gbmV4dF92YWx1ZSArIDFcbiAgICAgICAgbXlfZ3JpZFt4XS5hcHBlbmQobmV4dF92YWx1ZSlcblxuICAgICAgICAjIGVuZD1cIlwiIHN0b3BzIHB5dGhvbiBmcm9tIG1vdmluZyB0byB0aGUgbmV4dCBsaW5lIHdoZW4gd2UgcHJpbnQgdGhlIG5leHQgdGhpbmdcbiAgICAgICAgcHJpbnQoZlwie215X2dyaWRbeF1beV06M30gXCIsIGVuZD1cIlwiKSAgIFxuIFxuICAgIHByaW50KCkgIyB0aGlzIGp1c3QgZmluaXNoZXMgb25lIHJvdyBvZiBwcmludGluZyJ9
 </script>
 </div>
 </div>
