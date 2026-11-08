@@ -168,88 +168,417 @@
     "text": "For loops\nFor loops let you repeat code a number of times based on a set of values. Python will automatically make a variable for you and will first set that variable to the 1st value, then run your code, then change the variable to the 2nd value and re-run your code etc. until it reaches the last value.\nWe can tell it which values to use by defining an interval using the range() function. range() can be used 3 different ways as shown here:\n\nThe loop variable will use the interval [0..stop)\n\nfor variable in range(stop):\n     code to repeat for each value\n\n\nvariable will first be zero, then will increase by 1 at a time but will never reach stop.\n\n\nThe loop variable will use the interval [start..stop)\n\nfor variable in range(start, stop):\n     code to repeat for each value\n\n\nvariable will first be start, then will increase by 1 at a time but will never reach stop.\n\n\nThe loop variable will use the interval [start..stop) and will increase by ‘step’ each time\n\nfor variable in range(start, stop, step):\n     code to repeat for each value\n\n\nvariable will first be start, then will increase by step at a time but will never reach stop.\n\n\nExamples\n\nAdd all numbers from 1 to 10 (inclusive)\ntotal = 0\n\nfor i in range(1, 11):\n    total = total + i\n\n\nPrint each hour of the day (0:00, 1:00, 2:00…)\nfor hour in range(0, 24):\n    print(f\"{hour}:00\")\n\n\nPrint odd numbers from 1 to 10 (inclusive):\nfor num in range(1, 11, 2):\n    print(num)\n\n\nPrint odd numbers from 1 to 100 (inclusive):\nfor num in range(1, 101):\n    if num % 2 == 1:\n        print(num)\n\n\nPrint numbers between (and including) 7 and 100 but stop as soon as you find a number that is divisible by 6\nfor num in range(7, 101):\n    if num % 6 == 0:\n        print(f\"{num} is divisible by 6. Stopping.\")\n        break\n    print(num)\n\n\nCalculate the sum of the areas of 3 rectangles where each one is larger than the previous by 1 unit on each dimension:\nwidth = 10\nheight = 5\ntotal_area = 0\n\nfor rect_num in range(3):\n    rect_area = (width + rect_num) * (height + rect_num)\n    total_area = total_area + rect_area"
   },
   {
-    "objectID": "teacher/keith/review/functions.html",
-    "href": "teacher/keith/review/functions.html",
-    "title": "Functions Review",
+    "objectID": "teacher/keith/review/indentation.html",
+    "href": "teacher/keith/review/indentation.html",
+    "title": "Indentation Review",
     "section": "",
-    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#ignoring-parameters",
-    "href": "teacher/keith/review/functions.html#ignoring-parameters",
-    "title": "Functions Review",
+    "objectID": "teacher/keith/review/indentation.html#pattern",
+    "href": "teacher/keith/review/indentation.html#pattern",
+    "title": "Indentation Review",
     "section": "",
-    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#functions-vs-variables",
-    "href": "teacher/keith/review/functions.html#functions-vs-variables",
-    "title": "Functions Review",
-    "section": "Functions vs Variables",
-    "text": "Functions vs Variables\nWhy does the 2nd call to the function not work?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because on line 4 it make a variable with the same name as a function. From that point on, python will forget about the function called triple and will only use the variable called triple. Line 7 will fail because it tries to use a number (75 in this case) as if it was a function.\nDo not make variables inside or outside of functions that have the same name as a function."
+    "objectID": "teacher/keith/review/indentation.html#comparison",
+    "href": "teacher/keith/review/indentation.html#comparison",
+    "title": "Indentation Review",
+    "section": "Comparison",
+    "text": "Comparison\nThe following 4 programs are identical except for the indentation. The first program is logical and works properly, each of the others has some change in the indentation which causes Python to do something different.\nCompare each one with the correct version and try to understand why the program is behaving as it is.\n\nCorrect version\n\n\n\n\n\n\n\n\nWrong version 1\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the my_nightmare function. Because of that mistake, those lines of code starting with print(num) will be run before I actually called the function on line 17.\nNote that this doesn’t completely fail because I just happened to have a variable in my program called num which had the same name as the parameter of the function. That’s a good reason to generally avoid using the same for your variables vs the names of parameters. Python would have caught this mistake and told me something was wrong if I had named one of them differently. Change num to number on the first line and on the 2nd to last line and see what happens.\n\n\n\n\n\nWrong version 2\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the for-loop. Because of that mistake, those lines of code starting with if n &lt; 5 will be run after the for-loop has finished.\nInstead of checking each value of n inside the loop, it will only check the final value of n.\n\n\n\n\n\nWrong version 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhen is it printing “equal to 5” ?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent the else: line. This causes something pretty weird to happen because Python actually allows you to put an else: after a for-loop (same for a while-loop). An else: after a loop will be executed when the loop finishes as long as you did not end the loop early using break.\nYou’re not expected to learn this, please do not do it, but you can see that this error in doing your indentation can have very unexpected consequences"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#did-you-call",
-    "href": "teacher/keith/review/functions.html#did-you-call",
-    "title": "Functions Review",
-    "section": "Did you call?",
-    "text": "Did you call?\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it never actually called the function. The function was defined properly, but the code on line 4 is not properly telling Python to use the function. Instead, it is basically making a copy of the function itself.\nTo call a function, you must have round brackets ( ) after the name of the function, even if the function does not use parameters.\nIn the case above, the function needs to be told what the width and height are of the rectangle whose area we need and line 4 is clearly not giving any such information to the function so how could it possibly know that we want the area of a rectangle 5 x 10 ?\nCorrected version:"
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#math-functions",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#math-functions",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Math functions",
+    "text": "Math functions\nimport math\n\nprint(math.pi)        # the constant pi\n\nx_sq = math.sqrt(16)  # square root\n\ny = math.sin(0)       # sin(x) function where x is in radians\ny = math.cos(0)       # cos(x) function where x is in radians\n\nx = math.asin(1)      # sin⁻¹() function where the returned value is in radians\nx = math.acos(1)      # cos⁻¹() function where the returned value is in radians"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#cant-answer",
-    "href": "teacher/keith/review/functions.html#cant-answer",
-    "title": "Functions Review",
-    "section": "Can’t answer",
-    "text": "Can’t answer\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the function calculated the correct result but never returned the result. The function did some work but didn’t give us the answer.\nIf you see None get printed, you probably forgot a return statement inside your function!\nCorrected version:"
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#creating-and-using-functions",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#creating-and-using-functions",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Creating and using functions",
+    "text": "Creating and using functions\n\nReturning functions\nExample\ndef my_function(a, b):\n  return a + b\n\nHow to call a returning function\nvariable = my_function(3, 4)\nprint(variable)\nOr,\nprint(my_function(3, 4))\n\n\n\nPrinting functions\nExample\ndef my_function2(a, b):\n  print(a + b)\n\nHow to call a printing function\nmy_function2(3, 4)"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#your-order-please",
-    "href": "teacher/keith/review/functions.html#your-order-please",
-    "title": "Functions Review",
-    "section": "Your order please",
-    "text": "Your order please\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the values used in the function call are not in the correct order to match what the function is expecting.\nCorrected version:"
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-calling-other-functions",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-calling-other-functions",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Functions calling other functions",
+    "text": "Functions calling other functions\nExample\ndef called(number):\n  return number * 2\n\ndef caller(num1, num2, num3):\n  result = called(num1) + called(num2) + called(num3)\n  print(result)  # or return, depending on the goal"
   },
   {
-    "objectID": "teacher/keith/review/functions.html#any-name-you-like",
-    "href": "teacher/keith/review/functions.html#any-name-you-like",
-    "title": "Functions Review",
-    "section": "Any name you like",
-    "text": "Any name you like\nThe following code does work. There is a function called circle_area that has a parameter to represent the radius of a circle and it will return the area.\nLook carefully at the three places in the code that call this function. Notice how it doesn’t matter at all what the name of the parameter on the function was vs. the name of the variable whose value you pass to the function.\nThe name radius is what the circle_area function uses to refer to the radius, but you can send any value you have to the function and the function doesn’t care where the value came from."
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-exist-in-their-own-isolated-bubble-scope",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-exist-in-their-own-isolated-bubble-scope",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Functions exist in their own isolated bubble (scope)",
+    "text": "Functions exist in their own isolated bubble (scope)\ndef add(a, b):\n  total = a + b   # &lt;-- not the same total as below\n  return total\n\ndef multiply(a, b):\n  total = a * b   # &lt;-- not the same total as above\n  return total\n\ntotal = 0         # &lt;-- not the same total as those above\n\nType hinting (optional)\ndef my_function3(a: int, b: int) -&gt; int:\n  return a + b\n\nThis function works exactly like the first example. The hints only document that a and b are meant to be int and that it returns an int; Python does not enforce them."
   },
   {
-    "objectID": "teacher/youmna/assignments/assignment3/instructions.html",
-    "href": "teacher/youmna/assignments/assignment3/instructions.html",
-    "title": "Assignment3",
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-strings",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-strings",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Functions returning strings",
+    "text": "Functions returning strings\nExample\ndef greet(language):\n  if language == \"French\":\n    return \"Bonjour!\"\n  else:  # defaults to English for all other languages\n    return \"Hello!\""
+  },
+  {
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-booleans",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-booleans",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Functions returning booleans",
+    "text": "Functions returning booleans\nExample\ndef is_big(number):\n  if number &gt; 10_000:\n    return True\n  else:\n    return False\nNote: this can also be written as such:\ndef is_big(number):\n  return number &gt; 10_000"
+  },
+  {
+    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-with-multiple-return-values",
+    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-with-multiple-return-values",
+    "title": "Test 1 - Checklist for Youmna’s sections",
+    "section": "Functions with multiple return values",
+    "text": "Functions with multiple return values\nExample\ndef square(x1, x2):\n  y1 = x1**2\n  y2 = x2**2\n\n  return y1, y2"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html",
+    "href": "syllabus/Youmna/Youmna.html",
+    "title": "Youmna",
     "section": "",
-    "text": "📝 Worth: 7 %"
+    "text": "This syllabus applies only to Youmna’s sections."
   },
   {
-    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#learning-objectives",
-    "href": "teacher/youmna/assignments/assignment3/instructions.html#learning-objectives",
-    "title": "Assignment3",
-    "section": "🎯 Learning Objectives",
-    "text": "🎯 Learning Objectives\n\nCreate a list to store multiple values\nPlot lists using matplotlib\nRead data from a Comma Separated Values (.csv) file\nDevelop an algorithm to detect peaks"
+    "objectID": "syllabus/Youmna/Youmna.html#prep",
+    "href": "syllabus/Youmna/Youmna.html#prep",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nNothing to prepare for just be there on time."
   },
   {
-    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#context-heart-beats",
-    "href": "teacher/youmna/assignments/assignment3/instructions.html#context-heart-beats",
-    "title": "Assignment3",
-    "section": "Context: Heart Beats ❤️",
-    "text": "Context: Heart Beats ❤️\nAs the heart pumps blood through the body, it emits an electric signal which can be measured, amplified and displayed. This is what we call an electrocardiogram, each heart beat is characterized by a the cardiac cycle made up of different waves named P wave, QRS complex and the T wave as shown below. They offer various medical insights on the patient’s health.\n\nThis assignment will be done in three parts:\n\nPart 1: Plotting a provided ECG with the correct time axis\nPart 2:  Reading an entire ECG from a file and plotting the entire signal\nPart 3:  Build an algorithm to develop R peaks and calculating the heart rate."
+    "objectID": "syllabus/Youmna/Youmna.html#in-class",
+    "href": "syllabus/Youmna/Youmna.html#in-class",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nIntroductions\nSyllabus\nFiles and folders\n\nPython files\n\nLogging into One Drive to synchronize your files\nLab 0 (0%)"
   },
   {
-    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#specific-instructions",
-    "href": "teacher/youmna/assignments/assignment3/instructions.html#specific-instructions",
-    "title": "Assignment3",
-    "section": "📝 Specific Instructions",
-    "text": "📝 Specific Instructions\nThe structure of this assignment will be different than the Assignment2:\n\nDownload and extract the starter code.\nYou will be working within two python files:\n\nmy_functions.py : Where all the functions should be defined\npart1.py: This is where the main() function is calling the other functions\n\nKeep both files in the same folder\nI added an import statement in part1.py, please DO NOT remove this line\nfrom my_functions import *\n\nthe * means import all the functions defined in this file.\n\nAs usual, do not rename the files, respect each function name and its parameter list\nMake sure Matplotlib is installed, if not follow these instructions"
+    "objectID": "syllabus/Youmna/Youmna.html#after-class",
+    "href": "syllabus/Youmna/Youmna.html#after-class",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nGo over the notes for this week: Files and folders\nSetup your home computer:\n\nSetup Thonny"
   },
   {
-    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#task",
-    "href": "teacher/youmna/assignments/assignment3/instructions.html#task",
-    "title": "Assignment3",
-    "section": "Task",
-    "text": "Task\nIn part1.py, you are given a sample ecg_values containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure.\n\nWrite a function create_time_axis()\nInput parameters: \necg_values: A list of floats representing the ecg values (in mV)\nsampling_rate: A float representing the rate at which the samples were measured (in Hz)\nReturn: \nA list of time values in seconds\n\nIt should have the same length as the ecg_values list.\nIt should start at 0seconds.\nIncrease by a constant time interval of 1 / sampling_rate seconds between consecutive values.\nMaintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.\n\n\nFor example, suppose sampling_rate = 360 and ecg_values contains 500 measurements.\nSince 360 samples are recorded every second, the time interval between consecutive samples is:\n\\(\\Delta t = \\frac{1}{360} \\approx 0.00278 \\text{ seconds}\\)\nThe resulting time values should be : \\([0, \\frac{1}{360}, \\frac{2}{360}, \\frac{3}{360}, ..., \\frac{i}{360}, ... , \\frac{499}{360}]\\)\n\nTest\nCall the function in main() in the part1.py:\ndef main():\n  ecg = [-0.955, -0.91, -0.895,...]\n  time_values = create_time_values(ecg_values=ecg, sampling_rate=SAMPLING_RATE)\n  print(time_values)\n  print(len(time_values))\nExpected output:\n[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]\n500\n\n\nWrite a function plot_ecg()\nInput parameters:\n\necg_values : list of floats of ecg readings\ntime_values: list of floats of the seconds\noutput_filename: the filename under which the graph image will be saved.\nshow_graph: A boolean, when set to True the figure should be shown on the screen, otherwise, it should not be shown.\n\nReturn: No return\nTask:\n\nPlot the ecg_values versus the time_values\nApply appropriate styling using Matplotlib:\n\nAdd a title using plt.title()\nAdd an x axis title using plt.xlabel()\nAdd a y axis title using plt.ylabel()\nAdd a grid using plt.grid(True)\n\nSave the graph under filenameusing plt.savefig()\nIf the boolean show_graph is True, display the figure with plt.show()\nClose the figure with plt.close()\nShow your graph to your teacher."
+    "objectID": "syllabus/Youmna/Youmna.html#prep-1",
+    "href": "syllabus/Youmna/Youmna.html#prep-1",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes and examples:\n\nVariables & Constants\nIntegers & Floats\nBooleans\nStrings"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-1",
+    "href": "syllabus/Youmna/Youmna.html#in-class-1",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nWhat is programming? Code your teacher activity.\nIn-class Demo on Thonny\n✏️ Quiz 1 (1%): Short paper quiz on Variables & Data Types\nQuiz recap\nAssignment 1 - Part 1"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-1",
+    "href": "syllabus/Youmna/Youmna.html#after-class-1",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the practice exercises for that section"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-2",
+    "href": "syllabus/Youmna/Youmna.html#prep-2",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes:\n\nf-strings\nArithmetic operators\nTry the Practice problems"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-2",
+    "href": "syllabus/Youmna/Youmna.html#in-class-2",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nClarifications on Assignment 1 - Part 1 (why some gradescope tests failed)\nShort demo on f-strings and arithmetic operators\nThe math module\nClarifications on the modulo operator\nPractice Problems on the Modulo and Floor division\nAssignment 1 - Part 2 (submitted in class)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-2",
+    "href": "syllabus/Youmna/Youmna.html#after-class-2",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the practice problems on assignment operators.\nPrepare for next class."
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-3",
+    "href": "syllabus/Youmna/Youmna.html#prep-3",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes:\n\nAssignment operators\nTry the Practice problems\nConditional Statements\nComparison operators\nTry the Practice problems (coming soon)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-3",
+    "href": "syllabus/Youmna/Youmna.html#in-class-3",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\n✏️ Quiz 2 (1%): Assignments operators\nShort demo on assignment operators\nPractice exercise on conditional statements\nQuiz recap\nUsing other math functions from the math module.\nAssignment 1 - Part 3 (final part)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-3",
+    "href": "syllabus/Youmna/Youmna.html#after-class-3",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the assignement at home\nPrepare for next class"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-4",
+    "href": "syllabus/Youmna/Youmna.html#prep-4",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes:\n\nConditional if/else\nLogical Operators\nTry the ✍️ Practice problems\nWhat are functions?"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-4",
+    "href": "syllabus/Youmna/Youmna.html#in-class-4",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nGoing over the Quiz 2\nRecap of concepts and more whiteboard problem solving\n✏️ Quiz 3 (1%): Conditional statements\nDrawing shapes with turtle graphics\nIntroduction to function parameters\nExercise on identifying parameters of a shape and re-draw it in multiple variations.\nPractical exercise (submitted in class)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-4",
+    "href": "syllabus/Youmna/Youmna.html#after-class-4",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nPrepare for next class"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-5",
+    "href": "syllabus/Youmna/Youmna.html#prep-5",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes:\n\nCustom Functions\nTry the practice questions"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-5",
+    "href": "syllabus/Youmna/Youmna.html#in-class-5",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nRecap on functions :\n\nParameters\nReturn\nScope\n\nQuiz 4 (1%): Functions\nFunctions with conditonals statements\nAssignment 2 - Part 1 (submitted in class)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-5",
+    "href": "syllabus/Youmna/Youmna.html#after-class-5",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nPrepare for next class"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-6",
+    "href": "syllabus/Youmna/Youmna.html#prep-6",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\nGo over:\n\nContinue the Assignment 2- Part 1\nPractice conditionals and functions"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-6",
+    "href": "syllabus/Youmna/Youmna.html#in-class-6",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nImpersonate code card game\nFunctions calling other functions tracing exercise.\nComplete the Assignment 2- Part 1\nWork the Assignment Part 2\n\n\nSome hints will be provided for this part"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-6",
+    "href": "syllabus/Youmna/Youmna.html#after-class-6",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 2"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-7",
+    "href": "syllabus/Youmna/Youmna.html#prep-7",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\nGo over:\n\nFor Loops\nTry the level 1 Practice Problems"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-7",
+    "href": "syllabus/Youmna/Youmna.html#in-class-7",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nShort Recap on for-loops\nQuiz 5: For-loops and functions (1%)\nWork on the Assignment’s Part 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-7",
+    "href": "syllabus/Youmna/Youmna.html#after-class-7",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#dates",
+    "href": "syllabus/Youmna/Youmna.html#dates",
+    "title": "Youmna",
+    "section": "Dates:",
+    "text": "Dates:\n\nSection 7: 13 Octobers 2026\nSection 1 : 16 October 2026"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-8",
+    "href": "syllabus/Youmna/Youmna.html#prep-8",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nPractice Problems for-loop\nPractice Problems functions\nStudy for test\nTopics to review for the test:\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-8",
+    "href": "syllabus/Youmna/Youmna.html#in-class-8",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nHarder problems to solve\nQuiz 6: Recap (longer quiz worth 2%)\nReview before the test"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-8",
+    "href": "syllabus/Youmna/Youmna.html#after-class-8",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nKeep Studying for test\nTopics to review for the test:\nRevist the assignments\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nAdded: if/elif/else statements\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)\n\nNOT in the Midterm : - input() function - not - While loops - Lists"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#dates-1",
+    "href": "syllabus/Youmna/Youmna.html#dates-1",
+    "title": "Youmna",
+    "section": "Dates:",
+    "text": "Dates:\n\nSection 1 : 23 October 2026 at 1:30 pm Room H-318\nSection 7: 27 Octobers 2026 at 1:30 pm Room AME-602"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-9",
+    "href": "syllabus/Youmna/Youmna.html#prep-9",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over the notes and examples for all topics covered in the course.\nDo the practice problems for each topic.\nDo the practice test.\nHere’s a complete checklist of topics"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-10",
+    "href": "syllabus/Youmna/Youmna.html#prep-10",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nNothing take a break after the test"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-9",
+    "href": "syllabus/Youmna/Youmna.html#in-class-9",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nExam solution and feedback\nTurtle Lab (1%): Robot Collision Avoidance\nAfter break:\nIntroduction to lists"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-9",
+    "href": "syllabus/Youmna/Youmna.html#after-class-9",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nRedo the test to make sure you understood your mistakes"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-11",
+    "href": "syllabus/Youmna/Youmna.html#prep-11",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nNothing take a break after the test"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-10",
+    "href": "syllabus/Youmna/Youmna.html#in-class-10",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nExam solution and feedback\nTurtle Lab (1%): Robot Collision Avoidance"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-10",
+    "href": "syllabus/Youmna/Youmna.html#after-class-10",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nRedo the test to make sure you understood your mistakes."
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-12",
+    "href": "syllabus/Youmna/Youmna.html#prep-12",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over notes on lists\nPractice with level 1 questions on lists"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-11",
+    "href": "syllabus/Youmna/Youmna.html#in-class-11",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nCreating simple lists\nAppending elements to a list using loops\nBREAK\nQuiz 7 (1%) : Simple Lists\nQuiz recap\nInstalling Matplotlib\nPlotting a list\nAssignment 3 - Part 1 (due at midnight)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-11",
+    "href": "syllabus/Youmna/Youmna.html#after-class-11",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nPractice with level 2 questions using loops with lists.\nPrep for next class!"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-13",
+    "href": "syllabus/Youmna/Youmna.html#prep-13",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nGo over notes on lists\n\ninsert() and pop() will not be on the quiz.\n\nAccessing elements in a List\nPractice with level 1 questions on lists"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-12",
+    "href": "syllabus/Youmna/Youmna.html#in-class-12",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nUsing append in a loop\nQuiz 7 (1%) : Intro Lists\nQuiz recap\nBREAK\nAssignment 3 - Part 1 (due in class)\nDemo on reading data from files"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-12",
+    "href": "syllabus/Youmna/Youmna.html#after-class-12",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nPrep for next class!\nRead Assignment Part 2"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-14",
+    "href": "syllabus/Youmna/Youmna.html#prep-14",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nAccessing elements in a List\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-13",
+    "href": "syllabus/Youmna/Youmna.html#in-class-13",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nBREAK\nDemo reading data from a file\nAssignment 3 - Part 2 (due in class)\nAssignment 3 - Part 3 (started, finished at home)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-13",
+    "href": "syllabus/Youmna/Youmna.html#after-class-13",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nAssignment 3 - Part 3 (finish at home, before next class)"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-15",
+    "href": "syllabus/Youmna/Youmna.html#prep-15",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-14",
+    "href": "syllabus/Youmna/Youmna.html#in-class-14",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\nComing soon…"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-14",
+    "href": "syllabus/Youmna/Youmna.html#after-class-14",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\nComing soon …"
   },
   {
     "objectID": "topics/07_conditionals/01_if_statements/01_if_statements.html",
@@ -2650,417 +2979,228 @@
     ]
   },
   {
-    "objectID": "syllabus/Youmna/Youmna.html",
-    "href": "syllabus/Youmna/Youmna.html",
-    "title": "Youmna",
+    "objectID": "syllabus/Keith/Keith.html",
+    "href": "syllabus/Keith/Keith.html",
+    "title": "420-SN1 Notes",
     "section": "",
-    "text": "This syllabus applies only to Youmna’s sections."
+    "text": "Exercises 1."
   },
   {
-    "objectID": "syllabus/Youmna/Youmna.html#prep",
-    "href": "syllabus/Youmna/Youmna.html#prep",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nNothing to prepare for just be there on time."
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class",
-    "href": "syllabus/Youmna/Youmna.html#in-class",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nIntroductions\nSyllabus\nFiles and folders\n\nPython files\n\nLogging into One Drive to synchronize your files\nLab 0 (0%)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class",
-    "href": "syllabus/Youmna/Youmna.html#after-class",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nGo over the notes for this week: Files and folders\nSetup your home computer:\n\nSetup Thonny"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-1",
-    "href": "syllabus/Youmna/Youmna.html#prep-1",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes and examples:\n\nVariables & Constants\nIntegers & Floats\nBooleans\nStrings"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-1",
-    "href": "syllabus/Youmna/Youmna.html#in-class-1",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nWhat is programming? Code your teacher activity.\nIn-class Demo on Thonny\n✏️ Quiz 1 (1%): Short paper quiz on Variables & Data Types\nQuiz recap\nAssignment 1 - Part 1"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-1",
-    "href": "syllabus/Youmna/Youmna.html#after-class-1",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the practice exercises for that section"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-2",
-    "href": "syllabus/Youmna/Youmna.html#prep-2",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes:\n\nf-strings\nArithmetic operators\nTry the Practice problems"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-2",
-    "href": "syllabus/Youmna/Youmna.html#in-class-2",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nClarifications on Assignment 1 - Part 1 (why some gradescope tests failed)\nShort demo on f-strings and arithmetic operators\nThe math module\nClarifications on the modulo operator\nPractice Problems on the Modulo and Floor division\nAssignment 1 - Part 2 (submitted in class)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-2",
-    "href": "syllabus/Youmna/Youmna.html#after-class-2",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the practice problems on assignment operators.\nPrepare for next class."
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-3",
-    "href": "syllabus/Youmna/Youmna.html#prep-3",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes:\n\nAssignment operators\nTry the Practice problems\nConditional Statements\nComparison operators\nTry the Practice problems (coming soon)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-3",
-    "href": "syllabus/Youmna/Youmna.html#in-class-3",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\n✏️ Quiz 2 (1%): Assignments operators\nShort demo on assignment operators\nPractice exercise on conditional statements\nQuiz recap\nUsing other math functions from the math module.\nAssignment 1 - Part 3 (final part)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-3",
-    "href": "syllabus/Youmna/Youmna.html#after-class-3",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the assignement at home\nPrepare for next class"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-4",
-    "href": "syllabus/Youmna/Youmna.html#prep-4",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes:\n\nConditional if/else\nLogical Operators\nTry the ✍️ Practice problems\nWhat are functions?"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-4",
-    "href": "syllabus/Youmna/Youmna.html#in-class-4",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nGoing over the Quiz 2\nRecap of concepts and more whiteboard problem solving\n✏️ Quiz 3 (1%): Conditional statements\nDrawing shapes with turtle graphics\nIntroduction to function parameters\nExercise on identifying parameters of a shape and re-draw it in multiple variations.\nPractical exercise (submitted in class)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-4",
-    "href": "syllabus/Youmna/Youmna.html#after-class-4",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nPrepare for next class"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-5",
-    "href": "syllabus/Youmna/Youmna.html#prep-5",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes:\n\nCustom Functions\nTry the practice questions"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-5",
-    "href": "syllabus/Youmna/Youmna.html#in-class-5",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nRecap on functions :\n\nParameters\nReturn\nScope\n\nQuiz 4 (1%): Functions\nFunctions with conditonals statements\nAssignment 2 - Part 1 (submitted in class)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-5",
-    "href": "syllabus/Youmna/Youmna.html#after-class-5",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nPrepare for next class"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-6",
-    "href": "syllabus/Youmna/Youmna.html#prep-6",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\nGo over:\n\nContinue the Assignment 2- Part 1\nPractice conditionals and functions"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-6",
-    "href": "syllabus/Youmna/Youmna.html#in-class-6",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nImpersonate code card game\nFunctions calling other functions tracing exercise.\nComplete the Assignment 2- Part 1\nWork the Assignment Part 2\n\n\nSome hints will be provided for this part"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-6",
-    "href": "syllabus/Youmna/Youmna.html#after-class-6",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 2"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-7",
-    "href": "syllabus/Youmna/Youmna.html#prep-7",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\nGo over:\n\nFor Loops\nTry the level 1 Practice Problems"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-7",
-    "href": "syllabus/Youmna/Youmna.html#in-class-7",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nShort Recap on for-loops\nQuiz 5: For-loops and functions (1%)\nWork on the Assignment’s Part 3"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-7",
-    "href": "syllabus/Youmna/Youmna.html#after-class-7",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the Assignment 2 - Part 3"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#dates",
-    "href": "syllabus/Youmna/Youmna.html#dates",
-    "title": "Youmna",
-    "section": "Dates:",
-    "text": "Dates:\n\nSection 7: 13 Octobers 2026\nSection 1 : 16 October 2026"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-8",
-    "href": "syllabus/Youmna/Youmna.html#prep-8",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nPractice Problems for-loop\nPractice Problems functions\nStudy for test\nTopics to review for the test:\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-8",
-    "href": "syllabus/Youmna/Youmna.html#in-class-8",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nHarder problems to solve\nQuiz 6: Recap (longer quiz worth 2%)\nReview before the test"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-8",
-    "href": "syllabus/Youmna/Youmna.html#after-class-8",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nKeep Studying for test\nTopics to review for the test:\nRevist the assignments\nVariables and Data Types\nf-strings (and floating point formatting)\nOperators\nWriting math expressions in Python\nThe math module (import math, math.sqrt(), math.sin(), math.cos(), math.pi)\nConditional Statements (if, if/else)\nAdded: if/elif/else statements\nFunctions (parameters, return, scope, functions calling other functions)\nFor Loops (synthax, range(), break, continue)\n\nNOT in the Midterm : - input() function - not - While loops - Lists"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#dates-1",
-    "href": "syllabus/Youmna/Youmna.html#dates-1",
-    "title": "Youmna",
-    "section": "Dates:",
-    "text": "Dates:\n\nSection 1 : 23 October 2026 at 1:30 pm Room H-318\nSection 7: 27 Octobers 2026 at 1:30 pm Room AME-602"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-9",
-    "href": "syllabus/Youmna/Youmna.html#prep-9",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over the notes and examples for all topics covered in the course.\nDo the practice problems for each topic.\nDo the practice test.\nHere’s a complete checklist of topics"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-10",
-    "href": "syllabus/Youmna/Youmna.html#prep-10",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nNothing take a break after the test"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-9",
-    "href": "syllabus/Youmna/Youmna.html#in-class-9",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nExam solution and feedback\nTurtle Lab (1%): Robot Collision Avoidance\nAfter break:\nIntroduction to lists"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-9",
-    "href": "syllabus/Youmna/Youmna.html#after-class-9",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nRedo the test to make sure you understood your mistakes"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-11",
-    "href": "syllabus/Youmna/Youmna.html#prep-11",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nNothing take a break after the test"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-10",
-    "href": "syllabus/Youmna/Youmna.html#in-class-10",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nExam solution and feedback\nTurtle Lab (1%): Robot Collision Avoidance"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-10",
-    "href": "syllabus/Youmna/Youmna.html#after-class-10",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nRedo the test to make sure you understood your mistakes."
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-12",
-    "href": "syllabus/Youmna/Youmna.html#prep-12",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over notes on lists\nPractice with level 1 questions on lists"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-11",
-    "href": "syllabus/Youmna/Youmna.html#in-class-11",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nCreating simple lists\nAppending elements to a list using loops\nBREAK\nQuiz 7 (1%) : Simple Lists\nQuiz recap\nInstalling Matplotlib\nPlotting a list\nAssignment 3 - Part 1 (due at midnight)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-11",
-    "href": "syllabus/Youmna/Youmna.html#after-class-11",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nPractice with level 2 questions using loops with lists.\nPrep for next class!"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-13",
-    "href": "syllabus/Youmna/Youmna.html#prep-13",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nGo over notes on lists\n\ninsert() and pop() will not be on the quiz.\n\nAccessing elements in a List\nPractice with level 1 questions on lists"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-12",
-    "href": "syllabus/Youmna/Youmna.html#in-class-12",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nUsing append in a loop\nQuiz 7 (1%) : Intro Lists\nQuiz recap\nBREAK\nAssignment 3 - Part 1 (due in class)\nDemo on reading data from files"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-12",
-    "href": "syllabus/Youmna/Youmna.html#after-class-12",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nPrep for next class!\nRead Assignment Part 2"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-14",
-    "href": "syllabus/Youmna/Youmna.html#prep-14",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nAccessing elements in a List\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-13",
-    "href": "syllabus/Youmna/Youmna.html#in-class-13",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nBREAK\nDemo reading data from a file\nAssignment 3 - Part 2 (due in class)\nAssignment 3 - Part 3 (started, finished at home)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-13",
-    "href": "syllabus/Youmna/Youmna.html#after-class-13",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\n\nAssignment 3 - Part 3 (finish at home, before next class)"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#prep-15",
-    "href": "syllabus/Youmna/Youmna.html#prep-15",
-    "title": "Youmna",
-    "section": "📚 Prep",
-    "text": "📚 Prep\n\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#in-class-14",
-    "href": "syllabus/Youmna/Youmna.html#in-class-14",
-    "title": "Youmna",
-    "section": "💻 In class",
-    "text": "💻 In class\nComing soon…"
-  },
-  {
-    "objectID": "syllabus/Youmna/Youmna.html#after-class-14",
-    "href": "syllabus/Youmna/Youmna.html#after-class-14",
-    "title": "Youmna",
-    "section": "🚀 After class",
-    "text": "🚀 After class\nComing soon …"
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#math-functions",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#math-functions",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Math functions",
-    "text": "Math functions\nimport math\n\nprint(math.pi)        # the constant pi\n\nx_sq = math.sqrt(16)  # square root\n\ny = math.sin(0)       # sin(x) function where x is in radians\ny = math.cos(0)       # cos(x) function where x is in radians\n\nx = math.asin(1)      # sin⁻¹() function where the returned value is in radians\nx = math.acos(1)      # cos⁻¹() function where the returned value is in radians"
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#creating-and-using-functions",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#creating-and-using-functions",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Creating and using functions",
-    "text": "Creating and using functions\n\nReturning functions\nExample\ndef my_function(a, b):\n  return a + b\n\nHow to call a returning function\nvariable = my_function(3, 4)\nprint(variable)\nOr,\nprint(my_function(3, 4))\n\n\n\nPrinting functions\nExample\ndef my_function2(a, b):\n  print(a + b)\n\nHow to call a printing function\nmy_function2(3, 4)"
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-calling-other-functions",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-calling-other-functions",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Functions calling other functions",
-    "text": "Functions calling other functions\nExample\ndef called(number):\n  return number * 2\n\ndef caller(num1, num2, num3):\n  result = called(num1) + called(num2) + called(num3)\n  print(result)  # or return, depending on the goal"
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-exist-in-their-own-isolated-bubble-scope",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-exist-in-their-own-isolated-bubble-scope",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Functions exist in their own isolated bubble (scope)",
-    "text": "Functions exist in their own isolated bubble (scope)\ndef add(a, b):\n  total = a + b   # &lt;-- not the same total as below\n  return total\n\ndef multiply(a, b):\n  total = a * b   # &lt;-- not the same total as above\n  return total\n\ntotal = 0         # &lt;-- not the same total as those above\n\nType hinting (optional)\ndef my_function3(a: int, b: int) -&gt; int:\n  return a + b\n\nThis function works exactly like the first example. The hints only document that a and b are meant to be int and that it returns an int; Python does not enforce them."
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-strings",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-strings",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Functions returning strings",
-    "text": "Functions returning strings\nExample\ndef greet(language):\n  if language == \"French\":\n    return \"Bonjour!\"\n  else:  # defaults to English for all other languages\n    return \"Hello!\""
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-booleans",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-returning-booleans",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Functions returning booleans",
-    "text": "Functions returning booleans\nExample\ndef is_big(number):\n  if number &gt; 10_000:\n    return True\n  else:\n    return False\nNote: this can also be written as such:\ndef is_big(number):\n  return number &gt; 10_000"
-  },
-  {
-    "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-with-multiple-return-values",
-    "href": "teacher/youmna/prep/midterm/midterm-checklist.html#functions-with-multiple-return-values",
-    "title": "Test 1 - Checklist for Youmna’s sections",
-    "section": "Functions with multiple return values",
-    "text": "Functions with multiple return values\nExample\ndef square(x1, x2):\n  y1 = x1**2\n  y2 = x2**2\n\n  return y1, y2"
-  },
-  {
-    "objectID": "teacher/keith/review/indentation.html",
-    "href": "teacher/keith/review/indentation.html",
-    "title": "Indentation Review",
+    "objectID": "syllabus/Keith/Keith.html#lists",
+    "href": "syllabus/Keith/Keith.html#lists",
+    "title": "420-SN1 Notes",
     "section": "",
-    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
+    "text": "Exercises 1."
   },
   {
-    "objectID": "teacher/keith/review/indentation.html#pattern",
-    "href": "teacher/keith/review/indentation.html#pattern",
-    "title": "Indentation Review",
+    "objectID": "teacher/youmna/assignments/assignment3/instructions.html",
+    "href": "teacher/youmna/assignments/assignment3/instructions.html",
+    "title": "Assignment3",
     "section": "",
-    "text": "Python is unforgiving when it comes to indentation but the pattern for you to follow is consistent throughout the language: you start by writing a header, and then follow it with a body.\n\nThe header begins with a keyword sush as def, if, elif, else, for, while etc.\nThe header ends with a colon :\nThe body may be one or many statements and each line of the body must be indented"
+    "text": "📝 Worth: 7 %"
   },
   {
-    "objectID": "teacher/keith/review/indentation.html#comparison",
-    "href": "teacher/keith/review/indentation.html#comparison",
-    "title": "Indentation Review",
-    "section": "Comparison",
-    "text": "Comparison\nThe following 4 programs are identical except for the indentation. The first program is logical and works properly, each of the others has some change in the indentation which causes Python to do something different.\nCompare each one with the correct version and try to understand why the program is behaving as it is.\n\nCorrect version\n\n\n\n\n\n\n\n\nWrong version 1\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the my_nightmare function. Because of that mistake, those lines of code starting with print(num) will be run before I actually called the function on line 17.\nNote that this doesn’t completely fail because I just happened to have a variable in my program called num which had the same name as the parameter of the function. That’s a good reason to generally avoid using the same for your variables vs the names of parameters. Python would have caught this mistake and told me something was wrong if I had named one of them differently. Change num to number on the first line and on the 2nd to last line and see what happens.\n\n\n\n\n\nWrong version 2\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent most of the code that was supposed to be inside the for-loop. Because of that mistake, those lines of code starting with if n &lt; 5 will be run after the for-loop has finished.\nInstead of checking each value of n inside the loop, it will only check the final value of n.\n\n\n\n\n\nWrong version 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhen is it printing “equal to 5” ?\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nIn this version, I forgot to indent the else: line. This causes something pretty weird to happen because Python actually allows you to put an else: after a for-loop (same for a while-loop). An else: after a loop will be executed when the loop finishes as long as you did not end the loop early using break.\nYou’re not expected to learn this, please do not do it, but you can see that this error in doing your indentation can have very unexpected consequences"
+    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#learning-objectives",
+    "href": "teacher/youmna/assignments/assignment3/instructions.html#learning-objectives",
+    "title": "Assignment3",
+    "section": "🎯 Learning Objectives",
+    "text": "🎯 Learning Objectives\n\nCreate a list to store multiple values\nPlot lists using matplotlib\nRead data from a Comma Separated Values (.csv) file\nDevelop an algorithm to detect peaks"
+  },
+  {
+    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#context-heart-beats",
+    "href": "teacher/youmna/assignments/assignment3/instructions.html#context-heart-beats",
+    "title": "Assignment3",
+    "section": "Context: Heart Beats ❤️",
+    "text": "Context: Heart Beats ❤️\nAs the heart pumps blood through the body, it emits an electric signal which can be measured, amplified and displayed. This is what we call an electrocardiogram, each heart beat is characterized by a the cardiac cycle made up of different waves named P wave, QRS complex and the T wave as shown below. They offer various medical insights on the patient’s health.\n\nThis assignment will be done in three parts:\n\nPart 1: Plotting a provided ECG with the correct time axis\nPart 2:  Reading an entire ECG from a file and plotting the entire signal\nPart 3:  Build an algorithm to develop R peaks and calculating the heart rate."
+  },
+  {
+    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#specific-instructions",
+    "href": "teacher/youmna/assignments/assignment3/instructions.html#specific-instructions",
+    "title": "Assignment3",
+    "section": "📝 Specific Instructions",
+    "text": "📝 Specific Instructions\nThe structure of this assignment will be different than the Assignment2:\n\nDownload and extract the starter code.\nYou will be working within two python files:\n\nmy_functions.py : Where all the functions should be defined\npart1.py: This is where the main() function is calling the other functions\n\nKeep both files in the same folder\nI added an import statement in part1.py, please DO NOT remove this line\nfrom my_functions import *\n\nthe * means import all the functions defined in this file.\n\nAs usual, do not rename the files, respect each function name and its parameter list\nMake sure Matplotlib is installed, if not follow these instructions"
+  },
+  {
+    "objectID": "teacher/youmna/assignments/assignment3/instructions.html#task",
+    "href": "teacher/youmna/assignments/assignment3/instructions.html#task",
+    "title": "Assignment3",
+    "section": "Task",
+    "text": "Task\nIn part1.py, you are given a sample ecg_values containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure.\n\nWrite a function create_time_axis()\nInput parameters: \necg_values: A list of floats representing the ecg values (in mV)\nsampling_rate: A float representing the rate at which the samples were measured (in Hz)\nReturn: \nA list of time values in seconds\n\nIt should have the same length as the ecg_values list.\nIt should start at 0seconds.\nIncrease by a constant time interval of 1 / sampling_rate seconds between consecutive values.\nMaintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.\n\n\nFor example, suppose sampling_rate = 360 and ecg_values contains 500 measurements.\nSince 360 samples are recorded every second, the time interval between consecutive samples is:\n\\(\\Delta t = \\frac{1}{360} \\approx 0.00278 \\text{ seconds}\\)\nThe resulting time values should be : \\([0, \\frac{1}{360}, \\frac{2}{360}, \\frac{3}{360}, ..., \\frac{i}{360}, ... , \\frac{499}{360}]\\)\n\nTest\nCall the function in main() in the part1.py:\ndef main():\n  ecg = [-0.955, -0.91, -0.895,...]\n  time_values = create_time_values(ecg_values=ecg, sampling_rate=SAMPLING_RATE)\n  print(time_values)\n  print(len(time_values))\nExpected output:\n[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]\n500\n\n\nWrite a function plot_ecg()\nInput parameters:\n\necg_values : list of floats of ecg readings\ntime_values: list of floats of the seconds\noutput_filename: the filename under which the graph image will be saved.\nshow_graph: A boolean, when set to True the figure should be shown on the screen, otherwise, it should not be shown.\n\nReturn: No return\nTask:\n\nPlot the ecg_values versus the time_values\nApply appropriate styling using Matplotlib:\n\nAdd a title using plt.title()\nAdd an x axis title using plt.xlabel()\nAdd a y axis title using plt.ylabel()\nAdd a grid using plt.grid(True)\n\nSave the graph under filenameusing plt.savefig()\nIf the boolean show_graph is True, display the figure with plt.show()\nClose the figure with plt.close()\nShow your graph to your teacher."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html",
+    "href": "teacher/keith/review/functions.html",
+    "title": "Functions Review",
+    "section": "",
+    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#ignoring-parameters",
+    "href": "teacher/keith/review/functions.html#ignoring-parameters",
+    "title": "Functions Review",
+    "section": "",
+    "text": "Does this program work properly? What would be a more accurate name for this function?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it ignores the parameter value that is given to it. Line 2 overwrites whatever value was sent to the function and changes it to 10.\nA more accurate name for this function would be triple_ten because that is what it always does.\nDelete line 2 to fix it."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#functions-vs-variables",
+    "href": "teacher/keith/review/functions.html#functions-vs-variables",
+    "title": "Functions Review",
+    "section": "Functions vs Variables",
+    "text": "Functions vs Variables\nWhy does the 2nd call to the function not work?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because on line 4 it make a variable with the same name as a function. From that point on, python will forget about the function called triple and will only use the variable called triple. Line 7 will fail because it tries to use a number (75 in this case) as if it was a function.\nDo not make variables inside or outside of functions that have the same name as a function."
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#did-you-call",
+    "href": "teacher/keith/review/functions.html#did-you-call",
+    "title": "Functions Review",
+    "section": "Did you call?",
+    "text": "Did you call?\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because it never actually called the function. The function was defined properly, but the code on line 4 is not properly telling Python to use the function. Instead, it is basically making a copy of the function itself.\nTo call a function, you must have round brackets ( ) after the name of the function, even if the function does not use parameters.\nIn the case above, the function needs to be told what the width and height are of the rectangle whose area we need and line 4 is clearly not giving any such information to the function so how could it possibly know that we want the area of a rectangle 5 x 10 ?\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#cant-answer",
+    "href": "teacher/keith/review/functions.html#cant-answer",
+    "title": "Functions Review",
+    "section": "Can’t answer",
+    "text": "Can’t answer\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the function calculated the correct result but never returned the result. The function did some work but didn’t give us the answer.\nIf you see None get printed, you probably forgot a return statement inside your function!\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#your-order-please",
+    "href": "teacher/keith/review/functions.html#your-order-please",
+    "title": "Functions Review",
+    "section": "Your order please",
+    "text": "Your order please\nDoes this code work properly? What is wrong with it?\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis function does not work properly because the values used in the function call are not in the correct order to match what the function is expecting.\nCorrected version:"
+  },
+  {
+    "objectID": "teacher/keith/review/functions.html#any-name-you-like",
+    "href": "teacher/keith/review/functions.html#any-name-you-like",
+    "title": "Functions Review",
+    "section": "Any name you like",
+    "text": "Any name you like\nThe following code does work. There is a function called circle_area that has a parameter to represent the radius of a circle and it will return the area.\nLook carefully at the three places in the code that call this function. Notice how it doesn’t matter at all what the name of the parameter on the function was vs. the name of the variable whose value you pass to the function.\nThe name radius is what the circle_area function uses to refer to the radius, but you can send any value you have to the function and the function doesn’t care where the value came from."
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html",
+    "href": "teacher/keith/exercises/lists.html",
+    "title": "Lists Exercises",
+    "section": "",
+    "text": "Loading Pyodide..."
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#list-of-ints",
+    "href": "teacher/keith/exercises/lists.html#list-of-ints",
+    "title": "Lists Exercises",
+    "section": "1.1 List of ints",
+    "text": "1.1 List of ints\nMake a list holding numbers 1 to 100 using a for-loop, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nWhenever you need to create a list, declare it as an empty list first and then add to it after.\nmy_list = []\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#list-of-floats",
+    "href": "teacher/keith/exercises/lists.html#list-of-floats",
+    "title": "Lists Exercises",
+    "section": "1.2 List of floats",
+    "text": "1.2 List of floats\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using a for-loop, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nUnfortunately you cannot use a float value for the step on a for loop :-P, so think of other ways to generate numbers that increase by a specfic amount.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#list-of-floats-using-numpy",
+    "href": "teacher/keith/exercises/lists.html#list-of-floats-using-numpy",
+    "title": "Lists Exercises",
+    "section": "1.3 List of floats using numpy",
+    "text": "1.3 List of floats using numpy\n\n\n\n\n\n\nWarningThonny\n\n\n\nIf you have trouble using the numpy library in Thonny then you may need to add the package using Tool &gt; Manage packages… like we did for matplotlib, pygame\n\n\nThe NumPy library is used for more advanced math and it provides a function which can be used to generate an “array” which for your purposes is like a list, and it can automatically fill it according to an increment like the previous question.\nMake a list holding numbers 1.0 to 10.0 in increments of 0.1 using numpy’s linspace function, then print the contents of the list using a single print() statement.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#duplicate-a-list-manually",
+    "href": "teacher/keith/exercises/lists.html#duplicate-a-list-manually",
+    "title": "Lists Exercises",
+    "section": "1.4 Duplicate a list (manually)",
+    "text": "1.4 Duplicate a list (manually)\nMake a second list called copied and fill it with the same numbers as my_list using a for loop.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#evaluate-a-formula-on-a-set-of-values",
+    "href": "teacher/keith/exercises/lists.html#evaluate-a-formula-on-a-set-of-values",
+    "title": "Lists Exercises",
+    "section": "1.5 Evaluate a formula on a set of values",
+    "text": "1.5 Evaluate a formula on a set of values\nGiven some function f and a list of x values, generate a list of f(x) values.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#evaluate-a-formula-on-a-set-of-values-using-numpy",
+    "href": "teacher/keith/exercises/lists.html#evaluate-a-formula-on-a-set-of-values-using-numpy",
+    "title": "Lists Exercises",
+    "section": "1.6 Evaluate a formula on a set of values using numpy",
+    "text": "1.6 Evaluate a formula on a set of values using numpy\nGiven some function f and a list of x values, generate a list of f(x) values.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#print-the-number-of-items-in-a-list",
+    "href": "teacher/keith/exercises/lists.html#print-the-number-of-items-in-a-list",
+    "title": "Lists Exercises",
+    "section": "2.1 Print the number of items in a list",
+    "text": "2.1 Print the number of items in a list\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#print-first-item-of-a-list",
+    "href": "teacher/keith/exercises/lists.html#print-first-item-of-a-list",
+    "title": "Lists Exercises",
+    "section": "3.1 Print first item of a list",
+    "text": "3.1 Print first item of a list\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#print-3rd-item-of-a-list",
+    "href": "teacher/keith/exercises/lists.html#print-3rd-item-of-a-list",
+    "title": "Lists Exercises",
+    "section": "3.2 Print 3rd item of a list",
+    "text": "3.2 Print 3rd item of a list\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#print-last-item-of-a-list",
+    "href": "teacher/keith/exercises/lists.html#print-last-item-of-a-list",
+    "title": "Lists Exercises",
+    "section": "3.3 Print last item of a list",
+    "text": "3.3 Print last item of a list\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#print-2nd-to-last-item-of-a-list",
+    "href": "teacher/keith/exercises/lists.html#print-2nd-to-last-item-of-a-list",
+    "title": "Lists Exercises",
+    "section": "3.4 Print 2nd-to-last item of a list",
+    "text": "3.4 Print 2nd-to-last item of a list\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#change-2nd-item-in-list",
+    "href": "teacher/keith/exercises/lists.html#change-2nd-item-in-list",
+    "title": "Lists Exercises",
+    "section": "3.5 Change 2nd item in list",
+    "text": "3.5 Change 2nd item in list\nModify the 2nd item in the list to have the value “blue”, then print the list.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#changing-a-value",
+    "href": "teacher/keith/exercises/lists.html#changing-a-value",
+    "title": "Lists Exercises",
+    "section": "3.6 Changing a value",
+    "text": "3.6 Changing a value\nWhat will happen if you run this code?\ncolours = [\"red\", \"green\", \"blue\", \"yellow\"]\n\ncolours[4] = \"orange\"\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nYou’ll get an error because the list doesn’t have an item at index 4 (which would be the 5th item in the list)"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#make-every-even-indexed-item-in-a-list-become-zero",
+    "href": "teacher/keith/exercises/lists.html#make-every-even-indexed-item-in-a-list-become-zero",
+    "title": "Lists Exercises",
+    "section": "3.7 Make every even-indexed item in a list become zero",
+    "text": "3.7 Make every even-indexed item in a list become zero\nFor example, a list:\n[5, 6, 56, 43, 56, 32, 32, 4, 8]\nshould turn into:\n[0, 6, 0, 43, 0, 32, 0, 4, 0]\nPrint the list to see if your code works.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#increase-every-odd-value-in-the-list-to-become-an-even-number",
+    "href": "teacher/keith/exercises/lists.html#increase-every-odd-value-in-the-list-to-become-an-even-number",
+    "title": "Lists Exercises",
+    "section": "3.8 Increase every odd value in the list to become an even number",
+    "text": "3.8 Increase every odd value in the list to become an even number\nFor example, a list:\n[5, 6, 56, 43, 56, 32, 32, 4, 8]\nshould turn into:\n[6, 6, 56, 44, 56, 32, 32, 4, 8]\nPrint the list to see if your code works.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#count-how-many-items-in-the-list-are-larger-than-the-previous-item-in-the-list",
+    "href": "teacher/keith/exercises/lists.html#count-how-many-items-in-the-list-are-larger-than-the-previous-item-in-the-list",
+    "title": "Lists Exercises",
+    "section": "3.9 Count how many items in the list are larger than the previous item in the list",
+    "text": "3.9 Count how many items in the list are larger than the previous item in the list\nFor example, a list:\n[5, 6, 56, 43, 56, 32, 32, 3, 4]\nshould have a count of 4 because:\n- 6 is larger than 5\n- 56 is larger than 6\n- 56 is larger than 43\n- 4 is larger than 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nSomething unexpected might happen here. Your count might be one higher than it should be. If that happens, print out a message to show each of the values that you compare with each other.\n\n\n\n\n\n\n\n\n\n\nTipSolution 1\n\n\n\n\n\nUse indices to compare list_a[i] with list_a[i - 1]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 2\n\n\n\n\n\nUse indices to compare list_a[i] with list_a[i + 1]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 3\n\n\n\n\n\nInstead of indices, save the previous item in a variable to compare against"
+  },
+  {
+    "objectID": "teacher/keith/exercises/lists.html#create-a-gridmatrix",
+    "href": "teacher/keith/exercises/lists.html#create-a-gridmatrix",
+    "title": "Lists Exercises",
+    "section": "4.1 Create a grid/matrix",
+    "text": "4.1 Create a grid/matrix\nMake a grid of 10 lists. Fill each of the 10 lists with 10 zeros. You can visualize this as a “list of columns” where for each X value, you’ll have a list of Y values.\n\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can actually do multiplication on a list like this:\nfive_zeros = [0] * 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nInstead of indices, save the previous item in a variable to compare against"
   },
   {
     "objectID": "teacher/keith/prep/midterm/practice-problems.html",

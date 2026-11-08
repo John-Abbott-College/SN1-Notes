@@ -323,6 +323,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../syllabus/Youmna/Youmna.html">
  <span class="dropdown-text">Youmna</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../syllabus/Keith/Keith.html">
+ <span class="dropdown-text">Keith</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -850,7 +854,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Example</strong></p>
-<div id="b6ee2f97" class="cell" data-execution_count="1">
+<div id="fec8216d" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This creates a list named <code>numbers</code> containing five values. List is a special variable, which can hold more than one value at a time. Using lists makes it convenient to manage and process large sets of data, such as sorting numbers in ascending order. This approach simplifies code and improves readability.</p>
@@ -858,7 +862,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="heterogenous-lists">Heterogenous lists</h2>
 <p>The elements inside a list <strong>may have different types</strong>. Some of them may be integers, others floats, and yet others may be lists.</p>
 <p><strong>Example</strong></p>
-<div id="df7815d4" class="cell" data-execution_count="2">
+<div id="6b9872b7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>magic_bag <span class="op">=</span> [<span class="va">True</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="st">"orange"</span>, <span class="fl">55.89</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Here's a bag of stuff: </span><span class="sc">{</span>magic_bag<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -883,7 +887,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="empty-list" class="level2">
 <h2 class="anchored" data-anchor-id="empty-list">Empty List</h2>
 <p>You may also create a list without any values. This can be useful if the values are added later during the program execution. You can add element using <code>append()</code> as described later in this lesson.</p>
-<div id="84115e40" class="cell" data-execution_count="3">
+<div id="4e8eb340" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -962,7 +966,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 </ul>
 <section id="example" class="level4">
 <h4 class="anchored" data-anchor-id="example">Example</h4>
-<div id="46b77cfd" class="cell" data-execution_count="4">
+<div id="2fbbb20e" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">4</span>) <span class="co"># Will add 4 at the end of the list</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -975,7 +979,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGVtcGVyYXR1cmVzID0gWzE1
 <section id="example-with-loops" class="level4">
 <h4 class="anchored" data-anchor-id="example-with-loops">Example with loops</h4>
 <p>The <code>.append()</code> method can also be called within a loop:</p>
-<div id="692f1ced" class="cell" data-execution_count="5">
+<div id="6540c496" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  numbers.append(<span class="dv">4</span>) <span class="co"># Will add 4 at the end of the list 10 times</span></span>
