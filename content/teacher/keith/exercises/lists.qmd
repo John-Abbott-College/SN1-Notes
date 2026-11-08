@@ -6,7 +6,7 @@ number-sections: true
 ```{=html}
 <script src="[https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js](https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js)"></script>
 
-<div id="pyodide-status">Loading Pyodide...</div>
+<div id="pyodide-status">Loading NumPy...</div>
 <script type="text/javascript">
     async function main() {
         let pyodide = await loadPyodide();
@@ -68,10 +68,17 @@ Unfortunately you cannot use a float value for the step on a for loop :-P, so th
 ```
 
 :::{.callout-tip title="Solution" collapse="true"}
+
+Note, some of the values that are generated will look weird - this is just what happens with *float* values on computers which are not exactly precise. You can basically ignore this, but keep in mind that if you try checking if 2 float values are "equal" to each other, then sometimes they may not be exactly equal.
+
+Try enabling the line that rounds the number to see how it can be corrected.
 ```{pyodide}
 numbers = []
-for num in range(0, 100):
-    numbers.append(1 + num * 0.1)
+num = 1.0
+for i in range(0, 100):
+    numbers.append(num)
+    num = num + 0.1
+    # num = round(num, 2)
 
 print(numbers)
 ```
@@ -82,7 +89,9 @@ print(numbers)
 If you have trouble using the numpy library in Thonny then you may need to add the package using Tool > Manage packages... like we did for matplotlib, pygame
 :::
 
-The NumPy library is used for more advanced math and it provides a function which can be used to generate an "array" which for your purposes is like a list, and it can automatically fill it according to an increment like the previous question.
+The NumPy library is used for more advanced math and one of the many things it provides is a function "linspace" can be used to generate a set of numbers evenly (**lin**early) spread across an interval.
+
+NumPy uses what it calls **arrays** which are very similar to lists, and you can convert an array back to a list using a .tolist() function.
 
 Make a list holding numbers 1.0 to 10.0 **in increments of 0.1** using [numpy's linspace function](https://www.geeksforgeeks.org/python/numpy-linspace/), then print the contents of the list using a single print() statement.  
 
@@ -96,9 +105,9 @@ import numpy as np
 ```{pyodide}
 import numpy as np
 
-numbers = np.linspace(1.0, 10.0, num=99)
+numbers = np.linspace(1.0, 10.0, num=91)
 
-print(numbers)
+print(numbers.tolist())
 ```
 :::
 
@@ -468,22 +477,21 @@ list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
 
 
 :::{.callout-tip title="Solution" collapse="true"}
-Instead of indices, save the previous item in a variable to compare against
 ```{pyodide}
-my_grid = []    # start with an empty list
+my_grid = []            # start with an empty list
 
 for i in range(10):
-    my_grid[i] = [] # make a list 
+    my_grid.append([])  # add an empty list which will hold the column
 
-if len(list_a) > 0:
-    previous = list_a[0]
+next_value = 0
+for y in range(10):                     # "for each row"
+    for x in range(len(my_grid)):       # "for each column"
+        next_value = next_value + 1
+        my_grid[x].append(next_value)
 
-    for num in list_a:
-        print(f"Comparing {num=} with {previous=}")
-        if num > previous:
-            count = count + 1
-        previous = num
-
-print(count)
+        # end="" stops python from moving to the next line when we print the next thing
+        print(f"{my_grid[x][y]:3} ", end="")   
+ 
+    print() # this just finishes one row of printing
 ```
 :::
