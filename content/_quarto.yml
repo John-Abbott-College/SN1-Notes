@@ -12,6 +12,8 @@ website:
         menu:
         - text: "Youmna"
           href: syllabus/Youmna/Youmna.qmd
+        - text: "Keith"
+          href: syllabus/Keith/Keith.qmd          
       - text: Final Exam
         menu:
         - text: "Previous Years Exams"

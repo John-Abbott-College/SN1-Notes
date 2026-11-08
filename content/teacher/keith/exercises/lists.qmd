@@ -1,0 +1,489 @@
+---
+title: "Lists Exercises"
+number-sections: true
+---
+
+```{=html}
+<script src="[https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js](https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js)"></script>
+
+<div id="pyodide-status">Loading Pyodide...</div>
+<script type="text/javascript">
+    async function main() {
+        let pyodide = await loadPyodide();
+        await pyodide.loadPackage("numpy");
+        
+        let result = await pyodide.runPythonAsync(`
+            import numpy as np
+            print(np.__version__)
+        `);
+        
+        document.getElementById("pyodide-status").innerText = "NumPy loaded successfully!";
+    }
+    main();
+</script>
+```
+
+# Creating/Filling lists
+
+## List of ints
+Make a list holding numbers 1 to 100 using a for-loop, then print the contents of the list using a single print() statement.  
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Whenever you need to create a list, declare it as an empty list first and then add to it after.
+```python
+my_list = []
+```
+:::
+:::
+
+```{pyodide}
+
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+numbers = []
+for num in range(1, 100 + 1):
+    numbers.append(num)
+
+print(numbers)
+```
+:::
+
+
+## List of floats
+Make a list holding numbers 1.0 to 10.0 **in increments of 0.1** using a for-loop, then print the contents of the list using a single print() statement.  
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Unfortunately you cannot use a float value for the step on a for loop :-P, so think of other ways to generate numbers that increase by a specfic amount.
+:::
+:::
+
+```{pyodide}
+
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+numbers = []
+for num in range(0, 100):
+    numbers.append(1 + num * 0.1)
+
+print(numbers)
+```
+:::
+
+## List of floats using numpy
+::: {.callout-warning .objectives icon="false" title="Thonny"}
+If you have trouble using the numpy library in Thonny then you may need to add the package using Tool > Manage packages... like we did for matplotlib, pygame
+:::
+
+The NumPy library is used for more advanced math and it provides a function which can be used to generate an "array" which for your purposes is like a list, and it can automatically fill it according to an increment like the previous question.
+
+Make a list holding numbers 1.0 to 10.0 **in increments of 0.1** using [numpy's linspace function](https://www.geeksforgeeks.org/python/numpy-linspace/), then print the contents of the list using a single print() statement.  
+
+
+```{pyodide}
+import numpy as np
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+import numpy as np
+
+numbers = np.linspace(1.0, 10.0, num=99)
+
+print(numbers)
+```
+:::
+
+## Duplicate a list (manually)
+
+Make a second list called *copied* and fill it with the same numbers as my_list using a for loop.
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+copied = []
+
+for item in my_list:
+    copied.append(item)
+
+print(copied)    
+```
+:::
+
+## Evaluate a formula on a set of values
+
+Given some function *f* and a list of *x* values, generate a list of *f(x)* values.
+
+```{pyodide}
+def my_func(num):
+    return 2 + num ** 1.5
+
+x_values = [0, 1, 2, 3, 4, 5]
+
+// add your code here
+
+// lastly, print both lists:
+print(x_values)    
+print(y_values)    
+```
+
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+def my_func(num):
+    return 2 + num ** 1.5
+
+x_values = [0, 1, 2, 3, 4, 5]
+
+y_values = []
+for x in x_values:
+    y = my_func(x)
+    y_values.append(y)
+
+print(x_values)    
+print(y_values)    
+```
+:::
+
+## Evaluate a formula on a set of values using numpy
+
+Given some function *f* and a list of *x* values, generate a list of *f(x)* values.
+
+```{pyodide}
+def my_func(num):
+    return 2 + num ** 1.5
+
+x_values = [0, 1, 2, 3, 4, 5]
+
+// add your code here
+
+// lastly, print both lists:
+print(x_values)    
+print(y_values)    
+```
+
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+import numpy as np
+
+def my_func(num):
+    return 2 + num ** 1.5
+
+x_values = [0, 1, 2, 3, 4, 5]
+
+x_array = np.array(x_values) # convert to numpy's array type
+y_array = my_func(x_array)
+y_values = y_array.tolist()  # convert back to a Python list
+
+print(x_values)    
+print(y_values) 
+```
+:::
+
+
+# List size/length
+## Print the number of items in a list
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+num_items = len(my_list)
+
+print(f"There are {num_items} things in my_list")
+```
+:::
+
+
+# List Indexing
+## Print first item of a list
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+print(my_list[0])
+```
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+first = my_list[0]
+print(first)
+```
+:::
+
+## Print 3rd item of a list
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+print(my_list[2])
+```
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+third = my_list[2]
+print(third)
+```
+:::
+
+## Print last item of a list
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+print(my_list[-1])
+```
+:::
+
+## Print 2nd-to-last item of a list
+
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
+print(my_list[-2])
+```
+:::
+
+## Change 2nd item in list
+Modify the 2nd item in the list to have the value "blue", then print the list.
+
+```{pyodide}
+colours = ["red", "green", "blue", "yellow"]
+
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+colours = ["red", "green", "blue", "yellow"]
+colours[1] = "blue"
+
+print(colours)
+```
+:::
+
+## Changing a value
+What will happen if you run this code?
+
+```python
+colours = ["red", "green", "blue", "yellow"]
+
+colours[4] = "orange"
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+You'll get an error because the list doesn't have an item at index 4 (which would be the 5th item in the list)
+:::
+
+
+## Make every even-indexed item in a list become zero
+For example, a list:  
+[5, 6, 56, 43, 56, 32, 32, 4, 8]  
+should turn into:  
+[0, 6, 0, 43, 0, 32, 0, 4, 0]
+
+Print the list to see if your code works.
+
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 4, 8]
+
+print(list_a)
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 4, 8]
+
+for i in range(len(list_a)):
+    if i % 2 == 0:
+        list_a[i] = 0
+
+print(list_a)
+```
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 4, 8]
+
+for i in range(0, len(list_a), 2):
+    list_a[i] = 0
+    
+print(list_a)
+```
+:::
+
+## Increase every odd value in the list to become an even number
+For example, a list:  
+[5, 6, 56, 43, 56, 32, 32, 4, 8]  
+should turn into:  
+[6, 6, 56, 44, 56, 32, 32, 4, 8]
+
+Print the list to see if your code works.
+
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 4, 8]
+
+print(list_a)
+```
+
+:::{.callout-tip title="Solution" collapse="true"}
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 4, 8]
+
+for i in range(len(list_a)):
+    if list_a[i] % 2 == 1:
+        list_a[i] = list_a[i] + 1
+
+print(list_a)
+```
+:::
+
+## Count how many items in the list are larger than the previous item in the list
+For example, a list:  
+[5, 6, 56, 43, 56, 32, 32, 3, 4]  
+should have a count of 4 because:  
+- 6 is larger than 5  
+- 56 is larger than 6  
+- 56 is larger than 43   
+- 4 is larger than 3  
+
+
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
+
+```
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Something unexpected might happen here. Your count might be one higher than it should be. If that happens, print out a message to show each of the values that you compare with each other.
+:::
+:::
+
+:::{.callout-tip title="Solution 1" collapse="true"}
+Use indices to compare list_a[i] with list_a[i - 1]
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
+
+count = 0
+for i in range(1, len(list_a)):
+    print(f"Comparing {list_a[i]=} with {list_a[i-1]=}")
+    if list_a[i] > list_a[i - 1]:
+        count = count + 1
+
+print(count)
+```
+:::
+
+:::{.callout-tip title="Solution 2" collapse="true"}
+Use indices to compare list_a[i] with list_a[i + 1]
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
+
+count = 0
+for i in range(0, len(list_a) - 1):
+    print(f"Comparing {list_a[i]=} with {list_a[i + 1]=}")
+    if list_a[i] < list_a[i + 1]:
+        count = count + 1
+
+print(count)
+```
+:::
+
+:::{.callout-tip title="Solution 3" collapse="true"}
+Instead of indices, save the previous item in a variable to compare against
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
+count = 0
+
+if len(list_a) > 0:
+    previous = list_a[0]
+
+    for num in list_a:
+        print(f"Comparing {num=} with {previous=}")
+        if num > previous:
+            count = count + 1
+        previous = num
+
+print(count)
+```
+:::
+
+
+# 2-Dimensional Lists (list of lists)
+
+## Create a grid/matrix
+
+Make a grid of 10 lists. Fill each of the 10 lists with 10 zeros. You can visualize this as a "list of columns" where for each X value, you'll have a list of Y values.
+
+<img src="./images/list_of_lists_5x5_grid_columns.svg" style="height:300px;width:auto;"/>
+
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+You can actually do multiplication on a list like this:
+```python
+five_zeros = [0] * 5
+```
+:::
+:::
+
+```{pyodide}
+list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
+
+```
+
+
+:::{.callout-tip title="Solution" collapse="true"}
+Instead of indices, save the previous item in a variable to compare against
+```{pyodide}
+my_grid = []    # start with an empty list
+
+for i in range(10):
+    my_grid[i] = [] # make a list 
+
+if len(list_a) > 0:
+    previous = list_a[0]
+
+    for num in list_a:
+        print(f"Comparing {num=} with {previous=}")
+        if num > previous:
+            count = count + 1
+        previous = num
+
+print(count)
+```
+:::
