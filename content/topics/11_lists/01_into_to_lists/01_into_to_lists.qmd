@@ -12,14 +12,14 @@ editor:
 - **Create** an empty list.
 - **Use** the built-in functions `len()`, `sum()`, `min()`, `max()` to find the length, total value and extrema of a list.
 - **Use** the `append()` method to add an element at the end of an existing list.
-  :::
+:::
 
 
 ::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
 
 - **Use** the `insert()` method to add an element at a specific position.
 - **Use** the `pop()` method to remove an element at a given position. 
-  :::
+:::
 
 # Why use lists?
 
@@ -157,7 +157,7 @@ my_list.append(value)
 - Such an operation is performed by a method named append(). It takes its argument's value and puts it **at the end of the list** which owns the method.
 
 - The list's length then increases by one.
-  :::
+:::
 
 #### Example 
 
@@ -198,7 +198,7 @@ To insert an element into a list, the insert() method takes two arguments:
 
 - The position where the new element should be inserted. All existing elements starting with this position onward are shifted to the right to make room.
 - The new element to be inserted.
-  :::
+:::
 
 
 
@@ -248,7 +248,7 @@ print(f"We have removed {removed_item} from the list.")
 
 - The `pop()` method **removes the element** at the specified position (given by `index`) and **returns its value**.
 - If no index is provided, `pop()` removes and returns the **last element** in the list.
-  :::
+:::
 
 
 
