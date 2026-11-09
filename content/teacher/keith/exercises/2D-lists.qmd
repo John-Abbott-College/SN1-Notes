@@ -1,0 +1,147 @@
+---
+title: "Lists Exercises"
+number-sections: true
+---
+
+# 2-Dimensional Lists (list of lists)
+
+## Create a grid/matrix
+
+Consider a grid of 9 numbers arranged in 3 rows and 3 columns:
+
+|           | Col 0 | Col 1 | Col 2 |
+|-----------|-------|-------|-------|
+| **Row 0** |   1   |   2   |   3   |
+| **Row 1** |   4   |   5   |   6   |
+| **Row 2** |   7   |   8   |   9   |
+
+
+Lists are 1-dimensional, but we can create a 2-dimensional list by creating a *list of lists*.  When making a 2D list, there are two valid approaches:  
+
+::: {.columns}
+::: {.column width="50%"}
+### A grid is a list of rows {.unnumbered}
+```text
+grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+grid
+ │
+ ├─ Row 0 ─► [1, 2, 3]
+ ├─ Row 1 ─► [4, 5, 6]
+ └─ Row 2 ─► [7, 8, 9]
+```
+
+The value 8 is at index: [2][1] (row 2, column 1)
+:::
+
+::: {.column width="50%"}
+### A grid is a list of columns {.unnumbered}
+```text
+grid = [
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9]
+]
+
+grid
+ │
+ ├─ Col 0 ─► [1, 4, 7]
+ ├─ Col 1 ─► [2, 5, 8]
+ └─ Col 2 ─► [3, 6, 9]
+```
+
+The value 8 is at index: [1][2] (column 1, row 2)
+:::
+
+:::
+
+Make the grid of 9 cells as shown above using either a "list of columns" or a "list of rows", but fill it with zeros.
+
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+Create the grid first as a lis, and then add lists for each row or column.
+:::
+:::
+
+```{pyodide}
+grid = 
+
+```
+
+
+::: {.columns}
+::: {.column width="50%"}
+
+:::{.callout-tip title="Solution - as a list of rows" collapse="true"}
+```{pyodide}
+grid = []                 # start with an empty list
+
+for i in range(3):
+    one_row = [0, 0, 0]   # create a row of 3 zeros
+    grid.append(one_row)  # add the row to the grid
+```
+:::
+:::
+
+
+::: {.column width="50%"}
+:::{.callout-tip title="Solution - as a list of columns" collapse="true"}
+```{pyodide}
+grid = []                 # start with an empty list
+
+for i in range(3):
+    one_col = [0, 0, 0]   # create a row of 3 zeros
+    grid.append(one_col)  # add the column to the grid
+```
+:::
+:::
+
+
+Now, use a nested for loop to fill the grid with the numbers 1 through 9, and print the grid in a nice format.
+```{pyodide}
+grid = 
+
+```
+
+::: {.columns}
+
+::: {.column width="50%"}
+:::{.callout-tip title="Solution 1 - traverse the grid and fill values" collapse="true"}
+```{pyodide}
+next_value = 0
+for row in range(3):           # "for each row"
+    for col in range(3):       # "for each column"
+        next_value = next_value + 1
+        grid[row][col] = next_value  
+
+# print the grid row-by-row:
+for row in range(3):           # "for each row"
+    for col in range(3):       # "for each column"
+        print(grid[row][col], end=" ")   
+    print()  # print a newline after each row
+```
+:::
+:::
+
+::: {.column width="50%"}
+:::{.callout-tip title="Solution 2 - traverse the grid and fill values" collapse="true"}
+```{pyodide}
+next_value = 0
+for row in range(3):           # "for each row"
+    for col in range(3):       # "for each column"
+        next_value = next_value + 1
+        grid[col][row] = next_value  
+
+# print the grid row-by-row:
+for row in range(3):           # "for each row"
+    for col in range(3):       # "for each column"
+        print(grid[col][row], end=" ")   
+    print()  # print a newline after each row
+```
+:::
+::: 
+

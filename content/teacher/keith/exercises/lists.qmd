@@ -113,7 +113,7 @@ print(numbers.tolist())
 
 ## Duplicate a list (manually)
 
-Make a second list called *copied* and fill it with the same numbers as my_list using a for loop.
+Make a second list called `copied` and fill it with the same numbers as `my_list` using a for loop.
 ```{pyodide}
 my_list = [3, 67, 5, 67, 3, 76, 687, 3, 6]
 
@@ -448,50 +448,5 @@ if len(list_a) > 0:
         previous = num
 
 print(count)
-```
-:::
-
-
-# 2-Dimensional Lists (list of lists)
-
-## Create a grid/matrix
-
-Make a grid of 10 lists. Fill each of the 10 lists with 10 zeros. You can visualize this as a "list of columns" where for each X value, you'll have a list of Y values.
-
-<img src="./images/list_of_lists_5x5_grid_columns.svg" style="height:300px;width:auto;"/>
-
-
-:::{.callout-hint}
-:::{.callout-note title="Hint" collapse="true"}
-You can actually do multiplication on a list like this:
-```python
-five_zeros = [0] * 5
-```
-:::
-:::
-
-```{pyodide}
-list_a = [5, 6, 56, 43, 56, 32, 32, 3, 4]
-
-```
-
-
-:::{.callout-tip title="Solution" collapse="true"}
-```{pyodide}
-my_grid = []            # start with an empty list
-
-for i in range(10):
-    my_grid.append([])  # add an empty list which will hold the column
-
-next_value = 0
-for y in range(10):                     # "for each row"
-    for x in range(len(my_grid)):       # "for each column"
-        next_value = next_value + 1
-        my_grid[x].append(next_value)
-
-        # end="" stops python from moving to the next line when we print the next thing
-        print(f"{my_grid[x][y]:3} ", end="")   
- 
-    print() # this just finishes one row of printing
 ```
 :::

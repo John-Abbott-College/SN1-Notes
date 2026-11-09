@@ -1,3 +1,4 @@
 ## Lists
 
 [Exercises 1](../../teacher/keith/exercises/lists.qmd).
+[2-D Lists](../../teacher/keith/exercises/2D-lists.qmd).
