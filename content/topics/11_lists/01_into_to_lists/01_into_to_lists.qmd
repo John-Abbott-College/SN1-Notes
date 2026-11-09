@@ -271,6 +271,7 @@ print(removed_value)
 
 | Operation               | Example        | Result                      |
 | ----------------------- | -------------- | --------------------------- |
+| Create an empty list    | a = []         | a is []                     |
 | Create a list           | a = [1,2,3,3]  | a is [1,2,3,3]              |
 | Access item             | a[0]           | 1                           |
 | Change item             | a[1] = 10      | a is [1,10,3,3]             |
