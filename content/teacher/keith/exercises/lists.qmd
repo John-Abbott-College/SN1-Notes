@@ -101,6 +101,16 @@ import numpy as np
 
 ```
 
+:::{.callout-hint}
+:::{.callout-note title="Hint" collapse="true"}
+The hard part might be figuring out how many numbers you need to generate. You can use the formula:
+
+number_of_values = (end - start) / increment + 1
+
+(10.0 - 1.0) / 0.1 + 1 = 9.0 / 0.1 + 1 = 90 + 1 = **91**
+:::
+:::
+
 :::{.callout-tip title="Solution" collapse="true"}
 ```{pyodide}
 import numpy as np
