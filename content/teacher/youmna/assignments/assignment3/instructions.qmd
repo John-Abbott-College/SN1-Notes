@@ -144,7 +144,7 @@ def main():
   - Add a y axis title using `plt.ylabel()`
   - Add a grid using `plt.grid(True)`
 
-- Save the graph under `filename `using `plt.savefig()`
+- Save the graph under `output_filename `using `plt.savefig()`
 
 - If the boolean `show_graph` is `True`, display the figure with `plt.show()`
 
