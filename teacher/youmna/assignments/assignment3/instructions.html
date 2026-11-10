@@ -810,14 +810,6 @@ window.Quarto = {
   <li><a href="#write-a-function-heart_rate" id="toc-write-a-function-heart_rate" class="nav-link" data-scroll-target="#write-a-function-heart_rate">Write a function <code>heart_rate()</code></a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#part-2-detecting-r-peaks-1" id="toc-part-2-detecting-r-peaks-1" class="nav-link" data-scroll-target="#part-2-detecting-r-peaks-1">Part 2: Detecting R peaks</a>
-  <ul class="collapse">
-  <li><a href="#specific-instructions-2" id="toc-specific-instructions-2" class="nav-link" data-scroll-target="#specific-instructions-2"><strong>📝 Specific Instructions</strong></a></li>
-  <li><a href="#your-task-1" id="toc-your-task-1" class="nav-link" data-scroll-target="#your-task-1">Your Task</a>
-  <ul class="collapse">
-  <li><a href="#write-a-function-heart_rate-1" id="toc-write-a-function-heart_rate-1" class="nav-link" data-scroll-target="#write-a-function-heart_rate-1">Write a function <code>heart_rate()</code></a></li>
-  </ul></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -948,7 +940,7 @@ window.Quarto = {
 <li>Add a y axis title using <code>plt.ylabel()</code></li>
 <li>Add a grid using <code>plt.grid(True)</code></li>
 </ul></li>
-<li><p>Save the graph under <code>filename</code>using <code>plt.savefig()</code></p></li>
+<li><p>Save the graph under <code>output_filename</code>using <code>plt.savefig()</code></p></li>
 <li><p>If the boolean <code>show_graph</code> is <code>True</code>, display the figure with <code>plt.show()</code></p></li>
 <li><p>Close the figure with <code>plt.close()</code></p></li>
 </ul>
@@ -1120,163 +1112,6 @@ Heart Rate = \frac{60}{\overline{RR_{interval}}}
 </ul>
 <section id="test-2" class="level4">
 <h4 class="anchored" data-anchor-id="test-2">Test</h4>
-<p>Call this function in <code>main()</code> provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute.</p>
-</section>
-</section>
-</section>
-</section>
-<section id="part-2-detecting-r-peaks-1" class="level1">
-<h1>Part 2: Detecting R peaks</h1>
-<p><strong>🗓️ Due:</strong> Before next class.</p>
-<p>📥 <strong>Submission: </strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">ECG graph of the entire sample <strong>demoed to teacher in class.</strong></label></li>
-<li><label><input type="checkbox">Code submitted on <a href="https://www.gradescope.ca/courses/39225">Gradescope</a></label>
-<ul class="task-list">
-<li><label><input type="checkbox"><code>my_functions.py</code></label></li>
-<li><label><input type="checkbox"><code>part2.py</code></label></li>
-<li><label><input type="checkbox"><code>part2_ecg.png</code></label></li>
-<li><label><input type="checkbox"><code>part2_ecg_with_peaks.png</code></label></li>
-</ul></li>
-</ul>
-<section id="specific-instructions-2" class="level3">
-<h3 class="anchored" data-anchor-id="specific-instructions-2"><strong>📝 Specific Instructions</strong></h3>
-<ul>
-<li><p><a href="part2.zip" target="_blank">Download</a> and extract the starter code.</p></li>
-<li><p>Extract the ZIP folder for Part 2.</p></li>
-<li><p>Make sure you have the following files <strong>in the same folder</strong>:</p>
-<ul>
-<li><code>part2.py</code>: This is the main program you will work on for Part 2.</li>
-<li><code>my_functions.py</code>: Continue using the same file you created in Part 1.</li>
-<li><code>ecg.csv</code>: The dataset containing the ECG samples. This is synthetic data generated with the help of an AI tool.</li>
-<li><code>part1.py</code>: Keep this file for reference. <strong>You will not need to modify it.</strong></li>
-</ul></li>
-<li><p>In <code>part2.y</code> , you are given functions to read the <code>ecg.csv</code>, feel free to look at those to better understand how a program can load data from a file.</p>
-<p><strong>Do not remove those lines or anything above this:</strong></p></li>
-<li><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> my_functions <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>SAMPLING_RATE:<span class="bu">float</span> <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>FILENAME:<span class="bu">str</span>  <span class="op">=</span> <span class="st">'ecg.csv'</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_to_floats(row:<span class="bu">list</span>[<span class="bu">str</span>])<span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">float</span>]:</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some lines of code...</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_data(csv_filename:<span class="bu">str</span>)<span class="op">-&gt;</span><span class="bu">list</span>[<span class="bu">float</span>]:</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some lines of code...</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    ecg_values <span class="op">=</span> read_data(FILENAME)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Do not remove the last two lines of the file either:</p></li>
-<li><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span><span class="st">'__main__'</span>:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ul>
-</section>
-<section id="your-task-1" class="level2">
-<h2 class="anchored" data-anchor-id="your-task-1">Your Task</h2>
-<p>In this final part of the assignment, we will focus on calculating the <strong>heart rate</strong> which is obtained by calculating the number of R peaks that occur per minute.</p>
-<p><img src="assets/rr_heart_rate.png"></p>
-<p>Alternatively, if the <strong>average</strong> time interval (in s) between two R peaks is obtained <span class="math inline">\(\overline{RR_{interval}}\)</span>, the heart rate in beats per minute can be calculated using the sampling rate <span class="math inline">\(f_s\)</span> in Hz (samples per second). <span class="math display">\[
-Heart Rate = \frac{60}{\overline{RR_{interval}}}
-\]</span></p>
-<p>Implement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that <strong>high-amplitude impulses</strong> in the signal correspond to R peaks.</p>
-<p>Here are functions to help you accomplish that:</p>
-<section id="write-a-function-is_local_maximum-1" class="level4">
-<h4 class="anchored" data-anchor-id="write-a-function-is_local_maximum-1">Write a function <code>is_local_maximum()</code></h4>
-<p><strong>Input parameters:</strong></p>
-<ul>
-<li><code>ecg_values</code>: list of readings</li>
-<li><code>test_index</code>: index of a reading that could be a local maximum</li>
-</ul>
-<p><strong>Returns: </strong></p>
-<ul>
-<li><code>True</code>: if it’s a local maximum (it’s value being larger than the previous value and the next value)</li>
-<li><code>False</code>: if this reading is not a local maximum</li>
-</ul>
-<p><strong>Warning and things to consider: </strong></p>
-<ul>
-<li><p>Are there any constraints on <code>i</code> to avoid getting an index out of range error?</p></li>
-<li><p>Return <code>False</code> if <code>i</code> might cause an index out of range.</p></li>
-</ul>
-</section>
-<section id="write-a-function-find_r_peaks-1" class="level4">
-<h4 class="anchored" data-anchor-id="write-a-function-find_r_peaks-1">Write a function <code>find_r_peaks()</code></h4>
-<p><strong>Input parameters:</strong></p>
-<ul>
-<li><code>ecg_values</code>: list of ecg signal values.</li>
-<li><code>time_values</code>: list of time values in seconds</li>
-<li><code>threshold_ratio</code>: A float from <code>0</code> to <code>1</code> representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It’s set to <code>0.5</code> <strong>by default</strong>, but should be finetuned experimentally.</li>
-<li><code>min_timelapse</code>: A float representing the minimum timelapse between 2 R peaks. Is set to <code>0.0833</code> seconds <strong>by default</strong>, but should be finetuned experimentally.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>peaks</code>: list of <strong>indices</strong> corresponding to the detected R peaks in the signal. (<strong>Indices NOT values!</strong> )</li>
-</ul>
-<p><strong>Guidelines to build the algorithm</strong></p>
-<ol type="1">
-<li>An R peak is a local maximum.</li>
-<li>You can safely assume that high amplitude peaks above or equal to <code>threshold*maximum</code> where <code>maximum</code> is the global max of the signal are R peaks</li>
-<li>There cannot be two consecutive R peaks within <code>min_timelapse</code> (two R peaks cannot be too close to eachother).</li>
-</ol>
-<p><strong>Warning and things to keep in mind</strong></p>
-<ul>
-<li>Which indices can you safely pass to <code>is_local_maximum()</code>?</li>
-<li>To check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?</li>
-</ul>
-</section>
-<section id="write-a-function-plot_ecg_peaks-1" class="level4">
-<h4 class="anchored" data-anchor-id="write-a-function-plot_ecg_peaks-1">Write a function <code>plot_ecg_peaks()</code></h4>
-<p><strong>Input parameters</strong></p>
-<ul>
-<li><code>ecg_values</code>: list of ecg readings of a given patient</li>
-<li><code>peaks</code>: list of indices of the R peaks</li>
-<li><code>sampling_rate</code>: the number of samples taken per second (in Hz)</li>
-<li><code>filename</code>: the filename under which the graph image will be saved.</li>
-</ul>
-<p><strong>Task</strong></p>
-<p>You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.</p>
-</section>
-<section id="testing-1" class="level4">
-<h4 class="anchored" data-anchor-id="testing-1"><strong>Testing</strong></h4>
-<p>Call the functions in the <code>part2.py</code> file inside the <code>main()</code> function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  ecg <span class="op">=</span> read_data(FILENAME)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  time <span class="op">=</span> create_time_axis(ecg, SAMPLING_RATE)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some more lines</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  r_peaks <span class="op">=</span> find_r_peaks(ecg, time, <span class="fl">0.5</span>, <span class="fl">0.0833</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  plot_ecg_peaks(ecg, time, r_peaks, <span class="ss">f'part2_ecg_with_peaks.png'</span>, <span class="va">False</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Feel free to change the <code>threshold_ratio</code> and <code>min_timelapse</code> parameters to observe their effect on the algorithm.</li>
-</ul>
-<p><img src="assets/part2_ecg_with_peaks.png"></p>
-</section>
-<section id="write-a-function-heart_rate-1" class="level3">
-<h3 class="anchored" data-anchor-id="write-a-function-heart_rate-1">Write a function <code>heart_rate()</code></h3>
-<p><strong>Input parameters:</strong></p>
-<ul>
-<li><code>peaks</code>: list of indices of the R peaks</li>
-<li><code>sampling_rate</code>: the number of samples taken per second (in Hz)</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li>The heart rate in beats per minute.</li>
-</ul>
-<p><strong>Algorithm:</strong></p>
-<ul>
-<li><p>For every peak,</p>
-<ul>
-<li><p>Calculate its distance from the previous peak in sample count</p></li>
-<li><p>find the time interval between these two peaks:</p>
-<p><span class="math inline">\(RR_{interval} = \frac{R_i - R_{i-1}}{f_s}\)</span></p></li>
-<li><p>Accumulate all the <span class="math inline">\(RR_{interval}\)</span>s to get the average</p></li>
-</ul></li>
-</ul>
-<section id="test-3" class="level4">
-<h4 class="anchored" data-anchor-id="test-3">Test</h4>
 <p>Call this function in <code>main()</code> provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute.</p>
 
 
