@@ -25,14 +25,6 @@ As the heart pumps blood through the body, it emits an electric signal which can
 
 
 
-This assignment will be done in three parts:
-
-- [**Part 1:**](#part-1-plotting-the-ecg) Plotting a provided ECG with the correct time axis
-
-- **Part 2: ** Reading an entire ECG from a file and plotting the entire signal
-- **Part 3: ** Build an algorithm to develop R peaks and calculating the heart rate.
-
-
 
 # Part 1: Plotting the ECG
 
@@ -77,7 +69,9 @@ The structure of this assignment will be different than the Assignment2:
 
 ## Task
 
-In `part1.py`, you are given a sample `ecg_values` containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure. 
+In `part1.py`, you are given a sample `ecg` containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure. 
+
+** In `my_functions.py`, write the following functions** : 
 
 #### Write a function `create_time_axis()`
 
@@ -162,5 +156,3 @@ def main():
 Coming soon...
 
 
-# Part 3
-Coming soon...

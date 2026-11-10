@@ -390,7 +390,7 @@ Go over:
 - Quiz recap 
 - BREAK
 - Assignment 3 - Part 1 (due in class)
-- Demo on reading data from files 
+- Start of Assignment 3 - Part 2 (General instructions and tips)
 
 
 
@@ -403,7 +403,7 @@ Go over:
 
 # Week 12
 ::: {.panel-tabset}
-# Friday Section: November 13
+# Friday Section: November 20
 ## 📚 Prep 
 - [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
 - [CSV files](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/01_reading_files/01_reading_files.html#csv-file-format){target="_blank"} 
@@ -414,12 +414,10 @@ Go over:
 - List access with `[]`
 - `for i in range(len(my_list))` vs `for item in my_list:`
 - BREAK
-- Demo reading data from a file
-- Assignment 3 - Part 2 (due in class)
-- Assignment 3 - Part 3 (started, finished at home)
+- Assignment 3 - Part 2
 
 ## 🚀 After class
-- Assignment 3 - Part 3 (finish at home, before next class)
+- Prep for next class
 
 # Tuesday Section: November 17
 ## 📚 Prep 
@@ -428,7 +426,8 @@ Go over:
 - Read the instructions of the Assingmnet 3 Part 2, to be ready!
 
 ## 💻 In class
-Coming soon...
+- Assignment 3 Part 2 (due in class)
+
 
 ## 🚀 After class
 Coming soon ...
@@ -439,7 +438,7 @@ Coming soon ...
 <!-- 
 # Week 13
 ::: {.panel-tabset}
-# Friday Section: November 20
+# Friday Section: November 27
 
 ## 📚 Prep 
 - Zip and enumerate - loop over paired lists 
@@ -460,7 +459,26 @@ Coming soon ...
 :::
 
 
-# Week x
+# Week 14
+::: {.panel-tabset}
+# Friday Section: Dec 4 (Last session)
+
+## 📚 Prep 
+
+## 💻 In class
+
+## 🚀 After class
+
+# Tuesday Section:
+## 📚 Prep 
+
+## 💻 In class
+
+## 🚀 After class
+:::
+
+
+# Week 14
 ::: {.panel-tabset}
 # Friday Section: Date
 
