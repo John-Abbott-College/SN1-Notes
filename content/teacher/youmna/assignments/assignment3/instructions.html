@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.8.24" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+<title>Assignment3 – 420-SN1 Notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link  href="../../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../styles.css" />
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="/index.html" class="navbar-brand navbar-brand-logo">
+    <img src="/assets/favicons/favicon.svg" alt="" class="navbar-logo light-content" />
+    <img src="/assets/favicons/favicon.svg" alt="" class="navbar-logo dark-content" />
+    </a>
+    <a class="navbar-brand" href="/index.html">
+    <span class="navbar-title">420-SN1 Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+  aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
+  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-syllabus" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
+ <span class="menu-text">Syllabus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
+        <li>
+    <a class="dropdown-item" href="/syllabus/Youmna/Youmna.html">
+ <span class="dropdown-text">Youmna</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/syllabus/Keith/Keith.html">
+ <span class="dropdown-text">Keith</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-final-exam" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
+ <span class="menu-text">Final Exam</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-final-exam">    
+        <li>
+    <a class="dropdown-item" href="/final_exam_prep/final_exam_index.html">
+ <span class="dropdown-text">Previous Years Exams</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/final_exam_prep/reference_sheet/reference_sheet.html">
+ <span class="dropdown-text">Reference sheet</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-turtle-graphics" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
+ <span class="menu-text">Turtle Graphics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-turtle-graphics">    
+        <li>
+    <a class="dropdown-item" href="/topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html">
+ <span class="dropdown-text">Python Turtle Graphics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html">
+ <span class="dropdown-text">Draw a simple house</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/topics/10_turtle/exercise/robot_lab/instructions.html">
+ <span class="dropdown-text">Lab: Robot Collision Avoidance</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn"
+      data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
+      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
+        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="/index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Objectives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/01_objectives/01_course_goals/01_course_goals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Goals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/01_objectives/02_probelm_solving/02_probelm_solving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approaching Problems</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/03_introduction/01_file_manipulation/01_file_manipulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Files & Folders</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/03_introduction/02_what_is_programming/02_what_is_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/03_introduction/03_introduction_to_Python/03_introduction_to_Python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Programing Language</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/02_getting_started/03_lea/03_lea.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Lea</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/02_getting_started/07_thonny/thonny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using The Thonny Python Environment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Variables & Data Types</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/04_variables/02_variables/02_variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables and Constants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/04_variables/03_integers_floats/03_integers_floats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integers & Floats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/04_variables/04_booleans/04_booleans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Booleans</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/04_variables/05_strings/05_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/04_variables/exercises/data_types/data_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Variables & Data Types</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5"  role="navigation" aria-expanded="false">
+ <span class="menu-text">String Handling</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/05_string_formatting/01_f_strings/01_f_strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">f-strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/05_string_formatting/02_f_strings_formatting/02_f_strings_formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">f-string Formatting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/05_string_formatting/03_string_ops/03_string_ops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String Operations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Operators</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/01_arithmetic_operators/01_arithmetic_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arithmetic operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/02_assignment_operator/02_assignment_operator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment operator</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/03_comparison_operators/03_comparison_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparison operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/04_logical_operators/04_logical_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logical operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/05_order_operations/05_order_operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Order of Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/exercises/arithmetic_operators/arithmetic_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Arithmetic operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/06_operators/exercises/assignment_operators/assignment_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Assignment operators</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Conditions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/07_conditionals/01_if_statements/01_if_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Statements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/07_conditionals/02_if_else_statements/02_if_else_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The if-else statement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/07_conditionals/03_if_elif_statements/03_if_elif_statements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The if-elif statement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/07_conditionals/exercises/conditional/conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Practice Conditions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/07_conditionals/exercises/conditional_if_else/conditional_if_else.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Complex Conditions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Loops</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/08_loops/01_for_loop/01_for_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For Loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/08_loops/exercises/for_loops/for_loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ For Loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/08_loops/02_while_loop/02_while_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">While Loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/08_loops/exercises/while_loops/while_loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ While Loops</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/01_what_are_functions/01_what_are_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What are functions?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/02_math_functions/02_math_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Math Module</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/03_io/03_io.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Print & Input</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/04_custom_functions/04_custom_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/05_scope/05_scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scope & Statements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/exercises/custom_functions/custom_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Custom Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/exercises/custom_functions/many_mini_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Many Mini Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/09_functions/exercises/input_output/input_output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️ Print & Input functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Lists</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/01_into_to_lists/01_into_to_lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro on Lists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing elements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Looping over elements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/04_list_inclusion/04_list_inclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding Elements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/05_list_reordering/05_list_reordering/05_list_reordering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reordering Lists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/11_lists/exercises/lists/lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✍️  Lists</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11"  role="navigation" aria-expanded="false">
+ <span class="menu-text">Scientific Modules</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/12_data_processing/01_reading_files/01_reading_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading/Writing Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/topics/12_data_processing/02_installing_modules/02_installing_modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing Python Modules</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <div id="quarto-toc-target"></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<script id = "quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives">🎯 Learning Objectives</a></li>
+  <li><a href="#context-heart-beats" id="toc-context-heart-beats">Context: Heart Beats ❤️</a></li>
+  <li><a href="#part-1-plotting-the-ecg" id="toc-part-1-plotting-the-ecg">Part 1: Plotting the ECG</a>
+  <ul>
+  <li><a href="#specific-instructions" id="toc-specific-instructions"><strong>📝 Specific Instructions</strong></a></li>
+  <li><a href="#task" id="toc-task">Task</a></li>
+  </ul></li>
+  <li><a href="#part-2-detecting-r-peaks" id="toc-part-2-detecting-r-peaks">Part 2: Detecting R peaks</a>
+  <ul>
+  <li><a href="#specific-instructions-1" id="toc-specific-instructions-1"><strong>📝 Specific Instructions</strong></a></li>
+  <li><a href="#your-task" id="toc-your-task">Your Task</a>
+  <ul>
+  <li><a href="#write-a-function-heart_rate" id="toc-write-a-function-heart_rate">Write a function <code>heart_rate()</code></a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+<p>📝 <strong>Worth:</strong> 7 %</p>
+<section id="learning-objectives" class="level2">
+<h2>🎯 Learning Objectives</h2>
+<ul>
+<li><p>Create a list to store multiple values</p></li>
+<li><p>Plot lists using <code>matplotlib</code></p></li>
+<li><p>Read data from a <em>Comma Separated Values</em> (.csv) file</p></li>
+<li><p>Develop an algorithm to detect peaks</p></li>
+</ul>
+</section>
+<section id="context-heart-beats" class="level2">
+<h2>Context: Heart Beats ❤️</h2>
+<p>As the heart pumps blood through the body, it emits an electric signal which can be measured, amplified and displayed. This is what we call an <em>electrocardiogram</em>, each heart beat is characterized by a the cardiac cycle made up of different waves named <em>P wave, QRS complex</em> and the <em>T wave</em> as shown below. They offer various medical insights on the patient’s health.</p>
+<p><img src="assets/SinusRhythmLabels.png" height=300/></p>
+</section>
+<section id="part-1-plotting-the-ecg" class="level1">
+<h1>Part 1: Plotting the ECG</h1>
+<p><strong>🗓️ Due:</strong> As per Lea.</p>
+<p>📥 <strong>Submission: </strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />ECG graph <strong>demoed to teacher in class.</strong></label></li>
+<li><label><input type="checkbox" />Code submitted on <a href="https://www.gradescope.ca/courses/39225">Gradescope</a></label>
+<ul class="task-list">
+<li><label><input type="checkbox" /><code>my_functions.py</code></label></li>
+<li><label><input type="checkbox" /><code>part1.py</code></label></li>
+<li><label><input type="checkbox" /><code>part1_ecg.png</code></label></li>
+</ul></li>
+</ul>
+<section id="specific-instructions" class="level2">
+<h2><strong>📝 Specific Instructions</strong></h2>
+<p>The structure of this assignment will be different than the Assignment2:</p>
+<ul>
+<li><p><a href="part1.zip" target="_blank">Download</a> and extract the starter code.</p></li>
+<li><p>You will be working within <strong>two python files</strong>:</p>
+<ul>
+<li><p><code>my_functions.py</code> : Where all the functions should be defined</p></li>
+<li><p><code>part1.py</code>: This is where the <code>main()</code> function is calling the other functions</p></li>
+</ul></li>
+<li><p>Keep both files in the <strong>same folder</strong></p></li>
+<li><p>I added an <code>import</code> statement in <code>part1.py</code>, <strong>please DO NOT remove this line</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> my_functions <span class="im">import</span> <span class="op">*</span></span></code></pre></div>
+<ul>
+<li>the <code>*</code> means import all the functions defined in this file.</li>
+</ul></li>
+<li><p>As usual, <strong>do not rename the files, respect each function name and its parameter list</strong></p></li>
+<li><p>Make sure <strong>Matplotlib</strong> is installed, if not follow <a href="https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/02_installing_modules/02_installing_modules.html" target="_blank">these instructions</a></p></li>
+</ul>
+</section>
+<section id="task" class="level2">
+<h2>Task</h2>
+<p>In <code>part1.py</code>, you are given a sample <code>ecg</code> containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure.</p>
+<p>** In <code>my_functions.py</code>, write the following functions** :</p>
+<section id="write-a-function-create_time_axis" class="level4">
+<h4>Write a function <code>create_time_axis()</code></h4>
+<p><strong>Input parameters: </strong></p>
+<p><code>ecg_values</code>: A list of floats representing the ecg values (in mV)</p>
+<p><code>sampling_rate</code>: A float representing the rate at which the samples were measured (in Hz)</p>
+<p><strong>Return: </strong></p>
+<p>A list of time values in seconds</p>
+<ul>
+<li><p>It should have the same length as the <code>ecg_values</code> list.</p></li>
+<li><p>It should start at <code>0</code>seconds.</p></li>
+<li><p>Increase by a constant time interval of <code>1 / sampling_rate</code> seconds between consecutive values.</p></li>
+<li><p>Maintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.</p></li>
+</ul>
+<blockquote>
+<p><strong>For example</strong>, suppose <code>sampling_rate = 360</code> and <code>ecg_values</code> contains 500 measurements.</p>
+<p>Since 360 samples are recorded every second, the time interval between consecutive samples is:</p>
+<p><span class="math inline">\(\Delta t = \frac{1}{360} \approx 0.00278 \text{ seconds}\)</span></p>
+<p>The resulting time values should be : <span class="math inline">\([0, \frac{1}{360}, \frac{2}{360}, \frac{3}{360}, ..., \frac{i}{360}, ... , \frac{499}{360}]\)</span></p>
+</blockquote>
+</section>
+<section id="test" class="level4">
+<h4><strong>Test</strong></h4>
+<p>Call the function in <code>main()</code> in the <code>part1.py</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  ecg <span class="op">=</span> [<span class="op">-</span><span class="fl">0.955</span>, <span class="op">-</span><span class="fl">0.91</span>, <span class="op">-</span><span class="fl">0.895</span>,...]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  time_values <span class="op">=</span> create_time_values(ecg_values<span class="op">=</span>ecg, sampling_rate<span class="op">=</span>SAMPLING_RATE)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(time_values)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="bu">len</span>(time_values))</span></code></pre></div>
+<p><strong>Expected output</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cmd"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>500</span></code></pre></div>
+</section>
+<section id="write-a-function-plot_ecg" class="level4">
+<h4>Write a function <code>plot_ecg()</code></h4>
+<p><strong>Input parameters:</strong></p>
+<ul>
+<li><code>ecg_values</code> : list of floats of ecg readings</li>
+<li><code>time_values</code>: list of floats of the seconds</li>
+<li><code>output_filename</code>: the filename under which the graph image will be saved.</li>
+<li><code>show_graph</code>: A boolean, when set to <code>True</code> the figure should be shown on the screen, otherwise, it should not be shown.</li>
+</ul>
+<p><strong>Return:</strong> No return</p>
+<p><strong>Task:</strong></p>
+<ul>
+<li><p>Plot the <code>ecg_values</code> versus the <code>time_values</code></p></li>
+<li><p>Apply appropriate styling using Matplotlib:</p>
+<ul>
+<li>Add a title using <code>plt.title()</code></li>
+<li>Add an x axis title using <code>plt.xlabel()</code></li>
+<li>Add a y axis title using <code>plt.ylabel()</code></li>
+<li>Add a grid using <code>plt.grid(True)</code></li>
+</ul></li>
+<li><p>Save the graph under <code>output_filename</code>using <code>plt.savefig()</code></p></li>
+<li><p>If the boolean <code>show_graph</code> is <code>True</code>, display the figure with <code>plt.show()</code></p></li>
+<li><p>Close the figure with <code>plt.close()</code></p></li>
+</ul>
+</section>
+<section id="test-1" class="level4">
+<h4>Test</h4>
+<p>Call the function in the <code>main()</code> in the <code>part1.py</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># previous lines...</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  plot_ecg(ecg, time_values, <span class="st">&quot;part1_ecg.png&quot;</span>, <span class="va">True</span>)</span></code></pre></div>
+<ul>
+<li><p>Show your graph to your teacher</p></li>
+<li><p>Submit your code and your graph on Gradescope.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="part-2-detecting-r-peaks" class="level1">
+<h1>Part 2: Detecting R peaks</h1>
+<p><strong>🗓️ Due:</strong> Before next class.</p>
+<p>📥 <strong>Submission: </strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />ECG graph of the entire sample <strong>demoed to teacher in class.</strong></label></li>
+<li><label><input type="checkbox" />Code submitted on <a href="https://www.gradescope.ca/courses/39225">Gradescope</a></label>
+<ul class="task-list">
+<li><label><input type="checkbox" /><code>my_functions.py</code></label></li>
+<li><label><input type="checkbox" /><code>part2.py</code></label></li>
+<li><label><input type="checkbox" /><code>part2_ecg.png</code></label></li>
+<li><label><input type="checkbox" /><code>part2_ecg_with_peaks.png</code></label></li>
+</ul></li>
+</ul>
+<section id="specific-instructions-1" class="level3">
+<h3><strong>📝 Specific Instructions</strong></h3>
+<ul>
+<li><p><a href="part2.zip" target="_blank">Download</a> and extract the starter code.</p></li>
+<li><p>Extract the ZIP folder for Part 2.</p></li>
+<li><p>Make sure you have the following files <strong>in the same folder</strong>:</p>
+<ul>
+<li><code>part2.py</code>: This is the main program you will work on for Part 2.</li>
+<li><code>my_functions.py</code>: Continue using the same file you created in Part 1.</li>
+<li><code>ecg.csv</code>: The dataset containing the ECG samples. This is synthetic data generated with the help of an AI tool.</li>
+<li><code>part1.py</code>: Keep this file for reference. <strong>You will not need to modify it.</strong></li>
+</ul></li>
+<li><p>In <code>part2.y</code> , you are given functions to read the <code>ecg.csv</code>, feel free to look at those to better understand how a program can load data from a file.</p>
+<p><strong>Do not remove those lines or anything above this:</strong></p></li>
+<li><div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> my_functions <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>SAMPLING_RATE:<span class="bu">float</span> <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>FILENAME:<span class="bu">str</span>  <span class="op">=</span> <span class="st">&#39;ecg.csv&#39;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_to_floats(row:<span class="bu">list</span>[<span class="bu">str</span>])<span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">float</span>]:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some lines of code...</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_data(csv_filename:<span class="bu">str</span>)<span class="op">-&gt;</span><span class="bu">list</span>[<span class="bu">float</span>]:</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some lines of code...</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    ecg_values <span class="op">=</span> read_data(FILENAME)</span></code></pre></div></li>
+<li><p>Do not remove the last two lines of the file either:</p></li>
+<li><div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span><span class="st">&#39;__main__&#39;</span>:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>      main()</span></code></pre></div></li>
+</ul>
+</section>
+<section id="your-task" class="level2">
+<h2>Your Task</h2>
+<p>In this final part of the assignment, we will focus on calculating the <strong>heart rate</strong> which is obtained by calculating the number of R peaks that occur per minute.</p>
+<p><img src="assets/rr_heart_rate.png"/></p>
+<p>Alternatively, if the <strong>average</strong> time interval (in s) between two R peaks is obtained <span class="math inline">\(\overline{RR_{interval}}\)</span>, the heart rate in beats per minute can be calculated using the sampling rate <span class="math inline">\(f_s\)</span> in Hz (samples per second). <span class="math display">\[
+Heart Rate = \frac{60}{\overline{RR_{interval}}}
+\]</span></p>
+<p>Implement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that <strong>high-amplitude impulses</strong> in the signal correspond to R peaks.</p>
+<p>Here are functions to help you accomplish that:</p>
+<section id="write-a-function-is_local_maximum" class="level4">
+<h4>Write a function <code>is_local_maximum()</code></h4>
+<p><strong>Input parameters:</strong></p>
+<ul>
+<li><code>ecg_values</code>: list of readings</li>
+<li><code>test_index</code>: index of a reading that could be a local maximum</li>
+</ul>
+<p><strong>Returns: </strong></p>
+<ul>
+<li><code>True</code>: if it’s a local maximum (it’s value being larger than the previous value and the next value)</li>
+<li><code>False</code>: if this reading is not a local maximum</li>
+</ul>
+<p><strong>Warning and things to consider: </strong></p>
+<ul>
+<li><p>Are there any constraints on <code>i</code> to avoid getting an index out of range error?</p></li>
+<li><p>Return <code>False</code> if <code>i</code> might cause an index out of range.</p></li>
+</ul>
+</section>
+<section id="write-a-function-find_r_peaks" class="level4">
+<h4>Write a function <code>find_r_peaks()</code></h4>
+<p><strong>Input parameters:</strong></p>
+<ul>
+<li><code>ecg_values</code>: list of ecg signal values.</li>
+<li><code>time_values</code>: list of time values in seconds</li>
+<li><code>threshold_ratio</code>: A float from <code>0</code> to <code>1</code> representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It’s set to <code>0.5</code> <strong>by default</strong>, but should be finetuned experimentally.</li>
+<li><code>min_timelapse</code>: A float representing the minimum timelapse between 2 R peaks. Is set to <code>0.0833</code> seconds <strong>by default</strong>, but should be finetuned experimentally.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>peaks</code>: list of <strong>indices</strong> corresponding to the detected R peaks in the signal. (<strong>Indices NOT values!</strong> )</li>
+</ul>
+<p><strong>Guidelines to build the algorithm</strong></p>
+<ol type="1">
+<li>An R peak is a local maximum.</li>
+<li>You can safely assume that high amplitude peaks above or equal to <code>threshold*maximum</code> where <code>maximum</code> is the global max of the signal are R peaks</li>
+<li>There cannot be two consecutive R peaks within <code>min_timelapse</code> (two R peaks cannot be too close to eachother).</li>
+</ol>
+<p><strong>Warning and things to keep in mind</strong></p>
+<ul>
+<li>Which indices can you safely pass to <code>is_local_maximum()</code>?</li>
+<li>To check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?</li>
+</ul>
+</section>
+<section id="write-a-function-plot_ecg_peaks" class="level4">
+<h4>Write a function <code>plot_ecg_peaks()</code></h4>
+<p><strong>Input parameters</strong></p>
+<ul>
+<li><code>ecg_values</code>: list of ecg readings of a given patient</li>
+<li><code>peaks</code>: list of indices of the R peaks</li>
+<li><code>sampling_rate</code>: the number of samples taken per second (in Hz)</li>
+<li><code>filename</code>: the filename under which the graph image will be saved.</li>
+</ul>
+<p><strong>Task</strong></p>
+<p>You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.</p>
+</section>
+<section id="testing" class="level4">
+<h4><strong>Testing</strong></h4>
+<p>Call the functions in the <code>part2.py</code> file inside the <code>main()</code> function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  ecg <span class="op">=</span> read_data(FILENAME)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  time <span class="op">=</span> create_time_values(ecg, SAMPLING_RATE)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some more lines</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  r_peaks <span class="op">=</span> find_r_peaks(ecg, time, <span class="fl">0.5</span>, <span class="fl">0.0833</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  plot_ecg_peaks(ecg, time, r_peaks, <span class="ss">f&#39;part2_ecg_with_peaks.png&#39;</span>, <span class="va">False</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
+<ul>
+<li>Feel free to change the <code>threshold_ratio</code> and <code>min_timelapse</code> parameters to observe their effect on the algorithm.</li>
+</ul>
+<p><img src="assets/part2_ecg_with_peaks.png"/></p>
+</section>
+<section id="write-a-function-heart_rate" class="level3">
+<h3>Write a function <code>heart_rate()</code></h3>
+<p><strong>Input parameters:</strong></p>
+<ul>
+<li><code>peaks</code>: list of indices of the R peaks</li>
+<li><code>sampling_rate</code>: the number of samples taken per second (in Hz)</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>The heart rate in beats per minute.</li>
+</ul>
+<p><strong>Algorithm:</strong></p>
+<ul>
+<li><p>For every peak,</p>
+<ul>
+<li><p>Calculate its distance from the previous peak in sample count</p></li>
+<li><p>find the time interval between these two peaks:</p>
+<p><span class="math inline">\(RR_{interval} = \frac{R_i - R_{i-1}}{f_s}\)</span></p></li>
+<li><p>Accumulate all the <span class="math inline">\(RR_{interval}\)</span>s to get the average</p></li>
+</ul></li>
+</ul>
+<section id="test-2" class="level4">
+<h4>Test</h4>
+<p>Call this function in <code>main()</code> provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute.</p>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Objectives</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDFfb2JqZWN0aXZlcy8wMV9jb3Vyc2VfZ29hbHMvMDFfY291cnNlX2dvYWxzLmh0bWxDb3Vyc2UtR29hbHM=">Course Goals</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDFfb2JqZWN0aXZlcy8wMl9wcm9iZWxtX3NvbHZpbmcvMDJfcHJvYmVsbV9zb2x2aW5nLmh0bWxBcHByb2FjaGluZy1Qcm9ibGVtcw==">Approaching Problems</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Introduction</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDNfaW50cm9kdWN0aW9uLzAxX2ZpbGVfbWFuaXB1bGF0aW9uLzAxX2ZpbGVfbWFuaXB1bGF0aW9uLmh0bWxGaWxlcy0mLUZvbGRlcnM=">Files &amp; Folders</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDNfaW50cm9kdWN0aW9uLzAyX3doYXRfaXNfcHJvZ3JhbW1pbmcvMDJfd2hhdF9pc19wcm9ncmFtbWluZy5odG1sVXNlZnVsLURlZmluaXRpb25z">Useful Definitions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDNfaW50cm9kdWN0aW9uLzAzX2ludHJvZHVjdGlvbl90b19QeXRob24vMDNfaW50cm9kdWN0aW9uX3RvX1B5dGhvbi5odG1sUHl0aG9uLVByb2dyYW1pbmctTGFuZ3VhZ2U=">Python Programing Language</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Getting Started</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDJfZ2V0dGluZ19zdGFydGVkLzAzX2xlYS8wM19sZWEuaHRtbFVzaW5nLUxlYQ==">Using Lea</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDJfZ2V0dGluZ19zdGFydGVkLzA3X3Rob25ueS90aG9ubnkuaHRtbFVzaW5nLVRoZS1UaG9ubnktUHl0aG9uLUVudmlyb25tZW50">Using The Thonny Python Environment</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Variables &amp; Data Types</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDRfdmFyaWFibGVzLzAyX3ZhcmlhYmxlcy8wMl92YXJpYWJsZXMuaHRtbFZhcmlhYmxlcy1hbmQtQ29uc3RhbnRz">Variables and Constants</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDRfdmFyaWFibGVzLzAzX2ludGVnZXJzX2Zsb2F0cy8wM19pbnRlZ2Vyc19mbG9hdHMuaHRtbEludGVnZXJzLSYtRmxvYXRz">Integers &amp; Floats</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDRfdmFyaWFibGVzLzA0X2Jvb2xlYW5zLzA0X2Jvb2xlYW5zLmh0bWxCb29sZWFucw==">Booleans</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDRfdmFyaWFibGVzLzA1X3N0cmluZ3MvMDVfc3RyaW5ncy5odG1sU3RyaW5ncw==">Strings</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDRfdmFyaWFibGVzL2V4ZXJjaXNlcy9kYXRhX3R5cGVzL2RhdGFfdHlwZXMuaHRtbOKcje+4jy1WYXJpYWJsZXMtJi1EYXRhLVR5cGVz">✍️ Variables &amp; Data Types</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">String Handling</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDVfc3RyaW5nX2Zvcm1hdHRpbmcvMDFfZl9zdHJpbmdzLzAxX2Zfc3RyaW5ncy5odG1sZi1zdHJpbmdz">f-strings</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDVfc3RyaW5nX2Zvcm1hdHRpbmcvMDJfZl9zdHJpbmdzX2Zvcm1hdHRpbmcvMDJfZl9zdHJpbmdzX2Zvcm1hdHRpbmcuaHRtbGYtc3RyaW5nLUZvcm1hdHRpbmc=">f-string Formatting</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDVfc3RyaW5nX2Zvcm1hdHRpbmcvMDNfc3RyaW5nX29wcy8wM19zdHJpbmdfb3BzLmh0bWxTdHJpbmctT3BlcmF0aW9ucw==">String Operations</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">Operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzLzAxX2FyaXRobWV0aWNfb3BlcmF0b3JzLzAxX2FyaXRobWV0aWNfb3BlcmF0b3JzLmh0bWxBcml0aG1ldGljLW9wZXJhdG9ycw==">Arithmetic operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzLzAyX2Fzc2lnbm1lbnRfb3BlcmF0b3IvMDJfYXNzaWdubWVudF9vcGVyYXRvci5odG1sQXNzaWdubWVudC1vcGVyYXRvcg==">Assignment operator</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzLzAzX2NvbXBhcmlzb25fb3BlcmF0b3JzLzAzX2NvbXBhcmlzb25fb3BlcmF0b3JzLmh0bWxDb21wYXJpc29uLW9wZXJhdG9ycw==">Comparison operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzLzA0X2xvZ2ljYWxfb3BlcmF0b3JzLzA0X2xvZ2ljYWxfb3BlcmF0b3JzLmh0bWxMb2dpY2FsLW9wZXJhdG9ycw==">Logical operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzLzA1X29yZGVyX29wZXJhdGlvbnMvMDVfb3JkZXJfb3BlcmF0aW9ucy5odG1sT3JkZXItb2YtT3BlcmF0aW9ucw==">Order of Operations</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzL2V4ZXJjaXNlcy9hcml0aG1ldGljX29wZXJhdG9ycy9hcml0aG1ldGljX29wZXJhdG9ycy5odG1s4pyN77iPLUFyaXRobWV0aWMtb3BlcmF0b3Jz">✍️ Arithmetic operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDZfb3BlcmF0b3JzL2V4ZXJjaXNlcy9hc3NpZ25tZW50X29wZXJhdG9ycy9hc3NpZ25tZW50X29wZXJhdG9ycy5odG1s4pyN77iPLUFzc2lnbm1lbnQtb3BlcmF0b3Jz">✍️ Assignment operators</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNw==">Conditions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDdfY29uZGl0aW9uYWxzLzAxX2lmX3N0YXRlbWVudHMvMDFfaWZfc3RhdGVtZW50cy5odG1sQ29uZGl0aW9uYWwtU3RhdGVtZW50cw==">Conditional Statements</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDdfY29uZGl0aW9uYWxzLzAyX2lmX2Vsc2Vfc3RhdGVtZW50cy8wMl9pZl9lbHNlX3N0YXRlbWVudHMuaHRtbFRoZS1pZi1lbHNlLXN0YXRlbWVudA==">The if-else statement</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDdfY29uZGl0aW9uYWxzLzAzX2lmX2VsaWZfc3RhdGVtZW50cy8wM19pZl9lbGlmX3N0YXRlbWVudHMuaHRtbFRoZS1pZi1lbGlmLXN0YXRlbWVudA==">The if-elif statement</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDdfY29uZGl0aW9uYWxzL2V4ZXJjaXNlcy9jb25kaXRpb25hbC9jb25kaXRpb25hbC5odG1s4pyN77iPLVByYWN0aWNlLUNvbmRpdGlvbnM=">✍️ Practice Conditions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDdfY29uZGl0aW9uYWxzL2V4ZXJjaXNlcy9jb25kaXRpb25hbF9pZl9lbHNlL2NvbmRpdGlvbmFsX2lmX2Vsc2UuaHRtbOKcje+4jy1Db21wbGV4LUNvbmRpdGlvbnM=">✍️ Complex Conditions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tOA==">Loops</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDhfbG9vcHMvMDFfZm9yX2xvb3AvMDFfZm9yX2xvb3AuaHRtbEZvci1Mb29w">For Loop</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDhfbG9vcHMvZXhlcmNpc2VzL2Zvcl9sb29wcy9mb3JfbG9vcHMuaHRtbOKcje+4jy1Gb3ItTG9vcHM=">✍️ For Loops</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDhfbG9vcHMvMDJfd2hpbGVfbG9vcC8wMl93aGlsZV9sb29wLmh0bWxXaGlsZS1Mb29w">While Loop</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDhfbG9vcHMvZXhlcmNpc2VzL3doaWxlX2xvb3BzL3doaWxlX2xvb3BzLmh0bWzinI3vuI8tV2hpbGUtTG9vcHM=">✍️ While Loops</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tOQ==">Functions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zLzAxX3doYXRfYXJlX2Z1bmN0aW9ucy8wMV93aGF0X2FyZV9mdW5jdGlvbnMuaHRtbFdoYXQtYXJlLWZ1bmN0aW9ucz8=">What are functions?</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zLzAyX21hdGhfZnVuY3Rpb25zLzAyX21hdGhfZnVuY3Rpb25zLmh0bWxUaGUtTWF0aC1Nb2R1bGU=">The Math Module</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zLzAzX2lvLzAzX2lvLmh0bWxQcmludC0mLUlucHV0">Print &amp; Input</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zLzA0X2N1c3RvbV9mdW5jdGlvbnMvMDRfY3VzdG9tX2Z1bmN0aW9ucy5odG1sQ3VzdG9tLUZ1bmN0aW9ucw==">Custom Functions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zLzA1X3Njb3BlLzA1X3Njb3BlLmh0bWxTY29wZS0mLVN0YXRlbWVudHM=">Scope &amp; Statements</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zL2V4ZXJjaXNlcy9jdXN0b21fZnVuY3Rpb25zL2N1c3RvbV9mdW5jdGlvbnMuaHRtbOKcje+4jy1DdXN0b20tRnVuY3Rpb25z">✍️ Custom Functions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zL2V4ZXJjaXNlcy9jdXN0b21fZnVuY3Rpb25zL21hbnlfbWluaV9mdW5jdGlvbnMuaHRtbOKcje+4jy1NYW55LU1pbmktRnVuY3Rpb25z">✍️ Many Mini Functions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMDlfZnVuY3Rpb25zL2V4ZXJjaXNlcy9pbnB1dF9vdXRwdXQvaW5wdXRfb3V0cHV0Lmh0bWzinI3vuI8tUHJpbnQtJi1JbnB1dC1mdW5jdGlvbnM=">✍️ Print &amp; Input functions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMTA=">Lists</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvMDFfaW50b190b19saXN0cy8wMV9pbnRvX3RvX2xpc3RzLmh0bWxJbnRyby1vbi1MaXN0cw==">Intro on Lists</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvMDJfaW5kZXhpbmdfbGlzdHMvMDJfaW5kZXhpbmdfbGlzdHMvMDJfaW5kZXhpbmdfbGlzdHMuaHRtbEFjY2Vzc2luZy1lbGVtZW50cw==">Accessing elements</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvMDNfbG9vcGluZ19vdmVyX2xpc3RzLzAzX2xvb3Bpbmdfb3Zlcl9saXN0cy5odG1sTG9vcGluZy1vdmVyLWVsZW1lbnRz">Looping over elements</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvMDRfbGlzdF9pbmNsdXNpb24vMDRfbGlzdF9pbmNsdXNpb24uaHRtbEZpbmRpbmctRWxlbWVudHM=">Finding Elements</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvMDVfbGlzdF9yZW9yZGVyaW5nLzA1X2xpc3RfcmVvcmRlcmluZy8wNV9saXN0X3Jlb3JkZXJpbmcuaHRtbFJlb3JkZXJpbmctTGlzdHM=">Reordering Lists</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTFfbGlzdHMvZXhlcmNpc2VzL2xpc3RzL2xpc3RzLmh0bWzinI3vuI8tLUxpc3Rz">✍️ Lists</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMTE=">Scientific Modules</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTJfZGF0YV9wcm9jZXNzaW5nLzAxX3JlYWRpbmdfZmlsZXMvMDFfcmVhZGluZ19maWxlcy5odG1sUmVhZGluZy9Xcml0aW5nLUZpbGVz">Reading/Writing Files</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90b3BpY3MvMTJfZGF0YV9wcm9jZXNzaW5nLzAyX2luc3RhbGxpbmdfbW9kdWxlcy8wMl9pbnN0YWxsaW5nX21vZHVsZXMuaHRtbEluc3RhbGxpbmctUHl0aG9uLU1vZHVsZXM=">Installing Python Modules</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3lsbGFidXM=">Syllabus</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6WW91bW5h">Youmna</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3N5bGxhYnVzL1lvdW1uYS9Zb3VtbmEuaHRtbA==">/syllabus/Youmna/Youmna.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6S2VpdGg=">Keith</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3N5bGxhYnVzL0tlaXRoL0tlaXRoLmh0bWw=">/syllabus/Keith/Keith.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RmluYWwgRXhhbQ==">Final Exam</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UHJldmlvdXMgWWVhcnMgRXhhbXM=">Previous Years Exams</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2ZpbmFsX2V4YW1fcHJlcC9maW5hbF9leGFtX2luZGV4Lmh0bWw=">/final_exam_prep/final_exam_index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UmVmZXJlbmNlIHNoZWV0">Reference sheet</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2ZpbmFsX2V4YW1fcHJlcC9yZWZlcmVuY2Vfc2hlZXQvcmVmZXJlbmNlX3NoZWV0Lmh0bWw=">/final_exam_prep/reference_sheet/reference_sheet.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6VHVydGxlIEdyYXBoaWNz">Turtle Graphics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UHl0aG9uIFR1cnRsZSBHcmFwaGljcw==">Python Turtle Graphics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3RvcGljcy8xMF90dXJ0bGUvMDFfdHVydGxlX2dyYXBoaWNzLzAxX3R1cnRsZV9ncmFwaGljcy5odG1s">/topics/10_turtle/01_turtle_graphics/01_turtle_graphics.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RHJhdyBhIHNpbXBsZSBob3VzZQ==">Draw a simple house</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3RvcGljcy8xMF90dXJ0bGUvMDJfYXJ0c19hbmRfY3JhZnRzLzAyX2FydHNfYW5kX2NyYWZ0cy5odG1s">/topics/10_turtle/02_arts_and_crafts/02_arts_and_crafts.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TGFiOiBSb2JvdCBDb2xsaXNpb24gQXZvaWRhbmNl">Lab: Robot Collision Avoidance</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3RvcGljcy8xMF90dXJ0bGUvZXhlcmNpc2Uvcm9ib3RfbGFiL2luc3RydWN0aW9ucy5odG1s">/topics/10_turtle/exercise/robot_lab/instructions.html</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Assignment3 – 420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Assignment3 – 420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Assignment3 – 420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">420-SN1 Notes</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
+</div>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../teacher/youmna/assignments/assignment3";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../../../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id = "quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/john-abbott-college\.github\.io\/SN1-Notes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+</body>
+
+</html>
