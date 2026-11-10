@@ -28,7 +28,7 @@ As the heart pumps blood through the body, it emits an electric signal which can
 
 # Part 1: Plotting the ECG
 
-**🗓️ Due:** At the end of class
+**🗓️ Due:** As per Lea.
 
 📥 **Submission: ** 
 
@@ -101,7 +101,7 @@ A list of time values in seconds
 
 
 
-**Test**
+#### **Test**
 
 Call the function in `main()` in the `part1.py`:
 
@@ -150,9 +150,22 @@ def main():
 
 - Close the figure with `plt.close()`
 
-- Show your graph to your teacher.
 
-# Part 2 
-Coming soon...
+#### Test
+
+Call the function in the `main()` in the `part1.py`:
+
+```python
+def main():
+  
+  # previous lines...
+  
+  plot_ecg(ecg, time_values, "part1_ecg.png", True)
+
+```
 
 
+
+- Show your graph to your teacher
+
+- Submit your code and your graph on Gradescope.
