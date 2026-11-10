@@ -802,7 +802,6 @@ window.Quarto = {
   <li><a href="#specific-instructions" id="toc-specific-instructions" class="nav-link" data-scroll-target="#specific-instructions"><strong>📝 Specific Instructions</strong></a></li>
   <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task">Task</a></li>
   </ul></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
   </ul>
 </nav>
     </div>
@@ -846,7 +845,7 @@ window.Quarto = {
 </section>
 <section id="part-1-plotting-the-ecg" class="level1">
 <h1>Part 1: Plotting the ECG</h1>
-<p><strong>🗓️ Due:</strong> At the end of class</p>
+<p><strong>🗓️ Due:</strong> As per Lea.</p>
 <p>📥 <strong>Submission: </strong></p>
 <ul class="task-list">
 <li><label><input type="checkbox">ECG graph <strong>demoed to teacher in class.</strong></label></li>
@@ -900,7 +899,9 @@ window.Quarto = {
 <p><span class="math inline">\(\Delta t = \frac{1}{360} \approx 0.00278 \text{ seconds}\)</span></p>
 <p>The resulting time values should be : <span class="math inline">\([0, \frac{1}{360}, \frac{2}{360}, \frac{3}{360}, ..., \frac{i}{360}, ... , \frac{499}{360}]\)</span></p>
 </blockquote>
-<p><strong>Test</strong></p>
+</section>
+<section id="test" class="level4">
+<h4 class="anchored" data-anchor-id="test"><strong>Test</strong></h4>
 <p>Call the function in <code>main()</code> in the <code>part1.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  ecg <span class="op">=</span> [<span class="op">-</span><span class="fl">0.955</span>, <span class="op">-</span><span class="fl">0.91</span>, <span class="op">-</span><span class="fl">0.895</span>,...]</span>
@@ -934,14 +935,20 @@ window.Quarto = {
 <li><p>Save the graph under <code>filename</code>using <code>plt.savefig()</code></p></li>
 <li><p>If the boolean <code>show_graph</code> is <code>True</code>, display the figure with <code>plt.show()</code></p></li>
 <li><p>Close the figure with <code>plt.close()</code></p></li>
-<li><p>Show your graph to your teacher.</p></li>
 </ul>
 </section>
-</section>
-</section>
-<section id="part-2" class="level1">
-<h1>Part 2</h1>
-<p>Coming soon…</p>
+<section id="test-1" class="level4">
+<h4 class="anchored" data-anchor-id="test-1">Test</h4>
+<p>Call the function in the <code>main()</code> in the <code>part1.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># previous lines...</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  plot_ecg(ecg, time_values, <span class="st">"part1_ecg.png"</span>, <span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><p>Show your graph to your teacher</p></li>
+<li><p>Submit your code and your graph on Gradescope.</p></li>
+</ul>
 
 
 <script type="ojs-module-contents">
@@ -958,6 +965,8 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
