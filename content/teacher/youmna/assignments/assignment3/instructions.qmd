@@ -169,3 +169,390 @@ def main():
 - Show your graph to your teacher
 
 - Submit your code and your graph on Gradescope.
+
+
+# Part 2: Detecting R peaks
+
+**🗓️ Due:** Before next class.
+
+📥 **Submission: ** 
+
+- [ ] ECG graph of the entire sample **demoed to teacher in class.**
+- [ ] Code submitted on  [Gradescope](https://www.gradescope.ca/courses/39225) 
+  - [ ] `my_functions.py`
+  - [ ] `part2.py`
+  - [ ] `part2_ecg.png`
+  - [ ] `part2_ecg_with_peaks.png`
+
+### **📝  Specific Instructions** 
+
+- [Download](part2.zip){target="_blank"} and extract the starter code.
+
+- Extract the ZIP folder for Part 2.
+
+- Make sure you have the following files **in the same folder**:
+
+  - `part2.py`: This is the main program you will work on for Part 2.
+  - `my_functions.py`: Continue using the same file you created in Part 1.
+  - `ecg.csv`: The dataset containing the ECG samples. This is synthetic data generated with the help of an AI tool.
+  - `part1.py`: Keep this file for reference. **You will not need to modify it.**
+
+  
+
+- In `part2.y` , you are given functions to read the `ecg.csv`, feel free to look at those to better understand how a program can load data from a file.
+
+  **Do not remove those lines or anything above this:**
+
+- ```python
+  import csv 
+  from my_functions import *
+  SAMPLING_RATE:float = 100
+  FILENAME:str  = 'ecg.csv'
+  
+  
+  def convert_to_floats(row:list[str])-> list[float]:
+  	# some lines of code...
+  
+  def read_data(csv_filename:str)->list[float]:
+  	# some lines of code...
+  
+  
+  def main():
+      ecg_values = read_data(FILENAME)
+  ```
+
+  
+
+- Do not remove the last two lines of the file either:
+
+- ```python
+  if __name__ =='__main__':
+      main()
+  ```
+
+  
+
+  
+
+## Your Task
+
+In this final part of the assignment, we will focus on calculating the **heart rate** which is obtained by calculating the number of R peaks that occur per minute. 
+
+<img src="assets/rr_heart_rate.png"/>
+
+Alternatively, if the **average** time interval (in s) between two R peaks is obtained $\overline{RR_{interval}}$, the heart rate in beats per minute can be calculated using the sampling rate $f_s$ in Hz (samples per second). 
+$$
+Heart Rate = \frac{60}{\overline{RR_{interval}}}
+$$
+
+
+
+
+Implement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that **high-amplitude impulses** in the signal correspond to R peaks.
+
+Here are functions to help you accomplish that: 
+
+#### Write a function `is_local_maximum()`
+
+**Input parameters:**
+
+- `ecg_values`: list of readings
+- `test_index`: index of a reading that could be a local maximum
+
+**Returns: **
+
+- `True`: if it's a local maximum (it's value being larger than the previous value and the next value)
+- `False`: if this reading is not a local maximum
+
+**Warning and things to consider: **
+
+- Are there any constraints on `i` to avoid getting an index out of range error?
+
+- Return `False` if `i` might cause an index out of range. 
+
+  
+
+
+
+#### Write a function `find_r_peaks()`
+
+**Input parameters:**
+
+- `ecg_values`: list of ecg signal values.
+- `time_values`: list of time values in seconds 
+- `threshold_ratio`: A float from `0` to `1` representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It's set to `0.5` **by default**, but should be finetuned experimentally.
+- `min_timelapse`: A float representing the minimum timelapse between 2 R peaks. Is set to `0.0833` seconds **by default**, but should be finetuned experimentally. 
+
+**Returns:**
+
+- `peaks`: list of **indices** corresponding to the detected R peaks in the signal. (**Indices NOT values!** )
+
+**Guidelines to build the algorithm**
+
+1. An R peak is a local maximum.
+2. You can safely assume that high amplitude peaks above or equal to `threshold*maximum` where `maximum` is the global max of the signal are R peaks
+3. There cannot be two consecutive R peaks within `min_timelapse` (two R peaks cannot be too close to eachother).
+
+**Warning and things to keep in mind**
+
+- Which indices can you safely pass to `is_local_maximum()`? 
+- To check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?
+
+
+
+#### Write a function `plot_ecg_peaks()`
+
+**Input parameters**
+
+- `ecg_values`: list of ecg readings of a given patient
+- `peaks`: list of indices of the R peaks
+- `sampling_rate`: the number of samples taken per second (in Hz)
+- `filename`: the filename under which the graph image will be saved.
+
+**Task**
+
+You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.
+
+#### **Testing**
+
+Call the functions in the `part2.py` file inside the  `main()` function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.
+
+```python
+def main():
+  ecg = read_data(FILENAME)
+  time = create_time_values(ecg, SAMPLING_RATE)
+
+  
+  # some more lines
+  r_peaks = find_r_peaks(ecg, time, 0.5, 0.0833)
+  plot_ecg_peaks(ecg, time, r_peaks, f'part2_ecg_with_peaks.png', False)
+	
+```
+
+- Feel free to change the `threshold_ratio` and `min_timelapse` parameters to observe their effect on the algorithm.
+
+<img src="assets/part2_ecg_with_peaks.png"/>
+
+### Write a function `heart_rate()`
+
+**Input parameters:**
+
+- `peaks`: list of indices of the R peaks
+- `sampling_rate`: the number of samples taken per second (in Hz)
+
+**Returns:**
+
+- The heart rate in beats per minute.
+
+**Algorithm:**
+
+- For every peak,
+
+  - Calculate its distance from the previous peak in sample count
+
+  - find the time interval between these two peaks:
+
+    $RR_{interval} = \frac{R_i - R_{i-1}}{f_s}$
+
+  - Accumulate all the $RR_{interval}$s  to get the average 
+
+  
+
+#### Test
+
+Call this function in `main()` provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute. 
+
+
+
+# Part 2: Detecting R peaks
+
+**🗓️ Due:** Before next class.
+
+📥 **Submission: ** 
+
+- [ ] ECG graph of the entire sample **demoed to teacher in class.**
+- [ ] Code submitted on  [Gradescope](https://www.gradescope.ca/courses/39225) 
+  - [ ] `my_functions.py`
+  - [ ] `part2.py`
+  - [ ] `part2_ecg.png`
+  - [ ] `part2_ecg_with_peaks.png`
+
+### **📝  Specific Instructions** 
+
+- [Download](part2.zip){target="_blank"} and extract the starter code.
+
+- Extract the ZIP folder for Part 2.
+
+- Make sure you have the following files **in the same folder**:
+
+  - `part2.py`: This is the main program you will work on for Part 2.
+  - `my_functions.py`: Continue using the same file you created in Part 1.
+  - `ecg.csv`: The dataset containing the ECG samples. This is synthetic data generated with the help of an AI tool.
+  - `part1.py`: Keep this file for reference. **You will not need to modify it.**
+
+  
+
+- In `part2.y` , you are given functions to read the `ecg.csv`, feel free to look at those to better understand how a program can load data from a file.
+
+  **Do not remove those lines or anything above this:**
+
+- ```python
+  import csv 
+  from my_functions import *
+  SAMPLING_RATE:float = 100
+  FILENAME:str  = 'ecg.csv'
+  
+  
+  def convert_to_floats(row:list[str])-> list[float]:
+  	# some lines of code...
+  
+  def read_data(csv_filename:str)->list[float]:
+  	# some lines of code...
+  
+  
+  def main():
+      ecg_values = read_data(FILENAME)
+  ```
+
+  
+
+- Do not remove the last two lines of the file either:
+
+- ```python
+  if __name__ =='__main__':
+      main()
+  ```
+
+  
+
+  
+
+## Your Task
+
+In this final part of the assignment, we will focus on calculating the **heart rate** which is obtained by calculating the number of R peaks that occur per minute. 
+
+<img src="assets/rr_heart_rate.png"/>
+
+Alternatively, if the **average** time interval (in s) between two R peaks is obtained $\overline{RR_{interval}}$, the heart rate in beats per minute can be calculated using the sampling rate $f_s$ in Hz (samples per second). 
+$$
+Heart Rate = \frac{60}{\overline{RR_{interval}}}
+$$
+
+
+
+
+Implement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that **high-amplitude impulses** in the signal correspond to R peaks.
+
+Here are functions to help you accomplish that: 
+
+#### Write a function `is_local_maximum()`
+
+**Input parameters:**
+
+- `ecg_values`: list of readings
+- `test_index`: index of a reading that could be a local maximum
+
+**Returns: **
+
+- `True`: if it's a local maximum (it's value being larger than the previous value and the next value)
+- `False`: if this reading is not a local maximum
+
+**Warning and things to consider: **
+
+- Are there any constraints on `i` to avoid getting an index out of range error?
+
+- Return `False` if `i` might cause an index out of range. 
+
+  
+
+
+
+#### Write a function `find_r_peaks()`
+
+**Input parameters:**
+
+- `ecg_values`: list of ecg signal values.
+- `time_values`: list of time values in seconds 
+- `threshold_ratio`: A float from `0` to `1` representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It's set to `0.5` **by default**, but should be finetuned experimentally.
+- `min_timelapse`: A float representing the minimum timelapse between 2 R peaks. Is set to `0.0833` seconds **by default**, but should be finetuned experimentally. 
+
+**Returns:**
+
+- `peaks`: list of **indices** corresponding to the detected R peaks in the signal. (**Indices NOT values!** )
+
+**Guidelines to build the algorithm**
+
+1. An R peak is a local maximum.
+2. You can safely assume that high amplitude peaks above or equal to `threshold*maximum` where `maximum` is the global max of the signal are R peaks
+3. There cannot be two consecutive R peaks within `min_timelapse` (two R peaks cannot be too close to eachother).
+
+**Warning and things to keep in mind**
+
+- Which indices can you safely pass to `is_local_maximum()`? 
+- To check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?
+
+
+
+#### Write a function `plot_ecg_peaks()`
+
+**Input parameters**
+
+- `ecg_values`: list of ecg readings of a given patient
+- `peaks`: list of indices of the R peaks
+- `sampling_rate`: the number of samples taken per second (in Hz)
+- `filename`: the filename under which the graph image will be saved.
+
+**Task**
+
+You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.
+
+#### **Testing**
+
+Call the functions in the `part2.py` file inside the  `main()` function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.
+
+```python
+def main():
+  ecg = read_data(FILENAME)
+  time = create_time_axis(ecg, SAMPLING_RATE)
+
+  
+  # some more lines
+  r_peaks = find_r_peaks(ecg, time, 0.5, 0.0833)
+  plot_ecg_peaks(ecg, time, r_peaks, f'part2_ecg_with_peaks.png', False)
+	
+```
+
+- Feel free to change the `threshold_ratio` and `min_timelapse` parameters to observe their effect on the algorithm.
+
+<img src="assets/part2_ecg_with_peaks.png"/>
+
+### Write a function `heart_rate()`
+
+**Input parameters:**
+
+- `peaks`: list of indices of the R peaks
+- `sampling_rate`: the number of samples taken per second (in Hz)
+
+**Returns:**
+
+- The heart rate in beats per minute.
+
+**Algorithm:**
+
+- For every peak,
+
+  - Calculate its distance from the previous peak in sample count
+
+  - find the time interval between these two peaks:
+
+    $RR_{interval} = \frac{R_i - R_{i-1}}{f_s}$
+
+  - Accumulate all the $RR_{interval}$s  to get the average 
+
+  
+
+#### Test
+
+Call this function in `main()` provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute. 
+
+
