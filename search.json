@@ -249,7 +249,7 @@
     "href": "teacher/youmna/assignments/assignment3/instructions.html#context-heart-beats",
     "title": "Assignment3",
     "section": "Context: Heart Beats ❤️",
-    "text": "Context: Heart Beats ❤️\nAs the heart pumps blood through the body, it emits an electric signal which can be measured, amplified and displayed. This is what we call an electrocardiogram, each heart beat is characterized by a the cardiac cycle made up of different waves named P wave, QRS complex and the T wave as shown below. They offer various medical insights on the patient’s health.\n\nThis assignment will be done in three parts:\n\nPart 1: Plotting a provided ECG with the correct time axis\nPart 2:  Reading an entire ECG from a file and plotting the entire signal\nPart 3:  Build an algorithm to develop R peaks and calculating the heart rate."
+    "text": "Context: Heart Beats ❤️\nAs the heart pumps blood through the body, it emits an electric signal which can be measured, amplified and displayed. This is what we call an electrocardiogram, each heart beat is characterized by a the cardiac cycle made up of different waves named P wave, QRS complex and the T wave as shown below. They offer various medical insights on the patient’s health."
   },
   {
     "objectID": "teacher/youmna/assignments/assignment3/instructions.html#specific-instructions",
@@ -263,7 +263,7 @@
     "href": "teacher/youmna/assignments/assignment3/instructions.html#task",
     "title": "Assignment3",
     "section": "Task",
-    "text": "Task\nIn part1.py, you are given a sample ecg_values containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure.\n\nWrite a function create_time_axis()\nInput parameters: \necg_values: A list of floats representing the ecg values (in mV)\nsampling_rate: A float representing the rate at which the samples were measured (in Hz)\nReturn: \nA list of time values in seconds\n\nIt should have the same length as the ecg_values list.\nIt should start at 0seconds.\nIncrease by a constant time interval of 1 / sampling_rate seconds between consecutive values.\nMaintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.\n\n\nFor example, suppose sampling_rate = 360 and ecg_values contains 500 measurements.\nSince 360 samples are recorded every second, the time interval between consecutive samples is:\n\\(\\Delta t = \\frac{1}{360} \\approx 0.00278 \\text{ seconds}\\)\nThe resulting time values should be : \\([0, \\frac{1}{360}, \\frac{2}{360}, \\frac{3}{360}, ..., \\frac{i}{360}, ... , \\frac{499}{360}]\\)\n\nTest\nCall the function in main() in the part1.py:\ndef main():\n  ecg = [-0.955, -0.91, -0.895,...]\n  time_values = create_time_values(ecg_values=ecg, sampling_rate=SAMPLING_RATE)\n  print(time_values)\n  print(len(time_values))\nExpected output:\n[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]\n500\n\n\nWrite a function plot_ecg()\nInput parameters:\n\necg_values : list of floats of ecg readings\ntime_values: list of floats of the seconds\noutput_filename: the filename under which the graph image will be saved.\nshow_graph: A boolean, when set to True the figure should be shown on the screen, otherwise, it should not be shown.\n\nReturn: No return\nTask:\n\nPlot the ecg_values versus the time_values\nApply appropriate styling using Matplotlib:\n\nAdd a title using plt.title()\nAdd an x axis title using plt.xlabel()\nAdd a y axis title using plt.ylabel()\nAdd a grid using plt.grid(True)\n\nSave the graph under filenameusing plt.savefig()\nIf the boolean show_graph is True, display the figure with plt.show()\nClose the figure with plt.close()\nShow your graph to your teacher."
+    "text": "Task\nIn part1.py, you are given a sample ecg containing 500 heart signals measured in milivolts (mV). The sampling rate is 360 Hz, which means 360 samples were measured every second. The goal is to plot the ecg_values over time_values and save this figure.\n** In my_functions.py, write the following functions** :\n\nWrite a function create_time_axis()\nInput parameters: \necg_values: A list of floats representing the ecg values (in mV)\nsampling_rate: A float representing the rate at which the samples were measured (in Hz)\nReturn: \nA list of time values in seconds\n\nIt should have the same length as the ecg_values list.\nIt should start at 0seconds.\nIncrease by a constant time interval of 1 / sampling_rate seconds between consecutive values.\nMaintain the same order as the original ECG measurements, ensuring that each time value corresponds to its respective ECG sample.\n\n\nFor example, suppose sampling_rate = 360 and ecg_values contains 500 measurements.\nSince 360 samples are recorded every second, the time interval between consecutive samples is:\n\\(\\Delta t = \\frac{1}{360} \\approx 0.00278 \\text{ seconds}\\)\nThe resulting time values should be : \\([0, \\frac{1}{360}, \\frac{2}{360}, \\frac{3}{360}, ..., \\frac{i}{360}, ... , \\frac{499}{360}]\\)\n\nTest\nCall the function in main() in the part1.py:\ndef main():\n  ecg = [-0.955, -0.91, -0.895,...]\n  time_values = create_time_values(ecg_values=ecg, sampling_rate=SAMPLING_RATE)\n  print(time_values)\n  print(len(time_values))\nExpected output:\n[0, 0.002777777777777778, 0.005555555555555556, 0.008333333333333333, ...]\n500\n\n\nWrite a function plot_ecg()\nInput parameters:\n\necg_values : list of floats of ecg readings\ntime_values: list of floats of the seconds\noutput_filename: the filename under which the graph image will be saved.\nshow_graph: A boolean, when set to True the figure should be shown on the screen, otherwise, it should not be shown.\n\nReturn: No return\nTask:\n\nPlot the ecg_values versus the time_values\nApply appropriate styling using Matplotlib:\n\nAdd a title using plt.title()\nAdd an x axis title using plt.xlabel()\nAdd a y axis title using plt.ylabel()\nAdd a grid using plt.grid(True)\n\nSave the graph under filenameusing plt.savefig()\nIf the boolean show_graph is True, display the figure with plt.show()\nClose the figure with plt.close()\nShow your graph to your teacher."
   },
   {
     "objectID": "syllabus/Keith/Keith.html",
@@ -2969,7 +2969,7 @@
     "href": "syllabus/Youmna/Youmna.html#in-class-12",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nUsing append in a loop\nQuiz 7 (1%) : Intro Lists\nQuiz recap\nBREAK\nAssignment 3 - Part 1 (due in class)\nDemo on reading data from files"
+    "text": "💻 In class\n\nUsing append in a loop\nQuiz 7 (1%) : Intro Lists\nQuiz recap\nBREAK\nAssignment 3 - Part 1 (due in class)\nStart of Assignment 3 - Part 2 (General instructions and tips)"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-12",
@@ -2990,14 +2990,14 @@
     "href": "syllabus/Youmna/Youmna.html#in-class-13",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nBREAK\nDemo reading data from a file\nAssignment 3 - Part 2 (due in class)\nAssignment 3 - Part 3 (started, finished at home)"
+    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nBREAK\nAssignment 3 - Part 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-13",
     "href": "syllabus/Youmna/Youmna.html#after-class-13",
     "title": "Youmna",
     "section": "🚀 After class",
-    "text": "🚀 After class\n\nAssignment 3 - Part 3 (finish at home, before next class)"
+    "text": "🚀 After class\n\nPrep for next class"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#prep-15",
@@ -3011,7 +3011,7 @@
     "href": "syllabus/Youmna/Youmna.html#in-class-14",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\nComing soon…"
+    "text": "💻 In class\n\nAssignment 3 Part 2 (due in class)"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-14",
