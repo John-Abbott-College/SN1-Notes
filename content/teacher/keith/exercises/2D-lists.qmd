@@ -1,5 +1,5 @@
 ---
-title: "Lists Exercises"
+title: "2D Lists"
 number-sections: true
 ---
 
