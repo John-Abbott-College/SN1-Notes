@@ -170,14 +170,14 @@
   {
     "objectID": "teacher/keith/exercises/2D-lists.html",
     "href": "teacher/keith/exercises/2D-lists.html",
-    "title": "Lists Exercises",
+    "title": "2D Lists",
     "section": "",
     "text": "Consider a grid of 9 numbers arranged in 3 rows and 3 columns:\n\n\n\n\nCol 0\nCol 1\nCol 2\n\n\n\n\nRow 0\n1\n2\n3\n\n\nRow 1\n4\n5\n6\n\n\nRow 2\n7\n8\n9\n\n\n\nLists are 1-dimensional, but we can create a 2-dimensional list by creating a list of lists. When making a 2D list, there are two valid approaches:\n\n\n\n\ngrid = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\n\ngrid\n │\n ├─ Row 0 ─► [1, 2, 3]\n ├─ Row 1 ─► [4, 5, 6]\n └─ Row 2 ─► [7, 8, 9]\nThe value 8 is at index: [2][1] (row 2, column 1)\n\n\n\n\ngrid = [\n    [1, 4, 7],\n    [2, 5, 8],\n    [3, 6, 9]\n]\n\ngrid\n │\n ├─ Col 0 ─► [1, 4, 7]\n ├─ Col 1 ─► [2, 5, 8]\n └─ Col 2 ─► [3, 6, 9]\nThe value 8 is at index: [1][2] (column 1, row 2)\n\n\n\nMake the grid of 9 cells as shown above using either a “list of columns” or a “list of rows”, but fill it with zeros.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nCreate the grid first as a lis, and then add lists for each row or column.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution - as a list of rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution - as a list of columns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow, use a nested for loop to fill the grid with the numbers 1 through 9, and print the grid in a nice format.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 1 - traverse the grid and fill values\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 2 - traverse the grid and fill values"
   },
   {
     "objectID": "teacher/keith/exercises/2D-lists.html#create-a-gridmatrix",
     "href": "teacher/keith/exercises/2D-lists.html#create-a-gridmatrix",
-    "title": "Lists Exercises",
+    "title": "2D Lists",
     "section": "",
     "text": "Consider a grid of 9 numbers arranged in 3 rows and 3 columns:\n\n\n\n\nCol 0\nCol 1\nCol 2\n\n\n\n\nRow 0\n1\n2\n3\n\n\nRow 1\n4\n5\n6\n\n\nRow 2\n7\n8\n9\n\n\n\nLists are 1-dimensional, but we can create a 2-dimensional list by creating a list of lists. When making a 2D list, there are two valid approaches:\n\n\n\n\ngrid = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\n\ngrid\n │\n ├─ Row 0 ─► [1, 2, 3]\n ├─ Row 1 ─► [4, 5, 6]\n └─ Row 2 ─► [7, 8, 9]\nThe value 8 is at index: [2][1] (row 2, column 1)\n\n\n\n\ngrid = [\n    [1, 4, 7],\n    [2, 5, 8],\n    [3, 6, 9]\n]\n\ngrid\n │\n ├─ Col 0 ─► [1, 4, 7]\n ├─ Col 1 ─► [2, 5, 8]\n └─ Col 2 ─► [3, 6, 9]\nThe value 8 is at index: [1][2] (column 1, row 2)\n\n\n\nMake the grid of 9 cells as shown above using either a “list of columns” or a “list of rows”, but fill it with zeros.\n\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nCreate the grid first as a lis, and then add lists for each row or column.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution - as a list of rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution - as a list of columns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow, use a nested for loop to fill the grid with the numbers 1 through 9, and print the grid in a nice format.\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 1 - traverse the grid and fill values\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipSolution 2 - traverse the grid and fill values"
   },
