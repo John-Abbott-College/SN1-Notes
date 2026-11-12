@@ -270,7 +270,7 @@
     "href": "teacher/youmna/assignments/assignment3/instructions.html#your-task",
     "title": "Assignment3",
     "section": "Your Task",
-    "text": "Your Task\nIn this final part of the assignment, we will focus on calculating the heart rate which is obtained by calculating the number of R peaks that occur per minute.\n\nAlternatively, if the average time interval (in s) between two R peaks is obtained \\(\\overline{RR_{interval}}\\), the heart rate in beats per minute can be calculated using the sampling rate \\(f_s\\) in Hz (samples per second). \\[\nHeart Rate = \\frac{60}{\\overline{RR_{interval}}}\n\\]\nImplement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that high-amplitude impulses in the signal correspond to R peaks.\nHere are functions to help you accomplish that:\n\nWrite a function is_local_maximum()\nInput parameters:\n\necg_values: list of readings\ntest_index: index of a reading that could be a local maximum\n\nReturns: \n\nTrue: if it’s a local maximum (it’s value being larger than the previous value and the next value)\nFalse: if this reading is not a local maximum\n\nWarning and things to consider: \n\nAre there any constraints on i to avoid getting an index out of range error?\nReturn False if i might cause an index out of range.\n\n\n\nWrite a function find_r_peaks()\nInput parameters:\n\necg_values: list of ecg signal values.\ntime_values: list of time values in seconds\nthreshold_ratio: A float from 0 to 1 representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It’s set to 0.5 by default, but should be finetuned experimentally.\nmin_timelapse: A float representing the minimum timelapse between 2 R peaks. Is set to 0.0833 seconds by default, but should be finetuned experimentally.\n\nReturns:\n\npeaks: list of indices corresponding to the detected R peaks in the signal. (Indices NOT values! )\n\nGuidelines to build the algorithm\n\nAn R peak is a local maximum.\nYou can safely assume that high amplitude peaks above or equal to threshold*maximum where maximum is the global max of the signal are R peaks\nThere cannot be two consecutive R peaks within min_timelapse (two R peaks cannot be too close to eachother).\n\nWarning and things to keep in mind\n\nWhich indices can you safely pass to is_local_maximum()?\nTo check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?\n\n\n\nWrite a function plot_ecg_peaks()\nInput parameters\n\necg_values: list of ecg readings of a given patient\npeaks: list of indices of the R peaks\nsampling_rate: the number of samples taken per second (in Hz)\nfilename: the filename under which the graph image will be saved.\n\nTask\nYou must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.\n\n\nTesting\nCall the functions in the part2.py file inside the main() function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.\ndef main():\n  ecg = read_data(FILENAME)\n  time = create_time_values(ecg, SAMPLING_RATE)\n\n  \n  # some more lines\n  r_peaks = find_r_peaks(ecg, time, 0.5, 0.0833)\n  plot_ecg_peaks(ecg, time, r_peaks, f'part2_ecg_with_peaks.png', False)\n    \n\nFeel free to change the threshold_ratio and min_timelapse parameters to observe their effect on the algorithm.\n\n\n\n\nWrite a function heart_rate()\nInput parameters:\n\npeaks: list of indices of the R peaks\nsampling_rate: the number of samples taken per second (in Hz)\n\nReturns:\n\nThe heart rate in beats per minute.\n\nAlgorithm:\n\nFor every peak,\n\nCalculate its distance from the previous peak in sample count\nfind the time interval between these two peaks:\n\\(RR_{interval} = \\frac{R_i - R_{i-1}}{f_s}\\)\nAccumulate all the \\(RR_{interval}\\)s to get the average\n\n\n\nTest\nCall this function in main() provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute."
+    "text": "Your Task\nIn this final part of the assignment, we will focus on calculating the heart rate which is obtained by calculating the number of R peaks that occur per minute.\n\nAlternatively, if the average time interval (in s) between two R peaks is obtained \\(\\overline{RR_{interval}}\\), the heart rate in beats per minute can be calculated using the sampling rate \\(f_s\\) in Hz (samples per second). \\[\nhr= \\frac{60}{\\overline{RR_{interval}}}\n\\]\nImplement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that high-amplitude impulses in the signal correspond to R peaks.\nHere are functions to help you accomplish that:\n\nWrite a function is_local_maximum()\nInput parameters:\n\necg_values: list of readings\ntest_index: index of a reading that could be a local maximum\n\nReturns: \n\nTrue: if it’s a local maximum (it’s value being larger than the previous value and the next value)\nFalse: if this reading is not a local maximum\n\nWarning and things to consider:\n\nAre there any constraints on i to avoid getting an index out of range error?\nReturn False if i might cause an index out of range.\n\n\n\nWrite a function find_r_peaks()\nInput parameters:\n\necg_values: list of ecg signal values.\ntime_values: list of time values in seconds\nthreshold_ratio: A float from 0 to 1 representing the minimum threshold of an R peak relative to the global maximum value of the ecg signal. It’s set to 0.5 by default, but should be finetuned experimentally.\nmin_timelapse: A float representing the minimum timelapse between 2 R peaks. Is set to 0.0833 seconds by default, but should be finetuned experimentally.\n\nReturns:\n\npeaks: list of indices corresponding to the detected R peaks in the signal. (Indices NOT values! )\n\nGuidelines to build the algorithm\n\nAn R peak is a local maximum.\nYou can safely assume that high amplitude peaks above or equal to threshold*maximum where maximum is the global max of the signal are R peaks\nThere cannot be two consecutive R peaks within min_timelapse (two R peaks cannot be too close to eachother).\n\nWarning and things to keep in mind\n\nWhich indices can you safely pass to is_local_maximum()?\nTo check condition 3, what do you need to remember as you go through the signal? What should it be when no peak has been found yet?\n\n\n\nWrite a function plot_ecg_peaks()\nInput parameters\n\necg_values: list of ecg readings of a given patient\npeaks: list of indices of the R peaks\nsampling_rate: the number of samples taken per second (in Hz)\nfilename: the filename under which the graph image will be saved.\n\nTask\nYou must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.\n\n\nTesting\nCall the functions in the part2.py file inside the main() function and visually ensure that the algorithm correctly identifies all the R peaks for the signal assigned to you. Save the figure with the peaks.\ndef main():\n  ecg = read_data(FILENAME)\n  time = create_time_values(ecg, SAMPLING_RATE)\n\n  \n  # some more lines\n  r_peaks = find_r_peaks(ecg, time, 0.5, 0.0833)\n  plot_ecg_peaks(ecg, time, r_peaks, f'part2_ecg_with_peaks.png', False)\n    \n\nFeel free to change the threshold_ratio and min_timelapse parameters to observe their effect on the algorithm.\n\n\n\n\nWrite a function heart_rate()\nInput parameters:\n\npeaks: list of indices of the R peaks\nsampling_rate: the number of samples taken per second (in Hz)\n\nReturns:\n\nThe heart rate in beats per minute.\n\nAlgorithm:\n\nFor every peak,\n\nCalculate its distance from the previous peak in sample count\nfind the time interval between these two peaks:\n\\(RR_{interval} = \\frac{R_i - R_{i-1}}{f_s}\\)\nAccumulate all the \\(RR_{interval}\\)s to get the average\n\n\n\nTest\nCall this function in main() provided the r peak indices found earlier and the sampling rate. Print the calculated hear rate. You should obtain roughy 70 beats per minute."
   },
   {
     "objectID": "syllabus/Keith/Keith.html",
@@ -2990,42 +2990,42 @@
     "href": "syllabus/Youmna/Youmna.html#prep-14",
     "title": "Youmna",
     "section": "📚 Prep",
-    "text": "📚 Prep\n\nAccessing elements in a List\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
+    "text": "📚 Prep\n\nAccessing elements in a List\nLooping over lists\nRead the instructions of the Assingmnet 3 Part 2, to be ready!\nTry the Practice problems Lists - level 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#in-class-13",
     "href": "syllabus/Youmna/Youmna.html#in-class-13",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nBREAK\nAssignment 3 - Part 2"
+    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nPractice Problem from previous Final\nBREAK\nAssignment 3 - Part 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-13",
     "href": "syllabus/Youmna/Youmna.html#after-class-13",
     "title": "Youmna",
     "section": "🚀 After class",
-    "text": "🚀 After class\n\nPrep for next class"
+    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#prep-15",
     "href": "syllabus/Youmna/Youmna.html#prep-15",
     "title": "Youmna",
     "section": "📚 Prep",
-    "text": "📚 Prep\n\nCSV files\nLooping over a single list\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
+    "text": "📚 Prep\n\nLooping over lists\nTry the Practice problems Lists - level 2\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#in-class-14",
     "href": "syllabus/Youmna/Youmna.html#in-class-14",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nAssignment 3 Part 2 (due in class)"
+    "text": "💻 In class\n\nfor i in range(len(my_list)) vs for item in my_list:\nPractice Problem from previous Final\nBREAK\nAssignment 3 Part 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-14",
     "href": "syllabus/Youmna/Youmna.html#after-class-14",
     "title": "Youmna",
     "section": "🚀 After class",
-    "text": "🚀 After class\nComing soon …"
+    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2"
   },
   {
     "objectID": "teacher/youmna/prep/midterm/midterm-checklist.html#math-functions",

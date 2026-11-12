@@ -962,8 +962,8 @@ window.Quarto = {
 </section>
 <section id="part-2-detecting-r-peaks" class="level1">
 <h1>Part 2: Detecting R peaks</h1>
-<p><strong>🗓️ Due:</strong> Before next class.</p>
-<p>📥 <strong>Submission: </strong></p>
+<p><strong>🗓️ Due:</strong> As per Lea (different for each section)</p>
+<p>📥 <strong>Submission:</strong></p>
 <ul class="task-list">
 <li><label><input type="checkbox">ECG graph of the entire sample <strong>demoed to teacher in class.</strong></label></li>
 <li><label><input type="checkbox">Code submitted on <a href="https://www.gradescope.ca/courses/39225">Gradescope</a></label>
@@ -986,9 +986,10 @@ window.Quarto = {
 <li><code>ecg.csv</code>: The dataset containing the ECG samples. This is synthetic data generated with the help of an AI tool.</li>
 <li><code>part1.py</code>: Keep this file for reference. <strong>You will not need to modify it.</strong></li>
 </ul></li>
-<li><p>In <code>part2.y</code> , you are given functions to read the <code>ecg.csv</code>, feel free to look at those to better understand how a program can load data from a file.</p>
-<p><strong>Do not remove those lines or anything above this:</strong></p></li>
-<li><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv </span>
+<li><p>In <code>part2.y</code> , you are given functions to read the <code>ecg.csv</code>, feel free to look at those to better understand how a program can load data from a file.</p></li>
+</ul>
+<p><span style="color:red"><strong>DO NOT REMOVE THOSE LINES</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> my_functions <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>SAMPLING_RATE:<span class="bu">float</span> <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>FILENAME:<span class="bu">str</span>  <span class="op">=</span> <span class="st">'ecg.csv'</span></span>
@@ -1002,18 +1003,22 @@ window.Quarto = {
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    ecg_values <span class="op">=</span> read_data(FILENAME)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Do not remove the last two lines of the file either:</p></li>
-<li><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span><span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ul>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    ecg_values <span class="op">=</span> read_data(FILENAME)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># </span><span class="al">TODO</span><span class="co">: Your code starts here</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span style="color:red"><strong>DO NOT MODIFY THOSE LINES, AND DON’T ADD ANY CODE AFTER</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span><span class="st">'__main__'</span>:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="your-task" class="level2">
 <h2 class="anchored" data-anchor-id="your-task">Your Task</h2>
 <p>In this final part of the assignment, we will focus on calculating the <strong>heart rate</strong> which is obtained by calculating the number of R peaks that occur per minute.</p>
-<p><img src="assets/rr_heart_rate.png"></p>
+<p><img src="assets/rr_heart_rate.png" width="80%/"></p>
 <p>Alternatively, if the <strong>average</strong> time interval (in s) between two R peaks is obtained <span class="math inline">\(\overline{RR_{interval}}\)</span>, the heart rate in beats per minute can be calculated using the sampling rate <span class="math inline">\(f_s\)</span> in Hz (samples per second). <span class="math display">\[
-Heart Rate = \frac{60}{\overline{RR_{interval}}}
+hr= \frac{60}{\overline{RR_{interval}}}
 \]</span></p>
 <p>Implement an algorithm to scan the ECG signal and identify the indices of the R peaks. You can safely assume that <strong>high-amplitude impulses</strong> in the signal correspond to R peaks.</p>
 <p>Here are functions to help you accomplish that:</p>
@@ -1029,7 +1034,7 @@ Heart Rate = \frac{60}{\overline{RR_{interval}}}
 <li><code>True</code>: if it’s a local maximum (it’s value being larger than the previous value and the next value)</li>
 <li><code>False</code>: if this reading is not a local maximum</li>
 </ul>
-<p><strong>Warning and things to consider: </strong></p>
+<p><strong>Warning and things to consider:</strong></p>
 <ul>
 <li><p>Are there any constraints on <code>i</code> to avoid getting an index out of range error?</p></li>
 <li><p>Return <code>False</code> if <code>i</code> might cause an index out of range.</p></li>
