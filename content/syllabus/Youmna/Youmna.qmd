@@ -406,31 +406,35 @@ Go over:
 # Friday Section: November 20
 ## 📚 Prep 
 - [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
-- [CSV files](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/01_reading_files/01_reading_files.html#csv-file-format){target="_blank"} 
-- [Looping over a single list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#single-lists){target="_blank"}
+- [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html){target="_blank"}
 - Read the instructions of the Assingmnet 3 Part 2, to be ready!
+- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2)
 
 ## 💻 In class
 - List access with `[]`
 - `for i in range(len(my_list))` vs `for item in my_list:`
+- Practice Problem from previous Final
 - BREAK
 - Assignment 3 - Part 2
 
 ## 🚀 After class
-- Prep for next class
+- Complete the Assignment 3 Part 2
 
 # Tuesday Section: November 17
 ## 📚 Prep 
-- [CSV files](https://john-abbott-college.github.io/SN1-Notes/topics/12_data_processing/01_reading_files/01_reading_files.html#csv-file-format){target="_blank"} 
-- [Looping over a single list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#single-lists){target="_blank"}
+- [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html){target="_blank"}
+- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2)
 - Read the instructions of the Assingmnet 3 Part 2, to be ready!
 
 ## 💻 In class
-- Assignment 3 Part 2 (due in class)
+- `for i in range(len(my_list))` vs `for item in my_list:`
+- Practice Problem from previous Final
+- BREAK
+- Assignment 3 Part 2
 
 
 ## 🚀 After class
-Coming soon ...
+- Complete the Assignment 3 Part 2
 :::
 
 
@@ -441,14 +445,19 @@ Coming soon ...
 # Friday Section: November 27
 
 ## 📚 Prep 
-- Zip and enumerate - loop over paired lists 
-- Finding elements
-- Reordering lists
+- [Finding elements in a list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/04_list_inclusion/04_list_inclusion.html){target="_blank"}
+- Try **Q4* and **Q5** from the [Fall 2024 Final]https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html{target="_blank"}
+- Complete [all the List practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html){target="_blank"}
+
 
 ## 💻 In class
+- Harder problems with lists using `zip()`, `enumerate()` and `in`
+- Previous final exam question
 - Quiz 8 (1%): Paired lists and filtering 
+- Assignment 4 Part 1
 
 ## 🚀 After class
+- Complete the Assignment 4 Part 1
 
 # Tuesday Section: November 24
 ## 📚 Prep 
@@ -466,35 +475,37 @@ Coming soon ...
 ## 📚 Prep 
 
 ## 💻 In class
+- Quiz 9 (2%): Final Review
+- Assignment 4 Part 2
 
 ## 🚀 After class
 
-# Tuesday Section:
+# Tuesday Section: Dec 1 
 ## 📚 Prep 
 
 ## 💻 In class
+- Assignment 4 Part 2
 
 ## 🚀 After class
+
 :::
 
 
-# Week 14
+# Week 15
 ::: {.panel-tabset}
-# Friday Section: Date
 
+
+# Tuesday Section: Dec 8
 ## 📚 Prep 
 
 ## 💻 In class
+- Quiz 9 (2%): Final Review
+
 
 ## 🚀 After class
 
-# Tuesday Section:
-## 📚 Prep 
-
-## 💻 In class
-
-## 🚀 After class
 :::
+
 
 -->
 

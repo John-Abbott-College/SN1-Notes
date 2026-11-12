@@ -173,9 +173,9 @@ def main():
 
 # Part 2: Detecting R peaks
 
-**🗓️ Due:** Before next class.
+**🗓️ Due:** As per Lea (different for each section)
 
-📥 **Submission: ** 
+📥 **Submission:** 
 
 - [ ] ECG graph of the entire sample **demoed to teacher in class.**
 - [ ] Code submitted on  [Gradescope](https://www.gradescope.ca/courses/39225) 
@@ -201,34 +201,40 @@ def main():
 
 - In `part2.y` , you are given functions to read the `ecg.csv`, feel free to look at those to better understand how a program can load data from a file.
 
-  **Do not remove those lines or anything above this:**
+<span style="color:red"><strong>DO NOT REMOVE THOSE LINES</strong></span>
 
-- ```python
-  import csv 
-  from my_functions import *
-  SAMPLING_RATE:float = 100
-  FILENAME:str  = 'ecg.csv'
-  
-  
-  def convert_to_floats(row:list[str])-> list[float]:
-  	# some lines of code...
-  
-  def read_data(csv_filename:str)->list[float]:
-  	# some lines of code...
-  
-  
-  def main():
-      ecg_values = read_data(FILENAME)
-  ```
+```python
+import csv 
+from my_functions import *
+SAMPLING_RATE:float = 100
+FILENAME:str  = 'ecg.csv'
+
+
+def convert_to_floats(row:list[str])-> list[float]:
+  # some lines of code...
+
+def read_data(csv_filename:str)->list[float]:
+  # some lines of code...
+
+
+def main():
+    ecg_values = read_data(FILENAME)
+
+    # TODO: Your code starts here
+
+
+    
+```
 
   
 
-- Do not remove the last two lines of the file either:
 
-- ```python
-  if __name__ =='__main__':
-      main()
-  ```
+<span style="color:red"><strong>DO NOT MODIFY THOSE LINES, AND DON'T ADD ANY CODE AFTER</strong></span>
+
+```python
+if __name__ =='__main__':
+    main()
+```
 
   
 
@@ -238,11 +244,11 @@ def main():
 
 In this final part of the assignment, we will focus on calculating the **heart rate** which is obtained by calculating the number of R peaks that occur per minute. 
 
-<img src="assets/rr_heart_rate.png"/>
+<img src="assets/rr_heart_rate.png" width=80%/>
 
 Alternatively, if the **average** time interval (in s) between two R peaks is obtained $\overline{RR_{interval}}$, the heart rate in beats per minute can be calculated using the sampling rate $f_s$ in Hz (samples per second). 
 $$
-Heart Rate = \frac{60}{\overline{RR_{interval}}}
+hr= \frac{60}{\overline{RR_{interval}}}
 $$
 
 
@@ -264,7 +270,7 @@ Here are functions to help you accomplish that:
 - `True`: if it's a local maximum (it's value being larger than the previous value and the next value)
 - `False`: if this reading is not a local maximum
 
-**Warning and things to consider: **
+**Warning and things to consider:**
 
 - Are there any constraints on `i` to avoid getting an index out of range error?
 
