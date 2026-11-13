@@ -1,0 +1,115 @@
+---
+title: "Final Exam Topics"
+subtitle: "Fall 2026 Final"
+editor:
+  render-on-save: true
+---
+
+Here's the extensive list of topics for the Final 2026
+
+# Mandatory topics
+
+## Variables and Data Types
+- Use variables to store program data
+- Avoid hard-coding values in logic by using variables
+- Recognize the various basic data typees: `str`, `int`, `float` and `bool`
+- Perform conversions between `float`, `int` and `str`
+- Evaluate a boolean variable from an expression.
+
+## String Handling 
+- Create f-string
+- Format an f-string float precision
+
+## Operators 
+- Evaluate the order of operations combining multiple operators.
+
+### Arithmetic operators
+- Use `+`, `-`, `*`, `/`, `//`, `%` to apply math fomula
+- Evaluate expression using arithmetic operators on the basic types `str`, `int`,`float`
+
+
+### Assignment operators
+- Use `=` to assign a value to a variable
+- Evaluate a variable re-assignment using the variable itself (e.g `x = x + 1`)
+
+
+## Comparison operators
+- Use `>`, `>=`, `<`, `<=`, `==`, `!=`
+
+### Logical operators 
+- Use `and`, `or`, `not`
+- Evaluate a logical expresion combining comparison and logical operators 
+(e.g `x> y or (y ==2 and x!=5) or (not a_bool)`)
+
+## Conditions
+- Use `if` statements 
+- Use `if/elif/else` statements
+
+## Loops
+- Use for loop with `range()`
+- Use `break`
+
+## Functions
+## IO functions
+- Use `print()`
+
+
+## Math functions
+- Use `math.ceil()`,`math.sqrt()`, `math.pi`, `math.sin()`
+
+
+### Custom Function
+- Define a function 
+- Invoke/call a function
+
+
+## Lists
+### Simple Lists
+- Create a list with starting values
+- Create an empty list
+- Access an element of a list by index
+- Use `len()` to find the length of a list
+- Add an element in a list with `.append()`
+- Remove an element with `.pop()`?  
+- Loop over a list using a `for` loop
+- Find if an element is present in a list with `in`
+
+
+### Paired Lists
+- Loop over paired lists 
+
+
+## Plotting 
+- Plot a line plot or scatter plot of a list versus another list (without styling the graph)
+
+# Optional topics
+Some questions can be solved with these concepts. You may optionally use them.
+
+## Type hinting 
+- Add type hinting on function signature or variable definition
+
+# Loops
+## While Loops
+- Use a while loop
+
+## Other
+- Use `continue`
+- Use `range(start, stop, step)`
+
+# Additional List topics
+
+- Use those functions `sum()`, `max()`, `min()`
+- Use those methods `.index()`, `.insert()`,`.sort()`, `.reverse()`, `.remove()`
+- Loop over element and index in a list `enumerate()`
+- Loop over paired lists with `zip()`
+- Create a sublist from a list using list slicing 
+
+# Numpy
+- Use `np.array` instead of lists to apply formula on a list of numbers
+- Use `np.linspace` to create an array of number from start, stop with a fractional step
+
+# Not on the Final 
+- The `input()` function
+- Files & Folders
+- Turtle
+- CSV Files/ Text files
