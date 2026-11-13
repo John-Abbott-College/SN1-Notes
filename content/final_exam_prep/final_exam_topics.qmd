@@ -5,9 +5,10 @@ editor:
   render-on-save: true
 ---
 
-Here's the extensive list of topics for the Final 2026
+Here's the extensive list of topics for the Final **Fall 2026**
 
 # Mandatory topics
+These topics shluld be thoroughly studied. 
 
 ## Variables and Data Types
 - Use variables to store program data
@@ -83,20 +84,20 @@ Here's the extensive list of topics for the Final 2026
 - Plot a line plot or scatter plot of a list versus another list (without styling the graph)
 
 # Optional topics
-Some questions can be solved with these concepts. You may optionally use them.
+These topics could be helpful for some questions. You may optionally use them but there's a way to solve all problems without having to use them.
 
 ## Type hinting 
 - Add type hinting on function signature or variable definition
 
-# Loops
-## While Loops
+## Loops
+### While Loops
 - Use a while loop
 
-## Other
+### Other
 - Use `continue`
 - Use `range(start, stop, step)`
 
-# Additional List topics
+## Additional List topics
 
 - Use those functions `sum()`, `max()`, `min()`
 - Use those methods `.index()`, `.insert()`,`.sort()`, `.reverse()`, `.remove()`
@@ -104,11 +105,12 @@ Some questions can be solved with these concepts. You may optionally use them.
 - Loop over paired lists with `zip()`
 - Create a sublist from a list using list slicing 
 
-# Numpy
+## Numpy
 - Use `np.array` instead of lists to apply formula on a list of numbers
 - Use `np.linspace` to create an array of number from start, stop with a fractional step
 
 # Not on the Final 
+These topics are not included in the final 
 - The `input()` function
 - Files & Folders
 - Turtle
