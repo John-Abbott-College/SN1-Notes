@@ -7,7 +7,7 @@ editor:
 
 Here's the extensive list of topics for the Final **Fall 2026**
 
-# Mandatory topics
+# 🔵 Mandatory topics
 These topics shluld be thoroughly studied. 
 
 ## Variables and Data Types
@@ -83,7 +83,7 @@ These topics shluld be thoroughly studied.
 ## Plotting 
 - Plot a line plot or scatter plot of a list versus another list (without styling the graph)
 
-# Optional topics
+# 🟠 Optional topics
 These topics could be helpful for some questions. You may optionally use them but there's a way to solve all problems without having to use them.
 
 ## Type hinting 
@@ -109,7 +109,7 @@ These topics could be helpful for some questions. You may optionally use them bu
 - Use `np.array` instead of lists to apply formula on a list of numbers
 - Use `np.linspace` to create an array of number from start, stop with a fractional step
 
-# Not on the Final 
+# ⚪ Not on the Final 
 These topics are not included in the final 
 - The `input()` function
 - Files & Folders
