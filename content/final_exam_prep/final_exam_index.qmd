@@ -5,8 +5,9 @@ listing:
     fields: [title, subtitle]
     sort: false
     contents:
-    - final_exam_f24/final_exam_f24.qmd
+    - final_exam_w26/final_exam_w26.qmd
     - final_exam_w25/final_exam_w25.qmd
+    - final_exam_f24/final_exam_f24.qmd
     - upenn_exam_practice_f24/upenn_exam_practice_f24.qmd
 ---
 
