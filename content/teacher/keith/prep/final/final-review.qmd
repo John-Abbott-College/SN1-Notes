@@ -1,0 +1,9 @@
+---
+title: Final Review (Keith's sections only!)
+editor:
+  render-on-save: true
+---
+
+See everything from the midterm prep plus:
+
+- [Problem Solving](./problem-solving.qmd)  
