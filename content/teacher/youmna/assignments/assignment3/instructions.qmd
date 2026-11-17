@@ -310,8 +310,8 @@ Here are functions to help you accomplish that:
 **Input parameters**
 
 - `ecg_values`: list of ecg readings of a given patient
+- `time_values`: list of floats of the seconds 
 - `peaks`: list of indices of the R peaks
-- `sampling_rate`: the number of samples taken per second (in Hz)
 - `filename`: the filename under which the graph image will be saved.
 - `show_graph`: A boolean, when set to `True` the figure should be shown on the screen, otherwise, it should not be shown.
 
@@ -361,7 +361,7 @@ def main():
 
     $RR_{interval} = \frac{R_i - R_{i-1}}{f_s}$
 
-  - Accumulate all the $RR_{interval}$s  to get the average 
+  - Accumulate all the $RR_{interval}$s to get the average 
 
   
 
