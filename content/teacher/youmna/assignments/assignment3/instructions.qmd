@@ -181,7 +181,6 @@ def main():
 - [ ] Code submitted on  [Gradescope](https://www.gradescope.ca/courses/39225) 
   - [ ] `my_functions.py`
   - [ ] `part2.py`
-  - [ ] `part2_ecg.png`
   - [ ] `part2_ecg_with_peaks.png`
 
 ### **📝  Specific Instructions** 
@@ -311,13 +310,15 @@ Here are functions to help you accomplish that:
 **Input parameters**
 
 - `ecg_values`: list of ecg readings of a given patient
+- `time_values`: list of floats of the seconds 
 - `peaks`: list of indices of the R peaks
-- `sampling_rate`: the number of samples taken per second (in Hz)
 - `filename`: the filename under which the graph image will be saved.
+- `show_graph`: A boolean, when set to `True` the figure should be shown on the screen, otherwise, it should not be shown.
 
 **Task**
 
-You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.
+You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib. Save the figure and optionally show on the screen.
+
 
 #### **Testing**
 
@@ -360,7 +361,7 @@ def main():
 
     $RR_{interval} = \frac{R_i - R_{i-1}}{f_s}$
 
-  - Accumulate all the $RR_{interval}$s  to get the average 
+  - Accumulate all the $RR_{interval}$s to get the average 
 
   
 
