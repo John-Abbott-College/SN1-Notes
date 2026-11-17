@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c2b08e7e9e4d0725d7c99c9a799ba6e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-f6bf7aacebc388ffab819f2152059f80.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-4e49d22ecae20000438526567ccf0664.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-f6bf7aacebc388ffab819f2152059f80.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-3b2f1619f71c8412b9461eb5e78c7d0a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -890,7 +890,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><img src="./assets/format_float.png" class="img-fluid" style="width:60.0%"></p>
 <p><strong>Examples</strong></p>
-<div id="35027637" class="cell" data-execution_count="1">
+<div id="dbe9b76f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">375.2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: .3f}</span><span class="ss">"</span> )     <span class="co"># 'm' is not specified, so only worry about number of digits after decimal point</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">: 6.3f}</span><span class="ss">"</span> )    <span class="co"># the printed number will be greater than 6 digits, so the '6' is ignored</span></span>
@@ -913,7 +913,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     375.2
 ``` -->
 <p>For example, here are a few lines that print the value of pi at different precisions:</p>
-<div id="c26f85ed" class="cell" data-execution_count="2">
+<div id="824d1917" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The value of pi without formatting: "</span>, pi)  </span>
@@ -986,7 +986,7 @@ The value of pi with four decimal places: 3.1416</code></pre>
 <ul>
 <li>To control the just number of significant digits, you may use <code>:.</code> without an “f” (as opposed to floating precision).</li>
 </ul>
-<div id="de42cf9c" class="cell" data-execution_count="3">
+<div id="df074784" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>length  <span class="op">=</span> <span class="fl">153.256</span> <span class="co"># in mm</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The length of the object is </span><span class="sc">{</span>length<span class="sc">:.4}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1011,7 +1011,7 @@ The value of pi with four decimal places: 3.1416</code></pre>
 </div>
 </div>
 <p>For instance, here’s the population of the United States:</p>
-<div id="73193206" class="cell" data-execution_count="4">
+<div id="cf07323e" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>population_usa <span class="op">=</span> <span class="dv">340_110_088</span>  </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The population of the usa without formatting </span><span class="sc">{</span>population_usa<span class="sc">}</span><span class="ss">'</span>)</span>
@@ -1056,7 +1056,7 @@ The population of the usa with commas 340,110,088</code></pre>
 </div>
 <p><img src="./assets/format_alignment.png" class="img-fluid" style="width:60.0%"></p>
 <p><strong>Example</strong></p>
-<div id="f68dc8fe" class="cell" data-execution_count="5">
+<div id="fd8f90e3" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">35.2</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="ss">f"not formatted: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1139,11 +1139,11 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaXRlbTEgPSAxNS4wMFxuaXRl
 </div>
 </div>
 <p>For instance:</p>
-<div id="0518ee4c" class="cell" data-execution_count="6">
+<div id="8389778e" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>To reduce the number of decimals displayed, you can combine it with an floating point precision formatting:</p>
-<div id="9383253c" class="cell" data-execution_count="7">
+<div id="2709cbb0" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> <span class="fl">0.58</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>percentage<span class="sc">:.0%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">

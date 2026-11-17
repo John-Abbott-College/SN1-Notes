@@ -83,9 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-c2b08e7e9e4d0725d7c99c9a799ba6e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-f6bf7aacebc388ffab819f2152059f80.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-4e49d22ecae20000438526567ccf0664.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-f6bf7aacebc388ffab819f2152059f80.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-3b2f1619f71c8412b9461eb5e78c7d0a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -970,7 +970,6 @@ window.Quarto = {
 <ul class="task-list">
 <li><label><input type="checkbox"><code>my_functions.py</code></label></li>
 <li><label><input type="checkbox"><code>part2.py</code></label></li>
-<li><label><input type="checkbox"><code>part2_ecg.png</code></label></li>
 <li><label><input type="checkbox"><code>part2_ecg_with_peaks.png</code></label></li>
 </ul></li>
 </ul>
@@ -1073,9 +1072,10 @@ hr= \frac{60}{\overline{RR_{interval}}}
 <li><code>peaks</code>: list of indices of the R peaks</li>
 <li><code>sampling_rate</code>: the number of samples taken per second (in Hz)</li>
 <li><code>filename</code>: the filename under which the graph image will be saved.</li>
+<li><code>show_graph</code>: A boolean, when set to <code>True</code> the figure should be shown on the screen, otherwise, it should not be shown.</li>
 </ul>
 <p><strong>Task</strong></p>
-<p>You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib.</p>
+<p>You must plot the ECG signal versus time and highlight the detected peaks using a different marker (e.g., red dots). Apply appropriate styling using Matplotlib. Save the figure and optionally show on the screen.</p>
 </section>
 <section id="testing" class="level4">
 <h4 class="anchored" data-anchor-id="testing"><strong>Testing</strong></h4>
