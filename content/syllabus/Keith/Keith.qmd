@@ -1,4 +1,9 @@
-## Lists
 
-[Exercises 1](../../teacher/keith/exercises/lists.qmd).
-[2-D Lists](../../teacher/keith/exercises/2D-lists.qmd).
+# Review/Prep
+
+[Midterm Prep](../../teacher/keith/prep/midterm/midterm-review-keith.qmd)  
+[Final Prep](../../teacher/keith/prep/final/final-review.qmd)  
+
+### Lists
+[Exercises 1](../../teacher/keith/exercises/lists.qmd)  
+[2-D Lists](../../teacher/keith/exercises/2D-lists.qmd)  

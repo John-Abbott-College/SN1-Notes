@@ -1,0 +1,45 @@
+---
+title: "Problem Solving"
+number-sections: false
+---
+
+## Problem Solving
+
+#### How would I solve the problem?
+- Write down your understanding of what you're being asked and the logic/approach of how you'll solve it. Don't write it as Python yet, but think about the tools you've learned (if/conditions, loops, lists, calculations, functions) to structure your approach.
+- Translate your approach into Python. Use the reference sheet to validate that you're using the correct syntax for Python.
+
+#### Was I given an example of input values and expected output for the program?
+- YES:
+    Verify that the expected output makes sense for the given values. Ask for clarification if needed.
+
+#### Was I told to write a function?
+- YES: 
+    - What should the function be named?
+    - What inputs (i.e. **parameters**) should the function use?
+    - Is the function supposed to **print** anything?
+        - YES:
+            - then print whatever is needed
+        - NO:
+            - then DO NOT print!
+    - Is the function supposed to **return** something?
+        - YES:
+            - Make sure you use a return statement somewhere and remember that the function will stop right after it actually does a return.
+            - If you need to return a list, then make sure you **create** the list before you .append/.insert items into the list
+        - NO:
+            - Either do not put any return statement, or put a return with no value if you want to exit your function at a certain point.
+- NO:  
+    - Don't write a function then! While it might be 'ok' to still make a function, you're increasing the likelihood of making mistakes and you'd have to also write code to *call* your function. Don't make your life more complicated in a test situation.
+    
+
+#### Are there lists of values involved?
+- YES:
+    - 99% chance that a for-loop of some kind will be needed inside your function, unless you're using numpy or min/ma/sum functions where the looping is being done for you
+    - Do you need to **return** a list?
+        - YES:
+            - Make sure your *create* a new list  (e.g. result_list = []) before you try to append to it
+            - Make sure you actually **return** the list from your function
+              
+              
+#### Slow down and review your code
+After writing your solution, slowly "walk" through your code from beginning to end the way that Python would. Don't just look at the code and assume what it will do - actually go line-by-line and check yourself.
