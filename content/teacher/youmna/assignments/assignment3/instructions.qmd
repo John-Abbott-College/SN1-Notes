@@ -296,6 +296,8 @@ Here are functions to help you accomplish that:
 
 1. An R peak is a local maximum.
 2. You can safely assume that high amplitude peaks above or equal to `threshold*maximum` where `maximum` is the global max of the signal are R peaks
+
+**Bonus 2 pts**
 3. There cannot be two consecutive R peaks within `min_timelapse` (two R peaks cannot be too close to eachother).
 
 **Warning and things to keep in mind**
