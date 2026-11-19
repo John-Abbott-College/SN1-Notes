@@ -413,7 +413,7 @@ Go over:
 ## 💻 In class
 - List access with `[]`
 - `for i in range(len(my_list))` vs `for item in my_list:`
-- Practice Problem from previous Final
+- Practice Problem from previous Final:[Q3 Pasta Fall 2024](https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html){target="_blank"}
 - BREAK
 - Assignment 3 - Part 2
 
@@ -423,18 +423,19 @@ Go over:
 # Tuesday Section: November 17
 ## 📚 Prep 
 - [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html){target="_blank"}
-- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2)
+- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2){target="_blank"}
 - Read the instructions of the Assingmnet 3 Part 2, to be ready!
 
 ## 💻 In class
 - `for i in range(len(my_list))` vs `for item in my_list:`
-- Practice Problem from previous Final
+- Practice Problem from previous Final: [Q9 - Winter 2025](https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks){target="_blank"}
 - BREAK
 - Assignment 3 Part 2
 
 
 ## 🚀 After class
 - Complete the Assignment 3 Part 2
+- Complete the Winter2025-Q9 at home **by yourself** (there's no internet during the final)
 :::
 
 
