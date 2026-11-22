@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c2b08e7e9e4d0725d7c99c9a799ba6e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-3b2f1619f71c8412b9461eb5e78c7d0a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-35757847990b10bf510608c0ac29b9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8f3ec3b28a1b50bc3cd652cb9c31e987.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-35757847990b10bf510608c0ac29b9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -785,6 +785,18 @@ window.Quarto = {
  <span class="menu-text">Installing Python Modules</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/12_data_processing/03_numpy/03_numpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro to NumPy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/12_data_processing/04_matplotlib/04_matplotlib.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro to Matplotlib</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -943,7 +955,7 @@ window.Quarto = {
 <section id="pythons-handling-of-operations-with-the-same-priority" class="level1">
 <h1>Python’s handling of operations with the same priority?</h1>
 <p>Consider the following math function <span class="math inline">\(y = \frac{x^2 + x}{2x}\)</span> implemented in Python as such:</p>
-<div id="bfae1783" class="cell" data-execution_count="1">
+<div id="dbc26807" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span>x) <span class="op">/</span> <span class="dv">2</span><span class="op">*</span>x</span>
@@ -956,7 +968,7 @@ window.Quarto = {
 <p>This isn’t the correct value of <span class="math inline">\(f(3)\)</span>, which should be <span class="math inline">\(2\)</span>. Why is that?</p>
 <p>The answer lies in how the denominator has been implemented <code>/2*x</code>. This is ambigious because both the <code>/</code> and the <code>*</code> have the <strong>same priority</strong>. Python doesn’t know that <code>2*x</code> must be computed first, following by the division. By default, Python reads and executes expressions from left to right, performing the division first and then the mulitplication.</p>
 <p>To remove the ambiguity, the best is to use parenthesis <code>()</code>:</p>
-<div id="7e917d4c" class="cell" data-execution_count="2">
+<div id="3793c6a7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span>x) <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>x)</span>

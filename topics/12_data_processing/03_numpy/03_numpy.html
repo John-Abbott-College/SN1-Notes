@@ -71,6 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../topics/12_data_processing/04_matplotlib/04_matplotlib.html" rel="next">
+<link href="../../../topics/12_data_processing/02_installing_modules/02_installing_modules.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -83,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c2b08e7e9e4d0725d7c99c9a799ba6e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-3b2f1619f71c8412b9461eb5e78c7d0a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-11f8e6c2646f56a64db362b043e26d10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-35757847990b10bf510608c0ac29b9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8f3ec3b28a1b50bc3cd652cb9c31e987.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-35757847990b10bf510608c0ac29b9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -403,7 +405,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Intro to NumPy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/12_data_processing/01_reading_files/01_reading_files.html">Scientific Modules</a></li><li class="breadcrumb-item"><a href="../../../topics/12_data_processing/03_numpy/03_numpy.html">Intro to NumPy</a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -767,10 +769,10 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="false">
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
  <span class="menu-text" id="quarto-sidebar-section-11-label">Scientific Modules</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../topics/12_data_processing/01_reading_files/01_reading_files.html" class="sidebar-item-text sidebar-link">
@@ -781,6 +783,18 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../../topics/12_data_processing/02_installing_modules/02_installing_modules.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/12_data_processing/03_numpy/03_numpy.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Intro to NumPy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../topics/12_data_processing/04_matplotlib/04_matplotlib.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro to Matplotlib</span></a>
   </div>
 </li>
       </ul>
@@ -795,7 +809,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#importing-numpy" id="toc-importing-numpy" class="nav-link active" data-scroll-target="#importing-numpy">Importing <code>numpy</code></a></li>
+  <li><a href="#importing-numpy" id="toc-importing-numpy" class="nav-link active" data-scroll-target="#importing-numpy">Importing <code>NumPy</code></a></li>
   <li><a href="#numpy-arrays" id="toc-numpy-arrays" class="nav-link" data-scroll-target="#numpy-arrays">Numpy arrays</a></li>
   <li><a href="#polynomial-fitting" id="toc-polynomial-fitting" class="nav-link" data-scroll-target="#polynomial-fitting"><strong>Polynomial fitting</strong></a></li>
   <li><a href="#correlation-factor-r" id="toc-correlation-factor-r" class="nav-link" data-scroll-target="#correlation-factor-r">Correlation Factor <code>R</code></a>
@@ -809,7 +823,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../topics/12_data_processing/01_reading_files/01_reading_files.html">Scientific Modules</a></li><li class="breadcrumb-item"><a href="../../../topics/12_data_processing/03_numpy/03_numpy.html">Intro to NumPy</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Intro to NumPy</h1>
 </div>
@@ -828,17 +842,29 @@ window.Quarto = {
 </header>
 
 
-<p>Numpy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called numpy arrays.</p>
+<div class="objectives callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>☆ Additional Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>NumPy is a scientific library which stands for Numerical Python that use a special data structure similar to lists called NumPy <code>arrays</code>.</p>
+</div>
+</div>
 <section id="importing-numpy" class="level2">
-<h2 class="anchored" data-anchor-id="importing-numpy">Importing <code>numpy</code></h2>
-<p>Import <code>numpy</code>. You may use the alias <code>np</code></p>
+<h2 class="anchored" data-anchor-id="importing-numpy">Importing <code>NumPy</code></h2>
+<p>Import <code>NumPy</code>. You may use the alias <code>np</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="numpy-arrays" class="level2">
 <h2 class="anchored" data-anchor-id="numpy-arrays">Numpy arrays</h2>
 <p>Numpy arrays are structures of data similar to lists.</p>
-<p>Operations with numpy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++.</p>
-<p>To create a <code>numpy</code> array from a Python list, simply use the following:</p>
+<p>Operations with NumPy arrays are 50x faster than traditional Python lists because they are written partly in another programming language called C/C++.</p>
+<p>To create a <code>NumPy</code> array from a Python list, simply use the following:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">8</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_array <span class="op">=</span> np.array(my_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Alternatively, an array can be created in one line as such:</p>
@@ -872,7 +898,7 @@ window.Quarto = {
    6 \\
 \end{bmatrix}
 \]</span></p>
-<p>The two forces can be represented using numpy arrays and the two arrays can be added using a <code>+</code></p>
+<p>The two forces can be represented using NumPy arrays and the two arrays can be added using a <code>+</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>force_1 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">3</span>])</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>force_2 <span class="op">=</span> np.array([<span class="dv">2</span>,<span class="dv">3</span>])</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -884,7 +910,7 @@ window.Quarto = {
 <li><p>Had we done this with a simple python lists, we would get <code>[1,3,2,3]</code></p></li>
 </ul>
 <ol start="4" type="1">
-<li>This <a href="https://www.programiz.com/python-programming/numpy/basic-array-operations">tutorial</a> shows you all the arithmetic operations that are possible with NumPy arrays.</li>
+<li>This <a href="https://www.programiz.com/python-programming/NumPy/basic-array-operations">tutorial</a> shows you all the arithmetic operations that are possible with NumPy arrays.</li>
 </ol>
 </section>
 <section id="polynomial-fitting" class="level2">
@@ -896,8 +922,8 @@ window.Quarto = {
 <p>Source: Abhigyan. (2024, January 12). Understanding Polynomial Regression - Analytics Vidhya - Medium. <em>Medium</em>. https://medium.com/analytics-vidhya/understanding-polynomial-regression-5ac25b970e18</p>
 </blockquote>
 <section id="numpy.polyfit" class="level4">
-<h4 class="anchored" data-anchor-id="numpy.polyfit"><strong>numpy.polyfit()</strong></h4>
-<p><code>polyfit()</code> is a <code>numpy</code> function that allows programmers to fit polynomial function onto the data. In this example the data is stored in simple python lists:</p>
+<h4 class="anchored" data-anchor-id="numpy.polyfit"><strong>NumPy.polyfit()</strong></h4>
+<p><code>polyfit()</code> is a <code>NumPy</code> function that allows programmers to fit polynomial function onto the data. In this example the data is stored in simple python lists:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x_observed <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
@@ -910,7 +936,7 @@ window.Quarto = {
 </section>
 <section id="coefficients" class="level4">
 <h4 class="anchored" data-anchor-id="coefficients">Coefficients</h4>
-<p>The returned coefficients are a numpy array with [a, b] corresponding to the slope and intercept <span class="math display">\[y = ax + b \]</span></p>
+<p>The returned coefficients are a NumPy array with [a, b] corresponding to the slope and intercept <span class="math display">\[y = ax + b \]</span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coefficients)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Output</strong></p>
 <pre class="text"><code>array([1.74285714, 0.4])</code></pre>
@@ -1576,6 +1602,18 @@ window._ojs.runtime.interpretFromScriptTags();
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../topics/12_data_processing/02_installing_modules/02_installing_modules.html" class="pagination-link" aria-label="Installing Python Modules">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Installing Python Modules</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../topics/12_data_processing/04_matplotlib/04_matplotlib.html" class="pagination-link" aria-label="Intro to Matplotlib">
+        <span class="nav-page-text">Intro to Matplotlib</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
