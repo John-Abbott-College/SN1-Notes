@@ -4,6 +4,11 @@ editor:
   render-on-save: true
 ---
 
+::: {.callout-warning .objectives icon="false" title="☆ Additional Objectives "}
+- **Create** Draw line and scatter graphs from lists of data
+- **Create** Customize the options and appearance of a graph
+:::
+
 Matplotlib is a scientific library that allows python programmers to easily produce plots for reporting on experimental data.
 
 ## Usage
