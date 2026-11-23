@@ -403,22 +403,6 @@ Go over:
 
 # Week 12
 ::: {.panel-tabset}
-# Friday Section: November 20
-## 📚 Prep 
-- [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
-- [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html){target="_blank"}
-- Read the instructions of the Assingmnet 3 Part 2, to be ready!
-- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2)
-
-## 💻 In class
-- List access with `[]`
-- `for i in range(len(my_list))` vs `for item in my_list:`
-- Practice Problem from previous Final:[Q3 Pasta Fall 2024](https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html){target="_blank"}
-- BREAK
-- Assignment 3 - Part 2
-
-## 🚀 After class
-- Complete the Assignment 3 Part 2
 
 # Tuesday Section: November 17
 ## 📚 Prep 
@@ -436,58 +420,101 @@ Go over:
 ## 🚀 After class
 - Complete the Assignment 3 Part 2
 - Complete the Winter2025-Q9 at home **by yourself** (there's no internet during the final)
+
+
+# Friday Section: November 20
+## 📚 Prep 
+- [Accessing elements in a List](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/02_indexing_lists/02_indexing_lists/02_indexing_lists.html){target="_blank"}
+- [Looping over lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html){target="_blank"}
+- Read the instructions of the Assingmnet 3 Part 2, to be ready!
+- Try the Practice problems [Lists - level 2](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-2)
+
+## 💻 In class
+- List access with `[]`
+- `for i in range(len(my_list))` vs `for item in my_list:`
+- Level 2 practice question
+- BREAK 
+- Practice Problem from previous Final:[Q3 Pasta Fall 2024](https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html){target="_blank"}
+- Practice Problem from previous Final: [Q9 - Winter 2025](https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_w25/final_exam_w25.html#question-9-scuba-diving-6-marks){target="_blank"}
+- BREAK
+- Assignment 3 - Part 2 (start)
+
+## 🚀 After class
+- Complete the Assignment 3 Part 2
 :::
 
 
-
-<!-- 
 # Week 13
 ::: {.panel-tabset}
-# Friday Section: November 27
-
-## 📚 Prep 
-- [Finding elements in a list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/04_list_inclusion/04_list_inclusion.html){target="_blank"}
-- Try **Q4* and **Q5** from the [Fall 2024 Final]https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html{target="_blank"}
-- Complete [all the List practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html){target="_blank"}
-
-
-## 💻 In class
-- Harder problems with lists using `zip()`, `enumerate()` and `in`
-- Previous final exam question
-- Quiz 8 (1%): Paired lists and filtering 
-- Assignment 4 Part 1
-
-## 🚀 After class
-- Complete the Assignment 4 Part 1
 
 # Tuesday Section: November 24
 ## 📚 Prep 
+- [Paired Lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#paired-lists)
+- Try Practice [Lists- level 3](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-3)
 
 ## 💻 In class
+- Completing the Assignment 3 - Part 1  <span style="color:red">Last minute questions only!</span>
+- **BREAK**
+- Introduction to `zip()`, `enumerate()` and `in`
+- Quiz 8 (1%): Paired lists and filtering 
 
 ## 🚀 After class
+- Complete the Lists questions upto level 3 
+
+# Friday Section: November 27
+
+## 📚 Prep 
+
+- [Paired Lists](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/03_looping_over_lists/03_looping_over_lists.html#paired-lists)
+- Try Practice [Lists- level 3](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html#level-3)
+
+## 💻 In class
+- Completing the Assignment 3 - Part 1 
+- **BREAK**
+- Introduction to `zip()`, `enumerate()` and `in`
+- Quiz 8 (1%): Paired lists and filtering 
+
+## 🚀 After class
+- Complete the Lists questions upto level 3 
+
+
 :::
+
+<!-- 
+
 
 
 # Week 14
 ::: {.panel-tabset}
-# Friday Section: Dec 4 (Last session)
-
-## 📚 Prep 
-
-## 💻 In class
-- Quiz 9 (2%): Final Review
-- Assignment 4 Part 2
-
-## 🚀 After class
 
 # Tuesday Section: Dec 1 
 ## 📚 Prep 
 
 ## 💻 In class
-- Assignment 4 Part 2
+- Quiz 9 (2%): Final Review
+- BREAK
+- Assignment 4
 
 ## 🚀 After class
+- Complete the Assignment 4
+
+# Friday Section: Dec 4 (Last session)
+
+
+## 📚 Prep 
+- [Finding elements in a list](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/04_list_inclusion/04_list_inclusion.html){target="_blank"}
+- Try **Q4* and **Q5** from the [Fall 2024 Final]https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html{target="_blank"}
+- Complete [all the List practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html){target="_blank"}
+- Start Final exam review
+
+## 💻 In class
+- Quiz 9 (2%): Final Review
+- BREAK
+- Assignment 4
+
+## 🚀 After class
+- Complete the Assignment 4
+
 
 :::
 
