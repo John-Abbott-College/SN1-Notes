@@ -375,42 +375,84 @@
     "href": "syllabus/Youmna/Youmna.html#prep-14",
     "title": "Youmna",
     "section": "📚 Prep",
-    "text": "📚 Prep\n\nAccessing elements in a List\nLooping over lists\nRead the instructions of the Assingmnet 3 Part 2, to be ready!\nTry the Practice problems Lists - level 2"
+    "text": "📚 Prep\n\nLooping over lists\nTry the Practice problems Lists - level 2\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#in-class-13",
     "href": "syllabus/Youmna/Youmna.html#in-class-13",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nPractice Problem from previous Final:Q3 Pasta Fall 2024\nBREAK\nAssignment 3 - Part 2"
+    "text": "💻 In class\n\nfor i in range(len(my_list)) vs for item in my_list:\nPractice Problem from previous Final: Q9 - Winter 2025\nBREAK\nAssignment 3 Part 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-13",
     "href": "syllabus/Youmna/Youmna.html#after-class-13",
     "title": "Youmna",
     "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2"
+    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2\nComplete the Winter2025-Q9 at home by yourself (there’s no internet during the final)"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#prep-15",
     "href": "syllabus/Youmna/Youmna.html#prep-15",
     "title": "Youmna",
     "section": "📚 Prep",
-    "text": "📚 Prep\n\nLooping over lists\nTry the Practice problems Lists - level 2\nRead the instructions of the Assingmnet 3 Part 2, to be ready!"
+    "text": "📚 Prep\n\nAccessing elements in a List\nLooping over lists\nRead the instructions of the Assingmnet 3 Part 2, to be ready!\nTry the Practice problems Lists - level 2"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#in-class-14",
     "href": "syllabus/Youmna/Youmna.html#in-class-14",
     "title": "Youmna",
     "section": "💻 In class",
-    "text": "💻 In class\n\nfor i in range(len(my_list)) vs for item in my_list:\nPractice Problem from previous Final: Q9 - Winter 2025\nBREAK\nAssignment 3 Part 2"
+    "text": "💻 In class\n\nList access with []\nfor i in range(len(my_list)) vs for item in my_list:\nLevel 2 practice question\nBREAK\nPractice Problem from previous Final:Q3 Pasta Fall 2024\nPractice Problem from previous Final: Q9 - Winter 2025\nBREAK\nAssignment 3 - Part 2 (start)"
   },
   {
     "objectID": "syllabus/Youmna/Youmna.html#after-class-14",
     "href": "syllabus/Youmna/Youmna.html#after-class-14",
     "title": "Youmna",
     "section": "🚀 After class",
-    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2\nComplete the Winter2025-Q9 at home by yourself (there’s no internet during the final)"
+    "text": "🚀 After class\n\nComplete the Assignment 3 Part 2"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-16",
+    "href": "syllabus/Youmna/Youmna.html#prep-16",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nPaired Lists\nTry Practice Lists- level 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-15",
+    "href": "syllabus/Youmna/Youmna.html#in-class-15",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nCompleting the Assignment 3 - Part 1 Last minute questions only!\nBREAK\nIntroduction to zip(), enumerate() and in\nQuiz 8 (1%): Paired lists and filtering"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-15",
+    "href": "syllabus/Youmna/Youmna.html#after-class-15",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Lists questions upto level 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#prep-17",
+    "href": "syllabus/Youmna/Youmna.html#prep-17",
+    "title": "Youmna",
+    "section": "📚 Prep",
+    "text": "📚 Prep\n\nPaired Lists\nTry Practice Lists- level 3"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#in-class-16",
+    "href": "syllabus/Youmna/Youmna.html#in-class-16",
+    "title": "Youmna",
+    "section": "💻 In class",
+    "text": "💻 In class\n\nCompleting the Assignment 3 - Part 1\nBREAK\nIntroduction to zip(), enumerate() and in\nQuiz 8 (1%): Paired lists and filtering"
+  },
+  {
+    "objectID": "syllabus/Youmna/Youmna.html#after-class-16",
+    "href": "syllabus/Youmna/Youmna.html#after-class-16",
+    "title": "Youmna",
+    "section": "🚀 After class",
+    "text": "🚀 After class\n\nComplete the Lists questions upto level 3"
   },
   {
     "objectID": "index.html",
