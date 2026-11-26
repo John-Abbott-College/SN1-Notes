@@ -32,7 +32,7 @@ These topics should be thoroughly studied.
 ### Assignment operators
 - Use `=` to assign a value to a variable
 - Evaluate a variable re-assignment using the variable itself (e.g. `x = x + 1`)
-- Augmented assignment operators: `+=`, `-=`, `*=`, `/=`, `//=`, `%=`
+- Use Augmented assignment operators: `+=`, `-=`, `*=`, `/=`, `//=`, `%=`
 
 ## Comparison operators
 - Use `>`, `>=`, `<`, `<=`, `==`, `!=`
@@ -92,6 +92,8 @@ These topics should be thoroughly studied.
 
 # 🟠 Optional topics
 These topics could be helpful for some questions. You may optionally use them but there's a way to solve all problems without having to use them.
+
+
 ## Functions
 - Use a default parameter value in a function definition
 
@@ -106,7 +108,8 @@ These topics could be helpful for some questions. You may optionally use them bu
 - Use `range(start, stop, step)`
 
 ## Additional List topics
-The following topics are not mandatory but may be helpful for some questions. You may optionally use them but there's a way to solve all problems without having to use them.
+The following topics are not mandatory but may be helpful for some questions. 
+
 - Use the functions `sum()`, `max()`, `min()`
 - Use the methods `.index()`,`.insert()`,`.sort()`, `.reverse()`, `.remove()`
 - Loop over the elements and indices of a list with `enumerate()`
@@ -114,6 +117,7 @@ The following topics are not mandatory but may be helpful for some questions. Yo
 
 
 ## Numpy
+
 - Use `np.array()` instead of lists to apply a formula to a list of numbers
 - Use `np.linspace()` to create an array of numbers from start to stop with a fractional step
 
