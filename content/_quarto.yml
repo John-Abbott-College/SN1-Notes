@@ -16,6 +16,8 @@ website:
           href: syllabus/Keith/Keith.qmd          
       - text: Final Exam
         menu:
+        - text: "List of topics Fall 2026"
+          href: final_exam_prep/final_exam_topics.qmd
         - text: "Previous Years Exams"
           href: final_exam_prep/final_exam_index.qmd
         - text: "Reference sheet"
