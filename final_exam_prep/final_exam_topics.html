@@ -762,10 +762,10 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#conditions" id="toc-conditions" class="nav-link" data-scroll-target="#conditions">Conditions</a></li>
   <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops">Loops</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
-  <li><a href="#io-functions" id="toc-io-functions" class="nav-link" data-scroll-target="#io-functions">IO functions</a></li>
-  <li><a href="#math-functions" id="toc-math-functions" class="nav-link" data-scroll-target="#math-functions">Math functions</a>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
   <ul class="collapse">
+  <li><a href="#io-functions" id="toc-io-functions" class="nav-link" data-scroll-target="#io-functions">IO functions</a></li>
+  <li><a href="#math-functions" id="toc-math-functions" class="nav-link" data-scroll-target="#math-functions">Math functions</a></li>
   <li><a href="#custom-function" id="toc-custom-function" class="nav-link" data-scroll-target="#custom-function">Custom Function</a></li>
   </ul></li>
   <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a>
@@ -778,10 +778,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#optional-topics" id="toc-optional-topics" class="nav-link" data-scroll-target="#optional-topics">🟠 Optional topics</a>
   <ul class="collapse">
   <li><a href="#type-hinting" id="toc-type-hinting" class="nav-link" data-scroll-target="#type-hinting">Type hinting</a></li>
-  <li><a href="#loops-1" id="toc-loops-1" class="nav-link" data-scroll-target="#loops-1">Loops</a>
+  <li><a href="#while-loops" id="toc-while-loops" class="nav-link" data-scroll-target="#while-loops">While Loops</a>
   <ul class="collapse">
-  <li><a href="#while-loops" id="toc-while-loops" class="nav-link" data-scroll-target="#while-loops">While Loops</a></li>
-  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  <li><a href="#other-loop-concepts" id="toc-other-loop-concepts" class="nav-link" data-scroll-target="#other-loop-concepts">Other loop concepts</a></li>
   </ul></li>
   <li><a href="#additional-list-topics" id="toc-additional-list-topics" class="nav-link" data-scroll-target="#additional-list-topics">Additional List topics</a></li>
   <li><a href="#numpy" id="toc-numpy" class="nav-link" data-scroll-target="#numpy">Numpy</a></li>
@@ -852,6 +851,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Use <code>=</code> to assign a value to a variable</li>
 <li>Evaluate a variable re-assignment using the variable itself (e.g.&nbsp;<code>x = x + 1</code>)</li>
+<li>Augmented assignment operators: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>//=</code>, <code>%=</code></li>
 </ul>
 </section>
 </section>
@@ -873,6 +873,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Use <code>if</code> statements</li>
 <li>Use <code>if/elif/else</code> statements</li>
+<li>Nested consitional statements</li>
 </ul>
 </section>
 <section id="loops" class="level2">
@@ -884,23 +885,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="functions" class="level2">
 <h2 class="anchored" data-anchor-id="functions">Functions</h2>
-</section>
-<section id="io-functions" class="level2">
-<h2 class="anchored" data-anchor-id="io-functions">IO functions</h2>
+<section id="io-functions" class="level3">
+<h3 class="anchored" data-anchor-id="io-functions">IO functions</h3>
 <ul>
 <li>Use <code>print()</code></li>
 </ul>
 </section>
-<section id="math-functions" class="level2">
-<h2 class="anchored" data-anchor-id="math-functions">Math functions</h2>
+<section id="math-functions" class="level3">
+<h3 class="anchored" data-anchor-id="math-functions">Math functions</h3>
 <ul>
 <li>Use <code>math.ceil()</code>,<code>math.sqrt()</code>, <code>math.pi</code>, <code>math.sin()</code></li>
+<li><strong>Note:</strong> You do not need to memorize all the math functions. They will be provided in the reference sheet. You should know how to use them and what they do.</li>
 </ul>
+</section>
 <section id="custom-function" class="level3">
 <h3 class="anchored" data-anchor-id="custom-function">Custom Function</h3>
 <ul>
 <li>Define a function</li>
 <li>Invoke/call a function</li>
+<li>List of parameters</li>
+<li>Know that variables defined inside a function are local to that function (not accissible from outside the function)</li>
+<li><code>return</code> a value from a function</li>
+<li>Know that the function ends when it reaches a <code>return</code> statement or the end of the function body</li>
 </ul>
 </section>
 </section>
@@ -911,10 +917,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Create a list with starting values</li>
 <li>Create an empty list</li>
-<li>Access an element of a list by index</li>
+<li>Access an element of a list by index using <code>[]</code></li>
+<li>Modifying an element of a list by index using <code>[]</code></li>
+<li>Negative indices <code>-1</code> for the last element, <code>-2</code> for the second to last, etc.</li>
 <li>Use <code>len()</code> to find the length of a list</li>
 <li>Add an element to a list with <code>.append()</code></li>
-<li>Remove an element with <code>.pop()</code>?<br>
+<li>Remove an element with <code>.pop()</code><br>
 </li>
 <li>Loop over a list using a <code>for</code> loop</li>
 <li>Find if an element is present in a list with <code>in</code></li>
@@ -936,50 +944,53 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="optional-topics" class="level1">
 <h1>🟠 Optional topics</h1>
-<p>These topics could be helpful for some questions. You may optionally use them but there’s a way to solve all problems without having to use them.</p>
+<p>These topics could be helpful for some questions. You may optionally use them but there’s a way to solve all problems without having to use them. ## Functions - Use a default parameter value in a function definition</p>
 <section id="type-hinting" class="level2">
 <h2 class="anchored" data-anchor-id="type-hinting">Type hinting</h2>
 <ul>
 <li>Add type hinting on a function signature or variable definition</li>
 </ul>
 </section>
-<section id="loops-1" class="level2">
-<h2 class="anchored" data-anchor-id="loops-1">Loops</h2>
-<section id="while-loops" class="level3">
-<h3 class="anchored" data-anchor-id="while-loops">While Loops</h3>
+<section id="while-loops" class="level2">
+<h2 class="anchored" data-anchor-id="while-loops">While Loops</h2>
 <ul>
 <li>Use a <code>while</code> loop</li>
 </ul>
-</section>
-<section id="other" class="level3">
-<h3 class="anchored" data-anchor-id="other">Other</h3>
+<section id="other-loop-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="other-loop-concepts">Other loop concepts</h3>
 <ul>
-<li>Use <code>continue</code></li>
+<li>Use <code>continue</code> to skip the current iteration of a loop</li>
 <li>Use <code>range(start, stop, step)</code></li>
 </ul>
 </section>
 </section>
 <section id="additional-list-topics" class="level2">
 <h2 class="anchored" data-anchor-id="additional-list-topics">Additional List topics</h2>
-<ul>
-<li>Use the functions <code>sum()</code>, <code>max()</code>, <code>min()</code></li>
-<li>Use the methods <code>.index()</code>, <code>.insert()</code>,<code>.sort()</code>, <code>.reverse()</code>, <code>.remove()</code></li>
-<li>Loop over the elements and indices of a list with <code>enumerate()</code></li>
-<li>Loop over paired lists with <code>zip()</code></li>
-<li>Create a sublist from a list using list slicing</li>
-</ul>
+<p>The following topics are not mandatory but may be helpful for some questions. You may optionally use them but there’s a way to solve all problems without having to use them. - Use the functions <code>sum()</code>, <code>max()</code>, <code>min()</code> - Use the methods <code>.index()</code>,<code>.insert()</code>,<code>.sort()</code>, <code>.reverse()</code>, <code>.remove()</code> - Loop over the elements and indices of a list with <code>enumerate()</code> - Loop over paired lists with <code>zip()</code></p>
 </section>
 <section id="numpy" class="level2">
 <h2 class="anchored" data-anchor-id="numpy">Numpy</h2>
 <ul>
-<li>Use <code>np.array</code> instead of lists to apply a formula to a list of numbers</li>
-<li>Use <code>np.linspace</code> to create an array of numbers from start to stop with a fractional step</li>
+<li>Use <code>np.array()</code> instead of lists to apply a formula to a list of numbers</li>
+<li>Use <code>np.linspace()</code> to create an array of numbers from start to stop with a fractional step</li>
 </ul>
 </section>
 </section>
 <section id="not-on-the-final" class="level1">
 <h1>⚪ Not on the Final</h1>
-<p>These topics are not included in the final: - The <code>input()</code> function - Files &amp; Folders - Turtle - CSV Files/ Text files</p>
+<p>These topics are <strong>not included</strong> in the final. You can safely skip studying them:</p>
+<ul>
+<li>The <code>input()</code> function</li>
+<li>String operations (<code>.replace()</code>, <code>.split()</code>, fstring formatting)</li>
+<li>Looping over characters in a string</li>
+<li>Slicing a list or string to make a sublist or substring</li>
+<li>Turtle Graphics</li>
+<li>CSV Files/ Text files</li>
+<li>Numpy fitting polynomial functions</li>
+<li>Files &amp; Folders</li>
+<li>Setting up Thonny, debuging tools</li>
+<li>Installing packages</li>
+</ul>
 
 
 <script type="ojs-module-contents">
