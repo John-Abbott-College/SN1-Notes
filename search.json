@@ -3515,7 +3515,7 @@
     "href": "final_exam_prep/final_exam_topics.html#operators",
     "title": "Final Exam Topics",
     "section": "Operators",
-    "text": "Operators\n\nEvaluate the order of operations combining multiple operators.\n\n\nArithmetic operators\n\nUse +, -, *, /, //, % to apply math formulas\nEvaluate expressions using arithmetic operators on the basic types str, int,float\n\n\n\nAssignment operators\n\nUse = to assign a value to a variable\nEvaluate a variable re-assignment using the variable itself (e.g. x = x + 1)\nAugmented assignment operators: +=, -=, *=, /=, //=, %="
+    "text": "Operators\n\nEvaluate the order of operations combining multiple operators.\n\n\nArithmetic operators\n\nUse +, -, *, /, //, % to apply math formulas\nEvaluate expressions using arithmetic operators on the basic types str, int,float\n\n\n\nAssignment operators\n\nUse = to assign a value to a variable\nEvaluate a variable re-assignment using the variable itself (e.g. x = x + 1)\nUse Augmented assignment operators: +=, -=, *=, /=, //=, %="
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#comparison-operators",
@@ -3560,6 +3560,13 @@
     "text": "Plotting\n\nPlot a line plot or scatter plot of a list versus another list (without styling the graph)"
   },
   {
+    "objectID": "final_exam_prep/final_exam_topics.html#functions-1",
+    "href": "final_exam_prep/final_exam_topics.html#functions-1",
+    "title": "Final Exam Topics",
+    "section": "Functions",
+    "text": "Functions\n\nUse a default parameter value in a function definition"
+  },
+  {
     "objectID": "final_exam_prep/final_exam_topics.html#type-hinting",
     "href": "final_exam_prep/final_exam_topics.html#type-hinting",
     "title": "Final Exam Topics",
@@ -3578,7 +3585,7 @@
     "href": "final_exam_prep/final_exam_topics.html#additional-list-topics",
     "title": "Final Exam Topics",
     "section": "Additional List topics",
-    "text": "Additional List topics\nThe following topics are not mandatory but may be helpful for some questions. You may optionally use them but there’s a way to solve all problems without having to use them. - Use the functions sum(), max(), min() - Use the methods .index(),.insert(),.sort(), .reverse(), .remove() - Loop over the elements and indices of a list with enumerate() - Loop over paired lists with zip()"
+    "text": "Additional List topics\nThe following topics are not mandatory but may be helpful for some questions.\n\nUse the functions sum(), max(), min()\nUse the methods .index(),.insert(),.sort(), .reverse(), .remove()\nLoop over the elements and indices of a list with enumerate()\nLoop over paired lists with zip()"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#numpy",
