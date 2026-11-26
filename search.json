@@ -3501,28 +3501,28 @@
     "href": "final_exam_prep/final_exam_topics.html#variables-and-data-types",
     "title": "Final Exam Topics",
     "section": "Variables and Data Types",
-    "text": "Variables and Data Types\n\nUse variables to store program data\nAvoid hard-coding values in logic by using variables\nRecognize the various basic data typees: str, int, float and bool\nPerform conversions between float, int and str\nEvaluate a boolean variable from an expression."
+    "text": "Variables and Data Types\n\nUse variables to store program data\nAvoid hard-coding values in logic by using variables\nRecognize the various basic data types: str, int, float and bool\nPerform conversions between float, int and str\nEvaluate a boolean variable from an expression."
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#string-handling",
     "href": "final_exam_prep/final_exam_topics.html#string-handling",
     "title": "Final Exam Topics",
     "section": "String Handling",
-    "text": "String Handling\n\nCreate f-string\nFormat an f-string float precision"
+    "text": "String Handling\n\nCreate an f-string\nFormat float precision in an f-string"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#operators",
     "href": "final_exam_prep/final_exam_topics.html#operators",
     "title": "Final Exam Topics",
     "section": "Operators",
-    "text": "Operators\n\nEvaluate the order of operations combining multiple operators.\n\n\nArithmetic operators\n\nUse +, -, *, /, //, % to apply math fomula\nEvaluate expression using arithmetic operators on the basic types str, int,float\n\n\n\nAssignment operators\n\nUse = to assign a value to a variable\nEvaluate a variable re-assignment using the variable itself (e.g x = x + 1)"
+    "text": "Operators\n\nEvaluate the order of operations combining multiple operators.\n\n\nArithmetic operators\n\nUse +, -, *, /, //, % to apply math formulas\nEvaluate expressions using arithmetic operators on the basic types str, int,float\n\n\n\nAssignment operators\n\nUse = to assign a value to a variable\nEvaluate a variable re-assignment using the variable itself (e.g. x = x + 1)"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#comparison-operators",
     "href": "final_exam_prep/final_exam_topics.html#comparison-operators",
     "title": "Final Exam Topics",
     "section": "Comparison operators",
-    "text": "Comparison operators\n\nUse &gt;, &gt;=, &lt;, &lt;=, ==, !=\n\n\nLogical operators\n\nUse and, or, not\nEvaluate a logical expresion combining comparison and logical operators (e.g x&gt; y or (y ==2 and x!=5) or (not a_bool))"
+    "text": "Comparison operators\n\nUse &gt;, &gt;=, &lt;, &lt;=, ==, !=\n\n\nLogical operators\n\nUse and, or, not\nEvaluate a logical expression combining comparison and logical operators (e.g. x &gt; y or (y ==2 and x!=5) or (not a_bool))"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#conditions",
@@ -3536,7 +3536,7 @@
     "href": "final_exam_prep/final_exam_topics.html#loops",
     "title": "Final Exam Topics",
     "section": "Loops",
-    "text": "Loops\n\nUse for loop with range()\nUse break"
+    "text": "Loops\n\nUse a for loop with range()\nUse break"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#functions",
@@ -3564,7 +3564,7 @@
     "href": "final_exam_prep/final_exam_topics.html#lists",
     "title": "Final Exam Topics",
     "section": "Lists",
-    "text": "Lists\n\nSimple Lists\n\nCreate a list with starting values\nCreate an empty list\nAccess an element of a list by index\nUse len() to find the length of a list\nAdd an element in a list with .append()\nRemove an element with .pop()?\n\nLoop over a list using a for loop\nFind if an element is present in a list with in\n\n\n\nPaired Lists\n\nLoop over paired lists"
+    "text": "Lists\n\nSimple Lists\n\nCreate a list with starting values\nCreate an empty list\nAccess an element of a list by index\nUse len() to find the length of a list\nAdd an element to a list with .append()\nRemove an element with .pop()?\n\nLoop over a list using a for loop\nFind if an element is present in a list with in\n\n\n\nPaired Lists\n\nLoop over paired lists"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#plotting",
@@ -3578,7 +3578,7 @@
     "href": "final_exam_prep/final_exam_topics.html#type-hinting",
     "title": "Final Exam Topics",
     "section": "Type hinting",
-    "text": "Type hinting\n\nAdd type hinting on function signature or variable definition"
+    "text": "Type hinting\n\nAdd type hinting on a function signature or variable definition"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#loops-1",
@@ -3592,14 +3592,14 @@
     "href": "final_exam_prep/final_exam_topics.html#additional-list-topics",
     "title": "Final Exam Topics",
     "section": "Additional List topics",
-    "text": "Additional List topics\n\nUse those functions sum(), max(), min()\nUse those methods .index(), .insert(),.sort(), .reverse(), .remove()\nLoop over element and index in a list enumerate()\nLoop over paired lists with zip()\nCreate a sublist from a list using list slicing"
+    "text": "Additional List topics\n\nUse the functions sum(), max(), min()\nUse the methods .index(), .insert(),.sort(), .reverse(), .remove()\nLoop over the elements and indices of a list with enumerate()\nLoop over paired lists with zip()\nCreate a sublist from a list using list slicing"
   },
   {
     "objectID": "final_exam_prep/final_exam_topics.html#numpy",
     "href": "final_exam_prep/final_exam_topics.html#numpy",
     "title": "Final Exam Topics",
     "section": "Numpy",
-    "text": "Numpy\n\nUse np.array instead of lists to apply formula on a list of numbers\nUse np.linspace to create an array of number from start, stop with a fractional step"
+    "text": "Numpy\n\nUse np.array instead of lists to apply a formula to a list of numbers\nUse np.linspace to create an array of numbers from start to stop with a fractional step"
   },
   {
     "objectID": "final_exam_prep/upenn_exam_practice_f24/upenn_exam_practice_f24.html",
