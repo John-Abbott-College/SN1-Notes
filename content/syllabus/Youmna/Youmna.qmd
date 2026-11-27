@@ -472,13 +472,75 @@ Go over:
 - Completing the Assignment 3 - Part 1 
 - **BREAK**
 - Introduction to `zip()`, `enumerate()` and `in`
-- Quiz 8 (1%): Paired lists and filtering 
+
 
 ## 🚀 After class
 - Complete the Lists questions upto level 3 
 
 
 :::
+
+
+# Week 14
+::: {.panel-tabset}
+
+# Tuesday Section: Dec 1 
+## 📚 Prep 
+- Start the Assignment 4 
+
+## 💻 In class
+- Quiz 8 (1%): Paired lists and filtering 
+- BREAK
+- Assignment 4 (Demod in class)
+
+## 🚀 After class
+- Review for the Final exam
+
+# Friday Section: Dec 4 (Last session)
+
+
+## 📚 Prep 
+- Try **Q4* and **Q5** from the [Fall 2024 Final]https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html{target="_blank"}
+- Complete [all the List practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html){target="_blank"}
+- Start Final exam review
+
+## 💻 In class
+- Start Assignment 4 (to completed at home)
+- BREAK
+- Final exam review 
+- Quiz 9 (2%): Final Review
+
+
+## 🚀 After class
+- Complete the Assignment 4
+- Study for the Final
+
+
+:::
+
+
+# Week 15 (Tuesday group only December 8)
+
+## 📚 Prep 
+- Try **Q4* and **Q5** from the [Fall 2024 Final]https://john-abbott-college.github.io/SN1-Notes/final_exam_prep/final_exam_f24/final_exam_f24.html{target="_blank"}
+- Complete [all the List practice problems](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/exercises/lists/lists.html){target="_blank"}
+- Start Final exam review
+
+## 💻 In class
+- Quiz 9 (2%): Final Review
+- Free time to ask questions. 
+
+## 🚀 After class
+- Study for the Final 
+
+
+
+-->
+
+
+
+
+
 
 <!-- 
 
