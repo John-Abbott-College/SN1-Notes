@@ -32,7 +32,7 @@ These topics should be thoroughly studied.
 ### Assignment operators
 - Use `=` to assign a value to a variable
 - Evaluate a variable re-assignment using the variable itself (e.g. `x = x + 1`)
-- Use Augmented assignment operators: `+=`, `-=`, `*=`, `/=`, `//=`, `%=`
+
 
 ## Comparison operators
 - Use `>`, `>=`, `<`, `<=`, `==`, `!=`
@@ -93,6 +93,8 @@ These topics should be thoroughly studied.
 # 🟠 Optional topics
 These topics could be helpful for some questions. You may optionally use them but there's a way to solve all problems without having to use them.
 
+## Assignment operators
+- Use Augmented assignment operators: `+=`, `-=`, `*=`, `/=`, `//=`, `%=`
 
 ## Functions
 - Use a default parameter value in a function definition
