@@ -1,0 +1,278 @@
+---
+title : "Assignment 4"
+---
+📝 **Worth:** 7 % 
+
+**🗓️ Due:** As per Lea (different for each section)
+
+📥 **Submission: ** 
+
+- [ ] `assignment4.py`
+- [ ] `energy_vs_radius.png` (For Tuesday group, this **must** be demoed in class)
+
+## 🎯 Learning Objectives
+
+- Write functions using lists and loops.
+- Use parallel lists to store and retrieve related information
+- Use `.index()` method to find the position of an element within a list 
+- Use the `in` operator to find if an element is present in a list.
+- Loop over paired lists
+- Plot multiple lists on the same graph using `matplotlib`
+
+
+
+**A special thanks to Keith McDonald for writing this assignment!**
+
+
+
+## **📝  Specific Instructions** 
+
+<span style="color: red;"> **READ THIS CAREFULLY BEFORE STARTING!!!**</span>
+
+In this assignment you will practice using *parallel* (sometimes called *paired*) lists and do some graphing.
+
+1. [Download](as4_unzip_me.zip){target="blank"} and extract the starter code.
+
+2. Move the <span style="color: red;">**file out of the Downloads folder and save it to OneDrive**</span>: you will be working within the same python file for all parts of this assignment. 
+
+3. This assignment uses matplotlib, which you should have installed for the previous assignment. 
+
+   - If you get errors, then try (re)installing matplotlib with this command:
+
+   ```cmd
+   !pip install matplotlib
+   ```
+
+4.  Define all your functions **above** the `main()` in the **same file**
+
+5. Call them all within the `main()`
+
+6. Do not rename the files, respect each function name and its parameter list
+
+7. <span style="color: red;"> **Do not remove the last two lines** </span>
+
+   ```python
+   if __name__ =='__main__':
+       main()
+   ```
+
+
+
+### Explanation of the starter code
+
+In `assignment4.py` you are given **parallel lists** for elements 1 (H) to 54 (Xe) of the periodic table. The value at index `i` of every list describes the *same* element:
+
+| List           | Contents                                                     |
+| -------------- | ------------------------------------------------------------ |
+| `ELEMENTS`     | element symbol, e.g. `'Ne'`                                  |
+| `ION_ENERGIES` | first ionization energy (eV): energy needed to remove one electron |
+| `RADII`        | covalent radius (pm)                                         |
+
+
+
+You are also given three lists of **symbols only**: `NOBLE_GASES`, `ALKALI_METALS`, `HALOGENS`.
+
+<span style="color: red;">**These lists are all constants so you should NOT modify these lists anywhere in your program, but you can read these lists from within any function you write.**</span>
+
+
+
+## ⚠️ Restrictions 
+
+
+
+> Throughout this assignment when you're working with lists you may use: **append**, **insert**, **for**, **if/elif/else**, **in**, **not in**, **index**, **enumerate**, **zip**, **sum**, **range** and **len**. You may **not** use *list comprehensions, generator expressions, map(), filter(), lambda, dictionaries, sets, max(), min(), pandas, or NumPy*. If you're unsure whether you're allowed to use something else then ask me.
+
+
+
+# The index() function
+
+
+
+For some parts of this assignment you will need to find information in one list and then use the index (aka position) of what you found to get information from the same index in another list. You are capable of writing a for loop to check one-by-one through a list to look for a certain value but you can instead use this list method from Python:
+[Notes on the index() function](https://john-abbott-college.github.io/SN1-Notes/topics/11_lists/04_list_inclusion/04_list_inclusion.html#finding-the-index-of-an-element)
+
+
+
+# PART 1
+
+## Question1: Ionization Energy 
+
+#### Write a function `ionization_energy()`
+
+**Input parameters:**
+
+- `element` which will be the symbol of an element (e.g. 'O' for oxygen)
+
+**Returns: ** ionization energy from `ION_ENERGIES` for the specified element. If no energy is found for that element (e.g. if the element was not valid) then return **None**.
+
+##### Test your function in `main()`
+
+In main(), use your function `ionization_energy()` to get the first ionization energy of iron (`'Fe'`) and print it with a label and units. You can choose how to label it.
+
+**Expected result**:
+
+```cmd
+`Fe` ionized energy:  7.9 eV
+```
+
+
+
+
+
+## Question 2: Covalent Radius
+
+#### Write a function `radius()`
+
+**Input parameters:** 
+
+- `element` which will be the symbol of an element (e.g. 'O' for oxygen)
+
+**Returns:** the element's covalent radius from `RADII` for the specified element. If no radius is found for that element (e.g. if the element was not valid) then return **None**.
+
+##### Test your function in `main()`
+
+In main(), use your function `radius()` to get the covalent radius of bromine (`'Br'`), and print it with a label and units. You can choose how to label it.
+
+**Expected result**:
+
+```cmd
+`Br` radius:  114 pico meter
+```
+
+
+
+## Question 3: Average Group Energy 
+
+#### Write a function `group_energy()`
+
+**Input parameters:** 
+
+- `group` which will be a list of element symbols
+
+**Returns: ** the average first ionization energy of all symbols in the list. If the group is empty, then return **None**. You can assume that all symbols in the list are valid.
+
+##### Test your function in `main()`
+
+In main(), use your function `group_energy()` with the list of elements of your choice. Make sure it's correctly calculating  the average. 
+
+
+
+## Question 4: Group Energies
+
+#### Write a function `all_group_energies()`
+
+**Input parameters:** None
+
+**Returns: ** None
+
+This function must call your function `group_energy()` to get the average energy of the noble gases (`NOBLE_GASES`) printing the number with a label and units. You can choose how to label it.
+
+Repeat for the other groups: `ALKALI_METALS` and `HALOGENS`. For full marks, **use a loop to call** `group_energy()` three times instead of duplicating the code that calls it.
+
+> **Hint**
+> You can create a "temporary" list just for the purpose of looping like this:
+> for num in [1, 2, 3]:
+> ...do something with num here...
+
+##### Test your function in `main()`
+
+In the `main()` function, call your `all_group_energies()` function.
+
+**Example output:**
+
+```cmd
+Noble gases ionization energy: 17.61 eV
+Alkali metals ionization energy: 4.76 eV
+Halogens ionization energy: 13.16 eV
+```
+
+
+
+## Question 5: Other elements (2 points)
+
+#### Write a function `ungrouped_elements()`
+
+**Input parameters: **None
+
+**Returns: **a list of the symbols for elements that are **not** in any of the three groups (noble gases, alkali metals, halogens).
+
+##### Test your function in `main()`
+
+In the `main()` function, call your `ungrouped_elements()`. Store the returned list in the `main()` for use later and print it to validate your answer. 
+
+
+
+# **PART 2**
+
+To plot data on a line or scatter plot you will need lists that contain the data points. One list will hold all of the values for the horizontal axis (e.g. *x*) and one for the vertical axis (e.g. *y*). Given these two lists of values we can plot them easily like:
+
+```
+plt.plot(x_values1, y_values1, color="red", label="series 1")
+```
+
+or:
+
+```
+plt.scatter(x_values2, y_values2, color="red", label="series 2")
+```
+
+`plt.plot` will draw a line chart and `plt.scatter` will draw a scatter (just the dots).
+
+You can choose different colours for each of the groups or data series you are printing, and assign a label for each.
+
+There are many other options you can specify also including the line thickness, which shape of "dots" etc.
+
+After all of your calls to `plt.plot` and/or `plt.scatter`, make one call to `plt.show()` to make the graph appear on screen.
+
+**Before you can use these functions, you must import the plotting library by adding this at the top of the file:** `import matplotlib.pyplot as plt`
+
+
+
+## Question 6: Energy vs Radius
+
+#### Write a function `energy_vs_radius()`
+
+Create a function named `energy_vs_radius()` that takes:
+
+**Input parameters: **
+
+- `ungrouped`: this will receive the list you created in `ungrouped_elements()`
+- `filename`: this is string specifying the name of the file under which the graph will be saved. Use `""energy_vs_radius.png"` as a default value.
+- `show_graph`: this is a Boolean which determines if the graph should be displayed on the screen. 
+
+**Returns:**
+
+This function should not return anything. 
+
+**Task: **
+
+Now, you have four lists of elements (the three original ones, plus one you have created for the "ungrouped" which is passed as a parameter to this function).
+
+For each of the 4 groups you need to make lists to hold their energies and their radii. There are many ways to do this. You might choose to use `zip()` or `enumerate()`, or an indexed for loop. You might also want to use the `in` keyword as part of this.
+
+Once you've made the two lists for a group, add a call like:
+`plt.scatter(radii, energies, color="purple", label="Noble Gases")`
+
+- Make four calls to `plt.scatter` with radii on the X axis and energies on the Y axis. Use different colours and labels for each group.
+
+- Add a title, axis labels with units and a legend to your graph using:
+  `plt.title, plt.xlabel, plt.ylabel and plt.legend`
+
+See this reference page for help: https://www.w3schools.com/python/matplotlib_labels.asp
+
+- At the end of energy_vs_radius(), add these lines to save the graph and optionally show it on the screen.
+
+  ```python
+  plt.savefig(filename)
+  
+  if show_graph:
+  	plt.show()
+  
+  plt.close()
+  ```
+
+  
+
+**Test in main**
+
+Add a call to `energy_vs_radius()` at the end of the `main()` function and provide it with the required parameters. 
